@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/wiki/bloque-1/bloque-1/</loc>
+    
+    <lastmod>2019-01-16T15:49:30.632Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/temario/index.html</loc>
     
-    <lastmod>2019-01-16T15:23:09.572Z</lastmod>
+    <lastmod>2019-01-16T15:30:40.500Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/bloque-2/index.html</loc>
+    
+    <lastmod>2019-01-16T15:30:20.843Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/bloque-4/index.html</loc>
     
-    <lastmod>2019-01-16T15:22:14.709Z</lastmod>
+    <lastmod>2019-01-16T15:28:46.810Z</lastmod>
     
   </url>
   
@@ -19,20 +33,6 @@
     <loc>http://yoursite.com/bloque-3/index.html</loc>
     
     <lastmod>2019-01-16T15:21:11.543Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/bloque-2/index.html</loc>
-    
-    <lastmod>2019-01-16T15:19:27.829Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/wiki/post/</loc>
-    
-    <lastmod>2019-01-16T13:37:34.541Z</lastmod>
     
   </url>
   
