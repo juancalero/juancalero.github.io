@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B4-T04 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B4-T04">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Gestión de la configuración. Gestión de librerías de programas y de medios magnéticos. Controles de cambios y de versiones. Los lenguajes de control de trabajos. Las técnicas y herramientas de operaci">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-T04">
+<meta property="og:url" content="http://localhost:4000/wiki/B4/b4-t04/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Gestión de la configuración. Gestión de librerías de programas y de medios magnéticos. Controles de cambios y de versiones. Los lenguajes de control de trabajos. Las técnicas y herramientas de operaci">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/cilindros_hd.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/tiempo_acceso.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/cintas_magneticas.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:14:16.988Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-T04">
+<meta name="twitter:description" content="Gestión de la configuración. Gestión de librerías de programas y de medios magnéticos. Controles de cambios y de versiones. Los lenguajes de control de trabajos. Las técnicas y herramientas de operaci">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/02/cilindros_hd.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file active"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B4/b4-t04" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B4/">B4</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B4/b4-t04/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B4/b4-t04.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B4/b4-t04.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B4/b4-t04.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B4-T04
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Gestion-de-la-configuracion-Gestion-de-librerias-de-programas-y-de-medios-magneticos-Controles-de-cambios-y-de-versiones-Los-lenguajes-de-control-de-trabajos-Las-tecnicas-y-herramientas-de-operacion-automatica"><a href="#Gestion-de-la-configuracion-Gestion-de-librerias-de-programas-y-de-medios-magneticos-Controles-de-cambios-y-de-versiones-Los-lenguajes-de-control-de-trabajos-Las-tecnicas-y-herramientas-de-operacion-automatica" class="headerlink" title="Gestión de la configuración. Gestión de librerías de programas y de medios magnéticos. Controles de cambios y de versiones. Los lenguajes de control de trabajos. Las técnicas y herramientas de operación automática."></a>Gestión de la configuración. Gestión de librerías de programas y de medios magnéticos. Controles de cambios y de versiones. Los lenguajes de control de trabajos. Las técnicas y herramientas de operación automática.</h1><h2 id="Gestion-de-Librerias-de-Programas"><a href="#Gestion-de-Librerias-de-Programas" class="headerlink" title="Gestión de Librerías de Programas"></a>Gestión de Librerías de Programas</h2><p>Cuando hablamos de librerías nos referimos a conjuntos de programas, rutinas o funciones ya preparadas y a disposición de los programadores durante el desarrollo de aplicaciones. Su practicidad reside en que evitan la reescritura de algoritmos usados con frecuencia, ya que éstos pueden ser incluidos en librerías que posteriormente podrán ser llamadas desde los distintos programas a implementar.</p>
+<h3 id="Gestion-de-Librerias-en-C"><a href="#Gestion-de-Librerias-en-C" class="headerlink" title="Gestión de Librerías en C"></a>Gestión de Librerías en C</h3><p>Propiedades de las librerías en C:</p>
+<ul>
+<li>Una librería es un archivo que agrupa a otros archivos denominados miembros de la librería.</li>
+<li>La estructura de las librerías hace posible que puedan extraerse sus miembros.</li>
+<li>Al agregar archivos a una librería, se introducirá en la misma tanto el contenido de aquellos como su información de gestión (fechas, propietarios, grupos, permisos, etc).</li>
+</ul>
+<p><strong>Librerías Estáticas y Dinámicas</strong></p>
+<p><strong>Librerías Estáticas</strong></p>
+<p>También denominadas librerías-objeto, son agrupaciones de archivos objeto (.obj) compilados en un solo archivo de extensión <strong>.OBJ</strong> o <strong>.LIB</strong> .</p>
+<p>Los modelos de las funciones empleadas en estas librerías, junto con algunas constantes predefinidas y macros que facilitan su uso, constituyen los denominados archivos de cabecera, debido a que suelen ser llamados desde las primeras líneas (cabeceras) de los distintos archivos fuente.</p>
+<p>Las librerías estáticas están constituidas por uno o varios archivos <strong>.lib</strong> , <strong>.obj</strong> o <strong>.bpi</strong> junto con uno o varios archivos de cabecera ( <strong>.h</strong> ). Al compilar un programa, el linkador agrega al ejecutable los módulos que incluyen a las funciones utilizadas en el programa, pasando aquellos a formar parte del ejecutable. Esta forma de enlazar las librerías con los programas es la que les da el nombre de estáticas.</p>
+<p><strong>Librerías Dinámicas</strong></p>
+<p>Las librerías de enlazado dinámico (DLL) son muy utilizadas en la programación para SO Windows; sistemas que incluyen multitud de librerías de este tipo en disposición de ser utilizadas por cualquier aplicación.</p>
+<p>Aunque las librerías dinámicas se asocian generalmente a la extensión <strong>.DLL</strong> , también pueden estar definidas con extensiones del tipo <strong>.EXE</strong> , <strong>.BPI</strong> , <strong>.DRV</strong> , <strong>.FON</strong> , etc.</p>
+<p>La programación de aplicaciones Windows consiste en la concatenación de llamadas a librerías dinámicas.</p>
+<p><strong>Manejo de Librerías</strong></p>
+<p>Para la programación en lenguaje C, el manejo de librerías presenta dos aspectos:</p>
+<ul>
+<li>La utilización de librerías.</li>
+<li>La construcción de librerías.</li>
+</ul>
+<p>La utilización es segura para cualquier programa, ya que, como mínimo, habrá que hacer uso de alguna librería perteneciente a la Librería Estándar. En cuanto a la construcción, también podría darse en cualquier programa, pero dada la gran cantidad de librerías existentes, lo normal es que sólo se necesite crear una librería cuando el programa a desarrollar sea considerablemente extenso.</p>
+<p>Evidentemente, tanto la utilización como la construcción de librerías serán diferentes dependiendo de si se trata de librerías estáticas o dinámicas.</p>
+<h3 id="Librerias-de-Enlace-Dinamico-en-Windows"><a href="#Librerias-de-Enlace-Dinamico-en-Windows" class="headerlink" title="Librerías de Enlace Dinámico en Windows"></a>Librerías de Enlace Dinámico en Windows</h3><p>Como mencionábamos en un epígrafe anterior, las librerías dinámicas son archivos que contienen funciones y/o recursos que pueden ser requeridos por cualquier aplicación Windows. También indicábamos que podían tener tanto la extensión <strong>.DLL</strong> como extensiones del tipo <strong>.EXE</strong> (ejecutable), <strong>.DRV</strong> (controlador de dispositivo), <strong>.FON</strong> (fuente de Windows), etc. La diferencia entre las librerías cuyo archivo tiene extensión <strong>.DLL</strong> y las creadas sobre archivos <strong>.EXE</strong> , <strong>.DRV</strong> , <strong>.FON</strong> , etc, es que, mientras que las primeras se cargan porque son solicitadas por los programas al SO, el resto se cargan porque aparecen referenciadas (por el propio Windows o por un determinado programa) en archivos de inicialización de Windows.</p>
+<p><strong>Ventajas e Inconvenientes del Empleo de DLL’s</strong></p>
+<p>Ventajas:</p>
+<ul>
+<li>El contenido de una DLL puede ser usado por cualquier aplicación Windows.</li>
+<li>La reutilización de las DLL’s implica una reducción en el tamaño de las aplicaciones.</li>
+<li>Reducción del tiempo de compilación y/o carga de las aplicaciones, debido a la disminución del tamaño de las mismas.</li>
+<li>Ahorro de espacio en disco.</li>
+<li>Independencia de las DLL’s respecto de las aplicaciones.</li>
+</ul>
+<p>Inconvenientes:</p>
+<ul>
+<li>Tienen que almacenarse en la carpeta del sistema para poder ser utilizadas.</li>
+<li>El tiempo que tarda la aplicación en acceder al código que necesita de la DLL es mayor del que emplearía si dicho código formara parte de la propia aplicación.</li>
+</ul>
+<p><strong>Estructura de una DLL de 32 Bits</strong></p>
+<p>Podríamos dividir la DLL en los siguientes elementos:</p>
+<ul>
+<li>Archivo de cabecera. Conjunto de declaraciones y/o definiciones (de variables, funciones, procedimientos, etc) a usar por la librería.</li>
+<li>Punto de entrada y salida de la DLL (DllEntryPoint). Función que se ocupa de la carga y descarga de la DLL en la memoria principal.</li>
+<li>Funciones de la DLL. Aquellas especificadas e implementadas por el programador de la librería.</li>
+</ul>
+<p><strong>Creación de una DLL de 32 Bits</strong></p>
+<p>Para la creación de una DLL podemos usar lenguajes del tipo Visual Basic, Delphi, Visual C++, etc.</p>
+<p>Con cualquiera de los lenguajes deberemos crear varios archivos, cada uno de los cuales contendrá un tipo de elemento útil para la construcción de la librería. Por ejemplo, si empleásemos Visual C++, deberíamos crear:</p>
+<ul>
+<li>Un archivo con extensión .c que contendrá el código fuente de las funciones de la librería.</li>
+<li>Un archivo con extensión .def que contendrá la información necesaria para el linkador.</li>
+<li>Dos archivos con extensión .h que será los archivos de cabecera del archivo fuente (estos sólo serán necesarios para crear un programa que utilice la DLL, pero no para la creación de la DLL en sí).</li>
+</ul>
+<p><strong>Compilación y Linkado de la Librería</strong></p>
+<p>Tras la compilación de los archivos anteriores, el compilador generará un archivo <strong>.lib</strong> . Después del linkado, se creará un archivo <strong>.dll</strong> (esta sería la librería en sí).</p>
+<p>El acceso a esta DLL podrá hacerse mediante dos tipos de llamadas:</p>
+<p><strong>Llamada Estática</strong></p>
+<p>Este tipo de llamada va a utilizar el archivo creado por el compilador ( <strong>.lib</strong> ).</p>
+<p>Con este método, el enlace entre el programa y los recursos de la DLL tiene lugar durante el linkado del programa. Es decir, será el linkador quien, utilizando los archivos objeto ( <strong>.obj</strong> ), los archivos librerías ( <strong>.lib</strong> ) y los archivos de recursos compilados (.res), cree la aplicación Windows ( <strong>.exe</strong> ).</p>
+<p>Con este proceso, el código de la librería queda incluido en el ejecutable.</p>
+<p>Ventajas:</p>
+<ul>
+<li>La librería se carga junto con el ejecutable (la contiene).</li>
+<li>El enlace tiene lugar en tiempo de compilación.</li>
+<li>Las funciones de la librería pueden ser utilizadas como funciones internas de la aplicación.</li>
+</ul>
+<p>Inconvenientes:</p>
+<ul>
+<li>La aplicación almacena en su interior el código de la librería, lo que hace que su tamaño sea mayor.</li>
+<li>La librería tiene que incluirse en cada aplicación que la necesite.</li>
+<li>El objetivo de la reutilización sólo se cumple en parte.</li>
+<li>La memoria principal contiene a la librería durante todo el tiempo de ejecución de la aplicación.</li>
+<li>La librería y la aplicación tienen una dependencia total.</li>
+</ul>
+<p><strong>Llamada Dinámica</strong></p>
+<p>La llamada dinámica emplea el archivo creado por el linkador ( <strong>.dll</strong> ).</p>
+<p>El enlace dinámico, como su nombre indica, se producirá en tiempo de ejecución; es decir, la librería se cargará en memoria cuando la aplicación la requiera al sistema. Este proceso utilizará las funciones LoadLibrary y FreeLibrary para la carga y descarga, respectivamente, de la dll en la memoria principal.</p>
+<p>Ventajas:</p>
+<ul>
+<li>La aplicación no almacena junto con su código a la librería, lo que reduce el tamaño de la aplicación (la librería se almacena en un archivo aparte).</li>
+<li>Ninguna aplicación que utilice a la librería deberá incluirla en su código.</li>
+<li>Se utilizan los beneficios de la reutilización en su totalidad.</li>
+<li>La librería sólo se carga en la memoria principal cuando va a utilizarse. Cuando deja de utilizarse podrá descargarse de la memoria.</li>
+<li>La librería y la aplicación son independientes.</li>
+</ul>
+<p>Inconvenientes:</p>
+<ul>
+<li>Necesidad de solicitar al SO la carga de la librería.</li>
+<li>El enlace se produce en tiempo de ejecución, hecho que dificulta la manipulación de la librería.</li>
+<li>Las funciones de la librería deben ser llamadas mediante punteros.</li>
+</ul>
+<h2 id="Gestion-de-Medios-Magneticos"><a href="#Gestion-de-Medios-Magneticos" class="headerlink" title="Gestión de Medios Magnéticos"></a>Gestión de Medios Magnéticos</h2><h3 id="Discos-Magneticos"><a href="#Discos-Magneticos" class="headerlink" title="Discos Magnéticos"></a>Discos Magnéticos</h3><p><strong>Propiedades de los Discos Magnéticos</strong></p>
+<p>Un disco magnético (rígido o flexible) consiste en un soporte de almacenamiento externo que complementa a la memoria principal (RAM) de una computadora.</p>
+<p>Sus propiedades más significativas son:</p>
+<ul>
+<li>Capacidad de almacenamiento masivo de información en un espacio muy reducido, con el consiguiente bajo coste relativo por byte almacenado. El cliente realiza una llamada a un servicio como si fuera local.</li>
+<li>El memoria no volátil, ya que mantiene la información almacenada aún a falta de suministro eléctrico.</li>
+<li>Proporciona acceso casi directo al lugar donde se encuentra el bloque de datos a leer o escribir.</li>
+<li>La información almacenada en un disco se agrupa en archivos o ficheros (files) identificables por su nombre.</li>
+</ul>
+<p>Actualmente, la mayoría de procesos de E/S de datos utilizan en su origen o destino los discos magnéticos:</p>
+<ul>
+<li>La inmensa mayoría de las aplicaciones se encuentran almacenadas en disco (en forma de archivos ‘ejecutables’). Cuando van a utilizarse estas aplicaciones, se copian (en parte) en la memoria principal y son ejecutadas desde ésta.</li>
+<li>Después de procesar los datos que se encuentran en la memoria principal, los resultados de este proceso se almacenarán en disco.</li>
+</ul>
+<p>Por último, otra característica a indicar sobre los discos magnéticos (los ‘discos duros’ en este caso), es que se pueden utilizar como memoria virtual; es decir, como una extensión de la memoria principal del ordenador.</p>
+<p><strong>Estructura Física de los Discos Magnéticos</strong></p>
+<p>Físicamente, los discos magnéticos están fabricados con: mylard en el caso de los discos flexibles y aluminio o cristal cerámico en el caso de los discos rígidos.</p>
+<p>La estructura física de un disco la forman unas superficies magnéticas denominadas <strong>caras</strong> , cada una de las cuales se divide en anillos concéntricos que constituyen las <strong>pistas</strong> , que a su vez agrupan a los <strong>sectores</strong> (unidades mínimas de almacenamiento cuya capacidad habitual suele ser de 512 bytes de información).</p>
+<p>El proceso de grabación de los discos se logra, al igual que en un grabador de audio, por la acción de un campo magnético de polaridad reversible (N-S ó S-N), que imanta la pista al actuar sobre ella. Para este proceso, existe una cabeza para cada cara del disco. Los brazos que soportan a las cabezas se mueven juntos; es decir, que si la cabeza de la cara superior está sobre una determinada pista, la de la cara inferior se encontrará situada en la misma pista.</p>
+<p>La lectura la realizan las mismas cabezas, mediante un proceso inverso al de grabación, a través del cual detectarán los campos magnéticos existentes a lo largo de la pista accedida.</p>
+<p>En el proceso, tanto de grabación como de lectura, sólo podrá encontrarse activa una única cabeza de las existentes en el medio magnético (dos en los discos flexibles y múltiples en los rígidos).</p>
+<p>En las propiedades indicadas en el epígrafe anterior se hacía referencia al acceso casi directo de los discos magnéticos. Conociendo ya la estructura física de estos discos podemos indicar que lo de directo se refiere a la forma de acceso a las pistas y lo de casi hace referencia a la forma de acceso a los sectores una vez situados en la pista correspondiente (este último es un acceso secuencial cuyo tiempo es tan reducido que se considera despreciable). Para esta operación de localización de un sector concreto dentro del disco se emplea lo que se conoce como su dirección o CHS (número de cilindro, número de cabeza, y número de sector).</p>
+<p><strong>Importancia del concepto de cilindro</strong></p>
+<p>El hecho de que un disco rígido sea en realidad una agrupación de discos (o platos) cada uno de los cuales dispone de dos caras, además de duplicar la capacidad de almacenamiento, permite la lectura o escritura del doble de datos antes de desplazar el cabezal a otra pista, accediendo a una cara y luego a la contraria. De esto surge el concepto de cilindro que no es más que el conjunto de pistas que se sitúan bajo las cabezas de lectura/escritura en un momento determinado (o conjunto de pistas de un disco que tienen el mismo radio). Este concepto también es aplicable a los discos flexibles, aunque, al disponer estos de dos caras únicamente, se suele asociar a los discos rígidos porque en estos el concepto de cilindro es gráficamente más evidente.</p>
+<p>De lo anterior se deduce que la mejor forma de graba la información sobre los discos magnéticos es cilindro a cilindro acelerando con ello el proceso de escritura/lectura al minimiza los movimientos de los cabezales en búsqueda de las pistas.</p>
+<p>El número de cilindros de un disco, por tanto, se corresponderá con el número de posiciones en las que pueden situarse los cabezales; enumerándose aquellos desde 0 (el más exterior) en forma creciente hacia el interior, correspondiendo el número mayor al más interno.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/cilindros_hd.png?w=825" alt=""></p>
+<p><strong>Posicionamiento, Latencia y Acceso en un Disco Rígido o Flexible</strong></p>
+<p>El acceso a un sector situado en una determinada cara del disco, pasa por posicionar el cabezal sobre el cilindro donde se encuentra la pista que contiene el sector, y, posteriormente, esperar a que, mediante el giro del disco, el sector deseado se sitúe debajo de la cabeza. En esta operación intervienen dos tiempos:</p>
+<ul>
+<li><strong>Posicionamiento</strong> . Tiempo necesario para que el brazo con la cabeza correspondiente se coloque directamente sobre el cilindro seleccionado (pocos milisegundos).</li>
+<li><strong>Latencia (demora rotacional)</strong> . Tiempo necesario para que el sector a localizar se sitúe bajo la cabeza lectora/escritora (en promedio es el tiempo de media vuelta).</li>
+</ul>
+<p>El tiempo de acceso resulta pues, la suma de los anteriores, o lo que sería igual, el tiempo que transcurre desde que la controladora envía la orden al cabezal de posicionarse sobre un cilindro, hasta que la cabeza correspondiente accede al sector buscado.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/tiempo_acceso.png?w=825" alt=""></p>
+<p><strong>Estructura Lógica de los Discos Magnéticos</strong></p>
+<p>Desde el punto de vista de la estructura lógica de un disco duro, podríamos dividirlo en:</p>
+<ul>
+<li><strong>Sector de arranque (Master Boot Record)</strong> . Es el primer sector del disco (0, 0, 0), y en él se encuentra la tabla de particiones y un pequeño programa de inicialización. Este programa se ejecuta al encender la computadora, y su función es leer la tabla de particiones y ceder el control a la partición primaria activa.</li>
+<li><strong>Espacio particionado</strong> . Zona del disco que contiene las particiones. Una partición es cada una de las divisiones de tamaño fijo de un disco que se asocia a una unidad lógica (C:, D:, etc, en el caso de los SO Windows). Cada partición ocupa un bloque de cilindros contiguos del disco duro, pudiendo establecerse distintos sistemas de archivos (FAT, NTFS, …) para las distintas particiones posibles.</li>
+<li><strong>Espacio NO particionado.</strong> Se trata de la zona de disco que no ha sido particionada y que, por lo tanto, no puede ser utilizada.</li>
+</ul>
+<p>La tabla de particiones del disco duro puede contener hasta 4 entradas, lo que determina el número máximo de particiones primarias que se pueden crear en el disco. No obstante, este límite de particiones puede superarse empleando una de las entradas para almacenar una partición extendida (tendríamos 3 primarias y 1 extendida). La partición extendida podrá contener tantas unidades lógicas como necesitemos.</p>
+<p>La principal diferencia entre las particiones primarias y las extendidas es que, mientras que las primeras son arrancables y pueden ser utilizadas para contener a los SO, las extendidas no son arrancables y se utilizan normalmente para almacenar datos. Además, de entre las distintas particiones primarias, habrá que indicar cuál es la activa, es decir, la verdaderamente arrancable.</p>
+<p>Visto lo anterior, lo primero que hay que hacer con un disco duro antes de su utilización es:</p>
+<ul>
+<li><strong>Crear las particiones</strong> (utilizando herramientas del tipo FDISK).</li>
+<li><strong>Formatear las particiones creadas</strong> . Este proceso consiste en la creación de la estructura que permita el almacenamiento de información utilizando un determinado sistema de archivos.</li>
+</ul>
+<p>En el sistema de archivos FAT (MS-DOS y sistemas Windows), la estructura lógica de una partición la forman: el sector de arranque, varias copias de la tabla de asignación de archivos, el directorio raíz y el área de datos. La FAT (tabla de asignación de archivos) es el índice del disco. En ella se indican los clusters (unidades de asignación) que utiliza cada archivo, así como los libres y los defectuosos.</p>
+<p>La estructura lógica de una partición utilizada por un sistema UNIX tradicional está constituida: un bloque de arranque, un superbloque (contiene el número de inodos, el número de bloques, etc), un vector de inodos (similar a la FAT anterior) y los bloques de datos.</p>
+<p><strong>Herramientas para la Gestión de Discos Magnéticos</strong></p>
+<p>Considerando como herramientas de gestión las expuestas en el punto anterior (herramientas de particionado y formateo), en este punto vamos a centrarnos en otras herramientas no tan esenciales como aquellas, pero sí bastante comunes en la gestión de discos magnéticos:</p>
+<ul>
+<li><strong>Comprobador de errores</strong> . Su misión es analizar el contenido del disco en búsqueda de incoherencias en el sistema de archivos. Si, por ejemplo, en un sistema FAT existen dos archivos que apuntan al mismo contenido aparecerá un error de vínculos cruzados o si aparecen datos no asociados a ningún archivo se indicará el error de cadenas perdidas. Comprobadores de errores usuales son: chkdsk /f en MS-DOS, ScanDisk en Windows y fsck en UNIX.</li>
+<li><strong>Desfragmentador de disco</strong> . Esta herramienta busca la agrupación física (sobre el disco) de toda la información concerniente a un mismo archivo, con el fin de acelerar la lectura de datos. La fragmentación se produce por la creación, modificación y eliminación de archivos. El sistema de archivos de UNIX no precisa de desfragmentador debido a que su velocidad de trabajo no se degrada con la creación, modificación y eliminación de archivos.</li>
+<li><strong>Compresor de datos</strong> . Se trata de un método que busca maximizar la capacidad de las particiones mediante la compresión de la información que contienen. No obstante, esta metodología ralentiza el funcionamiento general del SO, debido a que deben ejecutarse continuamente algoritmos de compresión/descompresión. Además, tiene como inconveniente la dependencia de la información del programa de compresión, circunstancia que podría provocar problemas de incompatibilidad d futuros en caso de producirse errores.</li>
+</ul>
+<p>Normalmente, resulta más eficaz la compresión de ficheros de forma independiente (en lugar de particiones completas).</p>
+<p>Los SO actuales incorporan sus propios métodos de compresión/descompresión (en UNIX: gzip -&gt; para archivos independientes, tar -&gt; para árboles de archivos). Además, existen herramientas ajenas a los SO para realizar estas operaciones (WinZip, WinRAR, IsoBuster, …)</p>
+<ul>
+<li><strong>Copias de seguridad</strong> . La realización de copias de seguridad del contenido del disco en otro medio de almacenamiento, es un método para garantizar la recuperación de datos destruidos por errores humanos, de situaciones imprevistas o de hardware.</li>
+</ul>
+<p><strong>Sistemas RAID (Redundant Array Of Independent Or Inexpensive Disks)</strong></p>
+<p>Los sistemas de matriz de discos independientes (baratos) redundantes son utilizados para el control de errores en los discos. Emplean varios discos para evitar (o minimizar) la pérdida de información en caso de que se produzca algún error. La redundancia hace referencia a la información extra que no sería necesaria si no se produjesen errores.</p>
+<p>La gestión de los sistemas RAID no es accesible por el usuario, pudiendo ser gestionada por hardware (tarjetas RAID) o por software (SO). como suele ocurrir, el método más eficiente (pero más costoso económicamente) es el que utiliza tarjetas hardware, debido a que desocupa a la CPU de las tareas RAID.</p>
+<p>A continuación se enumeran los niveles RAID más habituales:</p>
+<ul>
+<li><strong>RAID 0</strong> (disk striping, discos en bandas). En este nivel, la información se distribuye entre todos los discos que forman el conjunto RAID, proporcionando una mayor velocidad en las transferencias debido al trabajo conjunto de todos los discos para acceder a un mismo archivo. No obstante, si falla alguno de los discos perderemos toda la información. La implementación de RAID 0 precisa de 2 discos como mínimo.</li>
+<li><strong>RAID 1</strong> (disk mirroring, discos en espejo). Basado en el empleo de discos para duplicar la información. Con este método, cada vez que se escriba en un disco, deberá grabarse la información de su disco copia para mantener la coherencia. A diferencia del método anterior, si en éste falla un disco, el sistema podrá continuar funcionando sin detenerse. Es habitual implementar RAID 1 con 2 discos. Este sistema permite una capacidad de almacenamiento igual a la mitad de la capacidad total de los discos de que disponemos. Pueden combinarse RAID 0 y RAID 1 para formar el sistema RAID 10. Con RAID 10, la información se distribuye en bandas por varios discos y cada disco se duplica, lo que requiere un número par de discos (4, 6, 8, …).</li>
+<li><strong>RAID 2</strong> . Ofrece detección y corrección de errores en los discos mediante la utilización de códigos de Hamming. Este nivel está incluido en la actualidad en los propios discos, por lo que ha dejado de ser un sistema a elegir por el usuario.</li>
+<li><strong>RAID 3</strong> . Emplea un disco para almacenar la paridad. La información se distribuye a nivel de bits entre los distintos discos. Si un disco falla, la información se reconstruiría mediante la operación O-exclusiva (XOR) de los discos restantes. Son necesarios un mínimo de 3 discos para implementar un RAID 3. Todos los discos funcionan a la vez, lo que hace bajar el rendimiento con sistemas transaccionales (múltiples accesos sobre pequeñas cantidades de datos).</li>
+<li><strong>RAID 4</strong> . Utiliza un disco para el almacenamiento de la paridad, al igual que el anterior; si embargo, los datos se distribuyen a nivel de bloque (en lugar de a nivel de bits) y se puede acceder a cada disco de forma individual. Este hecho mejora el rendimiento en sistemas transaccionales.</li>
+<li><strong>RAID 5</strong> . La paridad se almacena entre todos los discos, eliminando el excesivo uso del disco de paridad que hacían los dos niveles anteriores. Este método es el más eficiente, ofreciendo la mayor tasa rendimiento/coste y el menos coste por megabyte de información. Se necesitan al menos 3 discos para su desarrollo; no obstante, el funcionamiento óptimo se alcanza a partir de los 7 discos.</li>
+</ul>
+<p>Los últimos tres niveles se denominan de discos en bandas con paridad (disk striping with parity), y en ellos, podremos calcular la capacidad máxima de información que pueden almacenar sumando la capacidad de todos los discos y restándoles la capacidad de uno (redundancia).</p>
+<h3 id="Otros-Medios-Magneticos"><a href="#Otros-Medios-Magneticos" class="headerlink" title="Otros Medios Magnéticos"></a>Otros Medios Magnéticos</h3><p><strong>ZIP</strong></p>
+<p>Tienen un tamaño similar a los floppys de 3,5″, lo que los hace fácilmente portables. Sus capacidades habituales son 100 y 250 Mb, aunque actualmente existen de 750 Mb.</p>
+<p><strong>JAZZ</strong></p>
+<p>Son discos similares a los anteriores (son compatibles) pero con capacidades de 1 y 2 Gb.</p>
+<p><strong>Tecnología Magneto-Óptica</strong></p>
+<p><strong>LS-120 Superdisk</strong></p>
+<p>La tecnología Láser Servo fue desarrollada en 1996. Se trata de una tecnología mixta (magnética y óptica) compatible con la de los floppys tradicionales; es decir, un lector/grabador de este tipo puede leer y escribir sus propios discos de 120 Mb y los floppys convencionales de 1,44 Mb.</p>
+<p>Este sistema es producto de una mezcla de tecnologías de los floppys, discos duros y CD-ROM’s.</p>
+<p>Combina una medio magnético con un método óptico utilizado para el posicionamiento de las cabezas de lectura/escritura, lo que conduce a un aumento considerable de la capacidad del medio respecto de los floppys, y a lograr velocidades de transferencia de hasta 400 kb/s (la mitad de veloces que los ZIP).</p>
+<p><strong>Discos Magneto Ópticos (MO)</strong></p>
+<p>Emplean, para la grabación del medio, un láser que calienta la superficie del disco (302º F). Existen dos variantes de funcionamiento de esta tecnología:</p>
+<ul>
+<li>El calor provoca la oxidación del metal del medio, lo que permite la orientación de su magnetismo mediante un imán (es la técnica más empleada).</li>
+<li>El calor cambia la estructura del medio, provocando que sea cristalino o amorfo.</li>
+</ul>
+<p>Existen discos de 5,25″ (650 Mb, 1.3 Gb, 2.6 Gb y 4.6 Gb) y de 3,5″ (128, 230 y 640 Mb).</p>
+<p><strong>Cintas Magnéticas</strong></p>
+<p>Ofrecen una gran capacidad de información junto con velocidades de transferencia muy bajas; motivo por el cual son empleadas casi exclusivamente para realizar copias de seguridad. Suponen un coste ínfimo por Mb.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/cintas_magneticas.png?w=825" alt=""></p>
+<h3 id="Copias-de-Seguridad-BACKUP"><a href="#Copias-de-Seguridad-BACKUP" class="headerlink" title="Copias de Seguridad (BACKUP)"></a>Copias de Seguridad (BACKUP)</h3><p>Las copias de seguridad o backups pueden definirse como copias de la información realizadas usando un medio de almacenamiento secundario, cuyo objetivo es salvaguardar la información ante posibles errores humanos, de hardware, etc.</p>
+<p><strong>Pérdida de información</strong></p>
+<p>Las pérdidas de datos pueden provenir de las circunstancias más variadas:</p>
+<ul>
+<li>Fallo del disco duro.</li>
+<li>Error humano (eliminación no deseada).</li>
+<li>Interrupción de una aplicación por fallo durante la grabación de la información en el disco.</li>
+<li>Acción de un virus o troyano.</li>
+<li>Accidente inevitable en el entorno del sistema informático (incendio, inundación, etc).</li>
+</ul>
+<p><strong>Frecuencia de Backups</strong></p>
+<p>La frecuencia de ejecución de backups dependerá tanto de la frecuencia de actualización de la información del sistema como de la información que el administrador del mismo esté dispuesto a perder.</p>
+<p>En sistemas relativamente importantes los backups son diarios.</p>
+<p><strong>Medios empleados para las Backups</strong></p>
+<p>Las copias de seguridad pueden hacerse, entre otros medios, sobre:</p>
+<ul>
+<li>Una partición dentro del mismo disco duro que contiene la información a proteger (mínima protección).</li>
+<li>Un disco duro auxiliar, dentro del mismo equipo donde se encuentra el disco duro con la información a proteger.</li>
+<li>Un disco duro en un equipo distinto al que contiene la información a proteger (backup por red).</li>
+<li>Un CD-R, CD-RW, DVD-RW, DVD+RW, etc.</li>
+<li>Una cinta magnética (tape backup).</li>
+<li>Floppys, ZIP’s, JAZZ’s, etc. (para copias de pequeñas cantidades de información).</li>
+</ul>
+<p><strong>Tipos de Backups</strong></p>
+<ul>
+<li>Completa. Copia de toda la información a salvaguardar.</li>
+<li>Progresiva o Incremental. Copia de la información nueva o modificada desde el último backup completo o progresivo (se necesitaría la última copia completa y todas las copias incrementales para restaurar la información).</li>
+<li>Diferencial. Copia de la información nueva o modificada desde la última copia completa (la recuperación de los datos precisa de la última copia completa y la última diferencial).</li>
+</ul>
+<h2 id="Controles-de-Cambio"><a href="#Controles-de-Cambio" class="headerlink" title="Controles de Cambio"></a>Controles de Cambio</h2><h3 id="Controlar-el-Proyecto-y-Eliminar-los-Retrasos"><a href="#Controlar-el-Proyecto-y-Eliminar-los-Retrasos" class="headerlink" title="Controlar el Proyecto y Eliminar los Retrasos"></a>Controlar el Proyecto y Eliminar los Retrasos</h3><p>Los cambios son un pilar básico dentro de la vida del desarrollo de software. En la práctica, el trabajo requiere de una administración formal de los cambios. Si contamos con una administración de cambios del software realmente efectiva podremos conseguir que:</p>
+<ul>
+<li>Los equipos de desarrollo puedan entregar el software dentro del tiempo y presupuesto establecidos y con una calidad predecible.</li>
+<li>Los líderes de proyecto conozcan en todo momento el estado y avance del desarrollo del software y tengan certeza del mismo dentro del tiempo prefijado.</li>
+<li>Los desarrolladores utilicen y controlen con orden y seguridad sus colecciones de archivos y componentes diferentes para cada aplicación.</li>
+<li>Los ‘probadores’ sepan cuándo una nueva construcción de software requiere ser sometida a un paquete de pruebas y las mejoras o correcciones que debe presentar.</li>
+</ul>
+<p>Las organizaciones de desarrollo exitosas consideran que el control de cambios durante todo el ciclo es la clave para asignar prioridades a las actividades del equipo, así como para controlar las dificultades que surjan durante el desarrollo. Si no implementamos dicho control, el caos de los cambios se apoderará del control del proyecto.</p>
+<p>La Administración de la Configuración y Control de Cambios (SCM) es la disciplina de la ingeniería de software que agrupa las herramientas y técnicas de uso de las mismas que una compañía emplea para administrar los cambios de los componentes de software. Cuando la SCM se encuentra integrada en otras actividades del desarrollo (requerimientos, análisis y diseño, construcción, pruebas), se denomina Gestión de Cambio Unificada (UCM).</p>
+<p>Existen guías que describen cómo controlar, dar seguimiento y monitorear los cambios para permitir un desarrollo iterativo exitoso; así como la forma de establecer espacios de trabajo seguros para cada desarrollador, aislándolo de los cambios realizados en otros espacios de trabajo y controlando los cambios de todos los artefactos de software (modelos, código, documentos, etc) Para llevar a cabo estas metodologías, se utilizan herramientas de ‘control de versiones y configuraciones’ y de ‘control de cambios’ que, por un lado, automatizan las metodologías, y por otro unen al equipo de desarrollo para conseguir un trabajo paralelo y coordinado. Estas herramientas permiten a cada desarrollador contar con un espacio de trabajo seguro donde puede realizar los cambios de manera independiente para que una vez probados puedan integrarse con el resto del desarrollo, garantizando de esta forma la calidad, el tiempo de entrega y la satisfacción del cliente con el producto desarrollado.</p>
+<h3 id="Gestion-de-Cambios"><a href="#Gestion-de-Cambios" class="headerlink" title="Gestión de Cambios"></a>Gestión de Cambios</h3><p>Podemos distinguir dos enfoques diferentes dentro de la gestión de cambios, dependiendo del mayor o menor grado de modificación del producto.</p>
+<p>Si el cambio a realizar afecta a gran parte de los componentes del producto, podrá plantearse como un nuevo desarrollo, y aplicar un nuevo ciclo de vida desde el principio, aunque aprovechando lo ya desarrollado de la misma forma que se reutilizan los prototipos.</p>
+<p>Si el cambio afecta a una parte bastante localizada del producto, entonces se puede organizar como simple modificación de elementos. Hay que tener en cuenta que cualquier cambio en el código del producto software siempre implicará una revisión de los elementos de documentación afectados; es decir, cambiar el código de algunos módulos puede requerir, además, modificar los documentos de diseño o incluso, en el caso de mantenimiento perfectivo, modificar el documento de especificación de requisitos.</p>
+<p>Tomando como referencia la gestión, la realización de cambios se puede controlar mediante dos clases de documentos, que en ocasiones pueden unirse para forma un único informe:</p>
+<ul>
+<li>Informe de problema: describe una dificultar en la utilización del software que precisa de alguna modificación para subsanarla.</li>
+<li>Informe de cambio: describe la solución dada a un problema y el cambio realizado en el producto software.</li>
+</ul>
+<p>El primer documento puede ser originado por los propios usuarios. Este informe se pasa a un grupo de ingeniería para la comprobación y codificación del problema planteado, y posteriormente a un grupo de gestión para decidir la solución a adoptar. Este grupo de gestión da comienzo al informe de cambio, que se pasa de nuevo al grupo de ingeniería para su total desarrollo y ejecución.</p>
+<h3 id="Comprobacion-de-los-Objetivos-del-Control-de-Cambios"><a href="#Comprobacion-de-los-Objetivos-del-Control-de-Cambios" class="headerlink" title="Comprobación de los Objetivos del Control de Cambios"></a>Comprobación de los Objetivos del Control de Cambios</h3><p>Los objetivos del control de cambios son comprobados al realizar entrevistas con:</p>
+<ul>
+<li>El Director de Tecnologías de Información.</li>
+<li>La Administración de la Función de Servicios de Información.</li>
+<li>La Administración de Desarrollo de Sistemas, Aseguramiento de la Calidad de Control de Cambios, Operaciones y Seguridad.</li>
+<li>La Administración de Usuarios implicada en el diseño y manejo de aplicaciones de sistemas de información.</li>
+</ul>
+<p>De las que se obtienen:</p>
+<ul>
+<li>Procedimientos organizacionales relacionados con la planificación de sistemas de información, el control de cambios, la seguridad y el ciclo de vida de desarrollo de sistemas.</li>
+<li>Procedimientos de la función de servicios de sistemas de información relacionados con la metodología del ciclo de vida de desarrollo de sistemas, el aseguramiento independiente de la calidad, los estándares de seguridad, la implementación, la distribución, el mantenimiento, la liberación del software, los cambios de emergencia y el control de versiones del sistema.</li>
+<li>Un plan de desarrollo de aplicaciones.</li>
+<li>Formato y bitácora de requisitos de control de cambios.</li>
+<li>Contratos con proveedores relacionados con servicios de desarrollo de aplicaciones.</li>
+</ul>
+<h3 id="Evaluacion-de-los-Controles"><a href="#Evaluacion-de-los-Controles" class="headerlink" title="Evaluación de los Controles"></a>Evaluación de los Controles</h3><p>La evaluación de los controles de cambios deberá tener en cuenta si:</p>
+<ul>
+<li>La bitácora de control de cambios garantiza que cualquiera de los cambios mostrados han sido resueltos.</li>
+<li>El control de cambios es un procedimiento formal tanto para los grupos de desarrollo como para los usuarios.</li>
+<li>El usuario está conforme con el resultado de los cambios solicitados, el tiempo de realización de los mismos y los costes.</li>
+<li>Para una muestra de cambios en la bitácora de control de cambios:<ul>
+<li>la documentación actual refleja con exactitud el ambiente modificado,</li>
+<li>los cambios hayan sido efectuados tal y como fueron documentados,</li>
+<li>el cambio implicó modificaciones en los programas y operaciones.</li>
+</ul>
+</li>
+<li>El proceso de cambios es controlado respecto de las mejoras en el conocimiento, la efectividad en el tiempo de respuesta y la satisfacción del usuario con el resultado del proceso.</li>
+<li>El mantenimiento del sistema de Intercambio de Rama Privada (PBX) se incluye en los procedimientos de control de cambios.</li>
+</ul>
+<h3 id="Evaluacion-de-la-Suficiencia"><a href="#Evaluacion-de-la-Suficiencia" class="headerlink" title="Evaluación de la Suficiencia"></a>Evaluación de la Suficiencia</h3><p>La comprobación de la suficiencia del control se realizará probando que:</p>
+<ul>
+<li>Para una selección de cambios, la administración ha aprobado los siguientes puntos:<ul>
+<li>petición del cambio,</li>
+<li>descripción del cambio,</li>
+<li>acceso al programa fuente,</li>
+<li>terminación del cambio por parte del programador,</li>
+<li>solicitud para trasladar el programa fuente al entorno de prueba,</li>
+<li>finalización de las pruebas de aceptación,</li>
+<li>solicitud de compilación y traslado al grupo de producción,</li>
+<li>identificación y aceptación del impacto general y específico,</li>
+<li>elaboración de un proceso de distribución,</li>
+</ul>
+</li>
+</ul>
+<p>y revisando el control de cambios en cuanto a la inclusión de:</p>
+<ul>
+<li>fecha del cambio solicitado,</li>
+<li>persona o grupo que lo solicita,</li>
+<li>petición aprobada de cambios,</li>
+<li>aprobación del cambio efectuado (servicios de información),</li>
+<li>aprobación del cambio efectuado (usuarios),</li>
+<li>fecha de actualización de la documentación,</li>
+<li>fecha del traslado al grupo de producción,</li>
+<li>aprobación del cambio por parte del grupo de aseguramiento de la calidad,</li>
+<li>aceptación por parte del grupo de operaciones.</li>
+</ul>
+<p>También se tendrán en cuenta, a la hora de evaluar esta suficiencia:</p>
+<ul>
+<li>Los tipos de análisis de cambios realizados sobre el sistema para la determinación de tendencias.</li>
+<li>La valoración de la adecuación de las librerías de la función de servicios de información y la identificación de la existencia de niveles de código base para advertir y prevenir la ocurrencia de errores.</li>
+<li>Si existen procedimientos de E/S (“check in/check out”) para cambios.</li>
+<li>Si la totalidad de los cambios en la bitácora fueron resueltos con la conformidad de los usuarios y si no se llevaron a cabo cambios que no hayan sido anteriormente especificados en la bitácora.</li>
+<li>Si los usuarios tienen conocimiento de la necesidad de procedimientos formales de control de cambios.</li>
+<li>El proceso de reforzamiento del personal garantiza el cumplimiento de cada uno de los procedimientos de control de cambios.</li>
+</ul>
+<h3 id="Evaluacion-del-Riesgo-de-los-Objetivos-de-Control-NO-Alcanzados"><a href="#Evaluacion-del-Riesgo-de-los-Objetivos-de-Control-NO-Alcanzados" class="headerlink" title="Evaluación del Riesgo de los Objetivos de Control NO Alcanzados"></a>Evaluación del Riesgo de los Objetivos de Control NO Alcanzados</h3><p>Esta evaluación se realizará llevando a cabo mediciones (“benchmarking”) de la administración del control de cambios contra organizaciones similares o estándares internacionales de buenas prácticas reconocidas en la industria correspondiente.</p>
+<p>Para sistemas seleccionados de la función de servicios de información, se ejecutará:</p>
+<ul>
+<li>Una verificación para comprobar si la documentación determina el requerimiento o si el cambio del sistema ha sido aprobado y priorizado por parte de la administración de las áreas usuarias afectadas y el proveedor de servicios.</li>
+<li>La confirmación de la existencia y adecuación de evaluación del impacto en formas de control de cambios.</li>
+<li>La obtención del conocimiento del cambio mediante una comunicación de la función de servicios de información.</li>
+<li>La asignación del cambio a los correspondientes recursos de desarrollo.</li>
+<li>La adecuación de los sistemas y los planes de prueba de los usuarios.</li>
+<li>La migración formal de prueba a producción a través del grupo de aseguramiento de la calidad.</li>
+<li>La puesta al día de los manuales de usuario y de operación para mostrar el cambio efectuado.</li>
+<li>El reparto de la nueva versión a los usuarios correspondientes.</li>
+</ul>
+<p>Además, la evaluación de este riesgo concluirá determinando, para una selección de cambios de información, que:</p>
+<ul>
+<li>Sólo se efectuaron cambios que hayan sido aprobados por la función de servicios de información.</li>
+<li>Todos los cambios han sido tenidos en cuenta.</li>
+<li>Las librerías actuales (fuente y objeto) muestran los últimos cambios llevados a cabo.</li>
+<li>Las modificaciones en el procedimiento de control de cambios de:<ul>
+<li>aplicaciones internas y adquiridas,</li>
+<li>software de sistemas y de aplicación,</li>
+<li>gestión del control de cambios por parte del proveedor.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357447350/TICB3-Gestion-de-Librerias-y-Medios-Magneticos" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t08/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T08
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t03/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T03</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

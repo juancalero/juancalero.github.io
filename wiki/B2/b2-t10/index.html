@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T10 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T10">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Análisis y gestión de riesgos de los sistemas de información. La metodología MAGERIT: método, elementos, técnicas.Planes de Seguridad, Contingencias y RecuperaciónLa Información y los sistemas e insta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T10">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t10/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Análisis y gestión de riesgos de los sistemas de información. La metodología MAGERIT: método, elementos, técnicas.Planes de Seguridad, Contingencias y RecuperaciónLa Información y los sistemas e insta">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/coste_recuperacion_interrupcion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/gfs.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/modelo_magerit.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/vista_estatica_relacional.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T08:00:04.578Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T10">
+<meta name="twitter:description" content="Análisis y gestión de riesgos de los sistemas de información. La metodología MAGERIT: método, elementos, técnicas.Planes de Seguridad, Contingencias y RecuperaciónLa Información y los sistemas e insta">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/coste_recuperacion_interrupcion.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file active"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t10" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t10/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t10.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t10.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t10.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T10
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Analisis-y-gestion-de-riesgos-de-los-sistemas-de-informacion-La-metodologia-MAGERIT-metodo-elementos-tecnicas"><a href="#Analisis-y-gestion-de-riesgos-de-los-sistemas-de-informacion-La-metodologia-MAGERIT-metodo-elementos-tecnicas" class="headerlink" title="Análisis y gestión de riesgos de los sistemas de información. La metodología MAGERIT: método, elementos, técnicas."></a>Análisis y gestión de riesgos de los sistemas de información. La metodología MAGERIT: método, elementos, técnicas.</h1><h2 id="Planes-de-Seguridad-Contingencias-y-Recuperacion"><a href="#Planes-de-Seguridad-Contingencias-y-Recuperacion" class="headerlink" title="Planes de Seguridad, Contingencias y Recuperación"></a>Planes de Seguridad, Contingencias y Recuperación</h2><p>La Información y los sistemas e instalaciones que la sustentan, son en la actualidad un activo fundamental para toda organización. Este activo está expuesto a una serie de amenazas más o menos destructivas (intrusiones, virus, fuego, desastres naturales, etc.), lo que hace necesario un instrumento capaz de gestionar su seguridad. La seguridad de la información se caracteriza por la preservación de la:</p>
+<ul>
+<li><strong>Confidencialidad</strong> : Asegurando que la información es accesible sólo a aquellos que tienen autorización para ello.</li>
+<li><strong>Integridad</strong> : Salvaguardando la completitud y precisión de la información y de los métodos de procesamiento.</li>
+<li><strong>Disponibilidad</strong> : Asegurando que los usuarios autorizados tienen acceso a la información en el momento que este acceso es requerido.</li>
+</ul>
+<p>La gestión de la seguridad de los sistemas de información incluye el análisis de los requerimientos de seguridad, el establecimiento de un plan para satisfacer estos requerimientos, la implementación de este plan y el mantenimiento y administración de la seguridad implementada. Este plan es el <strong>Plan de Seguridad</strong> .</p>
+<p>El plan de seguridad se diseña para asegurar que se ha establecido de forma correcta el contexto y el alcance de la gestión de la seguridad, que se ha identificado y evaluado todos los riesgos de seguridad y que se han desarrollado estrategias apropiadas para el tratamiento de estos riesgos.</p>
+<p>Pero incluso en las organizaciones bien preparadas, con buenos programas de seguridad, suceden incidentes, emergencias o desastres que afectan a la continuidad del servicio. Debido al avance de las tecnologías de la información, las organizaciones actuales dependen en gran medida de ellas. Con la aparición del e-business muchas organizaciones no pueden sobrevivir sin un modo de operación 24x7x365 (24 horas al día, 7 días a la semana, 365 días al año).</p>
+<p>El Plan de Seguridad debe incluir tanto una estrategia proactiva como una reactiva:</p>
+<ul>
+<li>La <strong>estrategia proactiva</strong> es una estrategia de prevención que comprende el conjunto de pasos que ayudan a minimizar los puntos vulnerables de los activos (recursos de los sistemas de información).</li>
+<li>La <strong>estrategia reactiva</strong> es una estrategia de corrección que comprende aquellas medidas orientadas a reducir los daños ocasionados una vez que se ha producido un ataque o incidente.</li>
+</ul>
+<p>Así que son necesarios planes extensos y rigurosos para alcanzar el estado de continuidad de las operaciones, en el que los sistemas críticos y las telecomunicaciones estén continuamente disponibles. La descripción de las acciones y decisiones necesarias para asegurar la continuidad de las operaciones de la Organización en el caso de un incidente, una emergencia o de un desastre se recogen en el <strong>Plan de Contingencias</strong> .</p>
+<p>Mediante el Plan de Contingencias se diseñan y formulan los modos de actuación alternativos que van a permitir la operación de la Organización en condiciones adversas, la recuperación de sus funciones de la forma más rápida posible, y que van a proporcionar continuidad a los procesos críticos del negocio.</p>
+<p>Como parte del Plan de Contingencias está el Plan de Recuperación de Desastres, en el que se desarrollan todas las normas de actuación para reiniciar las actividades de proceso, bien sea en el propio centro de proceso de datos o en un lugar alternativo (Centro de Respaldo) en el caso de producirse un desastre.</p>
+<h2 id="Gestion-de-la-Seguridad-El-Plan-de-Seguridad"><a href="#Gestion-de-la-Seguridad-El-Plan-de-Seguridad" class="headerlink" title="Gestión de la Seguridad. El Plan de Seguridad"></a>Gestión de la Seguridad. El Plan de Seguridad</h2><p>La gestión de la seguridad es un proceso que comprende varias etapas. Comienza estableciendo los objetivos y las estrategias de seguridad y desarrollando una política corporativa de seguridad de tecnologías de la información. Como parte de esta política de seguridad corporativa está la creación de un estructura organizativa apropiada para asegurar que los objetivos definidos se pueden alcanzar.</p>
+<p>La siguiente etapa sería el análisis y gestión de los riesgos, que incluye las siguientes actividades:</p>
+<ul>
+<li>Realización de un análisis y evaluación de riesgos.</li>
+<li>Selección de las salvaguardas para los sistemas de información basada en el resultado del análisis y evaluación de riesgos.</li>
+<li>Formulación de políticas de seguridad de sistemas de información.</li>
+<li>Elaboración del plan de seguridad de sistemas de información, basado en las políticas de seguridad anteriores, para implementar las salvaguarda.</li>
+</ul>
+<p>Las dos últimas etapas son la implementación del plan de seguridad y su mantenimiento.</p>
+<p>El propósito del Plan de Seguridad es dar una visión general de los requerimientos de seguridad del sistema de información y describir los controles necesarios para alcanzar esos requerimientos. Además delimita las responsabilidades y el comportamiento esperado de toda persona que acceda al sistema. Mediante el Plan de Seguridad se establecen las salvaguardas necesarias para proteger los recursos de tecnologías de la información, ya sean salvaguardas de gestión, técnicas u operativas.</p>
+<h3 id="Objetivos-Estrategias-y-Politica-de-Seguridad-Corporativa"><a href="#Objetivos-Estrategias-y-Politica-de-Seguridad-Corporativa" class="headerlink" title="Objetivos, Estrategias y Política de Seguridad Corporativa"></a>Objetivos, Estrategias y Política de Seguridad Corporativa</h3><p>El primer paso en el proceso de la gestión de la seguridad debería ser determinar cual es el nivel de riesgo aceptable para la Organización y de aquí cual es el nivel apropiado de seguridad. El nivel de seguridad apropiado está determinado por los objetivos o requerimientos de seguridad que la Organización necesita cumplir. Es esencial que una Organización identifique sus requerimientos de seguridad. Hay tres fuentes principales para esta indentificación:</p>
+<ul>
+<li>El análisis y evaluación de riesgos: mediante éste se identifican las amenazas sobre los activos y las vulnerabilidades de éstos. Además se evalúa la posibilidad de ocurrencia de estas amenazas y se estima su impacto.</li>
+<li>El marco legal: en nuestro caso se deben tener en cuenta los requisitos establecidos por la Ley Orgánica 15/1999 de Protección de datos de carácter personal y el Real Decreto 994/1999, por el que se aprueba el Reglamento de medidas de seguridad de los ficheros automatizados que contengan datos de carácter personal. Para las Organizaciones de la Administración Pública se tiene además el Real Decreto 263/1996 por el que se regula la utilización de técnicas electrónicas, informáticas y telemáticas por la Administración General del Estado, modificado por el Real Decreto 209/2003 por el que se regulan los registros y las notificaciones telemáticas, así como la utilización de medios telemáticos para la sustitución de la aportación de certificados por los ciudadanos.</li>
+<li>El conjunto de requerimientos, objetivos y principios particulares para el procesamiento de la información que la Organización ha desarrollado para dar soporte a sus operaciones.</li>
+</ul>
+<p>Dependiendo de los objetivos de seguridad se eligen las estrategias para alcanzar estos objetivos. Cuatro son las estrategias básicas usadas para controlar el riesgo que resulta de las vulnerabilidades:</p>
+<ul>
+<li>Evitar el riesgo,mediante la aplicación de salvaguardas que eliminan o reducen los riesgos que permanecen para la vulnerabilidad considerada.</li>
+<li>Transferir el riesgo a otras áreas o a entidades externas, por ejemplo mediante la contratación de un seguro.</li>
+<li>Mitigar el riesgo, reduciendo los impactos en caso de que se explote la vulnerabilidad. La forma de mitigar el riesgo es mediante la Planificación de la Contingencia.</li>
+<li>Aceptar el riesgo sin control o mitigación, bien sea por su poca posibilidad de ocurrencia o por su bajo impacto.</li>
+</ul>
+<p>Es importante el compromiso de la dirección y los altos niveles de gestión de la Organización con la seguridad de los sistemas de información. Este compromiso debería resultar en una política corporativa de seguridad de las tecnologías de la información formalmente consensuada y documentada. Esta política debería cubrir, como mínimo, los siguientes aspectos:</p>
+<ul>
+<li>Los objetivos de seguridad.</li>
+<li>Los aspectos organizativos de la seguridad, desde el punto de vista de las infraestructuras y de la asignación de roles y responsabilidades.</li>
+<li>Integración de la seguridad dentro del ciclo de desarrollo de sistemas.</li>
+<li>Directivas y procedimientos generales de seguridad.</li>
+<li>Definición de clases para la clasificación de la información y de los sistemas.</li>
+<li>Políticas de salvaguarda.</li>
+<li>Planificación de la contingencia.</li>
+<li>Consideraciones legales.</li>
+</ul>
+<h3 id="Analisis-y-Evaluacion-de-Riesgos"><a href="#Analisis-y-Evaluacion-de-Riesgos" class="headerlink" title="Análisis y Evaluación de Riesgos"></a>Análisis y Evaluación de Riesgos</h3><p>Como ya se ha comentado el análisis y evaluación de riesgos (AER) es una de las fuentes fundamentales para la identificación de los requerimientos de seguridad. Los resultados de esta evaluación van a servir de guía para determinar las acciones de gestión adecuadas y las prioridades en el tratamiento de los riesgos de seguridad. Además van a ayudar a seleccionar e implementar las salvaguardas para protegerse de esos riesgos.</p>
+<p>Mediante el AER se identifican las amenazas que soportan los activos del Sistema de Información (o los relacionados con él) y se determina cual es la vulnerabilidad de esos activos frente a esas amenazas. Con esto se estima el grado perjuicio (impacto) que pueden tener estas amenazas y vulnerabilidades y se calcula el riesgo que se corre.</p>
+<p>Existen dos aproximaciones al Análisis de Riesgos, una cuantitativa y otra cualitativa. La primera se basa en dos parámetros fundamentales: la probabilidad de que ocurra un suceso y una estimación de las pérdidas en caso de que así sea. El producto de estos dos factores es el denominado Coste Anual Estimado (EAC, Estimated Annual Cost) y aunque teóricamente es posible calcularlo para cualquier evento y tomar decisiones basadas en su valor, en la práctica la dificultad de la estimación o la inexactitud en el cálculo de parámetros hace que esta aproximación sea la menos usada.</p>
+<p>La segunda aproximación, la cualitativa, es mucho más sencilla e intuitiva que la anterior, y es la más extendida hoy en día. Se basa en una simple estimación de pérdidas potenciales (ya no interviene el cálculo de probabilidades exactas). Para ello se interrelacionan cuatro elementos: las amenazas, las vulnerabilidades, los impactos asociados a las amenazas y las salvaguardas que se toman para minimizar los impactos o las vulnerabilidades. Con estos elementos se obtiene un indicador cualitativo del riesgo asociado a un activo, visto como la posibilidad de que una amenaza se materialice en un activo y produzca un impacto.</p>
+<p>Los riesgos se pueden clasificar entonces según su nivel en:</p>
+<ul>
+<li>No aceptable: el riesgo pone en peligro los objetivos fijados en el proyecto de seguridad, causa un daño o pérdida irreparable. Se deben tomar acciones inmediatas para reducir su nivel.</li>
+<li>Crítico: el riesgo puede afectar los objetivos del proyecto o causar un daño o pérdida importante. El riesgo debe mitigarse.</li>
+<li>Mayor: el riesgo produce un impacto significativo en el proyecto (afecta a costos, calidad u a otras áreas). Se deben ejecutar acciones que reduzcan el impacto.</li>
+<li>Menor: No causa problemas significativos. Se debe monitorear de una manera regular para asegurar que no sube de nivel.</li>
+</ul>
+<h3 id="Seleccion-de-Salvaguardas"><a href="#Seleccion-de-Salvaguardas" class="headerlink" title="Selección de Salvaguardas"></a>Selección de Salvaguardas</h3><p>Se deben identificar y seleccionar las salvaguardas apropiadas para reducir el riesgo evaluado hasta niveles aceptables. Para seleccionar las salvaguardas se tienen que considerar: el resultado del análisis y evaluación de riesgos, las salvaguardas ya existentes o planificadas y las restricciones de varios tipos que puedan existir.</p>
+<p>Mediante el análisis y evaluación de riesgos se han detectado las vulnerabilidades de los sistemas con amenazas asociadas que pueden explotar estas vulnerabilidades y cual es el impacto que pueden causar. Así que los resultados de esta evaluación nos van a indicar dónde es necesario una protección adicional y de qué tipo.</p>
+<p>Se deben tener también en cuenta las salvaguardas ya existentes o planificadas para evitar trabajo o costes innecesarios o para determinar si las nuevas salvaguardas son compatibles con aquellas. Además se tienen que examinar en términos de comparaciones de coste con vistas a eliminarlas (o no implementarlas) o mejorarlas en caso de que no sean suficientemente efectivas.</p>
+<p>Hay varios tipos de restricciones que deben ser tenidos en cuenta a la hora de seleccionar las salvaguardas, entre ellos:</p>
+<ul>
+<li>Restricciones de tiempo: por ejemplo hay que considerar si el tiempo que va a tomar implementar la salvaguarda es un periodo de tiempo aceptable para dejar el sistema expuesto a un determinado riesgo.</li>
+<li>Restricciones financieras: el coste de la salvaguarda no debe ser mayor que el valor de los activos que va a proteger.</li>
+<li>Restricciones técnicas: como la compatibilidad de software o hardware.</li>
+</ul>
+<p>Para la selección de salvaguardas se debe tener en cuenta que exista un equilibrio entre las salvaguardas de gestión, las salvaguardas operacionales y las salvaguardas técnicas.</p>
+<p>Las salvaguardas de gestión, que se centran en la gestión de la seguridad del sistema, incluyen:</p>
+<ul>
+<li>Reglas de comportamiento: delimitan las responsabilidades y el comportamiento esperado de toda persona que acceda al sistema.</li>
+<li>Revisión de las salvaguardas: la seguridad de los sistemas puede degradarse con el tiempo, debido a los cambios tecnológicos, a la propia evolución del sistema o cambios en los procedimientos. Se deben realizar revisiones periódicas para garantizar que los controles funcionan de una manera efectiva y proporcionan los niveles adecuados de protección.</li>
+<li>Planificación de la seguridad durante todo el ciclo de vida del sistema: se deben tener en cuenta los requisitos de seguridad en todas las fases del ciclo de vida del sistema.</li>
+</ul>
+<p>Las salvaguardas operacionales, salvaguardas no técnicas que proporcionan seguridad física, de personal y administrativa, incluyen:</p>
+<ul>
+<li>Controles de seguridad física y del entorno: entre ellas se encuentran el establecimiento de áreas seguras y equipamiento de seguridad.</li>
+<li>Controles de seguridad del personal: cubren comprobaciones en el reclutamiento del personal, especialmente del personal de confianza, programas de educación, entrenamiento y de compromiso con la seguridad.</li>
+<li>Controles del mantenimiento de aplicaciones de software: se utilizan para controlar la instalación o la actualización de aplicaciones de software. Entre ellos están el control de versiones, la gestión del cambio o la gestión de la configuración.</li>
+<li>Controles de validación e integridad de datos: se utilizan para proteger a los datos de alteraciones accidentales o malintencionadas, o para evitar su destrucción.</li>
+<li>Planificación de la contingencia que se puede considerar también como una salvaguarda.</li>
+</ul>
+<p>Las salvaguardas técnicas, enfocadas a los controles que ejecutan los sistemas de computación, incluyen:</p>
+<ul>
+<li>Identificación y autenticación.</li>
+<li>Controles lógicos de acceso (autorización y controles de acceso).</li>
+<li>Registros de auditoría.</li>
+</ul>
+<h3 id="Politica-de-Seguridad-de-Sistemas-de-Informacion"><a href="#Politica-de-Seguridad-de-Sistemas-de-Informacion" class="headerlink" title="Política de Seguridad de Sistemas de Información"></a>Política de Seguridad de Sistemas de Información</h3><p>La política de seguridad del sistema de información contiene los detalles de las salvaguardas necesarias y el por qué son necesarias. Muchos sistemas, que introducen consideraciones especiales no contempladas en otros sistemas de la Organización, necesitan sus propias políticas de seguridad. Estas políticas deben ser compatibles con la política corporativa de seguridad de tecnologías de la información.</p>
+<p>La política debe estar basada en los resultados del análisis de riesgos y debe contener las salvaguardas necesarias para alcanzar el nivel de seguridad apropiado para el sistema considerado. En concreto la política debe contener:</p>
+<ul>
+<li>Una descripción del sistema y de sus componentes.</li>
+<li>Una descripción de los servicios y funciones de negocio cubiertos por el sistema.</li>
+<li>Una identificación de los objetivos de seguridad para el sistema.</li>
+<li>El grado de dependencia de la Organización respecto al sistema.</li>
+<li>Los activos del sistema que se quieren proteger y una valoración de estos activos.</li>
+<li>Las vulnerabilidades del sistema y las amenazas a las que se enfrenta, incluyendo la relación entre los activos y las amenazas y la probabilidad de que éstas se materialicen.</li>
+<li>Los riesgos de seguridad del sistema resultantes de la combinación de la probabilidad de que se materialicen las amenazas, la facilidad de explotación de las vulnerabilidades y el impacto sobre el negocio.</li>
+<li>La lista de salvaguardas identificadas para proteger el sistema.</li>
+<li>El coste estimado de seguridad.</li>
+</ul>
+<h3 id="Elaboracion-e-Implementacion-del-Plan-de-Seguridad"><a href="#Elaboracion-e-Implementacion-del-Plan-de-Seguridad" class="headerlink" title="Elaboración e Implementación del Plan de Seguridad"></a>Elaboración e Implementación del Plan de Seguridad</h3><p>El Plan de Seguridad del Sistema debe estar basado en la política de seguridad del sistema y describe las acciones que se van a tomar para mantener el nivel apropiado de seguridad y para implementar las salvaguardas requeridas para el sistema. Debe asegurar que las salvaguardas se implementan en el tiempo planificado, de acuerdo con las prioridades que se derivan del análisis de riesgos.</p>
+<p>Se debe incluir:</p>
+<ul>
+<li>Los objetivos de seguridad en términos de confidencialidad, integridad, disponibilidad, autenticidad y fiabilidad.</li>
+<li>Una evaluación del riesgo residual aceptado después de implementar las salvaguardas identificadas.</li>
+<li>Una lista de las salvaguardas seleccionadas que se van a implementar, así como una lista de las salvaguardas ya existentes.</li>
+<li>Una identificación y definición de las acciones que se van a tomar, con sus prioridades, para implementar las salvaguardas.</li>
+<li>Una estimación de los recursos necesarios para la implementación de las salvaguardas y de los costes asociados.</li>
+<li>Un plan detallado de implementación del Plan.</li>
+</ul>
+<p>Después de haber elaborado el plan de seguridad es necesario implementarlo. A la vez que se implementan las salvaguardas se debe desarrollar un programa para conseguir que todo el personal de tecnología de la información y los usuarios finales tengan un conocimiento suficiente de los sistemas y que entiendes porqué las salvaguardas son necesarias y como utilizarlas correctamente.</p>
+<p>Durante la implementación deben tenerse en cuenta los siguientes puntos:</p>
+<ul>
+<li>El coste de las salvaguardas permanece dentro del rango aprobado.</li>
+<li>Las salvaguardas se implementan correctamente según lo establecido en el Plan de Seguridad.</li>
+</ul>
+<h3 id="Mantenimiento-del-Plan-de-Seguridad"><a href="#Mantenimiento-del-Plan-de-Seguridad" class="headerlink" title="Mantenimiento del Plan de Seguridad"></a>Mantenimiento del Plan de Seguridad</h3><p>El mantenimiento del Plan comprende la revisión y el análisis de las salvaguardas implementadas, la gestión del cambio y monitorización de la seguridad.</p>
+<p>El objetivo de la revisión y análisis de las salvaguardas es comprobar que las salvaguardas establecidas en el plan están implementadas y que se usan correctamente.</p>
+<p>Mediante la gestión del cambio se va a determinar que impacto tiene en la seguridad del sistema los cambios que se realizan, o está planificado realizar, en el mismo.</p>
+<p>Por monitorización del Plan se entienden las actividades de comprobación de si el sistema, su entorno y sus usuarios mantienen el nivel de seguridad establecido en el Plan de Seguridad. La monitorización es un modo de detectar cambios relevantes en la seguridad.</p>
+<h2 id="Planificacion-de-la-Contingencia-El-Plan-de-Contingencias"><a href="#Planificacion-de-la-Contingencia-El-Plan-de-Contingencias" class="headerlink" title="Planificación de la Contingencia. El Plan de Contingencias"></a>Planificación de la Contingencia. El Plan de Contingencias</h2><p>En el Plan de Contingencias se detalla la forma en que debe reaccionar la Organización y qué acciones emprender para garantizar la recuperación y continuidad y de las operaciones críticas, frente a determinados eventos (ya sean accidentales o malintencionados) que pueden provocar una interrupción del servicio. En el plan se tiene que incluir quien es la autoridad para iniciar las actividades descritas, cuales son las operaciones a las que se debe garantizar la continuidad y como restablecer dichas operaciones.</p>
+<p>Un plan de Contingencias debería cubrir la ocurrencia de eventos como:</p>
+<ul>
+<li>Fallos del hardware.</li>
+<li>Fallos del software.</li>
+<li>Interrupción del suministro eléctrico o de los servicios de telecomunicaciones.</li>
+<li>Errores humanos o sabotajes.</li>
+<li>Ataques de software malicioso.</li>
+<li>Fuego.</li>
+<li>Desastres naturales.</li>
+</ul>
+<p>La planificación de la contingencia es un proceso que, siguiendo la Guía para la Planificación de la Contingencia del NIST (National Institute of Standars and Technology), comprende los siguientes pasos:</p>
+<ol>
+<li>Desarrollar una política de planificación de la contingencia.</li>
+<li>Realizar un Análisis de Impacto en el Negocio.</li>
+<li>Desarrollar estrategias de recuperación.</li>
+<li>Desarrollar el Plan de Contingencias.</li>
+<li>Realizar pruebas y entrenamientos.</li>
+<li>Revisión y mantenimiento del plan.</li>
+</ol>
+<p>Vamos a desarrollar a continuación cada una de estas etapas.</p>
+<h3 id="Desarrollo-de-Politicas-de-Planificacion-de-Contingencias"><a href="#Desarrollo-de-Politicas-de-Planificacion-de-Contingencias" class="headerlink" title="Desarrollo de Políticas de Planificación de Contingencias"></a>Desarrollo de Políticas de Planificación de Contingencias</h3><p>Para que un plan de contingencias sea efectivo debe basarse en políticas claramente definidas que aseguren que todo el personal entiende de una forma completa los requerimientos de planificación de contingencias de la Organización. Estas políticas definen los objetivos y las responsabilidades, y establecen un marco para la planificación de la contingencia de los sistemas de información.</p>
+<h3 id="Analisis-de-Impacto-en-el-Negocio"><a href="#Analisis-de-Impacto-en-el-Negocio" class="headerlink" title="Análisis de Impacto en el Negocio"></a>Análisis de Impacto en el Negocio</h3><p>Una vez definidas las políticas, la primera fase en el desarrollo de un proceso de planificación de contingencias es realizar un análisis de impacto en el negocio (BIA, Business Impact Analysis). Un BIA es una investigación y una evaluación del impacto que pueden provocar en un sistema los diversos ataques potenciales a los que se enfrenta. Con él se establece el alcance del Plan y se determina cuales son los recursos críticos y los tiempos de recuperación aceptables.</p>
+<p>El BIA arranca donde termina el Análisis y Gestión de Riesgos (AGR). Se asume que los controles que se establecieron como resultado del AGR han fallado, han conseguido ser sobrepasados o simplemente no han sido efectivos, y que el ataque ha tenido éxito.</p>
+<p>Los tres pasos para realizar un BIA son: identificación de los recursos críticos del sistema, identificación de los impactos y de los tiempos asumibles de las interrupciones, y establecimiento de las prioridades de recuperación.</p>
+<p>Los sistemas de información pueden ser extremadamente complejos y realizar múltiples servicios a través de numerosos componentes, procesos e interfaces. El primer paso del BIA es evaluar el sistema para determinar cuales son las funciones críticas y cuales son los recursos necesarios para realizarlas.</p>
+<p>En el siguiente paso se analizan los recursos críticos identificados en la etapa anterior y se determina el impacto de un daño o de una interrupción en cada uno de dichos recursos. Los efectos de estos daños o interrupciones se deben estudiar teniendo en cuenta:</p>
+<ul>
+<li>Su duración en el tiempo, para poder identificar cual es el tiempo máximo que se puede asumir que un recurso estará fuera de servicio antes de que se produzca la negación de una función esencial.</li>
+<li>Los recursos relacionados y los sistemas dependientes, para identificar cualquier efecto en cascada que pudiera ocurrir.</li>
+</ul>
+<p>Se debe determinar cual es el punto óptimo de recuperación del sistema teniendo en cuenta que tiene que haber un equilibrio entre el coste de la no operatividad del sistema y el coste de los recursos necesarios para su restauración.</p>
+<p>Considerando la gráfica del coste de interrupción y recuperación como función del tiempo, como se muestra en la siguiente figura, el punto óptimo de recuperación es el punto en el que se cortan ambas funciones.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/coste_recuperacion_interrupcion.png?w=825" alt=""></p>
+<p>El último paso, establecimiento de las prioridades de recuperación, se basa en los resultados de la etapa anterior para priorizar las estrategias de recuperación que se establecerán durante la activación del Plan de Contingencias. Mediante esta priorización se pueden tomar decisiones bien fundadas respecto a la asignación de recursos y gastos de recuperación, ahorrando esfuerzos, tiempo y dinero.</p>
+<h3 id="Desarrollo-de-Estrategias-de-Recuperacion"><a href="#Desarrollo-de-Estrategias-de-Recuperacion" class="headerlink" title="Desarrollo de Estrategias de Recuperación"></a>Desarrollo de Estrategias de Recuperación</h3><p>Las estrategias de recuperación proporcionan los medios para restaurar el sistema de una manera rápida y efectiva después de una interrupción de las operaciones.</p>
+<p>Una estrategia básica e imprescindible la constituyen los respaldos o copias de seguridad (backups). Para conseguir una política de respaldo efectiva es necesario determinar aspectos como:</p>
+<ul>
+<li>Qué ficheros o sistemas de ficheros respaldar y dónde se encuentran.</li>
+<li>El tipo de backup que se va a realizar. Tenemos tres tipos de backups: totales, incrementales y diferenciales. En el total se copia el conjunto total de los datos que queremos respaldar. En el incremental se salvan sólo aquellos ficheros que han cambiado desde la última copia de seguridad, sea esta del tipo que sea. En el diferencial se salvan sólo aquellos ficheros que han cambiado desde el último backup total. Cada uno de los tipos tiene sus ventajas y sus inconvenientes y son más o menos efectivos dependiendo de las circunstancias. La mayoría de las estrategias de respaldo utilizan una combinación de backups totales con backups incrementales o diferenciales.</li>
+<li>La frecuencia con la que se va a realizar. La frecuencia de realización de los backups depende de dos factores claves: la tasa de cambio de los datos y de la sensibilidad de los mismos para la organización. Un caso típico es realizar backups completos una vez a la semana y backup incrementales o diferenciales diariamente.</li>
+<li>Cual es el tiempo de retención de las copias. Se determina el periodo de tiempo durante el cual se tienen que mantener archivadas las copias de seguridad antiguas.</li>
+<li>Qué medios de almacenamiento se van a utilizar, cintas, discos magnéticos, discos ópticos, y cual va a ser la estrategia de rotación de los conjuntos de medios que se utilicen. Un esquema de rotación típico es la rotación “abuelo-padre-hijo” (GFS, Grandfather-Father-Son). Este esquema utiliza conjuntos de medios diarios (hijo), semanales (padre) y mensuales (abuelo).</li>
+</ul>
+<p>Una implementación típica del esquema GFS es considerar un periodo de rotación de tres meses y 12 cintas:</p>
+<ul>
+<li>Hijo: se asignan 4 cintas para el backup incremental diario [1-4]</li>
+<li>Padre: se asignan 5 cintas para el backup total semanal [5-9]</li>
+<li>Abuelo: se asignan 3 cintas para el backuptotal mensual [10-12]</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/gfs.png?w=825" alt=""></p>
+<p>Notas:</p>
+<ol>
+<li>Sobre el último día hábil del mes</li>
+<li>Para cuando hay un quinto viernes en el mes</li>
+</ol>
+<p>Aunque interrupciones muy graves, con efectos a largo plazo, pueden ser que ocurran raramente se deben considerar en el plan de contingencia. El plan debe incluir entonces una estrategia de recuperación de las operaciones del sistema en instalaciones alternativas para operar en ellas durante un periodo de tiempo. Se pueden clasificar estos lugares alternativos en:</p>
+<ul>
+<li>“Cold site”: está localizado en el exterior de la Organización con toda la infraestructura necesaria preparada para la instalación en el caso de que ocurra un desastre, pero es la organización que utiliza el sitio frío la que debe instalar el equipamiento necesario. En un centro frío llevaría más de un día reiniciar las operaciones después del desastre.</li>
+<li>“Mutual Backup”: dos Organizaciones con una configuración similar de los sistemas se ponen de acuerdo para servir una a la otra como lugar de respaldo.</li>
+<li>“Hot site”: un lugar con instalaciones de telecomunicaciones, software y hardware compatibles con el lugar de producción. En un centro frío con ese equipamiento tomaría menos de un día el reiniciar las operaciones después del desastre.</li>
+<li>“Remote Journaling”: se refiere a transmisiones on-line de las transacciones de datos para salvaguardar de manera periódica el sistema de forma que se minimice la pérdida de datos y el tiempo de recuperación.</li>
+<li>“Mirrores Site”: un lugar equipado con un sistema idéntico al de producción con instalaciones de mirroring. Los datos se duplican en el sistema de salvaguarda de manera inmediata de forma que la recuperación es transparente a los usuarios.</li>
+</ul>
+<h3 id="Desarrollo-del-Plan-de-Contingencias"><a href="#Desarrollo-del-Plan-de-Contingencias" class="headerlink" title="Desarrollo del Plan de Contingencias"></a>Desarrollo del Plan de Contingencias</h3><p>Podemos considerar cuatro componentes primarios en un Plan de Contingencias:</p>
+<ul>
+<li>Información de soporte.</li>
+<li>Fase de notificación/activación.</li>
+<li>Fase de recuperación.</li>
+<li>Fase de restauración.</li>
+<li>Apéndices del plan.</li>
+</ul>
+<p>En la primera sección, información de soporte, generalmente se incluye cual es el propósito y los objetivos del Plan, y se define su alcance, identificando los sistemas y las localizaciones que van a estar cubiertos por el plan. Se describe además la estructura de los equipos de contingencias, incluyendo su jerarquía y mecanismos de coordinación, con sus roles y responsabilidades en una situación de contingencia.</p>
+<p>En la sección fase de notificación/activación se definen las acciones que se van a tomar una vez que se detecta una situación de emergencia o una interrupción del servicio. Estas acciones incluyen la notificación al personal de recuperación, la evaluación de daños y activación del Plan. Los procedimientos de notificación, que describen los métodos para comunicarse con el equipo de recuperación, tienen que estar documentados en el Plan. La activación del Plan se realiza sólo cuando el análisis de daños indica que se cumplen uno o más de los criterios de activación que se han establecido en la declaración de la política de la planificación de la contingencia (fase 1 de la planificación). Una vez que se ha caracterizado el daño y establecido que se debe activar el Plan de Contingencias, el coordinador del plan puede seleccionar una estrategia de recuperación adecuada y se realiza la notificación al equipo de recuperación asociada con ella.</p>
+<p>En la sección fase de recuperación se describen las actividades que se centran en las medidas para ejecutar las capacidades de procesamiento de una manera temporal y reparar el daño y recuperar las capacidades operativas del sistema original (o de uno nuevo si este fuera irrecuperable). Los procedimientos de recuperación deben reflejar las prioridades identificadas en el Análisis de Impacto en el Negocio y estar documentados en un formato secuencial, de paso a paso, de forma que los distintos componentes del sistema se puedan restaurar de una manera lógica.</p>
+<p>En la fase de restauración las operaciones de recuperación han terminado y se transfieren de nuevo las operaciones normales al sistema original (o uno nuevo en el caso de que fuera irrecuperable). Las siguientes operaciones tienen lugar en esta fase:</p>
+<ul>
+<li>Asegurarse que las infraestructuras adecuadas, tales como energía eléctrica o telecomunicaciones están operativas.</li>
+<li>Instalar el hardware y el software del sistema.</li>
+<li>Establecer las conexiones y las interfaces con la red y con los sistemas externos.</li>
+<li>Probar las operaciones del sistema para probar su completa funcionalidad.</li>
+<li>Copiar los datos del sistema de contingencia y cargarlos en el sistema restaurado.</li>
+<li>Dar por terminadas las operaciones de contingencias.</li>
+</ul>
+<h3 id="Pruebas-y-Entrenamiento"><a href="#Pruebas-y-Entrenamiento" class="headerlink" title="Pruebas y Entrenamiento"></a>Pruebas y Entrenamiento</h3><p>Las pruebas del plan es un elemento crítico que va a permitir detectar sus deficiencias y evaluar la efectividad de cada procedimiento de recuperación y del plan como un todo.</p>
+<p>Entre las pruebas a realizar están:</p>
+<ul>
+<li>Recuperación a partir de los backups.</li>
+<li>Restauración de las operaciones normales.</li>
+<li>Rendimiento del sistema al utilizar equipamientos alternativos.</li>
+<li>Los procedimientos de notificación de contingencias.</li>
+</ul>
+<p>Para complementar las pruebas el personal debe entrenarse en la ejecución de los procedimientos bajo su responsabilidad con el objetivo de que sean capaces de realizarlos sin necesidad de la ayuda del documento real del plan de contingencias.</p>
+<h3 id="Mantenimiento-del-Plan"><a href="#Mantenimiento-del-Plan" class="headerlink" title="Mantenimiento del Plan"></a>Mantenimiento del Plan</h3><p>Los sistemas de información sufren cambios debidos a las necesidades cambiantes de la Organización, a los cambios tecnológicos o a nuevas políticas internas o externas. Para ser efectivo el Plan de Contingencias debe mantenerse para que se ajuste a los nuevos requerimientos, procedimientos o políticas. El plan debería revisarse con una base periódica, por ejemplo una vez al año, y siempre que se efectúen cambios significativos en cualquier elemento del plan.</p>
+<p>Los cambios en el Plan deberían documentarse por medio de un registro de cambios en el que se especifique la fecha del cambio, la parte a la que afecta y un comentario sobre el mismo.</p>
+<h2 id="Plan-de-Recuperacion-de-Desastres"><a href="#Plan-de-Recuperacion-de-Desastres" class="headerlink" title="Plan de Recuperación de Desastres"></a>Plan de Recuperación de Desastres</h2><p>El Plan de Recuperación de Desastres se refiere al plan enfocado a las tecnologías de la información diseñado para restaurar la operativa del sistema, de las aplicaciones o de las instalaciones de computación, generalmente en un lugar alternativo después de una emergencia o incidente grave.</p>
+<p>Es la parte del Plan de Contingencias que debe incluir todas las acciones necesarias que van a permitir a la Organización operar durante el periodo de tiempo del desastre. Se definen en él los recursos, las acciones y los datos requeridos para reiniciar los procesos críticos del negocio, ya sea en el CPD o en Centro de Respaldo.</p>
+<p>En el Plan de Recuperación de Desastres se incluyen:</p>
+<ul>
+<li>Los criterios usados para identificar cuando debería activarse el plan, quien es el responsable de la activación del plan y como se va a comunicar ésta.</li>
+<li>Tareas y responsabilidades específicas de los miembros del equipo de recuperación de desastres.</li>
+<li>Procedimientos para evaluar los daños provocados por el desastre.</li>
+<li>Uso de soportes de procesamiento alternativo.</li>
+<li>Acciones de mantenimiento o sustitución de equipos dañados.</li>
+<li>Uso de copias de seguridad.</li>
+<li>Para la recuperación en un Centro de Respaldo se debe especificar además la política de traslados y vuelta al centro inicial.</li>
+</ul>
+<p>Una guía de las secciones que se incluyen en un Plan de Recuperación de Desastres es la siguiente:</p>
+<ul>
+<li>Propósito: incluye la declaración de los objetivos del plan.</li>
+<li>Alcance: identifica los sistemas críticos y las localizaciones específicas a las que se les aplica el plan.</li>
+<li>Bases: identifica las bases en las que se apoya el plan.</li>
+<li>Equipo: identifica al equipo que lidera las actividades del plan, así como los otros miembros involucrados en el proceso.</li>
+<li>Notificación: establece los métodos formales de comunicación para alertar al equipo de recuperación de la ocurrencia del incidente o desastre.</li>
+<li>Evaluación de daños: describe los procesos de análisis del alcance del daño.</li>
+<li>Activación: describe las situaciones y procesos que van a iniciar las actividades de recuperación.</li>
+<li>Operaciones de recuperación: describe todos los pasos para la recuperación de los sistemas y aplicaciones críticos, bien el propio centro o en Centro de Respaldo (cuando sea aplicable). Aquí se debería incluir la información sobre como recuperar los datos basándose en las copias de seguridad.</li>
+<li>Retorno a las operaciones normales: los procedimientos que debe seguir el equipo para la completa recuperación de todos los datos y la vuelta al procesamiento normal de todas las operaciones del negocio.</li>
+</ul>
+<h2 id="Politicas-de-Salvaguarda"><a href="#Politicas-de-Salvaguarda" class="headerlink" title="Políticas de Salvaguarda"></a>Políticas de Salvaguarda</h2><p>Las políticas de salvaguarda son las que van a determinar como se van a seleccionar los controles y medidas de protección para alcanzar los requerimientos de seguridad que se hayan especificado para los sistemas.</p>
+<p>Basándose en el resultado de revisiones de alto nivel en cuanto a seguridad, se pueden considerar tres opciones a la hora de hacer esta selección:</p>
+<ul>
+<li>Aproximación de línea base.</li>
+<li>Basada en un análisis de riesgos detallado.</li>
+<li>Basada en una combinación de las dos opciones anteriores.</li>
+</ul>
+<p>Con la primera opción se selecciona un conjunto de salvaguardas para alcanzar un nivel básico de protección para todos los sistemas. Para establecer este conjunto de salvaguardas un buen punto de partida es considerar las que se basan en requerimientos legislativos o las consideradas como “buenas prácticas comunes” para la seguridad de la información.</p>
+<p>Salvaguardas consideradas esenciales para una organización desde el punto de vista legislativo incluyen:</p>
+<ul>
+<li>Las salvaguardas para la protección y privacidad de los datos de carácter personal.</li>
+<li>Las salvaguardas para la protección de los derechos de la propiedad intelectual.</li>
+<li>Las salvaguardas para los registros de la organización que deben mantenerse por requerimientos normativos o legales.</li>
+</ul>
+<p>Salvaguardas consideradas como “buenas prácticas” incluyen:</p>
+<ul>
+<li>Documentación de las políticas de seguridad.</li>
+<li>Asignación de responsabilidades de seguridad de la información.</li>
+<li>Educación y entrenamiento al personal en materia de seguridad.</li>
+<li>Información de incidentes de seguridad.</li>
+<li>Gestión de la contingencia.</li>
+</ul>
+<p>El método MAGERIT de gestión de la seguridad, identifica 10 salvaguardas mínimas de seguridad en su guía de aproximación:</p>
+<ul>
+<li>Documentación de políticas de seguridad de la información. Como ya se ha visto en la sección del plan de seguridad, la organización debe publicar las normas de seguridad de los sistemas de información de una manera sencilla y comprensible para todos los empleados de la organización.</li>
+<li>Asignación de funciones y responsabilidades de seguridad. Se deben indicar de forma explícita las funciones y las responsabilidades de seguridad en la Organización. Para cada activo sujeto a medidas de seguridad deben identificarse los roles que actúan sobre ellos, y las personas que los ejercen.</li>
+<li>Responsabilidades del usuario en el acceso al sistema. De manera especial los usuarios deben conocer su responsabilidad en cuanto a los medios que se ponen a su cargo y a los controles de acceso para que éstos puedan mantener su eficacia.</li>
+<li>Educación y formación en la seguridad de la información. Para garantizar que los usuarios están preparados para seguir los procedimientos de seguridad de la organización y se minimizan posibles riesgos, deben recibir formación sobre los requerimientos de seguridad y sobre el uso correcto de los sistemas de información.</li>
+<li>Comportamiento ante incidentes de seguridad. Se deben establecer procedimientos, que deben ser conocidos por todos los empleados de la organización, para realizar y remitir informes sobre los diferentes tipos de incidentes, amenazas, vulnerabilidades o mal funcionamiento del hardware o del software.</li>
+<li>Controles físicos de seguridad. Deben existir controles que sólo permitan el acceso al personal autorizado a cada área de seguridad. Las autorizaciones de acceso se deben dar para propósitos específicos y controlados.</li>
+<li>Gestión de la seguridad del Equipamiento. Los aspectos que se consideran en la gestión de la seguridad del equipamiento son:<ul>
+<li>Instalación y protección del equipamiento. El equipamiento debe estar físicamente protegido para salvaguardarlo de pérdidas o daños.</li>
+<li>Suministro eléctrico. Se debe garantizar un suministro eléctrico adecuado que cumpla las especificaciones de los fabricantes de equipos. Para los equipos que soporten operaciones críticas se recomienda tener un sistema de alimentación ininterrumpida.</li>
+<li>Mantenimiento de equipos. Los equipos deben mantenerse en buen estado siguiendo las recomendaciones y especificaciones de los proveedores. Deben registrarse documentalmente los fallos identificados o las sospechas de fallos.</li>
+<li>Movimientos de activos fuera de la organización. Cuando sea necesario sacar de la Organización equipos, datos o software se hará siempre con la correspondiente autorización.</li>
+</ul>
+</li>
+<li>Cumplimiento de las obligaciones y restricciones jurídicas vigentes.</li>
+<li>Protección, transporte y destrucción de la Información. La Organización debe controlar de manera especial los intercambios de información con otras organizaciones para prevenir la modificación, pérdida o mal uso de la información en tránsito. Cuando se transmita información mediante medios de comunicación inalámbricos que utilicen radiofrecuencias de información debe ir cifrada.</li>
+<li>Gestión Externa de servicios. Ante una propuesta para cambiar a una gestión externa de servicios se deben incluir los controles de seguridad apropiados para las nuevas implicaciones de seguridad. En concreto deben estudiarse:<ul>
+<li>Identificación de las aplicaciones que se van a retener en la Organización por su criticidad o sensibilidad.</li>
+<li>Implicaciones para los planes de contingencia de la Organización.</li>
+<li>Especificación de las nuevas Normas de seguridad y del proceso de control de su cumplimiento.</li>
+</ul>
+</li>
+</ul>
+<p>Entre las ventajas de esta primera opción, aproximación de línea base, está que no se necesitan recursos para hacer un análisis de riesgos detallados y que el tiempo y esfuerzo utilizado en la selección de salvaguardas es reducido. Además se pueden usar las mismas salvaguardas básicas para varios sistemas sin grandes esfuerzos.</p>
+<p>Entre sus desventajas está que si este nivel de línea base es demasiado alto, podría proporcionar una seguridad demasiado restrictiva para algunos sistemas o demasiado cara, y si el nivel es demasiado bajo, para algunos sistemas podría no proporcionar una seguridad suficiente.</p>
+<p>La segunda opción es realizar un análisis de riesgos detallado para cada sistema de la Organización. Basándose en los resultados obtenidos se identifican y se seleccionan las salvaguardas que reduzcan los riesgos identificados hasta los niveles considerados como aceptables.</p>
+<p>La principal ventaja de esta opción es que se identifica un nivel de seguridad apropiado para las necesidades de cada sistema, pero tiene como desventaja que para obtener resultados viables se necesita una cantidad de tiempo y esfuerzo considerable, además de tener que ser llevada a cabo por equipos expertos.</p>
+<p>La tercera opción es considerar una combinación de las dos anteriores. Se analizan los sistemas de la Organización utilizando un análisis de alto nivel para identificar aquellos sistemas que sustentan operaciones críticas para el negocio o que tienen un alto riesgo. Se clasifican entonces los sistemas en dos categorías: los que necesitan un análisis de riesgos detallado para alcanzar la protección adecuada, y los que es suficiente que tengan una protección basada en la aproximación de línea base.</p>
+<p>Entre las ventajas de esta opción están que el esfuerzo y el dinero se aplicarán primero sobre los sistemas que tienen un riesgo mayor y donde es más beneficioso. Como desventaja está que si ese primer análisis de alto nivel produce resultados poco exactos,algunos sistema que necesitan un análisis de riesgo detallado podrían pasarse por alto.</p>
+<h2 id="El-Metodo-MAGERIT-de-Gestion-de-la-Seguridad"><a href="#El-Metodo-MAGERIT-de-Gestion-de-la-Seguridad" class="headerlink" title="El Método MAGERIT de Gestión de la Seguridad"></a>El Método MAGERIT de Gestión de la Seguridad</h2><p>MAGERIT, Metodología de Análisis y Gestión de Riesgos de los Sistemas de Información de las Administraciones Públicas, es un método formal para investigar los riesgos que afectan a los sistemas de información y para recomendar las medidas de control de esos riesgos.</p>
+<p>Es una metodología de carácter público (su utilización no requiere autorización previa) elaborada por el Comité Técnico de Seguridad de los Sistemas de Información y Tratamiento Automatizado de Datos Personales, SSITAD, del Consejo Superior de Informática.</p>
+<p>Los objetivos de MAGERIT son:</p>
+<ul>
+<li>Estudiar los riesgos que soporta un sistema de información y su entorno asociado (análisis de los riesgos).</li>
+<li>Recomendar las medidas que deben tomarse para prevenir, impedir, reducir o controlar esos riesgos (gestión de los riesgos).</li>
+</ul>
+<p>Es decir MAGERIT se ocupa del Análisis y de la Gestión de Riesgos, punto de arranque del ciclo de gestión de seguridad.</p>
+<p>MAGERIT se presenta como un conjunto de guías más unas herramientas de apoyo.</p>
+<p>Las guías son:</p>
+<ul>
+<li>Guía de Aproximación. En ella se presentan los conceptos básicos de seguridad de los sistemas de información y una introducción al núcleo de MAGERIT, formado por la Guía de Procedimientos y la Guía de Técnicas.</li>
+<li>Guía de Procedimientos. Su finalidad es servir de marco de referencia para la identificación y la valoración de los activos y de las amenazas, para la evaluación de las vulnerabilidades y de los impactos, y como preparación para la toma de decisiones sobre políticas de salvaguardas a partir del cálculo de riesgos.</li>
+<li>Guía de Técnicas. Dan las bases para comprender y seleccionar las técnicas más apropiadas para los procedimientos de análisis y gestión de riesgos.</li>
+<li>Guía para Responsables del Dominio protegible. Determina cual es la participación de los directivos en la realización del Análisis y Gestión de Riesgos de los sistemas de información relacionados con su dominio funcional dentro de la organización.</li>
+<li>Guía para Desarrolladores de aplicaciones. Está diseñada para que pueda utilizarse como documento de referencia por los desarrolladores en la preparación de los mecanismos de seguridad adecuados durante el desarrollo de nuevas aplicaciones.</li>
+<li>Arquitectura de la información y especificaciones de la interfaz para el intercambio de datos. La arquitectura de la información permite a los técnicos informáticos estructurar la información que se ha de cargar en todo producto informatizado que sea semejante o esté relacionado con las herramientas de apoyo de MAGERIT. La interfaz para el intercambio de datos posibilita a los usuarios de MAGERIT establecer la comunicación con otras aplicaciones, facilitando la incorporación de otros productos a las herramientas de apoyo de MAGERIT o a la inversa.</li>
+<li>Referencia de normas legales y técnicas. Sirve como referencia a la documentación normativa en cuestiones de seguridad (como referencia a fecha 31/12/1996, pues no se han publicado actualizaciones de la guía que recojan la nueva normativa) y como instrumento para homogeneizar el intercambio de información entre las distintas entidades y personas implicadas en la seguridad de los sistemas de información.</li>
+</ul>
+<p>Las herramientas de apoyo, que vienen junto con sus correspondientes guías de uso, son:</p>
+<ul>
+<li>Herramienta 1 Introductoria. Permite una primera aproximación al Análisis y Gestión de Riesgos. Es un apoyo para la identificación de:<ul>
+<li>Riesgos menores, a los que sencillamente se les puede aplicar medidas básicas de seguridad de una forma global.</li>
+<li>Riesgos mayores, a cada uno de los cuales hay que aplicar un Análisis y Gestión de Riesgos más detallado.</li>
+</ul>
+</li>
+<li>Herramienta 2 Avanzada. Permite realizar un Análisis y Gestión de Riesgos detallado con los que afrontar proyectos de complejidad media o alta en materia de seguridad. Utiliza técnicas algorítmicas, técnicas matriciales y técnicas de lógica difusa.</li>
+</ul>
+<p>Existe además otra herramienta, “chinchón version 1.3”, para analizar cuantitativamente el riesgo de un sistema de información siguiendo la metodología de MAGERIT.</p>
+<p>El modelo de MAGERIT está formado por tres submodelos:</p>
+<ul>
+<li>Submodelo de elementos: son los componentes del modelo.</li>
+<li>Submodelo de eventos: relaciona los componentes entre sí y con el tiempo.</li>
+<li>Submodelo de procesos: es la descripción funcional del proyecto de seguridad a construir.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/modelo_magerit.png?w=825" alt=""></p>
+<p>Vamos a ver a continuación cada uno de estos submodelos.</p>
+<h3 id="Submodelo-de-Elementos"><a href="#Submodelo-de-Elementos" class="headerlink" title="Submodelo de Elementos"></a>Submodelo de Elementos</h3><p>Se basa en seis entidades que están relacionadas entre sí y cada una de ellas dotada de ciertos atributos.</p>
+<p>Estas seis entidades son: Activos, Amenazas, Vulnerabilidades, Impactos, Riesgos y Salvaguardas.</p>
+<p><strong>Activos</strong></p>
+<p>Los activos se definen en la Guía de Procedimientos como “ <em>los recursos del sistema de información o relacionados con éste, necesarios para que la organización funcione correctamente y alcance los objetivos propuestos por su dirección</em> “.</p>
+<p>MAGERIT considera los activos clasificados en cinco grandes categorías:</p>
+<ul>
+<li>Entorno del Sistema de Información. Se incluye aquí cualquier elemento del entorno necesario para las siguientes categorías de activos. Por ejemplo, equipamientos y suministros, personal, instalación física.</li>
+<li>Sistema de Información. Incluye hardware, software, comunicaciones.</li>
+<li>Información. Datos, meta-información, soportes.</li>
+<li>Funcionalidades de la organización. Se refiere a las funcionalidades que justifican la existencia de los Sistemas de Información y les dan finalidad. Incluye:<ul>
+<li>Objetivos y misión de la organización.</li>
+<li>Bienes y servicios producidos.</li>
+<li>Personal usuario/destinatario de los bienes o servicios producidos.</li>
+</ul>
+</li>
+<li>Otros activos. Cualquier activo no incluido en las categorías anteriores. Por ejemplo, credibilidad, conocimiento acumulado, independencia de criterio, etc.</li>
+</ul>
+<p>Las tres primeras categorías constituyen el dominio estricto de todo proyecto de Seguridad de Sistemas de Información.</p>
+<p>El fallo de un Activo de una categoría puede provocar cadenas de fallos: fallos en Activos del Entorno (1) generarían otros fallos en el Sistema de Información (2), que repercutirían en la Información (3) y así sucesivamente.</p>
+<p>Cada activo tiene como atributos esenciales dos indicadores sobre dos tipos de valoraciones:</p>
+<ul>
+<li>La valoración intrínseca del activo: este atributo permite determinar para qué sirve un activo. En él se basa la clasificación dada anteriormente de los tipos de activos. Se centra en el aspecto cualitativo del activo como valor de uso.</li>
+<li>La valoración del estado de seguridad del activo: cada activo se caracteriza por su estado de seguridad. Este estado es el resultado de la estimación de cuatro subestados definidos por MAGERIT: Autenticación, Confidencialidad, Integridad y Disponibilidad.</li>
+</ul>
+<p><strong>Amenazas</strong></p>
+<p>Se definen en MAGERIT como “ <em>los eventos que pueden desencadenar un incidente en la organización, produciendo daños materiales o pérdidas inmateriales en sus activos</em> “.</p>
+<p>Se ven las amenazas bajo un enfoque dinámico, como un evento de tipo potencial que si se materializa en una agresión hace pasar al activo de un estado de seguridad antes del evento a otro posterior.</p>
+<p>Se consideran cuatro tipos de amenazas:</p>
+<ul>
+<li>Grupo A de Accidentes: son amenazas no humanas.</li>
+<li>Grupo E de Errores: amenazas humanas pero involuntarias.</li>
+<li>Grupo P de Amenazas Intencionales Presenciales: amenazas humanas intencionales que necesitan presencia física.</li>
+<li>Grupo T de Amenazas Intencionales de Origen Remoto: amenazas humanas intencionales que proceden de un origen remoto.</li>
+</ul>
+<p><strong>Vulnerabilidades</strong></p>
+<p>Se define la vulnerabilidad como la “ <em>potencialidad o posibilidad de ocurrencia de la materialización de una Amenaza sobre un Activo</em> “.</p>
+<p>La Vulnerabilidad tiene dos aspectos:</p>
+<ul>
+<li>el estático, realiza una función de mediación entre un Activo, como objeto de cambio del estado de seguridad, y una Amenaza como acción.</li>
+<li>el dinámico, es el mecanismo que convierte a la Amenaza en una agresión materializada.</li>
+</ul>
+<p>Mediante el término Vulnerabilidad se cubren dos acepciones distintas:</p>
+<ul>
+<li>Vulnerabilidad intrínseca del Activo respecto al tipo de Amenaza, en la que sólo se tienen en cuenta el Activo y la Amenaza.</li>
+<li>Vulnerabilidad efectiva, en la que se tienen también en cuenta las Salvaguardas aplicadas en cada momento al Activo.</li>
+</ul>
+<p>Siempre que sea factible se mide la Vulnerabilidad por la posibilidad de la materialización de la Amenaza en agresión o por su frecuencia histórica.</p>
+<p><strong>Impactos</strong></p>
+<p>Según MAGERIT “ <em>el Impacto en un Activo es la consecuencia sobre éste de la materialización de una Amenaza</em> “.</p>
+<p>El impacto mide la diferencia entre el estado de seguridad del activo antes de la materialización de la amenaza y el estado posterior a dicha materialización. Por tanto una simple disfunción en un activo no constituye necesariamente un Impacto, a no ser que se produzca un perjuicio apreciable como cambio del estado de seguridad.</p>
+<p>MAGERIT considera tres grandes grupos de Impactos:</p>
+<ul>
+<li>Cuantitativos: si representan pérdidas que se pueden cuantificar monetáriamente, ya sea directa o indirectamente.</li>
+<li>Cualitativos con pérdidas funcionales: si son reductoras directamente de los subestados de seguridad (Autenticación, Confidencialidad, Integridad y Disponibilidad).</li>
+<li>Cualitativos con pérdidas orgánicas: como la pérdida de fondos patrimoniales intangibles, el daño a personas, la responsabilidad penal por incumplimiento de obligaciones legales, etc.</li>
+</ul>
+<p><strong>Riesgos</strong></p>
+<p>El riesgo es “ <em>la posibilidad de que se produzca un Impacto determinado en un Activo, en un Dominio o en toda la Organización</em> “.</p>
+<p>MAGERIT distingue entre dos tipos de riesgo:</p>
+<ul>
+<li>Riesgo intrínseco: el que se define o calcula antes de aplicar Salvaguardas.</li>
+<li>Riesgo residual: el que seda después de aplicar las salvaguardas dispuestas.</li>
+</ul>
+<p>Además define el umbral de riesgo como el valor establecido como base para decidir, por comparación, si el riesgo calculado es asumible.</p>
+<p><strong>Salvaguardas</strong></p>
+<p>Se define en MAGERIT la Función o Servicio de Salvaguarda como “ <em>la acción que reduce el riesgo</em> “.</p>
+<p>Se hace una distinción entre la Función o Servicio de Salvaguarda que acabamos de definir y el mecanismo de salvaguarda que es el “ <em>dispositivo físico o lógico capaz de reducir el riesgo</em> “.</p>
+<p>Una Función o Servicio de Salvaguarda representa por tanto una actuación para reducir un riesgo, actuación que se concreta en un mecanismo de salvaguarda.</p>
+<p>Tipificando las salvaguardas según su forma de actuación, distingue entre:</p>
+<ul>
+<li>Preventivas: actúan sobre la Vulnerabilidad y reducen la posibilidad de materialización de la Amenaza, es decir, actúan con anterioridad a la agresión. Entre ellas están la formación, información y concienciación del personal, la disuasión, la detección preventiva, etc.</li>
+<li>Curativas (o restablecedoras): actúan sobre el Impacto reduciendo su gravedad, es decir, actúan con posterioridad a la agresión. Entre ellas están la corrección, la recuperación, etc.</li>
+</ul>
+<h3 id="Submodelo-de-Eventos"><a href="#Submodelo-de-Eventos" class="headerlink" title="Submodelo de Eventos"></a>Submodelo de Eventos</h3><p>Para presentar este modelo de forma intuitiva se ha utilizado la metáfora de la “ciudad amurallada”:</p>
+<ul>
+<li>Las salvaguardas son la muralla y las vulnerabilidades las brechas de la muralla.</li>
+<li>Las amenazas son el enemigo exterior y los activos quedan dentro del recinto amurallado.</li>
+</ul>
+<p>Esta visión estática de la seguridad se ha comprobado que es ineficiente en los Sistemas de Información actuales que son cada vez más “ciudades abiertas” sujetas a nuevos tipos de amenazas intencionales.</p>
+<p>MAGERIT ofrece un submodelo de eventos de la metodología con tres puntos de vista:</p>
+<ul>
+<li>Vista estática relacional. En esta vista se ponen de manifiesto las relaciones existentes entre las entidades vistas en el Submodelo de Elementos. Es necesaria para establecer el Modelo Lógico de Datos que requerirán toda herramienta de apoyo de MAGERIT.</li>
+<li>Vista dinámica de tipo organizativo. Recoge de forma detallada la forma que tienen de interactuar entre sí las entidades del Submodelo de Elementos. Es necesaria para la construcción de herramientas de apoyo de MAGERIT, para determinar las técnicas de cálculo de riesgos y de selección de salvaguardas, y como soporte al Submodelo Lógico de Procesos.</li>
+<li>Vista dinámica de tipo físico. Recoge otra forma de funcionamiento de la interactuación entre los Elementos, con un nivel intermedio de detalle entre las dos vistas anteriores. Esta visión no es imprescindible para la comprensión de la metodología y será necesaria sólo en determinadas situaciones. Es útil para dar apoyo a ciertas técnicas de cálculo de riesgos y de selección de salvaguardas como las ténicas de simulación.</li>
+</ul>
+<p><strong>Vista Estática Relacional</strong></p>
+<p>La vista estática relacional recoge las relaciones directas entre las entidades del Submodelo de Elementos. El esquema básico se muestra en la siguiente figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/vista_estatica_relacional.png?w=825" alt=""></p>
+<p>El Activo se relaciona directamente con las entidades:</p>
+<ul>
+<li>Activo: un activo puede ser componente de otro activo o depender de él.</li>
+<li>Vulnerabilidad: un activo puede tener vulnerabilidades respecto a diversas amenazas.</li>
+<li>Impacto: un activo se puede ver afectado por varios impactos procedentes de diversas amenazas.</li>
+<li>Salvaguarda: una salvaguarda puede proteger un activo.</li>
+</ul>
+<p>La Amenaza (si se materializa) se relaciona con:</p>
+<ul>
+<li>Amenaza: una amenaza puede ser componente de otra amenaza o depender de ella.</li>
+<li>Vulnerabilidad: una amenaza tiene que aprovecharse de una vulnerabilidad para afectar a un activo.</li>
+<li>Impacto: una amenaza puede causar un impacto sobre un activo.</li>
+</ul>
+<p>El Impacto se relaciona con:</p>
+<ul>
+<li>Activo: un impacto se produce sobre un activo.</li>
+<li>Amenaza: un impacto puede causarlo la materialización de una amenaza.</li>
+<li>Salvaguarda: un impacto puede ser influenciado por un servicio de salvaguarda.</li>
+</ul>
+<p>La Vulnerabilidad se relaciona con:</p>
+<ul>
+<li>Activo: una vulnerabilidad se produce sobre un activo.</li>
+<li>Amenaza: una amenaza puede sacar provecho de una vulnerabilidad.</li>
+<li>Salvaguarda: una vulnerabilidad puede ser influenciada por un servicio de salvaguarda.</li>
+<li>Riesgo: una vulnerabilidad contribuye al riesgo.</li>
+</ul>
+<p>El riesgo se relaciona con:</p>
+<ul>
+<li>Vulnerabilidad: un riesgo se refiere a la vulnerabilidad de un activo.</li>
+<li>Impacto: un riesgo se refiere al impacto propiciado por la vulnerabilidad de un activo.</li>
+<li>Salvaguarda: un riesgo puede ser influenciado por una salvaguarda.</li>
+</ul>
+<p>La salvaguarda se relaciona con:</p>
+<ul>
+<li>Activo: una salvaguarda protege un activo.</li>
+<li>Impacto: una salvaguarda puede afectar al impacto de una amenaza.</li>
+<li>Vulnerabilidad: una salvaguarda puede afectar a la vulnerabilidad una amenaza.</li>
+<li>Riesgo: una salvaguarda influye en un riesgo.</li>
+</ul>
+<p><strong>Vista Dinámica Organizativa</strong></p>
+<p>En esta vista se parte primero de una distinción entre el Dominio de Información que MAGERIT está ayudando a analizar dentro de la Organización, y el Entrono del Dominio delimitado. Dentro de este último se diferencia entre una parte interna a la Organización y otra externa.</p>
+<p>El dominio está formado por activos y tiene como sujeto principal al Responsable del Dominio o de los Activos protegibles, que es quien establece su valor y las necesidades de seguridad mediante objetivos y decisiones.</p>
+<p>El Dominio, definido en cada momento por su estado de seguridad, está sujeto a cambios en su estado por las acciones de las amenazas materializables y también por las salvaguardas. A partir de esta materialización desencadenante, el Submodelo de Eventos funciona dinámicamente como un escenario en el que se establecen acciones para obtener la seguridad.</p>
+<p>Se distinguen dos subescenarios:</p>
+<ul>
+<li>Subescenario de análisis de las amenazas (o de ataque): es el análisis de riesgos. Parte de un ataque y analiza las consecuencias que tiene sobre los activos del dominio.</li>
+<li>Subescenario de análisis y gestión de salvaguardas (o de defensa): es la gestión de riesgos. Describe para cada ataque la gestión de las funciones de salvaguarda que sean apropiadas.</li>
+</ul>
+<p>El subescenario de análisis de las amenazas considera que cada Activo del dominio, si la Amenaza se ha materializado en agresión aprovechando la Vulnerabilidad del activo con respecto a esa Amenaza, la Vulnerabilidad y su Impacto sobre el Activo determinan el <strong>Riesgo calculado</strong> . Su contribución es asimétrica, es decir, se considera que el Impacto influye más en el nivel de Riesgo que la Vulnerabilidad. La determinación del Riesgo calculado cierra este subescenario de ataque y abre el subescenario de defensa.</p>
+<p>El subescenario de análisis y gestión de las salvaguardas se caracteriza por la toma de decisiones. Se comienza por comparar el riesgo calculado con el umbral de riesgo asumible. Tras la implantación de las salvaguardas se recalcula el riesgo calculado obteniéndose el llamado <strong>Riesgo residual</strong> . Si este es inferior al umbral de riesgo asumible, se considera que el subescenario de defensa ha cumplido su objetivo y se puede pasar a otras fases de Gestión de Seguridad de los Sistemas de Información. Si el riesgo residual es superior al umbral de riesgo asumible, el subescenario de defensa no ha cumplido su objetivo y MAGERIT propone incorporar nuevas salvaguardas y repetir todo el proceso hasta que el riesgo residual sea menor al umbral de riesgo aceptable.</p>
+<p>Las salvaguardas se incorporan en distintos momentos y con distintas formas. Unas son anteriores a la materialización de la amenaza y otras posteriores. En el subescenario de defensa se incorporan las salvaguardas en dos niveles:</p>
+<ul>
+<li>Incorporación funcional de Servicios de Salvaguarda.</li>
+<li>Incorporación material de Mecanismos de Salvaguarda.</li>
+</ul>
+<p><strong>Vista Dinámica Física</strong></p>
+<p>Esta vista puede resulta útil para los especialistas en seguridad que utilizan MAGERIT en sistemas críticos que necesitan modelos específicos de simulación de procesos con el propósito de observar el funcionamiento y determinar los parámetros óptimos a efectos de seguridad. También es útil para dar soporte a herramientas sofisticadas de selección de salvaguardas y cálculo de riesgos.</p>
+<p>Las Entidades de Seguridad pueden identificarse con las variables y parámetros de nivel (de estado) y de flujo (de acción) que caracterizan la simulación de los modelos de sistemas dinámicos.</p>
+<p>Bajo este enfoque, cada agresión se muestra como un flujo de la acción que modifica el nivel de seguridad de un activo, es decir, es una acción que lo hace pasar de un estado de seguridad a otro. El impacto es la medida del resultado de la agresión sobre el activo, es decir, es la medida del flujo de la acción de cambio de nivel de seguridad del activo. El Riesgo es un indicador del nivel de seguridad.</p>
+<h3 id="Submodelo-de-Procesos"><a href="#Submodelo-de-Procesos" class="headerlink" title="Submodelo de Procesos"></a>Submodelo de Procesos</h3><p>En el submodelo de procesos se ordenan las acciones que se van a realizar durante un proyecto de Análisis y Gestión de Riesgos. Tiene una estructura jerárquica de tres niveles: etapas, actividades y tareas. Las etapas se componen de actividades y éstas de tareas.</p>
+<p>Las tareas tienen la misma acepción que en METRICA V3. Para describirlas se especifican los siguientes puntos:</p>
+<ul>
+<li>Acciones que se van a realizar.</li>
+<li>Actores que intervienen en la tarea o que están afectados por ésta.</li>
+<li>Productos y documentos que se van a obtener.</li>
+<li>Validaciones que se van a realizar de los resultados obtenidos.</li>
+<li>Técnicas que se van a utilizar.</li>
+</ul>
+<p>Las actividades agrupan a un conjunto de tareas siguiendo generalmente criterios funcionales. Tienen la misma acepción que en METRICA V3.</p>
+<p>Las etapas agrupan a un conjunto de actividades y se corresponden con los procesos de METRICA V3 (fases en METRICA V2.1). Las etapas marcan los puntos de toma de decisiones y entrega de productos. Es necesario que al final de cada etapa haya una aceptación formal de sus resultados ya que se utiliza el producto final de cada etapa como inicio de la siguiente.</p>
+<p>MAGERIT propone las cuatro etapas siguientes:</p>
+<ul>
+<li>Etapa 1. Planificación del Análisis y Gestión de Riesgos. Su objetivo es definir el marco de referencia para la realización del proyecto de Análisis y Gestión de Riesgos.</li>
+<li>Etapa 2. Análisis de Riesgos. Se identifican las entidades y se valoran, obteniendo una evaluación del riesgo y una estimación del umbral de riesgo aceptable.</li>
+<li>Etapa 3. Gestión de Riesgos. Se identifican las funciones de salvaguarda para los riesgos detectados en la etapa anterior y se seleccionan las que son aceptables basándose en las ya existentes y en las restricciones.</li>
+<li>Etapa 4. Selección de salvaguardas. Se seleccionan los mecanismos de salvaguardas que se van a implantar y los procedimientos de seguimiento de dicha implantación.</li>
+</ul>
+<p>MAGERIT tiene interfaces de enlace con METRICA V3, enlazando con los procesos de Planificación, Análisis, Diseño, Construcción e Implementación. En cada enlace se recogen los productos, los trata con procedimientos de aseguramiento y devuelve las salvaguardas.</p>
+<p><strong>Etapa 1. Planificación del Análisis y Gestión de Riesgos</strong></p>
+<p>En esta etapa se establecen las condiciones necesarias para iniciar el proyecto de Análisis y Gestión de Riesgos: se definen los objetivos del proyecto y el ámbito de actuación (dominio), se planifican los medios materiales y humanos para su ejecución y se particularizan las técnicas que se van a utilizar en las actividades del proyecto.</p>
+<p>MAGERIT incluye en esta etapa las siguientes actividades:</p>
+<ul>
+<li>Oportunidad de realización.</li>
+<li>Definición de dominio y objetivos.</li>
+<li>Organización y planificación del proyecto.</li>
+<li>Lanzamiento del proyecto.</li>
+</ul>
+<p>La primera actividad, oportunidad de realización, tiene por objetivo despertar el interés de la Dirección en el proyecto de Análisis y Gestión de Riesgos y consta de una única tarea, clarificar la oportunidad de realización.</p>
+<p>La iniciativa de la realización del proyecto parte de un promotor (interno o externo a la organización) que es consciente de los problemas de seguridad que existen. Este sujeto elabora un cuestionario sobre aspectos de seguridad para ser respondido tanto por los responsables de informática como del resto de unidades de la Organización con el objetivo de recabar información y sensibilizar a la Organización sobre las cuestiones de seguridad. Con estos elementos realiza un informe preliminar en el que se incluyen los argumentos básicos para la realización del proyecto de Análisis y Gestión de Riesgos y una primera aproximación del Dominio del proyecto y de los medios materiales y humanos necesarios para hacerlo.</p>
+<p>En la segunda actividad, definición de dominio y objetivos, se definen los límites del Dominio y los objetivos finales del proyecto. Además se identifican las restricciones que hay que considerar y las personas de las que se va a recoger información. Consta de las siguientes tareas:</p>
+<ul>
+<li>Especificar los objetivos del proyecto.</li>
+<li>Definir el dominio y los límites del proyecto.</li>
+<li>Identificar el entorno y las restricciones generales.</li>
+<li>Estimar dimensión, coste y retornos del proyecto.</li>
+</ul>
+<p>En la tercera actividad, organización y planificación del proyecto, se calcula la carga de trabajo que va a suponer el proyecto y se establece el grupo y plan de trabajo. Las tareas de que consta son:</p>
+<ul>
+<li>Evaluar cargas y planificar entrevistas.</li>
+<li>Organizar a los participantes.</li>
+<li>Planificar el trabajo.</li>
+</ul>
+<p>En la cuarta actividad, lanzamiento del proyecto, se asignan los recursos requeridos para el comienzo del proyecto y se eligen las técnicas primordiales de Análisis y Gestión de Riesgos. Incluye las siguientes tareas:</p>
+<ul>
+<li>Adaptar los cuestionarios.</li>
+<li>Seleccionar criterios de evaluación y técnicas para el proyecto.</li>
+<li>Asignar los recursos necesarios.</li>
+<li>Sensibilizar (campaña informativa).</li>
+</ul>
+<p><strong>Etapa 2. Análisis de Riesgos</strong></p>
+<p>Esta etapa constituye el núcleo de MAGERIT, la utilidad y validez de todo el proyecto depende de su correcta aplicación. El objetivo principal es la evaluación del riesgo del sistema en estudio, tanto del intrínseco como del efectivo, al que se añaden la presentación al Comité de Dirección de las áreas de mayor riesgo y la aprobación de los umbrales de riesgo asumibles.</p>
+<p>La estimación de los Impactos y Vulnerabilidades es una tarea compleja y con un cierto grado de incertidumbre, lo que unido a su enorme influencia en la determinación del Riesgo trae consigo que deba ser dirigida por un grupo de expertos.</p>
+<p>La etapa de Análisis de Riesgos comprende las siguientes actividades:</p>
+<ul>
+<li>Recogida de información.</li>
+<li>Identificación y agrupación de activos.</li>
+<li>Identificación y evaluación de amenazas.</li>
+<li>Identificación y estimación de vulnerabilidades.</li>
+<li>Identificación y valoración de impactos.</li>
+<li>Evaluación del Riesgo.</li>
+</ul>
+<p>Durante la primera actividad, recogida de información, se recoge la información del sistema y de los factores que influyen en la seguridad. Comprende las siguientes tareas:</p>
+<ul>
+<li>Preparar la información.</li>
+<li>Realizar las entrevistas.</li>
+<li>Analizar la información recogida.</li>
+</ul>
+<p>En la segunda actividad, identificación y agrupación de activos, se identifican los activos y sus relaciones, y se profundiza en sus características a partir de la información recogida en la actividad anterior. Incluye las tareas:</p>
+<ul>
+<li>Identificar y agrupar activos.</li>
+<li>Identificar los mecanismos de salvaguarda existentes.</li>
+<li>Valorar activos.</li>
+</ul>
+<p>En la tercera actividad, identificación y evaluación de amenazas, se incluyen las tareas:</p>
+<ul>
+<li>Identificar y agrupar amenazas.</li>
+<li>Establecer los árboles de fallos generados por amenazas.</li>
+</ul>
+<p>La cuarta actividad, identificación y estimación de vulnerabilidades, incluye las tareas:</p>
+<ul>
+<li>Identificar vulnerabilidades.</li>
+<li>Estimar vulnerabilidades.</li>
+</ul>
+<p>La quinta actividad, identificación y valoración de impactos, incluye las tareas:</p>
+<ul>
+<li>Identificar impactos.</li>
+<li>Tipificar impactos.</li>
+<li>Valorar impactos.</li>
+</ul>
+<p>En la sexta etapa, evaluación del riesgo, se incluyen las tareas:</p>
+<ul>
+<li>Evaluar el riesgo intrínseco.</li>
+<li>Analizar las funciones de salvaguarda existentes.</li>
+<li>Evaluar el riesgo efectivo.</li>
+</ul>
+<p><strong>Etapa 3. Gestión del Riesgo</strong></p>
+<p>En esta etapa se seleccionan los servicios de salvaguarda más apropiados con el objetivo de reducir el riesgo hasta niveles que se consideren aceptables.</p>
+<p>Comprende las siguientes actividades:</p>
+<ul>
+<li>Interpretación del riesgo.</li>
+<li>Identificación de servicios de salvaguarda y estimación de su efectividad.</li>
+<li>Selección de los servicios de salvaguarda.</li>
+<li>Cumplimiento de objetivos.</li>
+</ul>
+<p>La primera actividad, interpretación del riesgo, tiene una única tarea, interpretar y manejar los riesgos. El riesgo efectivo calculado en la etapa anterior se compara con el umbral de riesgo para determinar si es asumible. Si no lo es, MAGERIT propone continuar con las dos siguientes actividades de la etapa: identificación de servicios de salvaguarda y estimación de su efectividad, y selección de los servicios de salvaguarda.</p>
+<p>La segunda actividad, Identificación de servicios de salvaguarda y estimación de su efectividad, comprende las tareas:</p>
+<ul>
+<li>Identificar funciones y servicios de salvaguarda.</li>
+<li>Estimar la efectividad de las funciones y servicios de salvaguarda.</li>
+</ul>
+<p>La tercera actividad, selección de servicios de salvaguarda, incluye las tareas:</p>
+<ul>
+<li>Aplicar los parámetros de selección (ordena la lista de funciones desalvaguarda según su efectividad para reducir el riesgo).</li>
+<li>Reevaluar el riesgo.</li>
+</ul>
+<p>La última actividad, cumplimiento de objetivos, tiene una única tarea: determinar el cumplimiento de objetivos. Si los riesgos efectivos calculados en la tarea anterior no están por debajo de los umbrales de riesgo fijados se conservan provisionalmente los resultados parciales alcanzados y se vuelve a repetir toda la actividad de selección de los servicios de salvaguarda.</p>
+<p><strong>Etapa 4. Selección de Salvaguardas</strong></p>
+<p>En esta etapa se eligen los mecanismos de salvaguarda que materializan las funciones y servicios de salvaguarda seleccionados previamente, tomando como base su efectividad. Se estudian sus tipos, costes y relaciones y se analiza si existen contraindicaciones en su aplicación. Finalmente se establece un orden para su implantación.</p>
+<p>Las actividades de esta etapa, y las tareas de cada una de ellas, son:</p>
+<ul>
+<li>Identificación de los mecanismos de salvaguarda.<ul>
+<li>Identificar posibles mecanismos.</li>
+<li>Estudiar mecanismos implantados.</li>
+<li>Incorporar restricciones.</li>
+</ul>
+</li>
+<li>Selección de los mecanismos.<ul>
+<li>Identificar mecanismos a implantar.</li>
+<li>Evaluar el riesgo con los mecanismos elegidos.</li>
+<li>Seleccionar mecanismos a implantar.</li>
+</ul>
+</li>
+<li>Especificación de los mecanismos a implantar.<ul>
+<li>Especificar los mecanismos a implantar.</li>
+</ul>
+</li>
+<li>Orientación a la planificación de la implantación.<ul>
+<li>Priorizar mecanismos.</li>
+<li>Evaluar los recursos necesarios.</li>
+<li>Evaluar cronogramas tentativos.</li>
+</ul>
+</li>
+<li>Integración de resultados.<ul>
+<li>Integrar los resultados.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357351100/TICB3-Planes-de-Seguridad" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B4/b4-t12/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B4-T12
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t04/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T04</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

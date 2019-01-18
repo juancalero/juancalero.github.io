@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B4-T03 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B4-T03">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Prácticas de mantenimiento de equipos e instalaciones. Tipos de mantenimiento. Monitorización y gestión de capacidad.IntroducciónEl mantenimiento se puede definir como aquel conjunto de técnicas que a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-T03">
+<meta property="og:url" content="http://localhost:4000/wiki/B4/b4-t03/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Prácticas de mantenimiento de equipos e instalaciones. Tipos de mantenimiento. Monitorización y gestión de capacidad.IntroducciónEl mantenimiento se puede definir como aquel conjunto de técnicas que a">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/conector_placa_at.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/conector_placa_atx.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/micro_zif.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/zocalo_zif.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/insercion_zif.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/procesador_sec.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:14:10.366Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-T03">
+<meta name="twitter:description" content="Prácticas de mantenimiento de equipos e instalaciones. Tipos de mantenimiento. Monitorización y gestión de capacidad.IntroducciónEl mantenimiento se puede definir como aquel conjunto de técnicas que a">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/03/conector_placa_at.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file active"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B4/b4-t03" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B4/">B4</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B4/b4-t03/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B4/b4-t03.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B4/b4-t03.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B4/b4-t03.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B4-T03
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Practicas-de-mantenimiento-de-equipos-e-instalaciones-Tipos-de-mantenimiento-Monitorizacion-y-gestion-de-capacidad"><a href="#Practicas-de-mantenimiento-de-equipos-e-instalaciones-Tipos-de-mantenimiento-Monitorizacion-y-gestion-de-capacidad" class="headerlink" title="Prácticas de mantenimiento de equipos e instalaciones. Tipos de mantenimiento. Monitorización y gestión de capacidad."></a>Prácticas de mantenimiento de equipos e instalaciones. Tipos de mantenimiento. Monitorización y gestión de capacidad.</h1><h2 id="Introduccion"><a href="#Introduccion" class="headerlink" title="Introducción"></a>Introducción</h2><p>El mantenimiento se puede definir como aquel conjunto de técnicas que aseguran el continuo funcionamiento del ordenador personal, se puede ver como el cuidado que se le da al ordenador para prevenir posibles fallos y para prolongarle la vida, teniendo en cuenta la ubicación física del equipo ya sea en la oficina o en casa.</p>
+<h3 id="Tipos-de-Mantenimiento"><a href="#Tipos-de-Mantenimiento" class="headerlink" title="Tipos de Mantenimiento"></a>Tipos de Mantenimiento</h3><p>Hay tres tipos de mantenimiento:</p>
+<ul>
+<li>Mantenimiento preventivo.</li>
+<li>Mantenimiento correctivo.</li>
+<li>Mantenimiento perfectivo.</li>
+</ul>
+<p><strong>Mantenimiento preventivo de ordenadores</strong></p>
+<p>El mantenimiento preventivo consiste en crear un ambiente favorable para el sistema y conservar limpias todas las partes que componen un computador, por ejemplo, basta decir que la mayor parte de fallos que presentan los equipos se debe al exceso de polvo en los componentes internos, ya que éste actúa como aislante térmico. En definitiva se trata de conocer aquellos elementos que pueden disminuir la vida útil del equipo.</p>
+<p>Otro aspecto que junto al polvo perjudica a la vida del ordenador es que el calor generado por los componentes no pueda dispersarse adecuadamente porque es atrapado en la capa de polvo.</p>
+<p>Ni que decir tiene el hecho de junto con el polvo se mezclen las partículas de grasa y aceite que pueda contener el aire del ambiente, ya que crean una espesa capa aislante que refleja el calor hacia los demás componentes, con lo cual se reduce la vida útil del sistema en general.</p>
+<p>Por otro lado, el polvo contiene elementos conductores que pueden generar cortocircuitos entre las trayectorias de los circuitos impresos y tarjetas de periféricos.</p>
+<p>Si se quiere prolongar la vida útil del equipo y hacer que permanezca libre de reparaciones por muchos años se debe realizar una limpieza con frecuencia del entorno, o por lo menos evitar en la medida de los posible una serie de factores como son:</p>
+<ul>
+<li>El agua.</li>
+<li>La electricidad.</li>
+<li>Los golpes.</li>
+<li>El frío.</li>
+<li>El calor.</li>
+<li>etc.</li>
+</ul>
+<p><strong>Mantenimiento correctivo y perfectivo para PCs</strong></p>
+<p>El mantenimiento correctivo consiste en la reparación de alguno de los componentes del ordenador, que abarcan desde una soldadura pequeña, el cambio total de una tarjeta (sonido, video, memoria), o el cambio total de algún dispositivo periférico como el ratón, teclado, monitor, disco duro, etc.</p>
+<p>El mantenimiento perfectivo consiste en la ampliación de algún componente del equipo para aumentar su capacidad en base a una serie de requerimientos, por ejemplo, ampliar la capacidad del disco duro con uno nuevo, aumentar un módulo de memoria, etc.</p>
+<p>Generalmente resulta mucho más barato cambiar algún dispositivo que al tratar de repararlo pues muchas veces la complejidad del dispositivo nos limita ya no solo por la necesidad de tener aparatos especiales, sino por la complejidad técnica del componente en si mismo. Por ejemplo intentar reparar una placa base de una marca X modelo XXX puede ser completamente distinto de reparar una placa base de la misma marca X pero el modelo XXY. En estos casos es más sencillo sustituir la pieza y enviar la defectuosa al servicio técnico de la casa X.</p>
+<p>Asimismo, para realizar el mantenimiento debe considerarse lo siguiente:</p>
+<ul>
+<li>Revisión de los recursos del sistema, memoria, procesador y disco duro.</li>
+<li>Optimización de la velocidad del micro.</li>
+<li>Revisión de la instalación eléctrica (sólo para especialistas).</li>
+<li>Un informe de los problemas de cada equipo junto con el mantenimiento realizado a cada equipo.</li>
+<li>Observaciones que puedan mejorar el ambiente de funcionamiento.</li>
+</ul>
+<h3 id="Criterios-que-se-deben-considerar-para-el-mantenimiento-del-PC"><a href="#Criterios-que-se-deben-considerar-para-el-mantenimiento-del-PC" class="headerlink" title="Criterios que se deben considerar para el mantenimiento del PC"></a>Criterios que se deben considerar para el mantenimiento del PC</h3><p>A la hora de realizar el mantenimiento basta con seguir dos criterios muy sencillos de aplicar:</p>
+<ul>
+<li>La periodicidad: debería de hacerse, con una periodicidad semestral, una limpieza física del ordenador para evitar tener que realizar un mantenimiento correctivo.</li>
+<li>La ubicación del equipo: afectará o beneficiará al ordenador, deben tenerse en cuenta varios factores:<ul>
+<li>En casa:<ul>
+<li>Alejar el ordenador de las ventanas para evitar que los rayos del sol dañen al equipo y para evitar que el polvo se acumule con mayor rapidez.</li>
+<li>Colocar el equipo en un mueble que se pueda limpiar con facilidad.</li>
+<li>Comprar enchufes protectores de corriente.</li>
+<li>Aspirar con frecuencia la alfombra o moqueta en la que se encuentra el equipo para evitar que se acumule el polvo.</li>
+<li>No colocar objetos sobre el monitor que le tapen la ventilación y por tanto no disipen bien el calor.</li>
+<li>No colocar el equipo muy pegado a la pared, dejando que el ventilado de la fuente de alimentación disipe bien el calor.</li>
+</ul>
+</li>
+<li>Oficina, en el lugar de trabajo, el mantenimiento es más tedioso debido a que se genera más polvo que en casa, hay más vibraciones y seguramente descargas eléctricas, habrá aparatos que produzcan magnetismo y pueden provocar pérdidas de datos, hay más humo, etc.</li>
+</ul>
+</li>
+</ul>
+<p>Consideraciones finales con respecto al equipo:</p>
+<ul>
+<li>No exponerlo a los rayos del sol.</li>
+<li>No colocarlo en lugares húmedos.</li>
+<li>Mantenerlo alejado de equipos electrónicos que produzcan campos magnéticos ya que pueden dañarlo.</li>
+<li>Limpiar con frecuencia.</li>
+<li>No fumar.</li>
+<li>Evitar comer y beber cuando se esté usando.</li>
+<li>Utilizar sistemas de alimentación ininterrumpida en los servidores para que si la energía se corta tener tiempo para guardar la información.</li>
+<li>Revisión de la instalación eléctrica de la casa u oficina, pero esto lo debe de hacer un especialista.</li>
+</ul>
+<h2 id="Herramientas-para-Mantener-el-PC"><a href="#Herramientas-para-Mantener-el-PC" class="headerlink" title="Herramientas para Mantener el PC"></a>Herramientas para Mantener el PC</h2><p>Antes de empezar a realizar un mantenimiento del PC, o a ensamblar uno nuevo a partir de componentes sueltos, es muy conveniente tener en cuenta una serie de recomendaciones en cuanto a las herramientas que posiblemente se vayan a precisar y alguna advertencia sobre la manipulación de los componentes y la electricidad estática.</p>
+<p>Para mantener y ampliar un ordenador, es necesario tener algunas herramientas, las cuales en un principio deberían de ser de una calidad aceptable para que duren más y ayuden en la facilidad de mantener.</p>
+<p>Por lo menos se tiene que quitar la carcasa de la torre e insertar o quitar tarjetas de expansión, ventiladores, fuente de alimentación, memoria, reemplazar un lector de disquetes de CDROM, un disco duro, etc.</p>
+<p>Se debe también ser capaz de configurar los jumpers y los conmutadores que se pueden encontrar en los dispositivos IDE y en la placa base.</p>
+<p>Hay dispositivos a los que se les conectan cables de corriente y por lo tanto hay que probar la continuidad en fusibles y cables.</p>
+<p>Para ejecutar tales tareas es necesario un equipo de herramienta básico que contenga los elementos siguientes:</p>
+<ul>
+<li>Destornillador de estrella de un tamaño mediano.</li>
+<li>Destornillador de cabeza plana de un tamaño mediano.</li>
+<li>Destornillador Torx (especial para tornillos con una cabeza en forma de estrella de 6 puntas). Por norma general, estos tornillos son típicos de PC de marca o se encuentran en lugares a donde el fabricante del PC no desea que se acceda.</li>
+<li>Pinza extractora: Permite recuperar un tornillo cuando se cae entre los componentes de la placa base, y también se utiliza para insertar y sacar jumpers.</li>
+<li>Alicates terminados en punta: Útiles para, por ejemplo, extraer los separadores de la placa base.</li>
+<li>Destornillador buscapolos: Para comprobar, por ejemplo, el interruptor de encendido del ordenador.</li>
+<li>Bridas: Para no dejar cables sueltos.</li>
+<li>Insertor / Extrator de chips: necesarios para llevar a cabo ampliaciones de memoria (las famosas tarjetas gráficas que se les podía expandir la memoria) y reemplazar chips defectuosos.</li>
+<li>Cortador de cables.</li>
+<li>Pelacables.</li>
+<li>Pulsera antiestática: Para evitar la electricidad estática.</li>
+<li>Un polímetro: Permite comprobar la continuidad de corriente.</li>
+<li>Tenacillas.</li>
+<li>Un disquete y una cinta para limpiar las unidades correspondientes.</li>
+<li>Piezas de recambio.</li>
+</ul>
+<p>La siguiente lista de elementos no son imprescindibles para realizar las tareas de mantenimiento de PC’s, pero sí que son útiles para determinadas tareas:</p>
+<ul>
+<li>Un soldador y su soporte.</li>
+<li>Un bote de aire comprimido: Quita el polvo que se acumula en el interior de la caja del ordenador y en el ventilador de la fuente de alimentación.</li>
+<li>Un pequeño limpiador de vacío: para las placas y el teclado.</li>
+<li>Materiales de limpieza. Elimina la suciedad que se “pega” en el exterior del ordenador, incluido el monitor.</li>
+</ul>
+<h3 id="Polimetros"><a href="#Polimetros" class="headerlink" title="Polímetros"></a>Polímetros</h3><p>Un polímetro es una pieza extremadamente útil en un equipo de comprobación y debe formar parte del equipo de herramientas para realizar mantenimiento. Para mantener un equipo no es necesario comprar el mejor polímetro del mercado, simplemente es bueno comprar aquel que incluya protección a las sobrecargas, ya que de haberlas, un polímetro de protección de sobrecarga es más resistente a estos abusos y el costo extra que pueda suponer se amortiza rápidamente.</p>
+<p>Existen en el mercado polímetros analógicos y digitales, siendo estos últimos más caros y más precisos pero en el uso que se le da para el mantenimiento del equipo no son recomendables por su alto coste.</p>
+<p>Con un polímetro se comprueban los fusibles y la continuidad de los conectores, utilizando los rangos de resistencias para medir continuidad y determinar si hay alguna resistencia alta. Se puede usar en los rangos de voltios DC, entre otras cosas, para comprobar las salidas de la fuente de alimentación.</p>
+<p>Para comprobar un fusible, se utiliza el rango de resistencias. Primero se cortocircuitan las puntas de pruebas y luego se ajusta a cero la medida que da, utilizando el control que hay en el polímetro. A continuación se conectan las puntas una a cada extremo del fusible. Si no se obtiene una lectura de cero ohmios, el fusible está defectuoso.</p>
+<p>Para comprobar una batería se pone el polímetro en el rango de voltaje DC y en la escala más alta en la que se espera que se encuentre el voltaje de la batería. Luego se conectan las puntas de prueba a los contactos de la batería, teniendo cuidado de que la polaridad sea correcta observando el voltaje en la escala.</p>
+<h3 id="Extraccion-y-Cambio-de-chips"><a href="#Extraccion-y-Cambio-de-chips" class="headerlink" title="Extracción y Cambio de chips"></a>Extracción y Cambio de chips</h3><p>No es normal que en las labores de mantenimiento se tengan que reparar las placas base y de las tarjetas de un PC cambiando algún chip por dos motivos:</p>
+<ul>
+<li>Es una tarea de los técnicos de las respectivas casas.</li>
+<li>No es habitual encontrar en el mercado un componente de esas características.</li>
+</ul>
+<p>Pero si que puede llegarse a dar el caso de tener que quitar y volver a instalar algún que otro chip. Por ejemplo, a las tarjetas gráficas de hace 3 años (que aún se encuentran en numerosos puntos de nuestra geografía), se les podía ampliar la memoria, y esta ampliación se realizaba insertándole un chip en un slot de la tarjeta.</p>
+<h3 id="Piezas-de-Recambio"><a href="#Piezas-de-Recambio" class="headerlink" title="Piezas de Recambio"></a>Piezas de Recambio</h3><p>Para realizar un buen mantenimiento, aparte de las herramientas también hace falta disponer de ciertas piezas de recambio, exactamente las piezas que más hacen falta en todo sistema informático son:</p>
+<ul>
+<li>Fuentes de alimientación.</li>
+<li>Discos Duros.</li>
+<li>Disqueteras. Son estándar, de 3’5″.</li>
+<li>Ratones. No ocupan mucho espacio y es habitual tener que cambiarlos.</li>
+<li>Teclados.</li>
+<li>Monitores: Tienen el problema de que son voluminosos para tenerlos almacenados.</li>
+</ul>
+<p>Estas piezas se pueden obtener por diversos cauces:</p>
+<ul>
+<li>Comprándolas: La compra de fuentes de alimentación, disqueteras, ratones y teclados son triviales y no son excesivamente caras a no ser que se deseen componentes especiales como p.ej. un ratón inalámbrico. Sin embargo los discos duros y los monitores suelen ser caros, y los monitores son voluminosos para tenerlos de recambios.</li>
+<li>Reutilizando: Cuando se retira un equipo se pueden aprovecha los componentes como la fuente, el teclado, etc, para en un momento dado volverlo a utilizar.</li>
+</ul>
+<h2 id="Mantenimiento-Preventivo-Elementos-que-afectan-a-la-vida-del-equipo"><a href="#Mantenimiento-Preventivo-Elementos-que-afectan-a-la-vida-del-equipo" class="headerlink" title="Mantenimiento Preventivo: Elementos que afectan a la vida del equipo"></a>Mantenimiento Preventivo: Elementos que afectan a la vida del equipo</h2><p>Hoy en día los ordenadores (clónicos y de marca) junto con los periféricos son muy fiables. Funcionan durante mucho tiempo sin el más mínimo fallo, pero es prudente no dar ciertas cosas por supuestas. Si se acondiciona el entorno en el que se va a instalar un PC y se cuida durante el uso, se evitarán muchos problemas.</p>
+<p>En este apartado se hace un repaso a aquellos elementos que a veces parecen insignificantes, pero que tanto pueden afectar a la vida útil de un equipo. Conocerlos ayudará a evitar que se produzcan problemas o, al menos, reducir su importancia. Se verán los factores que hay que tener en cuenta a la hora de elegir un entorno de trabajo adecuado. También se comentarán los problemas causados por los picos de tensión y cómo solucionarlos. Y una serie de consejos a seguir para prolongar la vida de los ordenadores y de los cuidados que se deben tener durante el trabajo, para conseguirlo.</p>
+<h3 id="Ubicacion-del-Equipo"><a href="#Ubicacion-del-Equipo" class="headerlink" title="Ubicación del Equipo"></a>Ubicación del Equipo</h3><p>De todos es sabido que los mainframes requieren un entorno refrigerado con temperatura constante ya que sus complejos circuitos generan una gran cantidad de calor. El exceso de humedad y el polvo pueden reducir la fiabilidad de su gran número de interconexiones además los mainframes también necesitan fuentes de alimentación con filtros especiales y altamente fiables.</p>
+<p>Los ordenadores actuales tienen menos componentes y generan menos calor, siendo más silenciosos que sus predecesores (sin tener en cuenta el ruido que generan los ventiladores).</p>
+<p>No obstante, lo mejor sería cuidar el ambiente en el que está ubicado el equipo, en concreto sería correcto tener en cuenta las siguientes consideraciones:</p>
+<ul>
+<li>Tenerlo correctamente ventilado.</li>
+<li>No tenerlo con un exceso de calor ni de frío.</li>
+<li>Evitar los humos.</li>
+<li>Evitar colocarlo cerca de materiales magnéticos.</li>
+<li>Evitar ubicarlo cerca de fuentes de vibración (impresoras) pues pueden dañar los discos duros.</li>
+<li>No conectarlo en líneas eléctricas a la que estén conectados aparatos con gran consumo de energía como aparatos de aire acondicionado.</li>
+<li>Mantener el entorno limpio, libre de polvo.</li>
+</ul>
+<h3 id="Frio-y-Calor"><a href="#Frio-y-Calor" class="headerlink" title="Frío y Calor"></a>Frío y Calor</h3><p>Los componentes electrónicos consumen corriente y, por tanto, terminan por calentarse, pero hay que tener muy en cuenta que el exceso de calor perjudica. Para comprobar este consumo de energía basta con abrir la caja del equipo después de apagarlo y comprobar si componentes como el disco duro, los chips, etc, están calientes.</p>
+<p>Los componentes electrónicos tienen una vida limitada, que se reduce en la medida que el calor se incrementa, por lo que es muy importante tener en cuenta la temperatura ambiente a la que el PC funciona. Dentro del ordenador, se disipa una gran cantidad de calor gracias a la corriente de aire que el ventilador hace circular a través de la caja. Además de incrementar el riesgo de fallo de los componentes, el calor excesivo puede producir otros problemas.</p>
+<p>Si la temperatura se eleva considerablemente, habrá muchas posibilidades de que algún componente deje de funcionar bien o que funcione mal. Algunos dispositivos, como por ejemplo las fuentes de alimentación, en la actualidad disponen de diseños de circuitos protegidos contra el calor, de tal forma que si la temperatura de funcionamiento excede de ciertos niveles, se produce una parada en el funcionamiento.</p>
+<p>Todos los componentes se calientan cuando se conectan y se enfrían cuando se desconectan, lo que produce dilataciones y contracciones, que a su vez, producen tensiones mecánicas. El problema es más grave con los chips instalados sobre zócalos que con los soldados en la placa. Con el paso del tiempo, las dilataciones y las contracciones hacen que las patillas se salgan fuera del zócalo produciéndose un fallo. Este tipo de fallos es muy común en las tarjetas gráficas, de hecho en los nuevos zócalos AGP traen incorporado una especie de “amarra tarjetas AGP”, para evitar que se muevan.</p>
+<p>De igual forma se debe evitar un exceso de frío, porque fomenta la formación de condensación, lo que puede causar la oxidación de las superficies metálicas tanto en los conectores como en los zócalos de los chips. Con el tiempo, esto produce contactos eléctricos poco fiables.</p>
+<p>Si se ha dejado la máquina en un medio extremadamente frío durante un tiempo, no se debe conectarla hasta que pase el tiempo suficiente como para que alcance la temperatura de la habitación. la resistencia de los componentes eléctricos disminuye con la temperatura, lo que hace que por ellos circule más corriente, de este modo, al conectar el ordenador, se podría estropear algún fusible o causar daños más serios.</p>
+<p>Los ordenadores no habrían llegado a ser tan populares si hubiesen necesitado aire acondicionado, pero no deben estar sometidos a temperaturas extremas; por ejemplo, no se deben poner junto a una ventana que a veces reciba directamente la luz solar, sobre todo en verano, cuando la temperatura puede pasar de 40ºC. También se debe evitar poner junto a calentadores o fogones.</p>
+<p>Un punto importante que no se debe pasar por alto es permitir la obstrucción de las ranuras de ventilación de las cajas de la unidad y del monitor. El ventilador no funcionará de forma totalmente eficiente si no hay suficiente espacio detrás de la unidad. No se debe poner la máquina contra una pared u otra barrera, ni apilar papeles, manuales o discos en lo alto del ordenador o del monitor.</p>
+<h3 id="Humedad"><a href="#Humedad" class="headerlink" title="Humedad"></a>Humedad</h3><p>Un exceso de humedad puede dañar al ordenador. Este problema puede ser particularmente serio a altas temperaturas. La condensación puede tener muchos efectos, como pueden ser la oxidación de las superficies de las partes metálicas, o de los contactos eléctricos, o la rotura de los materiales de aislamiento de la fuente de alimentación y del monitor. Este fenómeno es frecuente en zonas costeras españoles, donde el problema se agrava aún más debido a la salinidad del agua del mar que se mezcla con la humedad en las viviendas.</p>
+<p>La ausencia de humedad, por calor, o por tiempo seco, puede crear problemas con la electricidad estática.</p>
+<h3 id="Polvo-y-Suciedad"><a href="#Polvo-y-Suciedad" class="headerlink" title="Polvo y Suciedad"></a>Polvo y Suciedad</h3><p>Hay poco que se pueda hacer cuando se utiliza el ordenador en un entorno sucio y polvoriento. Sin embargo, se ha de tener en cuenta que la acumulación de polvo reduce la fiabilidad del ordenador. Una limpieza periódica podría ser necesaria para evitar problemas.</p>
+<p>El monitor es un buen indicador de la cantidad de polvo que hay en el entorno. Los monitores de ordenador, atraen el polvo, debido a la electricidad estática que hay en la pantalla. Si se acerca la mano a la pantalla se nota como los pelos del dorso son atraídos hacia el CTR. Se pueden incluso notar chasquidos de la electricidad estática. La pantalla actúa como un imán para el polvo, que se pega a ella o se mete en la unidad del sistema.</p>
+<p>Es asombrosa la cantidad de polvo que se puede acumular dentro de la unidad. Esto se debe a la corriente de aire del ventilador que actúa como una bomba de vacío. La mayor parte de los ventiladores funcionan soplando aire por la parte trasera de la unidad. Este aire entra a través de las ranuras de ventilación, así como por otras aberturas, como las ranuras de las unidades de disco.</p>
+<p>El polvo puede causar varios problemas en los ordenadores, ya que se amontona en las unidades de disquetes, ensuciando sus mecanismos y lo que es peor, pasándose a los discos, causando errores de lectura y otros fallos. El polvo se adhiere también a los componentes de la placa, reduciendo la capacidad que tienen de disipar calor. Se acumula, de la misma forma, en enchufes y zócalos, en los que las sustancias químicas que transporta pueden provocar que los contactos se enmohezcan, pudiendo producir conexiones poco fiables. Por último, puede introducirse dentro del motor, que en caso extremo, podría quemarse.</p>
+<p>Si hay que trabajar con el ordenador en un medio polvoriento, lo único y más importante que se puede hacer es aumentar la frecuencia del mantenimiento preventivo, por lo que se debería limpiar más a menudo. Sin embargo, se puede reducir la cantidad de polvo que puede entrar en el ordenador si se es cuidadoso al elegir su colocación.</p>
+<p>Las cajas tipo torre que se colocan en el suelo aumentan el nivel del polvo ya que los humanos al andar levantan gran cantidad de polvo.</p>
+<p>Es muy recomendable utilizar un aspirador o una mopa en las salas de ordenadores, ya que las escobas lo único que hacen es levantar el polvo, sin embargo el aspirador lo absorbe.</p>
+<p>El problema del polvo se vuelve peliagudo si se habla de los típicos servidores ubicados en una esquina y encendidos las 24 horas del día los 365 días del año, ya que suelen atraer gran cantidad de polvo, que puede repercutir en la disponibilidad.</p>
+<p>Los teclados son también vulnerables a los efectos de la suciedad y del polvo, ya que por su naturaleza, son propensos a recoger otras cosas como migajas y ceniza de cigarrillos. Con el paso del tiempo, estas cosas se acumulan en su interior y pueden impedir, por un atasco, el funcionamiento de las teclas.</p>
+<p>Se deben limpiar los teclados de forma periódica, como parte del mantenimiento preventivo. Sin embargo, en un medio particularmente sucio, se debe emplear un mayor nivel de protección, por lo que sería una buena idea comprar una membrana de plástico transparente y flexible que se adapta sobre las teclas y las protege de la suciedad, del polvo y de los líquidos.</p>
+<p>Esto es irrelevante en oficinas, pues se supone que se limpia todos los días, pero es un factor muy importante en las industrias o almacenes.</p>
+<h3 id="Golpes-y-Vibraciones"><a href="#Golpes-y-Vibraciones" class="headerlink" title="Golpes y Vibraciones"></a>Golpes y Vibraciones</h3><p>Los ordenadores son bastante resistentes, pero hay un límite al que ellos pueden resistir. Las vibraciones constantes pueden ser la causa de que los chips se salgan de sus zócalos y de que los conectores se aflojen.</p>
+<p>Los golpes y los impactos repentinos pueden ser dañinos, sobre todo para los discos duros, que son especialmente vulnerables. Si se mueve un disco duro o se produce una vibración mientras está funcionando, se pueden producir serios daños y pérdida de datos. También hay que asegurarse que el ordenador no se instala en un lugar fácilmente desplazable.</p>
+<p>Si hay que instalar un PC donde los choques y las vibraciones son inevitables, sería conveniente disponer de una máquina especial, resistente a dichos golpes.</p>
+<h3 id="Electricidad-Estatica"><a href="#Electricidad-Estatica" class="headerlink" title="Electricidad Estática"></a>Electricidad Estática</h3><p>Al moverse por una habitación, se genera una carga eléctrica cuya cantidad depende de varios factores: de las ropas que se tengan puestas, del tipo de cobertura del suelo, del nivel de humedad de la atmósfera y de la conductividad de los zapatos.</p>
+<p>Cuando se está cargado eléctricamente y se toca algo conectado a tierra seguramente se recibirá una descarga eléctrica. Estas descargas eléctricas son inofensivas para el individuo. Sin embargo, pueden ser la causa de un deterioro de la memoria del ordenador, para el micro o para la placa base (comúnmente se denomina quemar la memoria, el micro y la placa).</p>
+<p>Los generadores de electricidad estática son:</p>
+<ul>
+<li>La piel humana.</li>
+<li>El vidrio.</li>
+<li>El nylon.</li>
+<li>La lana.</li>
+<li>El pelo.</li>
+<li>El plomo.</li>
+<li>La seda.</li>
+<li>El aluminio.</li>
+<li>El algodón.</li>
+<li>El acero.</li>
+<li>El poliéster.</li>
+<li>El teflón.</li>
+</ul>
+<p>Se pueden utilizar pulverizadores antiestáticos para las alfombras y reducir la generación de electricidad estática. También, se pueden colocar felpudos antiestáticos, conectados a tierra, debajo del ordenador y de las sillas. Esto impedirá que se genere electricidad estática al moverse mientras trabaja en el ordenador. En climas secos será necesario un humidificador.</p>
+<p>La electricidad estática puede ser un serio problema para los empleados de servicio técnico y para todos aquellos que trabajan en ordenadores abiertos ya que al tocar un componente electrónico, puede quedar inutilizado fácilmente. Se puede evitar esto trabajando con pulseras antiestáticas conectadas a tierra a través del chasis del equipo, pero, a veces, es posible que no se pueda evitar ni usándolos.</p>
+<p>A continuación se dan una serie de indicaciones para eliminar el riesgo de dañar los componentes con descargas de electricidad estática:</p>
+<ul>
+<li>Tocar la caja del ordenador, o cualquier otra cosa que esté conectada a tierra, antes de tocar una placa del circuito o cualquier otra parte de la máquina. Esto dará la seguridad de que la electricidad estática se descarga inofensivamente a tierra.</li>
+<li>Evitar tocar los componentes electrónicos o los conectores laterales cuando se proceda a instalar, quitar o configurar placas del circuito.</li>
+<li>No tocar los pines de los módulos de memoria cuando se hagan ampliaciones.</li>
+<li>Las placas, tarjetas y memorias se deben de colocar en un embalaje antiestático.</li>
+<li>Utilizar calzado deportivo por ser un buen aislante.</li>
+</ul>
+<h3 id="Problemas-relacionados-con-la-corriente"><a href="#Problemas-relacionados-con-la-corriente" class="headerlink" title="Problemas relacionados con la corriente"></a>Problemas relacionados con la corriente</h3><p>Los ordenadores están diseñados para funcionar con salidas normales de corriente, sin embargo, la calidad del voltaje de la línea de corriente alterna puede variar en momentos puntuales e incluso en algunos lugares, el suministro puede ser tan poco fiable como para impedir al ordenador funcionar correctamente.</p>
+<p>Los ordenadores mainframes son tan complejos que un leve fallo podría hacer caer a todo el sistema, destruyendo el trabajo de cientos de usuarios. En estos sistemas se emplean circuitos especiales de filtro para proteger el hardware de los efectos de las pequeñas fluctuaciones de la línea de voltaje.</p>
+<p>Los ordenadores personales son mucho más tolerantes con las irregularidades de la corriente. Sin embargo, si la calidad del suministro es pobre, también se producirán problemas.</p>
+<p>Hay dos tipos principales de perturbaciones que se pueden dar en cualquier edificio y por cualquier motivo que son: los picos de alto voltaje y las fluctuaciones de la línea de corriente.</p>
+<p><strong>Picos de Voltaje</strong></p>
+<p>Los picos de voltaje pueden causar el deterioro de la memoria y la caída del sistema. Ocurren con frecuencia cuando aparatos como los aires acondicionados, los calentadores y cafeteras se conectan y desconectan. Otros elementos del equipo de una oficina, que consumen mucha corriente, como los radiadores, son también culpables de estas perturbaciones.</p>
+<p>Cuando un dispositivo se conecta y desconecta, en vez de un incremento o disminución de la corriente a través de los cables, lo que se produce es una oscilación amortiguada de alta frecuencia.</p>
+<p>La oscilación es lo que comúnmente se llama <em>pico</em> . Algunas veces, ese pico no se elimina en los circuitos de filtro de la fuente de alimentación y aparece en las líneas de voltaje que alimentan los circuitos electrónicos de un PC, pudiendo causar deterioros en la memoria y la caída del sistema. Los picos pueden ser tan grandes como para causar el fallo de los componentes de la fuente de alimentación, e incluso llegar a afectar al micro y a la placa.</p>
+<p>Las fluctuaciones de voltaje, producidas por la conexión y desconexión de elementos del equipo, están presentes en cualquier línea eléctrica. Las condiciones que determinan si estas fluctuaciones son suficientemente fuertes como para hacer que el equipo funcione mal, son complejas y difíciles de analizar. Sin embargo, los pisos superiores de los edificios altos son particularmente propensos a ello.</p>
+<p><strong>Fluctuaciones de la Línea de Corriente</strong></p>
+<p>La fuente de alimentación de un ordenador está diseñada para funcionar a un cierto voltaje nominal de entrada. Las diseñadas para usarse en Estados Unidos y Canadá tienen una entrada de 110 V de corriente alterna, mientras que para la mayor parte de Europa, la entrada estándar es de 240 V de corriente alterna. Otros países usan 220 V de corriente alterna.</p>
+<p>Cuando se compre cualquier componente para el equipo (incluida la fuente de alimentación) hay que asegurarse de que están diseñadas para ser utilizadas en España y que han sido fabricados para adaptarse a las normas de seguridad eléctricas.</p>
+<p>La pérdida de corriente puede causar mayores inconvenientes, de tal forma que, aunque dure menos de un segundo, puede hacer que el ordenador vuelva a arrancar, con lo que se perderían todos los cambios que hayan hecho desde la última vez que se salvó el trabajo. Los archivos que no fueron cerrados correctamente, pueden hacer estragos en el sistema de archivos de la mayor parte de los SO, produciendo la pérdida de sectores y otros problemas.</p>
+<p>Para tratar los problemas de la línea de corriente se pueden tomar tres opciones:</p>
+<ul>
+<li>Se puede comprar un enchufe protector especial de onda en almacenes de componentes electrónicos o de ordenadores, que ofrecen protección limitada contra picos de corriente.</li>
+<li>Comprar un rectificador de corriente. su tamaño es como el de una caja de zapatos y se conecta al enchufe de la pared, teniendo, a su vez, dos o tres salidas. Se componen de circuitos que filtran la corriente y eliminan tanto los picos como los ruidos.</li>
+<li>Adquirir un sistema de alimentación continua o ininterrumpida SAI (UPS, Uninterrumpible Power Supply). Esta fuente, al igual que el rectificador, se conecta entre el enchufe de la pared y el ordenador. Durante el funcionamiento normal, la corriente alterna pasa por ella y por algún filtro que lleve incluido. La UPS tiene unas baterías que se cargan continuamente con el voltaje de la línea. También contienen componentes electrónicos llamados inversores que convierten el bajo voltaje de la salida de la batería en alto voltaje de corriente alterna. cuando la UPS detecta una rápida caída de voltaje, un relé se conecta sobre el circuito inversor que comienza a generar un voltaje de corriente alterna. Dependiendo del consumo de corriente y de la capacidad de las baterías de la UPS, un PC puede seguir funcionando desde unos minutos hasta hora y media. Esto permite al usuario salvar su trabajo y preparar ordenadamente una salida del sistema si la corriente no se restablece. Las UPS se pueden encontrar en una amplia gama de tipos y tamaños. Algunos más baratos generan una onda cuadrada de salida, en lugar de la senoidal de la corriente de la red. Esto es aceptable para alimentar las fuentes de alimentación conmutadas que usan los ordenadores, pero no en otros equipos.</li>
+</ul>
+<h3 id="Deterioro"><a href="#Deterioro" class="headerlink" title="Deterioro"></a>Deterioro</h3><p>Los ordenadores, como cualquier componente electrónico se deterioran con el paso del tiempo. Sin embargo, el modo en que se use, también afectará a la mayor o menor probabilidad de que ocurran fallos.</p>
+<p>Por ejemplo aunque no parezca cierto, el hecho de encender y apagar el equipo en intervalos de tiempo cortos hará que se deteriore antes.</p>
+<p>Si se quiere alargar la vida del PC, se debe conectar y desconectar tan espaciadamente como sea posible.</p>
+<p>Si se deja el ordenador conectado durante mucho tiempo, sin usarlo, el CRT puede sufrir daños, ya que, al estar presentando la misma imagen de forma continuada, se puede quemar el revestimiento de fósforo de la pantalla; para solucionar este problema se puede coger el hábito de habilitar el salvador de pantallas o simplemente apagar el monitor cuando uno se ausenta durante un espacio prolongado de tiempo.</p>
+<p>Los mayores problemas pueden venir por descuidar y abusar del equipo. Hay varias reglas básicas de buen comportamiento que se deben de conocer que son:</p>
+<ul>
+<li>Evitar fumar o comer mientras se está trabajando con el ordenador, ya que esto puede conducir a que la ceniza y las migajas se introduzcan en el teclado, pudiendo atascar las teclas.</li>
+<li>Mantener los disquetes aislados del polvo y de la suciedad, almacenándolos, metidos en sus fundas, cuando no se usan.</li>
+<li>Manejar los disquetes cuidadosamente, sin tocar la superficie de grabación. Esto ayudará a preservar los datos ya que el polvo y la grasa no se introduzcan dentro de mecanismo de la unidad.</li>
+<li>No se debe ser brusco en el manejo del ordenador. Para introducir un disquete en la unidad, sólo es necesario presionar suavemente con la punta de los dedos. También se debe mover el cierre de la unidad con delicadeza.</li>
+<li>No se deben machacar las teclas como si se tratara de una vieja máquina de escribir.</li>
+<li>Evitar presionar los cables. cuando se intente desconectar una regleta, se debe tirar del enchufe y no de los cables.</li>
+</ul>
+<h2 id="Mantenimiento-Correctivo-y-Perfectivo"><a href="#Mantenimiento-Correctivo-y-Perfectivo" class="headerlink" title="Mantenimiento Correctivo y Perfectivo"></a>Mantenimiento Correctivo y Perfectivo</h2><p>El mantenimiento correctivo consiste en la reparación de alguno de los componentes del ordenador, que abarcan desde una soldadura pequeña, el cambo total de una tarjeta (sonido, video, memoria), o el cambio total de algún dispositivo periférico como el ratón, teclado, monitor, disco duro, etc.</p>
+<p>El mantenimiento perfectivo consiste en la ampliación de algún componente del equipo para aumentar su capacidad en base a una serie de requerimientos, por ejemplo, ampliar la capacidad del disco duro con uno nuevo, aumentar un módulo de memoria, etc.</p>
+<p>En ambos tipos de mantenimiento habrá que abrir el equipo y sustituir una pieza o simplemente añadir una pieza, por eso en los siguientes aparatados se va a ver cuales son las piezas más importantes de un ordenador y como realizar su sustitución o como insertar una nueva pieza en el mismo.</p>
+<p>Los componentes físicos de un ordenador que se pueden cambiar o ampliar son los siguientes:</p>
+<ul>
+<li>Placas Base.</li>
+<li>Micro.</li>
+<li>Memoria.</li>
+<li>Disco duro, lectores de CD, CD-RW, DVD, etc.</li>
+<li>Disqueteras.</li>
+</ul>
+<h3 id="Abriendo-la-Caja-del-Equipo"><a href="#Abriendo-la-Caja-del-Equipo" class="headerlink" title="Abriendo la Caja del Equipo"></a>Abriendo la Caja del Equipo</h3><p>Se abrirá la caja del ordenador para limpiarle el polvo o sustituir o ampliar algún componente.</p>
+<p>Para abrir la caja será necesario un destornillador plano, de estrella o de Torx.</p>
+<p>Existen cajas que ni siquiera tienen tornillos sino que se abren pulsando alguna lengüeta y desplazando los laterales. También es posible encontrar cajas que llevan candados con lo cual antes habrá que abrir el candado con la llave respectiva.</p>
+<p>Cuando se habla de formatos de cajas hay que tener en cuenta dos aspectos básicos. Por una parte el formato exterior, que determina su tamaño, estilo, … Y por otra parte los formatos basados en especificaciones técnicas, que determinarán la futura distribución de los componentes internos.</p>
+<ul>
+<li>Formatos “técnicos”: Va a determinar el formado de la placa base del PC. Los elementos que más se van a ver influenciados por el formato de la caja son la placa base y la fuente de alimentación. A continuación se detallan cuales son estos formatos:<ul>
+<li>XT: Es el formato de los primeros PC’s. Surge en 1981 con el IBM PC. Se caracterizaban por la existencia de grandes interruptores en su parte posterior y su gran tamaño y peso.</li>
+<li>AT: También diseñado por IBM, surge en 1984. Similar al formato anterior, pero con grandes diferencias en el interior de la caja que determinaba otra colocación de la placa. Tenía aspecto de torre y no era compatible con el anterior. En años posteriores fueron apareciendo formatos que apenas diferían de éste, como Baby AT que presentaba unas dimensiones menor y consecuentemente menos coste.</li>
+<li>ATX: Surge en 1995 y supone un gran cambio con respecto a sus predecesores. Sobre todo en el formato de la fuente de alimentación (que permite diferentes voltajes) y en que son mucho más fáciles de ampliar.</li>
+<li>NLX: Formato reciente que tiene por objetivo reducir el tamaño.</li>
+</ul>
+</li>
+<li>Aspecto:<ul>
+<li>Mini-Torre:<ul>
+<li>2 bahías 5 ¼</li>
+<li>2 bahías 3 1/5</li>
+<li>FA: 200 W</li>
+</ul>
+</li>
+<li>Midi-Torre:<ul>
+<li>3 bahías 5 ¼</li>
+<li>2 habías 3 1/5 (poseen itnernas)</li>
+<li>FA: 250-300W</li>
+</ul>
+</li>
+<li>Torre</li>
+<li>Gran-Torre</li>
+<li>Semi-Torre</li>
+<li>Server</li>
+<li>Mini-ITX</li>
+</ul>
+</li>
+</ul>
+<p>Pasos a dar:</p>
+<ul>
+<li>Desconectar el cable de alimentación del PC ya que no llega con tener apagado el equipo.</li>
+<li>Descargarse de la electricidad estática.</li>
+<li>Localizar los tornillos o buscar las lengüetas y quitarlos.</li>
+<li>Desplazar los laterales de la carcasa para tener acceso al interior</li>
+</ul>
+<h3 id="Placas-Base"><a href="#Placas-Base" class="headerlink" title="Placas Base"></a>Placas Base</h3><p>Para colocar la placa en la caja del equipo hace falta el siguiente material:</p>
+<ul>
+<li>Placa</li>
+<li>Tornillos</li>
+<li>arpones</li>
+<li>Herramientas:<ul>
+<li>Destornillador</li>
+<li>Brazalete antiestático</li>
+<li>Cutter</li>
+</ul>
+</li>
+</ul>
+<p>Antes de insertar la placa en la caja hay que realizar el siguiente trabajo previo:</p>
+<ul>
+<li>Anclar los buses a la placa antes de instalarla, además del procesador y la memoria, ya que si la caja es pequeña, o incomoda de trabajar, más tarde será más difícil.</li>
+<li>Antes de colocar la placa será necesario colocar la fuente de alimentación, si bien actualmente la mayor parte de las cajas ya traen la fuente de alimentación colocada de “fábrica”.</li>
+<li>Configurar los Jumpers ajustando el voltaje adecuado, la frecuencia de reloj del bus principal y el multiplicador.</li>
+</ul>
+<p>A la hora de colocar la placa en la caja hay que seguir los siguientes consejos:</p>
+<ul>
+<li>Evitar que la placa contacte con cualquier parte metálica de la caja. Para ello se deben de utilizar los arpones suministrados con la placa.</li>
+<li>Si la caja no dispusiera de bahías para poder enganchar los arpones, se cortará el enganche de éstos con un cutter.</li>
+<li>Para evitar que la placa toque la superficie metálica de la caja también se puede recurrir a un truco muy viejo que consiste en utilizar la esponja en la que viene embalada.</li>
+<li>Si el procesador alcanza temperaturas muy altas habrá que recortar la superficie de esponja que se aloje debajo del microprocesador ya que se podrá llegar a quemar.</li>
+<li>Al atornillas los tornillos hay que cerciorarse de que la placa está bien anclada pero sin pasarse. La circuitería es muy delicada.</li>
+</ul>
+<p>El siguiente paso es colocar los conectores de la fuente de alimentación en la placa. Para realizar esto hay que tener en cuenta que existen dos tipos de placa (que coincide con los tipos de caja):</p>
+<ul>
+<li>Placas AT: Para este tipo de placas de las fuentes de alimentación salen dos conectores hembras del mismo tamaño y para enchufarlos en los conectores machos de la placa hay que saber que los cables negros tienen que ir en el medio. De esta forma sólo un sentido es válido.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/conector_placa_at.png?w=825" alt=""></p>
+<ul>
+<li>Placas ATX: El conector sólo encaja perfectamente en un sentido.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/conector_placa_atx.png?w=825" alt=""></p>
+<p>Lo último que queda por realizar es conectar los LEDs luminosos y el altavoz, estos son los cables que vienen incluidos en la caja. Habrá que enchufar los cables de la placa etiquetados con el led correspondiente a la toma correspondiente de la placa.</p>
+<p>Para realizar la correcta conexión hay que:</p>
+<ul>
+<li>Contar con el manual de la placa.</li>
+<li>En caso de no tenerlo, mirar las inscripciones de la placa.</li>
+<li>Si esto no funciona queda el método de “prueba-error”.</li>
+</ul>
+<h3 id="El-Procesador"><a href="#El-Procesador" class="headerlink" title="El Procesador"></a>El Procesador</h3><p>Técnicamente resulta imposible realizar un mantenimiento correctivo del procesador, por la imposibilidad de contar con las herramientas necesarias, como mucho se puede realizar una sustitución de un procesador por otro.</p>
+<p>Realizar un mantenimiento perfectivo del procesador consiste en sustituir un procesador por otro más avanzado siempre y cuando la placa base lo soporte.</p>
+<p>Hay que tener en cuenta que se distinguen distintos tipos de procesadores, aparte de por su fabricante y por su velocidad por el tipos de conexión. Según esta, se distinguen los siguientes:</p>
+<ul>
+<li><strong>ZIF</strong> : Zero Insertion Force. Para encajar el microprocesador en la placa no hace falta hacer fuerza, simplemente basca con levantar una palanca del zócalo en la placa base, colocar el procesador encima y bajar la palanca. Es necesario decir que estos procesadores traen los pines alrededor de la carcasa de tal forma que estos fines encajan en el zócalo. En los micros los pines no se cierran en un cuadrado perfecto, sino que dejan unas esquinas que indican por qué lado encajar el micro en el zócalo.</li>
+</ul>
+<p>Vista de un micro</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/micro_zif.png?w=825" alt=""></p>
+<p>Ejemplos de estos micros son:</p>
+<ul>
+<li>Socket 7: Pentium</li>
+<li>Socket 8: Pentium Pro de Intel</li>
+<li>Socket 370 o PPGA: Pentium III más modernos y Pentium celerón más modernos</li>
+<li>Socket 462/Socket A: Procesadores AMD Athlon, Duron, Thunderbird, XP y MP</li>
+<li>Socket 423 y 478: Pentium IV de Intel</li>
+</ul>
+<p>Zócalo donde se inserta el micro</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/zocalo_zif.png?w=825" alt=""></p>
+<p>Inserción del micro en el zócalo</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/insercion_zif.png?w=825" alt=""></p>
+<ul>
+<li><strong>SEC</strong> : En estos zócalos los micros se insertan como si fueran unos cartuchos y ya hay que hacer fuerza para que encaje el micro en su zócalo.<ul>
+<li>Slot 1: Pentium II</li>
+<li>Slot II: Pentium III</li>
+<li>Slot A: Athlon</li>
+</ul>
+</li>
+</ul>
+<p>Procesador SEC</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/procesador_sec.png?w=825" alt=""></p>
+<ul>
+<li><strong>No ZIF</strong> : Antiguos zócalos donde se insertaban procesadores 486 y anteriores.</li>
+<li><strong>Soldados</strong> : Antiguamente algunos procesadores estaban soldados a su placa base.</li>
+</ul>
+<p>Una vez colocado el micro es necesario colocarle el disipador para evitar que se queme.</p>
+<p>Antes de realizar este paso a la superficie del micro hay que echarle “pasta térmica” que elimina los huecos que quedan entre el disipador y el micro, consiguiendo una correcta refrigeración.</p>
+<p>El ventilador suele necesitar alimentación, que la suele proporcionar la placa a través de unos conectores etiquetados generalmente con “CPU FAN”, que será donde hay que colocar el enchufe del disipador.</p>
+<h3 id="Disquetera"><a href="#Disquetera" class="headerlink" title="Disquetera"></a>Disquetera</h3><p>La disquetera se suele estropear con más frecuencia de la necesaria debido al exceso de polvo que suele acumular. Para evitar hacer un mantenimiento correctivo o perfectivo basta con realizar un mantenimiento preventivo previo.</p>
+<p>La disquetera se conecta a la placa a través de un bus de datos que conecta la placa con la disquetera. El conector donde se enganchan los buses de datos de la disquetera a la placa se denomina FDC: Floppy Disk Controler o FDD: Floppy Disk Drive y está situado al lado de los conectores IDE’s.</p>
+<p>A continuación se exponen los pasos a seguir para realizar un mantenimiento perfectivo (añadir una nueva disquetera) o correctivo (sustituir la disquetera).</p>
+<ul>
+<li>Localizar la bahía de la caja correspondiente 3 ¼.</li>
+<li>Insertar la disquetera.</li>
+<li>Atornillarla en la bahía.</li>
+<li>Colocar Bus de Datos:<ul>
+<li>Si solo hay una disquetera, insertar el extremo del cable que contiene una doblez a la disquetera y el otro extremo del bus al conector FDC o FDD de la placa.</li>
+<li>Si hay ya una disquetera colocar el conector que no tiene la doblez y que está más próximo a ésta en la segunda disquetera y el otro extremo del bus al conector FDC o FDD de la placa.<ul>
+<li>La disquetera que tiene la doblez actuaría como maestra.</li>
+<li>La disquetera que no tiene la doblez actuaría como esclava.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Enchufar la disquetera a la fuente de alimentación utilizando el conector pequeño de la misma.</li>
+</ul>
+<h3 id="Conectar-un-dispositivo-IDE-Integrated-Drive-Electronic"><a href="#Conectar-un-dispositivo-IDE-Integrated-Drive-Electronic" class="headerlink" title="Conectar un dispositivo IDE (Integrated Drive Electronic)"></a>Conectar un dispositivo IDE (Integrated Drive Electronic)</h3><p>Las interfaces IDE es un estándar que define la interfaz para conectar periféricos como discos duros, cd-rom, cdrw, etc, a la placa.</p>
+<p>EIDE (Enhanced): soporta 4 dispositivos conectados, si bien coloquialmente se le sigue llamando por el nombre IDE.</p>
+<p>Una placa base convencional suele tener 2 canales IDE: el primario y el secundario. En la placa base se distinguen porque aparecen impresas las letras: IDE1 (primario) e IDE2 (secundario).</p>
+<p>A cada canal se pueden conectar dos dispositivos:</p>
+<ul>
+<li>Primario (Maestro). El maestro es el primero de los dos y se suele situar al final del cable. Tiene preferencia sobre el esclavo a la hora de transmitir datos.</li>
+<li>Secundario (Esclavo). El esclavo es el segundo, normalmente conectado en el centro del cable entre el maestro y la controladora.</li>
+</ul>
+<p>Si tenemos en cuenta el hecho de que en una placa base hay 2 canales IDE y que cada canal soporta 2 dispositivos, podemos tener en total 4 dispositivos.</p>
+<p>Los dispositivos (discos duros, CD-ROM, DVD-ROM, etc) tienen unos “puentes” llamados jumpers, situados generalmente en la parte posterior o inferior de los mismos, que permiten seleccionar su carácter de maestro, esclavo. Las posiciones de los jumpers vienen indicadas en una calcomanía en la superficie del disco, o bien en el manual o serigrafiadas en la placa de circuito del disco rígido, con las letras _M_ para designar “maestro” y _S_ para designar “esclavo”.</p>
+<p>La distribución “estándar” en un PC para un rendimiento óptimo es la siguiente:</p>
+<ul>
+<li>Canal o Puerto IDE 1:<ul>
+<li>Maestro: Disco Duro principal (Contiene el SO).</li>
+<li>Esclavo: lector de CD-ROM/DVD.</li>
+</ul>
+</li>
+<li>Canal o Puerto IDE 2:<ul>
+<li>Maestro: Grabadora de CD/DVD.</li>
+<li>Esclavo: Segundo Disco Duro, unidad magneto óptica, …</li>
+</ul>
+</li>
+</ul>
+<p>Los pasos para montar un dispositivo IDE son los siguientes:</p>
+<ul>
+<li>Localizar la bahía de la caja correspondiente: 3¼ para discos duros y 5½ para lectores de CD, DVD, etc.</li>
+<li>Insertar el dispositivo.</li>
+<li>Atornillarla en la bahía.</li>
+<li>Colocar el Bus de Datos.</li>
+<li>Si el dispositivo está solo en el IDE, configurarlo como maestro.</li>
+<li>Si no está, solo se siguen las recomendaciones anteriores.</li>
+<li>En cuanto al Bus de Datos, se observará que uno de los extremos tiene un color rojo o rosa, este hilo tiene que encajarse con la pata del dispositivo donde está serigrafiado un 1 que suele ser el de la derecha del conector macho del dispositivo.</li>
+<li>Solo queda conectarle el cable de alimentación.</li>
+</ul>
+<h3 id="Memoria"><a href="#Memoria" class="headerlink" title="Memoria"></a>Memoria</h3><p>Este es el componente que con más frecuencia se necesita mantener, no porque se estropee, sino porque se necesita ampliar debido a las necesidades de las aplicaciones y SO actuales.</p>
+<p>Cuanta más memoria se pueda insertar es mejor.</p>
+<p><strong>Formatos</strong></p>
+<p>La memoria RAM del PC, en cualquiera de sus tipos, es físicamente un módulo o pastilla (placa de circuito impreso que agrupa varios chips de memoria) que se acaba insertando en los zócalos correspondientes de la placa. Estos módulos pueden tener diferentes formatos que a continuación se describen.</p>
+<ul>
+<li><strong>DIPS (Cápsula Dual en Línea, Dual Inline Package)</strong> . Totalmente desaparecido. Sólo mencionar que en los primeros PC’s se conectaba los DIPS en zócalos libres de la placa base.</li>
+<li><strong>SIMM (Módulo de Memoria Simple, Single Inline Memory Module)</strong> . Pequeña placa de circuito impreso que almacena chips de memoria solo por un lado de la placa, y se inserta en un zócalo SIMM en la placa madre. El primer formato tenía 30 contactos. Un formato más largo en centímetros, que usa 72 contactos y puede almacenar hasta 64MB de RAM, se popularizó con los procesadores Pentium. Las memorias en este formato presentaban la restricción de tener que instalarse siempre por pares de la misma capacidad. Es decir, para conseguir 16MB, eran necesarios 2 SIMM’s de 8MB o 4 SIMM’s de 4MB. Esta restricción venía impuesta porque estos módulos permitían almacenar 32 bits por ciclo, y los procesadores Pentium utilizaban un bus externo de 64 bits.</li>
+<li><strong>DIMM (Módulo de Memoria Dual, Dual Inline Memory Module)</strong> . Pequeña placa de circuito impreso que almacena chips de memoria por ambos lados de la placa, y que se inserta en un zócalo DIMM.<ul>
+<li>Existen 2 tipos de módulos DIMM:<ul>
+<li>SDR SDRAM: 168 contactos.</li>
+<li>DDR SDRAM: 184 pines.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>RIMM (Rambus Inline Memory Module)</strong> . Pequeña placa de circuito impreso que almacena chips de memoria por ambos lados de la placa y disponen de disipadores de calor. Tienen 184 pines.</li>
+</ul>
+<p><strong>Colocando la Memoria SIMM</strong></p>
+<p>Para ampliar la memoria SIMM hay que tener en cuenta que es necesario insertar pares de módulos debiendo ser los módulos iguales en velocidad y tamaño.</p>
+<p>Para poder ampliar memoria de este tipo, es preciso tener, al menos, 2 zócalos libres en la placa.</p>
+<p>Los pasos a dar son los siguientes:</p>
+<ul>
+<li>Descargarse de la electricidad estática.</li>
+<li>Orientar y presentar el módulo de forma correcta sobre el zócalo de la placa.<ul>
+<li>Los contactos de los módulos están numerados del 1 al 30 o 72, dependiendo del tipo de módulo.</li>
+<li>Solo es posible una orientación del módulo en la placa ya que en la base, el conector nº 1 del zócalo tiene una pequeña rebaba que imposibilita insertar mal el módulo.</li>
+</ul>
+</li>
+<li>Para poder insertar el módulo hay que inclinarlo 45º una vez que éste está sobre el zócalo.</li>
+<li>Posteriormente se levanta el extremo superior sin sacarlo de la ranura hasta que quede perpendicular a la placa.</li>
+</ul>
+<p>Para extraer la memoria SIMM hay que presionar las lengüetas de los extremos de los zócalos hacia el exterior.</p>
+<p><strong>Colocando la Memoria DIMM</strong></p>
+<p>Estos son los módulos de 168 contactos (SDRAM) y 184 contactos (DDR, RAMBUS).</p>
+<p>No presentan los inconvenientes de los SIMM:</p>
+<ul>
+<li>Se pueden insertar módulos de diferente capacidad.</li>
+<li>No es necesario colocar los módulos por pares.</li>
+</ul>
+<p>Sí es conveniente tener los módulos de la misma velocidad.</p>
+<p>Los pasos a dar son los siguientes:</p>
+<ul>
+<li>Localizar los zócalos en la placa sobre los que se insertarán los módulos de memoria. Tener en cuenta que algunas placas soportan los dos tipos de módulos: SDRAM y DDR.</li>
+<li>Orientar y presentar el módulo de forma correcta sobre el zócalo de la placa. Para ello observar que en la parte de los pines, la placa de memoria tiene unos huecos (2 para el caso de SDRAM y uno para DDR) que determinan la posición exacta.<ul>
+<li>Es conveniente comenzar a insertar módulos de memoria por el primer zócalo del primer banco, aunque no es estrictamente necesario.</li>
+</ul>
+</li>
+<li>Para anclar el módulo sobre la ranura, hay que presionar suavemente sobre el módulo una vez que esté correctamente situado.<ul>
+<li>Estará bien colocado cuando se escuche un pequeño clic.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografia"></a>Bibliografia</h2><ul>
+<li><a href="https://es.scribd.com/document/357351182/TICB3-Mantenimiento-de-Equipos" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t15/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T14
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t02/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T02</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

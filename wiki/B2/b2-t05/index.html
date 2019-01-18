@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T05 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T05">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Inteligencia de negocios: cuadros de mando integral, sistemas de soporte a las decisiones, sistemas de información ejecutiva y almacenes de datos. OLTP y OLAP.Introducción. Evolución de los sistemas t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T05">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t05/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Inteligencia de negocios: cuadros de mando integral, sistemas de soporte a las decisiones, sistemas de información ejecutiva y almacenes de datos. OLTP y OLAP.Introducción. Evolución de los sistemas t">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/niveles_abstraccion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/almacen_datos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/estructura_almacen_datos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/comparacion_bd_dw.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:28:33.828Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T05">
+<meta name="twitter:description" content="Inteligencia de negocios: cuadros de mando integral, sistemas de soporte a las decisiones, sistemas de información ejecutiva y almacenes de datos. OLTP y OLAP.Introducción. Evolución de los sistemas t">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/niveles_abstraccion.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file active"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t05" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t05/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t05.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t05.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t05.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T05
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Inteligencia-de-negocios-cuadros-de-mando-integral-sistemas-de-soporte-a-las-decisiones-sistemas-de-informacion-ejecutiva-y-almacenes-de-datos-OLTP-y-OLAP"><a href="#Inteligencia-de-negocios-cuadros-de-mando-integral-sistemas-de-soporte-a-las-decisiones-sistemas-de-informacion-ejecutiva-y-almacenes-de-datos-OLTP-y-OLAP" class="headerlink" title="Inteligencia de negocios: cuadros de mando integral, sistemas de soporte a las decisiones, sistemas de información ejecutiva y almacenes de datos. OLTP y OLAP."></a>Inteligencia de negocios: cuadros de mando integral, sistemas de soporte a las decisiones, sistemas de información ejecutiva y almacenes de datos. OLTP y OLAP.</h1><h2 id="Introduccion-Evolucion-de-los-sistemas-tradicionales-a-las-Bases-de-Datos"><a href="#Introduccion-Evolucion-de-los-sistemas-tradicionales-a-las-Bases-de-Datos" class="headerlink" title="Introducción. Evolución de los sistemas tradicionales a las Bases de Datos."></a>Introducción. Evolución de los sistemas tradicionales a las Bases de Datos.</h2><h3 id="Sistemas-tradicionales-de-ficheros-Inconvenientes"><a href="#Sistemas-tradicionales-de-ficheros-Inconvenientes" class="headerlink" title="Sistemas tradicionales de ficheros. Inconvenientes."></a>Sistemas tradicionales de ficheros. Inconvenientes.</h3><p>Los sistemas tradicionales de ficheros son sistemas orientados hacia el proceso, es decir, se pone el énfasis en el tratamiento que reciben los datos, los cuales se almacenan en archivos diseñados para una aplicación concreta. Las aplicaciones se diseñan e implantan independientemente unas de otras y los datos se duplican si las diferentes aplicaciones los necesitan, en lugar de transferirse entre ellas.</p>
+<p>Los principales inconvenientes de estos sistemas tradicionales de ficheros son:</p>
+<ul>
+<li>Redundancia: duplicidad innecesaria de información.</li>
+<li>Mal aprovechamiento del equipo de almacenamiento: como consecuencia inmediata de la redundancia.</li>
+<li>Aumento de los tiempos de proceso: se repiten los mismos controles y operaciones en los distintos ficheros, con lo que se consume más tiempo de CPU del necesario. En el caso de modificar un campo hay que hacerlo en todos los registros de todos los ficheros que lo contengan.</li>
+<li>Inconsistencia de la información: por la alta redundancia. Si se deja de actualizar un dato en uno de los archivos donde aparece, la información proporcionada por este dato se vuelve inconsistente.</li>
+<li>Aislamiento de los datos: Cada archivo pertenece a un programa y no es posible que estos sean usados por nuevos programas. Un nuevo programa necesitará sus propios archivos de datos que habrán de crearse aunque parte de los datos ya existan en otros archivos de otros programas, contribuyendo a aumentarla redundancia y las consecuencias de esta.</li>
+<li>Imposibilidad de responder a demandas inesperadas de información: los sistemas tradicionales de archivo son inoperantes para conseguir un sistema de información orientado a la toma de decisiones.</li>
+<li>Dependencia total entre los programas y la estructura física de los datos: no es posible modificar las características físicas (estructura y métodos de acceso) de los archivos sin afectar a los programas que los usan. Conseguir la independencia entre datos y aplicaciones va a ser uno de los principales objetivos de los sistemas de bases de datos.</li>
+</ul>
+<h3 id="Sistemas-orientados-a-la-base-de-datos"><a href="#Sistemas-orientados-a-la-base-de-datos" class="headerlink" title="Sistemas orientados a la base de datos"></a>Sistemas orientados a la base de datos</h3><p>Ante los problemas descritos con los sistemas tradicionales de ficheros, surge la necesidad de una gestión más racional del conjunto de los datos. Poco a poco se fue poniendo más énfasis en un enfoque distinto, en el cual la información se organizaba y se mantenía como un conjunto estructurado que no se diseñaba para una aplicación concreta. Es decir, surge así un nuevo enfoque que se apoya sobre una base de datos en la que los datos son recogidos y almacenados una sola vez con independencia de los tratamientos que se van a aplicar sobre ellos.</p>
+<p>De esta forma, la información contenida en una base de datos está integrada y compartida. <em>Integrada</em> porque puede considerarse como una unificación de varios archivos de datos de los que hemos eliminado la redundancia y <em>compartida</em> porque los programas que antes accedían a los archivos individuales acceden ahora al depósito común de datos, por lo que cada usuario o aplicación tendrá acceso a un subconjunto de los datos y como consecuencia diferentes usuarios verán de formas muy diferentes la misma base de datos.</p>
+<p>Es importante destacar que los subconjuntos de datos a los que acceden las diferentes aplicaciones o usuarios no tienen por qué ser disjuntos, por lo que usuarios o aplicaciones distintas pueden acceder a la misma parte de la base de datos para utilizarla con propósitos diferentes.</p>
+<h2 id="Concepto-de-Base-de-Datos"><a href="#Concepto-de-Base-de-Datos" class="headerlink" title="Concepto de Base de Datos"></a>Concepto de Base de Datos</h2><p>Una primera definición de bases de datos sería: “Una Base de Datos (BD) es una colección o depósito de datos integrados, almacenados en soporte secundario (no volátil) y con redundancia controlada. Los datos, que han de ser compartidos por diferentes usuarios y aplicaciones, deben mantenerse independientes de ellos y su definición (estructura de la BD), única y almacenada junto con los datos, se ha de apoyar en un modelo de datos, el cual ha de permitir captar las interrelaciones y restricciones existentes en el mundo real. Los procedimientos de actualización y recuperación, comunes y bien determinados, facilitarán la seguridad del conjunto de los datos”.</p>
+<p>Veamos en qué consiste cada uno de los aspectos mencionados en esta definición de Base de Datos que no son más que distintas definiciones según distintas perspectivas. La BAD es un conjunto de datos relativos a una determinada parcela del mundo real que se almacenan en un soporte informático no volátil. Además, no debe existir redundancia, es decir, no deben existir duplicidades perjudiciales ni innecesarias (a ser posible un determinado tipo de dato, sólo deben aparecer en un sitio en la BD). En ocasiones, es necesaria cierta redundancia (a nivel de almacenamiento físico) que mejora la eficiencia de la BD. Sin embargo, esta redundancia siempre debe ser controlada por el sistema para que no se produzcan inconsistencias. Por otro lado, las BD han de atender a múltiples usuarios de la organización así como a distintas aplicaciones.</p>
+<p>Otras definiciones de BD son:</p>
+<ul>
+<li>Conjunto de datos de la empresa memorizados en un ordenador, que es utilizado por numerosas personas y cuya organización está recogida en un modelo de datos.</li>
+<li>Colección o depósito de datos, donde estos se encuentran lógicamente relacionados entre sí, tienen una definición y una descripción comunes y están estructurados de una forma particular.</li>
+<li>Colección o depósito de datos integrados, con redundancia controlada y una estructura que refleje las interrelaciones y restricciones existentes en el mundo real; los datos, que han de ser compartidos por diferentes usuarios y aplicaciones, deben mantenerse independientes de estos, y su definición y descripción, únicas para cada tipo de dato, han de estar almacenados junto con los mismos. Los procedimientos de actualización y recuperación, comunes y bien determinados, habrán de ser capaces de conservar la integridad, seguridad y confidencialidad del conjunto de los datos.</li>
+</ul>
+<p>Principales características de los datos almacenados en una BD:</p>
+<ul>
+<li>Están organizados</li>
+<li>Están relacionados</li>
+<li>Son accesibles de diferentes formas sin grandes dificultades</li>
+<li>Se almacenan solo una vez</li>
+</ul>
+<h3 id="Independencia-de-los-datos-Niveles-de-abstraccion"><a href="#Independencia-de-los-datos-Niveles-de-abstraccion" class="headerlink" title="Independencia de los datos. Niveles de abstracción."></a>Independencia de los datos. Niveles de abstracción.</h3><p>En los sistemas de base de datos se plantean dos objetivos principales:</p>
+<ul>
+<li>Independencia de la base de datos de los programas para su utilización.</li>
+<li>Proporcionar a los usuarios una visión abstracta de los datos. El sistema esconde los detalles de almacenamiento físico (como almacena y mantiene los datos), pero deben extraerse eficientemente.</li>
+</ul>
+<p><strong>Independencia de los Datos. Definición de ANSI.</strong></p>
+<p>La independencia de los datos es la capacidad de un sistema para permitir que las referencias a los datos almacenados, especialmente en los programas y en sus descriptores de datos, estén aislados de los cambios y de los diferentes usos en el entorno de los datos, como puede ser la forma de almacenar dichos datos, el modo de compartirlos con otros programas y como se reorganizan para mejorar el rendimiento del sistema de Bases de Datos.</p>
+<p><strong>Niveles de abstracción</strong></p>
+<p>Para conseguir esta independencia entre los datos y las aplicaciones es necesario separar la representación física y lógica de los datos, distinción que fue reconocida oficialmente en 1978, cuando el comité ANSI/X3/SPARC propuso un esqueleto generalizado para sistemas de BD. Este esqueleto propone una arquitectura de tres niveles, los tres niveles de abstracción bajo los que podía verse una base de datos: el nivel interno, el nivel conceptual y el nivel externo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/niveles_abstraccion.png?w=825" alt=""></p>
+<p>Esta arquitectura de tres niveles nos proporciona la deseada independencia, que definimos como la capacidad para cambiar el esquema en un nivel sin tener que cambiarlo en ningún otro nivel. Distinguimos dos tipos de independencia:</p>
+<ul>
+<li><em>Independencia lógica de datos</em> : cambio del esquema conceptual sin cambiar las vistas externas o las aplicaciones.</li>
+<li><em>Independencia física de los datos</em> : cambio del esquema interno sin necesidad de cambiar el esquema conceptual o los esquemas externos.</li>
+</ul>
+<h3 id="Ventajas-e-inconvenientes-del-uso-de-bases-de-datos"><a href="#Ventajas-e-inconvenientes-del-uso-de-bases-de-datos" class="headerlink" title="Ventajas e inconvenientes del uso de bases de datos"></a>Ventajas e inconvenientes del uso de bases de datos</h3><ul>
+<li><strong>Ventajas</strong><ul>
+<li><em>Control sobre las inconsistencias y redundancias</em> : en los sistemas tradicionales de ficheros cada aplicación tiene sus datos privados, lo que provoca una alta redundancia y desaprovechamiento del espacio en disco. La redundancia debe minimizarse y controlarse con las BD. Aunque se mantenga cierto grado de redundancia por motivos de rendimiento u otros, el sistema proporciona mecanismos para garantizar la consistencia. Se controla la redundancia garantizando que los datos redundantes se actualicen de forma automática.</li>
+<li><em>Mejor servicio a los usuarios</em> : en los sistemas convencionales suele ser difícil obtener una información para la cual no fueron diseñados. Una vez que varios de estos sistemas se combinan para crear una BD centralizada, además de mejorar sustancialmente la disponibilidad de la información también garantiza que los datos son actuales. Asimismo es posible responder mas ágilmente a nuevas necesidades del usuario no planteadas anteriormente.</li>
+<li><em>Los datos pueden compartirse</em> : las necesidades de datos de nuevas aplicaciones pueden atenderse con los ya existentes sin tener que almacenar nuevos datos.</li>
+<li><em>Mejora la flexibilidad del sistema</em> : a menudo se plantea la necesidad de cambiar los datos almacenados. Estos cambios, a través de un sistema de BD, no tienen el impacto sobre las aplicaciones que tendrían un sistema convencional.</li>
+<li><em>Menor coste de desarrollo y mantenimiento</em> : aunque el coste inicial de una base de datos puede ser superior al de un sistema tradicional, los costes en mantenimiento y desarrollo de aplicaciones son menores.</li>
+<li><em>Pueden hacerse cumplir las normas establecidas</em> : al tener un control centralizado de las BD, el administrador (a instancias del responsable de la información de la organización) puede garantizar que se observen las normas de la empresa aplicables a la representación de los datos.</li>
+<li><em>Restricciones de seguridad</em> : el administrador puede asegurar que el único modo de acceso sea a través de los canales establecidos, y definir controles de autorización que pueden afectar a cada modo de acceso (modificación, inserción, borrado o lectura), según las necesidades de cada usuario.</li>
+<li><em>Se desarrolla un modelo de datos</em> : en los sistemas convencionales los ficheros de datos se diseñan teniendo en mente las necesidades particulares de la aplicación que los va a utilizar, dejando de lado la visión más general. En los sistemas de BD al estar la información centralizada, se hace necesario un punto de vista más general a la hora de diseñar el modelo de datos.</li>
+<li><em>Se reduce el espacio de almacenamiento</em> : al integrar en un solo espacio los datos de varios sistemas aislados y evitar que se repitan, se requiere un menor volumen para almacenar los mismos datos. Por otro lado esto facilita las tareas de realización de copias de seguridad y su recuperación.</li>
+</ul>
+</li>
+<li><strong>Inconvenientes</strong><ul>
+<li>Instalación costosa.</li>
+<li>Necesidad de personal especializado.</li>
+<li>Necesidad de hardware adicional: al ser los requerimientos superiores a los de un sistema tradicional, ya sea en cuanto a memoria, capacidad de proceso, etc.</li>
+<li>El sistema adquiere mayor complejidad: al integrarse dentro del SO un nuevo sistema activo que interacciona con él e influye en la capacidad de responder al usuario.</li>
+<li>Implantación larga y difícil.</li>
+<li>Falta de rentabilidad a corto plazo.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Principales-componentes-de-un-entorno-de-BD"><a href="#Principales-componentes-de-un-entorno-de-BD" class="headerlink" title="Principales componentes de un entorno de BD"></a>Principales componentes de un entorno de BD</h2><p>Ahora vamos a desmenuzar un poco más el concepto de BD, y vamos a describir sus componentes básicos, justificando además la necesidad de cada uno de ellos.</p>
+<h3 id="Datos"><a href="#Datos" class="headerlink" title="Datos"></a>Datos</h3><p>Una BD no tiene sentido sino está compuesta por datos. Lo que no está tan claro es la forma en que estos datos se deben disponer, qué datos se deben almacenar y cómo los debe entender la máquina.</p>
+<p>La disposición de los datos depende del ámbito de aplicación concreto en que se enmarque la BD. No es lo mismo una BD que almacene un dibujo vectorial de monumentos históricos que una BD para almacenar las reservas de clientes en un hotel. Lo que varía fundamentalmente en uno y otro caso, es la forma en que los datos se relacionan entre sí, y el tipo de accesos a la información que va a realizar el usuario. Además, los datos deben disponerse de manera que las consultas sean lo más eficientes posible, evitando a la vez la existencia de datos duplicados que pueden dar al traste con la coherencia de la BD. De esta forma, no sólo se consideran datos aquellos que el usuario desea almacenar, sino toda la estructura de apoyo que el sistema necesite para hacer más eficiente una consulta.</p>
+<p>Los índices son ficheros auxiliares que facilitan el acceso a los datos que se encuentran en el fichero principal de la BD. La gran ventaja de los índices es que el mantenimiento de los mismos lo realiza de forma automática el sistema. De esta forma se obtiene una gran eficiencia en las consultas, sin que el usuario tenga que trabajar más. Pues bien, este fichero aparte, creado con el único objetivo de facilitar el acceso a la información, también lo consideramos datos, aunque deban ser gestionados automáticamente, e incluso algunos usuarios no tengan ni la menor idea de su existencia.</p>
+<p>Por otro lado, es muy importante decidir qué datos se van a almacenar. Hay que encontrar un equilibrio entre las situaciones en las que almacenamos datos de más (históricos muy poco utilizados) y en las que se almacenan datos de menos (guardando los estrictamente necesarios en el momento de definir la BD).</p>
+<p>Por último, también es interesante, por cuestiones de seguridad y aprovechamiento de los recursos, decidir en qué formato se van a almacenar los datos: si se van a almacenar encriptados para que nadie los pueda copiar, o si se van a codificar o a comprimir de alguna forma para hacer que ocupen menos espacio.</p>
+<h3 id="Metadatos"><a href="#Metadatos" class="headerlink" title="Metadatos"></a>Metadatos</h3><p>Desde el momento en que se crea una BD, hasta el momento en que se desecha porque se compra un sistema mejor, o se instala una nueva BD, las estructura de la BD (o sea, los datos que se deciden almacenar, y la estructura con que se almacenan) cambia a medida que cambian las necesidades sobre la información a obtener de la BD.</p>
+<p>Dado que la BD que solucione unas necesidades concretas puede adoptar muchas formas posibles, es muy interesante poseer algún lugar que indique al personal encargado de mantener la BD, cuál es el objetivo de cada dato particular almacenado en la base, así como en qué aplicaciones es utilizado, y con qué propósito, si es un dato fundamental, o si puede ser omitido por el que introduce los datos, etc.</p>
+<p>De esta forma, antes de modificar el esquema o estructura de la BD, el departamento de proceso de datos debe consultar esta información sobre los datos de la base, con cuidado para no cometer errores graves que repercutan sobre el buen funcionamiento de todo el sistema.</p>
+<p>Esta información que el sistema guarda sobre los datos almacenados, es lo que se llaman metadatos, es decir, datos acerca de los datos. Es más, estos metadatos se almacenan en el diccionario de datos o catálogo.</p>
+<h3 id="El-Sistema-Gestor-de-Bases-de-Datos"><a href="#El-Sistema-Gestor-de-Bases-de-Datos" class="headerlink" title="El Sistema Gestor de Bases de Datos"></a>El Sistema Gestor de Bases de Datos</h3><p>En un Sistema de BD, debe existir una capa intermedia entre los datos almacenados enla BD, las aplicaciones y los usuarios del mismo. Se trata del Sistema de Gestión de la BD (SGBD). Actúa de intermediario entre los usuarios y aplicaciones y los datos proporcionando medios para describir, almacenar y manipular los datos, y proporciona herramientas al administrador para gestionar el sistema, entre ellas las herramientas de desarrollo de aplicaciones, generadores de informes, lenguajes específicos de acceso a los datos, como SQL (Structure Query Language) o QBE (Query By Example) en BD relacionales.</p>
+<p>Un SGBD se puede definir como un conjunto coordinado de programas, procedimiento, lenguajes, etc. que suministra, tanto a los usuarios finales como a los analistas, programadores o el administrador, los medios necesarios para describir, recuperar y manipular los datos almacenados en la base, manteniendo su integridad, confidencialidad y seguridad. Entre sus funciones destacan:</p>
+<ul>
+<li><em>Definición y control centralizado de los datos</em> : definición de todos los elementos de datos en la BD en los tres niveles definidos anteriormente (interno, conceptual y externo). Descripción de los datos (campos, grupos, registros, tablas), e interrelaciones entre las diferentes estructuras de datos. La BD es autodescriptiva, es decir, contiene información que describe su estructura (los metadatos).</li>
+<li><em>Manipulación de los datos</em> : suministrar mecanismos que faciliten la interacción con la BD. El SGBD debe ser capaz de atender las solicitudes del usuario para extraer, modificar o añadir datos a la BD. Estos mecanismos suelen venir dados en forma de lenguajes de manipulación y definición de datos. Además, garantizan la independencia de los datos, en el sentido de que, pese a la evolución del esquema de los datos, las aplicaciones deben sufrir las mínimas modificaciones imprescindibles.</li>
+<li><em>La Seguridad y la Integridad</em> : debe proporcionar los medios para definir y gestionar las autorizaciones de acceso, ya sea mediante claves de acceso al sistema o mediante la definición de vistas externas de usuario, para evitar así accesos fraudulentos a los datos. Por otro lado, también proporciona los medios para garantizar la integridad y la consistencia de los datos definiendo (en el diccionario de datos) restricciones sobre los valores que pueden tomar.</li>
+<li><em>Permitir hacer copias de seguridad</em> : proporciona capacidades de recuperación ante fallos y de copia de seguridad.</li>
+<li><em>Garantiza la disponibilidad de la información</em> : permite el acceso simultáneo a los datos por parte de varios usuarios. Debe controlar que la información representada por los datos al final de cada acceso de usuario siga siendo coherente.</li>
+<li><em>Interactuar con el SO</em> : como el SO es el único que puede acceder a los dispositivos de E/S, si el SGBD debe leer o escribir en estos dispositivos debe interactuar con el SO.</li>
+</ul>
+<h3 id="Usuarios-de-la-Base-de-Datos"><a href="#Usuarios-de-la-Base-de-Datos" class="headerlink" title="Usuarios de la Base de Datos"></a>Usuarios de la Base de Datos</h3><p>Las personas que trabajan con una BD se pueden catalogar como usuarios de BD. Podemos clasificar en cuatro clases los usuarios de un sistema de BD:</p>
+<ul>
+<li><em>Usuarios normales</em> : no saben nada de la estructura interna de la BD. Interaccionan con ella a través de las aplicaciones desarrolladas por los programadores, y son incapaces de acceder a los datos directamente a través del lenguaje del SGBD. La interfaz de este tipo de usuarios es una interfaz de formularios, donde el usuario puede rellenar los campos apropiados del formulario.</li>
+<li><em>Programadores de aplicaciones</em> . Reciben peticiones de otros usuarios, para el acceso a los datos, y se encargan de escribir los programas que satisfacen dichas necesidades. Normalmente estos programas están escritos en lenguajes de programación:<ul>
+<li>convencional (Pascal, Basic, C, Cobol, etc.), en el que se insertan órdenes especiales que es capaz de comprender el SGBD. De esta forma el SGBD suministra los datos, y el lenguaje convencional (también llamado anfitrión porque alberga las sentencias reconocidas por el SGBD) los procesa, presenta al usuario, modifica, etc.</li>
+<li>de cuarta generación que combinan estructuras de control imperativo, con instrucciones del lenguaje de manipulación de datos, y además incluyen características especiales para facilitar la generación de formularios y la presentación de datos en pantalla. La mayoría de los sistemas de BD comerciales incluyen un lenguaje de cuarta generación.</li>
+</ul>
+</li>
+<li><em>Usuarios sofisticados</em> : son aquellos que interactúan con la BD sin programas escritos, haciendo uso directamente del lenguaje que proporciona el SGBD. Por ejemplo, SQL.</li>
+<li><em>Usuarios especializados</em> : son usuarios sofisticados que escriben aplicaciones de BD especializadas. Entre estas aplicaciones están los sistemas de diseño asistido por ordenador, sistemas de bases de conocimiento, sistemas expertos etc.</li>
+</ul>
+<p>Finalizamos este apartado con la quinta clase de usuarios de BD. Son los <em>administradores de BD</em> . Usuarios especiales que son los responsables del control general del sistema desde el punto de vista técnico. Entre sus funciones cabe destacar:</p>
+<ul>
+<li>Definir el esquema conceptual, con el lenguaje de Definición de Datos.</li>
+<li>Definir el esquema interno. La estructura de almacenamiento y los métodos de acceso.</li>
+<li>Diseño físico e implementación de la BD.</li>
+<li>Modificar el esquema y la organización física de los datos. Para reflejar las necesidades cambiantes de la organización y para mejorar el rendimiento.</li>
+<li>Establecer las restricciones de seguridad, integridad y confidencialidad. Concesión de permisos y privilegios para el acceso a los datos.</li>
+<li>Definir los procedimientos de copia de seguridad y recuperación.</li>
+<li>Supervisar el rendimiento del sistema y responder a los cambios en los requerimientos.</li>
+</ul>
+<h3 id="Elementos-de-seguridad"><a href="#Elementos-de-seguridad" class="headerlink" title="Elementos de seguridad"></a>Elementos de seguridad</h3><p>El administrador debe conocer en profundidad los elementos de seguridad que suministra el SGBD y sacar el máximo partido posible de ellos. En general, se pueden tener niveles de acceso clasificados por:</p>
+<ul>
+<li>La información a que se tiene acceso. En una empresa grande y ampliamente informatizada, cada usuario debe poder acceder exclusivamente a los datos que competen a su tarea. Por tanto, debe existir un mecanismo de seguridad que restrinja el ámbito de acceso de cada usuario en función de sus competencias.</li>
+<li>Las operaciones que se pueden realizar sobre la información. No sólo es importante el acceder o no a los datos, sino también la forma en que este acceso se produce, en función de las características propias de la sección. En general, las operaciones que se pueden efectuar se agrupan en cuatro grandes bloques: Altas, Bajas, Modificaciones y Consultas.</li>
+<li>El acceso al diccionario de datos y a la estructura de la BD. Como se ha comentado anteriormente, los metadatos almacenados en el diccionario de datos y que almacenan información sobre la estructura de la BD, son gestionados, a su vez, como si de una BD especial se tratase. Sin embargo, dada su primordial importancia, su acceso debe estar muy restringido, ya que cualquier modificación puede dar lugar a resultados desastrosos en la BD: pérdida de información, corrupción en los datos, falta de integridad, etc. Por ello, es necesaria la existencia de prioridades o privilegios especiales que sólo permitan el acceso al personal que compone la administración de la BD, que es el único capacitado para modificar estos metadatos.</li>
+</ul>
+<h3 id="Lenguajes-de-Bases-de-Datos"><a href="#Lenguajes-de-Bases-de-Datos" class="headerlink" title="Lenguajes de Bases de Datos"></a>Lenguajes de Bases de Datos</h3><p>La interacción del usuario con la BD debe efectuarse a través de alguna técnica que haga fácil la comunicación, y que permita al usuario centrarse en el problema que desea solucionar, más que en la forma de expresarlo con las técnicas que se le suministran. La mejor forma de alcanzar este objetivo, es darle un lenguaje parecido al lenguaje natural, que le permita expresar de forma sencilla los requerimientos.</p>
+<p>En función de estos requerimientos, podemos tener, fundamentalmente dos tipos de lenguajes para comunicarnos con el SGBD:</p>
+<ul>
+<li><em>Lenguaje de definición de datos (LDD)</em> . Este lenguaje es utilizado en exclusiva por el administrador de la BD, ya que permite la construcción de sentencias que le indican al SGBD las características particulares de la BD sobre la que se está trabajando, así como la creación de nuevas BD. La creación de esquemas y su modificación, la creación y supresión de índices, la especificación de unidades de almacenamiento en los ficheros, etc.</li>
+<li><em>Lenguaje de manipulación de datos (LMD).</em> El lenguaje de manipulación de datos es el que usan los usuarios sofisticados para efectuar sus operaciones sobre la BD. Como se indicó, estas operaciones son básicamente de inserción, eliminación, modificación y consulta de datos, aunque también se pueden introducir capacidades para crear vistas de los datos que faciliten otros accesos. Los usuarios sofisticados interaccionan con el SGBD a través de este lenguaje, mediante una interfaz agradable y fácil de usar. Los programadores de aplicaciones emplean el LMD dentro de un lenguaje de programación que les da potencia expresiva. Para ello, el LMD que emplean se extiende de diferentes formas para poderse integrar fácilmente en el lenguaje anfitrión, ya que ambos, LMD y lenguaje anfitrión deben poderse comunicar adecuadamente para que las aplicaciones resultantes sean simples de programar y de utilizar.</li>
+</ul>
+<h2 id="Utilizacion-de-la-Base-de-Datos-en-la-Organizacion"><a href="#Utilizacion-de-la-Base-de-Datos-en-la-Organizacion" class="headerlink" title="Utilización de la Base de Datos en la Organización"></a>Utilización de la Base de Datos en la Organización</h2><p>Las BD son ampliamente usadas en multitud de aplicaciones: Banca, Líneas aéreas, Universidades, Telecomunicaciones, Ventas, Recursos Humanos, etc. Esto significa que las BD forman una parte esencial de las empresas actuales.</p>
+<h3 id="Sistema-de-informacion-en-una-organizacion-Componentes"><a href="#Sistema-de-informacion-en-una-organizacion-Componentes" class="headerlink" title="Sistema de información en una organización. Componentes."></a>Sistema de información en una organización. Componentes.</h3><p><strong>Concepto de Sistema de información</strong></p>
+<p>Toda organización necesita para su funcionamiento un conjunto de informaciones que han de transmitirse entre sus diferentes elementos, así como desde y hacia el exterior de la propia organización. Un sistema de información se diseña con el fin de satisfacer las necesidades de información de una organización, en la que está inmerso. El sistema de información toma datos del entorno (tanto de la organización, como de las fuentes externas) y los resultados de las operaciones sobre esos datos serán la información que dicha organización necesita para su gestión y toma de decisiones.</p>
+<p><strong>Componentes de un sistema de información</strong></p>
+<ul>
+<li>Contenido: (Datos: hechos conocidos con significado implícito que pueden ser almacenados). Es el centro del sistema de información. Los datos contenidos en un sistema de información pueden ser:<ul>
+<li>de tipo referencial: son aquellos que contienen información acerca de donde se encuentra la información buscada.</li>
+<li>de tipo factual: son aquellos que contienen la información en sí. A su vez pueden ser: estructurados y no estructurados.</li>
+</ul>
+</li>
+<li>Equipo físico. Ordenadores y periféricos.</li>
+<li>Soporte Lógico. Incluye todo el software necesario para la implantación del sistema de información: SO, Sistemas de BD, software de comunicaciones y otros programas para tratamientos específicos.</li>
+<li>Administrador. Los datos y las informaciones manejadas por nuestro sistema de información han de ser gestionadas por las personas adecuadas. Tendremos, por un lado los responsables de tomar las decisiones estratégicas y políticas con respecto a la información de la empresa y por otro los responsables de dar apoyo técnico para poner en práctica estas decisiones.</li>
+</ul>
+<h3 id="Niveles-de-gestion-y-de-usuarios-en-una-organizacion"><a href="#Niveles-de-gestion-y-de-usuarios-en-una-organizacion" class="headerlink" title="Niveles de gestión y de usuarios en una organización"></a>Niveles de gestión y de usuarios en una organización</h3><p>En toda organización hay tres niveles de gestión (operacional, táctico y estratégico) y el sistema de información debe diseñarse para satisfacer las necesidades y facilitar informaciones adecuadas a cada uno de los niveles.</p>
+<p>En el nivel operacional, los usuarios manejan datos elementales que describen los sucesos que caracterizan las actividades de la organización. Esta información, compuesta por datos totalmente desagregados (microdatos) es necesaria para los procesos comúnmente denominados administrativos (tareas diarias y de rutina) y el volumen de datos manejado será muy grande. En este nivel situamos a los llamados sistemas transaccionales.</p>
+<p>En el nivel táctico se definen los objetivos específicos y el control de gestión. En el nivel estratégico se definen los objetivos generales y la elaboración de planes. En los niveles táctico y estratégico, cuyos usuarios tienen necesidades de información muy distintas, obtendrán del nivel anterior (operacional), mediante procesos de elaboración adecuados (generalmente de agregación) junto con datos provenientes el exterior, las informaciones necesarias para la ayuda a la decisión.</p>
+<p>Junto con estos niveles de gestión también se pueden distinguir 3 niveles de usuarios: personal, mandos intermedios y ejecutivos. Estos niveles se corresponden con los 3 diferentes tipos de automatización de los sistemas de negocios:</p>
+<ul>
+<li>Los PED (Procesamiento Electrónico de Datos) o DP (Data Processing) que tienen el foco de atención en el nivel operativo de almacenamiento, procesamiento y flujo de los datos, así como procesar eficientemente las transacciones y realizar informes resúmenes para los dirigentes. Típicamente el enfoque DP se usa para transformar un conjunto de datos “brutos” en la siguiente información:<ul>
+<li>Estadística (Ejemplo: Números que representan la media, la moda y la varianza de los datos).</li>
+<li>Representaciones gráficas (Ejemplo: Histogramas, Diagramas de barras, Diagramas de pastes, etc).</li>
+</ul>
+</li>
+<li>Los SIG (Sistemas de Información de Gestión) o MIS (Management Information Systems) que se caracterizan porque su foco de atención está en la información orientada a mandos intermedios, por la integración de las tareas de PED, por sus funciones en los negocios y por la generación de informes.</li>
+<li>Los STD (Sistema de Apoyo a la Toma de Decisiones) o DSS (Decision Support Systems), más centrados en la decisión y orientados a los altos ejecutivos.</li>
+</ul>
+<p>Por otro lado los datos provenientes del nivel operacional almacenados en bases de datos, así como en otros soportes, pueden estar organizados en almacenes de datos (Data Warehouses) que sirven de base para la extracción y el descubrimiento de conocimiento en BD (KDD, Knowledge Discovering inDatabases) y para la minería de datos (Data Mining).</p>
+<h2 id="Los-sistemas-transaccionales-PED"><a href="#Los-sistemas-transaccionales-PED" class="headerlink" title="Los sistemas transaccionales (PED)"></a>Los sistemas transaccionales (PED)</h2><h3 id="Concepto-de-transaccion-bajo-un-sistema-de-BBDD"><a href="#Concepto-de-transaccion-bajo-un-sistema-de-BBDD" class="headerlink" title="Concepto de transacción bajo un sistema de BBDD"></a>Concepto de transacción bajo un sistema de BBDD</h3><p>Uno de los problemas más complejos que se plantea en los sistemas de BD es garantizar la consistencia de la base de datos a pesar de los fallos del sistema de la ejecución concurrente. Para dar solución a los problemas de recuperación y concurrencia, se introduce el concepto de transacción.</p>
+<p>Una transacción es una secuencia de operaciones llevadas a cabo como una unidad lógica de trabajo simple. Para asegurar la integridad de los datos se necesita que el sistema de base de datos mantenga las siguientes propiedades de las transacciones:</p>
+<ul>
+<li><em>Atomicidad</em> : Una transacción debe ser una unidad atómica de trabajo o todas sus operaciones se llevan a cabo o no se realiza ninguna de ellas.</li>
+<li><em>Consistencia</em> : Cuando termina, una transacción debe dejar la BD en un estado consistente (suponiendo que está ejecutándose de forma aislada, sin otras transacciones concurrentes). Asegurar la consistencia es responsabilidad de los mecanismos de control de concurrencia.</li>
+<li><em>Aislamiento</em> : Las modificaciones realizadas por una transacción deben aislarse de las modificaciones llevadas a cabo por otras posibles transacciones concurrentes. Una transacción debe ver los datos en el estado en el que estaban antes de que cualquier otra transacción concurrente los modificara o bien los ve tras su modificación, pero nunca en un estado intermedio. El aislamiento es una propiedad de las transacciones por lo cual una transacción ve en todo momento la BD en un estado consistente. Una transacción en ejecución no hace visibles sus datos a otras transacciones concurrentes hasta que no termina y hace permanentes sus cambios.</li>
+<li><em>Durabilidad</em> : Una vez que la transacción ha terminado con éxito, sus efectos deben hacerse permanentes en la BD. Las modificaciones deben persistir incluso en caso de fallo del sistema. El SGBD garantiza que los resultados de las transacciones terminadas sobrevivan a fallos posteriores del sistema.</li>
+</ul>
+<p>Suele referirse a estas propiedades como <strong>ACID</strong> , por sus siglas en inglés (Atomicity, Consitency, Isolation, Durability). Es frecuente también encontrar referencias a la “acidity” de una transacción.</p>
+<p>Los programadores son los responsables de establecer el inicio y el final de cada transacción en puntos que hagan cumplir la consistencia lógica de los datos.</p>
+<p>Es responsabilidad de SGBD proporcionar los mecanismos que garanticen la integridad física de cada transacción, aquí destacamos:</p>
+<ul>
+<li>Facilidades que protejan el aislamiento de las transacciones.</li>
+<li>Facilidades de registro que aseguren la durabilidad de las transacciones. Si la ejecución de la transacción es interrumpida por cualquier tipo de fallo, el SGBD es el responsable de determinar qué hacer con la transacción una vez recuperado del fallo:<ul>
+<li>Terminar la transacción (hacer lo que queda por hacer).</li>
+<li>Abortarla (deshacer lo que se haya hecho)</li>
+</ul>
+</li>
+<li>Características de gestión de transacciones que garantizan la atomicidad y la consistencia de las transacciones. Una vez que la transacción ha comenzado, esta debe ser completada con éxito o el gestor deshace todas las modificaciones de datos realizadas por esta desde el comienzo de la transacción.</li>
+</ul>
+<h3 id="Transacciones-y-procesamiento-multiusuario"><a href="#Transacciones-y-procesamiento-multiusuario" class="headerlink" title="Transacciones y procesamiento multiusuario"></a>Transacciones y procesamiento multiusuario</h3><p>Cuando dos o más usuarios acceden concurrentemente a una BD, el procesamiento de transacciones adquiere una nueva dimensión. Ahora el SGBD no solo debe recuperarse adecuadamente de los fallos del sistema sino que también debe asegurar que las operaciones de los usuarios o aplicaciones no interfieran unas con otras.</p>
+<p>Idealmente, cada usuario debería poder acceder a la BD como si tuviera acceso exclusivo a ella, sin preocuparse de las acciones del resto de los usuarios. Esto se logra mediante diferentes mecanismos que se conocen como esquemas de control de concurrencia.</p>
+<h3 id="Sistemas-OLTP-Caracteristicas"><a href="#Sistemas-OLTP-Caracteristicas" class="headerlink" title="Sistemas OLTP. Características."></a>Sistemas OLTP. Características.</h3><p>Para cualquier organización actual, la captura de datos sobre sus operaciones diarias es indispensable para su funcionamiento continuado, por lo que el almacenamiento sistemático de transacciones es una actividad común en el día a día. Los sistemas que se utilizan con tal fin son los llamados OLTP (On-Line Transaction Processing) y suelen estar constituidos por BD y sistemas on-line optimizados para la inserción de grandes volúmenes de registros, habitualmente recogidos de uno en uno. En adelante, denominaremos a los datos así recogidos como datos operativos, para distinguirlos de los que se guardan en los almacenes de datos.</p>
+<p>En principio, la información necesaria para la gestión corporativa se podría extraer de estos sistemas y sus BD asociadas. No obstante, los sistemas OLTP tienen características que hacen que esa solución no sea la más adecuada:</p>
+<ul>
+<li><em>Heterogeneidad</em> : viene producida por la cantidad de fuentes de las que proceden los datos operativos y se manifiesta en la falta de consistencia a la hora de elegir formatos de representación, la aparición de registros redundantes, erróneos, contradictorios o, simplemente, inútiles para la extracción de información.</li>
+<li><em>Falta de organización</em> : es un producto tanto de la necesidad de efectuar el almacenamiento de forma rápida, para que no se produzcan cuellos de botella en los tiempos de respuesta de sistema, como de la dispersión de los sistemas en que se almacenan estos datos diarios. Esto conduce a que, de forma natural, los datos queden almacenados atendiendo a criterios geográficos (donde se recogen) y de transacción (que operación los produjo).</li>
+<li><em>Inadecuación para dar respuesta a consultas complejas</em> : esto se debe a que las BD utilizadas están optimizadas para ofrecer grandes rendimientos en las operaciones de inserción y actualización, tanto en velocidad como en volumen. Para lograr este objetivo suelen tener un nivel de redundancia muy bajo, es decir, que distribuyen la información en gran número de tabla relacionadas entre si y con un mínimo de información agregada o precalculada. Esta organización de las tablas, útil en BD que van a estar sufriendo constantes actualizaciones, se convierte en un obstáculo para realizar consultas complejas, ya que al estar la información dispersa entre múltiples tablas, la recuperación de la información requiere una gran cantidad de operaciones de unión natural (join), costosas tanto en recursos de máquina como en tiempo. Además, realizar una consulta compleja, cuya respuesta va a demandar gran cantidad de recursos por parte de la máquina OLTP, producirá un impacto negativo en la capacidad de procesamiento y almacenaje de nuevas transacciones. Dado el número suficiente de usuarios y consultas concurrentes de este tipo, puede suceder incluso que se inutilice el sistema. Por supuesto, el hecho mismo de que sigan llegando sin cesar nuevos registros mientras se realiza la consulta implica que sus resultados no va a ser todo lo fiables que sería de desear.</li>
+</ul>
+<p>Por estos motivos, trabajar sobre las BD operativas, que utilizan para llevar el día a día,no es la forma más eficaz de extraer información útil para la toma de decisiones, tanto por los errores que se pueden producir al tratar con datos dispersos y sin limpiar, como por la repercusión que podría tener sobre el rendimiento del sistema el trabajar directamente sobre los equipos que se usan para recoger transacciones on-line, vitales para el funcionamiento de la organización.</p>
+<h2 id="Sistemas-de-Informacion-de-Gestion-MIS"><a href="#Sistemas-de-Informacion-de-Gestion-MIS" class="headerlink" title="Sistemas de Información de Gestión (MIS)"></a>Sistemas de Información de Gestión (MIS)</h2><h3 id="¿Que-es-un-M-I-S"><a href="#¿Que-es-un-M-I-S" class="headerlink" title="¿Qué es un M.I.S.?"></a>¿Qué es un M.I.S.?</h3><p>Existen varias definiciones, veamos dos de ellas:</p>
+<ul>
+<li>Conjunto de medios para reunir los datos necesarios para la gestión y difundir la información obtenida con el tratamiento de estos datos.</li>
+<li>Proceso por el que los datos importantes para la empresa son identificados, analizados, recolectados y puestos a su disposición.</li>
+</ul>
+<p>De estas definiciones se deduce que el primer objetivo de un sistema de gestión es incrementar la “inteligencia” de los procesos del negocio y el conocimiento de los trabajadores implicados en estos procesos.</p>
+<h3 id="Un-poco-de-historia-Antecedentes"><a href="#Un-poco-de-historia-Antecedentes" class="headerlink" title="Un poco de historia. Antecedentes."></a>Un poco de historia. Antecedentes.</h3><ul>
+<li>En los primeros días de los sistemas de información vieron la luz las aplicaciones. Su diseño estaba marcado por las necesidades puntuales del día a día de diferentes departamentos. La integración entre ellas no era un objetivo.</li>
+<li>Pronto dio comienzo el mantenimiento de esas aplicaciones. Las aplicaciones necesitaban cambios por muchas razones: nuevos requisitos, cambios en el negocio, nuevas oportunidades.</li>
+<li>Al mismo tiempo que comenzaba el mantenimiento surgía la necesidad de extraer más información de estas aplicaciones. El primer intento para satisfacer esta necesidad fue la escritura de programas que listasen informes.</li>
+<li>La primera limitación de estos listados es que accedían a una única aplicación. Hubo que definir interfaces entre las aplicaciones para que pudiesen compartir datos entre ellas.</li>
+<li>La segunda limitación es que los informes había que modificarlos de forma constante.</li>
+<li>Se introdujeron herramientas 4GL para poder escribir y modificar informes a gran velocidad. Listaban muchos más informes, pero con los mismos problemas de antes. Se introducen entonces herramientas de extracción.</li>
+<li>Surge el PC. Con las herramientas de extracción los usuarios ya pueden acceder y manipular directamente la información. A medida que aumentaba la potencia de los PCs aumentaba el volumen de los datos almacenados en ellos. Luego las redes, …</li>
+<li>Aquí llegados los usuarios padecen la misma falta de integración, consistencia, coherencia y las mismas limitaciones que antes de la llegada del PC. Pero esto no trae como consecuencia que decrezca la demanda de información, al contrario, ésta siempre crece.</li>
+</ul>
+<h3 id="Un-cambio-en-la-arquitectura"><a href="#Un-cambio-en-la-arquitectura" class="headerlink" title="Un cambio en la arquitectura"></a>Un cambio en la arquitectura</h3><ul>
+<li>El corazón del problema es que las aplicaciones están profundamente marcadas por las primeras consideraciones que dirigieron su desarrollo: las necesidades departamentales enfocadas sobre las necesidades del día a día.</li>
+<li>La arquitectura sobre la que se construyeron estas aplicaciones (OLTP) no es válida para soportar las necesidades de los sistemas de información de gestión actuales.</li>
+<li>En estos sistemas la arquitectura de datos nunca fue un objetivo del negocio. La complejidad y dinamismo de la “economía digital” ha colocado en un lugar predominante la habilidad de los gestores para ver lo que está ocurriendo, desvelando las dificultades de acceso a la información de la empresa.</li>
+<li>Es en este momento cuando la calidad y disponibilidad de la información se convierte en un objetivo primordial del negocio.</li>
+<li>¿Cómo compensar la carencia de una arquitectura de datos?</li>
+<li>Creando una gran BD virtual para integrar los datos de las aplicaciones existentes, que pasarán a formar parte de esta BD una vez que hayan sido depurados y reconciliadas sus disparidades. Esto posibilitará que los datos sean utilizados para la gestión.</li>
+<li>La solución pasa por separar el procesamiento en dos grandes categorías:<ul>
+<li>Proceso operacional OLTP</li>
+<li>Procesamiento para el sistema de soporte de decisiones (DSS/OLAP)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Puesta-en-marcha-del-M-I-S-dentro-de-la-organizacion"><a href="#Puesta-en-marcha-del-M-I-S-dentro-de-la-organizacion" class="headerlink" title="Puesta en marcha del M.I.S. dentro de la organización"></a>Puesta en marcha del M.I.S. dentro de la organización</h3><p>La implementación consiste, en una primera fase, en el análisis de las necesidades de información a las que desea acceder cada empresa. Para ello se integrarán en el sistema todos aquellos datos operacionales necesarios, además de otras fuentes de información que sea necesario incorporar.</p>
+<p>Definida la estructura de las BD se procederá a la carga de la información y se crearán las agregaciones de datos para mejorar el rendimiento del sistema en los procesos de consulta más habituales.</p>
+<p>Finalmente, se incluirán en el sistema los procedimientos que permitan la actualización de la información, cuya periodicidad dependerá de las necesidades de cada usuario.</p>
+<h2 id="Sistemas-de-soporte-a-la-decision-DSS"><a href="#Sistemas-de-soporte-a-la-decision-DSS" class="headerlink" title="Sistemas de soporte a la decisión (DSS)"></a>Sistemas de soporte a la decisión (DSS)</h2><p>Como ya se comentó, los STD (Sistema de Apoyo a la Toma de Decisiones) o DSS (Decision Support Systems), están más centrados en la decisión y orientados a los altos ejecutivos. Las BD que soportan estos sistemas son de gran tamaño y pueden resultar minas de información para adoptar decisiones empresariales, como los artículos que debe haber en inventario y los descuentos que hay que ofrecer.</p>
+<p>La utilización de Sistemas de Soporte a la Decisión (DSS) es muy adecuada para afrontar una variedad de situaciones al interactuar: interfaces de usuarios, que hacen que dichos sistemas se adecuen a las necesidades de los usuarios; BD, que incluyen toda la información necesaria; y finalmente; procesos de decisión que ayudan al experto en la difícil tarea de establecer posibles soluciones.</p>
+<p>Se puede definir DSS como “programas informáticos interactivos que utilizan métodos analíticos, tales como análisis de decisión, algoritmos de optimización, programas de planificación de rutinas, etc., para el desarrollo de modelos ayudando a los creadores de decisión a formular alternativas, analizar sus impactos, e interpretar y seleccionar opciones apropiadas para la implementación”.</p>
+<p>Los sistemas de soporte a la decisión pueden considerarse como una tercera generación de aplicaciones asistidas por ordenador. Al principio, los ordenadores mainframe fueron usados mayormente para el procesamiento de transacciones. Durante los años 70 y 80, el concepto de DSS creció y se desarrolló en los campos de búsqueda, desarrollo y práctica.</p>
+<p>Los Sistemas de Información de Gestión (MIS) suministraron:</p>
+<ul>
+<li>Informes planificados para desarrollar bien las necesidades de información</li>
+<li>Informes de demandas para la información específica solicitada</li>
+<li>Habilidad para consultaren una BD, datos específicos</li>
+</ul>
+<p>Los MIS carecían de algunos de los atributos necesarios para soportar la creación de decisión. Atributos tales como, enfoque, metodología de desarrollo, manejo de gestión de datos, uso de ayuda analítica, y diálogo entre el usuario y el sistema. El DSS se extendió y combinó la tecnología de la BD y la tecnología de modelado dando a los usuarios finales acceso a ellos. Los datos y modelos se unieron íntimamente junto con el usuario.</p>
+<h3 id="Arquitectura-del-DSS"><a href="#Arquitectura-del-DSS" class="headerlink" title="Arquitectura del DSS"></a>Arquitectura del DSS</h3><p>Una manera útil de pensar en las partes de los componentes de un DSS y las relaciones entre las partes está en utilizar el diálogo, los datos, y el modelo (DDM). En esta conceptualización, hay un diálogo (D) entre el usuario y el sistema, los datos (D) que soporta el sistema, y los modelos (M) que suministra el análisis de las capacidades. Estudiamos ahora con más detalle cada una de estas partes.</p>
+<p><strong>El componente de Diálogo (D)</strong></p>
+<p>Una apreciación de la importancia del componente de diálogo se obtiene reconociendo que desde la perspectiva del usuario, el diálogo es el sistema. Lo importante es lo que el usuario debe conocer para usar el sistema, las opciones para dirigir las acciones del sistema, y las presentaciones alternativas de las respuestas del sistema. Dentro del componente diálogo destacan:</p>
+<ul>
+<li><em>La Base de Conocimiento</em> . La base de conocimiento incluye lo que el usuario conoce acerca de la decisión y acerca de cómo usar el DSS.</li>
+<li><em>El Lenguaje de acción</em> . Las acciones que el usuario realiza para controlar el DSS se describen de varias formas, dependiendo del diseño del sistema.</li>
+<li><em>El Lenguaje de Presentación</em> . El PC o la estación de trabajo usada en una base autónoma, como una unidad en la red de área local, o como un terminal inteligente conectado a un mainframe tiene una significativa expansión y mejora la salida desde que está presente un DSS. Una de las mayores contribuciones del PC es su capacidad de presentación de gráficos.</li>
+<li><em>Estilos de Diálogo</em> . Las combinaciones o conjuntos de opciones para implantar la base de conocimiento, el lenguaje de acción, y el lenguaje de presentación, tomados a la vez, son llamados “estilo de diálogo”.</li>
+</ul>
+<p><strong>El componente de Datos (D)</strong></p>
+<p>Los datos juegan un papel importante en el DSS: se acceden directamente por el usuario o son una entrada para el procesamiento de los modelos. El componente de datos es manejado en:</p>
+<ul>
+<li><em>Las Fuentes de Datos</em> . Mientras ha crecido la importancia del DSS, llega a ser cada vez más crítico para el DSS utilizar todas las fuentes de datos importantes dentro de la organización, y también desde fuentes externas. Desde luego, el concepto de fuentes de datos debe expandirse para incluir documentos que contienen conceptos, ideas, y opiniones que son muy importantes para crear la decisión.</li>
+<li><em>Los Almacenes de Datos</em> . Las BD separadas para aplicaciones de apoyo a la decisión se están desarrollando mediante la creación de almacenes de datos. Estas son BD especiales que están diseñadas para permitir a los creadores de decisión hacer sus propios análisis. También se conocen a veces como BD de información. Es un típico almacén de datos, los datos que se necesitan primero se extraen del mainframe y de otras BD. Con anterioridad a ponerlos en el almacén de datos, los datos se procesan (es decir, “se limpian”) para hacerlos más útiles para el apoyo a la decisión. Entonces los datos son mantenidos por un servidor de BD. Los administradores hacen los análisis de apoyo a la decisión, utilizando el comúnmente conocido como procesamiento analítico en línea (OLAP).</li>
+</ul>
+<p><strong>El componente Modelo (M)</strong></p>
+<p>El modelo suministra las capacidades de análisis para un DSS. Hay muchos tipos diferentes de modelos y varias formas en las que se pueden catalogar. Se pueden hacer distinciones importantes en base a su propósito, tratamiento de aleatoriedad, y por su aplicación o uso:</p>
+<ul>
+<li>El propósito de un modelo puede ser o la optimización o la descripción. El modelo de optimización es uno que busca identificar puntos de maximización o minimización. Un modelo descriptivo describe el comportamiento del sistema. Pero un modelo descriptivo sólo describe el comportamiento del sistema; no suiere perfeccionar las condiciones.</li>
+<li>Con respecto a la aleatoriedad, casi todos los sistemas son probabilísticos. Esto es, que el comportamiento del sistema no se puede predecir con seguridad porque se presenta un grado de aleatoriedad. Aunque la mayoría de los sistemas son probabilísticos, la mayoría de los modelos matemáticos son deterministas.</li>
+<li>Según para que se emplean existe una variedad de modelos, tales como:<ul>
+<li>Los modelos estratégicos los usan los directivos para ayudar a determinar los objetivos de la organización, los recursos que se necesitan para cumplir sus objetivos, y las políticas que rigen la adquisición, el uso y la disposición de estos recursos.</li>
+<li>Los modelo tácticos comúnmente son empleados para la gestión media para ayudar a atribuir y controlar el uso de los recursos de la organización.</li>
+<li>Los modelos operacionales normalmente son para soportar decisiones de términos pequeños (es decir, diariamente, semanalmente) usualmente encontrados en niveles organizativos inferiores.</li>
+</ul>
+</li>
+</ul>
+<h3 id="El-area-de-ayuda-a-la-toma-de-decisiones"><a href="#El-area-de-ayuda-a-la-toma-de-decisiones" class="headerlink" title="El área de ayuda a la toma de decisiones"></a>El área de ayuda a la toma de decisiones</h3><p>Dentro de una organización el área de ayuda a la toma de decisiones puede abarcar a su vez todas o algunas de las áreas que se muestran a continuación:</p>
+<ul>
+<li>El área de procesamiento analítico en línea (Online Analytical Processing, OLAP) trata de las herramientas y las técnicas para el análisis de los datos que pueden dar respuestas casi instantáneas a las consultas que soliciten datos resumidos, aunque la BD sea extremadamente grande.</li>
+<li>El campo del análisis estadístico, también se incluye en la ayuda a la toma de decisiones. Los lenguajes de consulta de BD no resultan adecuados para el rendimiento de los análisis estadísticos detallado de los datos. Se han creado una serie de paquetes que ayudan en el análisis estadístico. A estos paquetes se les ha añadido interfaces con las BD para permitir que se almacenen en la BD grandes volúmenes de datos y se recuperen de forma eficiente para su análisis.</li>
+<li>Las técnicas de búsqueda de información intentan descubrir de manera automática las reglas y las pautas estadísticas de los datos. El campo de la minería de datos combina las técnicas de búsqueda de la información creadas por los investigadores en inteligencia artificial y los expertos en análisis estadísticos con las técnicas de implantación eficiente que permiten utilizarlas en BD muy grandes.</li>
+<li>Las grandes empresas tienen varios orígenes de datos que necesitan utilizar para adoptar decisiones empresariales. Para ejecutar de manera eficiente las consultas sobre datos tan diferentes, las empresas han creado los almacenes de datos. Los almacenes de datos reúnen los datos de varios orígenes bajo un esquema unificado en un solo sitio. Por tanto, ofrecen al usuario una sola interfaz uniforme para los datos.</li>
+</ul>
+<h3 id="Ventajas-y-desventajas-de-usar-DSS"><a href="#Ventajas-y-desventajas-de-usar-DSS" class="headerlink" title="Ventajas y desventajas de usar DSS"></a>Ventajas y desventajas de usar DSS</h3><ul>
+<li><strong>Ventajas</strong><ul>
+<li>Aumento en el número de alternativas examinadas.</li>
+<li>Mejor entendimiento del sistema.</li>
+<li>Respuesta rápida a situaciones inesperadas.</li>
+<li>Capacidad para efectuar análisis específico.</li>
+<li>Comunicación mejorada.</li>
+<li>Control y Ahorro de costes.</li>
+<li>Mejores decisiones.</li>
+<li>Ahorro de tiempo.</li>
+<li>Mejor uso de elaboración de recursos informáticos.</li>
+</ul>
+</li>
+<li><strong>Desventajas</strong><ul>
+<li>Alto coste de adquisición y mantenimiento.</li>
+<li>Para pequeños volúmenes de información no son rentables.</li>
+<li>Alto grado de sofisticación requerido; tiene algo grado de incertidumbre y potencial para el error.</li>
+<li>El DSS no es un experto, sólo comunica a los usuarios los resultados de suposiciones y modelos correspondientes de sus constructores a problemas actuales.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Almacenes-de-Datos-Data-Warehouse"><a href="#Almacenes-de-Datos-Data-Warehouse" class="headerlink" title="Almacenes de Datos (Data Warehouse)"></a>Almacenes de Datos (Data Warehouse)</h2><p>Ya se ha comentado que tanto los Sistemas de Soporte a la Decisión (DSS), como los Sistemas de Información de Gestión (MIS), presentan problemas para recuperar datos de las BD operacionales. Para lograr la integración de estos tipos de sistemas se deberá contar con un repositorio de datos preparado para tal fin. Este repositorio se creará bajo las características de un Data Warehouse (DW). El DW, convertirá entonces los datos operacionales en una herramienta competitiva, por hacerlos disponibles a los usuarios que lo necesiten para el análisis y toma de decisiones. Una vez definido el DW se implementarán las aplicaciones de acceso a los datos, estas aplicaciones están determinadas por las características nombradas en los sistemas MIS y DSS.</p>
+<h3 id="Concepto-de-Almacen-de-Datos"><a href="#Concepto-de-Almacen-de-Datos" class="headerlink" title="Concepto de Almacén de Datos"></a>Concepto de Almacén de Datos</h3><p>La tecnología de los almacenes de datos “Data Warehouse”, se encuentra dentro de la línea de evolución de las BD hacia una mayor funcionalidad e inteligencia. Las empresas actuales han visto aumentada su capacidad de generar y recoger datos (introducción de internet en las empresas, tecnologías de entrada de datos …). Estas grandes cantidades de datos (obtenidas a un coste relativamente bajo) no aportan, en principio, información a las organizaciones. Ante esta situación se puede llegar a la siguiente conclusión: “Una organización puede ser rica en datos y pobre en información, si no sabe como identificar, resumir y categorizar los datos”.</p>
+<p>Los encargados de adoptar las decisiones empresariales necesitan tener acceso a la información de todas las fuentes que contienen datos relevantes de la empresa. La formulación de consultas a cada una de las fuentes es a la vez engorrosa e ineficiente. Además, puede que los orígenes de datos solo almacenen los datos actuales, mientras que es posible que los encargados de adoptar las decisiones empresariales necesiten tener acceso también a datos anteriores. Los almacenes de datos proporcionan una solución a estos problemas.</p>
+<p>El almacén de datos pretende dar un soporte a la organización para proporcionarle una buena gestión de sus datos, que le ayude en la toma de decisiones estratégicas y tácticas.</p>
+<p><strong>Antecedentes de los Almacenes de Datos</strong></p>
+<p>A finales de los 80 aparece el DRI (Diccionario de recursos de información), cuyos antecedentes son:</p>
+<ul>
+<li>Directorio de datos: Componente del SGBD encargado de describir donde y como se almacenan los datos, y modo de acceder a los datos contenidos en la BD.</li>
+<li>Diccionario de datos: Reúne la información sobre los datos almacenados para que los usuarios comprendan su significado.</li>
+<li>Diccionario / Directorio de datos: Que aúna las dos tareas anteriores.</li>
+<li>Enciclopedia o Repositorio: Donde se almacenan los datos generados durante el ciclo de vida de un SI (Sistema de Información): esquemas, información relativa a la gestión de proyectos, etc.</li>
+<li>Diccionario de recursos de información: Engloba las capacidades y funciones de todos los “almacenes” de datos anteriores. Pretende ser el corazón de toda arquitectura de información de la empresa, sirviendo de soporte para la integración de sistemas.</li>
+</ul>
+<p>Los almacenes de datos recogen la herencia de los DRI con algunos matices derivados de la nueva tecnología y de la experiencia.</p>
+<p><strong>¿Qué es un Data Warehouse?</strong></p>
+<p>Vamos a dar varias definiciones, para entender mejor lo que es un almacén de datos:</p>
+<ul>
+<li>Depósitos de información reunida de varios orígenes, almacenada bajo un esquema unificado en un solo sitio. Una vez reunida, los datos se almacenan mucho tiempo, lo que permite el acceso a datos históricos. Así, los almacenes de datos proporcionan a los usuarios una sola interfaz consolidada con los datos, lo que hace más fáciles de escribir las consultas de ayuda a la toma de decisiones.</li>
+<li>Un Data Warehouse (DW a partir de ahora) es una nueva arquitectura informática para dar soporte a la obtención de información relevante. Combina potentes herramientas de modelado multidimensional con herramientas de acceso a BD, contribuyendo, no sólo a mostrar los hechos (datos), sino a comprender las causas de los hechos.</li>
+<li>Un DW es la creación de una vista lógica unificada de los datos, aún cuando estos estén dispersos entre varias BD físicas, para así disponer de un único modelo de trabajo de los datos de la organización.</li>
+<li>Se puede considerar un DW como un repositorio lógico central (aunque los componentes físicos pueden estar distribuidos), que almacena los datos de la organización a diferentes niveles (desde el más bajo del dato puro hasta los niveles más altos que contienen agregados o resúmenes de los datos de niveles inferiores), que solo contiene datos relevantes para la toma de decisiones y que está optimizado para permitir el análisis y la recuperación de información corporativa.</li>
+</ul>
+<p><strong>Características</strong></p>
+<p>Esta colección de datos tiene las siguientes características:</p>
+<ul>
+<li><em>Orientado a las materias</em> : Se centra en entidades de alto nivel (como por ejemplo cliente, producto, …) y no en los procesos (como hacen los sistemas operacionales).</li>
+<li><em>Integrado</em> : La integración implica que los datos del almacén son consistentes al elegir convenciones en nombres, unidades de medida, representación de campos comunes, etc. Se construye mediante la integración de fuentes de datos múltiples, y heterogéneas: BD relacionales, ficheros planos, registros de transacciones on-line. Se aplican técnicas de limpieza e integración para asegurar la consistencia en el nombrado, estructuras codificadas, medidas de los atributos, y demás aspectos entre las múltiples BD. Cuando los datos se mueven al DW, éstos se tienen que transformar.</li>
+<li><em>No volátil</em> : Los datos no cambian una vez que se encuentran en el almacén. Las únicas operaciones que permite un almacén de datos con la carga de nuevos datos y el acceso a los ya almacenados.</li>
+<li><em>Sirve de soporte a consultas de ayuda a la decisión</em> .</li>
+<li><em>Es dependiente del tiempo</em> : Los datos están asociados a un instante en el tiempo (semestre, año). Por lo tanto, los datos representan una imagen estática del estado de la organización en cada momento. Es decir, que si, por ejemplo, se accede a los datos de hace un mes de obtendrán los datos que describían la organización en aquel momento, sin que se hayan modificado de ninguna manera.</li>
+</ul>
+<p><strong>Objetivos</strong></p>
+<p>Después de ver las características de un DW, podemos ahora comprender mejor cuales son sus objetivos:</p>
+<ul>
+<li>Debe conseguir que la información sea fácilmente accesible para una organización y sus contenidos comprensibles. Los datos deben ser intuitivos y obvios para el usuario y no sólo para el desarrollador. Los contenidos del DW deben estar etiquetados con nombres comprensibles. Las herramientas de acceso al DW deben ser fáciles de usar y ofrecer resultados en el mínimo tiempo posible.</li>
+<li>Debe presentar a la organización información consistente y “creíble”. La información debe ser cuidadosamente agrupada según los orígenes de datos sin inconsistencias o duplicidades.</li>
+<li>Debe adaptarse a los cambios y al crecimiento. Las necesidades de usuario, las condiciones del negocio, los datos y la tecnología cambian inevitablemente a lo largo del tiempo. Estos cambios no deben en ningún caso invalidar la información que había hasta el momento en el DW.</li>
+<li>Debe proteger la información relevante, sensible y confidencial de una organización. Los accesos al DW deben mostrar sólo la información relevante a aquellas personas que están autorizadas para verla.</li>
+<li>Debe ser la base para tomar decisiones dentro de las organizaciones. Es decir, la información necesaria para tomar ciertas decisiones, operacionales, tácticas y estratégicas debe estar contenida en el DW.</li>
+</ul>
+<h3 id="Componentes-de-un-almacen-de-datos"><a href="#Componentes-de-un-almacen-de-datos" class="headerlink" title="Componentes de un almacén de datos"></a>Componentes de un almacén de datos</h3><p>La estructura básica de un sistema de almacén de datos está compuesta por un modelo de datos corporativo, que representa la vista conceptual de los datos de la organización, un procedimiento de limpieza e inserción de los datos operativos en el almacén, por el propio almacén junto con unos metadatos que proporcionan información sobre su contenido y, finalmente por unos procesos de extracción de información que son las herramientas de minería de datos y OLAP.</p>
+<p>En la siguiente figura se muestran estos componentes y las relaciones entre ellos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/almacen_datos.png?w=825" alt=""></p>
+<p>Vamos a presentar a continuación cada uno de estos componentes, su funcionamiento y cómo encajan en el proceso global de construcción y mantenimiento de un almacén de datos.</p>
+<p><strong>Modelo de datos corporativos</strong></p>
+<p>Es probable que los orígenes de datos que se han creado de manera independiente tengan esquemas diferentes. Parte de la labor de los almacenes de datos es llevar a cabo la integración de los esquemas y convertir los datos a un único modelo de datos corporativo. Este modelo establece un único esquema lógico de datos para toda la organización, evitando la fragmentación producida por la existencia de sistemas de información departamentales.</p>
+<p>Uno de los fundamentos de un DW y paso previo obligatorio a emprender su construcción, es determinar un modelo de datos corporativo que identifique y estructure los requisitos de información del almacén. Como resultado se obtiene un esquema conceptual válido para toda la organización, que ofrece una visión estratégica global de los datos, permitiendo a la vez la creación de vistas parciales con el grado de detalle adecuado a las necesidades de cada departamento.</p>
+<p>Esta estrategia “top-down” supone la construcción de un modelo de datos que comprenda todas las entidades y objetos manejados por una organización, lo que es una tarea suficientemente compleja como para que esta sea una de las principales causas de fracaso en la implantación de DW. Para disminuir el impacto negativo de esta tarea, se ha creado el concepto de Supermercado de Datos (Data Marts) que no son sino el resultado de aplicar una estrategia “bottom-up”, esto es, comenzar construyendo almacenes de datos departamentales, con sus correspondientes modelos de datos, antes de construir el almacén de datos corporativos.</p>
+<p>La creación del modelo de datos corporativo es, por lo tanto, la etapa del diseño del DW. Se trata de definir:</p>
+<ul>
+<li>Qué información, relevante para los usuarios, se va a incluir en el DW.</li>
+<li>Qué datos se precisan para obtener la información. La mayoría vienen de las BD de producción pero otros pueden venir de fuentes externas.</li>
+<li>Representación de la información: nombres, formatos, unidades, etc. La descripción detallada de la información del DW está en el diccionario de datos, éste suele incluir:<ul>
+<li>Identificación de la fuente de datos.</li>
+<li>Estructura, unidades, precisión, etc, de los datos.</li>
+<li>Estructura, unidades, precisión, etc, de la información.</li>
+<li>Estructura de la información que ven los usuarios finales.</li>
+<li>Normas para encontrar, limpiar, transformar y agregar los datos para transformarlos en información.</li>
+<li>Normas de seguridad aplicables a los datos y a la información.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Limpieza y carga de datos operativos</strong></p>
+<p><strong>Identificación de las fuentes de datos</strong></p>
+<p>Esta operación sirve para reconocer a qué sistemas (datos propios de la empresa, fuentes externas …) hay que acceder para conseguir los datos que se van a introducir en el almacén. Esto permitirá identificar los sistemas OLTP afectados, el volumen de datos que se va a capturar, la frecuencia con la que se deberá realizar la captura y los departamentos o áreas de la organización que se verán afectados por el proyecto de creación del DW.</p>
+<p><strong>Limpieza de los datos operativos</strong></p>
+<p>El proceso de limpieza de los datos importados, consiste en:</p>
+<ul>
+<li>El descubrimiento y la corrección de inconsistencias, errores, repeticiones o cualquier otra anomalía en los datos que se van a introducir en el almacén.</li>
+<li>Transformación de los términos operacionales en términos de negocio uniformes, estándar y auto-explicativos.</li>
+<li>Definición física de un atributo: usar tipos de datos y longitudes significativos.</li>
+<li>Uso consistente de los valores de los atributos de las entidades: valores diferentes pero que signifiquen lo mismo, se convierten a un único valor.</li>
+<li>Asuntos relacionados con valores por defecto y valores perdidos: si no se tiene claro es más seguro dejar estos valores en blanco.</li>
+</ul>
+<p><strong>Documentación de los formatos</strong></p>
+<p>Es necesario documentar los formatos de los datos que se van a transferir al almacén, para ello hay que tener en cuenta el significado de cada uno de ellos, el procedimiento que se ha seguido para su obtención a partir de los datos operativos originales y los procesos de sumarización o agregación que se les ha aplicado.</p>
+<p>Los datos que conforman esta información acerca del contenido del propio almacén reciben el nombre especial de metadatos que dan lugar al Diccionario de datos. Forman lo que se podría considerar el manual técnico del almacén y son imprescindibles para realizar el mantenimiento del almacén e interpretar adecuadamente los resultados de las consultas que se realicen sobre el mismo.</p>
+<p><strong>Transformación y carga</strong></p>
+<p>Este es el último paso y consiste, lógicamente, en la transformación y carga efectiva de los datos una vez procesados y documentados. En este proceso se incluye la inserción en el almacén tanto de los datos operativos procesados y limpiados, como de los metadatos que sirven para documentarlos.</p>
+<p>Esta tarea debe realizarse periódicamente para mantener un grado de sincronización aceptable entre el contenido del almacén y el de las bases de datos OLTP, ya que sino la información proporcionada por las herramientas de extracción de datos no sería lo suficientemente actual como para ser útil.</p>
+<p>Por otro lado, el proceso de carga suele ser largo y costoso, ya que hay que procesar una gran cantidad de registros, lo que hace necesario buscar un equilibrio entre el deseo de mantener actualizado el DW y el coste que supone en recursos máquina.</p>
+<p><strong>Resultado: Almacén de datos</strong></p>
+<p>Tras realizar todas estas etapas, se obtiene como resultado un almacén que contiene unos datos tratados, documentados y listos para ser utilizados como materia prima de las herramientas de extracción de información.</p>
+<p><strong>Extracción y recuperación de los datos</strong></p>
+<p><strong>Acceso a los datos</strong></p>
+<p>El DW debe ofrecer soluciones a los problemas de acceso a los datos. Algunos de estos problemas suelen ser:</p>
+<ul>
+<li>Los datos están en sistemas a los que el usuario no puede acceder.</li>
+<li>El usuario no tiene herramientas para leer correctamente los datos y para ello se le ofrecen una serie de herramientas de varios tipos: Visualización de datos, Análisis estadístico y Generadores de informes.</li>
+<li>Los datos podrían estar siendo usados por aplicaciones que impiden su utilización por otras aplicaciones.</li>
+</ul>
+<p><strong>Recuperación de los datos</strong></p>
+<p>Un DW debe contener toda la información sobre el tema correspondiente y debe contar con mecanismos para recuperarla. Existen tres conceptos fundamentales, que ayudan a llevar a cabo dicha recuperación, son:</p>
+<ul>
+<li>Base de datos. Una BD sobre un tema determinado es un conjunto de datos sobre dicho tema que cumple los criterios de: Exhaustividad, Ausencia de redundancia y Estructura adecuada.</li>
+<li>Diccionario de datos. Define los datos, se sabe cuáles existen, qué significa cada elemento de datos. Además determina el tema y los criterios que deben cumplirse para que los datos sean exhaustivos.</li>
+<li>Complementación relacional. Garantiza la recuperación de cualquier subconjunto de la información, basándose en cinco operadores: selección, proyección, intersección, unión y diferencia.</li>
+</ul>
+<p><strong>Complejidad de las consultas</strong></p>
+<p>Cuando se realizan consultas complejas a BD de producción, estas deben ser hechas por especialistas que saben cómo y dónde buscar esos datos. El DW elimina la intervención de estos especialistas, eliminando los posibles problemas de disponibilidad.</p>
+<p><strong>Análisis multidimensional</strong></p>
+<p>Con el análisis multidimensional se da respuesta a consultas complejas de los usuarios que reflejan los diversos componentes de sus organizaciones. Estos componentes pueden ser de dos tipos: Cuantitativos o Cualitativos.</p>
+<p>A estos componentes también se les llama dimensiones, y a los valores de los componentes o dimensiones se les llama atributos. Además el detalle con el que se muestran los atributos puede variar, cada dimensión se puede descomponer en diferentes niveles de detalle, estos dependen de las necesidades del usuario.</p>
+<p>Las dimensiones definen dominios como geografía, producto, tiempo, cliente, etc. Los miembros de una dimensión se agrupan de forma jerárquica (dimensión geográfica: ciudad, provincia, autonomía, país…).</p>
+<p>El usuario puede navegar por los datos de diferentes maneras:</p>
+<ul>
+<li>Perforación (drill-down): Consisten en variar el nivel de detalle de los datos, desde los datos más resumidos a los más detallados. Se dice que drill-down es desagregar y Roll-up es agregar.</li>
+<li>Segmentación (slicing and dicing): Consisten en “recortar” un subconjunto de los datos moviéndose por los distintos datos de una misma dimensión o cambiando de dimensión. Es decir, es la capacidad de ver la BD desde diferentes puntos de vistas. El corte suele hacerse a lo largo del eje del tiempo para analizar tendencias. Se dice que slicing es proyección y que dicing es selección.</li>
+</ul>
+<h3 id="Estructura-logica-del-almacen-datos-y-metadatos"><a href="#Estructura-logica-del-almacen-datos-y-metadatos" class="headerlink" title="Estructura lógica del almacén: datos y metadatos"></a>Estructura lógica del almacén: datos y metadatos</h3><p>La estructura lógica de un almacén se encuentra dividida en cuatro niveles más uno adicional de metadatos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/estructura_almacen_datos.png?w=825" alt=""></p>
+<p>Veamos a continuación cada uno de estos niveles.</p>
+<p><strong>Metadatos</strong></p>
+<p>Este nivel no es el superior jerárquico de los otros cuatro, sino que se encuentra completamente aparte del resto. Esto se debe a que no está compuesto por datos extraídos a partir de sistemas OLTP, sino por la descripción del tratamiento a que se han sometido dichos datos originales.</p>
+<p>Los metadatos describen la estructura de los datos contenidos en el almacén, de donde proceden y que tratamiento sufrieron. También detallan los algoritmos utilizados para crear los resúmenes de los dos niveles superiores de la estructura del almacén (datos ligeramente resumidos y datos muy resumidos). Esta información, será de utilidad para las herramientas de extracción de información, que la usarán para determinar estrategias de navegación y recuperación.</p>
+<p><strong>Datos detallados actuales</strong></p>
+<p>Son los datos obtenidos directamente al limpiar y homogeneizar los datos provenientes de sistemas OLTP. Constituyen el nivel más bajo de detalle, representan el estado de la organización en en momento presente y, debido a que están sin resumir, constituyen una gran porción del volumen total de los datos almacenados.</p>
+<p>Estos datos son de acceso frecuente, ya que son los más actualizados, por tanto, es conveniente que se almacenen en dispositivos de acceso rápido como discos.</p>
+<p><strong>Datos detallados históricos</strong></p>
+<p>Son los datos detallados correspondientes a momentos anteriores al presente, por lo que el nivel de detalle es el mismo que el de los datos actuales. Al no ser datos a los que se deba acceder con frecuencia, se almacenan en cintas o cualquier otro dispositivo de almacenamiento masivo.</p>
+<p><strong>Datos ligeramente resumidos</strong></p>
+<p>Es el primer nivel de agregación de los datos detallados actuales. Corresponden a consultas o informes de uso habitual, por lo que al tenerlos preparados de antemano se consigue acelerar considerablemente el rendimiento global del almacén. Es importante identificar sobre que variables se van a realizar estos resúmenes así como su frecuencia de actualización.</p>
+<p><strong>Datos muy resumidos</strong></p>
+<p>Representan el nivel más elevado de agregación, tanto de los datos ligeramente resumidos como de los de detalle. Corresponden a consultas o informes que se solicitan muy a menudo y que deben obtenerse con gran rapidez. Dado el alto grado de accesibilidad que deben tener estos datos muy resumidos es normal encontrarlos fuera del almacén de datos corporativo, formando parte de los almacenes de datos departamentales o Data Mart.</p>
+<h3 id="Estructura-fisica-del-almacen-arquitectura"><a href="#Estructura-fisica-del-almacen-arquitectura" class="headerlink" title="Estructura física del almacén: arquitectura"></a>Estructura física del almacén: arquitectura</h3><p>La estructura física del almacén puede presentar cualquiera de las siguientes arquitecturas:</p>
+<p><strong>Arquitectura centralizada</strong></p>
+<p>Consiste en utilizar un único servidor para guardar todo el almacén de datos.</p>
+<p>La ventaja de esta configuración reside en que maximiza la potencia de cálculo disponible para trabajar sobre el almacén y facilita el mantenimiento del mismo.</p>
+<p>La desventaja estriba en que la realización de consultas que consumen muchos recursos puede afectar seriamente al resto de usuarios que sólo necesiten acceder a datos de alto nivel (resumidos o muy resumidos). Además, un fallo en este servidor puede resultar catastrófico para la organización, por lo que la seguridad del mismo cobra una especial relevancia.</p>
+<p><strong>Arquitectura distribuida</strong></p>
+<p>Esta segunda opción se basa en la existencia de varios servidores entre los que se reparten los datos del almacén. Dado que una de las características del almacén es que está organizado en torno a temas, resulta lógico que la distribución física de los datos refleje esta propiedad, asignando así cada servidor a uno o varios temas lógicos.</p>
+<p>La ventaja de esta arquitectura es una mayor distribución de la carga de proceso a cambio de una mayor complejidad en el mantenimiento de la estructura del almacén. También sigue presentando el problema de la no-discriminación de los datos de más alto nivel de los de menor nivel, por lo que una operación que requiera muchos recursos máquina seguirá bloqueando el acceso al resto de usuarios.</p>
+<p><strong>Arquitectura distribuida por niveles</strong></p>
+<p>Esta arquitectura refleja la estructura lógica del almacén, ya que asigna los servidores en función del nivel de agregación de los datos que contienen. De esta manera se tendrá un servidor para los datos de detalle, otro para los resumidos y otro para los muy resumidos.</p>
+<p>Un caso particular se presenta cuando los datos muy resumidos no están en un único servidor, sino que se duplican en varios para agilizar el acceso a los mismos. En este caso los servidores que los mantienen son Data Marts. La ventaja de esta arquitectura es que permite un acceso rápido a los datos que se utilizan con más frecuencia, sin que sea penalizado por las consultas que se realicen sobre datos de detalle.</p>
+<h3 id="Comparacion-de-DW-y-BD"><a href="#Comparacion-de-DW-y-BD" class="headerlink" title="Comparación de DW y BD"></a>Comparación de DW y BD</h3><p>Diferencias entre un sistema de BD tradicional y un DW:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/comparacion_bd_dw.png?w=825" alt=""></p>
+<h3 id="Elementos-basicos-de-un-DW"><a href="#Elementos-basicos-de-un-DW" class="headerlink" title="Elementos básicos de un DW"></a>Elementos básicos de un DW</h3><p><strong>Sistema Origen</strong></p>
+<p>Es un sistema operacional cuya función es capturar las transacciones del negocio. A menudo se le llama “legacy system”. Las principales características de este sistema son la disponibilidad y la actualidad de su información.</p>
+<p>Asumiremos que el sistema origen mantiene poca información histórica y que se realizará un cierto tipo de reporting directamente sobre el sistema fuente que no tiene porque estar recogido en el propio DW.</p>
+<p>Los sistemas fuentes son normalmente independientes entre sí, por lo que seguramente en ellos no se habrá invertido para conformar dimensiones básicas como los productos, los clientes, la geografía o el tiempo.</p>
+<p>Los sistemas origen tienen claves que identifican ciertos objetos del análisis de manera única, como por ejemplo la clave de producto o la clave de cliente. A las calves de estos sistemas fuente se les denomina “claves de producción”, pero no las usaremos directamente en el DW como claves, trataremos estas claves como atributos de las dimensiones que se creen.</p>
+<p><strong>Data staging área</strong></p>
+<p>Es un área de almacenamiento y un conjunto de procesos que limpian, transforman, combinan, unifican, almacenan, archivan y preparan la fuente de datos para su uso en el DW. Está compuesta por un sistema de ficheros planos.</p>
+<p>Consiste en todo aquello que hay entre el origen de datos y el servidor de presentación. Aunque sería ideal que incluso consistiera en una única máquina, la realidad es que está distribuida por un conjunto de máquinas.</p>
+<p>Esta área está dominada por las actividades de ordenación y procesamiento secuencial y en algunos casos ni siquiera tiene que estar basada en tecnología relacional. Una restricción de esta área es que no se utilizará en ningún caso para hacer consultas directamente sobre ella o para generar informes a partir de ella misma.</p>
+<p><strong>Servidor de presentación (Presentation server)</strong></p>
+<p>Es la máquina física destino donde el DW es organizado y almacenado para ser directamente consultado por los usuarios finales y otras aplicaciones.</p>
+<p>En este sistema los datos se presentarán y almacenarán en un marco multidimensional. Si el servidor está basado en una BD relacional, entonces las tablas estarán organizadas como “esquemas en estrella”. Si el servidor de presentación está basado en una tecnología de procesamiento analítico on-line no relacional (tecnología OLAP), los datos tendrán dimensiones reconocidas como tal.</p>
+<h2 id="ESQUEMA-–-RESUMEN"><a href="#ESQUEMA-–-RESUMEN" class="headerlink" title="ESQUEMA – RESUMEN"></a>ESQUEMA – RESUMEN</h2><p>Una BD es una colección o depósito de datos integrados, almacenados en soporte secundario (no volátil) y con redundancia controlada. Los datos, que han de ser compartidos por diferentes usuarios y aplicaciones, deben mantenerse independientes de ellos y su definición (estructura de la BD), única y almacenada junto con los datos, se ha de apoyar en un modelo de datos, el cual ha de permitir captar las interrelaciones y restricciones existentes en el mundo real. Los procedimientos de actualización y recuperación, comunes y bien determinados, facilitarán la seguridad del conjunto de los datos.</p>
+<p>En los sistemas de BD se plantean dos objetivos principales:</p>
+<ul>
+<li>Independencia de la BD de lo programas para su utilización.</li>
+<li>Proporcionar a los usuarios una visión abstracta de los datos. El sistema esconde los detalles de almacenamiento físico (como se almacenan y se mantienen los datos), pero estos deben extraerse eficientemente. Niveles de abstracción: externo, conceptual e interno.</li>
+</ul>
+<p>Principales componentes de un entorno de BD:</p>
+<ul>
+<li><strong>Datos</strong> : una BD no tiene sentido si no está compuesta por datos. Hay que definir la forma en que estos datos se deben disponer, qué datos se deben almacenar y cómo los debe entender la máquina.</li>
+<li><strong>Metadatos</strong> : la información que el sistema guarda sobre los datos almacenados, es lo que se llaman metadatos, es decir, datos acerca de los datos. Es más, estos metadatos se almacenan como otra BD propiamente dicha, y puede ser gestionada y consultada como tal. Estos metadatos suelen conformar lo que se da en llamar diccionario de datos o catálogo.</li>
+<li><strong>El Sistema Gestor de BD</strong> : se puede definir como un conjunto coordinado de programas, procedimientos, lenguajes, etc. que suministra, tanto a los usuarios finales como a los analistas, programadores o el administrador, los medios necesarios para describir, recuperar y manipular los datos almacenados en la base, manteniendo su integridad, confidencialidad y seguridad.</li>
+<li><strong>Usuarios de la BD</strong> : usuarios normales, programadores de aplicaciones, usuarios sofisticados y especializados y finalmente los administradores de BD.</li>
+<li><strong>Lenguajes de BD</strong> : Lenguaje de Definición de Datos (LDD) y Lenguaje de Manipulación de Datos (LMD).</li>
+</ul>
+<p>En cuanto a la utilización de las BD en las organizaciones, hablamos de 3 diferentes tipos de automatización de los sistemas de información:</p>
+<ul>
+<li>Los PED (Procesamiento Electrónico de Datos) o DP (Data Processing) que se caracterizan por tener el foco de atención en el nivel operativo de almacenamiento, procesamiento y flujo de los datos, así como procesar eficientemente las transacciones y realizar informes resúmenes para los dirigentes.</li>
+<li>Los SIG (Sistemas de Información de Gestión) o MIS (Management Information Systems) que se caracterizan porque su foco de atención está en la información orientada a mandos intermedios, por la integración de las tareas de PED, por sus funciones en los negocios y por la generación de informes.</li>
+<li>Los STD (Sistema de Apoyo a la Toma de Decisiones) o DSS (Decision Support Systems) que están más centrados en la decisión y orientados hacia altos ejecutivos.</li>
+</ul>
+<p>En los sistemas transaccionales basados en BD, una transacción es una secuencia de operaciones llevadas a cabo como una unidad lógica de trabajo simple. Para asegurar la integridad de los datos se necesita que el sistema de BD mantenga las siguientes propiedades de las transacciones: Atomicidad, Consistencia, Aislamiento y Durabilidad. Son conocidas como propiedades ACID.</p>
+<p>Dos definiciones de un Sistema de Información de Gestión (MIS):</p>
+<ul>
+<li>Un Sistema de Información de Gestión puede definirse como un conjunto de medios para reunir los datos necesarios para la gestión y difundir la información obtenida con el tratamiento de estos datos.</li>
+<li>Definimos Sistema de Información de Gestión como el proceso por el cual los datos que son importantes para la empresa son identificados, analizados, recolectados y puestos a disposición de la empresa.</li>
+</ul>
+<p>Se pueden definir los Sistemas de Soporte a la Decisión (DSS) como programas informáticos interactivos que utilizan métodos analíticos, tales como análisis de decisión, algoritmos de optimización, programas de planificación de rutinas, etc., para el desarrollo de modelos ayudando a los creadores de decisión a formular alternativas, analizar sus impactos, e interpretar y seleccionar opciones apropiadas para la implementación.</p>
+<p>Una manera útil de pensar en las partes de los componentes de un DSS y las relaciones entre las partes está en utilizar el diálogo, los datos, y el modelo (DDM). En esta conceptualización, hay un diálogo (D) entre el usuario y el sistema, los datos (D) que soporta el sistema, y los modelos (M) que suministra el análisis de las capacidades.</p>
+<p>Los DSS abarcan diversos campos como: procesamiento analítico en línea (Online Analytical Processing, OLAP), análisis estadístico, minería de datos y almacenes de datos.</p>
+<p>Se define un DW como un repositorio lógico central (aunque los componentes físicos pueden estar distribuidos), que almacena los datos de la organización a diferentes niveles (desde el más bajo del dato puro hasta los niveles más altos que contienen agregados o resúmenes de los datos de niveles inferiores), que solo contiene datos relevantes para la toma de decisiones y que está optimizado para permitir el análisis y la recuperación de información corporativa.</p>
+<p>Los almacenes de datos presentan las siguientes características: es orientado a materias, integrado, no volátil, sirve de soporte a consultas de ayuda a la decisión y es dependiente del tiempo. Además el DW busca los objetivos siguientes:</p>
+<ul>
+<li>Debe conseguir que la información sea fácilmente accesible para una organización.</li>
+<li>Debe presentar a la organización información consistente y “creíble”.</li>
+<li>Debe adaptarse a los cambios y al crecimiento.</li>
+<li>Debe proteger la información relevante, sensible y confidencial de una organización.</li>
+<li>Debe ser la base para tomar decisiones dentro de las organizaciones.</li>
+</ul>
+<p>Componentes que forman parte de un DW:</p>
+<ul>
+<li><strong>Modelo de datos corporativo</strong> : La creación del modelo de datos corporativo es la etapa del diseño del DW, que identifica y estructura los requisitos de información que va a tener que satisfacer el almacén.</li>
+<li><strong>Limpieza y carga de datos operativos</strong> : Este proceso está compuesto de las siguientes etapas:<ul>
+<li>Identificación de las fuentes de datos.</li>
+<li>Limpieza de los datos operativos.</li>
+<li>Documentación de los formatos.</li>
+<li>Transformación y carga.</li>
+</ul>
+</li>
+<li><strong>El almacén de datos</strong> : se obtiene como resultado un almacén que contiene unos datos tratados, documentados y listos para ser utilizados como materia prima de las herramientas de extracción de información.</li>
+<li><strong>Extracción y recuperación de los datos</strong> : En este proceso hay que tener presente los puntos siguientes:<ul>
+<li>Acceso y Recuperación de los datos.</li>
+<li>Complejidad de las consultas.</li>
+<li>Análisis multidimensional.</li>
+</ul>
+</li>
+</ul>
+<p>La estructura lógica de un almacén se encuentra dividida en cuatro niveles más uno adicional de metadatos que está por encima de ellos. Los cuatro niveles son:</p>
+<ul>
+<li>Datos detallados actuales</li>
+<li>Datos detallados históricos</li>
+<li>Datos ligeramente resumidos</li>
+<li>Datos muy resumidos</li>
+</ul>
+<p>La estructura física del almacén puede presentar cualquiera de las siguientes arquitecturas:</p>
+<ul>
+<li><strong>Arquitectura centralizada</strong> : Consiste en utilizar un único servidor para guardar todo el almacén de datos.</li>
+<li><strong>Arquitectura distribuida</strong> : Esta segunda opción se basa en la existencia de varios servidores entre los que se reparten los datos del almacén. Dado que una de las características del almacén es que está organizado en torno a temas, resulta lógico que la distribución física de los datos refleje esta propiedad, asignando así cada servidor a uno o varios temas lógicos.</li>
+<li><strong>Arquitectura distribuida por niveles</strong> : Esta arquitectura refleja la estructura lógica del almacén, ya que asigna los servidores en función del nivel de agregación de los datos que contienen. De esta manera se tendrá un servidor para los datos de detalle, otro para los resumidos y otro para los muy resumidos.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/356384083/TICB1-Concepto-de-BD" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t13/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T13
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t06/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T06</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

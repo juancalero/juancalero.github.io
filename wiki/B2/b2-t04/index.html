@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T04 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T04">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Características técnicas de los lenguajes y paradigmas actuales de programación.Lenguajes y paradigmas actuales de programación.Categorías de Lenguajes de ProgramaciónLos lenguajes de programación se">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T04">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t04/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Características técnicas de los lenguajes y paradigmas actuales de programación.Lenguajes y paradigmas actuales de programación.Categorías de Lenguajes de ProgramaciónLos lenguajes de programación se">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/paradigma_imperativo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/funcional1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/caracteristicas_oop.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/interprete.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/compilador.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/compilacion1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/compilacion2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/tipos_elementales.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/palabras_reservadas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/identificadores.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/asignacion1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/sintaxis_asignacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/operadores_asignacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/operadores.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/operadores_relacionales.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/operadores_logicos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/operadores-de-bits.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/prioridad1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/prioridad2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/variables1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/variables2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/constantes1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/constantes2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/conversion1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/conversion2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/ambito.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/variables3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/control_flujo1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/estructura_secuencial.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/estructura_alternativa.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/switch_if_else.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/estructuras_repetitivas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/while1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/while2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/do-while.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/for.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/funciones1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/funciones.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/ambito_variables.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/recursividad.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/arrays_unidimensionales.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/arrays_unidimensionales2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/array_multidimensional.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/estructura.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:28:29.279Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T04">
+<meta name="twitter:description" content="Características técnicas de los lenguajes y paradigmas actuales de programación.Lenguajes y paradigmas actuales de programación.Categorías de Lenguajes de ProgramaciónLos lenguajes de programación se">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2017/12/paradigma_imperativo.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file active"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t04" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t04/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t04.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t04.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t04.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T04
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Caracteristicas-tecnicas-de-los-lenguajes-y-paradigmas-actuales-de-programacion"><a href="#Caracteristicas-tecnicas-de-los-lenguajes-y-paradigmas-actuales-de-programacion" class="headerlink" title="Características técnicas de los lenguajes y paradigmas actuales de programación."></a>Características técnicas de los lenguajes y paradigmas actuales de programación.</h1><h2 id="Lenguajes-y-paradigmas-actuales-de-programacion"><a href="#Lenguajes-y-paradigmas-actuales-de-programacion" class="headerlink" title="Lenguajes y paradigmas actuales de programación."></a>Lenguajes y paradigmas actuales de programación.</h2><h3 id="Categorias-de-Lenguajes-de-Programacion"><a href="#Categorias-de-Lenguajes-de-Programacion" class="headerlink" title="Categorías de Lenguajes de Programación"></a>Categorías de Lenguajes de Programación</h3><p>Los lenguajes de programación se pueden clasificar atendiendo a varios criterios:</p>
+<ul>
+<li>Según el nivel de abstracción</li>
+<li>Según el paradigma de programación que posee cada uno de ellos</li>
+<li>Según su campo de aplicación</li>
+<li>Según su traducción</li>
+</ul>
+<p><strong>Según su nivel de abstracción</strong></p>
+<p><strong>Lenguajes Máquina</strong></p>
+<p>Están escritos en lenguajes directamente legibles por la máquina (computadora), ya que sus instrucciones son cadenas binarias (0 y 1). Da la posibilidad de cargar (transferir un programa a la memoria) sin necesidad de traducción posterior lo que supone na velocidad de ejecución superior, solo que con poca fiabilidad y dificultad de verificar y poner a punto los programas.</p>
+<p><strong>Lenguajes de bajo nivel</strong></p>
+<p>Los lenguajes de bajo nivel son lenguajes de programación que se acercan al funcionamiento de una computadora. El lenguaje por excelencia es el lenguaje ensamblador, éste trabaja con los registros de memoria de la computadora de forma directa.</p>
+<p>La principal utilización de este tipo de lenguajes es para programar los microprocesadores, utilizando el lenguaje ensamblador correspondiente a dicho procesador.</p>
+<p><strong>Lenguajes de medio nivel</strong></p>
+<p>Hay lenguajes de programación que son considerados como lenguajes de medio nivel (como es el caso del C) al tener ciertas características que los acercan a los lenguajes de bajo nivel pero teniendo, al mismo tiempo, ciertas cualidades que lo hacen un lenguaje más cercano al humano y, por tanto, de alto nivel.</p>
+<p><strong>Lenguajes de alto nivel</strong></p>
+<p>Los lenguajes de alto nivel son normalmente fáciles de aprender porque están formados por elementos de lenguajes naturales, como el inglés. Esta forma de trabajar puede dar la sensación de que las computadoras parecen comprender un lenguaje natural; en realidad lo hacen de una forma rígida y sistemática, sin que haya cabida, por ejemplo, para ambigüedades o dobles sentidos.</p>
+<p>Lenguajes utilizados Pascal, Basic, …</p>
+<p><strong>Según el paradigma de programación</strong></p>
+<p>Un <strong>paradigma de programación</strong> indica un método de realizar cómputos y la manera en que se deben estructurar y organizar las tareas que debe llevar a cabo un programa.</p>
+<p>Un paradigma es un modelo que, a su vez, es una representación abstracta de la realidad.</p>
+<p>Un paradigma de programación es un modelo de programación que representa un estilo o forma de programar o construir programas para realizar ciertas tareas o actividades. Cada modelo tiene sus propias estructuras y reglas de construcción. El modelo de programación por emplear depende del problema que se desee solucionar.</p>
+<p>Los paradigmas fundamentales están asociados a determinados modelos de cómputo. También se asocian a un determinado estilo de programación. Los lenguajes de programación suelen interpretar, a menudo de forma parcial, varios paradigmas.</p>
+<p>Existen muchos paradigmas de programación diferentes, cada uno de ellos tiene sus <strong>propias características</strong> y tratan de solucionar los problemas clásicos del desarrollo de software desde diferentes perspectivas y filosofías.</p>
+<p>Los paradigmas de programación solo son <strong>propuestas tecnológicas</strong> adoptadas por la Comunidad de desarrolladores que se enfocan a resolver uno o varios problemas definidos y delimitados. Existen muchos paradigmas de programación diferentes, posiblemente el más ampliamente utilizado hoy en día sea el de la <strong>programación orientada a objetos</strong> .</p>
+<p>Algunos lenguajes de programación pueden soportar <strong>múltiples paradigmas</strong> de programación. Por ejemplo, C++ puede ser empleado para desarrollar software utilizando para ello un modelo de programación puramente orientado a objetos o bien puramente estructurado.</p>
+<p>Otros lenguajes han sido diseñados para soportar un <strong>único paradigma</strong> de programación, ese es el caso de <strong>Smalltalk</strong> que soporta únicamente la programación orientada a objetos o <strong>Haskell</strong> que solo soporta la <strong>programación funcional</strong> .</p>
+<p>Es común el diseño de lenguajes que soporten múltiples paradigmas de programación. Estos lenguajes son aquellos que soportan al menos dos paradigmas:</p>
+<ul>
+<li><strong>Scala</strong> : Imperativo, orientado a objetos, funcional, genérico y concurrente</li>
+<li><strong>Erlang</strong> : Funcional, orientado a objetos y funcional</li>
+<li><strong>Perl</strong> : Imperativo, orientado a objetos y funcional</li>
+<li><strong>PHP</strong> : Imperativo, orientado a objetos, funcional y reflexivo</li>
+<li><strong>JavaScript</strong> : Imperativo, orientado a objetos (prototipos) y funcional</li>
+<li><strong>Java</strong> : Imperativo, orientado a objetos, reflexivo y genérico</li>
+<li><strong>Python</strong> y <strong>Ruby</strong> : Imperativo, orientado a objetos, reflexivo y funcional</li>
+<li><strong>C++</strong> : Imperativo, orientado a objetos, funcional y genérico</li>
+<li><strong>C#</strong> : Imperativo, orientado a objetos, funcional (lambda), reflexivo y genérico</li>
+<li><strong>Lisp</strong> : Orientado a objetos, funcional y declarativo</li>
+<li><strong>Prolog</strong> : Lógico y declarativo</li>
+</ul>
+<p>Estos son algunos ejemplos, existen lenguajes como <strong>Oz</strong> que soporta nueve paradigmas de programación.</p>
+<p><strong>Paradigmas de programación</strong></p>
+<p>Un paradigma define un conjunto de reglas, patrones y estilos de programación que son usados por un grupo de lenguajes de programación.</p>
+<p>Cada lenguaje tiene sintaxis y semántica:</p>
+<ul>
+<li>La sintaxis de un lenguaje de programación está relacionada con la forma de los programas, por ejemplo, las expresiones, comandos, declaraciones, etc. son puestos juntos en un programa.</li>
+<li>La semántica de un lenguaje de programación está relacionada con el significado de los programas, por ejemplo, cómo se comportarán cuando se ejecutan en una computadora.</li>
+</ul>
+<p>La sintaxis de un lenguaje influye en cómo los programas son escritos por el programador, leídos por otro programador y traducidos por el computador. La semántica de un lenguaje determina como los programas son compuestos por el programador, entendidos por otros programadores e interpretados por el computador.</p>
+<p>Tipos de Paradigmas:</p>
+<ul>
+<li>Paradigma imperativo (por procedimientos)</li>
+<li>Paradigma declarativo<ul>
+<li>Programación funcional</li>
+<li>Programación lógica</li>
+<li>Programación Reactiva (Dataflow)</li>
+</ul>
+</li>
+<li>Paradigma orientado a objetos</li>
+</ul>
+<p><strong>Paradigma imperativo (por procedimientos)</strong></p>
+<p>En el paradigma por procedimientos, los programas se desarrollan a través de procedimientos. Pascal, C y BASIC son tres de los lenguajes imperativos más importantes. El paradigma se inició a principios de los años 50 cuando los diseñadores reconocieron que las variables y lo comandos o instrucciones de asignación constituían una simple pero útil abstracción del acceso a memoria y actualización del conjunto de instrucciones máquina.</p>
+<ul>
+<li>Describe cómo debe realizarse el cálculo, no el porqué</li>
+<li>Un cómputo consiste en una serie de sentencias, ejecutadas según un control de flujo explícito, que modifican el estado del programa</li>
+<li>Las variables son celdas de memoria que contienen datos (o referencias), pueden ser modificadas y representan el estado del programa</li>
+<li>La sentencia principal es la asignación</li>
+<li>Definición de procedimientos</li>
+<li>Definición de tipos de datos</li>
+<li>Chequeo de tipos en tiempo de compilación</li>
+<li>Cambio de estado de variables</li>
+<li>Pasos de ejecución de un proceso</li>
+<li>Asociados al paradigma imperativo se encuentran los <strong>paradigmas procedural</strong> , <strong>modular</strong> y la <strong>programación estructurada</strong></li>
+<li>Lenguajes: FORTRAN-77, COBOL, BASIC, PASCAL, C, ADA, …</li>
+<li>También lo implementan: Java, C++, C#, Eiffel, Python, …</li>
+</ul>
+<p>La programación imperativa es una forma de escribir programas secuenciales; es decir, que tienes que ir indicando en el programa los pasos o tareas que debe realizar según las siguientes reglas:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/paradigma_imperativo.png?w=825" alt=""></p>
+<p><strong>Paradigma declarativo</strong></p>
+<p>El paradigma declarativo o paradigma de programación lógica se basa en el hecho de que un programa implementa una relación antes que una correspondencia. Debido a que las relaciones son mas generales que las correspondencias (identificador – dirección de memoria), la programación lógica es potencialmente de más alto nivel que la programación funcional o la imperativa. El lenguaje más popular es el lenguaje PROLOG.</p>
+<ul>
+<li>Describe qué se debe calcular, sin explicar el cómo</li>
+<li>No existe un orden de evaluación prefijado</li>
+<li>Las variables son nombres asociados a definiciones, y una vez instanciadas son inmutables</li>
+<li>No existe sentencia de asignación</li>
+<li>El control de flujo suele estar asociado a la composición funcional, la recursividad y/o técnicas de reescritura y unificación</li>
+<li>Existen distintos grados de pureza en las variantes del paradigma</li>
+<li>Las principales variantes son los paradigmas <strong>funcional</strong> , <strong>lógico</strong> , la <strong>programación reactiva</strong> y los <strong>lenguajes descriptivos</strong></li>
+</ul>
+<p><strong>Programación funcional</strong></p>
+<p>La programación funcional se caracteriza por el uso de expresiones y funciones. Un programa dentro del paradigma funcional, es una función o un grupo de funciones compuestas por funciones más simples estableciéndose que una función puede llamar a otra, o el resultado de una función puede ser usado como argumento de otra función. El lenguaje por excelencia es el LISP.</p>
+<ul>
+<li>Basado en los modelos de cómputo <strong>cálculo lambda</strong> (Lisp, Scheme) y <strong>lógica combinatoria</strong> (famila ML, Haskell)</li>
+<li>Las funciones son elementos de primer orden</li>
+<li>Evaluación por reducción funcional. Técnicas:<ul>
+<li>recursividad</li>
+<li>parámetros acumuladores</li>
+<li>CPS</li>
+<li>Mónadas</li>
+</ul>
+</li>
+<li>Familia LISP (Common-Lisp, Sheme):<ul>
+<li>Basados en s-expresiones</li>
+<li>Tipado debil</li>
+<li>Meta-programación</li>
+</ul>
+</li>
+<li>Familia ML (Miranda, Haskell, Scala):<ul>
+<li>Sistema estricto de tipos (tipado algebraico)</li>
+<li>Concordancia de patrones</li>
+<li>Transparencia referencial</li>
+<li>Evaluación perezosa (estructuras de datos infinitas)</li>
+</ul>
+</li>
+<li>La computación se realiza mediante la evaluación de expresiones</li>
+<li>Definición de funciones</li>
+<li>Funciones como datos primitivos</li>
+<li>Valores sin efectos laterales, no existe la asignación</li>
+<li>Programación declarativa</li>
+<li>Lenguajes: LISP, Scheme, Haskell, Scala, …</li>
+</ul>
+<p>Las funciones matemáticas son una correspondencia entre un dominio y un rango.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/funcional1.png?w=825" alt=""></p>
+<p>Una definición de función especifica el dominio y el rango, de manera implícita o explicita, junto con una expresión que describe la correspondencia.</p>
+<p>Las funciones son aplicadas a un elemento del dominio y devuelve uno del rango.</p>
+<p><strong>Programación lógica</strong></p>
+<ul>
+<li>Basado en la <strong>lógica de predicados</strong> de primer orden</li>
+<li>Los programas se componen de hechos, predicados y relaciones</li>
+<li>Evaluación basada en resolución SLD: unificación + backtracking</li>
+<li>La ejecución consiste en la resolución de un problema de decisión, los resultados se obtienen mediante la instanciación de las variables libres</li>
+<li>Definición de reglas</li>
+<li>Unificación como elemento de computación</li>
+<li>Programación declarativa</li>
+<li>Lenguajes: Prolog, Mercury, Oz, …</li>
+</ul>
+<p><strong>Programación Reactiva (Dataflow)</strong></p>
+<ul>
+<li>Basado en la <strong>teoría de grafos</strong></li>
+<li>Un programa consiste en la especificación del flujo de datos entre operaciones</li>
+<li>Las variables se encuentran ligadas a las operaciones que proporcionan sus valores. Un cambio de valor de una variable se propaga a todas las operaciones en que participa.</li>
+<li>Las hojas de cálculo se basan en este modelo</li>
+<li>Lenguajes representativos: Simulink, Oz, Clojure, …</li>
+</ul>
+<p><strong>Paradigma orientado a objetos</strong></p>
+<p>El paradigma orientado a objetos, se basa en los conceptos de objetos y clases de objetos. Un objeto es una variable equipada con un conjunto de operaciones que le pertenecen o están definidas para ellos.</p>
+<p>Los objetos pueden usarse una y otra vez para construir múltiples objetos con las mismas propiedades o modificarse para construir nuevos objetos con propiedades similares pero no exactamente iguales.</p>
+<p>Los objetos y clases son conceptos fundamentales. Una clase es un conjunto de objetos que comparten las mismas operaciones.</p>
+<p>Objetos (o al menos referencia a objetos) deben ser valores de la clase base. Así, cualquier operación puede tomar un objeto como un argumento y puede devolver un objeto como resultado. De esta manera el concepto de clase de objetos está relacionado con el concepto de tipo de dato.</p>
+<p>Herencia es también vista como un concepto clave dentro del mundo de los objetos. En este contexto, la herencia es la habilidad para organizar las clases de objetos en una jerarquía de subclases y superclases y las operaciones dadas para una clase se pueden aplicar a los objetos de la subclase.</p>
+<ul>
+<li>Definición de clases y herencia</li>
+<li>Objetos como abstracción de datos y procedimientos</li>
+<li>Polimorfismo y chequeo de tipos en tiempo de ejecución</li>
+<li>Lenguajes: Smalltalk, Java, …</li>
+</ul>
+<p>Las características más importantes de la programación orientada a objetos son las siguientes:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/caracteristicas_oop.png?w=825" alt=""></p>
+<ul>
+<li><strong>Abstracción:</strong> Denota las características esenciales de un objeto, donde se captura su comportamiento. Cada objeto en el sistema sirve como modelo de un “agente” abstracto que puede realizar trabajo, informar y cambiar su estado, y “comunicarse” con otros objetos en el sistema sin revelar “cómo” se implementan estas características. Los procesos, las funciones o los métodos, pueden también ser abstraídos, y cuando sucede esto, una variedad de técnicas son requeridas para ampliar una abstracción.</li>
+<li><strong>Encapsulamiento:</strong> Significa reunir a todos los elementos que pueden considerarse pertenecientes a una misma entidad, al mismo nivel de abstracción. Esto permite aumentar la cohesión de los componentes del sistema. Algunos autores confunden este concepto con el principio de ocultación, principalmente porque se suelen emplear conjuntamente.</li>
+<li><strong>Principio de ocultación</strong> : Cada objeto está aislado del exterior, es un módulo natural, y cada tipo de objeto expone una “interfaz” a otros objetos, que especifica cómo pueden interactuar con los objetos de la clase. El aislamiento protege a las propiedades de un objeto contra su modificación por quien no tenga derecho a acceder a ellas, solamente los propios métodos internos del objeto pueden acceder a su estado. Esto asegura que otros objetos no pueden cambiar el estado interno de un objeto de maneras inesperadas, eliminando efectos secundarios e interacciones inesperadas. Algunos lenguajes relajan esto, permitiendo un acceso directo a los datos internos del objeto de una manera controlada y limitando el grado de abstracción. La aplicación entera se reduce a un agregado o rompecabezas de objetos.</li>
+<li><strong>Polimorfismo</strong> : Comportamientos diferentes, asociados a objetos distintos, pueden compartir el mismo nombre; al llamarlos por ese nombre se utilizará el comportamiento correspondiente al objeto que se esté usando. Dicho de otro modo, las referencias y las colecciones de objetos pueden contener objetos de diferentes tipos y la invocación de un comportamiento en una referencia producirá el comportamiento correcto para el tipo real del objeto referenciado. Cuando esto ocurre en “tiempo de ejecución”, esta última característica se llama “asignación tardía” o “asignación dinámica”. Algunos lenguajes proporcionan medios más estáticos (en “tiempo de compilación”) de polimorfismo, tales como las plantillas y la [[ sobrecarga | sobrecarga de operadores ]] de C++.</li>
+<li><strong>Herencia</strong> : Las clases no están aisladas, sino que se relacionan entre sí, formando una jerarquía de clasificación. Los objetos heredan las propiedades y el comportamiento de todas las clases a las que pertenecen. La herencia organiza y facilita el polimorfismo y el encapsulamiento, permitiendo a los objetos ser definidos y creados como tipos especializados de objetos preexistentes. Estos pueden compartir (y extender) su comportamiento sin tener que volver a implementarlo.</li>
+<li><strong>Recolección de basura:</strong> La recolección de basura o Garbage Collection es la técnica por la cual el ambiente de Objetos se encarga de destruir automáticamente, y por tanto, desasignar de la memoria los Objetos que hayan quedado sin ninguna referencia a ellos. Esto significa que el programador no debe preocuparse por la asignación o liberación de memoria, ya que el entorno la asignará al crear un nuevo Objeto y la liberará cuando nadie lo esté usando. En la mayoría de los lenguajes híbridos que se extendieron para soportar el Paradigma de Programación Orientada a Objetos como C++ u Object Pascal, esta característica no existe y la memoria debe desasignarse manualmente.</li>
+</ul>
+<p><strong>Según su campo de aplicación</strong></p>
+<p><strong>Aplicaciones científicas</strong></p>
+<p>En este tipo de aplicaciones predominan las operaciones numéricas o matriciales propias de algoritmos matemáticos. Lenguajes adecuados son FORTRAN y PASCAL.</p>
+<p><strong>Aplicaciones en procesamiento de datos</strong></p>
+<p>En estas aplicaciones son frecuentes las operaciones de creación, mantenimiento y consulta sobre ficheros y bases de datos. Dentro de este campo estarían aplicaciones de gestión empresarial, como programas de nóminas, contabilidad, facturación, etc. Lenguajes adecuados son COBOL y SQL.</p>
+<p><strong>Aplicaciones de tratamiento de textos</strong></p>
+<p>Estas aplicaciones están asociadas al manejo de textos en lenguaje natural. Un lenguaje muy adecuado para este tipo de aplicaciones es el C.</p>
+<p><strong>Aplicaciones en inteligencia artificial</strong></p>
+<p>Dentro de este campo, destacan las aplicaciones en sistemas expertos, juegos, visión artificial, robótica. Los lenguajes más populares son LISP y PROLOG.</p>
+<p><strong>Aplicaciones de programación de sistemas</strong></p>
+<p>En este campo se incluirían la programación de software de interfaz entre el usuario y el hardware, como son los módulos de un SO y los traductores. Tradicionalmente para estas aplicaciones se utilizaba Ensamblador, en la actualidad ADA, MODULA-2 y C.</p>
+<p><strong>Según su Traducción</strong></p>
+<p><strong>Intérpretados</strong></p>
+<p>Un intérprete es un programa que analiza y ejecuta un código fuente, toma un código, lo traduce y a continuación lo ejecuta; y así sucesivamente lo hace hasta llegar a la última instrucción del programa, siempre y cuando no se produzca un error en el proceso.</p>
+<p>Como ejemplo de lenguajes interpretedos están PHP, Perl, Python, …</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/interprete.png?w=825" alt=""></p>
+<p><strong>Compilados</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/compilador.png?w=825" alt=""></p>
+<p>Como ejemplo de lenguajes que utilizan un compilador tenemos a C, C++, Visual Basic, …</p>
+<p>La compilación permite crear un programa de computadora que puede ser ejecutado por una computadora.</p>
+<p>La compilación de un programa se hace en tres pasos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/compilacion1.png?w=825" alt=""></p>
+<p>La forma en que se lleva a cabo el enlace variará entre distintos compiladores, pero la forma general es:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/compilacion2.png?w=825" alt=""></p>
+<p><strong>Principales Lenguajes de Programación</strong></p>
+<ul>
+<li><strong>Lenguaje Máquina.</strong> Es el sistema de códigos directamente interpretable por un circuito microprogramable, como el microprocesador de una computadora.</li>
+<li><strong>Ensamblador</strong> . Es el que proporciona poca o ninguna abstracción del microprocesador de una computadora. Es fácil su traslado al lenguaje máquina.</li>
+<li><strong>FORTRAN</strong> (FORmula TRANslation). Es un lenguaje de programación desarrollado en los años 50 y activamente utilizado desde entonces. Se utiliza principalmente en aplicaciones científicas y análisis numérico.</li>
+<li>ALGOL (ALGOrithmic Language)</li>
+<li>COBOL (COmmon Business Oriented Language)</li>
+<li>BASIC</li>
+<li>Visual BASIC</li>
+<li>Visual BASIC Script</li>
+<li>Pascal</li>
+<li>Modula-2</li>
+<li>COMAL (COMmon Algorithmic Language)</li>
+<li>APL (A Programming Language)</li>
+<li>LOGO</li>
+<li>HYPERTALK</li>
+<li>ADA</li>
+<li>C</li>
+<li><strong>C++.</strong> Es un lenguaje de programación, diseñado a mediados de los años 80, por Bjarne Stroustrup. Por otro lado, es un lenguaje que abarca dos paradigmas de la programación: la programación estructurada y la programación orientada a objetos.</li>
+<li>Visual C++</li>
+<li>C#</li>
+<li>LISP (LISt Processing)</li>
+<li>PROLOG (PROgramacion LOGica)</li>
+<li>FORTH</li>
+<li><strong>Perl</strong> . Lenguaje práctico para la extracción e informe. Es un lenguaje de programación diseñado por Larry Wall creado en 1987. Perl toma características de C, del lenguaje interpretado shell sh, AWK, sed, Lisp y, en un grado inferior, muchos otros lenguajes de programación.</li>
+<li><strong>Python</strong> . Es un lenguaje de programación creado por Guido van Rossum en el año 1990. En la actualidad Python se desarrolla como un proyecto de código abierto, administrado por la Python Software Foundation.</li>
+<li>Clipper</li>
+<li>Delphi</li>
+<li>HTML</li>
+<li>XHTML</li>
+<li>PHP</li>
+<li>SQL</li>
+<li>PL/1</li>
+<li><strong>Java</strong> . Es un lenguaje de programación orientado a objetos desarrollado por Sun Microsystems a principios de los años 90. Las aplicaciones Java están típicamente compiladas en un bytecode, aunque la compilación en código máquina nativo también es posible.</li>
+<li>Javascript</li>
+<li>Otros</li>
+</ul>
+<h2 id="Caracteristicas"><a href="#Caracteristicas" class="headerlink" title="Características"></a>Características</h2><h3 id="Tipos-de-datos-elementales"><a href="#Tipos-de-datos-elementales" class="headerlink" title="Tipos de datos elementales"></a>Tipos de datos elementales</h3><p>Las formas de organizar datos están determinadas por los tipos de datos definidos en el lenguaje.</p>
+<p>Un tipo de dato determina el rango de valores que puede tomar el objeto, las operaciones a que puede ser sometido y el formato de almacenamiento en memoria.</p>
+<p>Los tipos de datos pueden ser:</p>
+<ul>
+<li>Predefinidos</li>
+<li>Definidos por el usuario, a partir de los básicos</li>
+</ul>
+<p><strong>Tipos de datos elementales:</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/tipos_elementales.png?w=825" alt=""></p>
+<p><strong>Palabras reservadas</strong></p>
+<p>Las palabras reservadas son símbolos cuyo significado está predefinido y no se pueden usar para otro fin; aquí tenemos algunas palabras reservadas en el lenguaje C.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/palabras_reservadas.png?w=825" alt=""></p>
+<p><strong>Identificadores</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/identificadores.png?w=825" alt=""></p>
+<p>Hay que decir que no todos los lenguajes distinguen entre mayúsculas y minúsculas.</p>
+<p><strong>Operadores</strong></p>
+<p>Existen diferentes tipos de operadores: asignación, aritméticos, relacionales, lógicos y de bits.</p>
+<p><em>Asignación</em></p>
+<p>Al utilizarlo se realiza esta acción: el operador destino (parte izquierda) debe ser siempre una variable, mientras que en la parte derecha puede estar cualquier expresión válida. Con esto el valor de la parte derecha se asigna a la variable de la derecha.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/asignacion1.png?w=825" alt=""></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/sintaxis_asignacion.png?w=825" alt=""></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/operadores_asignacion.png?w=825" alt=""></p>
+<p><em>Aritméticos</em></p>
+<p>Los operadores aritméticos pueden aplicarse a todo tipo de expresiones. Son utilizados para realizar operaciones matemáticas sencillas, aunque uniéndolos se puede realizar cualquier tipo de operaciones.</p>
+<p>En la siguiente tabla se muestran los operadores aritméticos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/operadores.png?w=825" alt=""></p>
+<ul>
+<li>Los operadores <strong>–</strong> , <strong>+</strong> , <strong>*</strong> , <strong>/</strong> , <strong>%</strong> se corresponden con operaciones matemáticas. Son binarios porque cada uno tiene dos operandos.</li>
+<li>Hay un operador unario <strong>–</strong> , pero no hay un operador +.</li>
+<li>La división de enteros devuelve el cociente entero y desecha la fracción restante.</li>
+<li>El operador módulo se aplica así: con dos enteros positivos, devuelve el resto de la división. Ejemplos: 12%3 tiene el valor 0. 12%5 tiene el valor 2.</li>
+<li>Los operadores <strong>—</strong> y <strong>++</strong> son unarios.<ul>
+<li>Tienen la misma prioridad que el <strong>–</strong> unario.</li>
+<li>Se asocian de derecha a izquierda.</li>
+<li>Pueden aplicarse a variables, pero no a constantes ni a expresiones.</li>
+<li>Se pueden presentar como prefijo o como sufijo.</li>
+<li>Aplicados a variables enteras, su efecto es incrementar o decrementar el valor de la variable en una unidad.</li>
+<li>++i es equivalente a i=i+1;</li>
+<li>–i es equivalente a i=i-1;</li>
+<li>Con ++a el valor de “a” se incrementa antes de evaluar la expresión.</li>
+<li>Con a++ el valor de “a” se incrementa después de evaluar la expresión.</li>
+</ul>
+</li>
+</ul>
+<p><em>Relacionales</em></p>
+<p>Los operadores relacionales hacen referencia a la relación entre unos valores y otros.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/operadores_relacionales.png?w=825" alt=""></p>
+<p><em>Lógicos</em></p>
+<p>Los operadores lógicos hacen referencia a la forma en que las relaciones pueden conectarse entre sí.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/operadores_logicos.png?w=825" alt=""></p>
+<p><em>De Bits</em></p>
+<p>Los operadores de bits son operadores binarios, excepto la negación que es unario. Se aplican a variables enteras, resultando otro entero aplicando operaciones lógicas correspondientes a los bits de los operandos. Al desplazar bits a la izquierda, suele rellenarse con 0 por la derecha y al desplazar a la derecha, se rellena por la izquierda con 0 si el dígito más significativo es 0, y con 1 si es 1. El tipo de variable es con signo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/operadores-de-bits.png?w=825" alt=""></p>
+<p><strong>Expresiones y reglas de prioridad</strong></p>
+<p>Una expresión se forma combinando constantes, variables, operadores y llamadas a funciones.</p>
+<p>Una expresión representa un valor, el resultado de realizar las operaciones indicadas siguiendo las reglas de evaluación establecidas en el lenguaje.</p>
+<p>Con expresiones se forman sentencias; con éstas, funciones, y con éstas últimas se construye un programa completo.</p>
+<p>Cada expresión toma un valor que se determina tomando los valores de las variables y constantes implicadas y la ejecución de las operaciones indicadas.</p>
+<p>Una expresión consta de operadores y operandos.</p>
+<p>En la tabla de prioridades veremos operadores no estudiados, la línea de separación indica diferentes prioridades:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/prioridad1.png?w=825" alt=""></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/prioridad2.png?w=825" alt=""></p>
+<p><strong>Variables, constantes, conversión y ámbito de variables</strong></p>
+<p>Todas las definiciones serán respecto al lenguaje C.</p>
+<p><em>Variables</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/variables1.png?w=825" alt=""></p>
+<p>No en todos los lenguajes hace falta declarar antes las variables, aunque siempre es recomendable.</p>
+<p>Las variables, también conocidas como identificadores, deben cumplir las siguientes reglas:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/variables2.png?w=825" alt=""></p>
+<p><em>Constantes</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/constantes1.png?w=825" alt=""></p>
+<p>Las constantes son entidades cuyo valor no se modifica durante la ejecución del programa.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/constantes2.png?w=825" alt=""></p>
+<p><em>Conversión</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/conversion1.png?w=825" alt=""></p>
+<p>Este tipo de conversiones es temporal y la variable por convertir mantiene su valor.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/conversion2.png?w=825" alt=""></p>
+<p><em>Ámbito de variables</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/ambito.png?w=825" alt=""></p>
+<p>Las variables pueden ser:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/variables3.png?w=825" alt=""></p>
+<p><strong>Estructura de un programa</strong></p>
+<p>La estructura de un programa está compuesto de bibliotecas (#include), función principal (main), llaves ({}), y dentro de éstas, la declaración de variables y desarrollo del programa (conjunto de instrucciones).</p>
+<h3 id="Control-de-flujo"><a href="#Control-de-flujo" class="headerlink" title="Control de flujo"></a>Control de flujo</h3><p>El teorema del programa estructurado, demostrado por Böhm-Jacopini, demuestra que todo programa puede escribirse utilizando únicamente las tres instrucciones de control siguientes:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/control_flujo1.png?w=825" alt=""></p>
+<p>Solamente con estas tres estructuras se pueden escribir cualquier tipo de programa.</p>
+<p>La programación estructurada crea programas claros y fáciles de entender, además los bloques de código son auto explicativos, lo que facilita la documentación. No obstante, cabe destacar que en la medida que los programas aumentan en tamaño y complejidad, su mantenimiento también se va haciendo más difícil.</p>
+<p><strong>Estructura secuencial</strong></p>
+<p>El control de flujo se refiere al orden en que se ejecutan las sentencias del programa. A menos que se especifique expresamente, el flujo normal de control de todos los programas es secuencial.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/estructura_secuencial.png?w=825" alt=""></p>
+<p><strong>Estructura alternativa</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/estructura_alternativa.png?w=825" alt=""></p>
+<p>Las estructuras utilizadas son:</p>
+<ul>
+<li><strong>if-else</strong> . La cláusula else es opcional. Se pueden anidar varios if.</li>
+<li><strong>switch.</strong> Realiza distintas operaciones con base en el valor de la única variable o expresión. El valor de la expresión se compara con cada uno de los literales de la sentencia, si coincide alguno, se ejecuta el código, si no se realiza la sentencia default (opcional), si no existe default no se ejecuta nada. La sentencia break realiza la salida de un bloque de código.</li>
+</ul>
+<p>Ejemplo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/switch_if_else.png?w=825" alt=""></p>
+<p><strong>Estructuras repetitiva</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/estructuras_repetitivas.png?w=825" alt=""></p>
+<p><em>while</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/while1.png?w=825" alt=""></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/while2.png?w=825" alt=""></p>
+<p><em>do-while</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/do-while.png?w=825" alt=""></p>
+<p><em>for</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/for.png?w=825" alt=""></p>
+<h3 id="Funciones"><a href="#Funciones" class="headerlink" title="Funciones"></a>Funciones</h3><p>En el ámbito de la programación, una función es el término para describir una secuencia de órdenes que hacen una tarea específica.</p>
+<p>Características:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/funciones1.png?w=825" alt=""></p>
+<p>Las funciones son las que realizan las tareas principales de un programa. Las funciones realizan una tarea específica. Subdivide en varias tareas un programa, con pocas líneas y haciendo una tarea simple. Las funciones pueden o no devolver y recibir valores del programa.</p>
+<p>Hay dos tipos de funciones:</p>
+<ul>
+<li>Funciones Internas. Funciones internas del lenguaje que realizan tareas específicas. Por ejemplo, hay funciones para el manejo de caracteres y cadenas, matemáticas, de conversión, …</li>
+<li>Definidas por el el usuario. Primero hay que declarar el prototipo de la función, a continuación debemos hacer la llamada y por último desarrollar la función.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/funciones.png?w=825" alt=""></p>
+<p><strong>Ámbito de las variables (locales y globales)</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/ambito_variables.png?w=825" alt=""></p>
+<p><strong>Recursividad</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/recursividad.png?w=825" alt=""></p>
+<p>La principal ventaja de las funciones recursivas es que se pueden usar para crear versiones de algoritmos más claros y sencillos. Cuando se escriben funciones recursivas, se debe tener una sentencia _if_ para forzar a la función a volver sin que se ejecute la llamada recursiva.</p>
+<p>Las funciones recursivas pueden ahorrar la escritura de código, sin embargo, se deben usar con precaución, pues pueden generar un excesivo consumo de memoria.</p>
+<h3 id="Tipos-de-datos-compuestos-estructuras"><a href="#Tipos-de-datos-compuestos-estructuras" class="headerlink" title="Tipos de datos compuestos (estructuras)"></a>Tipos de datos compuestos (estructuras)</h3><p>Un array es una colección de variables del mismo tipo que se referencian por un nombre en común. A un elemento específico de un array se accede mediante un índice. Todos los arrays constan de posiciones de memoria contiguas. La dirección más baja corresponde al primer elemento. Los arrays pueden tener una o varias dimensiones.</p>
+<p>Una estructura es una colección de variables que se referencia bajo un único nombre, y a diferencia del array, puede combinar variables de tipos distintos.</p>
+<p>Tanto los arrays como los registros son estructuras de datos que sirven para almacenar valores en memoria, la diferencia radica en que el array solo te permite almacenar un tipo específico de datos: entero, caracteres, fechas, … y los registros, como se ha indicado, admite diferentes tipos de datos.</p>
+<p><strong>Arrays unidimensionales y bidimensionales</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/arrays_unidimensionales.png?w=825" alt=""></p>
+<p>La dirección más baja corresponde al primer elemento, y la más alta al último. Un array puede tener una o varias dimensiones. Para acceder a un elemento en particular de un array se usa un índice.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/arrays_unidimensionales2.png?w=825" alt=""></p>
+<ul>
+<li>El formato para declarar un array unidimensional es:<ul>
+<li>_tipo nombre_array[tamaño]_</li>
+</ul>
+</li>
+<li>El formato para declarar un array bidimensional es :<ul>
+<li>_tipo nombre_array[tamaño1][tamaño2]…[tamañoN]_</li>
+</ul>
+</li>
+</ul>
+<p>En la mayoría de los lenguajes los arrays usan el cero como índice para el primer elemento.</p>
+<p><strong>Arrays multidimensionales</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/array_multidimensional.png?w=825" alt=""></p>
+<ul>
+<li>El formato para declarar un array multidimensional es:<ul>
+<li>_tipo nombre_array[fila][columna]_</li>
+</ul>
+</li>
+</ul>
+<p><strong>Estructuras</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/estructura.png?w=825" alt=""></p>
+<p>Una definición de estructura forma una plantilla que se puede usar para crear variables de estructura. Las variables que forman la estructura son llamados elementos estructurados.</p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://www.genbetadev.com/paradigmas-de-programacion/diferencias-entre-paradigmas-de-programacion" rel="external nofollow noopener noreferrer" target="_blank">genbetadev</a></li>
+<li><a href="http://cursos.eie.ucr.ac.cr/claroline/backends/download.php?url=LzEgKEYuVywgUGFyYWRpZ21hcykvUGFyYWRpZ21hcyAxLnBkZg%3D%3D&amp;cidReset=true&amp;cidReq=IE0217_012" rel="external nofollow noopener noreferrer" target="_blank">Escuela de Ingeniería Eléctrica – UCR</a></li>
+<li><a href="https://www.infor.uva.es/" rel="external nofollow noopener noreferrer" target="_blank">Departamento de Informática (Universidad de Valladolid)</a></li>
+<li><a href="http://sisbib.unmsm.edu.pe/bibvirtual/publicaciones/indata/v04_n1/lenguajes.htm" rel="external nofollow noopener noreferrer" target="_blank">SISBIB (Sistema de bibliotecas)</a></li>
+<li><a href="http://fcasua.contad.unam.mx/apuntes/interiores/docs/2016/informatica/2/apunte/apunte_1167.pdf" rel="external nofollow noopener noreferrer" target="_blank">Universidad Nacional Autónoma de México</a></li>
+<li><a href="http://apuntedecaramelo.blogspot.com.es/p/oposiciones.html" rel="external nofollow noopener noreferrer" target="_blank">Apunte de Caramelo</a></li>
+<li><a href="https://www.mhe.es/universidad/informatica/8448136640/archivos/apendice_general_2.pdf" rel="external nofollow noopener noreferrer" target="_blank">McGraw-Hill</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t03/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T03
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t06/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T06</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
