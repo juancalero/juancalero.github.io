@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B4-T12 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B4-T12">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Redes conmutadas y de difusión. Conmutación de circuitos y de paquetes. Integración voz-datos. Protocolos de encaminamiento. Ethernet conmutada. MPLS. Calidad de servicios (QOS).ConmutaciónLa conmutac">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-T12">
+<meta property="og:url" content="http://localhost:4000/wiki/B4/b4-t12/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Redes conmutadas y de difusión. Conmutación de circuitos y de paquetes. Integración voz-datos. Protocolos de encaminamiento. Ethernet conmutada. MPLS. Calidad de servicios (QOS).ConmutaciónLa conmutac">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/nodo_conmutacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/circuito_virtual.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/circuitos_intercambio.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/trama_lapb.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/servicios_svc_pvc.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/peticion_dte_dce.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/control_trafico.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/formato_trama_fr.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/formato_cabecera_uni.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/formato_cabecera_nni.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/parametros_categoria_servicios.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:14:38.596Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-T12">
+<meta name="twitter:description" content="Redes conmutadas y de difusión. Conmutación de circuitos y de paquetes. Integración voz-datos. Protocolos de encaminamiento. Ethernet conmutada. MPLS. Calidad de servicios (QOS).ConmutaciónLa conmutac">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/03/nodo_conmutacion.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file active"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B4/b4-t12" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B4/">B4</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B4/b4-t12/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B4/b4-t12.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B4/b4-t12.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B4/b4-t12.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B4-T12
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Redes-conmutadas-y-de-difusion-Conmutacion-de-circuitos-y-de-paquetes-Integracion-voz-datos-Protocolos-de-encaminamiento-Ethernet-conmutada-MPLS-Calidad-de-servicios-QOS"><a href="#Redes-conmutadas-y-de-difusion-Conmutacion-de-circuitos-y-de-paquetes-Integracion-voz-datos-Protocolos-de-encaminamiento-Ethernet-conmutada-MPLS-Calidad-de-servicios-QOS" class="headerlink" title="Redes conmutadas y de difusión. Conmutación de circuitos y de paquetes. Integración voz-datos. Protocolos de encaminamiento. Ethernet conmutada. MPLS. Calidad de servicios (QOS)."></a>Redes conmutadas y de difusión. Conmutación de circuitos y de paquetes. Integración voz-datos. Protocolos de encaminamiento. Ethernet conmutada. MPLS. Calidad de servicios (QOS).</h1><h2 id="Conmutacion"><a href="#Conmutacion" class="headerlink" title="Conmutación"></a>Conmutación</h2><p>La conmutación surge en las redes de larga distancia para reducir el número de enlaces, simplificar el mantenimiento y ahorrar costes. La conexión de N elementos de una red todos con todos, con enlaces punto a punto requeriría N(N-1)/2 enlaces, que lo hace totalmente inviable.</p>
+<p>La transmisión a larga distancia se realiza a través de una red de nodos de conmutación intermedios. Los conmutadores forman un mosaico de NxM puntos de conmutación que conectan todas las líneas. Estos nodos de conmutación no están interesados por el contenido de la información, simplemente los encaminan desde la fuente hacia el destino mediante su conmutación de nodo en nodo.</p>
+<p>En una red de conmutación suele haber más de un camino entre cada par de estaciones. Surge así la necesidad de determinar cual es la ruta de encaminamiento óptima.</p>
+<p>Existen dos tecnologías de conmutación diferentes: conmutación de circuitos y conmutación de paquetes.</p>
+<h3 id="Conmutacion-de-Circuitos"><a href="#Conmutacion-de-Circuitos" class="headerlink" title="Conmutación de Circuitos"></a>Conmutación de Circuitos</h3><p>El funcionamiento de las redes de conmutación de circuitos se basa en los dos principios siguientes:</p>
+<ul>
+<li>Se establece un circuito para la comunicación entre dos usuarios que piden el intercambio de información.</li>
+<li>El circuito se asigna durante todo el tiempo que dure la comunicación.</li>
+</ul>
+<p>En la conmutación de circuitos quien establece la llamada determina el destino enviando un mensaje especial a la red con la dirección del destinatario de la llamada. Se establece entonces una comunicación directa entre las dos estaciones mediante la conmutación adecuada de todos los nodos intermedios. La red asigna recursos para que tenga lugar la comunicación y se enviará el mensaje cuando quien ha efectuado la llamada tenga conocimiento de que ésta ha sido establecida.</p>
+<p>Las redes de conmutación de circuitos pueden ser analógicas, como la Red Telefónica Pública Conmutada, o digitales como la Red Digital de Servicios Integrados.</p>
+<p>Aunque la conmutación de circuitos puede utilizarse para la transmisión de datos, resulta ineficiente para este propósito en términos de los recursos de línea puesto que la línea se mantiene ocupada durante toda la sesión, incluso cuando no hay información circulando por ella. Además la necesidad del establecimiento de un enlace de conexión antes de enviar los datos, puede generar un retraso de tiempo significativo respecto al tiempo de transferencia de los datos.</p>
+<p>La conmutación de circuitos se caracteriza por:</p>
+<ul>
+<li>Manejar un ancho de banda fijo.</li>
+<li>La información sigue una ruta preestablecida que no puede modificarse. Si existiera un bloqueo, no se podría enviar la información por otro camino.</li>
+<li>Los nodos intermedios no almacenan información. Si existiera un bloqueo, la información se perdería.</li>
+<li>No proporciona control de errores.</li>
+<li>Es muy rápida, tanto como permita el ancho de banda, y segura.</li>
+</ul>
+<p>Las redes de conmutación de circuitos trabajan casi exclusivamente con elementos de tipo síncrono, planteándose entonces el problema de sincronización a través de toda la red. Nos encontramos con tres tipos de sincronización de los centros de conmutación:</p>
+<ul>
+<li>Sincronización por valor medio de fase: el reloj de cada nodo de la red se ajusta con el valor obtenido calculando la media de los valores de los relojes de los nodos vecinos y del propio nodo.</li>
+<li>Sincronización por director-subordinado: se ajustan los relojes de los distintos nodos con el valor de un reloj maestro o director.</li>
+<li>Sincronización de forma anárquica: los relojes de los distintos nodos son de gran precisión y cada uno de ellos actúa de forma independiente.</li>
+</ul>
+<h3 id="Conmutacion-de-Paquetes"><a href="#Conmutacion-de-Paquetes" class="headerlink" title="Conmutación de Paquetes"></a>Conmutación de Paquetes</h3><p>La conmutación de paquetes es la técnica utilizada más comúnmente para la comunicación de datos. Los mensajes que se quieren comunicar se dividen en varias partes denominados paquetes. Cada paquete se transmite de forma individual a través de la red y pueden incluso seguir rutas diferentes. En el destino se reensamblan los paquetes en el mensaje original.</p>
+<p>Al igual que en la conmutación de circuitos las lineas se conectan a centros de conmutación, pero en este caso los paquetes se transmiten al conmutador y son almacenados en una cola en espera de su envío (store an forward) y cuando hay un tiempo muerto en la comunicación entre la fuente y el destino, las líneas pueden ser utilizadas para otras comunicaciones.</p>
+<p>En esta técnica se pone un límite al tamño de los paquetes, que depende, entre otros factores, de:</p>
+<ul>
+<li>El número de enlaces que se pueden conectar al centro de conmutación.</li>
+<li>La ocupación de la línea de transmisión.</li>
+<li>El tiempo de respuesta requerido.</li>
+</ul>
+<p>La conmutación de paquetes se caracteriza por:</p>
+<ul>
+<li>Permite realizar varias transmisiones simultáneamente.</li>
+<li>Existe un retardo mínimo entre usuarios.</li>
+<li>El conmutador de paquetes proporciona normalmente tratamiento de errores y conversiones de código entre los distintos terminales y ordenadores.</li>
+<li>Se permite trabajar a distintas cadencias de línea.</li>
+<li>El ancho de banda no es rígido para toda la comunicación.</li>
+<li>Cada paquete lleva una cabecera que contiene la información sobre el camino que debe seguir el paquete.</li>
+<li>Permite la multidifusión. Un mismo mensaje se puede enviar a varios usuarios.</li>
+<li>Se pueden establecer niveles de prioridad en los mensajes.</li>
+</ul>
+<p>Existe otra técnica de conmutación, la conmutación de mensajes, que se basa en los mismos principios que la conmutación de paquetes, pero en la que los mensajes no son fragmentados en paquetes sino que se envían como un bloque completo. Comparada con la conmutación de paquetes presenta dos desventajas importantes: el espacio necesario para el almacenamiento de mensajes puede llegar a ser muy grande y lo mismo sucede con los retrasos de tiempo, lo que la hace inapropiada para el trabajo en tiempo real.</p>
+<p>Existen dos esquemas en la conmutación de paquetes:</p>
+<ul>
+<li><strong>Datagramas</strong> : cada paquete se trata como una entidad independiente y es encaminado individualmente a través de la red. La cabecera de cada paquete contiene información completa acerca de su destino.</li>
+<li><strong>Circuito virtual</strong> : se utiliza una fase inicial para establecer una ruta (un circuito virtual) entre los nodos intermedios para todos los paquetes transmitidos durante la sesión de comunicación entre dos nodos finales.</li>
+</ul>
+<p>En el método datagrama los paquetes no siguen una ruta preestablecida, los nodos intermedios examinan la cabecera y deciden a que nodo enviar el paquete para que éste alcance su destino. La entrega no está garantizada y los paquetes pueden llegar al destino en un orden distinto al que fueron enviados, así que deben ser ordenados en el destino para formar el mensaje original. La principal implementación de red de conmutación de paquetes en modo datagrama es Internet con el protocolo IP.</p>
+<p>En el método circuito virtual en cada nodo intermedio se registra una entrada en una tabla indicando la ruta que ha sido establecida para la conexión, de esta forma los paquetes pueden tener cabeceras más cortas al contener sólo un identificador del circuito virtual y no información completa sobre su destino. Los paquetes llegan al destino en el orden correcto y hay una cierta garantía de que llegan libres de errores.</p>
+<p>Las formas más comunes de redes de conmutación de paquetes de circuito virtual son X.25, Frame Relay y ATM.</p>
+<h2 id="Encaminamiento"><a href="#Encaminamiento" class="headerlink" title="Encaminamiento"></a>Encaminamiento</h2><p>Como ya hemos comentado, cuando hay mas de un camino entre cada par de estaciones hay que determinar cual es la ruta de encaminamiento óptima para el intercambio de información.</p>
+<p>Los protocolos de encaminamiento son aquellos protocolos que proporcionan técnicas para encaminar la información y que además proporcionan técnicas o mecanismos para compartir la información de encaminamiento.</p>
+<p>Los distintos protocolos de encaminamiento, que actúan en la capa de red del modelo de referencia OSI, utilizan diferentes algoritmos de encaminamiento y diferentes métricas para evaluar qué camino es el mejor para transportar el paquete, pero entre sus objetivos de diseño todos tienen una o más de las características siguientes:</p>
+<ul>
+<li>Optimalidad: se refiere a la capacidad del algoritmo de encaminamiento empleado de seleccionar la mejor ruta, que va a depender de las métricas utilizadas y de como se ponderen al realizar los cálculos.</li>
+<li>Simplicidad y baja sobrecarga: deberían ofrecer su funcionalidad de una forma eficiente con mínima utilización de información de sobrecarga.</li>
+<li>Ser robustos y estables: se espera que actúen de una forma correcta cuando se enfrenten a situaciones poco usuales o imprevistas, tales como fallos del hardware, implementaciones incorrectas o condiciones de sobrecarga de tráfico.</li>
+<li>Convergencia rápida: la convergencia es el proceso de acuerdo sobre las rutas óptimas por parte de todos los routers.</li>
+<li>Flexibilidad: deberían ser capaces de adaptarse de una manera rápida y apropiada a las condiciones cambiantes de la red.</li>
+</ul>
+<p>Las métricas se pueden calcular atendiendo a diferentes factores, entre ellos:</p>
+<ul>
+<li>Ancho de banda: se refiere a la capacidad de transporte de datos de un enlace.</li>
+<li>Número de saltos: el número de routers que se atraviesan en el camino entre el origen y el destino.</li>
+<li>Carga: la cantidad de datos que pasa por una interfaz determinada.</li>
+<li>Fiabilidad: la tasa de error de un enlace determinado.</li>
+<li>Retardo: lo que tarda el paquete desde el origen al destino.</li>
+<li>Coste de la comunicación: término genérico que engloba los gastos de operación de los enlaces.</li>
+</ul>
+<p>Antes de ver la clasificación de los métodos de encaminamiento conviene detallar la estructura general de un nodo de conmutación.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/nodo_conmutacion.png?w=825" alt=""></p>
+<ul>
+<li><strong>LOCAL</strong> : información sobre el entorno local del nodo (memoria disponible, enlaces locales, etc.).</li>
+<li><strong>PDU</strong> (Protocol Data Unit): unidad básica de información.</li>
+<li><strong>R-PDU</strong> (Routing PDU): información de control entre nodos. Son paquetes de control enviados por otros nodos con información sobre la red, no contienen datos.</li>
+<li><strong>FIB</strong> (Fordward Information Base): es la tabla de encaminamiento que es consultada para el reenvío de los paquetes (representados en la figura por la PDU).</li>
+<li><strong>RIB</strong> (Routing Information Base): es la tabla que almacena las distancias o costes a los nodos. Es la base de información de encaminamiento que se utiliza para formar la FIB. La información de la RIB se consigue mediante la recepción de R-PDUs procedentes de otros nodos vecinos y por la interacción con el entorno local de cada nodo.</li>
+</ul>
+<p>Los métodos de encaminamiento se pueden clasificar, atendiendo al lugar dónde se decide el encaminamiento, en:</p>
+<ul>
+<li><strong>Encaminamiento fijado en origen</strong> (Source Routing): la ruta que debe seguir el paquete se fija en el sistema terminal origen y son estos los que contienen las tablas de encaminamiento. Cada paquete lleva un campo que especifica su ruta y los nodos de conmutación simplemente reenvían los paquetes por esas rutas ya especificadas.</li>
+<li><strong>Salto a Salto</strong> (Hop by Hop): cada nodo, sabiendo donde está el destino, conoce sólo el siguiente salto a realizar.</li>
+</ul>
+<p>En función de la adaptabilidad a los cambios se clasifican en:</p>
+<ul>
+<li><strong>No adaptativos (estáticos)</strong> : las tablas de encaminamiento de los nodos se configuran manualmente y permanecen fijas hasta que se vuelve a actuar sobre ellas. Una variante de los algoritmos estáticos son los <strong>Q-estáticos</strong> que poseen una cierta adaptabilidad: en lugar de dar una sola ruta fija, se proporcionan además varias alternativas para el caso en que falle la principal.</li>
+<li><strong>Adaptativos (dinámicos)</strong> : Se tienen tres tipos de encaminamiento dinámico:<ul>
+<li><strong>Adaptativo Centralizado</strong> : todos los nodos se consideran iguales excepto uno, el nodo central. Este nodo cuenta con información de todos los nodos y centraliza el control. Cada nodo envía al nodo central las R-PDUs con información de control. Es el nodo central el encargado de formar la tabla de enrutamiento de cada nodo.</li>
+<li><strong>Adaptativo Aislado</strong> : en cada nodo sólo se cuenta con información local, pero el control es distribuido: Cada vez que un nodo recibe un paquete que no es para él lo reenvía por todos los enlaces excepto por el que llegó. Los principales métodos de encaminamiento adaptativo aislado son los <strong>algoritmos de inundación y de estado de enlaces</strong> .</li>
+<li><strong>Adaptativo Distribuido</strong> : son los más utilizados. Todos los nodos envían y reciben información de control a sus vecinos y calculan su tabla de encaminamiento en función de su RIB. El control de encaminamiento es distribuido. La adaptación a los cambios es óptima (siempre que estos cambios sean notificados). Entre los métodos de encaminamiento adaptativo distribuido se encuentran los <strong>algoritmos de vector de distancias</strong> .</li>
+</ul>
+</li>
+</ul>
+<p>En los <strong>algoritmos de inundación</strong> los nodos no intercambian información de control. Cuando llega un paquete a un nodo lo que hace es conmutarlo por todos los puertos de salida sin mirar ninguna tabla de enrutamiento. Tienen el problema potencial de que si la topología de la red tiene bucles el paquete puede estar dando vueltas de manera indefinida. Una solución pasa por limitar la vida del paquete en la red, incluyendo un campo en el paquete que contenga el número de saltos que puede dar. Cada vez que se conmuta el paquete se decrementa en una unidad el valor de dicho campo y cuando llegue a cero en lugar de conmutarlo se descarta.</p>
+<p>En los <strong>algoritmos de estado del enlace</strong> cada nodo difunde a todos los nodos de la red sus distancias con los nodos vecinos, es decir, cada nodo comunica su información local a todos los nodos.</p>
+<p>En los algoritmos de vector de distancias cada nodo informa a todos sus nodos vecinos de las distancias o costes conocidos por él mediante los vectores de distancias, que son vectores de longitud variable que contienen un par (nodo, distancia de nodo) por cada nodo conocido por el nodo en cuestión. Estos vectores se envían periódicamente y cada vez que varían las distancias. Con todos los vectores recibidos cada nodo monta su tabla de enrutamiento.</p>
+<h2 id="X-25"><a href="#X-25" class="headerlink" title="X.25"></a>X.25</h2><p>El escenario de las redes de comunicación en los primeros años 70 estaba caracterizado por la existencia de muchas redes públicas de datos, muy diferentes internamente, en manos de organizaciones gubernamentales y compañías privadas. Con el crecimiento de la interconexión de redes se hizo patente la necesidad de un protocolo de red común capaz de proporcionar la conectividad entre estas redes públicas de datos.</p>
+<p>En 1976, la CCITT (ITU-T desde 1993) recomendó X.25 como el protocolo común. Este protocolo ha sido revisado posteriormente en varias ocasiones.</p>
+<p>X.25 es un conjunto de protocolos que define una recomendación internacional tanto para el intercambio de datos como para el control de la información entre un dispositivo de usuario, el Equipo Terminal de Datos (ETD), y un nodo de red, el Equipo de Terminación del Circuito de Datos (ETCD), de una red de conmutación de paquetes (PSN, Packet Switched Network). La velocidad típica de una red X.25 está entre 9,6-64 Kbps.</p>
+<p>Para el establecimiento de la comunicación entre dispositivos en diferentes emplazamientos, una organización puede construir su propia PSN privada o puede abonarse al servicio de una PSN pública. Las facilidades ofrecidas al abonado y la estructura de tarifas dependerán del proveedor del servicio.</p>
+<p>X.25 utiliza un servicio orientado a la conexión. Un nodo extremo indica a la red que desea iniciar una conversación con otro nodo extremo. La red envía la petición al destinatario, que puede aceptarla o rechazarla. Si la acepta, se establece la conexión.</p>
+<p>Según la terminología usada en X.25, los dispositivos de red se clasifican en tres categorías:</p>
+<ul>
+<li><strong>Equipo Terminal de Datos (ETD)</strong> : también conocido por DTE (Data Terminal Equipment). Son los equipos finales que se comunican a través de la red X.25. Generalmente son terminales, PCs o hosts localizados en el local del abonado del servicio.</li>
+<li><strong>Equipo Terminal del Circuito de Datos (ETCD)</strong> : también conocido por DCE (Data Communication Equipment). Es un dispositivo en el punto de entrada a la red. Son DCEs por ejemplo los módems o los conmutadores de paquetes. Cada ETD debe estar asociado a un ETCD.</li>
+<li><strong>Equipo de conmutación de datos (ECD)</strong> : también conocido por DSE (Data Switching Equipment). Es un nodo de conmutación en la red de conmutación de paquetes. Transfiere los datos de un DTE a otro DTE.</li>
+</ul>
+<p>Cada sistema en una red X.25 tiene una dirección que lo identifica y que es proporcionada por el proveedor. Para asegurar la unicidad de las direcciones, la norma X.121 define un esquema de numeración internacional. Esta dirección se llama dirección de usuario de red (NUA, Network User Address) y está compuesta de dos partes:</p>
+<ul>
+<li><strong>Código de identificación de la red de datos, DNIC</strong> . Consta de 4 dígitos divididos en:<ul>
+<li><strong>Código del país, DCC</strong> . Formado por tres dígitos, el primero identifica una zona geográfica a escala mundial y los dos siguientes un país específico.</li>
+<li><strong>Código de la red de datos pública</strong> : un único dígito que identifica una PDN específica.</li>
+</ul>
+</li>
+<li><strong>NTN, Número de terminal nacional</strong> : son 10 dígitos asignados por el proveedor y que no tienen una regla determinada para su formación.</li>
+</ul>
+<h3 id="Circuitos-Virtuales-Canales-Logicos"><a href="#Circuitos-Virtuales-Canales-Logicos" class="headerlink" title="Circuitos Virtuales. Canales Lógicos"></a>Circuitos Virtuales. Canales Lógicos</h3><p>La capacidad de transferencia de datos de la línea X.25 puede estar compartida entre un número de sesiones diferentes. El número de sesiones está en función del tipo de suscripción y de las capacidades software y hardware del DTE. Cada sesión constituye lo que se llama un <strong>circuito virtual</strong> .</p>
+<p>Un circuito virtual es un camino lógico bidireccional entre los sistemas local y remoto que puede tener su ruta conmutada en la red, es decir, físicamente la conexión puede pasar a través de cualquier número de nodos intermedios, tales como DCEs o DSEs.</p>
+<p>En X.25 existen dos tipos de circuitos virtuales: <strong>circuitos virtuales conmutados</strong> (SVC, Switched Virtual Circuit) y <strong>circuitos virtuales permanentes</strong> (PVC, Permanent Virtual Circuit). Los circuitos virtuales conmutados son los más habituales, también se les denomina <strong>llamadas virtuales</strong> . Este tipo de circuitos son conexiones temporales utilizadas para transferencias de datos esporádicas. Requieren, cada vez que dos dispositivos DTE necesitan comunicarse, que se establezca, se mantenga y se termine una conexión. Los circuitos virtuales permanentes son conexiones establecidas de forma permanente utilizadas para transferencias de datos frecuentes y no necesitan que se establezca o termine la conexión porque esta está siempre activa.</p>
+<p>Para permitir circuitos virtuales simultáneos, ya sean permanentes o conmutados, se utilizan los llamados <strong>canales lógicos</strong> . Los canales lógicos son los caminos de comunicación entre un DTE y su DCE asociado. El proveedor asigna números de canales lógicos específicos, y cada número debe hacer corresponder el DTE con su DCE. El rango de números de canales lógicos válidos está entre 0 y 4095.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/circuito_virtual.png?w=825" alt=""></p>
+<p>Cuando se utilizan SVCs no es necesario conocer el número de canal lógico en uso, el software X.25 asigna el número de canal lógico durante la fase de establecimiento de la comunicación, eligiendo el número dentro de la gama establecida mediante acuerdo con el proveedor en el momento del abono. Para PVCs si es necesario conocer el número, los PVCs están configurados de manera permanente.</p>
+<p>Hay tres tipos de canales lógicos para SVC:</p>
+<ul>
+<li><strong>Unidireccionales Entrantes</strong> : el DTE sólo puede recibir llamadas en ese canal.</li>
+<li><strong>Unidireccionales Salientes</strong> : el DTE sólo puede iniciar llamadas en ese canal.</li>
+<li><strong>Bidireccionales</strong> : el DTE puede iniciar y recibir llamadas en ese canal.</li>
+</ul>
+<p>Si se utiliza más de un tipo de canal lógico, los números deben asignarse de acuerdo a la siguiente jerarquía de menor a mayor:</p>
+<ul>
+<li>PVCs.</li>
+<li>SVCs unidireccionales entrantes.</li>
+<li>SVCs bidireccionales.</li>
+<li>SVCs unidireccionales salientes.</li>
+</ul>
+<h3 id="Niveles-en-X-25"><a href="#Niveles-en-X-25" class="headerlink" title="Niveles en X.25"></a>Niveles en X.25</h3><p>X.25 tiene tres niveles que se corresponden con las tres primeras capas de la arquitectura de siete niveles del modelo de referencia OSI de ISO. Estos niveles son:</p>
+<ul>
+<li>Nivel físico: describe la interfaz con el medio físico. Es similar a la capa física del modelo de referencia OSI.</li>
+<li>Nivel de enlace: es el responsable de la comunicación fiable entre el DTE y el DCE. Es similar a la capa de enlace del modelo de referencia OSI.</li>
+<li>Nivel de paquete: describe el protocolo de transferencia de datos en la red de paquetes conmutados. Se corresponde con la capa de red del modelo de referencia OSI.</li>
+</ul>
+<p><strong>Nivel Físico</strong></p>
+<p>El nivel físico, como en cualquier otra pila de protocolos, especifica las características mecánicas, eléctricas, funcionales y de procedimiento que son necesarias para activar, mantener y terminar una conexión física entre un DTE y un DCE.</p>
+<p>Se implementa como un controlador de corrientes y realiza las funciones siguientes:</p>
+<ul>
+<li>Activa y desactiva los circuitos físicos mediante el uso de señales eléctricas.</li>
+<li>Mantiene las características de línea de la interfaz seleccionada.</li>
+<li>Indica fallos en las tramas de entrada (por ejemplo trama con longitud incorrecta).</li>
+</ul>
+<p>La recomendación X.25 no especifica en sí misma como debe funcionar el nivel físico sino que referencia otras recomendaciones de la ITU-T, especificando cuales de ellas se pueden utilizar. Las recomendaciones especificadas son: X.21, X.21bis, X.31 y las interfaces de la serie V como V.24.</p>
+<p><strong>La recomendación X.21</strong> es una interfaz de señalización digital que opera sobre 8 circuitos de intercambio. Sus características funcionales están definidas en la recomendación X.24 y sus características eléctricas en la recomendación X.27.</p>
+<p>Los 8 circuitos de intercambio son:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/circuitos_intercambio.png?w=825" alt=""></p>
+<p><strong>X.21bis</strong> define la interfaz analógica para permitir el acceso a la red digital de circuitos conmutados utilizando un circuito analógico. Proporciona procedimientos para el envío y recepción de información direccionada, lo que permite al DTE establecer circuitos conmutados con otros DTE que tengan acceso a la red.</p>
+<p><strong>Nivel de Enlace</strong></p>
+<p>En el nivel de enlace se especifica el procedimiento de acceso al enlace para el intercambio de datos a través del enlace físico. El nivel de enlace garantiza una transferencia fiable de los datos entre el DTE y el DCE, transmitiendo los datos como una secuencia de tramas. Esto significa que además de proporcionar los mecanismos para la transmisión debe de proporcionar medios para informar de si los datos han alcanzado el destino correctamente, y si no es así retransmitirlo.</p>
+<p>Las funciones realizadas en el nivel de enlace incluyen:</p>
+<ul>
+<li>Transferencia de datos de manera eficiente y ajustada en tiempo.</li>
+<li>Sincronismo de enlace para asegurar que el receptor está en fase con el transmisor.</li>
+<li>Detección y recuperación de errores de transmisión.</li>
+<li>Identificación de errores de procedimiento e informe a las capas superiores para su recuperación.</li>
+</ul>
+<p>Hay varios protocolos que se pueden utilizar en el nivel de enlace:</p>
+<ul>
+<li><strong>LAPB (Link Access Protocol, Balanced)</strong> : es el utilizado generalmente. Se deriva del protocolo HDCL y además de todas las características de éste permite formar una conexión de enlace lógico.</li>
+<li><strong>LAP (Link Access Protocol)</strong> : es una versión temprana de LAPB y hoy día prácticamente no se utiliza.</li>
+<li><strong>LLC (Logical Link Protocol)</strong> : es un protocolo IEEE 802 para Redes de Área Local que permite transmitir paquetes X.25 a través de un canal RAL.</li>
+</ul>
+<p>En <strong>LAPB</strong> se describen los procedimientos para el intercambio de información entre un DTE y un DCE. Este intercambio de información puede ser a través de un único circuito físico o de varios. El funcionamiento por múltiples circuitos físicos, que es opcional, se denomina <strong>multienlace</strong> y es necesario si se quiere evitar que las averías del circuito interrumpan el funcionamiento de la capa de paquete.</p>
+<p>LAPB maneja tres tipos de tramas:</p>
+<ul>
+<li><strong>Tramas de Información (I)</strong> : contienen la información real que se quiere transmitir.</li>
+<li><strong>Tramas Supervisoras (S)</strong> : se utilizan para realizar funciones de control de supervisión del enlace de datos, tales como el acuse de recibo, la petición de retransmisión y la petición de una supresión temporal de la transmisión de tramas I.</li>
+<li><strong>Tramas no Numeradas (U)</strong> : se utilizan para proporcionar funciones adicionales de control del enlace de datos.</li>
+</ul>
+<p>Cada trama, excepto las tramas U, llevan una numeración secuencial, pudiendo ser esta numeración en módulo 8, módulo 128 o módulo 32768. Los números secuenciales adoptan cíclicamente todos los valores de la gama, entre 0 y el módulo menos 1. Se tienen así tres modos de funcionamiento de X.25:</p>
+<ul>
+<li>Funcionamiento básico: en módulo 8.</li>
+<li>Funcionamiento ampliado: en módulo 128.</li>
+<li>Funcionamiento superampliado: en módulo 32768.</li>
+</ul>
+<p>Ejemplos de tramas S son:</p>
+<ul>
+<li>RECEIVE READY (RR): trama de reconocimiento (ACK) indicando el número de la siguiente trama de información esperada.</li>
+<li>RECIVE NOT READY (RNR): trama que indica al transmisor que detenga la transmisión debido a problemas temporales.</li>
+<li>REJECT (REJ): es una trama de reconocimiento negativo (NACK) que indica la petición del inicio de un proceso de recuperación por la pérdida de tramas de información.</li>
+<li>SELECTIVE REJECT (SREJ): es como REJ pero además permite la recuperación de errores de secuencia de tramas.</li>
+</ul>
+<p>En el modo de funcionamiento básico no se pueden utilizar tramas SREJ, son obligatorias las tramas REJ. En el modo de funcionamiento superampliado es al contrario. En el modo ampliado se elige en el momento del abono el tipo de trama que se va a utilizar, REJ o SREJ.</p>
+<p>Ejemplos de tramas U son:</p>
+<ul>
+<li>DISCONNECT (DISC): permiten anunciar a la máquina una desconexión.</li>
+<li>SET NORMAL RESPONSE TIME (SNRT): permite anunciar a la máquina que ha vuelto.</li>
+<li>UNNUMBERED ACKNOWLEDGEMENT (UA): se utiliza para el acuse de recibo y para la aceptación de instrucciones de fijación de modo.</li>
+<li>FRAME REJECT (FRMR): se utiliza para indicar que se ha recibido una trama de semántica imposible.</li>
+</ul>
+<p>La estructura general de una trama LAPB es la siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/trama_lapb.png?w=825" alt=""></p>
+<ul>
+<li><strong>Campo de bandera (8 bits)</strong> : indica el comienzo y el final de cada trama. Está formado por la secuencia 01111110.</li>
+<li><strong>Campo de dirección (8 bits)</strong> : contiene la dirección del DTE o DCE, identifica al receptor previsto en una trama de instrucción o al transmisor en una trama de respuesta.</li>
+<li><strong>Campo de control (8/16/64 bits)</strong> : contiene los números de secuencia o las instrucciones y respuestas para controlar el flujo de datos entre el DTE y el DCE. En el funcionamiento en módulo 8 siempre tiene una longitud de 8 bits. En el funcionamiento ampliado y superampliado tiene una longitud de 16 y 64 bits respectivamente para tramas que contengan números secuenciales; para tramas que no contengan números secuenciales su longitud es siempre de 8 bits.</li>
+<li><strong>Campo de información (longitud variable)</strong> : no siempre existe, pero si existe sigue al campo de control y precede al campo de verificación de trama (FCS). Cuando se transmite del DCE al DTE, si el número de bits de información que ha de insertarse en el campo de información no es múltiplo de 8, el DCE rellenará este campo de información con ceros de modo que los octetos del campo de información queden alineados. Cuando se transmita del DTE al DCE, el DTE transmitirá únicamente información alineada por octetos.</li>
+<li><strong>Campo de secuencia de verificación de trama (FCS) (16 bits)</strong> : sirve para la comprobación de errores de transmisión. Es una variante del CRC.</li>
+</ul>
+<p><strong>Nivel de Paquete</strong></p>
+<p>El nivel de paquete gobierna la comunicación extremo a extremo entre los diferentes DTEs. Crea unidades de datos de red, denominados paquetes, que contienen información de control y datos de usuario. Se tienen entonces dos tipos de paquetes: paquetes de control y paquetes de datos. Cada paquete que deba transferirse a través de la interfaz DTE/DCE estará contenido en el campo de información de la capa de enlace de datos.</p>
+<p>La capa de paquete proporciona procedimientos para manejar los siguientes servicios:</p>
+<ul>
+<li><strong>Circuito Virtual Conmutado (SVC)</strong> : como ya hemos visto es una asociación temporal entre dos DTEs. Este servicio se inicia por un DTE que envía una señal de petición de llamada (CALL REQUEST) a la red y garantiza una entrega ordenada de paquetes entre dos DTEs en cualquier dirección.</li>
+<li><strong>Circuito Virtual Permanente (PVC)</strong> : es una asociación permanente entre dos DTEs y que por tanto no requiere una acción de establecimiento o liberación de llamada.</li>
+<li><strong>Selección rápida</strong> : es un servicio que permite a los paquetes que establecen el SVC llevar también datos.</li>
+<li><strong>Establecimiento y liberación de llamada</strong> : son servicios requeridos por el SVC.</li>
+<li><strong>Control de flujo y manejo de errores de cada canal lógico</strong> .</li>
+</ul>
+<p>En la tabla siguiente se muestran los distintos tipos de paquetes y su utilización en los servicios SVC y PVC.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/servicios_svc_pvc.png?w=825" alt=""></p>
+<p>Todos los tipos de paquetes contienen un encabezamiento que contiene los siguientes campos:</p>
+<ul>
+<li><strong>Identificador de protocolo (1 byte)</strong> : para funcionamiento en módulo 8 y 128 no aparece en ningún tipo de dato. Para funcionamiento en módulo 32768 aparece en el primer byte de cada paquete de datos.</li>
+<li><strong>Identificador general de formato (4 bits)</strong> : es un campo codificado que indica el formato general del resto del encabezamiento. El primer bit se utiliza para el bit calificador en paquetes de datos; para el bit de dirección en los paquetes de establecimiento y liberación de la comunicación; y se pone a 0 en el resto de paquetes. El siguiente bit se utiliza para el procedimiento de establecimiento de la comunicación y de confirmación de entrega en paquetes de datos; se pone a 0 para los demás paquetes. Los dos siguientes bits indican el modo de funcionamiento: 01 para módulo 8, 10 para módulo 128 y 11 para 32768.</li>
+<li><strong>Identificador de canal lógico (12 bits)</strong> : está formado por el número de grupo de canales lógicos (4 bits) y el número de canal lógico (8 bits). Como en número 0 se reserva para futuros usos, los 12 bits dan un máximo de 4095 posibles números.</li>
+<li><strong>Identificador del tipo de paquete (8 bits)</strong> : es una codificación dependiente del tipo de paquete y modo de funcionamiento.</li>
+</ul>
+<p>El formato del resto del paquete depende del tipo.</p>
+<h3 id="Establecimiento-y-Liberacion-de-la-Comunicacion"><a href="#Establecimiento-y-Liberacion-de-la-Comunicacion" class="headerlink" title="Establecimiento y Liberación de la Comunicación"></a>Establecimiento y Liberación de la Comunicación</h3><p>Cuando un DTE A quiere establecer una comunicación con un DTE B, A indica una petición de llamada transfiriendo un paquete PETICIÓN DE LLAMADA (CALL REQUEST) a su DCE por la interfaz DTE/DCE. El canal lógico seleccionado por el DTE está en estado <em>“DTE en espera”</em> . El paquete incluye la dirección del DTE llamado y puede incluir también la dirección del DTE llamante.</p>
+<p>Cuando el paquete llega al DCE asociado a B, el DCE indica que hay una llamada entrante transfiriendo por la interfaz DTE/DCE, un paquete de LLAMADA ENTRANTE (INCOMING CALL). Esto hace pasar al canal lógico al estado <em>“DCE en espera”</em> . El paquete incluye la dirección del DTE llamante.</p>
+<p>B indicará su aceptación de la llamada transfiriendo un paquete de LLAMADA ACEPTADA (CALL ACEPTED) que especifique el mismo canal lógico que el paquete LLAMADA ENTRANTE. Esto hace pasar al canal lógico especificado al estado <em>“transferencia de datos”</em> . Cuando el paquete llega al DCE asociado a A transfiere por la interfaz DTE/DCE un paquete de COMUNICACIÓN ESTABLECIDA (CALL CONNECTED). La recepción de este paquete en A con el mismo canal lógico que el establecido en el paquete PETICIÓN DE LLAMADA, le indica que la llamada a sido aceptada por el DTE llamado B y el canal lógico pasa al estado <em>“transferencia de datos”</em> . Cuando el DTE A recibe el paquete de COMUNICACIÓN ESTABLECIDA se establece el Circuito Virtual.</p>
+<p>El DTE determina el número de canal lógico para la petición de llamadas y el DCE para las llamadas entrantes. Cuando un DTE y un DCE transfieren simultáneamente un paquete PETICIÓN DE LLAMADA y un paquete de LLAMADA ENTRANTE con el mismo número de canal lógico se produce una <strong>colisión de llamadas</strong> . En este caso en la norma X.25 determina que se dar curso a la petición de llamada y se cancela la llamada entrante.</p>
+<p>En cualquier momento cualquiera de los DTEs puede indicar la liberación de la llamada transfiriendo por la interfaz DTE/DCE un paquete de PETICIÓN DE LIBERACIÓN (CLEAR REQUEST). El canal lógico está en este caso en estado <em>“petición de liberación por el DTE”</em> . El DCE del otro extremo indica la liberación transfiriendo un paquete de INDICACIÓN DE LIBERACIÓN (CLEAR INDICATION). El canal lógico está entonces en el estado de <em>“indicación de liberación por el DCE”</em> . El DTE responde transfiriendo un paquete de CONFIRMACIÓN DE LIBERACIÓN POR EL DTE, quedando el canal lógico en estado <em>“preparado”</em> .</p>
+<p>Cuando un DTE y un DCE transfieren simultáneamente un paquete PETICIÓN DE LIBERACIÓN y un paquete de INDICACIÓN DE LIBERACIÓN con el mismo número de canal lógico se produce una <strong>colisión de liberaciones</strong> . En este caso el DCE considera completada la liberación.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/peticion_dte_dce.png?w=825" alt=""></p>
+<h2 id="Frame-Relay"><a href="#Frame-Relay" class="headerlink" title="Frame Relay"></a>Frame Relay</h2><p>Frame Relay (FR) es una tecnología WAN de alto rendimiento que opera en los niveles 1 y 2 (nivel físico y nivel de enlace de datos) del modelo de referencia OSI. Diseñado originalmente para operar con las interfaces de RDSI, en la actualidad se usa también sobre otras interfaces de red. FR es un ejemplo de tecnología de conmutación de paquetes que se considera como una evolución de X.25 y un paso de transición hacia ATM.</p>
+<p>Técnicamente es una tecnología diseñada para transmitir y distribuir datos a alta velocidad en unidades de longitud variable denominadas tramas.</p>
+<p>FR consigue rendimientos muy superiores a los de X.25 al eliminar la mayoría de los controles de errores, con lo que se disminuye el trasiego de información, pero esto hace que se necesiten líneas que garanticen un mínimo de fiabilidad. En FR se soportan velocidades de transmisión de hasta 45 Mbps aunque las implementaciones típicas no pasan de 1.5/2 Mbps.</p>
+<p>Se adapta muy bien a la interconexión de LANs y al tráfico en ráfagas que éstas presentan. Utiliza técnicas de multiplexación estadística que permiten que la conexión virtual que tiene tráfico en un momento dado utilice parte del ancho de banda que no está siendo utilizado en las otras conexiones con las que comparte el mismo enlace físico. La multiplexación estadística proporciona a la red ancho de banda bajo demanda: la red es capaz de obtener el ancho de banda que necesita cuando lo necesita sin tener que reservarlo por adelantado y mantenerlo sin usar hasta que sea requerido.</p>
+<p>FR nació como un estándar de facto en 1990 resultado del acuerdo entre un grupo de fabricantes de equipos de telecomunicaciones. Surgió como una solución transitoria para cubrir necesidades del mercado no satisfechas hasta ese momento, pero ha logrado una gran aceptación y en la actualidad juega un papel importante en la interconexión de redes.</p>
+<p>FR se desarrolló básicamente por las siguientes motivaciones:</p>
+<ul>
+<li>Demanda de mayores velocidades: esta necesidad venía provocada por el aumento creciente del tráfico de datos a ráfagas, la proliferación de las LAN, la arquitectura cliente/servidor y la integración LAN-WAN.</li>
+<li>Disponibilidad de mejores medios de transmisión: protocolos como X.25 o SNA se desarrollaron con una cierta complejidad para introducir procedimientos de corrección de errores, uno de los factores principales en la limitación del ancho de banda. Con la aparición de las líneas digitales, sobre todo la fibra óptica, se puede eliminar la mayor parte de estos procedimientos al ser medios con una tasa muy baja de errores.</li>
+<li>Mayor capacidad de procesamiento de los equipos conectados a la red: equipos como PCs o estaciones de trabajo demandan mayores velocidades a la vez que tienen capacidades de procesamiento que facilitan la gestión de tramas. Además existen ya familias de protocolos como TCP/IP capaces de gestionar el control de errores y secuenciación de tramas.</li>
+</ul>
+<p>Existen tres estándares FR: el estándar del FR Forum (asociación de fabricantes entre los que están Cisco, DEC y Nortel), el estándar ANSI y el estándar de la ITU-T. Estas tres fuentes de normas no son siempre coincidentes, lo que no ocurría en X.25.</p>
+<p>Para la transmisión de datos entre estaciones finales se utiliza el protocolo Q.992, que es una versión mejorada del protocolo LAP-D utilizado en RDSI. En FR sólo se utilizan las funciones básicas de Q.922:</p>
+<ul>
+<li>Delimitación, alineamiento y transparencia de tramas por medio de las banderas típicas de la familia de protocolos HDCL.</li>
+<li>Alineamiento de los límites de la trama.</li>
+<li>Detección de errores de transmisión mediante un campo FCS incluido en la trama.</li>
+<li>Multiplexación y desmultiplexación de tramas mediante el campo de direcciones incluido en la trama.</li>
+<li>Control de congestión.</li>
+</ul>
+<h3 id="Circuitos-Virtuales-e-Interfaces-Frame-Relay"><a href="#Circuitos-Virtuales-e-Interfaces-Frame-Relay" class="headerlink" title="Circuitos Virtuales e Interfaces Frame Relay"></a>Circuitos Virtuales e Interfaces Frame Relay</h3><p>Frame Relay es un sistema orientado a conexión en el sentido de que antes de establecer la comunicación entre dos o más puntos se requiere previamente haber definido un camino o ruta por la cual tenga lugar la comunicación, es decir, existe una conexión definida entre cada par de dispositivos y estas conexiones están asociadas con un identificador de conexión.</p>
+<p>De manera similar a X.25 este servicio se implementa por medio de un circuito virtual Frame Relay. Los circuitos virtuales ofrecen una trayectoria de comunicación bidirecciónal de un dispositivo DTE a otro y se identifican de manera única por medio del <strong>Identificador de Conexiones de Enlace de Datos (DLCI, Data-Link Connection Identifier</strong> ). Además se pueden multiplexar muchos circuitos virtuales en un único circuito físico.</p>
+<p>Los DLCI generalmente son asignados por el proveedor del servicio y su valor tiene significación local, es decir, los DLCI son únicos en la LAN pero no necesariamente en la WAN Frame Relay.</p>
+<p>Al igual que en X.25 se tienen circuitos virtuales permanentes y conmutados. En FR lo más común son los PVC, que una vez programados permanecen en funcionamiento (se les use o no) hasta que se les desconecta.</p>
+<p>Tanto para los PVCs como para los SVCs se distinguen dos interfaces:</p>
+<ul>
+<li><strong>UNI (User-to-Network Interface)</strong> : interfaz de usuario red. La interfaz UNI se establece entre el dispositivo de acceso a la red del usuario y un conmutador de la red.</li>
+<li><strong>NNI (Network-to-Network Interface)</strong> : interfaz red a red. La interfaz NNI se establece entre dos conmutadores que pueden ser de la misma o de diferentes redes Frame Relay.</li>
+</ul>
+<p>En Frame Relay Forum (FRF) recomienda las siguientes interfaces físicas en la UNI:</p>
+<ul>
+<li>ANSI T1.403: interfaz a 1.5 Mbps.</li>
+<li>UIT-T V35: interfaz full-duplex a 56 o 64 Mbps.</li>
+<li>UIT-T G.703: interfaz a 2 Mbps.</li>
+<li>UIT-T X.21: interfaz síncrona.</li>
+</ul>
+<p>Una sesión de comunicación a través de un SVC consta de los siguientes estados operacionales:</p>
+<ul>
+<li><strong>Establecimiento de llamada</strong> : se establece el circuito virtual entre dos dispositivos DTE.</li>
+<li><strong>Transferencia de datos</strong> : los datos se transmiten entre los dispositivos DTE a través del circuito virtual.</li>
+<li><strong>Desocupado (Idle)</strong> : la conexión entre los dispositivos DTE permanece activa pero no hay transferencia de datos. Si un SVC permanece durante un determinado periodo de tiempo en estado desocupado, la llamada puede darse por terminada.</li>
+<li><strong>Finalización de llamada</strong> : se da por finalizado el circuito virtual entre los dispositivos DTE.</li>
+</ul>
+<p>En los PVC, al ser conexiones establecidas de forma permanente, no se requiere ni el establecimiento de llamada ni la finalización. Operan siempre en los estados transferencia de datos o desocupado.</p>
+<h3 id="Control-de-Congestion-y-Control-de-Trafico"><a href="#Control-de-Congestion-y-Control-de-Trafico" class="headerlink" title="Control de Congestión y Control de Tráfico"></a>Control de Congestión y Control de Tráfico</h3><p>Frame Relay, más que un control de flujo explícito por cada circuito virtual, implementa sencillos mecanismos de notificación de congestión. En general Frame Relay se implementa sobre medios de transmisión de red fiables para no sacrificar la integridad de los datos, el control de flujo se puede realizar por medio de los protocolos de las capas superiores.</p>
+<p>En FR se tienen dos mecanismos de notificación de congestión: <strong>FECN</strong> (Fordward-Explicit Congestion Notification) y <strong>BECN</strong> (Backward-Explicit Congestion Notification). Tanto FECN como BECN se implementan mediante los bits del subcampo control de congestión del campo direcciones de la trama FR. Este campo de control de congestión está formado por tres bits: el bit FECN, el bit BECN y el bit DE (Discard Eligibility).</p>
+<p>El <strong>mecanismo FECN</strong> se inicia en el momento en que un DTE envía tramas a a la red. Si la red está saturada, los DCE fijan el valor del bit FECN a 1. Cuando las tramas llegan al DTE destino, el bit FECN activado indica que en su trayectoria del origen al destino hubo problemas de congestión. El DTE puede enviar esta información a los protocolos de las capas superiores para su procesamiento.</p>
+<p>En el <strong>mecanismo BECN</strong> los DCEs establecen el valor del bit BECN a 1 en aquellas tramas que viajan en sentido opuesto a las tramas con bit FECN igual a 1. Esto permite al DTE receptor saber que una trayectoria específica en la red está saturada. Posteriormente el dispositivo DTE envía información a los protocolos de las capas superiores para su procesamiento.</p>
+<p>Dependiendo de la implementación, la indicación de congestión puede ser ignorada o puede que se inicien los procedimientos de control de flujo.</p>
+<p>Los DTEs pueden fijar el valor del <strong>bit DE</strong> de una trama a 1 para indicar que esta trama tiene una importancia menor respecto a otras tramas. En caso de congestión de la red DCE descartaran las tramas con el bit DE a 1 antes de descartar aquellas que no la tienen. Con esto se disminuye la probabilidad de que se eliminen datos críticos durante el blindaje de saturación.</p>
+<p>El control de tráfico en Frame Relay se basa en la especificación de varios parámetros de usuario:</p>
+<ul>
+<li><strong>CIR</strong> (Committed Information Rate): es el caudal medio garantizado que la red se compromete a dar en una conexión.</li>
+<li><strong>Bc</strong> (Committed Burst Size): máxima cantidad de bits que la red se compromete a enviar, en condiciones normales, en un intervalo de tiempo definido <strong>Tc</strong> . Este periodo Tc es acordado entre la red y el usuario y es por tanto conocido por ambos.</li>
+<li><strong>EIR</strong> (Excess Information Rate): especifica un caudal adicional que la red no debería sobrepasar nunca ya que las tramas recibidas por encima de este valor serán descartadas directamente por el conmutador.</li>
+<li><strong>Be</strong> (Excess Burst Size): máxima cantidad de bits que se le permite al usuario sobrepasar Bc durante el periodo Tc.</li>
+</ul>
+<p>Cada PVC y SVC tiene asignado un valor CIR que indica la capacidad de transmisión que ha sido acordada para el servicio. La relación entre estos parámetros es <em>CIR = Bc/Tc</em> y <em>EIR = Be/Tc</em> .</p>
+<p>Aunque la red no puede impedir que un usuario exceda el valor CIR sí incluye funciones de aviso de situaciones problemáticas y de recomendación de reducción de la velocidad de transmisión. Si la velocidad de transmisión es inferior al CIR todo el tráfico es cursado con garantías. Si la velocidad supera este valor las tramas se marcan como descartables activando el bit DE y serán transportadas por la red con una política “best effort”, llegarán al destino si durante el camino no se encuentran con congestiones importantes. Si se sobrepasa el valor EIR, todas las tramas recibidas por encima de ese valor serán descartadas.</p>
+<p>En la siguiente figura se esquematiza este mecanismo de control de tráfico.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/control_trafico.png?w=825" alt=""></p>
+<h3 id="Formato-de-Trama-Frame-Relay"><a href="#Formato-de-Trama-Frame-Relay" class="headerlink" title="Formato de Trama Frame Relay"></a>Formato de Trama Frame Relay</h3><p>El formato de una trama FR es el siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/formato_trama_fr.png?w=825" alt=""></p>
+<ul>
+<li><strong>Bandera</strong> (8 bits): delimitan el comienzo y el final de cada trama. Su valor es siempre el mismo 01111110 (7E en hexadecimal).</li>
+<li><strong>Dirección</strong> (16 bits): contiene la información siguiente:<ul>
+<li><strong>DLCI</strong> (10 bits): como ya se ha comentado identifica de manera única al circuito virtual. No todos los valores de DLCIs pueden ser asignados a conexiones virtuales para datos de usuarios, sino los valores del 16 al 1007. Otros DLCIs están reservados para señalización (como lo son los valores 0: reservado para la señalización de control de llamada y 1023: reservado para la Interfaz de Gestión Local) y otros valores están reservados para definiciones futuras como los valores del 1 al 15 y del 108 al 1022.</li>
+<li><strong>EA</strong> (2 bits): bit de dirección extendida. Se utiliza para indicar el último byte del campo de dirección mediante un valor 1. Aunque todas las implementaciones actuales de Frame Relay utilizan un DLCI de dos bytes, esta característica permite que en el futuro se utilicen DLCIs más largos. El octavo bit de cada byte del campo de direcciones se utiliza para indicar el EA.</li>
+<li><strong>C/R</strong> (1 bit): este bit comando/respueta está sin definir.</li>
+<li><strong>Control de congestión</strong> (3 bits): consta de los bits FECN, BECN y DE.</li>
+</ul>
+</li>
+<li><strong>Datos</strong> (longitud variable): contiene información encapsulada de las capas superiores. Contiene los datos de usuario o carga útil, que tiene una longitud variable. Pudiendo llegar hasta los 8.188 bytes.</li>
+<li><strong>FCS</strong> (16 bits): el campo de secuencia de verificación de trama sirve para la comprobación de errores de transmisión.</li>
+</ul>
+<h3 id="LMI-Interfaz-de-Administracion-Local"><a href="#LMI-Interfaz-de-Administracion-Local" class="headerlink" title="LMI, Interfaz de Administración Local"></a>LMI, Interfaz de Administración Local</h3><p>LMI (Local Management Interface) es una interfaz que fue definida por los primeros fabricantes de sistemas FR (Cisco Systems, StrataCom y DEC entre otros)para ofrecer un conjunto de extensiones a la especificación FR básica. LMI ha servido de modelo para los estándares de señalización de Frame Relay de otros organismos de estandarización.</p>
+<p>Las principales extensiones de LMI son direccionamiento global, mensajes de status de circuito virtual y multidifusión.</p>
+<p>El <strong>direccionamiento global LMI</strong> da a los valores DLCI un significado global más que local. Los convierten en direcciones DTE únicas en la WAN Frame Relay. Esto agrega funcionalidad y facilita la administración de las redes Frame Relay al permitir, por ejemplo, que las interfaces de red individuales y los nodos terminales conectados a ellos se pueden identificar por medio de técnicas estándares de descubrimiento y resolución de direcciones. Además, toda la red Frame Relay aparece como una típica LAN.</p>
+<p>Los <strong>mensajes de status de circuitos virtuales LMI</strong> permiten la sincronización entre los DTEs y DCEs y la comunicación de su estado. Los mensajes de status se utilizan para informar de manera periódica del estado de los PVCs con lo que se previene el envío de datos a agujeros negros (esto es, a través de PVCs inexistentes).</p>
+<p>La <strong>multidifusión LMI</strong> permite que se asignen grupos de multidifusión. Con la multidifusión se ahorra ancho de banda pues permite que los mensajes sobre la resolución de direcciones y de actualizaciones de encaminamiento sean enviados solamente a grupos específicos de routers.</p>
+<h2 id="ATM"><a href="#ATM" class="headerlink" title="ATM"></a>ATM</h2><p>La tecnología de Modo de Transferencia Asincrónica (ATM), está basada en los estudios del Grupo de Estudio XVIII de la ITU-T para el desarrollo de la Red Digital de Servicios Integrados de Banda Ancha (B-ISDN) para la transferencia de voz, vídeo y datos a altas velocidades a través de la red pública.</p>
+<p>En 1991 se crea el Forum ATM (fundado por Cisco Systems, NET/ADAPTIVE, Nortern Telecom y Sprint) que ha jugado un papel importante en el desarrollo de la tecnología ATM. En la actualidad con ATM es posible transferir voz, vídeo y datos a través de redes privadas y a través de redes públicas. ATM continúa evolucionando con varios grupos estándares que tratan de finalizar las especificaciones que permitan la interoperabilidad entre los equipos de diferentes vendedores en las industrias de redes públicas y privadas.</p>
+<p>ATM es una tecnología de conmutación de paquetes orientada a conexión que como tal crea circuitos virtuales entre los sistemas que desean intercambiar información. Estos circuitos se denominan <strong>canales virtuales (VC, Virtual Channel)</strong> en el estándar. Los nodos terminales de las redes ATM se denominan hosts y los nodos intermedios de encaminamiento se denominan conmutadores (de forma análoga a X.25 o Frame Relay). Los conmutadores ATM son siempre equipos de comunicaciones especializados y de elevadas prestaciones, nunca ordenadores de propósito general.</p>
+<p>En ATM existen tanto PVCs como SVCs. Los PVCs se configuran de manera estática en los conmutadores. Un PVC está establecido siempre que estén operativos los conmutadores por los que pasa y los enlaces que los unen, es decir siempre que la red está operativa. Los SVCs se crean y destruyen dinámicamente, según se necesita. El protocolo utilizado para establecer SVCs en ATM es el Q.2931, y está basado en el Q.931 utilizado en la señalización de RDSI.</p>
+<p>Una red (o subred) ATM está formada por un conjunto de conmutadores unidos entre sí por líneas punto a punto de alta velocidad, normalmente SONET/SDH de 155,52 Mbps, aunque también existen interfaces de velocidades inferiores. La interfaz que conecta los hosts con la subred es la <strong>UNI</strong> (User-Network Interface), y la que comunica los conmutadores entre sí es la <strong>NNI</strong> (Network-Network Interface).</p>
+<p>En ATM se agrupan los VCs entre dos nodos terminales en los denominados <strong>caminos o trayectos virtuales</strong> (VP, Virtual Path). Tanto los VCs como los VPs se numeran para su identificación. Para establecer una comunicación entre dos nodos es preciso especificar el número de VP y de VC.</p>
+<p>Cuando un nodo desea establecer un VC con otro ha de enviar un mensaje solicitando la conexión por el VC reservado para señalización, que por convenio es el VP 0 VC 5.</p>
+<p>Los estándares de ATM han definido paquetes de tamaño fijo llamados <strong>celdas con una longitud de 53 bytes</strong> . Una celda ATM consta de dos partes: la carga útil (payload) de 48 bytes que transporta la información generada por el emisor o transmisor, y la cabecera de 5 bytes que contiene la información necesaria para la transferencia de la celda.</p>
+<h3 id="Formato-de-Cabecera-de-la-Celda-ATM"><a href="#Formato-de-Cabecera-de-la-Celda-ATM" class="headerlink" title="Formato de Cabecera de la Celda ATM"></a>Formato de Cabecera de la Celda ATM</h3><p>En los estándares ATM se definen dos formatos de cabecera: el formato de la cabecera de la UNI y el formato de la cabecera de la NNI. La recomendación I.361 de la ITU-T es la base de estas definiciones, con clarificaciones más amplias dadas en las especificaciones ANSI T1.627 y el Forum ATM UNI o B-ICI.</p>
+<p>El formato de la cabecera UNI es el siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/formato_cabecera_uni.png?w=825" alt=""></p>
+<ul>
+<li><strong>GFC, control de flujo genérico (4 bits)</strong> : este campo generalmente no se utiliza y se le asigna un valor por defecto, pero puede ser utilizado para proporcionar estaciones locales como por ejemplo la identificación de estaciones que comparten una única interfaz ATM.</li>
+<li><strong>VPI, identificador de camino virtual (8 bits)</strong> : identifica el camino virtual por el que debe circular una celda.</li>
+<li><strong>VCI, identificador de canal virtual (16 bits)</strong> : identifica el canal virtual por el que debe circular la celda dentro del VP especificado por el VPI. El VCI junto con el VCI identifica el próximo destino de la celda que pasa a través de una serie de conmutadores ATM en su trayecto hasta el destino final.</li>
+<li><strong>PTI, tipo de carga (3 bits)</strong> : el primer bit indica si la celda contiene datos de usuario o datos de control. Si la celda contiene datos de usuario, el segundo bit indica si se detecta o no congestión; y el tercer bit indica si la celda es la última en una serie de celdas que representan a una única trama AAL5.</li>
+<li><strong>CLP, prioridad de pérdida de celda (1 bit)</strong> : indica si la celda debería o no descartarse en el caso de que se encuentre en congestión extrema cuando se mueve a través de la red.</li>
+<li><strong>HEC, control de error de cabecera (8 bits)</strong> : es un CRC que suministra la información de verificación de error de la cabecera.</li>
+</ul>
+<p>La cabecera NNI se diferencia de la cabecera UNI en que no existe el campo GFC y el campo VPI ocupa 12 bits.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/formato_cabecera_nni.png?w=825" alt=""></p>
+<h3 id="Categorias-de-Servicio"><a href="#Categorias-de-Servicio" class="headerlink" title="Categorías de Servicio"></a>Categorías de Servicio</h3><p>Para poder satisfacer una amplia gama de necesidades se han definido en ATM las llamadas categorías de servicio. Cada una de ellas da al usuario un nivel de garantía diferente respecto a la disponibilidad de los recursos de red solicitados.</p>
+<p>Se han definido cuatro categorías de servicio: CBR (Constant Bit Rate), VBR (Variable Bit Rate), ABR (Available Bit Rate) y UBR (Unespecified Bit Rate).</p>
+<p>La categoría de servicio <strong>CBR</strong> garantiza una capacidad determinada y constante, que está continuamente disponible durante el tiempo de vida de la conexión, con independencia de la utilización que hagan de la red otros usuarios. Este servicio es el más sencillo de implementar y el más seguro de todos, ya que la red reserva la capacidad solicitada en todo el trayecto de forma estática. No se realiza ningún tipo de control de congestión, ya que se supone que ésta no puede ocurrir. El servicio CBR es equivalente a una línea dedicada punto a punto.</p>
+<p>La categoría de servicio <strong>VBR</strong> está pensada para un tráfico a ráfagas. El usuario especifica un caudal medio pero puede utilizar ocasionalmente caudales superiores en función de sus necesidades y del estado de la red. Esto da mayor flexibilidad al permitir ajustar el caudal a las necesidades medias. En algunos servicios VBR el tráfico excedente sale marcado con el bit CLP. Desde el punto de vista de la red, VBR tiene una complejidad superior a CBR.</p>
+<p>VBR tiene dos modalidades definidas por el Forum ATM: <strong>RT-VBR</strong> (Real-Time Variable Bit Rate), con requerimientos de bajo retardo y jitter para aplicaciones en tiempo real (videoconferencia, vídeo bajo demanda, etc.); y <strong>NRT-VBR</strong> (Nor-REAL-TIME Variable Bit Rate) para aplicaciones en las que el control del retardo no es tan importante, como por ejemplo la transferencia de ficheros.</p>
+<p>La categoría <strong>ABR</strong> , también pensada para tráfico a ráfagas, es de todas las categorías de servicio que ofrece ATM la que más se parece a Frame Relay. Permite establecer un ancho de banda mínimo garantizado y fijar un valor máximo orientativo. ABR es la única categoría de servicio ATM en la que se prevé que la red suministre control de flujo al emisor para que reduzca el ritmo de transmisión en caso de congestión, lo que hace de ABR apropiada para tráfico de datos pero menos apropiada para aplicaciones isócronas. Debido a su funcionalidad ABR es la categoría de servicio más compleja de implementar.</p>
+<p>La categoría de servicio UBR puede considerarse la de más baja calidad. No existe ningún tipo de garantía en cuanto al retardo o ancho de banda, y tampoco se informa al emisor en caso de congestión. UBR utiliza la capacidad sobrante en la red de las demás categorías de servicio. Puede utilizarse para enviar tráfico IP cuando el costo sea el factor principal y la calidad de servicio no sea importante.</p>
+<p>El ATM Forum ha definido una variante del servicio UBR denominada UBR+. Añade al servicio UBR la posibilidad de especificar una capacidad mínima requerida, lo que la hace similar a ABR pero sin el control de congestión.</p>
+<h3 id="Calidad-de-Servicio-y-Descriptores-de-Trafico"><a href="#Calidad-de-Servicio-y-Descriptores-de-Trafico" class="headerlink" title="Calidad de Servicio y Descriptores de Tráfico"></a>Calidad de Servicio y Descriptores de Tráfico</h3><p>Una de las grandes virtudes de ATM es la posibilidad de establecer una Calidad de Servicio (QoS, Quality of Service) garantizada. En las redes ATM se pueden establecer una larga serie de parámetros que definen los niveles mínimos de calidad que el operador debe ofrecer al usuario para cada una de las categorías de servicio mencionadas en el punto anterior. Estos parámetros se pueden clasificar en dos grupos: parámetros de tráfico y parámetros de QoS. No todos los parámetros tienen sentido en todas las categorías de tráfico.</p>
+<p>Los parámetros de tráfico son los siguientes:</p>
+<ul>
+<li><strong>MCR</strong> (Minimum Cell Rate): velocidad mínima que se considera aceptable para establecer el circuito ATM.</li>
+<li><strong>PCR</strong> (Peak Cell Rate) y <strong>CDVT</strong> (Cell Delay Variation Tolerance): máximo caudal que permite el VC y tolerancia (pequeña) respecto a este caudal.</li>
+<li><strong>SCR</strong> (Sustainable Cell Rate) y <strong>BT</strong> (Burst Tolerance): caudal medio máximo permitido y tolerancia a ráfagas (grande) respecto a este caudal.</li>
+</ul>
+<p>Los parámetros de Calidad de Servicio son los siguientes:</p>
+<ul>
+<li><strong>MCTD</strong> (Maximum Cell Transfer Delay): es el retardo máximo permitido, es decir, el tiempo máximo que puede tardar la red en transmitir una celda de un extremo a otro del circuito.</li>
+<li><strong>Peak-to-Peak CDV</strong> (Peak To Peak Cell Delay Variation): es el jitter o fluctuación máxima que se podrá producir en el retardo de las celdas.</li>
+<li><strong>CLR</strong> (Cell Loss Ratio): es el porcentaje máximo aceptable de celdas que la red puede descartar debido a congestión. Cuando una celda es entregada en el destino con un retardo superior a MCTD se considera una celda perdida.</li>
+</ul>
+<p>No todos los parámetros son aplicables a todas las categorías de servicio. Por ejemplo en un servicio CBR se especifica PCR, pero no SCR ni MCR. En un servicio UBR no se especifica ningún parámetro.</p>
+<p>En la siguiente table se muestran los parámetros que se especifican normalmente en cada categoría de servicio:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/parametros_categoria_servicios.png?w=825" alt=""></p>
+<h3 id="Modelo-de-Capas-de-ATM"><a href="#Modelo-de-Capas-de-ATM" class="headerlink" title="Modelo de Capas de ATM"></a>Modelo de Capas de ATM</h3><p>El modelo de capas de ATM está formado por tres capas: capa física, capa ATM y capa de adaptación ATM.</p>
+<p><strong>Capa Física</strong></p>
+<p>La Capa Física controla la transmisión y recepción de bits en el medio físico y mantiene el rastro de los límites de las celdas y de los paquetes de celdas dentro del tipo de trama apropiado al medio físico utilizado.</p>
+<p>Está dividida en dos partes: subcapa dependiente del medio físico y subcapa de convergencia de transmisión.</p>
+<p>La <strong>Subcapa Dependiente del Medio Físico (PMD)</strong> es responsable de enviar y recibir un flujo constante de bits, junto con información de temporización con el fin de sincronizar la transmisión y la recepción.</p>
+<p><strong>La Subcapa de Convergencia de Transmisión (TC)</strong> es la responsable de:</p>
+<ul>
+<li>Delimitación de Celdas: mantiene los límites de las celdas ATM.</li>
+<li>Generación y verificación del HEC: genera y chequea el código de control de error de cabecera para garantizar datos válidos.</li>
+<li>Desacoplamiento de velocidad de la celda: inserta o suprime celdas ATM no asignadas para adaptar a la velocidad válida de celdas ATM la capacidad de carga útil del sistema de transmisión.</li>
+<li>Adaptación a la trama de transmisión: empaqueta celdas ATM en tramas aceptables para su implementación en un medio físico en particular.</li>
+<li>Generación y recuperación de tramas de transmisión: genera y mantiene la estructura apropiada de la trama de la capa física.</li>
+</ul>
+<p><strong>Capa ATM</strong></p>
+<p>La Capa ATM es responsable del establecimiento de las conexiones y del paso de las celdas a través de la red ATM, para lo que utiliza la información contenida en la cabecera de cada celda ATM. Aquí es donde aparecen los conceptos de VCs y VPs vistos anteriormente.</p>
+<p>Entre las funciones de esta capa se incluyen:</p>
+<ul>
+<li>Control Genérico de Flujo.</li>
+<li>Generación/Extracción del encabezado de la celda.</li>
+<li>Enrutamiento de las celdas basado en los VPI/VCI de la celda.</li>
+<li>Detección de errores basado en el campo HEC.</li>
+<li>Multiplexación y Demultiplexación de celdas.</li>
+</ul>
+<p><strong>Capa de Adaptación ATM (AAL)</strong></p>
+<p>Dentro del modeloATM la capa que se ocupa de la comunicación host-host, y que por tanto podemos considerar de transporte, es la denominada Capa de Adaptación ATM (AAL, ATM Adaptation Layer).</p>
+<p>La ITU-T define la capa AAL en la recomendación I.363. Esta recomendación ha sido fruto de diversos compromisos y reajustes sobre la marcha.</p>
+<p>Dado que el objetivo de la capa AAL es adaptar diversos tipos de tráfico para su transporte sobre redes ATM, la ITU-T empezó estudiando y clasificando las clases de tráfico que podían tener cierto interés. Desde el punto de vista de la ITU-T los parámetros relevantes para esa clasificación eran tres: tiempo real o no tiempo real (tráfico isócrono o asíncrono); caudal de tráfico constante o variable; y servicio orientado a conexión o no orientado a conexión. Considerando entonces cuatro clases de tráfico:</p>
+<ul>
+<li><strong>Clase A</strong> : en tiempo real con caudal de tráfico constante y servicio orientado a la conexión.</li>
+<li><strong>Clase B</strong> : en tiempo real con caudal de tráfico variable y servicio orientado a la conexión.</li>
+<li><strong>Clase C</strong> : no en tiempo real con caudal de tráfico variable y servicio orientado a la conexión.</li>
+<li><strong>Clase D</strong> : no entiempo real con caudal de tráfico variable y servicio no orientado a la conexión.</li>
+</ul>
+<p>Para las cuatro clases descritas se definieron inicialmente cuatro protocolos denominados de AAL1 a AAL4 para las cuatro clases descritas. Posteriormente se observó que los requerimientos de los protocolos AAL3 y AAL4 eran similares y fueron agrupados en un protocolo conjunto AAL3/4. Las empresas fabricantes de equipos informáticos (conmutadores y adaptadores ATM), que se incorporaron tarde al proceso de estandarización de los protocolos AAL decidieron crear un nuevo protocolo que denominaron AAL5, para transportar la misma clase de datos que AAL3/4 pero de forma más eficiente.</p>
+<p>Se tienen entonces 5 tipos de protocolos AAL:</p>
+<ul>
+<li><strong>AAL1</strong> : soporta tráfico de clase A normalmente con una categoría de servicio CBR. El AAL1 es apropiado para soportar tráfico de voz y tráfico de vídeo no comprimido. Garantiza un mínimo retardo, un jitter pequeño y un reducido overhead de proceso y de información de control.</li>
+<li><strong>AAL2</strong> : es el estándar de protocolo utilizado para soportar el tráfico de clase B, generalmente con una categoría de servicio rt-VBR.</li>
+<li><strong>AAL3/4</strong> : soporta tráfico de clases C y D y puede utilizar cualquiera de las categorías de servicio, aunque la más utilizada es VBR. Es adecuado para tráfico de datos sensibles a pérdidas de celdas, pero no a retardos.</li>
+<li><strong>AAL5</strong> : soporta el transporte del tráfico de clase C y al igual que la clase anterior utiliza generalmente VBR, aunque se puede usar cualquiera de las categorías de servicio.</li>
+</ul>
+<p>La capa AAL está compuesta de dos subcapas:</p>
+<ul>
+<li><strong>Subcapa de Segmentación y Reensamblado (SAR, Segmentation And Reassembly)</strong> : es la subcapa inferior y se ocupa, como indica su nombre, de crear en el emisor las celdas a partir de los datos recibidos de la subcapa superior, y de reconstruir en el receptor los datos originales a partir de las celdas recibidas.</li>
+<li><strong>Subcapa de Convergencia (CS, Convergence Sublayer)</strong> : es la subcapa superiro y actúa de interfaz entre la capa AAL y la aplicación. Esta subcapa a su vez se subdivide en otras dos subcapas:<ul>
+<li><strong>Subcapa de Convergencia de Parte Común (CPCS, Common Part Convergence Sublayer)</strong> : constituye la parte baja de la CS. No depende de la aplicación, de ahí su nombre, pero sí depende del tipo de protocolo AAL utilizado.</li>
+<li><strong>Subcapa de Convergencia Específica del Servicio (SSCS, Service Specific Convergence Sublayer)</strong> : representa la parte alta de la CS y es específica de la aplicación. Esta subcapa puede no estar presente, puede ser nula y hasta ahora está definida para Frame Relay y para SMDS. No se requiere para IP, pues IP es soportado directamente por laCPCS.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Integracion-de-Voz-y-Datos"><a href="#Integracion-de-Voz-y-Datos" class="headerlink" title="Integración de Voz y Datos"></a>Integración de Voz y Datos</h2><p>El concepto básico para la integración de voz y datos es relativamente simple: se trata de transforma la voz en paquetes de información que puedan transmitirse por una red de conmutación de paquetes. A lo largo de los últimos años el avance tecnológico ha creado un entorno que posibilita la transmisión de voz sobre este tipo de redes. Entre los factores que han posibilitado este desarrollo se encuentran:</p>
+<ul>
+<li>Técnicas avanzadas de digitalización de voz.</li>
+<li>Protocolos de transmisión en tiempo real.</li>
+<li>Nuevos mecanismos de control y priorización del tráfico.</li>
+<li>Nuevos estándares que permiten la calidad de servicio sobre redes de paquetes.</li>
+</ul>
+<p>Uniendo a lo anterior el espectacular desarrollo de Internet, junto al ahorro que el uso de este tipo de tecnologías trae consigo, se ha llegado a la situación de considerar la integración de voz y datos un tema estratégico para muchas Organizaciones.</p>
+<p>Las tecnologías para el transporte de voz en forma de paquetes se enfrentan a una serie de retos:</p>
+<ul>
+<li>Retardo. Para proporcionar una calidad de servicio aceptable el retardo inducido en la red debe ser minimizado. El retardo deteriora la calidad de la voz y provoca interrupciones en una conversación normal extremo a extremo.</li>
+<li>Supresión de silencios. En el flujo de una conversación normal existen pausas y periodos de silencio. Esta característica se puede utilizar para el ahorro de ancho de banda mediante la parada de la transmisión de paquetes en estos periodos de silencio.</li>
+<li>Señalización. La señalización se refiere al uso eficiente de los recursos para la transferencia de información de control.</li>
+</ul>
+<p>Estos tres aspectos se ven afectados a su vez por las características de la red de transporte subyacente que puede ser FR, IP o ATM. Cuando la red de transporte es una red FR se habla de VoFR (Voice over Frame Relay), si es una red IP se habla de VoIP (Voice over IP) y si es una red ATM de VoATM (Voice over ATM).</p>
+<h3 id="VoFR"><a href="#VoFR" class="headerlink" title="VoFR"></a>VoFR</h3><p>VoFR representa una tecnología relativamente estable para la integración de voz y datos. El Forum FR ha publicado dos especificaciones para permitir la interoperatividad entre productos VoFR de diferentes fabricantes:</p>
+<ul>
+<li>FRF.11 (VoFR): especifica los tipos de codificación y los formatos de trama para el transporte de tráfico de fax y de voz sobre redes FR.</li>
+<li>FRF.12 (Frame Relay Fragmentation): especifica los medios para la fragmentación y el reensamblado de grandes tramas de datos deforma que se minimice el retardo que se produciría al tener que encolar estas tramas en las tramas VoFR que son más pequeñas.</li>
+</ul>
+<h3 id="VoIP"><a href="#VoIP" class="headerlink" title="VoIP"></a>VoIP</h3><p>VoIP es una tecnología, más reciente que VoFR, para la integración de voz en redes IP. El objetivo de VoIP es asegurar la interoperabilidad entre equipos de diferentes fabricantes. Se especifican aspectos tales como la supresión de silencios, la codificación de la voz y el direccionamiento, a la vez que se establecen nuevos elementos para permitir la conectividad con la infraestructura telefónica tradicional. Estos elementos se refieren básicamente a los servicios de directorio y a la transmisión de señalización por tonos multifrecuencia (DTMF).</p>
+<p>Está basado en la familia de estándares H.323 de la ITU-T que ya cubría la mayor parte de las necesidades para la integración de voz y gracias a otros protocolos de comunicación, como el RSVP (Resource ReSerVation Protocol), es posible reservar cierto ancho de banda dentro de la red que garantice la calidad de la comunicación.</p>
+<p>Dentro de esta familia, el protocolo de señalización H.225 cubre las especificaciones de registro, autorización y status de entidades H.323 con el Gatekeeper H.323. Para la negociación del establecimiento de llamada y de los parámetros de la codificación y sesión de voz se tienen los protocolos Q.931 y H.245 respectivamente. H.245 especifica el protocolo RTPC (Real-Time Control Protocol) para el canal de control de señalización de llamada y finalmente se tiene el protocolo RTP (Real-Time Transport Protocol) con la especificación de los canales bidireccionales entre las entidades llamantes y las entidades llamadas.</p>
+<h3 id="VoATM"><a href="#VoATM" class="headerlink" title="VoATM"></a>VoATM</h3><p>VoATM es la opción más reciente para el transporte de voz sobre redes de datos. Permite a los conmutadores ATM transportar tráfico de voz sobre una red ATM. Su principal ventaja es el amplio soporte que proporciona para QoS. Cuando se envía tráfico de voz sobre ATM, éste es encapsulado en paquetes AAL1 o AAL2, aunque el servicio AAL1 CBR es menos eficiente para VoATM que el servicio AAL2 VBR.</p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/359443990/TICB4-Conmutacion-pdf" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B3/b3-t07/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B3-T07
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t10/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T10</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

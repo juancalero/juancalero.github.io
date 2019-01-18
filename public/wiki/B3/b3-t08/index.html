@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B3-T08 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B3-T08">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Tipos abstractos de datos y estructuras de datos. Grafos. Tipos de algoritmos: ordenación y búsqueda. Estrategias de diseño de algoritmos. Organizaciones de ficheros.Tablas, listas y árbolesTipos abst">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-T08">
+<meta property="og:url" content="http://localhost:4000/wiki/B3/b3-t08/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Tipos abstractos de datos y estructuras de datos. Grafos. Tipos de algoritmos: ordenación y búsqueda. Estrategias de diseño de algoritmos. Organizaciones de ficheros.Tablas, listas y árbolesTipos abst">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/algoritmo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/coste_algoritmo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/coste_algoritmo2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/representacion_tbla.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/representacion_tabla2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/listas1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/lista_simple_enlazada.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/lista_doble_enlazada.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/lista_enlace_multiple.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/listas2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol4.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol6.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol61.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/arbol7.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/seleccion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/burbuja1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/burbuja2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/burbuja3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/insercion_directa.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/shell.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/intercalacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/busqueda_secuencial.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/busqueda_binaria.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/quicksort.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/recursivo2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/grafos1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/grafos2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/grafo3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/grafo4.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/grafo5.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/grafo6.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/memorias.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/empaquetamiento.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/estructura_ficheros.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/indexacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/asignacion_contigua.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/asignacion_enlazada.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/asignacion_indexada.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/directorios.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/cpm.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/msdos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/unix.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:13:28.006Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-T08">
+<meta name="twitter:description" content="Tipos abstractos de datos y estructuras de datos. Grafos. Tipos de algoritmos: ordenación y búsqueda. Estrategias de diseño de algoritmos. Organizaciones de ficheros.Tablas, listas y árbolesTipos abst">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/algoritmo.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file active"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B3/b3-t08" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B3/">B3</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B3/b3-t08/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B3/b3-t08.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B3/b3-t08.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B3/b3-t08.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B3-T08
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Tipos-abstractos-de-datos-y-estructuras-de-datos-Grafos-Tipos-de-algoritmos-ordenacion-y-busqueda-Estrategias-de-diseno-de-algoritmos-Organizaciones-de-ficheros"><a href="#Tipos-abstractos-de-datos-y-estructuras-de-datos-Grafos-Tipos-de-algoritmos-ordenacion-y-busqueda-Estrategias-de-diseno-de-algoritmos-Organizaciones-de-ficheros" class="headerlink" title="Tipos abstractos de datos y estructuras de datos. Grafos. Tipos de algoritmos: ordenación y búsqueda. Estrategias de diseño de algoritmos. Organizaciones de ficheros."></a>Tipos abstractos de datos y estructuras de datos. Grafos. Tipos de algoritmos: ordenación y búsqueda. Estrategias de diseño de algoritmos. Organizaciones de ficheros.</h1><h2 id="Tablas-listas-y-arboles"><a href="#Tablas-listas-y-arboles" class="headerlink" title="Tablas, listas y árboles"></a>Tablas, listas y árboles</h2><h3 id="Tipos-abstractos-de-datos"><a href="#Tipos-abstractos-de-datos" class="headerlink" title="Tipos abstractos de datos"></a>Tipos abstractos de datos</h3><p>Al escribir un programa para resolver un problema, el enfoque tradicional consistía en pasar de la realidad a una implantación en el lenguaje de programación utilizado, lo que conducía, inevitablemente, a que la forma de “ver” los datos estuviera muy influida por la máquina donde se ejecutaba el programa. Con el tiempo y la experiencia acumulada surgió otro enfoque mejor para afrontar esta situación, que consistía en establecer un nivel intermedio, donde se modela lo esencial de la realidad, mediante técnicas de abstracción, sin comprometerse con detalles de implantación. Estas técnicas de abstracción han evolucionado en el sentido de alejar los elementos que aparecen en los sistemas de software de las nociones propias de las máquinas sobre las que se implantan dichos sistemas, aproximándolos a las nociones propias de los dominios en que se presentan las situaciones modeladas.</p>
+<p>La principal de estas técnicas está basada en los <strong>Tipos Abstractos de Datos (TAD)</strong> .</p>
+<p>Esta técnica está centrada en las abstracciones de datos, consiste en:</p>
+<ul>
+<li>Identificar los distintos tipos de datos que intervienen en el sistema y la función principal de dicho sistema.</li>
+<li>Caracterizar cada tipo de datos en función de las operaciones que se puedan realizar con los objetos de los distintos tipos (haciendo abstracción de sus representaciones concreta).</li>
+<li>Componer el sistema utilizando objetos de los tipos definidos junto con sus operaciones características.</li>
+<li>Implantar cada uno de los tipos utilizados.</li>
+</ul>
+<p>Estas características son la base conceptual de los TAD. De forma sintetizada, puede decirse que:</p>
+<p><em>Un TAD es una estructura algebraica, a saber, un conjunto de objetos estructurados de alguna forma y con ciertas operaciones definidas sobre ellos.</em></p>
+<p>Piénsese, por ejemplo, en una calculadora; los elementos que maneja son cantidades numéricas y las operaciones definidas son operaciones aritméticas. Otro ejemplo posible es el TAD matriz matemática; los elementos que maneja son las matrices y las operaciones son las que nos permiten crearlas, sumarlas, invertirlas, etc. Otro tipo de TAD es cualquier tipo de cola de espera: en el autobús, cine, la compra, etc. Los elementos de las colas son las personas y las operaciones más usuales son entrar o salir de la cola, pero no son las únicas. Desde un punto de vista abstracto podemos pensar en operaciones como crear un elemento de la cola, comprobar si la cola está vacía, si está llena, etc.</p>
+<p>Es conveniente observar que las operaciones de un TAD son de diferentes clases. Algunos nos deben permitir crear objetos nuevos, otras determinar su estado, construir otros objetos a partir de algunos ya existentes, etc.</p>
+<p>Puesto que los TAD deben ser lo más independientes posibles de los detalles de implantación, es obvio que no deben tener ninguna dependencia con respecto al lenguaje de programación elegido para implantarlos. Aun así, ciertos lenguajes no incorporan ciertas estructuras de datos necesarias para implantar algunos tipos de TAD.</p>
+<p><strong>El concepto de algoritmo</strong></p>
+<p>Un <strong>algoritmo</strong> es <em>un conjunto de pasos o instrucciones que se deben seguir para realizar una determinada tarea</em> .</p>
+<p>Estas instrucciones deben cumplir las siguientes características:</p>
+<ul>
+<li><strong>FINITUD</strong> : Debe ser <em>un conjunto finito de instrucciones</em> y que se realicen en un <em>tiempo finito</em> .</li>
+<li><strong>PRECISIÓN</strong> : Debe indicar el <em>orden de realización de cada instrucción o paso de forma inequívoca</em> .</li>
+<li><strong>DEFINICIÓN</strong> : Debe tener un <em>número finito (0 … N) de datos de entrada</em> y un <em>número finito (0 … M) de datos de salida (resultados)</em> . Frente a un mismo conjunto de datos de partida se debe llegar siempre a un mismo conjunto de resultados.</li>
+</ul>
+<p>Otra cualidad deseable en un buen algoritmo, aunque no imprescindible para ser considerado como tal, es que sea <em>óptimo</em> , es decir, que sea la forma más fácil y rápida de hacer una determinada tarea, si bien es cierto que en muchas ocasiones facilidad y rapidez son dos cualidades contrapuestas.</p>
+<p>De forma gráfica, la siguiente figura engloba las principales características de un algoritmo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/algoritmo.png?w=825" alt=""></p>
+<p><strong>Coste de un algoritmo</strong></p>
+<p>Normalmente, si se escribe un programa para resolver un problema, se hace para que éste sea utilizado muchas veces, por lo que resulta conveniente caracterizarlos según su tiempo de ejecución y la calidad de la respuesta. Cuando estudiamos algoritmos es muy importante caracterizar la solución obtenida de cada algoritmo antes de estar seguros de que dos algoritmos son equivalentes (para un mismo valor de entrada dan exactamente el mismo resultado) o son similares (pueden dar resultados diferentes, pero desde el punto de vista del problema que estamos resolviendo somos indiferentes a cualquiera de los resultados).</p>
+<p>Por esta razón, uno de los criterios más importantes para seleccionar un algoritmo es evaluar el tiempo que tarda en ejecutarse, que llamaremos <strong>coste del algoritmo</strong> o <strong>tiempo de ejecución</strong> . Para analizar el coste de un algoritmo adoptamos un modelo que nos dice que recursos usados por la implantación del algoritmo son importantes para su desempeño. La complejidad de un algoritmo bajo un modelo computacional es la cantidad de recursos, en tiempo o espacio, que el algoritmo usa para resolver el problema.</p>
+<p>Desafortunadamente, por lo general es imposible predecir el comportamiento exacto de un algoritmo, ya que existe la influencia de muchos factores, de aquí que se trate de extraer las características principales de un algoritmo. Así, se definen ciertos parámetros y ciertas medidas que son las más importantes en el análisis y se ignoran detalles relativos a la implantación.</p>
+<p>Así, el análisis es una aproximación, no es perfecto, pero lo importante es que se pueden comparar diferentes algoritmos para determinar cuál es mejor para un propósito determinado.</p>
+<p>La metodología que generalmente se utiliza para predecir el tiempo de ejecución de algoritmos se basa en el <strong>comportamiento asintótico</strong> , en este método se ignoran los factores constantes y se concentra en el comportamiento del algoritmo cuando el tamaño de la entrada tiende a infinito. Es totalmente análogo al estudio de los límites de una función cuando su variable independiente tienen a infinito, por ejemplo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/coste_algoritmo.png?w=825" alt=""></p>
+<p>De hecho, es muy usual evaluar el coste de un algoritmo como una función matemática del número de entradas del algoritmo (N), siendo un algoritmo de mayor coste que otro cuando para un mismo N la función que expresa el coste da un resultado superior. Así pues, los costes o tiempos de ejecución más usuales de los algoritmos, de menor a mayor, son:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/coste_algoritmo2.png?w=825" alt=""></p>
+<p>Por otra parte, conviene considerar dos casos límite, el <strong>mejor caso</strong> y el <strong>peor caso</strong> . Puede ocurrir que al realizar una operación se parta de unos datos iniciales del TAD que hagan que al aplicar el algoritmo éste se ejecute de la manera más rápida posible, y puede ocurrir también lo contrario, encontrarnos con el caso en que se ejecute de la forma más lenta. Por ejemplo, si queremos ordenar unos datos, parece lógico pensar que el mejor caso será cuando los datos ya estén ordenados, y el peor caso cuando ningún dato inicial esté en el orden que tendrá cuando se haya ejecutado la ordenación.</p>
+<p>De forma estadística se supone que se parte de un caso medio. Por otra parte, hay algoritmos cuya diferencia de coste entre los casos mejor y peor es muy grande, y otros en los que, debido a la naturaleza del algoritmo, la diferencia es muy pequeña o incluso inexistente.</p>
+<p>Si un algoritmo crece de manera proporcional a N, se dice que es de orden N. En general, el tiempo de ejecución es proporcional, esto es, multiplica por una constante a alguno de los costos anteriormente propuestos, además de la suma de algunos términos más pequeños.</p>
+<p><strong>Implantación tradicional frente a los TAD</strong></p>
+<p>Según Nicklaus Wirth, un programa responde a la ecuación:</p>
+<p>(Ec. 1)   Programa = Datos + Algoritmos</p>
+<p>El enfoque tradicional se ciñe bastante bien a esta concepción. En la ecuación de Wirth la parte <em>Algoritmo</em> la podemos expresar como:</p>
+<p>(Ec. 2)   Algoritmo = Algoritmo de datos + Algoritmo de control</p>
+<p>Se entiende como <em>Algoritmo de datos</em> a la parte del algoritmo encargada de manipular las estructuras de datos del problema, y <em>Algoritmo de control</em> a la parte restante (la que representa en sí el método de solución del problema, también llamada <em>lógica de negocio</em> , independiente hasta cierto punto de las estructuras de datos seleccionadas).</p>
+<p>Con los TAD se identifican ciertas operaciones o partes del algoritmo que manipulan los datos. Además de proporcionar una estructura de datos, por lo que podemos sustituir el sumando “ <em>Datos</em> ” de la ecuación anterior por el sumando “ <em>Estructura de Datos</em> “. De esta forma, podemos entonces escribir:</p>
+<p>(Ec. 3)   Programa = Estructura de Datos + Algoritmo de Datos </p>
+<pre><code>+ Algoritmos de Control
+</code></pre><p>Definiendo:</p>
+<p>(Ec. 4)   Implantación del TAD = Estructura de Datos + Algoritmos de Datos</p>
+<p>Se establece la <em>ecuación fundamental</em> que describe el enfoque de desarrollo con Tipos Abstractos de Datos:</p>
+<p><strong>(Ec. 5)   Programa = Implantación del TAD + Algoritmo de Control</strong></p>
+<p>A la hora de crear un Tipo Abstracto de Datos, la ecuación a seguir es (Ec. 4), es decir, determinar como es la <strong>estructura de datos</strong> y cuales son los algoritmos de control para manera los datos, en otras palabras, las <strong>operaciones sobre los datos</strong> que se pueden hacer, o interesa hacer, sobre la mencionada estructura de datos.</p>
+<p><strong>Operaciones de los TAD</strong></p>
+<p>Las operaciones en los TAD pueden servir para crear nuevos objetos abstractos, para obtener información acerca de ellos, y algunas para construir nuevos elementos a partir de otros ya existentes. De esta forma las operaciones las podemos clasificar de esta manera:</p>
+<ul>
+<li>Operaciones de CREACIÓN: Se utilizan para definir y/o crear el TAD y sus elementos.</li>
+<li>Operaciones de TRANSFORMACIÓN: Se utilizan para realizar algún tipo de transformación en los componentes del TAD. Por ejempo: asignación de valor, ordenaciones, permutaciones, balanceados, etc.</li>
+<li>Operaciones de ANÁLISIS: Se utilizan para obtener información concerniente a cualquiera de los componentes del TAD o de su estructura. Por ejemplo: búsquedas, recorridos, obtención de algún dato del TAD (valor de un componente, cantidad de elementos, profundidad, número de niveles, etc.)</li>
+</ul>
+<p><strong>Implantación y tipos de TAD</strong></p>
+<p>Cuando ya se tiene bien diseñado un Tipo Abstracto de Dato, el siguiente paso es decidir una implantación. Esto supone elegir algunas de las estructuras de datos que nos proporcione el lenguaje de programación utilizado para representar cada uno de los objetos abstractos y, por otro lado, escribir una rutina (Procedimiento o función) en tal lenguaje que simule el funcionamiento de cada una de las operaciones especificadas para el TAD.</p>
+<p>La selección de las estructuras de datos determina la complejidad del algoritmo que implanta una operación y su elección es, por esta razón, de gran importancia. Existen estructuras de datos muy dependientes de un lenguaje de programación y debido a esto deben tratar de evitarse cuando el TAD se quiere que sea portable.</p>
+<p>Existen muchos tipos de TAD, pero los más utilizados son:</p>
+<ul>
+<li>Tablas</li>
+<li>Listas</li>
+<li>Árboles</li>
+</ul>
+<h3 id="Tablas"><a href="#Tablas" class="headerlink" title="Tablas"></a>Tablas</h3><p>Una <strong>tabla</strong> o <em>matriz</em> , es un TAD que representa una estructura homogénea de datos donde se cumple:</p>
+<ul>
+<li>Todos sus c <em>omponentes son del mismo tipo</em> .</li>
+<li>Tiene un <em>número predefinido</em> de componentes que no puede variarse en tiempo de ejecución.</li>
+<li>Los elementos de la tabla contienen <em>una clave</em> que los identifica de forma unívoca. El conjunto de claves forman un conjunto de <em>índices</em> para localizar los elementos.</li>
+<li>Se permite el <em>acceso directo</em> a cualquiera de los elementos de la tabla a través de los índices.</li>
+</ul>
+<p>La operación fundamental en el uso de una tabla es <em><strong>localizar la posición</strong></em> de sus elementos con una clave conocida “a priori”. Dicho de otra forma, lo más usual es que se quiera conocer el contenido del i-esimo (índice i) elemento de una tabla. Es menos frecuente la operación inversa, dado un valor saber los índices de los elementos cuyo contenido coincide con el valor dado; aunque también resulta útil en ocasiones esta operación.</p>
+<p><strong>Tipos</strong></p>
+<p>Recordando la (Ec. 4) de Wirth, desde el punto de vista de la <em>Estructura de Datos</em> de una tabla, la principal característica de su estructura es la <em>dimensión</em> .</p>
+<p>Se habla entonces de:</p>
+<ul>
+<li><p>Tabla <strong>Monodimensional</strong> :</p>
+<ul>
+<li>Se refiere a tablas de una dimensión con un determinado número (N) de elementos. La declaración de estas tablas responde a la sintaxis genérica:<ul>
+<li>Nombre_Tabla = matriz[1..N] de Tipo_Elemento;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Tabla <strong>Multidimensional</strong> :</p>
+<ul>
+<li>Se refiere a tablas de más de una dimensión (d), con un determinado número de elementos para cada dimensión (N1, N2, …, Nd). Su declaración es:<ul>
+<li>Nombre_Tabla = matriz[1..N1, … 2..Nd] de Tipo_Elemento;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Aunque cada dimensión puede tener diferente número de elementos, todas las dimensiones tienen el mismo tipo de elemento, no pudiéndose declarar diferentes tipos de elementos según las diferentes dimensiones de la matriz, pues supondría violar la primera característica de las tablas.</p>
+<p><strong>Operaciones</strong></p>
+<p>Desde el punto de las <em>operaciones</em> (Algoritmo de Datos), las operaciones básicas en una tabla son:</p>
+<ul>
+<li><strong>Definir/Crear</strong> la tabla: Se refiere a la forma que cada lenguaje debe tener para definir la estructura de una tabla y crear una variable del tipo de la tabla definida.</li>
+<li><strong>Insertar/Eliminar</strong> elementos de la tabla: Aunque cuando se define una tabla se indica “a priori” el número de elementos que tiene, eso no quiere decir que desde el principio esos elementos tengan un valor significativo para el uso que se les piensa dar. Es muy común al crear una tabla asignar a todos sus elementos un valor especial (nulo) que indique que en caso de que el elemento tenga ese valor, a todos los efectos, desde un punto de vista abstracto, es como si ese elemento no existiese.</li>
+<li><strong>Buscar</strong> elementos de la tabla: Esta operación es fundamental en el uso de tablas. Existen distintas formas de hacer búsquedas en una tabla, y según los valores de los componentes y el tipo de búsqueda ésta será más o menos eficiente (rápida).</li>
+<li><strong>Ordenar</strong> los elementos de la tabla: Esta operación resulta muy útil a la hora de realizar búsqueda. Veremos más adelante que resulta mucho más efectivo realizar búsquedas sobre tablas donde se ha establecido algún tipo de orden sobre otras donde no lo hay.</li>
+<li><strong>Contar</strong> los elementos de la tabla: Calcular el número de elementos que hay en la tabla en un momento dado. La acción de preguntar si una tabla está llena o vacía (de elementos significativos) son casos particulares de la operación de contar. También pueden considerarse recuentos más especializados, como contar el número de elementos con un determinado valor, o con valor superior a uno dado, etc.</li>
+</ul>
+<p>Hay varios algoritmos que implantan las operaciones de búsqueda y ordenación en una tabla (las más complejas y utilizadas). Las operaciones de definición, creación y recuento resultan muy sencillas de implantar.</p>
+<p><strong>Representación</strong></p>
+<p>La forma más simple de representación abstracta de una tabla es:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/representacion_tbla.png?w=825" alt=""></p>
+<p>Para índices que van desde 0 a (N-1) y siendo ei el contenido del elemento i de la tabla.</p>
+<p>Es muy común la siguiente representación, más intuitiva, de una tabla:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/representacion_tabla2.png?w=825" alt=""></p>
+<p>En la figura anterior se representa una tabla de una dimensión con N elementos, cuyos índices van desde 0 hasta (N-1), y cuyo contenido se refiere a nombres de persona. Para representar tablas multidimensionales, basta con utilizar una representación como la indicada para cada dimensión de la tabla.</p>
+<p><strong>Implantación</strong></p>
+<p>Puesto que una de las características de las tablas es la invariabilidad del número de componentes, prácticamente todos los lenguajes de programación implantan las tablas usando memoria estática (en oposición a la memoria dinámica). Una vez que el programa ha sido preparado para ser ejecutado (compilado y enlazado), la posición y el espacio de memoria que utilizará la tabla en la ejecución del programa ya está fijado y no puede de ninguna forma cambiarse o utilizarse para otros fines que no sea almacenar los elementos de la tabla.</p>
+<p>Hay otros tipos de TAD cuya implantación se realiza frecuentemente con memoria dinámica, cuyo significado fundamental es que, en oposición a la memoria estática, el tamaño y la posición del espacio de memoria utilizado si puede cambiar en tiempo de ejecución, pudiéndose utilizar para otros fines.</p>
+<h3 id="Listas"><a href="#Listas" class="headerlink" title="Listas"></a>Listas</h3><p>Una <strong>lista</strong> es una estructura de datos que cumple:</p>
+<ul>
+<li>Todos sus <em>componente son del mismo tipo</em> .</li>
+<li>Cada <em>elemento</em> o <em>nodo va seguido de otro</em> del mismo tipo o de ninguno.</li>
+<li>Sus componentes se almacenan según <em>cierto orden</em> .</li>
+</ul>
+<p>Nótese las diferencias con respecto a las tablas:</p>
+<ul>
+<li>Los elementos de las tablas no se almacenan según un orden. En las listas siempre hay un orden.</li>
+<li>No existe unos conjuntos de índices asociados a cada posición, tal como ocurre con las tablas. Por tanto, en las listas será precio ir recorriendo los elementos hasta encontrar el buscado.</li>
+</ul>
+<p><strong>Tipos</strong></p>
+<p>Una manera de clasificar las listas es por la forma de acceder al siguiente elemento:</p>
+<ul>
+<li><strong>Lista densa</strong> : La propia estructura determina cuál es el siguiente elemento de la lista. Por ejemplo, aplicando ciertos “trucos” se puede usar una tabla para implementar una lista, de forma que el siguiente elemento de la lista fuera dado por el orden del índice (no confundir con el orden de los elementos del array). Nótese sin embargo que, puesto que un array es estático, la memoria reservada para implementar esta “lista” también será estática.</li>
+<li><strong>Lista enlazada</strong> : Cada elemento contiene la información necesaria para llegar al siguiente. La posición del siguiente elemento de la estructura la determina el elemento actual. Es necesario almacenar al menos la posición de memoria del primer elemento. Además es dinámica, es decir, su tamaño cambia durante la ejecución del programa.</li>
+<li>Dentro de las listas enlazadas podemos distinguir, según la cantidad de enlaces por nodo, entre:<ul>
+<li><strong>Lista simplemente enlazada</strong> : Cada elemento conoce qué elemento es el que le sucede en el orden, pero no cual le precede.</li>
+<li><strong>Lista doblemente enlazada</strong> : Cada elemento conoce qué elemento le precede y cual le sucede en el orden.</li>
+<li><strong>Lista con enlaces múltiples</strong> : Son aquellas listas en donde cada elemento, aparte de conocer los elementos que le preceden o suceden, también tiene uno o varios enlaces al primer elemento de otra lista, siendo éstas sublistas de la anterior.</li>
+</ul>
+</li>
+</ul>
+<p>También podemos clasificar las listas en función de que los elementos se coloquen en la lista por orden de llegada y se acceda a ellos por su posición. Los ejemplos más usuales de este tipo de listas son:</p>
+<ul>
+<li><strong>PILAS</strong> (Estructuras LIFO. Last In First Out): El último elemento en entrar es el primero en salir.</li>
+<li><strong>COLAS</strong> (Estructuras FIFO. First In First Out): El primer elemento en entrar es el primero en salir.</li>
+</ul>
+<p><strong>Operaciones</strong></p>
+<p>Las operaciones básicas a realizar en una lista son las mismas que en las tablas, si bien, la forma en que se realizan en las listas difiere notablemente entre ambos TAD, sobre todo en lo concerniente a las operaciones de Inserción, Eliminación, Búsqueda y Ordenación.</p>
+<p>A la hora de insertar o eliminar elementos de una lista, puede distinguirse entre insertar o eliminar el primer elemento de la lista, un elemento intermedio o el último elemento. En todos los casos resulta de capital importancia reordenar los diferentes enlaces entre los elementos de forma correcta, pues realizar mal un enlace o perderlo supone la imposibilidad definitiva de acceder a parte de la lista, o incluso a toda ella.</p>
+<p><strong>Representación</strong></p>
+<p>La representación más habitual de una lista se hace colocando sus elementos entre paréntesis, separados por comas, según muestra el siguiente ejemplo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/listas1.png?w=825" alt=""></p>
+<p>Siendo e1, e2, …, en los elementos de la lista.</p>
+<p>Puesto que los componentes de una lista se almacenan según cierto orden, es muy importante notar que:</p>
+<p>L1 = (e1, e2, …, en) es una lista distinta de L2 = (en, e1, …, e2)</p>
+<p>De forma gráfica presentamos las siguientes listas:</p>
+<p><em>Simplemente enlazada:</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/lista_simple_enlazada.png?w=825" alt=""></p>
+<p><em>Doblemente enlazada:</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/lista_doble_enlazada.png?w=825" alt=""></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/lista_enlace_multiple.png?w=825" alt=""></p>
+<p>En estas representaciones las flechas indican los enlaces entre los componentes de las listas. El punto negro de la flecha indica el elemento origen y la punta de flecha el elemento destino, de tal forma que el origen conoce el destino, pero el destino no conoce su elemento origen. Por esta razón es por lo que las listas doblemente enlazadas precisan “dos” enlaces, uno en cada sentido. En la lista <strong>L1</strong> el elemento de contenido “Juan” sabe que le sigue el elemento “Pedro”, y éste sabe que le sigue “Inés”, pero “Pedro” no sabe que le precede “Juan”.</p>
+<p>El símbolo <strong>X</strong> o aspa que aparece en algunos elementos indican que no tienen enlace a ningún sitio, se entiende que es un enlace nulo. Obsérvese que todas las listas tienen que tener un “punto de entrada”, es decir, una referencia al primer elemento de la lista. Estas referencias, en nuestro ejemplo, son <strong>L1, L2</strong> y <strong>L3</strong> .</p>
+<p>También conviene fijarse de forma especial en las listas con enlaces múltiples. Mientras que en las listas simples y dobles únicamente hay una forma de “recorrer” la lista, desde el primer elemento hasta el último”, en las listas con múltiples enlaces surgen varias formas de recorrerlas, según nos decidamos a avanzar por uno de los múltiples enlaces a otras <em>sublistas</em> que puede tener cada elemento.</p>
+<p><strong>Implantación</strong></p>
+<p>Las listas son un tipo de TAD cuya implantación puede realizarse de múltiples maneras. Según el tamaño, manejo o rendimiento que queramos que tengan ciertas operaciones, como búsquedas, ordenaciones, inserciones, etc, las listas pueden implementarse con arrays, ficheros secuenciales o punteros. Estructuras de datos todas ellas muy comunes en la mayoría de los lenguajes de programación.</p>
+<p>También conviene observar que para implantar listas puede usarse tanto memoria estática (arrays) como memoria dinámica (punteros). Si bien es poco frecuente usar los arrays, pues en esencia son tablas. Para implementar una lista simple usando tablas hace falta recurrir a algún tipo de “truco”, por ejemplo, almacenar en el contenido de los elementos del array dos datos, el contenido de los elementos de la lista y el “puntero” al siguiente elemento.</p>
+<p>Veamos un ejemplo de lista implementada con array:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/listas2.png?w=825" alt=""></p>
+<p>Nótese como junto al nombre de las personas, usamos el carácter especial (#) para separar los nombres de los valores numéricos que hacen de puntero, indicando qué índice de la tabla contiene el siguiente elemento de la lista. Para indicar el valor nulo usamos un valor de índice imposible, en este caso el negativo (-1). Hay que sobreentender que el puntero de comienzo de la lista es siempre el índice cero del array.</p>
+<p>Si se eliminasen algunos elementos de la lsita, por ejemplo a Inés y a Pedro, supondría reorganizar los apuntadores, de forma que tendríamos: Juan#3, Inés#(-1); Pedro#(-1); Ana#(-1). Desde un punto de vista abstracto la lista sólo tiene ahora dos elementos Juan y Ana, sin embargo esto no quiere decir que el array haya disminuido su tamaño al dejar de apuntar a los elementos Inés y Pedro; simplemente estamos diciendo que hemos dejado de apuntarlos, pero el array sigue teniendo el mismo espacio reservado en memoria, y este espacio no está disponible para otro uso más que para almacenar los elementos del array. Esto es debido a que un array se implementa con memoria estática.</p>
+<p>Usando memoria dinámica (punteros) no se tendría esta desventaja. Bajo esta circunstancia, si se elimina de la lista un elemento, el espacio de memoria que ocupaba queda disponible para ser usado para otras finalidades.</p>
+<h3 id="Arboles"><a href="#Arboles" class="headerlink" title="Árboles"></a>Árboles</h3><p>Como dice David Harel en su libro “The Spirit of Computing”:</p>
+<p>“Una de las estructuras de datos más importantes y prominentes que existen es el <strong>árbol</strong> . No es un árbol en el sentido botánico de la palabra, sino uno de naturaleza más abstracta. Todos hemos visto usar tales árboles para describir conexiones familiares. Los dos tipos más comunes de árboles familiares son el – árbol de antecesores – , que empieza en un individuo y va hacia atrás a través de padres, abuelos, etc, y el – árbol de descendientes – , que va hacia adelante a través de hijos, nietos, etc”.</p>
+<p>Un árbol es un TAD cuya estructura corresponde con el siguiente gráfico:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol.png?w=825" alt=""></p>
+<p>En donde podemos ya notar las principales características de los árboles. Cada uno de las diferentes “circunferencias” representa un elemento o nodo del TAD tipo árbol. El nodo 1 suele ser llamada <em>nodo de nivel 0</em> (también nodo raíz por su similitud con un árbol real). Es importante percatarse de que sólo puede haber un nodo de nivel 0 en cada árbol.</p>
+<p>Los nodos 2, 3 y 4 son llamados nodos de nivel 1, por estar todos ellos al mismo “nivel” al ser todos “hijos” del nodo 1. Este razonamiento se puede ir aplicando a los sucesivos niveles, hablándose de nodos nietos (o hijos si nos referimos al nivel inmediatamente superior).</p>
+<p>Por la similitud con un árbol en el sentido botánico, también se dice que los nodos que no tienen hijos son nodos hoja y los nodos que sí tienen hijos, salvo la raíz, son llamados nodos rama o nodos internos. Con el ejemplo del árbol anterior ( <strong>A1</strong> ), vamos a mostrar los principales conceptos usados al hablar de árboles:</p>
+<ul>
+<li><strong>Antecesor Directo</strong> o <strong>Padre</strong> : El nodo 4 es el Antecesor Directo o Padre de los nodos 7, 8 y 9.</li>
+<li><strong>Antecesor</strong> o <strong>Ancestro</strong> : El nodo 1 es el Antecesor de todos los otros nodos.</li>
+<li><strong>Sucesor Directo</strong> o <strong>Hijo</strong> : El nodo 5 es el Sucesor Directo o Hijo del nodo 2.</li>
+<li><strong>Sucesor</strong> o <strong>Descendiente</strong> : Todos los nodos son Sucesores o Descendientes del nodo 1.</li>
+<li><strong>Nodo de Nivel Cero</strong> o <strong>Raíz</strong> : En nuestro ejemplo es el nodo 1.</li>
+<li><strong>Nodo Interno</strong> o Rama: En nuestro ejemplo son los nodos 2, 3 y 4.</li>
+<li><strong>Nodo Hoja</strong> : En nuestro ejemplo son los nodos 5, 6, 7, 8 y 9.</li>
+<li><strong>Nivel de un Nodo</strong> : El nodo 1 tiene nivel 0. Los nodos 2, 3 y 4 nivel 1. Los nodos 5, 6, 7, 8 y 9 nivel 2.</li>
+<li><strong>Grado de un Nodo</strong> : Es el número de descendientes directos que tiene un nodo. El grado del nodo 2 es 1.</li>
+<li><strong>Grado del Árbol</strong> : Es el mayor de los grados de los nodos que los componen. En nuestro caso es 3.</li>
+<li><strong>Altura del Árbol</strong> : Es el mayor de los niveles del árbol. En nuestro caso es 2.</li>
+<li><strong>Longitud de Camino de un Nodo</strong> : Número de enlaces o arcos que hay que atravesar para ir de la raíz a un nodo. La longitud de camino del nodo raíz es la unidad. Por ejemplo, el nodo 5 tiene longitud de camino 3.</li>
+</ul>
+<p><strong>Tipos</strong></p>
+<p>En función de la estructura que define un árbol, se pueden establecer distintos tipos de árboles atendiendo a ciertos aspectos en la <em>forma</em> de árbol. Según ésto es muy corriente hablar de los siguientes tipos de árboles:</p>
+<ul>
+<li><strong>Árbol BINARIO</strong> o <strong>Árbol B</strong> : Es el árbol cuyo máximo número de nodos hijos que tiene cualquier nodo es dos.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol2.png?w=825" alt=""></p>
+<ul>
+<li><strong>Árbol MULTIRAMA</strong> : Son aquellos en los que no hoy límite para el número de nodos hijo. El número de niveles no crece tanto como en los binarios. Es el caso de nuestro árbol de ejemplo <strong>A1</strong> .</li>
+<li><strong>Árbol BALANCEADO</strong> : Son aquellos árboles en los cuales se cumple que <em>entre todos sus nodos hoja no hay una diferencia de nivel superior a la unidad</em> . Veamos algunos ejemplos de árboles binarios balanceados (también denominados árboles AVL) y no-balanceados.</li>
+</ul>
+<p>Balanceados:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol3.png?w=825" alt=""></p>
+<p>No Balanceados:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol4.png?w=825" alt=""></p>
+<p>Es de observar que una lista realmente es un árbol en el que cada nodo únicamente tiene un hijo, y se considera al primer nodo de la lista el nodo raíz del árbol (tal como se muestra en el árbol (3) de la figura.</p>
+<p>Una lista de más de dos elementos se corresponde a la estructura de un árbol con un grado de no-balanceo máximo (sólo hay un nodo hoja). Se suele decir en estos casos que la lista es un <em>árbol totalmente degenerado</em> .</p>
+<p><strong>Operaciones</strong></p>
+<p>Las operaciones básicas que se pueden realizar sobre los árboles son:</p>
+<ul>
+<li><strong>Definir/Crear</strong> el árbol: Se refiere a la forma que cada lenguaje debe tener para definir la estructura de tipo árbol y crear una variable de este tipo.</li>
+<li><strong>Recorrer</strong> los diferentes caminos del árbol: Esta es una operación que resulta muy importante en los árboles, pues es sobre la que se apoyan las demás operaciones. Vamos a ver que existen dos formas de recorrer un árbol, en ambas, por convenio, se asume que siempre nos desplazaremos de <em>izquierda</em> a <em>derecha</em> en horizontal, al igual que la lectura de un libro. Respecto a la dimensión vertical, nos moveremos de arriba hacia abajo o viceversa. Existen dos forma de recorrer un árbol:<ul>
+<li>Recorrido en <strong>AMPLITUD</strong> : Se trata de recorrer consecutivamente los nodos que se encuentran en el mismo nivel (siempre de izquierda a derecha). La dimensión que prima en el recorrido es la horizontal. Tomando como ejemplo el árbol <strong>A1</strong> de nuestro ejemplo, el recorrido en amplitud nos daría la siguiente secuencia de nodos: (1, 2,3,4,5,6,7,8,9).</li>
+<li>Recorrido en <strong>PROFUNDIDAD</strong> : La dimensión que prima al recorrer el árbol es la <em>vertical</em> . Siempre se tenderá a alejarse del nodo raíz mientras se pueda. Sin embargo, a diferencia del recorrido en amplitud, existen diferentes formas de recorrido en profundidad, estas formas son:<ul>
+<li>Profundidad en <strong>PREORDEN</strong> : Se empieza por el nodo raíz y se tiende a alejarse lo máximo posible de él. Moviéndose en vertical de arriba hacia abajo. En nuestro ejemplo obtendríamos la secuencia: <em>(1,2,5,3,6,4,7,8,9)</em> .</li>
+<li>Profundidad en <strong>POSTORDEN</strong> : Se comienza por el nodo hoja más a la izquierda y se mantiene la máxima distancia que se pueda con el nodo raíz. En nuestro ejemplo se obtiene la secuencia: <em>(5,2,6,3,7,8,9,4,1)</em> .</li>
+<li>Profundidad en <strong>INORDEN</strong> : Como el recorrido postorden pero cuidando que no aparezcan, siempre que sea posible, dos nodos del mismo padre (nodos hermanos) de forma consecutiva en la secuencia de recorrido. En nuestro ejemplo se tendría: <em>(5,2,1,6,3,7,4,8,9)</em> . Para los árboles binarios, en este tipo de recorrido, jamás pueden aparecer consecutivos dos nodos hermanos.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Insertar/Eliminar</strong> elementos en el árbol: Al igual que en las listas, hay que distinguir entre insertar el nodo raíz, un nodo interno o un nodo hoja. También resulta muy importante nunca cambiar de forma incorrecta o perder un enlace, pues supondría la imposibilidad de acceder a parte o a todo el árbol.</li>
+<li><strong>Ordenar</strong> los elementos del árbol: Ordenar un árbol no implica cambiar su estructura, sino modificar el contenido de los nodos para que sigan algún tipo de orden deseado. Las posibles ordenaciones de un árbol son aquellas que hacen que al hacer el recorrido de un árbol se obtenga una secuencia ordenada según algún criterio. Por ejemplo, nuestro árbol de ejemplo está ordenado en amplitud, pues al hacer un recorrido de este tipo se obtiene la secuencia ordenada <em>(1,2,3,4,5,6,7,8,9)</em> . El mismo árbol ordenado en profundidad preorden sería: <em>(1,2,3,4,5,6,7,8,9)</em> .</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol6.png?w=825" alt=""></p>
+<ul>
+<li><strong>Buscar</strong> elementos en el árbol: Consiste en localizar el/los nodo/s que contiene un dato igual al dato dado como referencia. Es muy importante darse cuenta de que según esté el árbol ordenado o no, si está balanceado o no, y dependiendo del recorrido que se haga, las búsquedas pueden ser más o menos efectivas (rápidas).</li>
+<li><strong>Contar</strong> los elementos del árbol: Básicamente consiste en recorrer el árbol en cualquiera de sus formas e ir contando los elementos. Existen sin embargo variantes de esta contabilidad. Por ejemplo, podría solicitarse el número de nodos que tiene el nivel N de un árbol, lo cual exigiría un recorrido en amplitud teniendo en cuenta siempre el nivel donde se está en cada momento. Otra posible cuenta sería conocer el número de nodos que hay desde la raíz hasta el nodo hoja de menor nivel, etc.</li>
+<li><strong>Balancear</strong> el árbol: Consiste en hacer que un árbol no-balanceado pase a ser balanceado. Esta operación sí que supone un cambio en la estructura del árbol, suponiendo siempre el cambio de nodo raíz y la variación de niveles de ciertos nodos. Veamos un ejemplo de balanceo de un árbol binario:</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol61.png?w=825" alt=""></p>
+<p><strong>Representación</strong></p>
+<p>Ya hemos visto una primera forma de representar un árbol muy intuitiva y clarificadora, usando circunferencias para representar los nodos o elementos del árbol y líneas para representar los enlaces.</p>
+<p>No obstante, sin tocar en absoluto la estructura del árbol, conviene considerar la forma de enlazar los nodos del árbol, pues al igual que con las listas, los nodos del árbol pueden estar simplemente enlazados o doblemente enlazados. Esta diferencia afecta en la facilidad o dificultad de implementar ciertas operaciones sobre los árboles, sobre todo las diferentes operaciones de recorrido del árbol. Cuando se quiere especificar en un gráfico el tipo de enlaces del árbol, se utiliza una forma parecida a las listas, veamos un ejemplo de un mismo árbol simplemente enlazado y doblemente enlazado.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/arbol7.png?w=825" alt=""></p>
+<p><strong>Implantación</strong></p>
+<p>Al igual que las listas, con los árboles, según diversas consideraciones sobre el tamaño, manejo o rendimiento que queramos que tengan ciertas operaciones, tales como recorridos, ordenaciones, inserciones, etc. los árboles pueden implantarse con arrays, ficheros secuenciales o punteros. Estructuras de datos todas ellas muy comunes en la mayoría de los lenguajes de programación.</p>
+<p>Lo más habitual es que se utilice memoria dinámica, es decir, punteros, para la implantación de todo tipo de árboles, aunque en ciertas ocasiones pueden considerarse la implantación con memoria estática mediante arrays.</p>
+<h2 id="Algoritmos-Ordenacion-Busqueda-Recursion-Grafos"><a href="#Algoritmos-Ordenacion-Busqueda-Recursion-Grafos" class="headerlink" title="Algoritmos: Ordenación, Búsqueda, Recursión, Grafos"></a>Algoritmos: Ordenación, Búsqueda, Recursión, Grafos</h2><p>La búsqueda de un elemento es, con diferencia, la operación más utilizada en los TAD, y la más importante. Por otra parte, la ordenación de los elementos del TAD puede resultar de gran ayuda a la hora de realizar búsquedas, así pues, la ordenación de los elementos del TAD es la segunda operación más útil. Se pueden distinguir dos tipos dentro de estos algoritmos:</p>
+<ul>
+<li>Algoritmos <strong>Recursivos</strong> : Los algoritmos recursivos son aquellos que se basan en el uso de rutinas de programación que se llaman a sí mismas.</li>
+<li>Algoritmos <strong>Iterativos</strong> : Se consideran algoritmos iterativos a todos aquellos que no son recursivos.</li>
+</ul>
+<h3 id="Ordenacion"><a href="#Ordenacion" class="headerlink" title="Ordenación"></a>Ordenación</h3><p>La finalidad de los algoritmos de ordenación es organizar ciertos datos (estos datos pueden estar contenidos en diferentes estructuras, ya sean TAD o en ficheros) en un orden creciente o decreciente mediante una regla prefijada (numérica, alfabética, …).</p>
+<p>Atendiendo al tipo de elemento que se quiera ordenar puede ser:</p>
+<ul>
+<li><strong>Ordenación interna</strong> : Los datos se encuentran en memoria (ya sean tablas, listas, árboles, etc).</li>
+<li><strong>Ordenación externa</strong> : Los datos están en un dispositivo de almacenamiento externo (ficheros), y su ordenación es más lenta que la interna.</li>
+</ul>
+<p>En este apartado vamos a estudiar los métodos de ordenación interna para los TAD vistos en apartados anteriores, esto es, para ordenar tablas, listas y árboles. Inicialmente nos centraremos en los TAD tabla y lista (simple o doble) y más adelante comentaremos el caso de listas múltiples y árboles.</p>
+<p>Además, aquí consideraremos métodos de ordenación iterativa, es decir, no recursivos. Cuando estudiemos la recursividad veremos ejemplos de ordenaciones de tipo recursivo.</p>
+<p>Los principales algoritmos de ordenación interna de tipo iterativo son:</p>
+<ul>
+<li>Selección</li>
+<li>Burbuja</li>
+<li>Inserción Directa</li>
+<li>Inserción Binaria</li>
+<li>Shell</li>
+<li>Intercalación</li>
+</ul>
+<p><strong>Selección</strong></p>
+<p>Este método consiste en buscar el elemento más pequeño del TAD y ponerlo en la primera posición; luego, entre los restantes, se busca el elemento más pequeño y se coloca en segundo lugar, y así sucesivamente hasta colocar el último elemento.</p>
+<p>La idea de esta ordenación es independiente del tipo de TAD a la que se aplique, lo único que puede variar son ciertos aspectos o detalles en la forma explícita de hacer la ordenación según se implemente el TAD con memoria estática (arrays) o memoria dinámica (punteros).</p>
+<p>Por ejemplo, si tenemos el array{40,21,4,9,10,35}, o la lista (40,21,4,9,10,35), los pasos a seguir son:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/seleccion.png?w=825" alt=""></p>
+<p><strong>Burbuja</strong></p>
+<p>Consiste en comparar pares de elementos adyacentes e intercambiarlos entre sí hasta que estén todos ordenados. Utilizando como ejemplo la tabla anterior {40,21,4,9,10,35}:</p>
+<p>Primera pasada: Se comienza por el primer elemento.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/burbuja1.png?w=825" alt=""></p>
+<p>Segunda pasada: Se comienza por el segundo elemento.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/burbuja2.png?w=825" alt=""></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/burbuja3.png?w=825" alt=""></p>
+<p><strong>Inserción directa</strong></p>
+<p>En este método lo que se hace es tener una sublista ordenada de elementos de la lista, o array, e ir insertando el resto en el lugar adecuado para que la sublista no pierda el orden. La sublista ordenada se va haciendo cada vez mayor, de modo que al final la lista entera queda ordenada. Utilizando como ejemplo la tabla anterior {40,21,4,9,10,35}:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/insercion_directa.png?w=825" alt=""></p>
+<p><strong>Inserción binaria</strong></p>
+<p>Es el mismo método que la inserción directa, excepto que la búsqueda del orden de un elemento en la sublista ordenada se realiza mediante una búsqueda binaria, lo que en principio supone un ahorro de tiempo. No obstante, dado que para la inserción sigue siendo necesario un desplazamiento de los elementos, el ahorro, en la mayoría de los casos, no se produce, si bien hay compiladores que realizan optimizaciones que lo hacen ligeramente más rápido.</p>
+<p><strong>Shell</strong></p>
+<p>Es una mejora del método de inserción directa, utilizado cuando la tabla tiene un gran número de elementos. En este método no se compara a cada elemento con el de su izquierda, como en el de inserción, sino con el que está a un cierto número de lugares (llamado salto) a su izquierda. Este salto es constante, y su valor inicial es N/2 (siendo N el número de elementos, y siendo división entera). Se van dando pasadas hasta que en una pasada no se intercambie ningún elemento de sitio. Entonces el salto se reduce a la mitad, y se vuelven a dar pasadas hasta que no se intercambie ningún elemento, y así sucesivamente hasta que el salto vale 1. Utilizando como ejemplo {40,21,4,9,10,35}:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/shell.png?w=825" alt=""></p>
+<p>Con sólo 6 intercambios se ha ordenado el array, cuando por inserción se necesitaban muchos más.</p>
+<p><strong>Intercalación</strong></p>
+<p>No es propiamente un método de ordenación, consiste en la unión de dos tablas o listas ordenadas de modo que la unión esté también ordenada. Para ello, basta con recorrer los TAD de izquierda a derecha e ir cogiendo el menor de los dos elementos, de forma que sólo aumenta el contador del array del que sale el elemento siguiente para el array-suma. Si quisiéramos sumar las tablas {1,2,4} y {3,5,6}, los pasos serían:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/intercalacion.png?w=825" alt=""></p>
+<h3 id="Busqueda"><a href="#Busqueda" class="headerlink" title="Búsqueda"></a>Búsqueda</h3><p>Como se ha mencionado anteriormente la búsqueda es la operación más importante en el procesamiento de la información, y permite la recuperación de datos previamente almacenados. El tipo de búsqueda se puede clasificar como interna o externa, según el lugar en el que esté almacenada la información (en memoria o en dispositivos externos). Todos los algoritmos de búsqueda tienen dos finalidades:</p>
+<ul>
+<li>Determinar si el elemento buscado se encuentra en el conjunto en el que se busca.</li>
+<li>Si el elemento está en el conjunto, hallar la posición en la que se encuentra.</li>
+</ul>
+<p>En este apartado nos centraremos en la búsqueda interna iterativa. Como principales algoritmos en tablas y listas tenemos las búsquedas:</p>
+<ul>
+<li>Secuencial</li>
+<li>Binario o Dicotómica</li>
+<li>Utilizando tablas Hash</li>
+</ul>
+<p><strong>Búsqueda Secuencial</strong></p>
+<p>Esta búsqueda consiste en recorrer y examinar cada uno de los elementos hasta encontrar el o los elementos buscados, o hasta que se han mirado todos los elementos.</p>
+<p>Por ejemplo, para la lista (10,12,4,10,9) donde queremos encontrar el elemento cuyo contenido es 10, la idea del algoritmo sería:</p>
+<p>Utilizando como ejemplo la tabla anterior {40,21,4,9,10,35}:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/busqueda_secuencial.png?w=825" alt=""></p>
+<p>Puesto que queremos encontrar todas las ocurrencias del valor 10, es necesario recorrer siempre toda la lista o tabla, así pues habrá que recorrer los N elementos, lo cual hace que el coste del algoritmo sea N, y su orden O(N).</p>
+<p>Si sólo queremos encontrar la primera ocurrencia que se produzca, si tenemos la certeza de que no puede haber elementos repetidos, se puede parar la búsqueda en cuanto se produzca la primera ocurrencia, con lo cual el algoritmo es más eficiente. En este caso, el número medio de comparaciones que hay que hacer antes de encontrar el elemento buscado es de (N+1)/2. Aún así, el orden sigue siendo O(N).</p>
+<p><strong>Búsqueda binaria o dicotómica</strong></p>
+<p>Para utilizar este algoritmo, se precisa que la tabla o lista considerada esté ordenada. La búsqueda binaria consiste en dividir la tabla por su elemento medio en dos subtablas más pequeñas, y comparar el elemento con el del centro. Si coinciden, la búsqueda se termina. Si el elemento es menor, debe estar (si está) en la primera subtabla, y si es mayor está en la segunda.</p>
+<p>Por ejemplo, para buscar el elemento 3 en {1,2,3,4,5,6,7,8,9} se realizarían los siguientes pasos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/busqueda_binaria.png?w=825" alt=""></p>
+<p>Si al final de la búsqueda todavía no lo hemos encontrado, y la subtabla a dividir está vacía {}, quiere decir que el elemento no se encuentra en la tabla.</p>
+<p>En general, este método realiza {log2 (N+1)} comparaciones antes de encontrar el elemento, o antes de descubrir que no está. Este número es muy inferior que el necesario para la búsqueda lineal para casos grandes.</p>
+<p>Este método también se puede implementar de forma recursiva, siendo la función recursiva la que divide la tabla o lista.</p>
+<p><strong>Búsqueda utilizando Tablas Hash</strong></p>
+<p>Este método no es realmente un método de búsqueda, sino una forma de mejorar la velocidad de búsqueda al utilizar algún otro método.</p>
+<p>Consiste en asignar a cada elemento un índice mediante una transformación del elemento. Esta correspondencia se realiza mediante una función de conversión, llamada función hash. La correspondencia más sencilla es la identidad, esto es, al número 0 se le asigna el índice 0, al elemento 1 el índice 1, y así sucesivamente.</p>
+<p>Pero si los números a almacenar son demasiado grandes esta función es inservible. Por ejemplo, se quiere guardar en un array la información de 1000 usuarios de una empresa, y se elige el número de DNI como elemento identificativo. Es inviable hacer un array de 100.000.000 elementos, sobre todo porque se desaprovecha demasiado espacio. Por eso, se realiza una transformación al número de DNI para que nos de un número menor, de 3 cifras pues hay 1000 usuarios, y utilizar este resultado de la función hash como índice de un array de 1000 elementos para guardar a los empleados.</p>
+<p>Así, dado un DNI a buscar, bastaría con realizar la transformación según la función hash a un número de 3 cifras; usar este número como índice de búsqueda del array de 1000 elementos, con cualquiera de los métodos anteriores, y obtener el contenido del array dado por la posición cuyo índice es el resultado de la función hash.</p>
+<p>La función de hash ideal debería ser biyectiva, esto es, que a cada elemento le corresponda un índice, y que a cada índice le corresponda un elemento, pero no siempre es fácil encontrar esa función, e incluso a veces es inútil, ya que puede no saberse “a priori” el número de elementos a almacenar.</p>
+<p>La función de hash depende de cada problema y de cada finalidad, y se pueden utilizar con números o cadenas, pero las más utilizadas son:</p>
+<ul>
+<li><em>Restas sucesivas</em> : Esta función se emplea con claves numéricas entre las que existen huecos de tamaño conocido, obteniéndose direcciones consecutivas.</li>
+<li><em>Aritmética modular</em> : El índice de un número es resto de la división de ese número entre un número N prefijado, preferentemente primo. Los número se guardarán en las direcciones de memoria de 0 a N-1. Este método tiene el problema de que cuando hay (N+1) elementos, al menos un índice es señalado por dos elementos (teorema del palomar). A este fenómeno se le llama colisión.</li>
+<li><em>Mitad del cuadrado</em> : Consiste en elevar al cuadrado la clave y coger las cifras centrales. Este método también presenta problemas de colisión.</li>
+<li><em>Truncamiento</em> : Consiste en ignorar parte del número y utilizar los elementos restantes como índice. También se produce colisión.</li>
+<li><em>Plegamiento</em> : Consiste en dividir el número en diferentes partes, y operar con ellas (normalmente con suma o multiplicación). También se produce colisión.</li>
+</ul>
+<p>Ahora se nos presenta el problema de qué hacer con las colisiones, es decir, el <strong>Tratamiento de Colisiones</strong> . ¿Qué pasa cuando a dos elementos diferentes les corresponde el mismo índice?. Pues bien, hay tres posibles soluciones:</p>
+<ul>
+<li>Cuando el índice correspondiente a un elemento ya está ocupado, se le asigna el primer índice libre a partir de esa posición. Este método es poco eficaz, porque al nuevo elemento se le asigna un índice que podrá estar ocupado por un elemento posterior a él, y la búsqueda se ralentiza, ya que no se sabe la posición exacta del elemento.</li>
+<li>También se pueden reservar unos cuantos lugares al final del array para alojar a las colisiones. Este método también tiene un problema: ¿Cuánto espacio se debe reservar? Además, sigue la lentitud de búsqueda si el elemento a buscar es una colisión.</li>
+<li>Lo mejor es en vez de crear un array de números, crear un array de punteros, donde cada puntero señala el principio de una lista enlazada. Así, cada elemento que llega a un determinado índice se pone en el último lugar de la lista de ese índice. El tiempo de búsqueda se reduce considerablemente, y no hace falta poner restricciones al tamaño del array, ya que se pueden añadir nodos dinámicamente a la lista.</li>
+</ul>
+<h3 id="Recursividad"><a href="#Recursividad" class="headerlink" title="Recursividad"></a>Recursividad</h3><p><strong>Definición de recursividad</strong></p>
+<p>La <strong>recursividad</strong> es una característica que permite que una determinada acción se pueda realizar en función de invocar la misma acción pero en un caso más sencillo, hasta llegar a un punto (caso base) donde la realización de la acción sea muy sencilla. Esta forma de ver las cosas es útil para resolver problemas definibles en sus propios términos. En cierta medida, es análogo al principio de inducción.</p>
+<p>Para desarrollar algoritmos recursivos hay que partir del supuesto de que ya hay un algoritmo que resuelve una versión más sencilla del problema. A partir de esta suposición debe hacerse lo siguiente:</p>
+<ul>
+<li>Identificar subproblemas atómicos de resolución inmediate. Los denominados <em>casos base</em> .</li>
+<li>Descomponer el problema en subproblemas resolubles mediante el algoritmo preexistente; la solución de estos subproblemas debe aproximarnos a los casos base.</li>
+</ul>
+<p>No existen problemas intrínsecamente recursivos o iterativos; cualquier proceso iterativo puede expresarse de forma recursiva y viceversa. Si bien ciertos problemas se prestan mucho mejor que otros al uso de la recursividad.</p>
+<p>En el mundo de las matemáticas, un clásico ejemplo de recursividad lo tenemos en el cálculo del factorial de un número, a saber:</p>
+<p>Factorial del número natural n (incluido el 0) = n!<br>     (1) si n = 0 entonces: 0! = 1<br>     (2) si n &gt; 0 entonces: n! = n · (n-1)!</p>
+<p>Aunque en este estudio de los TAD hemos evitado el uso de lenguajes de programación específicos, por ser una de las características de los tipos abstractos de datos la independencia de su implantación; en esta ocasión recurriremos al lenguaje C para poner un ejemplo muy claro e ilustrativo de cómo implementar un algoritmo recursivo. El siguiente programa es un ejemplo del cálculo del factorial de un número n:</p>
+<p>int factorial(int n)<br>{<br>     if (n == 0) return 1;            // Caso base<br>     return (n * <strong>factorial(n-1)</strong>);     // Llamada a sí mismo<br>}</p>
+<p>La función factorial es llamada pasándole un determinado entero y devuelve otro numero entero. Como se observa, en cada llamada recursiva se reduce el valor de n, llegando el caso en el que n es 0 y no efectúa más llamadas recursivas.</p>
+<p>Aunque la función factorial se preste muy bien al uso de la recursividad, no quiere decir esto, tal como hemos mencionado anteriormente, que no pueda ser implementado de forma iterativa. De hecho el factorial puede obtenerse con facilidad sin necesidad de emplear funciones recursivas, es más, el uso del programa anterior es muy ineficiente (con un número n grande, al ejecutarse en una computadora, consumiría mucha más memoria y tiempo que si se usase un algoritmo iterativo), pero es un ejemplo muy claro.</p>
+<p><strong>Uso de la recursión</strong></p>
+<p>La pregunta que surge de manera natural es: <em>¿Cuándo utilizar la recursividad?</em> . No se debe utilizar si la solución iterativa es sencilla y clara. En otros casos, obtener una solución iterativa es mucho más complicado que una solución recursiva, y entonces se planteará si merece la pena transformar la solución recursiva en una iterativa.</p>
+<p>Por otra parte, hay TAD que, debido a sus características, sus operaciones se adaptan muy bien al uso de la recursión. Casi todos los algoritmos basados en los esquemas de vuelta atrás y divide y vencerás son recursivos. Otras estructuras que se adaptan muy bien a la recursividad son los grafos, y cuando se habla de grafos se está incluyendo a las listas y a los árboles.</p>
+<p>Si nos centramos en el mundo de la programación, algunos lenguajes de programación no admiten el uso de recursividad. Es obvio que en este caso se requerirá una solución no recursiva (iterativa). Aunque parezca mentira, es en general mucho más sencillo escribir un programa recursivo que su equivalente iterativo. Y desde luego siempre resulta más económico en cantidad de líneas de código.</p>
+<p><strong>Ordenaciones y búsquedas recursivas</strong></p>
+<p>Ya hemos visto en apartados anteriores como se realizan ordenaciones y búsquedas iterativas en TAD tipo tabla y lista. Veamos ahora algoritmos de naturaleza recursiva para realizar estas operaciones.</p>
+<p>La <strong>Ordenación Rápida (Quicksort)</strong> es un algoritmo de ordenación ilustrativo del uso de la recursividad en ordenaciones. Este método se basa en la táctica “divide y vencerás”, que consiste en ir subdividiendo el TAD considerado, en nuestro caso una tabla o lista en partes más pequeñas, y ordenar éstas.</p>
+<p>Para hacer esta división, se toma el valor como pivote, y se mueven todos los elementos menores que este pivote a su izquierda, y los mayores a su derecha. A continuación se aplica el mismo método a cada una de las dos partes en las que queda dividido el array.</p>
+<p>Normalmente se toma como pivote el primer elemento del array, y se realizan dos búsquedas: una de izquierda a derecha, buscando un elemento mayor que el pivote, y otra de derecha a izquierda, buscando un elemento menor que el pivote. Cuando se han encontrado los dos, se intercambian, y se sigue realizando la búsqueda hasta que las dos búsquedas se encuentran. Por ejemplo, para dividir el array {21,40,4,9,10,35}, los pasos serían:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/quicksort.png?w=825" alt=""></p>
+<p>Respecto a los árboles, la idea fundamental que hace posible el uso de la recursividad es que realmente un árbol puede considerarse como un nodo raíz del que cuelgan otros árboles, llamados subárboles. Véase la siguiente figura como ejemplo de esta idea de un árbol binario:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/recursivo2.png?w=825" alt=""></p>
+<p>Para realizar cualquier exploración, recorrido o búsqueda en un árbol binario (o cualquier árbol genérico) bastaría con aplicar la misma operación a cada uno de sus subárboles, hasta llegar al caso base, que sería la búsqueda o recorrido en un subárbol formado por el nodo raíz y nodos hojas, pues en este caso la búsqueda o recorrido es muy fácil, basta seguir los enlaces del nodo raíz para visitar los nodos hojas. Una vez hecho esto el algoritmo recursivo consiste en hacer lo mismo, esto es, seguir los enlaces del nodo raíz, pero tomando como nodo raíz el nodo padre de los nodos caso base. Se repite el proceso hasta llegar al nodo raíz del árbol completo.</p>
+<p>En nuestro ejemplo, los casos bases se darían al llegar a los nodos B y C. Ambos nodos son casos base pues únicamente tienen nodos hojas. Una vez visto sus enlaces y sus nodos hojas se realizaría la misma operación pero tomando el nodo padre de B y C, el nodo A, y tratando a los nodos B y C como si fuesen hojas.</p>
+<p>Veremos en el siguiente apartado sobre grafos que un TAD tipo árbol no es más que un tipo particular de grafo. Y con respecto a estos, comprobaremos que sus operaciones, entre las que está la búsqueda y la ordenación, son de índole profundamente recursiva.</p>
+<h3 id="Grafos"><a href="#Grafos" class="headerlink" title="Grafos"></a>Grafos</h3><p>Un grafo es un objeto matemático que se utiliza para representar circuitos, redes, caminos, etc. Los grafos son muy utilizados en computación, ya que permiten resolver problemas muy complejos.</p>
+<p>Supongamos el siguiente ejemplo. Disponemos de una serie de ciudades y de carreteras que las unen. De cada ciudad saldrán varias carreteras, por lo que para ir de una ciudad a otra se podrán tomar diversos caminos. Cada carretera tendrá un coste asociado (por ejemplo, la longitud de la misma). Gracias a la representación por grafos podremos elegir el camino más corto que conecta dos ciudades, determinar si es posible llegar de una ciudad a otra, si desde cualquier ciudad existe un camino que llegue a cualquier otra, etc. Para tener una idea visual de lo expuesto, supongamos que representamos las ciudades como circunferencias y los caminos por líneas que unen las distintas circunferencias (ciudades):</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/grafos1.png?w=825" alt=""></p>
+<p>Una primera cosa que salta a la vista es que tanto una lista como un árbol no son más que un caso particular de grafo, en donde hemos puesto ciertas restricciones.</p>
+<p>Veamos los grafos correspondientes a una lista y un árbol binario:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/grafos2.png?w=825" alt=""></p>
+<p><strong>Componentes de un grafo</strong></p>
+<p>Así pues, un grafo consta de:</p>
+<ul>
+<li><strong>Vértices</strong> (o nodos): Los vértices son objetos que contienen información. Para representarlos se suelen utilizar puntos o circunferencias con el contenido del nodo escrito dentro. En nuestro ejemplo serían las circunferencias que representan las ciudades.</li>
+<li><strong>Aristas</strong> : Son las conexiones entre vértices. Para representarlos se utilizan líneas. Es frecuente añadir junto a la línea el nombre de los nodos origen y destino y el peso de la arista en algún tipo de unidad.</li>
+</ul>
+<p><strong>Definición formal de grafo</strong></p>
+<p>Conviene decir que la definición de un grafo no depende de su representación. Desde un punto de vista matemático puramente formal, la definición de grafo es la siguiente:</p>
+<p><em>Un grafo G es un par (V(G), A(G)), donde V(G) es un conjunto no vacío de elementos llamados vértices, y A(G) es una familia finita de pares no ordenados de elementos de V(G) llamados aristas.</em></p>
+<p>Al ser una familia de aristas se permite la posibilidad de aristas múltiples en el grafo, es decir, la existencia de más de una arista con el mismo par de vértices como origen y destino. También se permite la existencia de aristas bucles, con inicio y destino el mismo vértice.</p>
+<p>Por ejemplo, según lo dicho y utilizando la forma de representación indicada en el apartado anterior, se puede observar que el conjunto de vértices <em>V(G){a, b, c, d, e, f}</em> y el de aristas <em>A(G)</em> formado por los pares <em>{a, b}, {a, b}, {b, c}, {a, d}, {d, e}, {d, e}, {b, f}, {b, f}, {c, e}, {a, a}, {b, b} y {c, c}</em> determinan el grafo de la figura siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/grafo3.png?w=825" alt=""></p>
+<p><strong>Conceptos fundamentales sobre grafos</strong></p>
+<p>Algunos conceptos fundamentales al hablar de grafos son:</p>
+<ul>
+<li>Un <strong>CAMINO</strong> o <strong>CIRCUITO</strong> entre dos vértices es una lista de vértices en la que dos elementos sucesivos están conectados por una arista del grafo.</li>
+</ul>
+<p>Desde un punto de vista formal, cualquier secuencia finita de aristas de G de la forma (v0v1), (v1v2), (v2v3), …, (vm-1vm) será denominada <em>camino</em> o <em>circuito</em> de G. Es frecuente que cuando entre dos vértices, por ejemplo los vértices “v” y “w”, existe uno o más caminos, sehable de cualquiera de estos caminos como un camino “vw”.</p>
+<ul>
+<li>Se habla de <strong>GRAFO CONEXO</strong> si existe un camino desde cualquier nodo del grafo hasta cualquier otro. Si no es conexo constará de varias <em>componentes conexas</em> . Formalmente, un grafo G es <em>conexo</em> si para cualquier par de vértices “v”, “w” de G existe un camino de “v” a “w” (“vw”).</li>
+<li>Un <strong>PUENTE</strong> o <strong>ARISTA PUENTE</strong> será cualquier arista de un grafo conexo que mediante su eliminación deje al grafo dividido en dos componentes conexas.</li>
+</ul>
+<p>En el grafo de la figura siguiente la arista {c, f} será una arista puente que dejará el grafo G dividido en las componentes conexas formada por los vértices {f} y {a, b, c, d, e}.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/grafo4.png?w=825" alt=""></p>
+<ul>
+<li>Un <strong>CAMINO SIMPLE</strong> es un camino desde un nodo a otro en que ningún nodo se repite (no se pasa dos veces). Si el camino simple tiene como primer y último elemento al mismo nodo se denomina <em>ciclo</em> .</li>
+</ul>
+<p>Cuando el grafo no tiene ciclos tenemos un árbol. Varios árboles independientes forman un <em>bosque</em> .</p>
+<ul>
+<li>Un <strong>ÁRBOL DE EXPANSIÓN</strong> de un grafo es una reducción del grafo en el que solo entran a formar parte el número mínimo de aristas que forman un árbol y conectan a todos los nodos. Por ejemplo:</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/grafo5.png?w=825" alt=""></p>
+<ul>
+<li>Según el número de aristas que contiene, se habla de <strong>GRAFO COMPLETO</strong> si cuenta con todas las aristas posibles (es decir, todos los nodos están conectados con todos), <strong>GRAFO DISPERSO</strong> si tiene relativamente pocas aristas y <strong>GRAFO DENSO</strong> si le faltan pocas para ser completo.</li>
+<li>Las aristas son la mayor parte de la veces bidireccionales, es decir, si una arista conecta dos nodos A y B se puede recorrer tanto en sentido hacia B como en sentido hacia A. Estos son llamados <strong>GRAFOS NO DIRIGIDOS</strong> . Sin embargo, en ocasiones tenemos que las uniones son unidireccionales. Estas uniones se suelen dibujar con una flecha y definen un <strong>GRAFO DIRIGIDO</strong> .</li>
+<li>Se habla de <strong>GRAFO PONDERADO</strong> cuando las aristas llevan un coste asociado (un entero denominado <strong>peso</strong> ).</li>
+<li>Una <strong>RED</strong> es un grafo dirigido y ponderado.</li>
+</ul>
+<p><strong>Exploración de grafos</strong></p>
+<p>Cuando se habla de la exploración de un grafo nos referimos a la exploración de todos los vértices (con algún tipo de fin, por ejemplo, un recuento) o hasta que se encuentra uno determinado, es decir, una búsqueda.</p>
+<p>El orden en que los vértices éstos son “visitados” decide radicalmente el tiempo de ejecución del algoritmo.</p>
+<p>Supongamos el siguiente grafo de ejemplo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/grafo6.png?w=825" alt=""></p>
+<p>A la hora de explorar el grafo de la figura anterior, nos encontramos con dos métodos distintos:</p>
+<ul>
+<li>Exploración o búsqueda en <strong>Anchura</strong> o <strong>Amplitud</strong> : Lo que prima en la exploración es la dimensión horizontal, de manera que por cada vértice del nodo visitamos primeramente todos los nodos enlazados directamente con él (vecinos), y una vez hecho esto realizamos la misma operación con estos nodos vecinos visitados.</li>
+<li>Exploración o búsqueda en <strong>Profundidad</strong> : Lo que prima en la exploración es la dimensión vertical. Una vez visitado uno de los nodos vecinos de un nodo, antes de visitar a cualquiera de los demás vecinos del nodo, se vuelve a realizar la misma operación con el nodo vecino recién visitado.</li>
+</ul>
+<p>Suponiendo que el orden en que están almacenados los nodos en la estructura de datos correspondiente es A-B-C-D-E-F-G-H-I-J-K (en orden alfabético), tenemos que:</p>
+<ul>
+<li>En un recorrido en anchura el orden sería: <em>A-B-C-D-E-G-H-I-J-K-F</em></li>
+<li>El orden que seguiría el recorrido en profundidad será: <em>A-B-E-I-F-C-G-J-K-H-D</em></li>
+</ul>
+<p><strong>Implantación de la exploración de grafos</strong></p>
+<p>En el ejemplo anterior, es destacable que el nodo D es el último en explorarse en la búsqueda en profundidad pese a ser adyacente al nodo de origen (A). Esto es debido a que primero se explora la rama del nodo C, que también conduce al nodo D.</p>
+<p>Es decir, hay que tener en cuenta que es fundamental el orden en que los nodos están almacenados en las estructuras de datos. Si, por ejemplo, el nodo D estuviera antes que el C, en la búsqueda en profundidad se tomaría primero la rama del D (con lo que el último en visitarse sería el C), y en la búsqueda en anchura se exploraría antes H que el G.</p>
+<p>Otro punto a observar es que, cuando hemos hablado en el apartado anterior de exploraciones en anchura y en profundidad, aparecen las siguientes frases “una vez hecho esto realizamos la misma operación” y “se vuelve a realizar la misma operación”. Esto está sugiriendo de forma muy clara que las exploraciones en grafos, tanto en anchura como en profundidad tienen una fuerte naturaleza recursiva. De hecho, es frecuente que se implanten ambos algoritmos usando recursividad.</p>
+<p>Esto no quiere decir que no puedan implementarse exploraciones de grafos de forma iterativa. Usando algoritmos iterativos, la diferencia principal entre implementar una exploración en anchura frente a una en profundidad está en la estructura de datos usada, de forma que:</p>
+<ul>
+<li>Las <em>exploraciones</em> o <em>búsquedas en anchura</em> iterativas usa una estructura de datos tipo <em>cola</em> , pues las características de este tipo de estructura FIFO (primero en entrar, primero en salir) se adaptan muy bien a este tipo de recorrido.</li>
+<li>Las <em>exploraciones</em> o <em>búsquedas en profundidad</em> iterativas usa una estructura de datos tipo <em>pila</em> , pues las características de este tipo de estructura LIFO (último en entrar, primero en salir) se adaptan muy bien a este tipo de recorridos.</li>
+</ul>
+<h2 id="Organizaciones-de-Ficheros"><a href="#Organizaciones-de-Ficheros" class="headerlink" title="Organizaciones de Ficheros"></a>Organizaciones de Ficheros</h2><p>Todas las aplicaciones necesitan almacenar y recuperar información. En una computadora, cuando se ejecuta una aplicación (un proceso), la información almacenada en la memoria principal electrónica del computador; este es un tipo de memoria volátil, de forma que cuando la aplicación termina la información se pierde. Esto es inaceptable para muchas aplicaciones, que pueden requerir que la información permanezca disponible durante largos periodos de tiempo.</p>
+<p>Con respecto a la memoria principal de las computadoras, se trata de un tipo de memoria electrónicas cuyas principales características son:</p>
+<ul>
+<li>La memoria principal tiene poca capacidad de almacenamiento. No se pueden manipular grandes cantidades de datos, ya que puede haber casos en los que no quepan en la memoria principal.</li>
+<li>La memoria principal es volátil.</li>
+<li>Acceso rápido a la información.</li>
+</ul>
+<p>Otro problema es que varios procesos pueden necesitar acceder a una misma información de forma concurrente. Como los espacios de memoria de los procesos son privados, un proceso no puede acceder a los datos en el espacio de memoria de otro. La solución es hacer que la información sea independiente de los procesos.</p>
+<p>Por tanto, hay tres requisitos esenciales para almacenar la información en discos magnéticos u otros dispositivos en una unidades llamadas <strong>ficheros</strong> o <strong>archivos</strong> .</p>
+<p><em>Un fichero es una abstracción de un mecanismo que permite almacenar información en un dispositivo y leerla posteriormente. Podemos definir un fichero como una colección de información que tiene un nombre.</em></p>
+<p>Los ficheros pueden ser leídos y escritos por cualquier proceso: son una forma de almacenamiento denominada <strong>memoria secundaria</strong> . Sus principales cualidades son:</p>
+<ul>
+<li>Capacidad de almacenamiento sólo limitada por el soporte físico de que se disponga.</li>
+<li>La información está almacenada permanentemente.</li>
+<li>Acceso lento a la información, ya que tiene que ser transportada desde el dispositivo externo hasta la memoria principal para su tratamiento. Existe un área de memoria principal destinada a recibir esta información procedente del dispositivo secundario. Esta área se denomina <em>Buffer</em> .</li>
+</ul>
+<p>Gráfico de Memoria Principal y Memoria Secundaria:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/memorias.png?w=825" alt=""></p>
+<p>En la figura anterior representamos de manera muy esquemática la forma de operar de un procesador, siendo:</p>
+<ul>
+<li><strong>U.C. U</strong> nit <strong>C</strong> ontrol (Unidad de Control). Circuito principal de control del procesador.</li>
+<li><strong>A.L.U. A</strong> ritmetic <strong>L</strong> ogic <strong>U</strong> nit (Unidad Aritmético Lógica). Circuito especializado en operaciones aritméticas.</li>
+<li><strong>E</strong> : Datos de <strong>E</strong> ntrada.</li>
+<li><strong>S</strong> : Datos de <strong>S</strong> alida.</li>
+</ul>
+<p>La información almacenada en ficheros debe ser <strong>persistente</strong> , es decir, no debe verse afectada por la creación y finalización de los procesos. La gestión de ficheros es tarea del SO, y la parte del mismo que realiza dicha gestión se conoce como <strong>sistema de ficheros</strong> .</p>
+<h3 id="Estructura-de-un-Fichero"><a href="#Estructura-de-un-Fichero" class="headerlink" title="Estructura de un Fichero"></a>Estructura de un Fichero</h3><p>De la definición vista de fichero, se deduce que existen diferentes tipos de ficheros en función de:</p>
+<ul>
+<li>La información contenida</li>
+<li>El método de organización de la información</li>
+</ul>
+<p>Una primera clasificación de los ficheros se puede hacer según el método usado para codificar la información:</p>
+<ul>
+<li><strong>Ficheros de texto</strong> : Se guarda la información en caracteres, tal y como se mostraría en pantalla.</li>
+<li><strong>Ficheros binarios</strong> : Se guarda la información en binario, tal y como está en memoria.</li>
+</ul>
+<p>Otra clasificación de los ficheros es según la forma que tiene su estructura. Las formas más usuales son:</p>
+<ul>
+<li>Organizar un fichero como <strong>una secuencia de bytes</strong> . De esta forma, el sistema operativo no conoce el significado del contenido de los ficheros, lo que simplifica la gestión de los mismos. Serán los programas de aplicación los que deberán de conocer la estructura de los ficheros que utilizan. Este enfoque es el empleado por MS-DOS y UNIX.</li>
+<li>Un esquema más estructurado es considerar un fichero como <strong>una secuencia de registros de longitud fija</strong> , cada uno de los cuales presenta una estructura determinada. La idea es que las operaciones de lectura devuelvan un registro y las escrituras modifiquen o añadan un registro. El SO CP/M usa registros de 128 bytes.</li>
+<li>Una tercera forma es organizar el fichero en forma de <strong>árbol de registros</strong> , que no tienen por qué tener la misma longitud. Cada registro tiene un campo clave por el que está ordenado el árbol de forma que las operaciones de búsqueda por clave se realizan rápidamente. Este esquema se emplea en grandes computadores (mainframes) orientados al proceso de grandes cantidades de información.</li>
+</ul>
+<h3 id="Conceptos-basicos-sobre-Ficheros"><a href="#Conceptos-basicos-sobre-Ficheros" class="headerlink" title="Conceptos básicos sobre Ficheros"></a>Conceptos básicos sobre Ficheros</h3><p>Veamos ahora una serie de conceptos básicos:</p>
+<ul>
+<li><strong>Registro lógico</strong> : Un registro es una colección de información relativa a una entidad particular. Por tanto, el registro va a contener a todos aquellos campos lógicamente relacionados, referentes a una determinada entidad, y que pueden ser tratados globalmente por un programa. Por ejemplo la información de un determinado alumno, que contiene los campos DNI, nombre, apellidos, fecha de nacimiento, etc.</li>
+<li><strong>Clave de un registro lógico</strong> : Una clave es un campo o conjunto de campos de datos que identifica al registro lógico y lo diferencia del resto de registros lógicos del fichero. Por tanto, esta clave debe ser distinta para cada registro.</li>
+<li><strong>Registro activo</strong> : El registro lógico que va a procesarse en la siguiente operación del fichero.</li>
+<li><strong>Apuntador</strong> : Marca interna que siempre apunta al registro lógico activo. Se incrementa automáticamente cada vez que se procesa un registro (se lee o se escribe).</li>
+<li><strong>Marca de fin de fichero</strong> : Una marca situada al final de cada fichero, para no acceder más allá del último registro lógico existente, ya que el tamaño del fichero no está limitado y no se conoce a priori. Existe una función lógica, <strong>eof (end of file)</strong> , que toma el valor verdadero cuando llegamos al final del fichero y falso en caso contrario.</li>
+<li><strong>Factor de bloqueo</strong> : Factor de bloqueo es el número de registros lógicos que puede contener un registro físico.</li>
+<li><strong>Registro físico o bloque</strong> : Un registro físico o bloque es la cantidad más pequeña de datos que pueden transferirse en una operación de E/S entre la memoria principal del ordenador y los dispositivos periféricos o viceversa. El tamaño del bloque o registro físico dependerá de las características del ordenador. En la mayoría de los casos el tamaño del bloque suele ser mayor que el de registro lógico. La adaptación consiste en empaquetar en cada bloque tantos registros lógicos como se pueda. El empaquetamiento puede ser de tipo <em>fuerte</em> o <em>débil</em> , según que se permita o no aprovechar el sobrante de un bloque, situando registros a caballo entre dos bloques contiguos. La siguiente figura ilustra ambas formas de empaquetamiento.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/empaquetamiento.png?w=825" alt=""></p>
+<p>Una vez visto lo que es un registro lógico y teniendo ya en mente la idea de fichero, podemos dar una definición más precisa de lo que es un archivo o fichero.</p>
+<p><em>Un fichero es una colección de registros lógicos relacionados entre sí con aspectos en común y organizados para un propósito específico. Los datos en los archivos deben estar organizados de tal forma que puedan ser recuperados fácilmente, actualizados o borrados y almacenados en el archivo con todos los cambios realizados.</em></p>
+<p>Dese un punto de vista puramente estructural:</p>
+<p><em>Un fichero es una estructura de datos compuesta que agrupa una secuencia de cero o más tuplas, denominadas registros, y que a su vez se pueden componer de otras estructuras de datos a las que se les suele llamar campos.</em></p>
+<h3 id="Operaciones-sobre-Ficheros"><a href="#Operaciones-sobre-Ficheros" class="headerlink" title="Operaciones sobre Ficheros"></a>Operaciones sobre Ficheros</h3><p>Una vez visto lo que es un fichero y los principales conceptos al hablar de ellos, pasemos ahora a estudiarlos desde un punto de vista operativo. Básicamente se trata de responder: ¿qué operaciones se pueden realizar sobre un fichero? La respuesta es:</p>
+<ul>
+<li><strong>Creación</strong> : Para poder realizar cualquier operación sobre un fichero es necesario que haya sido creado previamente, almacenando sobre el soporte seleccionado la información requerida para su posterior tratamiento, como por ejemplo el nombre del dispositivo, el nombre del fichero, etc. Con anterioridad a la creación de un archivo se requiere diseñar la estructura del mismo mediante los campos del registro, longitud y tipo de los mismos.</li>
+<li><strong>Apertura</strong> : Para poder trabajar con la información almacenada en un fichero, éste debe estar abierto, permitiendo así el acceso a los datos, dando la posibilidad de realizar sobre ellos las operaciones de lectura y escritura necesarias.</li>
+<li><strong>Cierre</strong> : Una vez finalizadas las operaciones efectuadas sobre el fichero, éste debe permanecer cerrado para limitar el acceso a los datos y evitar así un posible deterioro o pérdida de información. Para cerrar un fichero previamente debe estar abierto.</li>
+<li><strong>Actualización</strong> : Esta operación permite la puesta al día de los datos del fichero mediante la escritura de nuevos registros (alta) y la eliminación (baja) o modificación de los ya existentes. La actualización puede afectar a parte o la totalidad de los registros del fichero. Cuando se escribe un nuevo registro en el fichero se debe comprobar que no existe previamente. La baja de un registro puede ser lógica o física.<ul>
+<li>Una <em>baja lógica</em> supone el no borrado del registro en el archivo. Esta baja lógica se manifiesta en un determinado campo del registro con una bandera, indicador o “flag”, o bien con la escritura o rellenado de espacios en blanco en el registro específico.</li>
+<li>Una <em>baja física</em> implica el borrado y desaparición del registro, de modo que se crea un nuevo archivo que no incluye al registro dado de baja.</li>
+</ul>
+</li>
+<li><strong>Consulta</strong> : Tiene como fin visualizar la información contenida en el fichero, bien de un modo completo, bien de modo parcial.</li>
+<li><strong>Borrado o destrucción</strong> : Es la operación inversa a la creación de un fichero. Consiste en la supresión de un fichero del soporte o dispositivo de almacenamiento. El espacio utilizado por el archivo borrado puede ser utilizado por otros archivos. Para borrar un fichero tiene que estar cerrado.</li>
+<li><strong>Ordenación o clasificación</strong> : Consiste en lograr una nueva disposición sobre el soporte de los registros de un archivo, con una secuencia de ubicación determinada por el valor de uno o varios campos.</li>
+<li><strong>Compactación o empaquetamiento</strong> : Esta operación permite la reorganización de los registros de un fichero eliminando los huecos libres intermedios existentes entre ellos normalmente ocasionados por la eliminación de registros.</li>
+</ul>
+<h3 id="Organizacion-de-un-Sistema-de-Ficheros"><a href="#Organizacion-de-un-Sistema-de-Ficheros" class="headerlink" title="Organización de un Sistema de Ficheros"></a>Organización de un Sistema de Ficheros</h3><p>Los discos magnéticos son la base sobre la que se sustentan los sistemas de ficheros. Para mejorar la eficiencia, la transferencia de información entre memoria y los discos se realiza en unidades denominadas bloques. Cada bloque está formado por uno o varios sectores de disco. El tamaño de sector de un disco suele ser de 512 bytes.</p>
+<p>El diseño de un sistema de ficheros plantea dos problemas diferentes:</p>
+<ul>
+<li>Definir cómo el sistema de ficheros aparece al usuario.</li>
+<li>Diseñar los algoritmos y estructuras de datos necesarias para implementar este sistema de ficheros lógico en los dispositivos físicos de almacenamiento secundario.</li>
+</ul>
+<p>Un sistema de ficheros se puede estructurar en diferentes capas o niveles, se puede ver en la siguiente figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/estructura_ficheros.png?w=825" alt=""></p>
+<p>El nivel de control de E/S se compone de los manejadores de dispositivo ( <em>device drivers</em> ) y los manejadores de interrupciones ( <em>interrupt handlers</em> ), que son necesarios para transmitir la información entre la memoria y los discos. Los manejadores de dispositivos reciben instrucciones de bajo nivel, del tipo “escribir o leer el bloque nº x”, y generan el conjunto de instrucciones dependientes del hardware que son enviadas al controlador de disco.</p>
+<p>El sistema de ficheros básico transmite las instrucciones de bajo nivel al manejador de dispositivo adecuado para leer y escribir bloques físicos en disco. Cada bloque físico se identifica por su dirección numérica en el disco, que viene dado por el dispositivo, cilindro, superficie y sector.</p>
+<p>El módulo de organización de ficheros tiene conocimiento sobre los ficheros, los bloques lógicos que lo componen y los bloques físicos. Mediante el tipo de esquema de asignación de bloques y la localización del fichero, el módulo de organización de ficheros traslada las direcciones de disco lógicas en direcciones de disco físicas. Cada bloque de disco lógico tiene un número (de 0 a N) que no suele coincidir con la dirección de los bloques físicos, por lo que es necesario un mecanismo de traducción. Este módulo también incluye el gestor de espacio libre, que controla los bloques libres para que puedan ser usados posteriormente.</p>
+<p>Por último,el sistema de ficheros lógicos proporciona la estructura de directorio conocida por los programas de usuario. También es responsable de proporcionar seguridad y protección al sistema de ficheros.</p>
+<p>Por otra parte, para crear un nuevo fichero, un programa de aplicación realiza una llamada al sistema sobre el sistema de ficheros lógico. Este lee el directorio correspondiente en memoria, le añade una nueva entrada y lo escribe en disco. En este proceso, el sistema de ficheros lógico ha solicitado al módulo de organización de ficheros la dirección física del directorio, que se envía al sistema de ficheros básico y al control de E/S. Cuando el directorio ha sido actualizado, el sistema de ficheros lógico lo puede usar para realizar operaciones de E/S.</p>
+<p>Para optimizar los accesos, el SO tiene en memoria una tabla de ficheros abiertos que contiene información sobre todos los ficheros abiertos en un momento dado, como nombre, permisos, atributos, direcciones de disco, etc. La primera referencia a un fichero suele ser una operación de apertura, que hace que se realice una búsqueda en la estructura de directorio y se localice la entrada para el fichero que se quiere abrir. Esta entrada se copia en la tabla de ficheros abiertos y el índice de dicha entrada (denominado descriptor de fichero) se devuelve al programa de aplicación, que lo usa para realizar las operaciones sobre el fichero. De esta forma, todas las operaciones relacionadas con el entrada de directorio del fichero se realizan en la tabla de ficheros abiertos en memoria. Cuando un fichero se cierra, la entrada modificada se copia a disco.</p>
+<h3 id="Organizacion-y-Acceso-a-Ficheros"><a href="#Organizacion-y-Acceso-a-Ficheros" class="headerlink" title="Organización y Acceso a Ficheros"></a>Organización y Acceso a Ficheros</h3><p>Se entiende por <strong>Organización de un fichero</strong> a la manera en la que los datos son estructurados y almacenados internamente en el fichero y sobre el soporte de almacenamiento. El tipo de organización de un fichero se establece durante la fase de creación del mismo. Los requisitos que determinan la organización de un fichero son del tipo: tamaño del fichero, frecuencia de utilización o uso, etc.</p>
+<p>La organización de un fichero es muy dependiente del soporte físico en que se almacene. Hay dos tipos de soportes:</p>
+<ul>
+<li>Soportes <strong>Secuenciales</strong> : Los registros están dispuestos físicamente uno a continuación de otro. Para acceder a un determinado registro se necesita pasar por todos los anteriores a él.</li>
+<li>Soportes <strong>Direccionables</strong> : Permiten localizar a un registro directamente por su información (clave) sin tener que pasar por todos los anteriores.</li>
+</ul>
+<p>Los tipos de organizaciones de ficheros fundamentales son:</p>
+<ul>
+<li>Organización <strong>Secuencial</strong> .</li>
+<li>Organización <strong>Directa</strong> o <strong>Aleatoria</strong> .</li>
+<li>Organización <strong>Indexada</strong> .</li>
+</ul>
+<p>En cuanto al acceso, se entiende por tal al procedimiento necesario que debemos seguir para situarnos sobre un registro concreto con la intención de realizar una operación sobre él. Según las características del soporte empleado y la organización se consideran dos tipos de acceso:</p>
+<ul>
+<li>El <strong>acceso secuencial</strong> implica el acceso a un archivo según el orden de almacenamiento de sus registros, uno tras otro. Se puede dar en dispositivos secuenciales y direccionables.</li>
+<li>El <strong>acceso directo</strong> implica el acceso a un registro determinado, sin que ello implique la consulta de los registros precedentes. Obviamente, sólo puede darse en soportes direccionables.</li>
+</ul>
+<p><strong>Organización Secuencial</strong></p>
+<p>Son aquellos ficheros caracterizados porque los registros se escriben o graban sobre el soporte de almacenamiento en posiciones de memoria físicamente contiguas, en la misma secuencia u orden en que han sido introducidos, sin dejar huecos o espacios libres entre ellos.</p>
+<p>Todos los dispositivos de memoria auxiliar soportan la organización secuencial. El <em>acceso a los datos</em> almacenados en estos ficheros siempre es <em>secuencial</em> independientemente del soporte utilizado. Los registros organizados secuencialmente tienen un registro especial, el último, que tiene una marca de fin de archivo.</p>
+<p>Sus ventajas son:</p>
+<ul>
+<li>Rapidez en el acceso a un bloque de registros que se encuentran almacenados en posiciones de memoria físicamente contiguas.</li>
+<li>No deja espacios vacíos entre registro y registro, optimizado al máximo la memoria ocupada.</li>
+</ul>
+<p>Sus inconvenientes son:</p>
+<ul>
+<li>El acceso a registros individuales es muy lento.</li>
+<li>Se tiene que procesar todo el fichero para operaciones de inserción y borrado de registros.</li>
+</ul>
+<p><strong>Organización Directa o Aleatoria</strong></p>
+<p>Estos ficheros se caracterizan porque los registros se sitúan en el fichero y se accede a ellos a través de una clave, que indica la posición del registro dentro del fichero y la posición de memoria donde está ubicado.</p>
+<p>Estos ficheros se almacenan en <em>soportes direccionables</em> . Además, los registros han de tener un identificativo o clave, el cual indica la posición de cada registro en el fichero.</p>
+<p>Como principales ventajas genéricas de este tipo de organización, tenemos que:</p>
+<ul>
+<li>Cada posición solamente puede ser ocupada por un registro, pues no podemos tener en el fichero más de un registro con el mismo valor de clave.</li>
+<li>El acceso a cualquier registro se hace de una forma directa e inmediata mediante su clave.</li>
+<li>La actualización de un registro es inmediata, sin que se deban utilizar archivos auxiliares para copia.</li>
+<li>Se puede utilizar el acceso secuencial, aunque suponga generalmente una pérdida de tiempo.</li>
+</ul>
+<p>Dentro de la organización directa, según el algoritmo utilizado en la gestión de la clave, se pueden distinguir entre:</p>
+<ul>
+<li>Organización directa con <strong>Clave Directa</strong> : La dirección de almacenamiento del registro está indicado por la propia clave.<ul>
+<li>Sus ventajas son:<ul>
+<li>Cada posición solamente puede ser ocupada por un registro, pues no podemos tener en el fichero más de un registro con el mismo valor de clave.</li>
+<li>Es muy rápido el acceso a los registros individuales.</li>
+</ul>
+</li>
+<li>Sus inconvenientes son:<ul>
+<li>Deja gran cantidad de huecos dentro del fichero, con el consecuente desaprovechamiento del soporte de almacenamiento. Esto es debido a que este sistema precisa que el soporte donde se almacena la información tenga una mínima unidad de asignación (denominado <em>cluster</em> ) a la cual acceder directamente siguiendo unas coordenadas de localización. Estas unidades no pueden ser usadas para almacenar información de distintos ficheros. Si los cluster en que divide el disco son grandes, y los ficheros a almacenar pequeños, habrá muchos cluster que se quedarán a medio llenar, con el consecuente desaprovechamiento de espacio.</li>
+<li>Una consulta total del fichero puede suponer un gran inconveniente, pues hay que analizar todas las posiciones de memoria, aunque algunas posiciones estén vacías. Para comprender este hecho hagamos el siguiente símil. Supongamos que tenemos un libro con todos sus capítulos correctamente ordenados pero sin índice que nos identifique la página de inicio de cada capítulo, para leer el libro entero lo único que hay que hacer es comenzar por la primera página, sin embargo, si queremos leer un capítulo en concreto, tendríamos también que empezar desde el principio hasta encontrarlo. Esto sería el análogo a un fichero secuencial. Supongamos ahora un libro con todos los capítulos desordenados, pero con un índice al comienzo del libro que nos indica la página de comienzo de cada capítulo; es decir, el análogo al de un fichero de acceso directo. Leer cada capítulo por separado es ahora muy fácil, basta con buscar el comienzo en el índice, sin embargo, si necesitamos leer el libro entero, de principio a fin, necesitamos constantemente mirar el índice para ir viendo la secuencia de los capítulos, lo cual es muy ineficiente (por no decir pesado). Esto sería el análogo a leer completamente un fichero de acceso directo.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Organización directa con <strong>Clave Indirecta</strong> : La dirección de almacenamiento se obtiene a partir de la clave, después de realizar algún tipo de transformación. Este tipo de transformación se denomina algoritmo <em>Hashing</em> y suele ser de tipo matemático.<ul>
+<li>En este tipo de algoritmo se pueden dar dos situaciones no deseadas (denominadas <em>colisiones</em> ) que son:<ul>
+<li>Hay direcciones que no corresponden a ninguna clave y, por tanto, zonas de disco sin utilizar.</li>
+<li>Hay direcciones que corresponden a más de una clave. En este caso se dice que las claves son sinónimas para esa transformación.</li>
+</ul>
+</li>
+<li>Hay dos formas de resolver el problema de los sinónimos o colisiones:<ul>
+<li>Buscar secuencialmente en el archivo hasta encontrar una posición libre donde escribir el registro o aplicando a la dirección obtenida un segundo método de direccionamiento. Estos procedimientos son lentos y degradan el archivo.</li>
+<li>Reservar una zona de desbordamiento o de sinónimos en donde se escribirán los registros que no se pueden escribir en la dirección que le corresponde según la transformación.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Organización Indexada</strong></p>
+<p>Al fichero le acompaña un fichero de índice que tiene la función de permitir el acceso directo a los registros del fichero de datos. El índice se puede organizar de diversas formas, las más típicas son:</p>
+<ul>
+<li><strong>Secuencial</strong></li>
+<li><strong>Multinivel</strong></li>
+<li><strong>Árbol</strong></li>
+</ul>
+<p>A través del índice podremos procesar un fichero de forma secuencial o de forma directa según la clave de indexación, y esto independientemente de como esté organizado el fichero por sí mismo.</p>
+<p>El índice debe estar organizado en función de alguno de los campos de los registros de datos. Se pueden tener tantos índices como se quiera variando la clave (o campo) que se emplee. El índice está formado por registros (entradas) que contienen:</p>
+<ul>
+<li>Clave de organización.</li>
+<li>Puntero(s) al fichero de datos, en concreto al registro que corresponda.</li>
+</ul>
+<p>Los índices se pueden clasificar en dos tipos, según cada entrada señale a la dirección de un registro del fichero de datos ( <em>índice total o denso</em> ), o bien apunte a un grupo de registros del fichero de datos que debe estar ordenado ( <em>índice escaso o no denso</em> ). En el caso de índices totales, el fichero puede estar desordenado. Véase la siguiente figura como ejemplo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/indexacion.png?w=825" alt=""></p>
+<p>Con el segundo tipo se podría procesar directamente el fichero de datos de forma secuencial. Los índices totales o densos no suelen utilizarse de forma simple, sino combinados con índices escasos o más cortos, de esta manera pueden almacenarse en memoria principal obteniendo así una mayor rapidez de acceso.</p>
+<h3 id="Implantacion-de-Ficheros"><a href="#Implantacion-de-Ficheros" class="headerlink" title="Implantación de Ficheros"></a>Implantación de Ficheros</h3><p>El aspecto básico de la implantación de ficheros consiste en determinar qué bloques de disco están asociados a cada fichero. El problema que se plantea es cómo asignar el espacio libre en disco a los ficheros de forma que ese espacio sea usado de forma eficiente y los ficheros puedan ser accedidos rápidamente. Hay que tener en cuenta que el tamaño de los ficheros es variable, por lo que habrá que diseñar algún mecanismo de almacenamiento dinámico tanto para los ficheros como para el espacio libre.</p>
+<p>Existen tres métodos básicos de asignación:</p>
+<ul>
+<li>Asignación <strong>Contigua</strong> .</li>
+<li>Asignación <strong>Enlazada</strong> .</li>
+<li>Asignación <strong>Indexada</strong> .</li>
+</ul>
+<p><strong>Asignación Contigua</strong></p>
+<p>El esquema de asignación más simple consiste en almacenar cada fichero como una secuencia adyacente de bloques en disco. La asignación contigua de un fichero se define por la dirección del primer bloque y el tamaño del fichero, es decir, simplemente responder a las preguntas ¿dónde empezar? y ¿hasta cuando seguir?.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/asignacion_contigua.png?w=825" alt=""></p>
+<p>Las ventajas de este método son:</p>
+<ul>
+<li>Fácil implementación, ya que únicamente hay que conocer la dirección en disco del primer bloque del fichero y el número de bloques que ocupa.</li>
+<li>Eficiencia, ya que la lectura de un fichero se puede realizar en una sola operación. El acceso a un fichero almacenado de forma contigua es sencillo y rápido, siempre y cuando pretendamos leer todo el fichero y no tengamos que hacer búsquedas de parte de su contenido. En este tipo de operaciones se pierde toda la ventaja que proporciona esta forma de asignación. Para este tipo de operaciones veremos que es mucho más ventajosa la asignación.</li>
+</ul>
+<p>Para el acceso secuencial, el sistema de ficheros no tiene más que recordar la dirección del último bloque referenciado. El acceso directo del bloque _i_ de un fichero que comienza en el bloque _b_ se realiza, simplemente, accediendo al bloque <em>b+i</em> .</p>
+<p>Un inconveniente de este esquema de asignación es que no se puede implantar a no ser que se conozca el tamaño de los ficheros en su momento de creación. Si esta información no está disponible, el SO no sabe cuánto espacio en disco debe reservar. Otra desventaja es la fragmentación externa que se produce en el disco, que se origina debido a que entre los ficheros quedan porciones de disco libre que no tienen el tamaño suficiente para ser asignadas a un nuevo fichero. La gravedad de este problema depende del espacio de almacenamiento disponible y del tamaño medio de los ficheros. La compactación de disco es una solución, pero es costos y de poder hacerse sería cuando el sistema estuviese parado.</p>
+<p>El problema de conocer el tamaño de los ficheros en tiempo de creación se resuelve haciendo que los ficheros sean inmutables. Esto significa que cuando un fichero se crea no se puede modificar. Una modificación implica borrar el fichero original y crear uno nuevo. Por otro lado, los ficheros se han de leer de una sola vez en memoria, por lo que la eficiencia es muy alta, pero a cambio se exigen unos requisitos mínimos de memoria muy elevados. Por último, la fragmentación de disco se soluciona teniendo discos de gran capacidad de almacenamiento.</p>
+<p><strong>Asignación Enlazada</strong></p>
+<p>Otro esquema consiste en mantener una lista enlazada con los bloques que pertenecen a un fichero, de forma que una palabra del bloque sería un índice al bloque siguiente. Con este método se elimina el problema de la fragmentación, y, al igual que en la asignación contigua, cada entrada de directorio únicamente contiene la dirección del primer bloque del fichero. Los fichero pueden crecer de forma dinámica mientras que exista espacio libre en disco y no es necesario compactar los discos. Un inconveniente es que, mientras que el acceso secuencial es fácil de realizar, el acceso aleatorio es muy lento.</p>
+<p>Otro inconveniente viene dado por el espacio requerido por los punteros. Si un puntero requiere 4 bytes y los bloques son de 512 bytes, significa que: (4 / 512) = 0,0078 –&gt; se pierde un 0,78% (casi un 1%) de espacio útil por bloque. Una solución a este problema consiste en no asignar bloques individuales, sino conjuntos de bloques denominados <em>clusters</em> . De esta forma el porcentaje de espacio perdido por los punteros se reduce. Además, se mejora el rendimiento de los discos porque se lee más información en una misma operación de lectura, y se reduce la lista de bloques libres. El coste de este método es que se produce un incremento de la fragmentación interna (espacio no ocupado en un bloque o cluster).</p>
+<p>Otro problema de este método es la fiabilidad, ya que si un bloque se daña, se puede perder el resto del fichero. Peor aún, sise altera el contenido del puntero, se puede acceder a la lista de bloques libres o a bloques de otros ficheros como si fuesen bloques propios.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/asignacion_enlazada.png?w=825" alt=""></p>
+<p>Un problema más sutil viene dado por el hecho de que la cantidad de información útil para el usuario que contiene cada bloque no es potencia de dos, ya que el puntero al bloque siguiente, que estará constituido por varias palabras, ocupará parte del bloque, es decir, no se puede utilizar todo el bloque para información útil, siempre habrá que dejar mínimo espacio para el puntero. Esto puede originar una pérdida de eficiencia porque los programas normalmente leen y escriben en bloques cuyo tamaño es potencia de dos. Esta desventaja del esquema de lista encadenada desaparece si el puntero de cada bloque de disco se almacena en una tabla o índice de memoria. Así cada bloque únicamente contiene datos útiles.</p>
+<p>Además, aunque el acceso aleatorio implica seguir una cadena, ésta está toda en memoria, por lo que la búsqueda es mucho más eficiente que en el esquema anterior. De igual modo, es suficiente que cada entrada de directorio contenga únicamente la dirección del primer bloque para localizar todo el fichero. Este esquema es empleado por el SO MS-DOS. Para que este esquema funcione, la tabla debe permanecer entera en memoria todo el tiempo. Si el disco es grande, el gasto de memoria principal puede ser considerable.</p>
+<p><strong>Asignación Indexada</strong></p>
+<p>El último método para determinar qué bloques pertenecen a un fichero consiste en asociar a cada fichero un nodo índice ( <em>index-node o</em> <em>i-node</em> ), que incluye información sobre los atributos del fichero y las direcciones de los bloques de disco que pertenecen al mismo.</p>
+<p>Las direcciones de los primeros bloques se almacenan en el propio nodo índice, de forma que, para ficheros pequeños, toda la información necesaria para su localización siempre está en memoria cuando son abiertos. Para ficheros de mayor tamaño, una de las direcciones del nodo índice es la dirección de un bloque simple indirecto, que contiene a su vez direcciones de otros bloques del fichero. Si no es suficiente, existen dos direcciones, una para un bloque doble indirecto, que contiene direcciones de bloques simples directos, y otra para un bloque triple indirecto, que contiene direcciones de bloques dobles indirectos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/asignacion_indexada.png?w=825" alt=""></p>
+<p>Una ventaja es que permite el acceso directo a cualquier bloque del fichero. Además, los accesos a un fichero, una vez abierto, no implican accesos adicionales a disco a no ser que sean necesarios bloques indirectos.</p>
+<p>Un inconveniente es que añadir o borrar bloques en medio del fichero implica tener que reorganizar los punteros en el bloque de índices, lo cual constituye una operación costosa.</p>
+<h3 id="Directorios"><a href="#Directorios" class="headerlink" title="Directorios"></a>Directorios</h3><p>Los sistemas de ficheros pueden contener grandes volúmenes de información, por lo que los SO proporcionan mecanismos para estructurarlos. Esta estructuración se suele realizar a dos niveles.</p>
+<p>En primer lugar, el sistema de ficheros se divide en particiones, que se pueden considerar como discos virtuales. Un disco puede contener una o varias particiones, y una partición puede estar repartida. En segundo lugar, cada partición contiene una tabla de contenidos de la información que contiene. Esta tabla se denomina directorio, y su función principal es hacer corresponder un nombre de un fichero con una entrada en la tabla. Cada entrada contiene, como mínimo, el nombre del fichero.</p>
+<p>A continuación se pueden almacenar los atributos y direcciones del fichero en disco, o un puntero a otra estructura de datos que contiene dicha información. Esta estructura de datos se suele conocer con el nombre <strong>nodo índice</strong> .</p>
+<p>Mostramos los atributos y direcciones a una estructura de datos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/directorios.png?w=825" alt=""></p>
+<p>Cuando se abre un fichero el SO busca en el directorio correspondiente hasta que encuentra el nombre del fichero, toma la información que necesita y la introduce en una tabla residente en la memoria principal. Las siguientes referencias al fichero utilizarán la información que ya está en memoria.</p>
+<h3 id="Implantacion-de-Directorios"><a href="#Implantacion-de-Directorios" class="headerlink" title="Implantación de Directorios"></a>Implantación de Directorios</h3><p>Para acceder a un fichero, ya sea para lectura o escritura, previamente hay que abrir el fichero. Esta operación implica que el SO, a partir de la ruta de acceso, debe localizar la entrada de directorio correspondiente. Esta entrada proporciona la información necesaria para localizar los bloques de disco del fichero. Esta información, según el tipo de sistema, puede ser la dirección en disco del fichero completo (asignación contigua), el número del primer bloque (los dos métodos basados en listas encadenadas) o el número de nodo índice. En todo caso, la principal función del sistema de directorios es asociar el nombre en ASCII de un fichero con la información precisa para localizar los datos. Los atributos de los ficheros se pueden almacenar en la misma entrada de directorio. Si usan nodos índice, es posible almacenar los atributos en el nodo índice.</p>
+<p>A continuación se exponen brevemente la implantación de directorios en varios SO: CP/M, MS-DOS y UNIX. No vamos a mencionar nada de las características de cada SO, simplemente mencionamos estos SO para ver distintas filosofías de implementar directorios.</p>
+<p><strong>Directorios en CP/M</strong></p>
+<p>En CP/M solamente existe un directorio, por lo que el sistema de ficheros únicamente tiene que buscar el nombre de un fichero en dicho directorio. Si un fichero ocupa más de 16 bloques se le asignan más entradas de directorio.</p>
+<p>Los campos de una entrada de directorio en CP/M son los siguientes:</p>
+<ul>
+<li>El código de usuario (1 byte) permite conocer el propietario del fichero.</li>
+<li>El nombre y la extensión del fichero (8 y 3 bytes, respectivamente).</li>
+<li>Si un fichero ocupa más de 16 bloques, el campo magnitud (1 byte) indica el orden que ocupa esa entrada.</li>
+<li>El contador de bloques (1 byte) indica cuántos bloques están en uso de los 16 posibles.</li>
+<li>Los últimos 16 campos contienen las direcciones de bloques de disco del fichero. Como el último bloque puede no estar lleno, es imposible conocer con exactitud el tamaño en bytes de un fichero.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/cpm.png?w=825" alt=""></p>
+<p><strong>Directorios en MS-DOS</strong></p>
+<p>MS-DOS tiene un sistema de ficheros jerárquico. Cada entrada de directorio tiene 32 bytes, y contiene, entre otros datos, el nombre del fichero, la extensión, los atributos y el número del primer bloque en disco del fichero. Este número es un índice a una tabla de asignación denominada FAT ( <em>File Allocation Table</em> ). Un directorio puede contener otros directorios, lo que origina la estructura jerárquica del sistema de ficheros.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/msdos.png?w=825" alt=""></p>
+<p><strong>Directorios en UNIX</strong></p>
+<p>La estructura de una entrada de directorio en un sistema UNIX tradicional es muy simple, y contiene únicamente el nombre del fichero y el número de su nodo índice. Toda la información sobre el fichero reside en el propio nodo índice.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/unix.png?w=825" alt=""></p>
+<h2 id="Formatos-de-Informacion-y-Ficheros"><a href="#Formatos-de-Informacion-y-Ficheros" class="headerlink" title="Formatos de Información y Ficheros"></a>Formatos de Información y Ficheros</h2><p>Independientemente de la plataforma con que se trabaje, la información obtenida se genera con un ordenador y se suele almacenar en un fichero, con la intención de recuperarla más tarde cuando sea necesaria, o compartirla con los demás a través de algún medio de transmisión de datos. En consecuencia, es conveniente conocer los formatos de archivo más indicados para almacenar los distintos tipos de información que deben contener.</p>
+<p>En este apartado vamos a estudiar los ficheros desde un punto de vista operativo, es decir, según el uso o función que se le da al fichero. Podría decirse que desde el punto de vista del usuario, al que le interesa guardar datos en un archivo y tenerlo localizado de alguna forma en su ordenador independientemente de cómo esté organizado el fichero o cual sea su estructura.</p>
+<h3 id="Formatos-de-Informacion"><a href="#Formatos-de-Informacion" class="headerlink" title="Formatos de Información"></a>Formatos de Información</h3><p>La mayoría de aplicaciones suelen guardar la información que producen en formatos de fichero propios, de modo que podemos editarlos posteriormente con la garantía que se respetarán todas las peculiaridades de los datos y el nivel de edición que poseían en el momento de guardarlos, ahora, cuando compartimos información debemos ser muy cuidadosos con la elección del tipo de fichero ya que no debemos asumir que todo el mundo posee nuestras mismas herramientas ni nuestro mismo sistema.</p>
+<p>No se trata de analizar en profundidad las características de todos los tipos de archivo, sino indicar algunas referencias generales sobre los más usados que nos ayuden a decidir el formato adecuado en cada ocasión.</p>
+<p><strong>Ficheros con Información de Texto</strong></p>
+<p>Si queremos almacenar o compartir un fichero de texto tenemos dos formatos básicos independientes de la plataforma, es decir, son legibles con un editor de texto sobre cualquier SO:</p>
+<ul>
+<li><strong>TXT</strong> , para ficheros de texto plano.</li>
+<li><strong>RTF</strong> , Rich Text Format (Formato de texto enriquecido) cuando sea necesario incluir en el texto algunos elementos de realce como cursivas o negrita.</li>
+</ul>
+<p><strong>Ficheros con Información de Imagen</strong></p>
+<p>Hay gran variedad de formatos de archivos gráficos, la mayoría compatibles con cualquier plataforma. Entre los más habituales se encuentran:</p>
+<ul>
+<li><strong>JPG</strong> para imágenes de tono continuo en mapa de bits. Es un formato comprimido pues prescinde de los datos de color de la imagen que no están en el espectro visible.</li>
+<li><strong>GIF</strong> usado especialmente con animaciones y gráficos con regiones transparentes. Tiene algunos problemas legales con los términos de su licencia.</li>
+<li><strong>PNG</strong> tiene similares características al GIF aunque se trata de un formato más evolucionado y de mayor calidad, con muy buenos ratios de compresión y soporte para multitransparencia. Posee una licencia libre.</li>
+<li><strong>TIFF</strong> se utiliza para almacenar imágenes sin pérdida de calidad, por lo que genera tamaños de archivo mayores que el resto pese a que incorpora un algoritmo de compresión.</li>
+<li><strong>SVG</strong> para ilustraciones vectoriales.</li>
+</ul>
+<p><strong>Ficheros con Información Compuesta</strong></p>
+<p>Cuando se trata de compartir documentos que integran texto con imágenes o gráficos, o la composición y aspecto son fundamentales por tratarse de formularios estandarizados o similares, tenemos dos alternativas:</p>
+<ul>
+<li>PS es un documento PostScript o formato de impresión capaz de ser visualizado con alguna aplicación auxiliar e impreso sin problemas, directamente. Mantienen la misma calidad de resolución que el documento original.</li>
+<li>PDF es una versión del anterior, desarrollada por la compañía Adobe que se usa frecuentemente para compartir documentación en Internet.</li>
+</ul>
+<p><strong>Ficheros con Información Comprimida</strong></p>
+<p>Para aliviar las dificultades de transmitir archivos de gran tamaño a través de las redes o ahorrar espacio en disco, se desarrollaron distintos algoritmos de compresión capaces de reducir la cantidad de memoria ocupada por un fichero. Los formatos más usados son <strong>ZIP</strong> , <strong>RAR</strong> .</p>
+<h3 id="Tipos-de-Fichero-segun-su-uso"><a href="#Tipos-de-Fichero-segun-su-uso" class="headerlink" title="Tipos de Fichero según su uso"></a>Tipos de Fichero según su uso</h3><p>Se pueden clasificar en:</p>
+<ul>
+<li>Ficheros <strong>Permanentes</strong> : Contienen los datos relevantes para una aplicación. Su vida es larga y no pueden generarse de forma inmediata. Entre estos se puede distinguir entre:<ul>
+<li>Ficheros <strong>maestros</strong> : contienen el estado actual de los datos suceptibles de ser modificados en la aplicación. Ejemplo: el fichero de clientes de un banco.</li>
+<li>Ficheros <strong>constantes</strong> : contienen datos fijos para la aplicación. Ejemplo: el fichero de códigos postales.</li>
+<li>Ficheros <strong>históricos</strong> : contienen datos que fueron actuales en tiempos anteriores. Ejemplo: el fichero de clientes que se han dado de baja.</li>
+</ul>
+</li>
+<li>Ficheros <strong>Temporales</strong> : Contienen datos relevantes para un proceso o programa. Su vida es corta y se utilizan para actualizar los ficheros permanentes.<ul>
+<li>Ficheros de <strong>movimientos</strong> : almacenan resultados de un programa que han de ser utilizados por otro, dentro de la misma tarea. Ejemplo: el fichero de movimientos de una cuenta bancaria.</li>
+<li>Ficheros de <strong>maniobras</strong> : almacenan datos que un programa no puede conservar en memoria principal por falta de espacio. Ejemplo: editores, compiladores y programas de cálculo numérico.</li>
+<li>Ficheros de <strong>resultados</strong> : se utilizan para almacenar datos elaborados que van a ser transferidos a un dispositivo de salida. Ejemplo: un fichero de impresión.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Denominacion-de-Ficheros"><a href="#Denominacion-de-Ficheros" class="headerlink" title="Denominación de Ficheros"></a>Denominación de Ficheros</h3><p>Los ficheros tienen asignados un nombre a través del cual los usuarios se refieren a ellos. Sin embargo, las reglas de denominación de ficheros difieren dependiendo del SO. Muchos SO dividen el nombre de los ficheros en dos partes separadas por un punto. La primera parte sería el nombre propiamente dicho. La segunda parte se suele denominar <em>extensión</em> y suele aportar información sobre el contenido del fichero.</p>
+<p>Las reglas básicas de denominación de ficheros en los SO MS-DOS, UNIX y Windows NT son:</p>
+<ul>
+<li><strong>MS-DOS</strong> : El nombre de un fichero se compone de un máximo de 8 caracteres, seguidos, opcionalmente, por un punto y una extensión de tres caracteres como máximo. Las mayúsculas y minúsculas son consideradas iguales. Por ejemplo: <em>archivo12.doc</em> .</li>
+<li><strong>UNIX</strong> : El nombre de un fichero se compone de un máximo de 256 caracteres. Se distinguen las mayúsculas de las minúsculas. Un fichero puede tener más de una extensión. Por ejemplo: <em>image.tar.z</em> .</li>
+<li><strong>Windows NT</strong> : El nombre de un fichero se compone de un máximo de 256 caracteres. Las mayúsculas y minúsculas no son distinguibles y los ficheros pueden tener más de una extensión.</li>
+</ul>
+<p>En muchos casos, las extensiones son meras convenciones y no relacionadas con el contenido de los ficheros. Por otro lado, muchas aplicaciones requieren que los ficheros que utilizan tengan unas extensiones concretas.</p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/356393030/TICB1-Estructuras-de-Datos" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B4/b4-t13/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B4-T13
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t11/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T11</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

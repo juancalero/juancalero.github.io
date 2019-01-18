@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B3-T11 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B3-T11">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Pruebas. Planificación y documentación. Utilización de datos de prueba. Pruebas de software, hardware, procedimientos y datos.Documentación y Pruebas en el Desarrollo Tradicional del SoftwareDocumenta">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-T11">
+<meta property="og:url" content="http://localhost:4000/wiki/B3/b3-t11/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Pruebas. Planificación y documentación. Utilización de datos de prueba. Pruebas de software, hardware, procedimientos y datos.Documentación y Pruebas en el Desarrollo Tradicional del SoftwareDocumenta">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/05/nodos_predicados.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/05/pseudocodigo_grafo.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:13:43.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-T11">
+<meta name="twitter:description" content="Pruebas. Planificación y documentación. Utilización de datos de prueba. Pruebas de software, hardware, procedimientos y datos.Documentación y Pruebas en el Desarrollo Tradicional del SoftwareDocumenta">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/05/nodos_predicados.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file active"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B3/b3-t11" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B3/">B3</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B3/b3-t11/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B3/b3-t11.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B3/b3-t11.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B3/b3-t11.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B3-T11
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Pruebas-Planificacion-y-documentacion-Utilizacion-de-datos-de-prueba-Pruebas-de-software-hardware-procedimientos-y-datos"><a href="#Pruebas-Planificacion-y-documentacion-Utilizacion-de-datos-de-prueba-Pruebas-de-software-hardware-procedimientos-y-datos" class="headerlink" title="Pruebas. Planificación y documentación. Utilización de datos de prueba. Pruebas de software, hardware, procedimientos y datos."></a>Pruebas. Planificación y documentación. Utilización de datos de prueba. Pruebas de software, hardware, procedimientos y datos.</h1><h2 id="Documentacion-y-Pruebas-en-el-Desarrollo-Tradicional-del-Software"><a href="#Documentacion-y-Pruebas-en-el-Desarrollo-Tradicional-del-Software" class="headerlink" title="Documentación y Pruebas en el Desarrollo Tradicional del Software"></a>Documentación y Pruebas en el Desarrollo Tradicional del Software</h2><h3 id="Documentacion-y-Desarrollo-de-Software"><a href="#Documentacion-y-Desarrollo-de-Software" class="headerlink" title="Documentación y Desarrollo de Software"></a>Documentación y Desarrollo de Software</h3><p>En general se habla mucho de la documentación, pero no se hace, no se le asigna presupuesto, no se la mantiene y casi nunca está al día en los proyectos de desarrollo de software. Lo importante es la disponibilidad de la documentación que se necesita en el momento en que se la necesita.</p>
+<p>Muchas veces se hace porque hay que hacerla y se escribe, con pocas ganas, largos textos, a la vez que se está convencido de estar haciendo un trabajo inútil. A veces se peca por exceso y otras por defecto. Ocurre mucho en la Web y con productos RAD. En ocasiones se olvida que el mantenimiento también debe llegar a la documentación.</p>
+<p>La documentación se suele clasificar en función de las personas o grupos a los cuales está dirigida:</p>
+<ul>
+<li>Documentación para los desarrolladores.</li>
+<li>Documentación para los usuarios.</li>
+<li>Documentación para los administradores o soporte técnico.</li>
+</ul>
+<p>La documentación para desarrolladores es aquélla que se utiliza para el propio desarrollo del producto y, sobre todo, para su mantenimiento futuro. Se documenta para comunicar estructura y comportamiento del sistema o de sus partes, para visualizar y controlar la arquitectura del sistema, para comprender mejor el mismo y para controlar el riesgo, entre otras cosas. Obviamente, cuanto más complejo es el sistema, más importante es la documentación.</p>
+<p>En este sentido, todas las fases de un desarrollo deben documentarse: requerimientos, análisis, diseño, programación, pruebas, etc. Una herramienta muy útil en este sentido es una notación estándar de modelado, de modo que mediante ciertos diagramas se puedan comunicar ideas entre grupos de trabajo.</p>
+<p>Hay decenas de notaciones, tanto estructuradas como orientadas a objetos. Un caso particular es el de UML. De todas maneras, los diagramas son muy útiles, pero siempre y cuando se mantengan actualizados, por lo que más vale calidad que cantidad.</p>
+<p>La documentación para desarrolladores a menudo es llamada <strong>modelo</strong> , pues es una simplificación de la realidad para comprender mejor el sistema como un todo.</p>
+<p>Otro aspecto a tener en cuenta cuando se documenta o modela, es el del nivel de detalle. Así como cuando construimos planos de un edificio podemos hacer planos generales, de arquitectura, de instalaciones y demás, también al documentar el software debemos cuidar el nivel de detalle y hacer diagramas diferentes en función del usuario de la documentación, concentrándonos en un aspecto a la vez.</p>
+<p>De toda la documentación para los desarrolladores, nos interesa especialmente en esta obra aquella que se utiliza para documentar la programación, y en particular hemos analizado la que se usa para documentar desarrollos orientados a objetos.</p>
+<p>La documentación para usuarios es todo aquello que necesita el usuario para la instalación, aprendizaje y uso del producto. Puede consistir en guías de instalación, guía del usuario, manuales de referencia y guía de mensajes.</p>
+<p>En el caso de los usuarios que son programadores, esta documentación se debe acompañar con ejemplos de uso recomendados o de muestra y una reseña de efectos no evidentes de las bibliotecas.</p>
+<p>Más allá de todo esto, debemos tener en cuenta que la estadística demuestra que los usuarios no leen los manuales a menos que nos les quede otra opción. Las razones pueden ser varias, pero un análisis de la realidad muestra que se recurre a los manuales solamente cuando se produce un error o se desconoce cómo lograr algo muy puntual, y recién cuando la ayuda en línea no satisface las necesidades del usuario. Por lo tanto, si bien es cierto que debemos realizar manuales, la existencia de un buen manual nunca nos libera de hacer un producto amigable para el usuario, que incluso contenga ayuda en línea. Es incluso deseable proveer un software tutorial que guíe al usuario en el uso del sistema, con apoyo multimedia, y que puede llegar a ser un curso on-line.</p>
+<p>Buena parte de la documentación para los usuarios puede empezar a generarse desde que comienza el estudio de requisitos del sistema. Esto está bastante en consonancia con las ideas de <em>extreme programming</em> y con metodologías basadas en casos de uso.</p>
+<p>La documentación para administradores o soporte técnico, a veces llamada manual de operaciones, contiene toda la información sobre el sistema terminado que no hace al uso por un usuario final. Es necesario que tenga una descripción de los errores posibles del sistema, así como los procedimientos de recuperación. Como esto no es algo estático, pues la aparición de nuevos errores, problemas de compatibilidad y demás nunca se puede descartar, en general el manual de operaciones es un documento que va engrosándose con el tiempo.</p>
+<h3 id="Las-Pruebas-en-el-Desarrollo-de-Software"><a href="#Las-Pruebas-en-el-Desarrollo-de-Software" class="headerlink" title="Las Pruebas en el Desarrollo de Software"></a>Las Pruebas en el Desarrollo de Software</h3><p><strong>Calidad, errores y pruebas</strong></p>
+<p>La calidad no es algo que se pueda agregar al software después de desarrollado si no se hizo todo el desarrollo con la cantidad en mente. Muchas veces parece que el software de calidad es aquel que brinda lo que se necesita con adecuada velocidad de procesamiento. En realidad, es mucho más que eso. Tiene que ver con la corrección, pero también con usabilidad, costo, consistencia, confiabilidad, compatibilidad, utilidad, eficiencia y apego a los estándares.</p>
+<p>Todos estos aspectos de la calidad pueden ser objeto de tests o pruebas que determinen el grado de calidad. Incluso la documentación para el usuario debe ser probada.</p>
+<p>Como en todo proyecto de cualquier índole,siempre se debe tratar que las fallas sean mínimas y poco costosas, durante todo el desarrollo. Y además, es sabido que cuanto más tarde se encuentra una falla, más caro resulta eliminarla. Es claro que si un error es descubierto en la mitad del desarrollo de un sistema, el costo de su corrección será mucho menor al que se debería enfrentar en caso de descubrirlo con el sistema instalado y en funcionamiento.</p>
+<p>Desde el punto de vista de la programación,nos interesa la ausencia de errores (corrección), la confiabilidad y la eficiencia. Dejando de lado las dos últimas, nos concentraremos en este capítulo en las pruebas que determinan que un programa está libre de errores.</p>
+<p>Un <strong>error</strong> es un comportamiento distinto del que espera un usuario razonable. Puede haber errores aunque se hayan seguido todos los pasos indicados en el análisis y en el diseño, y hasta en los requisitos aprobados por el usuario. Por lo tanto,no necesariamente un apego a los requisitos y un perfecto seguimiento de las etapas nos lleva a un producto sin errores, porque aún en la mente de un usuario pudo haber estado mal concebida la idea desde el comienzo. De allí la importancia del desarrollo incremental, que permite ir viendo versiones incompletas del sistema.</p>
+<p>Por lo tanto, una primera fuente de errores ocurre antes de los requerimientos o en el propio proceso de análisis. Pero también hay errores que se introducen durante el proceso de desarrollo posterior. Así, puede haber errores de diseño y errores de implementación. Finalmente, puede haber incluso errores en la propia etapa de pruebas y depuración.</p>
+<p><strong>Categorías de pruebas</strong></p>
+<p>Según la naturaleza de lo que se esté controlando, las pruebas se pueden dividir en dos categorías:</p>
+<ul>
+<li>Pruebas centradas en la verificación.</li>
+<li>Pruebas centradas en la validación.</li>
+</ul>
+<p>Las primeras sirven para determinar la consistencia entre los requerimientos y el programa terminado. Soporta metodologías formales de testeo, de mucho componente matemático. De todas maneras, hay que ser cuidadoso, porque no suele ser fácil encontrar qué es lo que hay que demostrar. La verificación consisten en determinar si estamos construyendo el sistema correctamente, a partir de los requisitos.</p>
+<p>En general a los informáticos no les gustan las pruebas formales, en parte porque no las entienden y en parte porque requieren un proceso matemático relativamente complejo.</p>
+<p>La validación consiste en saber si estamos construyendo el sistema correcto. Las tareas de validación son más informales. Las pruebas suelen mostrar la presencia de errores, pero nunca demuestran su ausencia.</p>
+<p><strong>Las pruebas y el desarrollo de software</strong></p>
+<p>La etapa de pruebas es una de las fases del ciclo de vida de los proyectos. Se la podría ubicar después del análisis, el diseño y la programación, pero dependiendo del proyecto en cuestión y del modelo de proceso elegido, su realización podría ser en forma paralela a las fases citadas o inclusive repertirse varias veces durante la duración del proyecto.</p>
+<p>La importancia de esta fase será mayor o menor según las características del sistema desarrollado, llegando a ser vital en sistemas de tiempo real u otros en los que los errores sean irrecuperables.</p>
+<p>Las pruebas no tienen el objeto de prevenir errores sino de detectarlos. Se efectúan sobre el trabajo realizado y se deben encarar con la intención de descubrir la mayor cantidad de errores posible.</p>
+<p>Para realizar las pruebas se requiere gente que disfrute encontrando errores, por eso no es bueno que sea el mismo equipo de desarrollo el que lleve a cabo este trabajo. Además, es un principio fundamental de las auditorías. Por otro lado, es bastante común que a quien le guste programar no le guste probar y viceversa.</p>
+<p>A veces se dan por terminadas las pruebas antes de tiempo. En las pruebas de caja blanca no es mala idea probar un 85% de las ramas y dar por terminado luego de esto. Otra posibilidad es la siembra de errores y seguir las pruebas hasta que se encuentren un 85% de los errores sembrados, lo que presumiblemente implica que se encontró un 86% de los no sembrados. Otros métodos se basan en la estadística y las comparaciones, ya sea por similitud con otro sistema en cantidad de errores o por el tiempo de prueba usado en otro sistema.</p>
+<p>En un proyecto ideal, podríamos generar casos de prueba para cubrir todas las posibles entradas y todas las posibles situaciones por las que podría atravesar el sistema. Examinaríamos así exhaustivamente el sistema para asegurar que su comportamiento sea perfecto. Pero hay un problema con esto: el número de casos de prueba para un sistema complejo es tan grande que no alcanzaría una vida para terminar con las pruebas. Como consecuencia, nadie realiza una prueba exhaustiva de nada salvo en sistemas triviales.</p>
+<p>En un sistema real, los casos de prueba se deben hacer sobre las partes del sistema en los cuales una buena prueba brinde un mayor retorno de la inversión o en las cuales un error represente un riesgo mayor.</p>
+<p>Las pruebas cuestan mucho dinero. Pero para ello existe una máxima: “pague por la prueba ahora o pague el doble por el mantenimiento después”.</p>
+<p>Todo esto lleva a que se deban planificar bien las pruebas, con suficiente anticipación, y determinar desde el comienzo los resultados que se deben obtener.</p>
+<p>La idea de <em>extreme programming</em> es más radical: propone primero escribir los programas de prueba y después la aplicación, obligando a correr las pruebas siempre antes de una integración. Se basa en la idea bastante acertada de que los programas de prueba son la mejor descripción de los requerimientos.</p>
+<p>Las pruebas son prácticas a realizar en diversos momentos de la vida del sistema de información para verificar:</p>
+<ul>
+<li>El correcto funcionamiento de los componentes del sistema.</li>
+<li>El correcto ensamblaje entre los distintos componentes.</li>
+<li>El funcionamiento correcto de las interfaces entre los distintos subsistemas que lo componen y con el resto de sistemas de información con los que se comunica.</li>
+<li>El funcionamiento correcto del sistema integrado de hardware y software en el entorno de operación.</li>
+<li>Que el sistema cumple con el funcionamiento esperado y permite al usuario de dicho sistema que determine su aceptación, desde el punto de vista de su funcionalidad y rendimiento.</li>
+<li>Que los cambios sobre un componente de un sistema de información, no introducen un comportamiento no deseado o errores adicionales en otros componentes no modificados.</li>
+</ul>
+<p>Las diversas pruebas a que debe ser sometido un sistema deben ser realizadas tanto por el equipo de desarrolladores, como por los usuarios, equipos de operación y mantenimiento en la implantación, aceptación y mantenimiento del sistema de información.</p>
+<p><strong>Tipos de pruebas</strong></p>
+<p>Analizaremos 7 tipos de pruebas:</p>
+<ul>
+<li>Revisiones de código.</li>
+<li>Pruebas unitarias.</li>
+<li>Pruebas de integración.</li>
+<li>Pruebas de sistema.</li>
+<li>Pruebas de implantación.</li>
+<li>Pruebas de aceptación.</li>
+<li>Pruebas de regresión.</li>
+</ul>
+<p>No son tipos de pruebas intercambiables, ya que testean cosas distintas.</p>
+<p>Otra posible clasificación de las pruebas es:</p>
+<ul>
+<li>De caja blanca o de código</li>
+<li>De caja negra o de especificación</li>
+</ul>
+<p>En las primeras se evalúa el contenido de los módulos, mientras en las segundas se trata al módulo como una caja cerrada y se lo prueba con valores de entrada, evaluando los valores de salida. Vistas de este modo, las pruebas de caja negra sirven para verificar especificaciones.</p>
+<p>Las pruebas unitarias suelen ser de caja blanca o de caja negra, mientras que las de integración, sistema y aceptación son de caja negra. Las tareas de depuración luego de encontrar errores son más bien técnicas de caja blanca, así como las revisiones de código. En todos los casos, uno de los mayores desafíos es encontrar los datos de prueba: hay que encontrar un subconjunto de todas las entradas que tengan alta probabilidad de detectar el mayor número de errores.</p>
+<p><strong>Revisiones de código</strong></p>
+<p>Las revisiones de código son las únicas que se podrían omitir de todos los tipos de pruebas, pero tal vez sea buen idea por lo menos hacer alguna de ellas:</p>
+<ul>
+<li>Pruebas de escritorio.</li>
+<li>Recorridos de código.</li>
+<li>Inspecciones de código.</li>
+</ul>
+<p>La <em>prueba de escritorio</em> rinde muy poco, tal vez menos de lo que cuesta, pero es una costumbre difícil de desterrar. Es bueno centrarse en buscar anomalías típicas, como variables u objetos no inicializados o que no se usan, ciclos infinitos y demás.</p>
+<p>Los <em>recorridos</em> rinden mucho más. Son exposiciones del código escrito frente a pares. El programador, exponiendo su código, encuentra muchos errores. Además da ideas avanzadas a programadores nuevos que se lleva a recorrer.</p>
+<p>Las llamadas <em>inspecciones de código</em> consisten en reuniones en conjunto entre los responsables de la programación y los responsables de la revisión.Tienen como objetivo revisar el código escrito por los programadores para chequear que cumpla con las normas que se hayan fijado y para verificar la eficiencia del mismo. Se realizan siguiendo el código de un pequeño porcentaje de módulos seleccionados al azar o según su grado de complejidad. Las inspecciones se pueden usar en sistemas grandes, pero con cuidado para no dar idea de estar evaluando al programador. Suelen servir porque los revisores están más acostumbrados a ver determinados tipos de errores comunes a todos los programadores. Además, después de una inspección a un programador, de la que surge un tipo de error, pueden volver a inspeccionar a otro para ver si no cayó en el mismo error.</p>
+<p>El concepto de <em>extreme programming</em> propone programar de a dos, de modo que uno escribe y el otro observa el trabajo. Si el que está programando no puede avanzar en algún momento, sigue el que miraba. Y si ambos se traban pueden pedir ayuda a otro par. Esta no sólo es una forma más social de programación, sino que aprovecha las mismas ventajas de los recorridos e inspecciones de código, y puede prescindir de ellos.</p>
+<p><strong>Pruebas unitarias</strong></p>
+<p>Las pruebas unitarias se realizan para controlar el funcionamiento de pequeñas porciones de código como ser subprogramas (en la programación estructurada) o métodos (en POO). Generalmente son realizadas por los mismos programadores puesto que al conocer con mayor detalle el código, se les simplifica la tarea de elaborar conjuntos de datos de prueba para testearlo.</p>
+<p>Si bien una prueba exhaustiva sería impensada teniendo en cuenta recursos, plazos, etc, es posible y necesario elegir cuidadosamente los casos de prueba para recorrer tantos caminos lógicos como sea posible. Inclusive procediendo de esta manera, deberemos estar preparados para manejar un gran volumen de datos de prueba.</p>
+<p>Los métodos de cobertura de caja blanca tratan de recorrer todos los caminos posibles por lo menos una vez, lo que no garantiza que no haya errores pero pretende encontrar la mayor parte.</p>
+<p>El tipo de prueba a la cual se someterá a cada uno de los módulos dependerá de su complejidad. Recordemos que nuestro objetivo aquí es encontrar la mayor cantidad de errores posible. Si se pretende realizar una prueba estructurada, se puede confeccionar un grafo de flujo con la lógica del código a probar. De esta manera se podrán determinar todos los caminos por los que el hilo de ejecución pueda llegar a pasar, y por consecuente elaborar los juegos de valores de pruebas para aplicar al módulo, con mayor facilidad y seguridad.</p>
+<p>Un grafo de flujo se compone de:</p>
+<ul>
+<li>Nodos (círculos), que representan una o más acciones del módulo.</li>
+<li>Aristas (flechas), que representan el flujo de control entre los distintos nodos.</li>
+</ul>
+<p>Los nodos predicados son aquellos que contienen una condición, por lo que de ellos emergen dos o más aristas.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/05/nodos_predicados.png?w=825" alt=""></p>
+<p>El paso de un diseño detallado o un pseudocódigo que representa una porción de programa a un grafo de flujo, requiere de las siguientes etapas:</p>
+<ul>
+<li>Señalar cada condición, tanto en sentencias _if_ y <em>case</em> como en bucles <em>while</em> y <em>repeat</em> .</li>
+<li>Agrupar todas las secuencias siguiendo los esquemas de representación de construcciones.</li>
+<li>Numerar cada uno de los nodos resultantes de manera que consten de un identificador único. Las ramas de cada bifurcación pueden identificarse por el mismo número seguido de distintas letras.</li>
+<li>Dibujar en forma ordenada los nodos y sus aristas.</li>
+</ul>
+<p>En el siguiente ejemplo, se muestra la manera de traducir un pequeño tramo de programa escrito en pseudocódigo a forma de grafo de flujo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/05/pseudocodigo_grafo.png?w=825" alt=""></p>
+<p>Las pruebas unitarias tienen como objetivo verificar la funcionalidad y estructura de cada componente individualmente una vez que ha sido codificado.</p>
+<p>Las pruebas unitarias constituyen la prueba inicial de un sistema y las demás pruebas deben apoyarse sobre ellas.</p>
+<p>Existen dos enfoques principales para el diseño de casos de prueba:</p>
+<ul>
+<li><strong>Enfoque estructural</strong> o de <strong>caja blanca</strong> . Se verifica la estructura interna del componente con independencia de la funcionalidad establecida para el mismo. Por tanto, no se comprueba la corrección de los resultados si éstos se producen. Ejemplos de este tipo de pruebas pueden ser ejecutar todas las instrucciones del programa, localizar código no usado, comprobar los caminos lógicos del programa, etc.</li>
+<li><strong>Enfoque funcional</strong> o de <strong>caja negra</strong> . Se comprueba el correcto funcionamiento de los componentes del sistema de información, analizando las entradas y salidas y verificando que el resultado es el esperado. Se consideran exclusivamente las entradas y salidas del sistema sin preocuparse por la estructura interna del mismo.</li>
+</ul>
+<p>El enfoque que suele adoptarse para una prueba unitaria está claramente orientado al diseño de casos de caja blanca, aunque se complemente con caja negra. El hecho de incorporar casos de caja blanca se debe, por una parte, a que el tamaño del componente es apropiado para poder examinar toda la lógica y por otra, a que el tipo de defectos que se busca, coincide con los propios de la lógica detallada en los componentes.</p>
+<p>Los pasos necesarios para llevar a cabo las pruebas unitarias son los siguientes:</p>
+<ul>
+<li>Ejecutar todos los casos de prueba asociados a cada verificación establecida en el plan de pruebas, registrando su resultado. Los casos de prueba deben contemplar tanto las condiciones válidas y esperadas como las inválidas e inesperadas.</li>
+<li>Corregir los errores o defectos encontrados y repetir las pruebas que lo detectaron. Si se considera necesario, debido a su implicación o importancia, se repetirán otros casos de prueba ya realizados con anterioridad.</li>
+</ul>
+<p>La prueba unitaria se da por finalizada cuando se hayan realizado todas las verificaciones establecidas y no se encuentre ningún defecto, o bien se determine su suspensión.</p>
+<p><strong>Pruebas de integración</strong></p>
+<p>En el caso de las pruebas de integración y de sistema,dado que ya se han realizado las pruebas unitarias, se tomará a cada uno de los módulos unitarios como una caja negra.</p>
+<p>Las pruebas de integración tienen como base las pruebas unitarias y consisten en una progresión ordenada de testeos para los cuales los distintos módulos van siendo ensamblados y probados hasta haber integrado el sistema completo. Si bien se realizan sobre módulos ya probados en forma individual, no es necesario que se terminen todas las pruebas unitarias para comenzar con las de integración. Dependiendo de la forma en que se organicen, se pueden realizar en paralelo a las unitarias.</p>
+<p>El orden de integración de los módulos influye en:</p>
+<ul>
+<li>La forma de preparar los casos de prueba.</li>
+<li>Las herramientas a utilizar (módulos ficticios, muñones, impulsores o “stubs”).</li>
+<li>El orden para codificar y probar los módulos.</li>
+<li>El costo de preparar los casos.</li>
+<li>El costo de la depuración.</li>
+</ul>
+<p>Tanto es así que se le debe prestar especial atención al proceso de elección del orden de integración que se emplee.</p>
+<p>Existen principalmente dos tipos de integración:</p>
+<ul>
+<li>La <em>integración incremental</em></li>
+<li>La integración <em>no incremental</em> .</li>
+</ul>
+<p>La <strong>integración incremental</strong> consiste en combinar el conjunto de módulos ya probados (al principio será un conjunto vacío) con los siguientes módulos a probar. Luego se va incrementando progresivamente el número de módulos unidos hasta que se forma el sistema completo.</p>
+<p>En la <strong>integración no incremental</strong> o <strong>Big Bang</strong> se combinan todos los módulos de una vez.</p>
+<p>Para ambos tipos de integración se deberán preparar los datos de prueba junto con los resultados esperados. Esta tarea debe ser realizada por personas ajenas a la programación de los módulos. No es necesario que la lleven a cabo una vez codificados los módulos puesto que basta con conocer qué módulos compondrán el sistema y cuál será la interfaz entre ellos.</p>
+<p>Si en algún momento de la prueba se detectara uno o más errores, se dejará constancia del hecho y se reenviarán los módulos afectados al responsable de la programación para que identifique la causa del problema y lo solucione. Luego se volverán a efectuar las pruebas programadas y así sucesivamente hasta que el sistema entero esté integrado y sin errores.</p>
+<p>Por el hecho de poder ser llevada a cabo por distintos caminos, la integración incremental brinda una mayor flexibilidad en el uso de recursos. Se puede integrar la estructura de módulos desde un extremo a otro y continuar hacia el extremo opuesto según distintas prioridades. La forma de llevar a cabo esta tarea dependerá de la naturaleza del sistema en cuestión, pero sea cual fuere el camino elegido, será de suma importancia una correcta planificación.</p>
+<p>En la <strong>integración incremental ascendente (De abajo arriba – bottom-up)</strong> se comienza integrando primero los módulos de más bajo nivel. El proceso deberá seguir los siguientes pasos:</p>
+<ul>
+<li>Elegir los módulos de bajo nivel que se van a probar.</li>
+<li>Escribir un módulo impulsor para la entrada de datos de prueba a los módulos y para la visualización de los resultados.</li>
+<li>Probar la integración de los módulos.</li>
+<li>Eliminar los módulos impulsores y juntar los módulos ya probados con los módulos de niveles superiores, para continuar con las pruebas.</li>
+</ul>
+<p>Estas tareas se pueden realizar en paralelo si es que se dispone de tres equipos de trabajo, o en serie de lo contrario. Para la prueba de cada uno de los módulos mencionados, es necesaria la preparación de un módulo impulsor. El objeto de los módulos impulsores es transmitir o impulsar los casos de prueba a los módulos testeados y recibir los resultados que estos produzcan en los casos en que sea necesario. Es decir, que deben simular las operaciones de llamada de los módulos jerárquicos superiores correspondientes. Estos módulos tienen que estar bien diseñados, para que no arrojen ni más ni menos errores que los que realmente pueden producirse. Al fin y al cabo, deben simular todas las situaciones que se van a producir en el sistema real.</p>
+<p>La <strong>integración incremental descendente (De arriba abajo – top-down)</strong> parte del módulo de control principal (de mayor nivel) para luego ir incorporando los módulos subordinados progresivamente. No hay un procedimiento considerado óptimo para seleccionar el siguiente módulo a incorporar. La única regla es que el módulo incorporado tenga todos los módulos que lo invocan previamente probados.</p>
+<p>En general no hay una secuencia óptima de integración. Debe estudiarse el problema concreto y de acuerdo a este, buscar el orden de integración más adecuado para la organización de las pruebas. No obstante, pueden considerarse las siguientes pautas:</p>
+<ul>
+<li>Si hay secciones críticas como ser un módulo complicado, se debe proyectar la secuencia de integración para incorporarlas lo antes posible.</li>
+<li>El orden de integración debe incorporar cuanto antes los módulos de entrada y salida.</li>
+</ul>
+<p>Existen principalmente dos métodos para la incorporación de módulos:</p>
+<ul>
+<li>Primero en profundidad: primero se mueve verticalmente en la estructura de módulos.</li>
+<li>Primero en anchura: Primero se mueve horizontalmente en la estructura de módulos.</li>
+</ul>
+<p>Etapas de la integración descendente:</p>
+<ul>
+<li>El módulo de mayor nivel hace de impulsor y se escriben módulos ficticios simulando a los subordinados, que serán llamados por el módulo de control superior.</li>
+<li>Probar cada vez que se incorpora un módulo nuevo al conjunto ya engarzado.</li>
+<li>Al terminar cada prueba, sustituir un módulo ficticio subordinado por el real que reemplazaba, según el orden elegido.</li>
+<li>Escribir los módulos ficticios subordinados que se necesiten para la prueba del nuevo módulo incorporado.</li>
+</ul>
+<p>Los módulos ficticios subordinados se crean para permitir la prueba de los demás módulos. Pueden llevar a cabo una variedad de funciones, como por ejemplo:</p>
+<ul>
+<li>Mostrar un mensaje que demuestre que ese módulo fue alcanzado (“Módulo XX alcanzado”).</li>
+<li>Establecer una conversación con una terminal. De esta forma se puede permitir que la misma persona que realiza la prueba actúe de módulo subordinado.</li>
+<li>Devolver un valor constante, tabulado o elegido al azar.</li>
+<li>Ser una versión simplificada del módulo representado.</li>
+<li>Mostrar los datos recibidos.</li>
+<li>Ser un loop sin nada que hacer más que dejar pasar el tiempo.</li>
+</ul>
+<p>Ventajas de la integración descendente:</p>
+<ul>
+<li>Las fallas que pudieran existir en los módulos superiores se detectan en una etapa temprana.</li>
+<li>Permite ver la estructura del sistema desde un principio, facilitando la elaboración de demostraciones de su funcionamiento.</li>
+<li>Concuerda con la necesidad de definir primero las interfaces de los distintos subsistemas para después seguir con las funciones específicas de cada uno por separado.</li>
+</ul>
+<p>Desventajas de la integración descendente:</p>
+<ul>
+<li>Requiere mucho trabajo de desarrollo adicional ya que se deben escribir un gran número de módulos ficticios subordinados que no siempre son fáciles de realizar. Suelen ser más complicados de lo que aparentan.</li>
+<li>Antes de incorporar los módulos de entrada y salida resulta difícil introducir los casos de prueba y obtener los resultados.</li>
+<li>Los juegos de datos de prueba pueden resulta difíciles o imposibles de generar puesto que generalmente son los módulos de nivel inferior los que proporcionan los detalles.</li>
+<li>Induce a diferir la terminación de la prueba de ciertos módulos.</li>
+</ul>
+<p>Ventajas de la integración incremental ascendente:</p>
+<ul>
+<li>Las entradas para las pruebas son más fáciles de crear ya que los módulos inferiores suelen tener funciones más específicas.</li>
+<li>Es más fácil la observación de los resultados de las pruebas puesto que es en los módulos inferiores donde se elaboran.</li>
+<li>Resuelve primero los errores de los módulos inferiores que son los que acostumbran tener el procesamiento más complejo, para luego nutrir de datos al resto del sistema.</li>
+</ul>
+<p>Desventajas de la integración incremental ascendente:</p>
+<ul>
+<li>Se requieren módulos impulsores, que deben escribirse especialmente y que no son necesariamente sencillos de codificar.</li>
+<li>El sistema como entidad no existe hasta que se agrega el último módulo.</li>
+</ul>
+<p>El método de <strong>integración incremental sándwich (estrategia combinada)</strong> combina facetas de los métodos ascendente y descendente. Consiste en integrar una parte del sistema en forma ascendente y la restante en forma descendente, provocando la unión de ambas partes en algún punto intermedio. La principal ventaja es que nos da mayor libertad para elegir el orden de integración de los módulos según las características específicas del sistema en cuestión. De esta manera, podremos incluir y probar antes los módulos que consideremos críticos:</p>
+<ul>
+<li>Módulos dirigidos a múltiples propósitos.</li>
+<li>Módulos con mayor control (en general, los módulos de mayor nivel controlan a muchos otros módulos).</li>
+<li>Módulos con alto grado de complejidad.</li>
+<li>Módulos con requisitos de rendimiento muy definidos.</li>
+</ul>
+<p>La <strong>integración no incremental</strong> puede ser beneficiosa par la prueba de sistema de pequeñísima envergadura cuya cantidad de módulos sea muy limitada y la interfaz entre los mismos clara y sencilla. Consiste en integrar todos los módulos del sistema a la vez e ingresar los valores de prueba para testear todas las interfaces.</p>
+<p>La única ventaja es que no se necesita ningún tipo de trabajo adicional: ni planificar el orden de integración, ni crear módulos impulsores, ni crear módulos ficticios subordinados. Por otro lado, la lista de desventajas incluye:</p>
+<ul>
+<li>No se tiene noción de la comunicación de los módulos hasta el final.</li>
+<li>En ningún momento se dispone de un producto -siquiera parcial- para mostrar o presentar.</li>
+<li>El hecho de realizar todas las pruebas de una vez hace que las sesiones de prueba sean largas y tediosas.</li>
+<li>La cantidad de errores que arroje puede ser atemorizante.</li>
+<li>La tarea de encontrar la causa de los errores resulta mucho más compleja que con los métodos incrementales.</li>
+<li>Se corre el riesgo de que a poco tiempo de que se cumpla el plazo de entrega, haya que volver sobre el diseño y la codificación del sistema.</li>
+</ul>
+<p><strong>Pruebas de sistema</strong></p>
+<p>Son pruebas de integración del sistema de información completo, y permiten probar el sistema en su conjunto y con otros sistemas con los que se relaciona para verificar que las especificaciones funcionales y técnicas se cumplen. Dan una visión muy similar a su comportamiento en el entorno de producción.</p>
+<p>Las pruebas de sistema se realizan una vez integrados todos los componentes. Su objetivo es ver la respuesta del sistema en su conjunto, frente a distintas situaciones. Se simulan varias alternativas que podrían darse con el sistema implantado y en base a ellas se prueba la eficacia y eficiencia de la respuesta que se obtiene.</p>
+<p>Se pueden distinguir varios tipos de pruebas distintos, por ejemplo:</p>
+<ul>
+<li><strong>Pruebas negativas</strong> : se trata de que el sistema falle para ver sus debilidades.</li>
+<li><strong>Pruebas funcionales</strong> : dirigidas a asegurar que el sistema de información realiza correctamente todas las funciones que se han detallado en las especificaciones dadas por el usuario del sistema.</li>
+<li><strong>Pruebas de comunicaciones</strong> : determinan que las interfaces entre los componentes del sistema funcionan adecuadamente, tanto a través de dispositivos remotos, como locales. Asimismo, se han de probar las interfaces hombre/máquina.</li>
+<li><strong>Pruebas de volumen</strong> : consisten en examinar el funcionamiento del sistema cuando está trabajando con grandes volúmenes de datos, simulando las cargas de trabajo esperadas.</li>
+<li><strong>Pruebas de sobrecarga</strong> : consisten en comprobar el funcionamiento del sistema en el umbral límite de los recursos, sometiéndole a cargas masivas. El objetivo es establecer los puntos extremos en los cuales el sistema empieza a operar por debajo de los requisitos establecidos.</li>
+<li><strong>Pruebas de disponibilidad de datos</strong> : consisten en demostrar que el sistema puede recuperarse ante fallos, tanto de equipo físico como lógico, sin comprometer la integridad de los datos.</li>
+<li><strong>Pruebas de facilidad de uso</strong> : consisten en comprobar la adaptabilidad del sistema a las necesidades de los usuarios, tanto para asegurar que se acomoda a su modo habitual de trabajo, como para determinar las facilidades que aporta al introducir datos en el sistema y obtener los resultados.</li>
+<li><strong>Pruebas de operación</strong> : consisten en comprobar la correcta implementación de los procedimientos de operación, incluyendo la planificación y control de trabajos, arranque y rearranque del sistema, etc.</li>
+<li><strong>Pruebas de entorno</strong> : consisten en verificar las interacciones del sistema con otros sistemas dentro del mismo entorno.</li>
+<li><strong>Pruebas de recuperación</strong> : se simulan fallas de software y/o hardware para verificar la eficacia del proceso de recuperación.</li>
+<li><strong>Pruebas de rendimiento</strong> : tiene como objeto evaluar el rendimiento del sistema integrado en condiciones de uso habitual. Consisten en determinar que los tiempos de respuesta están dentro de los intervalos establecidos en las especificaciones del sistema.</li>
+<li><strong>Pruebas de resistencia o de estrés</strong> : comprueban el comportamiento del sistema ante situaciones donde se demanden cantidades extremas de recursos (número de transacciones simultáneas anormal, excesivo uso de las memorias, etc).</li>
+<li><strong>Pruebas de seguridad</strong> : se utilizan para testear el esquema de seguridad intentando vulnerar los métodos utilizados para el control de accesos no autorizados al sistema. Consisten en verificar los mecanismos de control de acceso al sistema para evitar alteraciones indebidas en los datos.</li>
+<li><strong>Pruebas de instalación</strong> : verifican que el sistema puede ser instalado satisfactoriamente en el equipo del cliente, incluyendo todas las plataformas y configuraciones de hardware necesarias.</li>
+<li><strong>Pruebas de compatibilidad</strong> : se prueba al sistema en las diferentes configuraciones de hardware o de red y de plataformas de software que debe soportar.</li>
+</ul>
+<p><strong>Pruebas de implantación</strong></p>
+<p>El objetivo de las pruebas de implantación es comprobar el funcionamiento correcto del sistema integrado de hardware y software en el entorno de operación, y permitir al usuario que, desde el punto de vista de operación, realice la aceptación del sistema una vez instalado en su entorno real y en base al cumplimiento de los requisitos no funcionales especificados.</p>
+<p>Una vez que hayan sido realizadas las pruebas del sistema en el entorno de desarrollo, se llevan a cabo las verificaciones necesarias para asegurar que el sistema funcionará correctamente en el entorno de operación. Debe comprobarse que responde satisfactoriamente a los requisitos de rendimiento, seguridad, operación y coexistencia con el resto de los sistemas de la instalación para conseguir la aceptación del usuario de operación.</p>
+<p>Las pruebas de <strong>seguridad</strong> van dirigidas a verificar que los mecanismos de protección incorporados al sistema cumplen su objetivo; las de <strong>rendimiento</strong> a asegurar que el sistema responde satisfactoriamente en los márgenes establecidos en cuanto a tiempos de respuesta, de ejecución y de utilización de recursos, así como los volúmenes de espacio en disco y capacidad; por último con las pruebas de <strong>operación</strong> se comprueba que la planificación y control de trabajos del sistema se realiza de acuerdo a los procedimientos establecidos, considerando la gestión y control de las comunicaciones y asegurando la disponibilidad de los distintos recursos.</p>
+<p>Asimismo, también son llevadas a cabo las pruebas de <strong>gestión de copias de seguridad</strong> y recuperación, con el objetivo de verificar que el sistema no ve comprometido su funcionamiento al existir un control y seguimiento de los procedimientos de salvaguarda y de recuperación de la información, en caso de caídas en los servicios o en algunos de sus componentes. Para comprobar estos últimos, se provoca el fallo del sistema, verificando si la recuperación se lleva a cabo de forma apropiada. En el caso de realizarse de forma automática, se evalúa la inicialización, los mecanismos de recuperación del estado del sistema, los datos y todos aquellos recursos que se vean implicados.</p>
+<p>Las verificaciones de las pruebas de implantación y las pruebas del sistema tienen muchos puntos en común al compartir algunas de las fuentes para su diseño como pueden ser los casos para probar el rendimiento (pruebas de sobrecarga o <em>stress</em> ).</p>
+<p>El responsable de implantación junto al equipo de desarrollo determina las verificaciones necesarias para realizar las pruebas así como los criterios de aceptación del sistema. Estas pruebas las realiza el equipo de operación, integrado por los técnicos de sistemas y de operación que han recibido previamente la formación necesaria para llevarlas a cabo.</p>
+<p><strong>Pruebas de aceptación</strong></p>
+<p>El objetivo de las pruebas de aceptación es validar que un sistema cumple con el funcionamiento esperado y permitir al usuario de dicho sistema que determine su aceptación, desde el punto de vista de su funcionalidad y rendimiento.</p>
+<p>Las pruebas de aceptación, al igual que las de sistema, se realizan sobre el producto terminado e integrado; pero a diferencia de aquellas, están concebidas para que sea un usuario final quien detecte los posibles errores.</p>
+<p>Se clasifican en dos tipos:</p>
+<ul>
+<li>Pruebas Alfa.</li>
+<li>Pruebas Beta.</li>
+</ul>
+<p>Las <strong>pruebas Alfa</strong> se realizan por un cliente en un entorno controlado por el equipo de desarrollo. Para que tengan validez, se debe primero crear un ambiente con las mismas condiciones que se encontrarán en las instalaciones del cliente. Una vez logrado esto, se procede a realizar las pruebas y a documentar los resultados.</p>
+<p>Cuando el software sea la adaptación de una versión previa, deberán probarse también los procesos de transformación de datos y actualización de archivos de todo tipo.</p>
+<p>Las <strong>pruebas Beta</strong> se realizan en las instalaciones propias de los clientes. Para que tengan lugar, en primer término se deben distribuir copias del sistema para que cada cliente lo instale en sus oficinas, dependencias y/o sucursales, según sea el caso. Si se tratase de un número reducido de clientes el tema de la distribución de las copias no representa grandes dificultades, pero en el caso de productos de venta masiva, la elección de los <em>beta testers</em> debe realizarse con sumo cuidado. En el caso de las pruebas Beta ,cada usuario realizará sus propias pruebas y documentará los errores que encuentre, así como las sugerencias que crea conveniente realizar, para que el equipo de desarrollo tenga en cuenta al momento de analizar las posibles modificaciones.</p>
+<p>Cuando el sistema tenga un cliente individual, las pruebas de aceptación se hacen de común acuerdo con éste, y los usuarios se determinan en forma programada, así como también se definen los aspectos a probar y la forma de informar resultados. Cuando, en cambio, se está desarrollando un producto masivo, los usuarios para pruebas de determinan de formas menos estrictas, y hay que ser muy cuidado en la evaluación del <em>feedback</em> que proveen. Por lo tanto, en este segundo caso hay que dedicar un esfuerzo considerable a la planificación de las pruebas de aceptación.</p>
+<p><strong>Pruebas de regresión</strong></p>
+<p>El objetivo de las pruebas de regresión es eliminar el efecto onda, es decir, comprobar que los cambios sobre un componente de un sistema de información, no introducen un comportamiento no deseado o errores adicionales en otros componentes no modificados.</p>
+<p>Las pruebas de regresión se deben llevar a cabo cada vez que se hace un cambio en el sistema, tanto para corregir un error como para realizar una mejora. No es suficiente probar sólo los componentes modificados o añadidos, o las funciones que en ellos se realizan, sino que también es necesario controlar que las modificaciones no produzcan efectos negativos sobre el mismo u otros componentes.</p>
+<p>Normalmente, este tipo de pruebas implica la repetición de las pruebas que ya se han realizado previamente, con el fin de asegurar que no se introducen errores que puedan comprometer el funcionamiento de otros componentes que no han sido modificados y confirmar que el sistema funciona correctamente una vez realizados los cambios.</p>
+<p>Las pruebas de regresión pueden incluir:</p>
+<ul>
+<li>La repetición de los casos de pruebas que se han realizado anteriormente y están directamente relacionados con la parte del sistema modificada.</li>
+<li>La revisión de los procedimientos manuales preparados antes del cambio, para asegurar que permanecen correctamente.</li>
+<li>La obtención impresa del diccionario de datos de forma que se comprueba que los elementos de datos que han sufrido algún cambio son correctos.</li>
+</ul>
+<p>El responsable de realizar las pruebas de regresión será el equipo de desarrollo junto al técnico de mantenimiento, quien a su vez, será responsable de especificar el plan de pruebas de regresión y de evaluar los resultados de dichas pruebas.</p>
+<h3 id="Relacion-ante-los-resultados-de-las-pruebas"><a href="#Relacion-ante-los-resultados-de-las-pruebas" class="headerlink" title="Relación ante los resultados de las pruebas"></a>Relación ante los resultados de las pruebas</h3><p>Las pruebas nos llevan a descubrir errores, que en la mayoría de los casos son de tipo funcional, es decir, del tipo: “el sistema debería hacer tal cosa y hace tal otra”.</p>
+<p>En este apartado analizaremos nada más que los pasos a seguir cuando el error sólo es atribuible a la codificación.</p>
+<p><strong>Depuración</strong></p>
+<p>La depuración es la corrección de errores que sólo afectan a la programación, porque no provienen de errores previos en el análisis o en el diseño. A veces la depuración se hace luego de la entrega del sistema al cliente y es parte del mantenimiento.</p>
+<p>En realidad, en las revisiones de código y las pruebas unitarias, encontrar un error es considerablemente más sencillo, ya que se hace con el código a mano. Aun cuando se hubiera optado por una prueba unitaria de caja negra,es sencillo recorrer el módulo que revela un comportamiento erróneo por dentro para determinar el lugar exacto del error. Existen incluso herramientas de depuración ( <em>debugging</em> ) de los propios ambientes de desarrollo que facilitan esta tarea, que incluso proveen recorrido paso a paso y examen de valores de datos. Y el lenguaje C traía una macro <em>assert</em> portable, que sencillamente abortaba un programa si una condición no se cumplía.</p>
+<p>De todas maneras, es importante analizar correctamente si el error está donde parece estar o proviene de una falla oculta más atrás en el código. Para encontrar estos casos más complejos son útiles las herramientas de recorrida hacia atrás, que permiten partir del lugar donde se genera el error y recorrer paso a paso el programa en sentido inverso.</p>
+<p>Las pruebas de integración, de sistema y de aceptación también pueden llevar a que sea necesaria una depuración, aunque aquí es más difícil encontrar el lugar exacto del error. Por eso a menudo se utilizan <em>bitácoras</em> ( <em>logs</em> ), que nos permiten evaluar las condiciones que se fueron dando antes de un error mediante el análisis de un historial de uso del sistema que queda registrado en medios de almacenamiento permanente.</p>
+<p>La depuración se hace en cuatro pasos:</p>
+<ul>
+<li>Reproducir el error.</li>
+<li>Diagnosticar la causa.</li>
+<li>Corregirla.</li>
+<li>Verificar la corrección.</li>
+</ul>
+<p>Si el error no se repite al intentar reproducirlo es muy difícil hacer el diagnóstico. Como en casi todas las ciencias, se buscan causas y efectos, condiciones necesarias y suficientes para que se produzca el error. Luego hay que buscar el sector del código donde se produce el error, lo que nos lleva a las consideraciones hechas recientemente. La corrección del error entraña mucho riesgo, porque a menudo se introducen nuevos errores (hay quienes hablan de tasas de 0,2 a 0,5 nuevos errores por corrección). Y nunca hay que olvidarse de realizar una nueva verificación después de la corrección.</p>
+<p><strong>Reacción ante los errores en las pruebas de sistema y de aceptación</strong></p>
+<p>Hemos dicho ya que los errores que aparezcan en estos tipos de prueba van a llevar a la larga a una depuración, en la medida en que sean errores de codificación.</p>
+<p>Para llegar a ello, no obstante, se requiere determinar el módulo donde se produjo el error. Esta tarea, en apariencia dificultosa, puede facilitarse considerablemente si trabajamos con un entorno de desarrollo que nos permita recorrer el código en modo de depuración sin necesidad de entrar en todos los módulos.</p>
+<h2 id="Revision-Formal"><a href="#Revision-Formal" class="headerlink" title="Revisión Formal"></a>Revisión Formal</h2><p>El objetivo de la revisión formal es detectar y registrar los defectos de un producto intermedio verificando que satisface sus especificaciones y que se ajusta a los estándares establecidos, señalando las posibles desviaciones.</p>
+<p>Es un proceso de revisión riguroso en el que hay poca flexibilidad a la hora de llevarlo a cabo debido a que su objetivo es llegar a detectar lo antes posible, los posibles defectos o desviaciones en los productos que se van generando a lo largo del desarrollo. Esta característica fuerza a que se adopte esta práctica únicamente para productos que son de especial importancia, porque de otro modo podría frenar la marcha del proyecto.</p>
+<p>En este proceso intervienen varias personas del grupo de aseguramiento de calidad, el equipo de desarrollo y según el tipo de revisión formal puede participar también el usuario.</p>
+<p>El responsable del grupo de aseguramiento de calidad una vez que conoce los productos que se van a revisar formalmente, establece los grupos funcionales que van a llevar a cabo las revisiones, convocando a los participantes por adelantado, e informando del objetivo de la revisión, la agenda y las responsabilidades que tendrán asignadas en la revisión.</p>
+<p>Es importante que en el transcurso de la revisión se sigan las directrices que estableció el responsable del grupo de aseguramiento de calidad, con el fin de que sea productiva y no se pierda tiempo en discusiones o ataques al responsable del producto.</p>
+<p>Se concluye determinando las áreas de problemas y elaborando un informe de revisión formal y una lista de acciones correctivas que posee un carácter formal y vinculante.</p>
+<h2 id="Revision-Tecnica"><a href="#Revision-Tecnica" class="headerlink" title="Revisión Técnica"></a>Revisión Técnica</h2><p>El objetivo de la revisión técnica es evaluar un producto intermedio del desarrollo para comprobar que se ajusta a sus especificaciones y que se está elaborando de acuerdo a las normas, estándares y guías aplicables al proyecto.</p>
+<p>Con el fin de asegurar la calidad en el producto final del desarrollo, se deben llevar a cabo revisiones semiformales sobre los productos intermedios durante todo el ciclo de vida del software. Para ello, se fijan los objetivos de la revisión, la agenda que se podrá ir ajustando a lo largo del proyecto y el tipo de informe que se elaborará después de las revisiones.</p>
+<p>Los participantes en una revisión técnica son el jefe de proyecto y el responsable del grupo de aseguramiento de calidad que, de forma conjunta, revisarán el producto que corresponda en cada momento.</p>
+<p>Una vez fijado sobre qué productos intermedios se llevarán a cabo las revisiones, el responsable de aseguramiento de calidad recoge la información necesaria de cada producto para poder establecer los criterios de revisión y más adelante, evaluar si el producto cumple las especificaciones, es decir, si se ha elaborado de acuerdo a unas características concretas como pueden ser la aplicación de una técnica específica, la inclusión de algún tipo de información, etc. Además, se debe contar con la normativa y estándares aplicables al proyecto de forma que, no sólo se asegure que el producto cumpla sus especificaciones, sino también del modo adecuado.</p>
+<p>Si se detecta alguna desviación en cuanto a sus especificaciones o a los estándares aplicados, y se considera que es necesario realizar alguna modificación, el responsable del grupo de aseguramiento de calidad elabora un informe con el que el jefe de proyecto tomará las medidas que estime convenientes. Con dichos informes de calidad, el jefe de proyecto irá confeccionando el dossier de aseguramiento de calidad, que formará parte de la documentación del proyecto al finalizar el desarrollo.</p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="http://materias.fi.uba.ar/7507/content/20101/lecturas/documentacion_pruebas.pdf" rel="external nofollow noopener noreferrer" target="_blank">UBA (Universidad de Buenos Aires)</a></li>
+<li><a href="https://administracionelectronica.gob.es/pae_Home/pae_Documentacion/pae_Metodolog/pae_Metrica_v3.html" rel="external nofollow noopener noreferrer" target="_blank">PAe (Métrica 3)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B3/b3-t01/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B3-T01
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t03/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T03</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

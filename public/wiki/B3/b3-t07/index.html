@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B3-T07 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B3-T07">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Diseño de bases de datos.La arquitectura ANSI/SPARC. El modelo lógico relacional. Normalización. Diseño lógico. Diseño físico. Problemas de concurrencia de acceso. Mecanismos de resolución de conflict">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-T07">
+<meta property="og:url" content="http://localhost:4000/wiki/B3/b3-t07/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Diseño de bases de datos.La arquitectura ANSI/SPARC. El modelo lógico relacional. Normalización. Diseño lógico. Diseño físico. Problemas de concurrencia de acceso. Mecanismos de resolución de conflict">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/entidad_er.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/interrelacic3b3n.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/relacion_isa.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/criterio_organizacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/gestor_transacciones.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/actualizacion_perdida.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/lectura_sucia.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/lectura_fantasma.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/bloqueos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/evolucion_numero_bloqueos.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:13:19.742Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-T07">
+<meta name="twitter:description" content="Diseño de bases de datos.La arquitectura ANSI/SPARC. El modelo lógico relacional. Normalización. Diseño lógico. Diseño físico. Problemas de concurrencia de acceso. Mecanismos de resolución de conflict">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/entidad_er.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file active"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B3/b3-t07" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B3/">B3</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B3/b3-t07/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B3/b3-t07.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B3/b3-t07.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B3/b3-t07.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B3-T07
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Diseno-de-bases-de-datos-La-arquitectura-ANSI-SPARC-El-modelo-logico-relacional-Normalizacion-Diseno-logico-Diseno-fisico-Problemas-de-concurrencia-de-acceso-Mecanismos-de-resolucion-de-conflictos"><a href="#Diseno-de-bases-de-datos-La-arquitectura-ANSI-SPARC-El-modelo-logico-relacional-Normalizacion-Diseno-logico-Diseno-fisico-Problemas-de-concurrencia-de-acceso-Mecanismos-de-resolucion-de-conflictos" class="headerlink" title="Diseño de bases de datos.La arquitectura ANSI/SPARC. El modelo lógico relacional. Normalización. Diseño lógico. Diseño físico. Problemas de concurrencia de acceso. Mecanismos de resolución de conflictos."></a>Diseño de bases de datos.La arquitectura ANSI/SPARC. El modelo lógico relacional. Normalización. Diseño lógico. Diseño físico. Problemas de concurrencia de acceso. Mecanismos de resolución de conflictos.</h1><h2 id="Introduccion"><a href="#Introduccion" class="headerlink" title="Introducción"></a>Introducción</h2><p>El diseño lógico es la etapa del proceso de diseño de una BD en la que se obtiene la representación de la estructura de la BD en términos de almacenamiento (tablas). La obtención de esta estructura implica la aplicación de unas reglas de transformación de los elementos previamente existentes en el modelo conceptual de la BD, reglas que se van a describir en este tema.</p>
+<p>Por su parte, el diseño físico es la etapa que incluye las acciones de configuración y ajuste del almacenamiento físico y de la seguridad de la BD. El diseño físico es una tarea compleja y dependiente del SGBD utilizados y del uso concreto que se pretenda hacer de la BD diseñada, por lo que en este tema se van a describir la problemática general que se aborda en esta etapa y los criterios de toma de decisiones en esas etapas para resolver un problema.</p>
+<p>Finalmente, el tema describirá la necesidad del uso concurrente de las BD y los conflictos que ese uso plantea, así como los mecanismos que los SGBD utilizan para resolverlos.</p>
+<h2 id="Diseno-Logico"><a href="#Diseno-Logico" class="headerlink" title="Diseño Lógico"></a>Diseño Lógico</h2><p>El diseño lógico es la etapa de creación de la BD en la que se va a traducir el modelo conceptual obtenido en la etapa de diseño conceptual en modelo lógico y un esquema lógico expresado de un modo comprensible para un SGBD. Si consideramos que el SGBD es relacional, es esquema lógico estará expresado en tablas y columnas (o relaciones y atributos).</p>
+<p>El diseño lógico se puede dividir en dos etapas:</p>
+<ul>
+<li><strong>Diseño lógico estándar</strong> : En esta etapa se obtiene un modelo lógico estándar y un esquema lógico estándar, independientes del SGBD comercial en el que se vaya a implementar la BD. El modelo lógico estándar puede expresarse empleando varias técnicas, entre las que cabe citar el Diagrama de Estructura de Datos (DED) y el modelo relacional. El esquema lógico estándar se obtiene utilizando un Lenguaje de Definición de Datos (DDL) estándar, habitualmente el SQL-92 (que es el estándar ISO).</li>
+<li><strong>Diseño lógico específico</strong> : Utilizando el esquema lógico estándar que se ha obtenido, se estudia su implementación en un SGBD comercial (Oracle, DB2, Sybase, etc). Para ello, habrá de analizarse la compatibilidad del modelo lógico estándr con el modelo lógico específico del SGBD elegido, y proponer un modo de solucionar aquellos aspectos del modelo lógico estándar que no recoge el modelo lógico específico. Una vez realizada esa tarea, se obtiene un esquema lógico específico usando el Lenguaje de Definición de Datos propio del SGBD (normalmente, será un lenguaje SQL con algunas peculiaridades propias de cada SGBD). A la etapa del diseño lógico específico también se la conoce como etapa de implementación de la BD.</li>
+</ul>
+<h3 id="Diseno-logico-estandar"><a href="#Diseno-logico-estandar" class="headerlink" title="Diseño lógico estándar"></a>Diseño lógico estándar</h3><p>Tal y como se ha comentado en el punto anterior, el diseño lógico estándar consiste en convertir el modelo conceptual de BD en un esquema lógico estándar, independiente del SGBD que se vaya a utilizar. El esquema lógico estándar será la expresión del modelo lógico estándar utilizando un Lenguaje de Definición de Datos independiente del SGBD (SQL habitualmente).</p>
+<p>Las técnicas de modelado conceptual son diferentes de las técnicas de modelado lógico, por lo que habrá que convertir cada elemento presente en el modelo conceptual en elementos expresables en la técnica de modelado lógico que hayamos seleccionado.</p>
+<p>En las BD relacionales, es habitual usar el modelo E/R para el modelado conceptual y el modelo relacional para el modelado lógico. En este apartado vamos a estudiar la conversión de los elementos del E/R al modelo relacional.</p>
+<p><strong>Transformación de dominios</strong></p>
+<p>Un dominio del modelo E/R se transforma en un dominio en el modelo relacional utilizando la sentencia SQL:</p>
+<p>CREATE DOMAIN</p>
+<p><strong>Transformación de entidades</strong></p>
+<p>Cada entidad del modelo E/R se transformará en una tabla (relación) en el modelo relacional. La tabla tendrá el mismo nombre que la entidad de la que proviene. Vemos un ejemplo a continuación y una entidad de un modelo E/R (conceptual).</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/entidad_er.png?w=825" alt=""></p>
+<p>Transformando la entidad al modelo relacional, obtendremos lo siguiente:</p>
+<p>EMPRESA (CIF, Nombre, Dirección)</p>
+<p>Para obtener el esquema lógico estándar, la tabla se definirá usando la sentencia SQL CREATE TABLE.</p>
+<p>CREATE TABLE EMPRESA (<br>     CIF         Código_CIF,<br>     Nombre      Nombres,<br>     Dirección   Direccines,<br>     PRIMARY KEY (CIF)<br>)</p>
+<p><strong>Transformación de atributos</strong></p>
+<p>Cada atributo de una entidad se transformará en una columna de la tabla (relación) del modelo relacional. Los atributos de las entidades pueden ser de cuatro tipos:</p>
+<ul>
+<li><strong>Identificadores</strong> : Se transforman en una columna que es la clave primaria de la tabla. En SQL, la condición de clave primaria se representará colocando la cláusula PRIMARY KEY al lado del nombre de la columna en la que se ha convertido el atributo (dentro de la sentencia CREATE TABLE con la que se crea la tabla en la que está incluida la columna).</li>
+<li><strong>Identificadores alternativos</strong> : Se transforman en una columna a la que se le añade la restricción UNIQUE, lo cual significa que no puede haber valores repetidos en esa columna.</li>
+<li><strong>Atributos no identificadores</strong> : Se transforman en una columna de la tabla.</li>
+<li><strong>Atributos multivaluados</strong> : En el modelo relacional una instancia de una relación sólo toma un valor para cada atributo. Por ello, será obligatorio crear una nueva tabla que contenga a la clave primaria de la tabla anterior y al atributo multivaluado, siendo la clave primaria de la nueva tabla la concatenación de los dos atributos y marcándose la clave primaria de la tabla anterior como clave foránea en la nueva tabla.</li>
+</ul>
+<p><strong>Transformación de interrelaciones</strong></p>
+<p>En el modelo relacional, la única unidad de modelado son las tablas, por lo que las interrelaciones del modelo E/R deben transformarse en tablas del modelo relacional (se produce una cierta pérdida de semántica).</p>
+<p>El modo de transformar las interrelaciones en tablas depende del tipo de interrelación considerada. Los tipos de transformaciones existentes son:</p>
+<p><strong>Transformación de interrelaciones N:M</strong></p>
+<p>Una interrelación N:M se va a convertir en una tabla del modelo relacional. La nueva tabla tendrá como columnas a la concatenación de los atributos identificadores de las entidades que estaban unidas por la interrelación.</p>
+<p>Una interrelación en el modelo E/R:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/interrelacic3b3n.png?w=825" alt=""></p>
+<p>EMPRESA (CIF, Dirección, …)<br>VENDE (CIF, Codigo_producto)<br>PRODUCTO (Codigo_producto, …)</p>
+<p>Si la interrelación tiene atributos en el modelo E/R, cada atributo de la interrelación pasará a ser una columna de la nueva tabla.</p>
+<p>Los atributos identificadores de las entidades unidas mediante la interrelación serán claves primarias en las tablas del modelo relacional que representen a sus entidades. Por tanto, esos mismos atributos serán considerados claves foráneas en la tabla que representa a la interrelación.</p>
+<p>La condición de calve ajena de una columna se expresará mediante la cláusula FOREIGN KEY en SQL.</p>
+<p>CREATE TABLE VENDE (<br>     CIF         Codigo_CIF,<br>     Producto    Codigo_Producto,<br>     …,<br>     PRIMARY KEY (Codigo_CIF, Codigo_Producto),<br>     FOREIGN KEY (Codigo_CIF) REFERENCES Empresa,<br>     FOREIGN KEY (Codigo_Producto) REFERENCES Producto<br>)</p>
+<p>Las cardinalidades mínimas de cada entidad participante en la interrelación se van a expresas en el esquema lógico estándar usando la sentencia de SQL.</p>
+<p>CREATE ASSERTION</p>
+<p><strong>Transformación de interrelaciones 1:N</strong></p>
+<p>Las relaciones 1:N se pueden transformar de dos maneras:</p>
+<ul>
+<li>No crear ninguna tabla que represente a la interrelación y añadir a la tabla que representa a la entidad con cardinalidad n el conjunto de atributos que son clave primaria de la entidad con cardinalidad 1. Este es el modo habitual de realizar la transformación.</li>
+<li>Convirtiendo la interrelación en una tabla, siendo la clave primaria de la tabla el conjunto de atributos identificadores del lado n de la relación. Esta opción se utiliza en los siguientes casos:<ul>
+<li>Cuando se cree que en un futuro la relación se va a transformar en una de tipo N:M (y por tanto, será necesario tener una tabla que represente a esa relación).</li>
+<li>Cuando la interrelación tiene atributos en el modelo relacional.</li>
+<li>Cuando la interrelación es optativa para las ocurrencias de las entidades situadas en el lado 1 de la relación (cardinalidad 0:1) y el porcentaje de ocurrencias interrelacionadas es bajo, lo cual va a significar que en las columnas absorbidas en la tabla n van a existir muchos valores nulos.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Transformación de interrelaciones 1:1</strong></p>
+<p>Se realizan del mismo modo que las interrelaciones 1:N, pero teniendo en cuenta que si se decide no crear una tabla que represente a la interrelación, la elección de la tabla a la que se le añaden los atributos del otro extremo es optativa, si bien se suele seguir el siguiente criterio:</p>
+<ul>
+<li>Si una de las dos entidades de la interrelación tiene cardinalidad (0,1) y la otra entidad tiene cardinalidad (1,1), entonces se propagan los atributos identificadores de la tabla (1,1) a la tabla (0,1), evitándose los valores nulos.</li>
+<li>Si las dos tablas tienen cardinalidad (1,1), se puede escoger cualquiera de los dos extremos para propagar la clave. En este caso, la elección puede depender de criterios como las frecuencias de acceso a las tablas.</li>
+<li>Si los dos extremos participan con una cardinalidad (0,1), crear una tabla que represente a la interrelación. El identificador de la tabla podrá ser el identificador de cualquiera de los dos extremos, y los atributos que sean clave primaria en uno de los dos extremos, serán clave foránea en la nueva tabla.</li>
+</ul>
+<p><strong>Transformación de interrelaciones con un grado superior a 2</strong></p>
+<p>El mecanismo de transformación es igual al de las tablas N:M, se crea una tabla que representa a la relación, y su clave primaria será la concatenación de los atributos identificadores de todas las entidades a las que interrelaciona (lógicamente, tres o más).</p>
+<p><strong>Transformación de interrelaciones de dependencia y existencia</strong></p>
+<p>El modelo relacional no distingue tipos de relaciones, por lo que las interrelaciones de dependencia y existencia se han de convertir en relaciones del mismo modo que las interrelaciones 1:N. Habitualmente, se propaga la clave de la tabla que representa a la entidad débil a la tabla que representa al entidad fuerte.</p>
+<p><strong>Transformación de restricciones de entidades o atributos</strong></p>
+<p>En el modelo E/R pueden estar expresadas restricciones de usuario. Estas restricciones se recogen en el esquema lógico estándar del siguiente modo:</p>
+<ul>
+<li>Si la restricción indica un rango de valores, se usa la cláusula BETWEEN.</li>
+<li>Si la restricción implica que un determinado atributo o conjunto de atributos sólo puede tomar un valor de entre los pertenecientes a una lista, se emplea la cláusula IN.</li>
+<li>Si la restricción es de otro tipo, se puede utilizar la sentencia CHECK para comprobar el cumplimiento de la condición fijada, o la sentencia CREATE ASSERTION si la restricción afecta a más de una tabla.</li>
+</ul>
+<p>CREATE TABLE Decreto<br>(<br>     Num_Decreto         Numeros_Decreto,<br>     Fecha_Aprobacion    Fecha,<br>     Fecha_Publicacion   Fecha,<br>     …,<br>     CHECK (Fecha_Aprobacion &lt; Fecha_Publicacion)<br>)</p>
+<p><strong>Transformación de dependencias de identificación y existencia</strong></p>
+<p>La transformación de estas dependencias se realizarán del mismo modo que el de las relaciones 1:M, es decir, no escribiendo ninguna relación que las represente y propagando la clave de la tabla que representa a la entidad fuerte de la tabla que representa a la entidad débil, en la cual jugará el papel de clave foránea.</p>
+<p>Para dicha clave foránea, no se admitirán los valores nulos, y se añadirá la condición de borrado y modificación en cascada (la eliminación o modificación de una ocurrencia de la entidad fuerte obligará a la eliminación o modificación de las ocurrencias de las entidades débiles que tiene asociadas).</p>
+<p>Si la dependencia es en identificación, entonces la clave primaria de la tabla que representa a la entidad débil se formará mediante la concatenación de la clave primaria de la entidad débil y de la clave propagada que proviene de la entidad fuerte.</p>
+<p><strong>Transformación de restricciones en las interrelaciones</strong></p>
+<p>Se utilizarán los mismos mecanismos que se han comentado para la transformación de restricciones de las entidades o de sus atributos (usando las condiciones CHECK o CREATE ASSERTION si la restricción afecta una interrelación o a varias).</p>
+<p><strong>Transformación de generalizaciones (Relaciones ISA)</strong></p>
+<p>Hay tres estrategias para llevar a cabo esta transformación:</p>
+<ul>
+<li>Transformar la entidad y sus subtipos en una sola tabla, la cual tendrá como atributos la concatenación de los atributos de la entidad y de los subtipos. En el ejemplo:</li>
+</ul>
+<p>EMPLEADO_PUBLICO (DNI, Nombre, Relacion_laboral, Inicio_contrato, Toma_posesion)</p>
+<ul>
+<li>Crear una tabla para la entidad generalizadora y una tabla por cada subtipo. Cada tabla tendrá como atributos los de su entidad o subtipo correspondiente. Ésta es la opción que mejor mantiene la semántica del modelo E/R. En el ejemplo:</li>
+</ul>
+<p>EMPLEADO_PUBLICO (DNI, Nombre)<br>INTERINO (DNI, Inicio_Contrato)<br>FUNCIONARIO (DNI, Toma_Posesion)</p>
+<ul>
+<li>Crear una tabla para cada subtipo. Cada tabla tendrá como columnas los atributos del subtipo al que representa y los atributos comunes (los que posee la entidad generalizadora). En el ejemplo:</li>
+</ul>
+<p>INTERINO (DNI, Nombre, Inicio_Contrato)<br>FUNCIONARIO (DNI, Nombre, Toma_Posesion)</p>
+<p>Mostramos la figura de una relación ISA en el modelo E/R:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/relacion_isa.png?w=825" alt=""></p>
+<p><strong>Transformación de la dimensión temporal</strong></p>
+<p>Se distinguen dos casos:</p>
+<ul>
+<li>Si la dimensión temporal aparece en el modelo E/R como una entidad, se transformará del mismo modo que el resto de las entidades.</li>
+<li>Si la dimensión temporal aparece en forma de atributos de una interrelación, estos atributos se ubicarán en la tabla que les corresponda al transformar la interrelación (bien en la tabla de la interrelación o bien en la tabla hacia la que se hayan propagado claves). Ahora bien, debe considerarse que estos atributos de tipo fecha pueden tener que formar parte de la clave primaria de la tabla en la que se ubiquen en función de la semántica de la situación que se representa.</li>
+</ul>
+<p><strong>Transformación de atributos derivados</strong></p>
+<p>Los atributos derivados se transformarán en columnas de la entidad a la que pertenezcan (como el resto de los atributos). Además, se establecerá un disparador o un procedimiento almacenado que calcule el valor del atributo cada vez que se inserta una nueva fila en la tabla o cada vez que se modifique en una fila el valor de alguno de los atributos a partir de los cuales se calcula el atributo derivado.</p>
+<p><strong>Normalización del esquema obtenido</strong></p>
+<p>Finalizada la transformación del esquema conceptual en un esquema lógico, debe aplicarse a dicho esquema lógico un proceso de normalización, evitándose así las anomalías de inserción, modificación y borrado que provoca la redundancia.</p>
+<h3 id="Diseno-logico-especifico"><a href="#Diseno-logico-especifico" class="headerlink" title="Diseño lógico específico"></a>Diseño lógico específico</h3><p>Partiendo del esquema lógico obtenido en el apartado anterior, se elabora un esquema adaptado al sistema gestor de BD que se va a utilizar, creándose las tablas del esquema utilizando el Lenguaje de Definición de Datos propio del cada sistema. En las BDR, el Lenguaje de Definición de Datos (LMD) es el SQL, si bien existen pequeñas variaciones entre el SQL usado en cada sistema, que normalmente incluye pequeñas modificaciones o extensiones del lenguaje SQL (que es el estándar ISO).</p>
+<p>En el paso del modelo lógico estándar al modelo lógico específico de cada SGBD puede encontrarse que el modelo lógico específico soporta todos los conceptos del modelo lógico estándar (del modelo relacional) o, por el contrario, que existen determinados aspectos del modelo lógico estándar que el modelo lógico específico no soporta. En este último caso, habrá que realizar un trabajo complementario de adaptación (bien añadiendo programación complementaria en el diccionario de datos del SGBD o bien haciendo que la puesta en práctica de esas restricciones no soportadas por el modelo lógico del SGBD, la lleve a cabo el código de los programas que utilicen los datos de la BD).</p>
+<p>Algunos de los aspectos del modelo lógico estándar que pueden tener que adaptarse son los siguientes:</p>
+<ul>
+<li><strong>Dominios</strong> : El DDL del SGBD puede no incluir ninguna sentencia que nos permita crear dominios (los únicos dominios que reconoce automáticamente son los asociados a los tipos de datos predefinidos en el propio SGBD). En este caso, habrá que elegir una de las dos opciones siguientes:<ul>
+<li>Cuando se especifique la columna (dentro de la sentencia CREATE TABLE), escoger el tipo de datos predefinido que mejor se ajuste, fijar la longitud y añadir alguna restricción CHECK.</li>
+<li>Crear una tabla de dominio, que contendrá una sola columna, y en la que cada fila será uno de los valores posibles del dominio. Una vez creada esta tabla, crear un procedimiento almacenado que comprueba que los valores que se intentan insertar en la columna son compatibles con el dominio que queremos establecer. La tabla de dominio será estática, es decir, sólo podrá ser modificada por el administrador de la BD. Lógicamente, la opción de construir una tabla de dominio sólo será validad si el dominio a construir es finito.</li>
+</ul>
+</li>
+<li><strong>Clave Primaria</strong> : Si el SGBD no incluye una cláusula PRIMARY KEY, debe conservarse la semántica dando los siguientes pasos:<ul>
+<li>Añadir la restricción NOT NULL en los atributos que formen parte de la clave primaria (debe recordarse que una clave primaria no admite valores nulos).</li>
+<li>Añadir la restricción UNIQUE al conjunto de atributos de la clave primaria (ya que una clave primaria no admite valores repetidos).</li>
+<li>Añadir a la tabla un índice construido sobre las columnas que forman parte de la clave primaria. Este índice se debe crear al crear la tabla y se debe destruir cuando la tabla sea eliminada.</li>
+<li>Documentar el esquema con un comentario que indique cuál es la clave primaria.</li>
+</ul>
+</li>
+<li><strong>Clave ajena</strong> : Si el SGBD no incluye una cláusula FOREIGN KEY, debe conservarse la semántica dando los siguientes pasos:<ul>
+<li>Añadir la restricción NOT NULL en los atributos de la clave ajena que no admitan nulos (cuando la cardinalidad mínima de la interrelación original fuera de al menos uno).</li>
+<li>Hacer que los programas que trabajen con la BD implementen las restricciones de clave ajena (integridad referencial).</li>
+<li>Documentar el esquema con un comentario que indique que una columna o conjunto de columnas son clave ajena.</li>
+</ul>
+</li>
+</ul>
+<p>El resto de los aspectos del modelo lógico estándar no recogidos por el modelo lógico específico del SGBD suelen modelarse empleando procedimientos almacenados o triggers.</p>
+<p>Finalizada la etapa del diseño lógico específico, habremos creado un esquema lógico específico en el SGBD. Esto quiere decir que ya tendremos una BD operativa en la que se podrán insertar, eliminar o modificar datos y sobre la cual podremos realizar consultas.</p>
+<h2 id="Diseno-Fisico"><a href="#Diseno-Fisico" class="headerlink" title="Diseño Físico"></a>Diseño Físico</h2><p>El diseño físico es la última etapa del proceso de creación de una BD. El objetivo de esta fase es obtener un esquema interno de la BD que cumpla lo mejor posible los objetivos de funcionamiento de la BD que los usuarios esperan. Más concretamente, se trata de:</p>
+<ul>
+<li>Disminuir el tiempo de respuesta de la BD (tanto el tiempo medio como la respuesta ante los picos de carga)</li>
+<li>Disminuir el espacio de almacenamiento utilizado</li>
+<li>Incrementar la Seguridad de la BD</li>
+</ul>
+<p>Estos objetivos del diseño físico no siempre son compatibles entre sí. Por ejemplo, para reducir el tiempo de respuesta de las consultas a una BD, puede ser necesario incrementar la redundancia de los datos (tener los mismos datos almacenados en varias tablas a la vez). Obviamente, esto incrementará el espacio de almacenamiento utilizado. Un buen diseño físico debe tener en cuenta para cada BD las necesidades de uso, establecer unos objetivos concretos, y, cuando estos objetivos sean contradictorios, priorizarlos y alcanzar un nivel de compromiso aceptable entre ellos.</p>
+<p>Para llevar a cabo esta etapa, es preciso contar con información precisa sobre muchos aspectos de la BD que se va a crear y de la plataforma en la que se va a trabajar. El diseño físico comienza a realizarse cuando se ha recopilado información suficiente sobre:</p>
+<ul>
+<li>Los recursos software de los que se dispone</li>
+<li>Los recursos hardware de los que se dispone</li>
+<li>El esquema lógico específico de la BD</li>
+<li>Políticas de seguridad de los datos</li>
+<li>Estudio detallado de las aplicaciones que va a utilizar la BD y de las transacciones que van a generar.</li>
+</ul>
+<p>El nivel físico de las BD no está estandarizado, por lo que la realización del diseño físico es dependiente del SGBD que se esté utilizando. Cada SGBD relacional definirá su propia estructura de archivos, índices, buffers de memoria, roles de seguridad y objetos de gestión del nivel físico, manipulándose este nivel a través de una extensión del lenguaje SQL estándar específica de cada sistema gestor.</p>
+<p>De los dicho en los párrafos anteriores se pueden extraer las siguientes conclusiones:</p>
+<p>Al contrario que en el diseño lógico general, el enfoque del diseño físico no puede ser formal, sino casuístico, adaptado a cada SGBD y a cada BD utilizados. No hay recetas universalmente válidas, sino “buenas ideas” (heurísticas) asentadas en conceptos de almacenamiento, arquitectura de computadores, redes o algoritmia. Al no haber una estandarización del nivel físico, esas ideas deben ser puestas en práctica en cada caso concreto, probadas, evaluadas y, si es necesario, refinadas hasta alcanzar la situación final deseada. A este proceso de mejora del diseño físico se le conoce como ajuste de la BD o tunning.</p>
+<p>Por último, es preciso comentar que no todos los SGBD tienen el mismo grado de flexibilidad en su nivel físico. En función del grado de manejo que permitan para el diseño físico, podemos distinguir tres tipos de SGBD:</p>
+<ul>
+<li><strong>Rígidos</strong> : El SGBD fija una estructura interna que apenas admite configuración. Esto asegura la independencia físico/lógica de la BD, pero es poco adaptable a cada situación concreta, lo que puede suponer una pérdida de eficiencia.</li>
+<li><strong>Flexibles</strong> : El SGBD permite que sea el Administrador de BD el que diseñe toda la estructura interna. El diseño de toda la estructura interna es un trabajo extenso y complejo, y la toma de decisiones del administrador puede afectar a la independencia físico/lógica de los datos. Sin embargo, también es el enfoque más adaptable a cada necesidad concreta, con lo que es la alternativa con la que se podría obtener un mayor grado de eficiencia en el uso de la BD.</li>
+<li><strong>Semiflexibles</strong> : El SGBD proporciona una estructura inicial configurable a través de un conjunto de parámetros. La modificación de estos parámetros por parte del Administrador de BD permite ir mejorando esa estructura interna, y por ende, el rendimiento de la BD. Ésta opción ofrece un buen compromiso entre eficiencia e independencia físico/lógica, siendo habitual en los SGBD.</li>
+</ul>
+<h3 id="Metodologia-de-trabajo-para-la-obtencion-del-diseno-fisico"><a href="#Metodologia-de-trabajo-para-la-obtencion-del-diseno-fisico" class="headerlink" title="Metodología de trabajo para la obtención del diseño físico"></a>Metodología de trabajo para la obtención del diseño físico</h3><p>Podemos dividir la etapa del diseño físico en tres fases:</p>
+<ul>
+<li>Diseño de la representación física.<ul>
+<li>Análisis de las transacciones.</li>
+<li>Selección del modo de almacenamiento en memoria secundaria.</li>
+<li>Creación de índices secundarios.</li>
+<li>Realización de Agrupamientos de tablas.</li>
+<li>Realización de procesos de desnormalización.</li>
+<li>Estimación de la necesidad de espacio en disco.</li>
+</ul>
+</li>
+<li>Diseñar los mecanismos de seguridad.<ul>
+<li>Diseñar las vistas de los usuarios.</li>
+<li>Diseñar las reglas de acceso.</li>
+</ul>
+</li>
+<li>Monitorizar y ajustar el sistema.</li>
+</ul>
+<p><strong>Análisis de las transacciones</strong></p>
+<p>Para realizar un buen diseño físico es necesario conocer las consultas y las transacciones que se van a ejecutar sobre la BD. Esto incluye tanto información cualitativa, como cuantitativa. Para cada transacción, hay que especificar:</p>
+<ul>
+<li>La frecuencia con que se va a ejecutar.</li>
+<li>Las relaciones y los atributos a los que accede la transacción, y el tipo de acceso: consulta, inserción, modificación o eliminación. Los atributos que se modifican no son buenos candidatos para construir estructuras de acero.</li>
+<li>Los atributos que se utilizan en los predicados WHERE de las sentencias SQL. Estos atributos pueden ser candidatos para construir estructuras de acceso dependiendo del tipo de predicado que se utilice.</li>
+<li>Si es una consulta, los atributos involucrados en el join de dos o más relaciones. Estos atributos pueden ser candidatos para construir estructuras de acceso.</li>
+<li>Las restricciones temporales impuestas sobre la transacción. Los atributos utilizados en los predicados de la transacción pueden ser candidatos para construir estructuras de acceso.</li>
+</ul>
+<p><strong>Selección de la organización del almacenamiento en memoria secundaria</strong></p>
+<p>Las BD van a almacenar la información en dispositivos de almacenamiento secundarios (discos o cintas), los cuales se caracterizan por tener mayor capacidad que la memoria principal y por la no volatilidad de los datos. Sin embargo, son mucho más lentos que la memoria principal a la hora de recuperar información, por lo que es preciso realizar un estudio detallado sobre el modo de organizar la información en ellos, de modo que consigamos un rendimiento en tiempo de acceso ajustado a cada necesidad de uso de la BD.</p>
+<p>Las alternativas de organización consisten básicamente en la elección del tipo de fichero o estructura de datos más adecuado para cada caso. En este apartado nos limitaremos a estudiar las ventajas y las desventajas de las más habituales, pero sin entrar en una descripción detallada de esas estructuras.</p>
+<p><strong>Ficheros secuenciales</strong></p>
+<p>Organizados de tal manera que cada registro es adyacente al siguiente registro. Esta relación de adyacencia puede ser física (direcciones físicas consecutivas) o lógica (haciendo que cada registro contenga un puntero al siguiente registro).</p>
+<p>Los ficheros secuenciales no permiten el acceso directo a los datos, por lo que el acceso a los registros se realiza en el mismo orden en el que fueron introducidos en el fichero.</p>
+<p><strong>Ficheros secuenciales indexados ISAM</strong></p>
+<p>Es una estructura de fichero indexado en el que los registros se agrupan en bloques, y en el interior de dichos bloques están organizados secuencialmente.</p>
+<p>El índice que se crea sobre el fichero contiene apuntadores a las direcciones de inicio de cada bloque, y el acceso a datos a través del índice se realiza de la siguiente manera:</p>
+<ol>
+<li>Se localiza el índice de la clave que cumpla la condición de búsqueda.</li>
+<li>Se accede al bloque apuntado por el nodo que contenía a la clave anterior.</li>
+<li>Una vez dentro del bloque, el registro deseado se busca secuencialmente.</li>
+</ol>
+<p>La organización de ficheros ISAM mantiene el equilibrio entre el tamaño de los índices y el tiempo de acceso a los registros.</p>
+<p>Como el tamaño de los bloques está limitado, en estos ficheros hay una zona de desbordamiento en que se van a almacenar los registros que no se pueden guardar en el bloque que les corresponde cuando éste ya está lleno.</p>
+<p>El uso de la zona de desbordamiento disminuye el rendimiento del sistema, puesto que se accede a ella tras buscar al registro en el bloque en el que le correspondería estar, y porque la búsqueda en la zona de desbordamiento es secuencial. Cuando el área de desbordamiento es muy grande, se reorganiza el fichero, realizándose una nueva división de bloques, ubicando a todos los registros en los bloques y reorganizando el índice de apuntadores a bloques.</p>
+<p><strong>Árboles-B</strong></p>
+<p>Estructura de indexación en forma de árbol equilibrado. El hecho de ser equilibrados (misma altura en todas sus ramas) permite minimizar el número de accesos a disco cuando se realiza una búsqueda: las búsquedas rápidas son una característica que distingue a los árboles-B.</p>
+<p>En cuanto al almacenamiento, los árboles-B consiguen una gestión del espacio razonablemente buena, ya que si el árbol es de orden n, cada nodo debe tener al menos n/2 claves (es decir, como mucho se desaprovecha la mitad del espacio de almacenamiento del índice, lo cual es fácilmente asumible con los recursos de almacenamiento de que se dispone hoy en día).</p>
+<p><strong>Ficheros de acceso aleatorio empleando técnicas de Hashing</strong></p>
+<p>En estos ficheros se accede directamente a los registros mediante el valor de su clave (siendo la clave uno o más de los campos del registro). Para ello, se dispone de una función “hash” o de mapeado que permite calcular la dirección del registro a partir del valor de la clave. Este sistema es el que más rápido permite realizar una búsqueda de un registro concreto, pero sólo funciona para resolver consultas exactas (con todo el valor de la clave). Si la búsqueda es por rango o por patrón (por ejemplo, LIKE ‘%a’), no se puede aplicar la función hash.</p>
+<p><strong>Criterios de elección entre las estructuras</strong></p>
+<p>La elección de una estructura de organización dependerá del uso que se realice de los datos almacenados. La siguiente table recoge las situaciones en las que se suele preferir cada estructura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/criterio_organizacion.png?w=825" alt=""></p>
+<p>La elección entre un fichero ISAM y un árbol-B se realiza considerando los siguientes factores:</p>
+<ul>
+<li>Frecuencia de las actualizaciones de los datos: Si la frecuencia de las actualizaciones es alta, debe elegirse un árbol-B, ya que los ficheros ISAM se irán degradando al irse añadiendo registros a la zona de desbordamiento.</li>
+<li>Elevado número de consultas recurrentes: Si se realizan muchas consultas simultáneas sobre los datos indexados, el fichero ISAM debe ser la estructura elegida, ya que al ser su índice estático, no se bloquea (facilita el acceso concurrente).</li>
+<li>Si se deben tener en cuenta los dos factores o no se conoce bien el entorno de explotación de la BD (existen dudas sobre el número de usuarios, la frecuencia de acceso a datos, etc), la estructura elegida será el árbol-B, ya que es la más adaptable de las dos y sus aspectos desfavorables respecto a los ficheros ISAM tienen poca repercusión en el funcionamiento del sistema.</li>
+</ul>
+<p><strong>Creación de los índices secundarios</strong></p>
+<p>Las BD relacionales indexan a cada tabla por su clave primaria, creándose automáticamente el índice de clave primaria en el mismo momento en el que se crea la tabla. Sin embargo, es frecuente añadir índices adicionales a las tablas, para que hagan más rápidas las consultas que se realizan sobre determinados campos de esas tablas.</p>
+<p>La introducción de un índice secundario en una tabla repercute negativamente en los tiempos de ejecución de la inserción o eliminación de registros, y supone un incremento del espacio de almacenamiento necesario para la tabla. El administrador de BD debe ponderar en cada caso las pérdidas y ganancias de introducción de un nuevo índice, para así determinar si su creación es interesante. Algunas situaciones que hacen interesante la indexación son:</p>
+<ul>
+<li>Atributos de la relación a los que se accede con mucha frecuencia.</li>
+<li>Claves foráneas de la relación sobre las que es habitual realizar joins.</li>
+</ul>
+<p>Algunas situaciones que desaconsejan la introducción de índices secundarios son:</p>
+<ul>
+<li>Tablas con pocas filas: el recorrido secuencial de las tablas sería muy breve, y la reducción del tiempo de acceso obtenida de la introducción del índice es muy escasa.</li>
+<li>Atributos cuyo valor se modifica muy a menudo: Los índices utilizan como clave de búsqueda los valores de los atributos indexados. Si la modificación de esos valores es muy frecuente, habrá que reconstruir el índice cada poco tiempo, lo cual puede suponer un coste elevado si la tabla tiene muchas filas.</li>
+<li>Atributos con valores poco selectivos: Los atributos en los que es muy habitual la repetición de su valor en distintas filas de la tabla no son buenos candidatos para la indexación. Después de recorrer el índice y localizar su clave de búsqueda, tendríamos todavía muchos registros con el mismo valor de clave, y habría que recorrer secuencialmente esos registros para encontrar el que se busca; en este caso, la introducción del índice no supondría ningún beneficio importante desde el punto de vista del tiempo de acceso. Por ejemplo, si tenemos una tabla de personas y deseamos buscar una persona en concreto, no tiene sentido indexar por un campo ‘Sexo’, ya que aproximadamente la mitad de los registros de la tabla tendrían el valor ‘hombre’ y la otra mitad el valor ‘mujer’.</li>
+</ul>
+<p><strong>Realización de agrupamientos de tablas (clustering)</strong></p>
+<p>El clustering o agrupación de tablas es una técnica consistente en almacenar un grupo de tablas en una misma área de memoria secundaria. De este modo, los accesos simultáneos a las tablas agrupadas no obligan al SGBD a la búsqueda de los datos en zonas lejanas del almacenamiento secundario, lo que reduce el tiempo de resolución de esos accesos.</p>
+<p>El clustering será una técnica a considerar si esos accesos simultáneos son frecuentes.</p>
+<p><strong>Realización de procesos de desnormalización</strong></p>
+<p>El proceso de desnormalización consiste en introducir redundancias en un esquema lógico previamente normalizado (típicamente en 3FN o en FN de Boyce-Codd). Aunque ésta es una decisión de nivel lógico, se suele tomar por motivos de eficiencia de la BD (repetir datos en varias tablas evita navegar entre ellas para encontrarlos), es decir, la decisión viene motivada por cuestiones de implementación.</p>
+<p>La desnormalización ralentiza las actualizaciones de datos, hace perder flexibilidad al esquema lógico (puede afectarnos si decidimos añadir nuevas tablas, por ejemplo) y complica la implementación de la BD y su documentación. Por tanto, es una alternativa que sólo se debe utilizar cuando el resto de las técnicas de diseño físico no nos proporcionan un rendimiento de las consultas de la BD que sea aceptable.</p>
+<p>Entre las acciones de desnormalización que se pueden realizar, se pueden destacar:</p>
+<ul>
+<li>Introducir atributos derivados: Los atributos derivados son aquellos cuyo valor se puede obtener realizando un conjunto de operaciones sobre atributos ya existentes en la BD. La introducción de un atributo derivado ayuda a obtener ese valor rápidamente en una consulta, puesto que no hay que realizar las acciones de cálculo del mismo, pero incrementa los costes de almacenamiento y de actualización de las tuplas de la BD (cada vez que se modifique el valor de un atributo que interviene en su cálculo, habrá que recalcular el valor del atributo derivado).</li>
+<li>Fusionar tablas involucradas en relaciones uno a uno: Si el acceso conjunto a ambas tablas es muy habitual, puede ser interesante crear una nueva tabla cuyos atributos sean la concatenación de los atributos de las dos tablas, lo cual puede reducir su tiempo de acceso. Sin embargo, este cambio perjudicará a las operaciones join que se realicen entre cualquiera de esas dos tablas y una tercera, ya que las filas de la nueva tabla que se han de leer ocuparán más en memoria (la tabla fusionada tiene más campos), por lo que se recuperarán menos registros en cada lectura, lo cual obligará a un número de accesos a disco superior.</li>
+<li>Introducir atributos duplicados en relaciones 1:N: Consiste en añadir atributos no clave de la tabla con cardinalidad 1 en la tabla con cardinalidad N. Así, cuando se realiza una operación de join entre las dos tablas que sólo involucra a los atributos duplicados, no será necesario recorrer la tabla con cardinalidad 1.</li>
+</ul>
+<p><strong>Determinación del espacio de almacenamiento necesario</strong></p>
+<p>Una vez obtenido el esquema de implementación definitivo, el administrador de la BD debe determinar el espacio de almacenamiento necesario para la BD. La cantidad de espacio que se determine será una estimación basada en el estudio de la cantidad de datos ya existente y que hay que cargar en la BD y en las estimaciones de crecimiento futuro de la BD.</p>
+<p>La estimación del espacio puede verse afectada también por el nivel de seguridad que se desee para el almacenamiento de datos y por el grado de disponibilidad de la BD. Por ejemplo, si uno de los requisitos de la BD es que su disponibilidad sea 24×7 (24 horas al día, 7 días a la semana), es posible que se necesite usar una estructura de almacenamiento secundario en forma de RAID 1+0 o 0+1, lo que duplicaría el espacio de almacenamiento necesario para la BD.</p>
+<h3 id="Diseno-de-los-mecanismos-de-seguridad-de-los-datos"><a href="#Diseno-de-los-mecanismos-de-seguridad-de-los-datos" class="headerlink" title="Diseño de los mecanismos de seguridad de los datos"></a>Diseño de los mecanismos de seguridad de los datos</h3><p><strong>Creación de las vistas de los usuarios</strong></p>
+<p>Las vistas son un elemento de la BD que permiten a los usuarios ver los datos de una determinada forma (corresponden al nivel externo en la arquitectura ANSI/SPARC). El uso de las vistas permite:</p>
+<ul>
+<li>Reducir la complejidad del esquema lógico global, manteniendo un esquema único para todos los usuarios y adaptando ese esquema a las necesidades que tenga cada tipo de usuario.</li>
+<li>Mejorar el nivel de seguridad de la BD, ya que los usuarios no verán más datos de las tablas que aquellos que están incluidos en la vista.</li>
+</ul>
+<p><strong>Fijar las reglas de acceso de los usuarios</strong></p>
+<p>En esta fase, se establecen los perfiles de usuario, donde cada perfil es el conjunto de acciones que cada tipo de usuario va a poder hacer sobre cada elemento o conjunto de elementos de la BD (tablas, filas, unidades lógicas de almacenamiento, etc.)</p>
+<h3 id="Monitorizacion-y-ajuste-del-sistema"><a href="#Monitorizacion-y-ajuste-del-sistema" class="headerlink" title="Monitorización y ajuste del sistema"></a>Monitorización y ajuste del sistema</h3><p>El diseño físico no se debe concebir como un proceso secuencial que finaliza cuando se ha encontrado una configuración válida. Las BD pueden sufrir variaciones a lo largo del tiempo, tanto en su tamaño, como en su esquema lógico global o en el uso que se desee hacer de ellas, lo que obligará a una monitorización continua de su rendimiento (para comprobar si se va degradando) y a la introducción de ajustes que permitan adaptarse a los cambios sufridos por la BD o solventar las pérdidas de eficiencia que se hayan producido.</p>
+<p>Cada proceso de ajuste supone en cierta medida una reconstrucción del diseño físico que se haya realizado, por lo cual esta etapa de diseño volvería a comenzar de nuevo.</p>
+<h2 id="La-gestion-de-la-concurrencia"><a href="#La-gestion-de-la-concurrencia" class="headerlink" title="La gestión de la concurrencia"></a>La gestión de la concurrencia</h2><p>Veamos la gestión de la concurrencia en los SGBD. Para ello, empezaremos introduciendo la necesidad de dicha gestión y el concepto de transacción, pasando posteriormente a abordar los problemas que plantea la concurrencia (Lectura Fantasma, Lectura Sucia, etc.) y los mecanismos de resolución existentes.</p>
+<h3 id="Necesidad-de-gestion-de-la-concurrencia"><a href="#Necesidad-de-gestion-de-la-concurrencia" class="headerlink" title="Necesidad de gestión de la concurrencia"></a>Necesidad de gestión de la concurrencia</h3><p>Los SGBD deben poder mantener la integridad de los datos que almacenan. Durante la vida de una BD, existen secuencias de acciones de escritura y lectura que pueden originar que la BD quede en un estado inconsistente si no se ejecutan todas las acciones de esa secuencia.</p>
+<p>Para evitar este tipo de problemas, los SGBD utilizan las transacciones, que son unidades lógicas de proceso que se componen de una secuencia de acciones cuya ejecución es atómica, o se ejecutan todas o no se ejecuta ninguna. En un punto intermedio de una transacción, el estado del BD puede ser inconsistente, siendo siempre consistente al principio y al final de la transacción.</p>
+<p>El elemento del SGBD encargado de conseguir este objetivo es el Gestor de Transacciones (transaction manager), el cual gestiona las peticiones de los usuarios en forma de transacciones.</p>
+<p>Además, los SGBD que existen en la actualidad ofrecen la posibilidad de ser usados en modo multiusuario, lo que implica que múltiples usuarios pueden trabajar a la vez con el sistema como si fuera un recurso dedicado, sin apercibirse de la presencia de otros usuarios. Para lograr este efecto, los tiempos de respuesta del SGBD a todos los usuarios deben ser reducidos, lo que obliga a realizar una ejecución concurrente (simultánea) de las transacciones de cada usuario.</p>
+<p>La ejecución atómica que caracteriza a las transacciones no garantiza que las pertenecientes a un programa de un usuario no puedan interferir en las transacciones que pertenecen a otros programas y que se están ejecutando al mismo tiempo. Conseguir que las transacciones no interfieran con el funcionamiento de otras transacciones se conoce como aislamiento de la transacción (isolation), y el conjunto de problemas que plantea conseguir ese aislamiento en un entorno multiusuario es conocido como el problema de la gestión de la concurrencia.</p>
+<p>Además, durante el transcurso de una transacción, pueden producirse problemas en el SGBD que no permitan que la transacción concluya con éxito, lo que, en virtud del principio de “todo o nada” que acompaña a las transacciones, obliga al SGBD a estar preparado para deshacer las acciones que una transacción no concluida ha realizado sobre una BD. Es el problema de la recuperación y se gestiona añadiendo una nueva propiedad a las transacciones, que es la persistencia, y que consiste en que las modificaciones de datos que se realizan durante una transacción no se almacenan en la BD hasta que la transacción ha finalizado con éxito.</p>
+<p>Resumiendo, una transacción ha de tener las siguientes propiedades:</p>
+<ul>
+<li><strong>Atomicidad</strong> : Las acciones de una transacción se ejecutan todas o ninguna.</li>
+<li><strong>Consistencia</strong> : La BD se encuentra en un estado consistente antes de la ejecución de la transacción y debe estar en un estado consistente cuando la transacción termine.</li>
+<li><strong>Aislamiento</strong> : La ejecución de una transacción no debe interferir en la ejecución de otras transacciones, la transacción debe ejecutarse como si estuviera aislada.</li>
+<li><strong>Persistencia</strong> : Los efectos de una transacción no son permanentes en la BD hasta que la transacción ha finalizado con éxito.</li>
+</ul>
+<h3 id="Manejo-de-transacciones-en-el-SGBD"><a href="#Manejo-de-transacciones-en-el-SGBD" class="headerlink" title="Manejo de transacciones en el SGBD"></a>Manejo de transacciones en el SGBD</h3><p>El gestor de transacciones es el componente funcional del SGBD que planifica y controla la ejecución de transacciones concurrentes en un BD.</p>
+<p>Un gestor de transacciones se puede dividir conceptualmente en los siguientes elementos:</p>
+<ul>
+<li>Un contenedor de entrada: Al que llegan las transacciones que se deben ejecutar.</li>
+<li>Un planificador (scheduler): Que determina el orden en el que las transacciones de la cola van a ser ejecutadas. Cuando el planificador da paso a una transacción, ésta es enviada al gestor de datos, desde el cual se realizarán las operaciones de la transacción sobre la BD.</li>
+<li>Un contenedor de salida: Al que llega la transacción cuando ha terminado de ejecutarse. Si la transacción ha finalizado correctamente, el gestor de transacciones realizará una operación commit, haciendo las modificaciones de la transacción persistentes en la BD.</li>
+</ul>
+<p>Si la transacción no ha finalizado correctamente debido a algún problema, el gestor de transacciones ejecuta una operación abort y envía la transacción a un gestor de recuperación, el cual deshace las operaciones de la transacción y devuelve los datos al estado en que estaban antes de iniciarse la transacción. La transacción abortada será devuelta al contenedor de salida para volver a ser ejecutada.</p>
+<p>Con el fin de incrementar el rendimiento de las BD en un entorno multiusuario, las transacciones no se ejecutan secuencialmente una detrás de otra. El modelo de ejecución secuencial de las transacciones podría originar una situación en la que un programa corto se quedase bloqueado a la espera de la finalización de un programa largo.</p>
+<p>En este caso, el usuario del programa debería sufrir un gran tiempo de espera para la realización de un conjunto reducido de operaciones, con lo que no percibiría a la BD como un recurso dedicado.</p>
+<p>Para evitar estas situaciones, las transacciones se despachan concurrentemente, es decir, sus acciones se van a llevar a cabo de forma entrelazada. Sin embargo, el entrelazado de acciones de las transacciones puede originar conflictos, algunos de los cuales van a ser comentados en el punto siguiente.</p>
+<p>La siguiente figura representa a un gestor de transacciones:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/gestor_transacciones.png?w=825" alt=""></p>
+<h3 id="Problemas-de-la-concurrencia"><a href="#Problemas-de-la-concurrencia" class="headerlink" title="Problemas de la concurrencia"></a>Problemas de la concurrencia</h3><p><strong>El problema de la actualización perdida</strong></p>
+<p>Problema de concurrencia que ocurre cuando:</p>
+<p>Dos transacciones T1 y T2 trabajan en paralelo e intentan modificar el valor del mismo objeto de la BD. Ambas transacciones leen el valor del objeto antes de que la otra lo actualice.</p>
+<p>En este caso, cada una de las transacciones modificará el valor del objeto en memoria y tratará posteriormente de escribirlo en la BD. El valor que se almacenará en la BD será el que tiene el objeto en la transacción que escriba más tarde, ya que el valor que ha escrito la primera transacción se sobrescribirá. Así, la actualización realizada por la transacción que ha escrito primero quedará sin efecto.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/actualizacion_perdida.png?w=825" alt=""></p>
+<p><strong>El problema de la lectura sucia</strong></p>
+<p>Se produce cuando:</p>
+<p>Una transacción T1 lee un valor de un objeto que ha sido modificado por otra transacción T2 y que todavía no se ha hecho persistente en la BD.</p>
+<p>La transacción T2, que había modificado los datos no termina correctamente. En este caso, la transacción T1 está trabajando con un valor que es inconsistente.</p>
+<p>Debe recordarse que los datos pueden encontrarse en un estado inconsistente en el transcurso de una transacción, por lo que la transacción primera puede haber leído dichos datos inconsistentes, utilizándolos para completar su secuencia de acciones.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/lectura_sucia.png?w=825" alt=""></p>
+<p><strong>El problema de la lectura fantasma o lectura no repetible</strong></p>
+<p>Puede aparecer cuando:</p>
+<p>Una transacción T1 está leyendo un conjunto de datos al tiempo que una transacción T2 los está modificando.</p>
+<p>La transacción T1 lee algunos de los datos antes de que sean modificados por T2 y otros después de ser modificados por T2.</p>
+<p>El resultado de la operación que realiza T1 se ve afectado por el hecho de combinar datos no actualizados por T2 con datos actualizados por T2.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/lectura_fantasma.png?w=825" alt=""></p>
+<p>En este caso, el valor ‘s’ es la agregación de los valores x, y, z. La acción de la transacción T2 no modifica el valor de esa agregación, sin embargo, la lectura de valores con diferentes versiones ha provocado que T1 ofrezca un valor de s que es equivalente a x+y+x-10.</p>
+<h3 id="Mecanismos-de-resolucion-de-conflictos"><a href="#Mecanismos-de-resolucion-de-conflictos" class="headerlink" title="Mecanismos de resolución de conflictos"></a>Mecanismos de resolución de conflictos</h3><p>Como ya hemos comentado en el punto anterior, la labor fundamental de un gestor de transacciones es manejar las transacciones que generan los programas de los usuarios de tal modo que se mantenga la consistencia de la BD. En un entorno multiusuario, el gestor de transacciones deberá conseguir mantener la consistencia cuando se ejecutan entrelazadamente las acciones que componen las transacciones de los distintos programas.</p>
+<p>Este orden de ejecución lo establece el planificador (scheduler) del gestor de transacciones, llamándose plan de ejecución a cada posible secuencia de ejecución de un conjunto de acciones. Lógicamente, existen múltiples planes de ejecución posibles, siendo interesantes los planes que cumplen la condición de serializabilidad; un plan de ejecución A es serializable para un conjunto de transacciones T si existe un plan de ejecución secuencial A’ que es equivalente a A.</p>
+<p>O dicho de un modo menos formal, un plan es serializable si el resultado de la ejecución entrelazada de las acciones de esas transacciones es equivalente al resultado de ejecutar las transacciones en serie.</p>
+<p>Sin embargo, la comprobación “a priori” de la serializabilidad de un plan es muy costosa (problema NP-completo), por lo que el gestor de transacción no trata de determinar si un plan de ejecución es serializable; en lugar de eso, el gestor de transacciones emplea diversos mecanismos de ejecución de las acciones que o eliminan los conflictos debidos a la concurrencia o permiten recuperar el estado consistente de la BD cuando se producen.</p>
+<p>Podemos considerar los métodos de resolución de conflictos divididos en dos tipos:</p>
+<ul>
+<li><strong>Métodos pesimistas</strong> : Basados en la suposición de que los conflictos entre transacciones concurrentes ocurren con alta frecuencia, lo que obliga a realizar una serie de acciones para manejar esos conflictos.</li>
+<li><strong>Métodos optimistas</strong> : Basados en la suposición de que los conflictos entre transacciones se producen con escasa frecuencia.</li>
+</ul>
+<p><strong>Métodos pesimistas</strong></p>
+<p><strong>Concepto de bloqueo y técnicas basadas en bloqueos</strong></p>
+<p>Este mecanismo de resolución de conflictos se basa en el concepto de bloqueo, que consiste en que cuando una transacción T1 necesita realizar alguna acción sobre un objeto de la BD, debe solicitar al SGBD una reserva de ese objeto, no pudiendo ejecutar la acción hasta que la reserva no se ha producido. El SGBD sólo concederá esa reserva si otra transacción T2 no mantiene el mismo objeto reservado (en otras palabras, mientras una transacción tenga a un objeto de la BD reservado, el acceso al resto de las transacciones puede considerarse bloqueado).</p>
+<p>En un momento dado, bien durante su transcurso o bien a su finalización, la transacción terminará las acciones que necesite hacer sobre el objeto de la BD, deshaciendo la reserva y quedando el objeto disponible para otras transacciones.</p>
+<p>Las acciones de bloqueo o desbloqueo no tienen porqué ejecutarse inmediatamente antes y después de la acción durante la cual queremos que el objeto esté bloqueado. En el transcurso de una transacción se hacen múltiples lecturas y escrituras, pudiendo realizarse varias de ellas sobre el mismo objeto. Si se bloquease y desbloquease antes y después de cada acción, se incurrirá en un coste de gestión de los bloqueos muy alto, lo que repercutirá en el rendimiento de la BD (en sus tiempos de respuesta). Por tanto, una política de gestión de bloqueos debe llegar a un buen compromiso entre dos aspectos de signo contrario:</p>
+<ul>
+<li>Tiempo que el objeto (los datos) están bloqueados: Cuanto mayor sea, más largo es el tiempo durante el cual otras transacciones no pueden realizar sus acciones sobre el conjunto de datos, lo que supone que han de estar a la espera del desbloqueo, retardándose su finalización.</li>
+<li>Tiempo empleado en gestionar los bloqueos: Realizar muchas operaciones de bloqueo/desbloqueo repercute en el rendimiento de la BD, ya que hay que almacenar esos bloqueos, comprobar su compatibilidad, etc.</li>
+</ul>
+<p>Así pues, la solución consisten en encontrar la manera de ejecutar un número elevado de acciones entre dos bloqueos, consiguiendo a la vez que la distancia entre bloqueos sea razonablemente pequeña.</p>
+<p>Considerando el tipo de acción que se impide, podemos distinguir dos clases de bloqueo:</p>
+<ul>
+<li>Bloqueo de escritura (write-lock o wlock): Impide que otras transacciones modifiquen un dato.</li>
+<li>Bloqueo de lectura (read-lock o rlock): Impide que otras transacciones lean un dato.</li>
+</ul>
+<p>La distinción entre bloqueos de escritura y bloqueos de lectura se establece porque interesa que el gestor de transacciones pueda hacer un manejo diferenciado de cada tipo:</p>
+<ul>
+<li>Un bloqueo de lectura realizado por una transacción es compatible con un bloqueo de lectura de otra transacción. Dicho de otro modo, no existe ningún problema porque dos transacciones lean un objeto a la vez (y evitar esperas innecesarias supone incrementar el rendimiento de la BD).</li>
+<li>Un bloqueo de escritura es incompatible con cualquier otro tipo de bloqueo, ya que no se puede permitir que una transacción lea un dato cuando otra transacción lo está modificando (como ya vimos en los problemas de la concurrencia) y, desde luego, un objeto no puede ser sobrescrito a la vez.</li>
+</ul>
+<p>Así pues, se puede establecer la siguiente tabla de compatibilidades entre bloqueos de lectura y escritura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/bloqueos.png?w=825" alt=""></p>
+<p>Los SGBD también permiten manejar diferentes granularidades de los bloqueos: Un bloqueo sobre distintas clases de objetos de la BD, como por ejemplo, una fila, un conjunto de filas o una tabla. De este modo las transacciones pueden efectuar reservas del tamaño estrictamente necesario, no bloqueando innecesariamente partes de los objetos que pueden ser utilizadas simultáneamente por otras transacciones (ejemplo, una transacción puede necesitar hacer un bloqueo de escritura sobre las primeras n filas de una tabla, lo cual no debe impedir que otras transacciones realicen acciones de lectura o escritura sobre las n+1 restantes).</p>
+<p>Cuanto menor sea el tamaño de los objetos bloqueados (granularidad más fina), menor será el número de esperas que los bloqueos originarán. Sin embargo, una granularidad fina genera más situaciones de interbloqueo que una granularidad gruesa, por lo que será necesario hacer una selección cuidados del nivel de granularidad empleado.</p>
+<p>EL PROBLEMA DEL INTERBLOQUEO</p>
+<p>El uso de técnicas basada en bloqueo para la gestión de transacciones concurrentes pueden conducir al problema denominado interbloqueo (o deadlock o abrazo mortal). El interbloqueo es una situación que se produce cuando dos transacciones se quedan esperando indefinidamente por un recurso que la otra transacción tiene bloqueada, de tal manera que ninguna de las dos accede nunca al recurso que la otra ha reservado.</p>
+<p>Por tanto, el gestor de transacciones deberá implantar mecanismos que le permitan detectar esas situaciones de interbloqueo y resolverlas, existiendo tres tipos de estrategias de resolución:</p>
+<ul>
+<li>La <strong>predicción</strong> : Consiste en la no generación de transacciones que puedan producir interbloqueo. Esto obligaría a analizar todas las transacciones a priori, lo cual produciría una gran sobrecarga en el sistema (todos los algoritmos de predicción son exponenciales, y por tanto no utilizables en un sistema con altas exigencias de rendimiento como es una BD).</li>
+<li>La <strong>prevención</strong> : Basada en que las transacciones puedan renunciar a un bloqueo que hayan realizado previamente. Para ello, se detectan los casos en los que una transacción T1 tenga reservado un ítem y una transacción T2 intenta hacer un tipo de bloqueo sobre ese ítem que es incompatible con el bloqueo de T1, aplicando técnicas de prevención, de entre las que se pueden destacar:<ul>
+<li>Wait-Die: Si T2 es más antigua, se le hace esperar. En caso contrario, T2 se cancela.</li>
+<li>Kill-Wait: Si T2 es más antigua, se cancela. En caso contrario, se hace esperar a T2.</li>
+</ul>
+</li>
+<li>La <strong>eliminación</strong> : Es el modo más sencillo de los tres. Consiste en eliminar una de las transacciones bloqueadas, continuando la otra transacción su camino. El gestor de transacciones volvería entonces a generar la transacción eliminada y la reintroduciría en la cola de transacciones, siendo lo más probable que la otra transacción haya terminado o haya avanzado hasta un punto en el que no se repita la situación de interbloqueo.</li>
+</ul>
+<p>EL PROTOCOLO DE BLOQUEO EN DOS FASES</p>
+<p>Es una implementación muy extendida de uno de los principios de la resolución de conflictos basada en bloqueos (técnica pesimista). El protocolo de bloque en dos fases define un conjunto de reglas sobre la aplicación de bloqueos que pueden ser utilizadas por el gestor de transacciones para gestionar las transacciones concurrentes.</p>
+<p>Estas reglas son:</p>
+<ol>
+<li>En una transacción sólo se va a escribir sobre un objeto una vez.</li>
+<li>Si una transacción necesita leer y escribir, realizará en primer lugar el bloqueo de escritura. De esta manera, basta con realizar una única operación de desbloqueo en la transacción (un desbloqueo genérico que termina con el bloqueo de lectura y escritura).</li>
+<li>Antes de realizarse las acciones de lectura o escritura, deben hacerse los bloqueos correspondientes, los cuales deben permanecer hasta que las acciones hayan finalizado.</li>
+<li>Los bloqueos del mismo tipo sólo se realizan una vez por transacción.</li>
+<li>En una transacción, una vez que se hace el primer desbloqueo, no se vuelve a hacer ningún bloqueo sobre ningún objeto. Esta norma caracteriza al bloqueo en dos fases, en la que se distingue una fase de crecimiento, donde van apareciendo nuevos bloqueos, y una fase de decrecimiento, que se inicia a partir del primer desbloqueo y dura hasta el final de la transacción, y en cuyo transcurso el número de bloqueos siempre decrece. Gráficamente, el comportamiento de este protocolo puede representarse así (evolución del número de bloqueos de una transacción con el algoritmo 2PL):</li>
+</ol>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/evolucion_numero_bloqueos.png?w=825" alt=""></p>
+<p>Entre las ventajas del protocolo de bloqueo en dos fases o 2PL, podemos citar do:</p>
+<ul>
+<li>Es un protocolo seguro, es decir, nunca se van a producir las situaciones anómalas de concurrencia estudiadas en el punto anterior.</li>
+<li>Es un protocolo sencillo, fácil de implantar.</li>
+</ul>
+<p>Entre sus desventajas, podemos citar:</p>
+<ul>
+<li>Los bloqueos tienden a ser grandes, lo que va a provocar incompatibilidades habituales con otras transacciones, derivándose de ello una pérdida de rendimiento.</li>
+<li>Este protocolo permite la aparición de interbloqueo.</li>
+</ul>
+<p><strong>Time-Stamping</strong></p>
+<p>El time-stamping trata de conseguir la serializabilidad de los planes de ejecución haciendo que, cuando varias transacciones tengan que acceder a objetos comunes, lo hagan en distintos momentos. Este objetivo se consigue asignando una marca temporal distinta (time-stamp) a cada transacción.</p>
+<p>Cuando una transacción intenta acceder a un objeto para leerlo o modificarlo, se comprueba previamente si ya ha sido accedido por otra transacción más joven. Existen tres modalidades de time-stamping:</p>
+<p>TIME-STAMPING BÁSICO</p>
+<ol>
+<li>Se almacena en cada objeto el time-stamp de la última transacción que lo ha leído (TSR) y el de la última que lo ha grabado (TSW).</li>
+<li>Cuando una transacción T intenta leer un objeto, si su time-stamp es mayor o igual que el TSR del objeto, podrá leerlo, debiendo ser cancelada en caso contrario.</li>
+<li>Si una transacción T intenta escribir un objeto, se pueden producir las siguientes situaciones:</li>
+</ol>
+<p>TS (T) &gt;= TSW(Objeto):<br>     Si TS(T) &gt;= TSR(Objeto), podrá escribir.<br>                              Si no, T tendrá que se cancelada<br>Si TS(T) &lt;= TSW(Objeto):<br>     Si TS(T) &gt;= TSR(Objeto), T puede seguir adelante saltándose la<br>                              grabación, ya que la versión que habría<br>                              grabado no sería la última y no habrá<br>                              sido leída por ninguna transacción<br>                              (regla de escritura de Thomas).<br>                              En caso contrario, T deberá ser cancelada.</p>
+<p>El time-stamping básico no asegura que se eviten las anomalías de concurrencia, pero si que impide los efectos de las anomalías de la Actualización Perdida y los de la Lectura Sucia (ya que si la transacción no puede hacer un commit, tampoco podrán hacerlo las que hayan leído o escrito los objetos que ella ha actualizado).</p>
+<p>TIME-STAMPING DINÁMICO</p>
+<p>Consiste en asignar un time-stamp a las transacciones cuando tratan de acceder a un objeto que ha sido leído o actualizado por otra transacción que no ha terminado todavía. De este modo, se evitan algunas de las cancelaciones de transacciones que se producen en el time-stamp básico. Su funcionamiento es el siguiente:</p>
+<p>Cuanto T1 intenta leer o actualizar un objeto actualizado por T2 o intenta actualizar un objeto que T2 ya ha leído:</p>
+<ol>
+<li>Si T1 y T2 no tienen todavía time-stamp, se les asigna a cada una un time-stamp, cumpliéndose que TS(T1) &gt; TS(T2).</li>
+<li>Si una de las dos no tiene time-stamp, se le asigna, respetándose de nuevo que TS(T1) &gt; TS(T2).</li>
+<li>Si T1 y T2 tiene ya time-stamp y TS(T1) &gt; TS(T2), entonces continúa normalmente la ejecución de las dos transacciones. En caso contrario, se cancelará la transacción T1.</li>
+</ol>
+<p>Al igual que el time-stamping básico, el time-stamping dinámico no asegura que se eviten las anomalías de concurrencia, pero si que impide los efectos de las anomalías de la Actualización Perdida y la Lectura Sucia. Además, es más eficiente que el time-stamping estático, ya que el número de cancelaciones que produce es menor.</p>
+<p>TIME-STAMPING MULTIVERSIÓN</p>
+<p>Basada en almacenar versiones de los ítems de la BD, permite el acceso simultáneo a un ítem por parte de transacciones diferentes, de forma que los accesos de cada transacción a los ítems que necesita se hace siempre usando versiones consistentes de esos ítems.</p>
+<p><strong>Métodos optimistas</strong></p>
+<p>Basados en la suposición de que los conflictos entre transacciones se producen con escasa frecuencia. Por tanto, se acepta como válido cualquier plan de ejecución de transacciones, y es tras finalizar la ejecución del plan y antes de realizar el commit (los datos todavía no son persistentes en la BD) cuando se comprueba si se ha producido algún conflicto entre transacciones o se ha incumplido alguna condición de consistencia. Si estos problemas han aparecido, las transacciones afectadas se deshacen (abort) y vuelven a situarse en la entrada del gestor de transacciones para su ejecución.</p>
+<p>En los métodos optimistas se puede considerar la ejecución de una transacción dividida en tres fases:</p>
+<ul>
+<li><strong>La fase de lectura</strong> : En ella se produce la ejecución de las acciones de la transacción. Todos los objetos de la BD que se necesitan son leídos y escritos de un buffer de memoria local al programa, y por tanto las acciones no afectan al resto de las transacciones en ejecución.</li>
+<li><strong>La fase de validación</strong> : Se comprueba si las modificaciones introducidas por la transacción pueden ser hechas persistentes en la BD sin incumplir la condición de serializabilidad de la transacción.</li>
+<li><strong>La fase de escritura</strong> : Si la comprobación realizada durante la fase de validación es positiva, las acciones de la transacción se ejecutan sobre la BD. Si la comprobación es negativa, la transacción es abortada.</li>
+</ul>
+<p>TÉCNICA OPTIMISTA BÁSICA</p>
+<p>La técnica optimista básica determina el conjunto de transacciones que se han validado utilizando una técnica de time-stamping. Durante la fase de validación se analiza si hay algún ítem común y del mismo nivel de granularidad entre el conjunto de ítems leídos por una transacción T1 y el conjunto de ítems que han escrito las transacciones cuyo time-stamp se ha asignado entre el instante de inicio y el instante de finalización de la fase de lectura de la transacción. Si no existe esa coincidencia, se añade un time-stamp a la transacción T1.</p>
+<p>Esta técnica exige que haya como mucho una transacción en la fase de validación en cada instante de tiempo, por lo que la fase de validación actúa como cuello de botella del sistema de gestión de transacciones.</p>
+<p><strong>Métodos de control de concurrencia basados en la semántica</strong></p>
+<p>Son métodos que, además de la sintaxis, utilizan la semántica de las acciones a realizar para determinar si un plan de ejecución es o no serializable. Es decir, no se limitan a comprobar si los accesos de las transacciones son de lectura o escritura, sino que analizan que van a escribir concretamente las acciones de las transacciones y determinan si esas acciones pueden generar un conflicto o no.</p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/356635763/Ticb2-Diseno-de-Bbdd-II" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B3/b3-t05/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B3-T05
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B4/b4-t12/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B4-T12</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

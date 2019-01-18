@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T06 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T06">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Sistemas de gestión de bases de datos relacionales: características y elementos constitutivos. Antecedentes históricos. El lenguaje SQL. Estándares de conectividad: ODBC y JDBC.Antecedentes históricos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T06">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t06/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Sistemas de gestión de bases de datos relacionales: características y elementos constitutivos. Antecedentes históricos. El lenguaje SQL. Estándares de conectividad: ODBC y JDBC.Antecedentes históricos">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/niveles_abstraccic3b3n.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/componentes_sgbd.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_seleccion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_proyeccion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operaciones_relacionales.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_union.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_diferencia.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_renombramiento1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_interseccion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/operacion_asignacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/sql.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/odbc.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/jdbc.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:28:37.191Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T06">
+<meta name="twitter:description" content="Sistemas de gestión de bases de datos relacionales: características y elementos constitutivos. Antecedentes históricos. El lenguaje SQL. Estándares de conectividad: ODBC y JDBC.Antecedentes históricos">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/niveles_abstraccic3b3n.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file active"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t06" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t06/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t06.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t06.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t06.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T06
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Sistemas-de-gestion-de-bases-de-datos-relacionales-caracteristicas-y-elementos-constitutivos-Antecedentes-historicos-El-lenguaje-SQL-Estandares-de-conectividad-ODBC-y-JDBC"><a href="#Sistemas-de-gestion-de-bases-de-datos-relacionales-caracteristicas-y-elementos-constitutivos-Antecedentes-historicos-El-lenguaje-SQL-Estandares-de-conectividad-ODBC-y-JDBC" class="headerlink" title="Sistemas de gestión de bases de datos relacionales: características y elementos constitutivos. Antecedentes históricos. El lenguaje SQL. Estándares de conectividad: ODBC y JDBC."></a>Sistemas de gestión de bases de datos relacionales: características y elementos constitutivos. Antecedentes históricos. El lenguaje SQL. Estándares de conectividad: ODBC y JDBC.</h1><h2 id="Antecedentes-historicos"><a href="#Antecedentes-historicos" class="headerlink" title="Antecedentes históricos"></a>Antecedentes históricos</h2><p>Se suele hablar de tres generaciones en la historia de las BD, son:</p>
+<ul>
+<li>Primera generación: sistema jerárquico y sistema de red.<ul>
+<li>Requieren complejos programas de aplicación.</li>
+<li>La independencia de datos es mínima.</li>
+<li>No tienen un fundamento teórico.</li>
+</ul>
+</li>
+<li>Segunda generación: modelo relacional.<ul>
+<li>Lenguaje de consultas estructurado: SQL.</li>
+<li>Desarrollo de SGBD relacionales comerciales.</li>
+<li>Limitada capacidad para modelar datos.</li>
+</ul>
+</li>
+<li>Tercera generación: modelo orientado a objetos y modelo relacional extendido.</li>
+</ul>
+<p>Veamos ahora con más detalle la historia de cada uno de estos modelos, soportados en diferentes SGBD.</p>
+<h3 id="Las-Bases-de-Datos-Jerarquicas"><a href="#Las-Bases-de-Datos-Jerarquicas" class="headerlink" title="Las Bases de Datos Jerárquicas"></a>Las Bases de Datos Jerárquicas</h3><p>A finales de los 60, coincidiendo en el tiempo con el desarrollo de los sistemas gestores de archivos, IBM y North American Aviation desarrollan el modelo jerárquico. Con la finalidad de resolver problemas de diseño aeroespacial y de producción se desarrolla Information Management System (IMS) con su lenguaje DL/1. Fue el primer sistema de gestión de BD comercial basado en el modelo jerárquico. Aparece IMS DB/DC (Database/Data Communication), el primer sistema de BD de gran escala.</p>
+<p>Sobre 1969, IMS dio como resultado un sistema de gestión de BD de tipo jerárquico de propósito general: el IMS/1 de IBM que constituye la primera familia de sistemas de gestión de BD. American Airlines e IBM desarrollan SABRE, el primer sistema que proporciona acceso a datos compartidos por múltiples usuarios a través de una red de comunicación.</p>
+<h3 id="Las-Bases-de-Datos-en-Red"><a href="#Las-Bases-de-Datos-en-Red" class="headerlink" title="Las Bases de Datos en Red"></a>Las Bases de Datos en Red</h3><p>A mitad de los sesenta, se desarrolló IDS (Integrated Data Store), de General Electric. Este trabajo fue dirigido por uno de los pioneros en los sistemas de BD, Charles Bachman. IDS era un nuevo tipo de sistema de BD conocido como estructura en red, que produjo un gran efecto sobre los sistemas de información de aquella generación. El sistema en red se desarrolló, en parte, para satisfacer la necesidad de representar relaciones más complejas entre datos que las que se podían modelar con los sistemas jerárquicos, y, en parte, para imponer un estándar de BD.</p>
+<p>Para ayudar a establecer dicho estándar, CODASYL (Conference on Data Systems Languages), formado por el gobierno de EEUU y representantes del mundo empresarial, organiza el grupo DBTG (Data Base Task Group), para definir especificaciones estándar que permitan la creación y el manejo de BD. El DBTG presentó su informe final en 1971 y aunque no fue formalmente aceptado por ANSI (American National Standards Institute), muchos sistemas se desarrollaron según la propuesta del DBTG. Estos sistemas se conocen como sistemas en red, sistemas CODASYL o DBTG.</p>
+<p>Los modelos jerárquico y de red constituyen la primera generación de los sistemas de BD, pero presentan algunos de los siguientes inconvenientes: no tienen un fundamento teórico, la independencia de datos es mínima y es necesario escribir complejos programas de aplicación para cualquier consulta de datos, por simple que sea.</p>
+<p>En la década de los 70, la tecnología de BD experimenta un rápido crecimiento. Algunos sistemas, desarrollados a lo largo de los años 70, que siguen las propuestas de CODASYL son: DMS-1.110 de UNIVAC, DMS-170 de CDC, IDMS de DF Goodrich, DBMA-11 de DIGITAL, etc. Sin embargo ninguna de estas implementaciones desarrolló completamente las propuestas de CODASYL.</p>
+<p>El modelo de datos en red siempre tuvo pretensiones de generalización y estandarización, mientras que la familia de sistemas jerárquicos está constituida por una serie de sistema de gestión de BD de los que posteriormente se obtuvo la abstracción del modelo de datos jerárquico. Ambos tipos de SGBD eran accesibles desde un lenguaje de programación, usualmente Cobol, usando un interfaz de bajo nivel. Esto hacía que la creación de una aplicación, el mantenimiento de la BD, así como el ajuste y el desarrollo fuesen controlables, pero aún a costa de una gran inversión de tiempo.</p>
+<p>Hasta 1980 los modelos de red y jerárquico fueron populares. Cullinet, una empresa fundada por Bachman, fue la mayor empresa de software y con más rápido crecimiento en el mundo, en aquellos años.</p>
+<h3 id="Las-Bases-de-Datos-Relacionales"><a href="#Las-Bases-de-Datos-Relacionales" class="headerlink" title="Las Bases de Datos Relacionales"></a>Las Bases de Datos Relacionales</h3><p>A pesar del éxito del modelo de datos en red, muchos diseñadores de software reconocieron que la interfaz de programación para navegación por los registros era de demasiado bajo nivel.</p>
+<p>En 1970 E.F.Codd, basándose en el álgebra y la teoría de conjuntos, propone un nuevo modelo de datos llamado modelo relacional. Sugiere que todos los datos de la BD se podrían representar como una estructura tabular (tablas con columnas y filas, que denominó relaciones) y que esas relaciones se podrían acceder con un lenguaje no procedimental (declarativo). En este tipo de lenguajes, en lugar de escribir algoritmos para acceder a los datos, sólo se necesita un predicado que identifica los registros o combinación de registros deseados. Es más, este nuevo modelo integraba los lenguajes de definición, navegación y manipulación en un solo lenguaje unificado.</p>
+<p>El modelo relacional encontró inicialmente una gran oposición debido a que requería más recursos informáticos que los SGBD existentes en la época y sus implementaciones no estaban lo suficientemente refinadas como para competir con el resto de modelos y, por tanto, resultaban demasiado lentos.</p>
+<p>Los SGBD relacionales no fueron prácticos hasta la década de los ochenta en que se desarrollaron computadores más rápidos y a menor precio.</p>
+<p>Los programadores se debieron adaptar a una nueva forma de pensar en el tratamiento de los datos. Hasta ahora los programadores estaban acostumbrados a procesar los datos en registro, en lugar de procesar simultáneamente los datos.</p>
+<p>Se desarrollaron proyectos de investigación que dieron lugar a algunos prototipos entre los que destacan:</p>
+<ul>
+<li>INGRES de la Universidad de Berkeley (1973-1975)</li>
+<li>System R de IBM (1974-1977)</li>
+<li>System 2000 de la Universidad de Austin en Texas</li>
+<li>El poyecto Sócrates de la Universidad de Grenoble en Francia</li>
+<li>ADABAS de la Universidad técnica de Darmstadt en Alemania</li>
+</ul>
+<p>Durante este periodo se desarrollaron diversos lenguajes de consulta: SQUARE, SEQUEL (SQL), QBE y QUEL. De fundamental importancia es el lenguaje SQL, que fue el resultado de la convergencia de muchos de los prototipos desarrollados en la época.</p>
+<p>El trabajo de investigación en IBM conducido por Ted (E.F.) Codd, Raymond Boyce y Don Chamberlain y el trabajo en la Universidad de Berkeley conducido por Michael Stonebraker, dieron como resultado SQL. Se estandarizó por primera vez en 1986 por el comité ANSI X3H2 como estándar de ANSI, que fue denominado SQL-86. ANSI publicó un estándar extendido en 1989, SQL-89. La siguiente versión del estándar fue SQL-92 y la más reciente SQL-99.</p>
+<p>Ya la primera estandarización de SQL, provocó la desaparición de su más inmediato competidor, QUEL. Sin embargo, QBE ha sobrevivido hasta nuestros días gracias a las interfaces de usuario amigables y porque supone un primer contacto más intuitivo y rápido con las BD relacionales.</p>
+<p>Posteriormente a los prototipos aparecieron numerosos sistemas relacionales comerciales, tales como: INGRES de RTI (1980), SQL/DS de IBM (1981), ORACLE de RSI (1981), DB2 de IBM (1983), RDB de DIGITAL (1983), etc.</p>
+<p>En la década de los 80 se desarrolla SQL Server en Sybase para sistemas UNIX y posteriormente se transportó a sistemas Windows NT. Desde 1994 Microsoft ha lanzado nuevas versiones de este producto de BD independientemente de Sybase, que dejó de usar el nombre SQL Server a finales de los 90.</p>
+<p>El modelo de datos relacional ha proporcionado beneficios inesperados además del aumento de productividad y facilidad de uso. Es muy adecuado para el enfoque cliente/servidor, el procesamiento paralelo y las interfaces gráficas de usuario.</p>
+<p>El modelo relacional constituye la segunda generación de los sistemas de BD. Hoy en día, existen cientos de SGBD relacionales, tanto para ordenadores personales como para sistemas multiusuario, aunque muchos no son completamente fieles al modelo relacional.</p>
+<p>El modelo relacional también tiene sus fallos, siendo uno de ellos su limitada capacidad para modelar los datos. En 1976, Chen presentó el modelo entidad-relación, que es la técnica más utilizada en el diseño de BD. En 1979, Codd intentó subsanar algunas de las deficiencias de su modelo relacional con una versión extendida denominada RM/T (1979) y posteriormente RM/V2 (1990).</p>
+<p>Como respuesta a la creciente complejidad de las aplicaciones que requieren BD, ha surgido un nuevo modelo: el modelo de datos orientado a objetos. Esta evolución representa la tercera generación de los sistemas de BD.</p>
+<h2 id="Sistemas-de-Gestion-de-Bases-de-Datos-SGBD"><a href="#Sistemas-de-Gestion-de-Bases-de-Datos-SGBD" class="headerlink" title="Sistemas de Gestión de Bases de Datos (SGBD)"></a>Sistemas de Gestión de Bases de Datos (SGBD)</h2><p>En un sistema de BD debe existir una capa intermedia entre los datos almacenados en la BD, las aplicaciones y los usuarios del mismo. Se trata del Sistema de Gestión de la BD (SGBD). Actúa de intermediario entre los usuarios y aplicaciones y los datos, proporcionando medios para describir, almacenar y manipular los datos y proporciona herramientas al administrador para gestionar el sistema, entre ellas las herramientas de desarrollo de aplicaciones, generador de informes, lenguajes específicos de acceso a los datos, como SQL (Structured Query Language) o QBE (Query By Example) en BD relacionales.</p>
+<p>Un SGBD se puede definir como un conjunto coordinado de programas, procedimientos, lenguajes, etc. que suministra, tanto a los usuarios no informáticos como a los analistas, programadores o el administrador, los medios necesarios para describir, recuperar y manipular los datos almacenados en la BD, manteniendo su integridad, confidencialidad y seguridad.</p>
+<p>El objetivo primordial de un SGBD es proporcionar un entorno conveniente y eficiente para extraer, almacenar y manipular información de la BD. El SGBD gestiona de forma centralizada todas las peticiones de acceso a la BD, por lo que este paquete funciona como interfaz entre los usuarios y la BD. Además, el SGBD gestiona la estructura física de los datos y su almacenamiento. Por lo tanto, el SGBD libera al usuario de conocer exactamente la organización física de los datos y de crear algoritmos para almacenar, actualizar o consultar dicha información que está contenida en la BD.</p>
+<p>Todos los SGBD no presentan la misma funcionalidad, depende de cada producto y del modelo de datos que implanten. Los sistemas más grandes son conjuntos de programas complejos y sofisticados. Los SGBD están en continua evolución, tratando de satisfacer los requerimientos de todo tipo de usuarios.</p>
+<p>Veamos a continuación las principales funciones o características que debe proporcionar un SGBD.</p>
+<h3 id="Caracteristicas-de-un-SGBD"><a href="#Caracteristicas-de-un-SGBD" class="headerlink" title="Características de un SGBD"></a>Características de un SGBD</h3><p>En general todos los SGBD presentan unas características comunes. Estas fueron ya definidas por Codd y posteriormente revisadas en función de las nuevas necesidades detectadas con la generalización del uso de las BD.</p>
+<p>Idealmente, el SGBD debe poseer una serie de características indispensables para satisfacer a los usuarios, tales como:</p>
+<ul>
+<li>Mantener la independencia entre los programas y la estructura de la BD. Así se simplifica el mantenimiento de las aplicaciones que acceden a la BD. Aunque esta independencia nunca es absoluta, los SGBD, principalmente los relacionales, van respondiendo cada vez mejor a esta exigencia.</li>
+<li>Asegurar la coherencia de los datos. En lo posible, no debe existir redundancia de datos, los datos deben estar almacenados una sola vez en la BD.</li>
+<li>Permitir a los usuarios almacenar datos, acceder a ellos y actualizarlos. Además, el SGBD debe hacerlo de forma transparente al usuario, ocultando la estructura física interna de los datos y la forma de almacenarlos.</li>
+<li>Contener un catálogo accesible por los usuarios en el que se almacenen las descripciones de los datos de forma centralizada. Este catálogo se denomina diccionario de datos y permite identificar y eliminar las redundancias y las inconsistencias.</li>
+<li>Garantizar que todas las actualizaciones correspondientes a una determinada transacción se realicen, o que no se realice ninguna. Una transacción es un conjunto de acciones que cambian el contenido de la BD. Si la transacción falla durante su realización, la BD quedará en un estado inconsistente. Algunos de los cambios se habrán hecho y otros no, por lo tanto, los cambios realizados deberán ser deshechos para devolver la BD a un estado consistente.</li>
+<li>Permitir que varios usuarios tengan acceso al mismo tiempo a los datos. Cuando dos o más usuarios acceden a la BD y al menos uno de ellos está actualizando datos, el SGBD deberá gestionar el acceso concurrente, impidiendo que haya datos corruptos o inconsistentes. Aquí el SGBD puede permitir la simultaneidad de accesos mediante el manejo eficiente de los bloqueos de la BD.</li>
+<li>Garantizar la recuperación de la BD en caso de que algún suceso la dañe. El fallo puede ser debido a una avería en algún dispositivo hardware o un error del software, que hagan que el SGBD aborte, o puede ser debido a que el usuario detecte un error durante la transacción y la aborte antes de que finalice. En todos estos casos, el SGBD debe proporcionar un mecanismo capaz de recuperar la BD llevándola a un estado consistente.</li>
+<li>Garantizar la seguridad de la BD. Esto es, sólo los usuarios autorizados pueden acceder a la BD, permitiendo diferentes niveles de acceso. La protección debe ser contra accesos no autorizados, tanto intencionados como accidentales.</li>
+<li>Garantizar la integridad de la BD. Esto requiere la validez y consistencia de los datos almacenados. Normalmente se expresa mediante restricciones, que son una serie de reglas que la BD no puede violar.</li>
+<li>Mantener la disponibilidad continua. La BD debe estar siempre disponible para su acceso. El SGBD debe proporcionar utilidades de administración, mantenimiento y gestión que puedan realizarse sin detener el funcionamiento de la BD.</li>
+<li>Proporcionar herramientas de administración de la BD. Estas herramientas permiten entre otras funcionalidades: importar y exportar datos, monitorizar el funcionamiento y obtener estadísticas de utilización de la BD, reorganizar índices y optimizar el espacio liberado para reutilizarlo.</li>
+<li>Integrarse con algún software gestor de comunicaciones. Muchos usuarios acceden a la BD desde terminales remotos, por lo que la comunicación con la máquina que alberga al SGBD se debe hacer a través de una red. Todas estas transmisiones de mensajes las maneja el gestor de comunicaciones de datos. Aunque este gestor no forma parte del SGBD, es necesario que el SGBD se pueda integrar con él.</li>
+<li>Garantizar la escalabilidad y elevada capacidad de proceso. El SGBD debe aprovechar todos los recursos de máquina disponibles en cada momento, aumentando su capacidad de proceso, conforme disponga de más recursos.</li>
+<li>Poseer un lenguaje de definición de datos que permita fácilmente la creación de nuevas BD, así como la modificación de su estructura.</li>
+<li>Poseer un lenguaje de manipulación de datos, que permita la inserción, eliminación, modificación y consulta de los datos de la base, de la forma más eficiente y conveniente posible.</li>
+<li>Permitir el almacenamiento de enormes cantidades de datos (miles de millones de caracteres), sin que el usuario perciba una degradación en cuanto al rendimiento global del sistema. Para ello el SGBD debe utilizar índices, partición de tablas, etc.</li>
+</ul>
+<p>La forma en que las distintas BD comerciales y académicas abordan estas características difieren enormemente, no sólo por las técnicas utilizadas sino también por las aproximaciones o paradigmas con que se han desarrollado. En este tema nos centraremos exclusivamente en el tipo más extendido: las BD relacionales, ya que tienen un formalismo subyacente que las hace muy potentes. Además, fueron desarrolladas hace ya bastantes años, y han evolucionado lo suficiente como para suministrar poderosas herramientas que hacen fácil su gestión. De hecho, todas las características que hemos visto que debe poseer un SGBD, son suministradas a través de entornos e interfaces amigables y comprensibles que permiten un rápido aprendizaje de todas las funciones propias de una BD.</p>
+<p>En contraposición, otro tipo de BD, como las orientadas a objetos, requieren que casi todas las funciones de creación de BD, manipulación, etc, se efectúen a través de programas, lo cual requiere un profundo conocimiento de la técnicas de programación.</p>
+<p>Por otro lado, sistemas igual de evolucionados, como el jerárquico o en red, han caído en desuso, y su aprendizaje supone un esfuerzo que aporta más bien poco al diseñador que debe enfrentarse de inmediato ante un mundo de datos básicamente relacional.</p>
+<h3 id="Niveles-de-abstraccion-Interno-Conceptual-y-Externo"><a href="#Niveles-de-abstraccion-Interno-Conceptual-y-Externo" class="headerlink" title="Niveles de abstracción: Interno, Conceptual y Externo"></a>Niveles de abstracción: Interno, Conceptual y Externo</h3><p>Se puede observar en los Sistemas de Información la existencia de dos niveles distintos:</p>
+<ul>
+<li>Un nivel lógico o externo, que es la vista que tiene el usuario del sistema.</li>
+<li>Un nivel físico o interno, que es la forma en la que los datos están almacenados.</li>
+</ul>
+<p>En la BD aparece un nuevo nivel de abstracción llamado: nivel conceptual. Este nivel intermedio pretende una representación global de los datos que se interponga entre el nivel lógico y el físico, y que sea independiente tanto del equipo, como de cada usuario en particular.</p>
+<p>Una de las características más importantes de los SGBD es la independencia entre programas y datos.</p>
+<p>Según ANSI (American National Standard Institute), “la independencia de los datos es la capacidad de un sistema para permitir que las referencia a los datos almacenados, especialmente en los programas y en sus descriptores de los datos, están aislados de los cambios y de los diferentes usos en el entorno de los datos, como pueden ser la forma de almacenar dichos datos, el modo de compartirlos con otros programas y como se reorganizan para mejorar el rendimiento del sistema de BD”.</p>
+<p>Para asegurar esta independencia entre los datos y las aplicaciones es necesario separar la representación física y lógica de los datos, distinción que fue reconocida oficialmente en 1978, cuando el comité ANSI/X3/SPARC propuso una arquitectura de 3 niveles: nivel interno, nivel conceptual y nivel externo:</p>
+<ul>
+<li><strong>Nivel interno</strong> : Es la representación del nivel más bajo de abstracción, en éste se describe en detalle la estructura física de la BD: dispositivos de almacenamiento físico, estrategias de acceso, índices, etc. Ningún usuario necesita conocer este nivel, su organización y conocimiento está reservado a los administradores de la BD.</li>
+<li><strong>Nivel conceptual</strong> : El siguiente nivel de abstracción, describe qué datos son almacenados realmente en la BD y las relaciones que existen entre los mismos, describe la BD completa en términos de su estructura de diseño. El nivel conceptual de abstracción lo usan los administradores de BD, quienes deben decidir qué información se va a guardar en la BD. En el nivel conceptual la BD aparece como una colección de registros lógicos, sin descriptores de almacenamiento. En realidad los archivos conceptuales no existen físicamente. La transformación de registros conceptuales a registros físicos para el almacenamiento se lleva a cabo por el sistema y es transparente al usuario. Consta de las siguientes definiciones:<ul>
+<li>Definición de los datos: Se describen las características y tipos de campo de todos los elementos direccionables en la BD.</li>
+<li>Relaciones entre datos: Se definen las relaciones entre datos para enlazar tipos de registros relacionados para el procesamiento de archivos múltiples.</li>
+</ul>
+</li>
+<li><strong>Nivel externo</strong> : Nivel más alto de abstracción, es lo que el usuario final puede visualizar del sistema terminado, describe sólo una parte de la BD al usuario acreditado para verla. El sistema puede proporcionar muchas visiones para la misma BD.</li>
+</ul>
+<p>La arquitectura de tres niveles es útil para explicar el concepto de independencia de datos que podemos definir como la capacidad para modificar el esquema en un nivel del sistema sin modificar el esquema del nivel superior. Se pueden definir dos tipos de independencia de datos:</p>
+<ul>
+<li>La independencia lógica permite modificar el esquema conceptual sin tener que alterar los esquemas externos ni los programas de aplicación.</li>
+<li>La independencia física permite modificar el esquema interno sin alterar el esquema conceptual (o los externos). Por ejemplo, permite cambiar el disco en que se almacenan parte de los ficheros físicos con el fin de mejorar el rendimiento de las operaciones de consulta o aumentar la capacidad de almacenamiento de datos. La independencia física es más fácil de conseguir que la independencia lógica.</li>
+</ul>
+<p>La siguiente figura, muestra los tres niveles de abstracción mencionados.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/niveles_abstraccic3b3n.png?w=825" alt=""></p>
+<h3 id="Lenguajes-de-los-SGBD"><a href="#Lenguajes-de-los-SGBD" class="headerlink" title="Lenguajes de los SGBD"></a>Lenguajes de los SGBD</h3><p>Para proporcionar a los usuarios las diferentes facilidades, los SGBD deben ofrecen lenguajes especializados e interfaces apropiadas para cada tipo de usuario: administradores de la BD, diseñadores, programadores de aplicaciones y usuarios finales.</p>
+<p>La interacción del usuario con la BD debe efectuarse a través de alguna técnica que haga fácil la comunicación, y que permita al usuario centrarse en el problema que desea solucionar, más que en la forma de expresarlo. La mejor forma de alcanzar este objetivo, es darle un lenguaje parecido al lenguaje natural, que le permita expresar de forma sencilla los requerimientos.</p>
+<p>Los lenguajes que interactúan con los SGBD, se pueden clasificar en dos grandes grupos:</p>
+<ul>
+<li>Unos orientados hacia la función: Son los lenguajes de definición, manipulación y control.</li>
+<li>Otros orientados a los diferentes tipos de usuarios o de procesos.</li>
+</ul>
+<p>Dentro del segundo grupo se encuentran los lenguajes de programación a los que están habituados los usuarios informáticos: programadores, analistas, etc. A este tipo de lenguajes se les conoce como “lenguaje anfitrión”. A las sentencias de manipulación de los lenguajes de las BD que son utilizadas en estos lenguajes se les conoce como “lenguaje huésped”.</p>
+<p>Los SGBD pueden admitir varios lenguajes de tipo anfitrión para manipulación de datos, como: Cobol, Ensamblador, Fortran, PL/I, Basic, Pascal, C, etc.</p>
+<p>Ahora nos vamos a centrar en los lenguajes del primer grupo, orientados hacia la función.</p>
+<p><strong>Lenguaje de Definición de Datos (LDD) o Data Definition Language (DDL)</strong></p>
+<p>El lenguaje de definición de datos está orientado a la definición, descripción y mantenimiento de la estructura de la BD. Permite al administrador definir los datos con facilidad y precisión, especificando sus distintas estructuras. Debe tener facilidad para describir la estructura del esquema conceptual, hacer las especificaciones relativas al esquema físico, y declarar las estructuras del esquema externo, requeridas por las aplicaciones.</p>
+<p>Para el caso concreto de los SGBD relacionales, se utiliza como estándar el SQL, para crear las BD a partir del esquema relacional. Mediante el DDL del SQL se crean tablas, columnas con los dominios correspondientes, índices, claves, las restricciones de integridad, etc.</p>
+<p>El SGBD posee un compilador de DDL cuya función consiste en procesar las sentencias del lenguaje para identificar las descripciones de los distintos elementos de los esquemas y almacenarlas generalmente en una BD especial que contiene los “metadatos”.</p>
+<p>Esta BD especial, es comúnmente llamada diccionario de datos o catálogo del SGBD. Dicho catálogo es el que se consulta, para obtener la estructura de la BD, toda vez que se quiere leer, modificar o eliminar los datos de la BD.</p>
+<p>El DDL permite especificar:</p>
+<ul>
+<li>Elementos de datos</li>
+<li>Estructura de datos</li>
+<li>Relaciones entre datos</li>
+<li>Reglas de integridad</li>
+<li>Vistas lógicas</li>
+<li>Espacio reservado para la BD</li>
+<li>Formato de representación (binario, decimal, …)</li>
+<li>Modo de acceso (punteros, índices, …)</li>
+</ul>
+<p><strong>Lenguaje de Manipulación de Datos (LMD) o Data Manipulation Language (DML)</strong></p>
+<p>El lenguaje de consulta y manipulación de datos sirve para obtener, insertar, eliminar y modificar los datos de la BD.</p>
+<p>Al igual que el programador necesita el LMD como lenguaje huésped dentro de un lenguaje anfitrión que maneja, el usuario no informático necesita de un instrumento para comunicarse con la BD. Este instrumento suele ser un LMD autocontenido, que da facilidades a los usuarios con pocos conocimientos de programación a acceder y manipular los datos en modo interactivo.</p>
+<p>El lenguaje de manipulación de datos SQL, puede actuar al mismo tiempo como huésped y como autocontenido, cumpliendo la propiedad dual (Codd 1990).</p>
+<p>En una primera clasificación de los LMD, hay dos tipos de lenguajes según su definición:</p>
+<ul>
+<li><em>DML procedural</em> . El programador especifica qué datos se necesitan y cómo obtenerlos. Se deben especificar todas las operaciones de acceso a datos llamando a los procedimientos necesarios para obtener la información requerida. Estos lenguajes acceden a un registro, lo procesan y basándose en los resultados obtenidos, acceden a otro registro, que también deben procesar. Así se va accediendo a registros y se van procesando hasta que se obtienen los datos deseados. Las sentencias de un DML procedural deben estar embebidas en un lenguaje de alto nivel. Como ya hemos comentado este es el lenguaje conocido como lenguaje anfitrión.</li>
+<li><em>DML no procedural</em> . El usuario o programador especifica qué datos quiere obtener sin decir cómo se debe acceder a ellos. El SGBD traduce las sentencias del DML en uno o varios procedimientos que manipulan los conjuntos de registros necesarios. Esto libera al usuario de tener que conocer cuál es la estructura física de los datos y qué algoritmos se deben utilizar para acceder a ellos. A los DML no procedurales también se les denomina lenguajes declarativos.</li>
+</ul>
+<p>El lenguaje DML no procedural más conocido es el SQL. Los lenguajes no procedurales son más fáciles de utilizar y conocer que los procedurales porque el SGBD oculta al usuario los detalles sobre cómo se ha realizado la operación solicitada.</p>
+<p>En una segunda clasificación de los LMD, hay dos tipos de lenguajes según como recuperan la información:</p>
+<ul>
+<li><em>Navegacionales</em> : Recuperan o actualizan los datos registro a registro, debiendo el programador indicar el camino que se ha de recorrer, a través de la estructura definida, hasta llegar al registro buscado. Se utilizan estos lenguajes en BD en red y jerárquicas.</li>
+<li><em>No navegacionales</em> : Actúan sobre un conjunto de registros. Una única sentencia puede dar lugar a recuperar o actualizar todos los registros que cumplan una determinada condición. El SQL es de este tipo.</li>
+</ul>
+<p>En el caso del SQL, asociado al LMD se suele encontrar un módulo optimizador que se ocupa de analizar la petición contra la BD y decidir el mejor camino de acceso con el fin de acelerar la ejecución. Para la toma de decisiones, el optimizador necesita de la información contenida en el catálogo o diccionario del SGBD.</p>
+<p>La manipulación de datos comprende las siguientes operaciones:</p>
+<ul>
+<li>Recuperación de información</li>
+<li>Inserción de nueva información</li>
+<li>Eliminación de información existente</li>
+<li>Modificación de información almacenada</li>
+</ul>
+<p><strong>Lenguaje de Control de Datos (LCD) o Data Control Language (DCL)</strong></p>
+<p>El lenguaje de Control de Datos sirve para trabajar en un entorno multiusuario, donde es muy importante la protección y la seguridad de los datos y la compartición de datos por parte de usuarios.</p>
+<p>Se encarga principalmente de tres actividades sobre la BD:</p>
+<ul>
+<li>Control de permisos de acceso</li>
+<li>Control de concurrencia</li>
+<li>Control de transacciones</li>
+</ul>
+<h3 id="Estructura-de-un-SGBD"><a href="#Estructura-de-un-SGBD" class="headerlink" title="Estructura de un SGBD"></a>Estructura de un SGBD</h3><p>Los SGBD son paquetes de software muy complejos que deben proporcionar los servicios comentados anteriormente. Los elementos que componen un SGBD varía mucho unos de otros. El SO proporciona servicios básicos al SGBD, que es construido sobre él.</p>
+<p>Los principales módulos del SGBD son:</p>
+<ul>
+<li>El compilador del DDL. Chequea la sintaxis de las sentencias del DDL y actualiza las tablas del diccionario de datos o catálogo que contienen los metadatos.</li>
+<li>El precompilador del DML. Convierte las sentencias del DML embebidas en el lenguaje anfitrión, en sentencias listas para su procesamiento por parte del compilador de lenguaje anfitrión y además extrae dichas sentencia DML para que puedan ser procesadas de forma independiente por el compilador del DML.</li>
+<li>El compilador del DML. Chequea la sintaxis de las sentencias del DML y se las pasa al procesador de consultas.</li>
+<li>El procesador de consultas. Realiza la transformación de las consultas en un conjunto de instrucciones de bajo nivel que se dirigen al gestor de la BD.</li>
+<li>El gestor de la BD. Es el interfaz con los programas de aplicación y las consultas de los usuarios. El gestor de la BD acepta consultas y examina los esquemas externo y conceptual para determinar qué registros se requieren para satisfacer la petición. Entonces el gestor de la BD realiza una llamada al gestor de ficheros para ejecutar la petición.</li>
+</ul>
+<p>Los principales componentes del gestor de la BD son los siguientes:</p>
+<ul>
+<li>El gestor de transacciones. Realiza el procesamiento de las transacciones.</li>
+<li>El gestor de buffers. Transfiere los datos entre memoria principal y los dispositivos de almacenamiento secundario.</li>
+<li>El gestor de ficheros. Gestiona los ficheros en disco en donde se almacena la BD. Este gestor establece y mantiene la lista de estructuras e índices definidos en el esquema interno. Para acceder a los datos pasa la petición a los métodos de acceso al SO que se encargan de leer o escribir en los ficheros físicos que almacenan la información de la BD.</li>
+</ul>
+<p>En la figura se ilustra cómo se relacionan entre sí todos los elementos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/componentes_sgbd.png?w=825" alt=""></p>
+<p>La primera fila de esta figura son los distintos tipos de usuarios que pueden acceder al SGBD (usuarios inexpertos, programadores de aplicaciones, usuarios sofisticados y administradores).</p>
+<p>La segunda fila son los distintos métodos de acceso a la información que utilizan los usuarios (interfaces de aplicaciones, programas de aplicación, consultas interactivas o el esquema de la BD).</p>
+<p>Los usuarios inexpertos y los programadores de aplicaciones utilizan aplicaciones informáticas para acceder a la BD y los usuarios sofisticados y administradores acceden directamente a ella.</p>
+<p>El tercer bloque es el SGBD y se subdivide en dos partes:</p>
+<ul>
+<li>La primera recibe las peticiones de los cuatro tipos de usuarios y las dirige al gestor de la BD o directamente al diccionario de datos. Independientemente de si las peticiones de manipulación de datos llegan de programas de aplicación o de una consulta directa a la BD por un usuario sofisticado, finalmente es el procesador de consultas el que las redirige al gestor de la BD.</li>
+<li>La segunda es el gestor de la BD, que consta de los gestores de transacciones, de buffer y de ficheros. El gestor de buffer sólo se comunica con el gestor de ficheros y es este último el que accede a la estructura física de la BD.</li>
+</ul>
+<p>Por último tenemos la BD formada por los datos, sus índices y el diccionario de datos.</p>
+<p>Esta estructura es general y algunos de los SGBD actuales incorporan otras funciones y módulos para dotar al SGBD de nuevas facilidades o incrementar su eficiencia. Entre las funciones adicionales deseables en un SGBD se encuentran las siguientes:</p>
+<ul>
+<li>Utilidades de carga de datos (importación y exportación de datos) con posibilidad de conversión de formatos de ficheros.</li>
+<li>Copia de seguridad (backup).</li>
+<li>Estadísticas de utilización.</li>
+<li>Reorganización de ficheros (mejora del rendimiento).</li>
+<li>Control del rendimiento.</li>
+<li>Registro de transacciones.</li>
+<li>Gestor de bloqueos.</li>
+<li>Distribución de procesos entre máquinas.</li>
+</ul>
+<h2 id="SGBD-Relacionales-SGBD-R"><a href="#SGBD-Relacionales-SGBD-R" class="headerlink" title="SGBD Relacionales (SGBD-R)"></a>SGBD Relacionales (SGBD-R)</h2><p>A continuación vamos a estudiar los Sistemas de Gestión de BD Relacionales (SGBD-R) y para ello veremos antes a nivel conceptual el modelo relacional. Este modelo es fundamental porque dio origen a los primeros sistemas comerciales de SGBD-R, que son los que hoy en día dominan el mercado de BD.</p>
+<h3 id="El-modelo-relacional"><a href="#El-modelo-relacional" class="headerlink" title="El modelo relacional"></a>El modelo relacional</h3><p>El modelo de datos relacional fue presentado por Codd en 1970 y se basa en la representación del universo del discurso mediante el álgebra relacional. Codd, que era un experto matemático, utilizó una terminología perteneciente a las matemáticas, en concreto de la teoría de conjuntos y de la lógica de predicados.</p>
+<p>Las características principales del modelo son las siguientes:</p>
+<ul>
+<li>Está basado en un modelo matemático con reglas y algoritmos algebraicos establecidos, lo cual permite el desarrollo de lenguajes de acceso y manipulación potentes y de fiabilidad demostrable.</li>
+<li>Estructura los dato en forma de relaciones que se modelan mediante tablas bidimensionales. Estas tablas representan tanto las entidades del universo del discurso como las relaciones entre las mismas.</li>
+<li>Permite incorporar aspectos semánticos del universo del discurso mediante el establecimiento de reglas de integridad. Estas reglas permiten trasladar al esquema conceptual restricciones o comportamientos de los datos presentes en el universo del discurso que no se podrían modelar exclusivamente con tablas.</li>
+</ul>
+<h3 id="Caracteristicas-de-los-SGBD-R"><a href="#Caracteristicas-de-los-SGBD-R" class="headerlink" title="Características de los SGBD-R"></a>Características de los SGBD-R</h3><p>Los SGBD construidos sobre el modelo relacional se caracterizan, por tanto, por las estructuras de datos, los operadores asociados y los aspectos semánticos. A continuación vamos a ver estos tres conceptos.</p>
+<p><strong>Estructuras de datos: Relaciones y Claves</strong></p>
+<p>En la estructura básica del modelo relacional se distinguen los siguientes elementos:</p>
+<ul>
+<li><strong>Relación</strong> : Es un subconjunto de un producto cartesiano entre conjuntos formados por atributos. Por ejemplo, una relación R, definida sobre los atributos <em>A1, A2, …, AN</em> , sería un subconjunto formado por _m_ elementos del producto cartesiano <em>A1, A2, …, AN</em> . En el modelo relacional se representa mediante una tabla con _m_ filas y _n_ columnas. Como las tablas son esencialmente relaciones, se utilizarán los términos matemáticos relación y tupla, en lugar de los términos tabla y fila.</li>
+<li><strong>Atributos</strong> : Son las columnas de la tabla. Corresponden a las propiedades de las entidades presentes en el universo del discurso que nos interesa almacenar en la BD. Cada uno de estos atributos puede tomar valores dentro de un rango determinado, que se llama dominio. Varios atributos pueden compartir un único dominio.</li>
+<li><strong>Dominio</strong> : Rango de valores aceptable para un atributo dado. Este rango depende exclusivamente del atributo y va a condicionar los valores posibles dentro de cada celda de la tabla. Los valores que forman el dominio deben ser homogéneos, es decir, del mismo tipo y atómicos, o sea, indivisibles. Un valor de dominio que es miembro de todos los dominios posibles, es el valor <em>nulo</em> , que indica que el valor es desconocido o no existe.</li>
+<li><strong>Tuplas</strong> : Es el nombre que recibe cada una de las filas de la tabla. Corresponden a cada una de las ocurrencias de la relación que representa la tabla o, lo que es lo mismo, a cada uno de los elementos que forman el conjunto R de la relación. El orden en el que aparecen las tuplas es irrelevante,dado que la relación es un conjunto de tuplas.</li>
+<li><strong>Cardinalidad</strong> <strong>de la relación</strong> : es el número _m_ de tuplas de la relación.</li>
+<li><strong>Grado</strong> <strong>de la relación</strong> : es el número _n_ de atributos que intervienen en la relación.</li>
+</ul>
+<p>Una vez visto qué es una tabla o relación, vamos a enumerar sus propiedades principales:</p>
+<ul>
+<li>Todas las filas de una tabla están compuestas por el mismo número y tipo de atributos que, además, aparecen siempre en el mismo orden.</li>
+<li>No puede haber filas repetidas. Es decir, todas las filas de la tabla deben diferenciarse entre sí al menos en el valor de un atributo.</li>
+<li>El orden en que aparecen las filas dentro de la tabla no es relevante.</li>
+<li>En cada celda de la tabla sólo puede aparecer un valor. Además este valor debe estar dentro del dominio de la columna correspondiente.</li>
+</ul>
+<p>Una tabla no puede contener dos filas iguales. Esto obliga, necesariamente, a que haya uno o varios atributos que se puedan utilizar para distinguir unas tuplas de otras. Cualquier atributo o conjunto mínimo de ellos que sirva para este propósito se denomina <strong>clave candidata</strong> . Es decir, una clave candidata permite identificar de forma única una fila de una tabla.</p>
+<p>Por conjunto mínimo se entiende aquel conjunto de atributos tal que si se elimina uno de ellos el conjunto resultante deja de ser clave candidata Es posible que la única clave candidata de una relación esté formada por todos los atributos de la misma.</p>
+<p>A la clave candidata que el usuario escoge para identificar las tuplas de una relación se la denomina <strong>clave primaria</strong> . La elección de esta claves es decisión del usuario, aunque se suele utilizar la más corta por razones de eficiencia. Una propiedad fundamental de la clave primaria consistes en que, bajo ninguna circunstancia, puede adoptar el valor nulo, ya que si así lo hiciera perdería su capacidad para identificar las tuplas de la relación.</p>
+<p>El resto de claves candidatas que no han sido elegidas como clave primaria reciben el nombre de <strong>claves alternativas o sencundarias</strong> .</p>
+<p>Una relación R1 puede incluir entre sus atributos la clave primaria de otra relación R2. Esta clave es una <strong>clave ajena</strong> de R1 que hace referencia a R2. La relación R1 también se denomina relación de <em>referencia</em> de la dependencia de clave ajena, y R2 se denomina la relación <em>referenciada</em> de la clave ajena.</p>
+<p><strong>Operadores asociados</strong></p>
+<p>Los operadores asociados al modelo de datos relacional forman el álgebra relacional. Se puede demostrar matemáticamente que éste álgebra es completa, o sea, que por medio de ella se puede realizar cualquier acceso a la BD.</p>
+<p>Los operandos con los que trabaja el álgebra son relaciones del modelo relacional y los operadores básicos son:</p>
+<ul>
+<li><strong>Unión</strong> . La unión de dos relaciones R y S (R U S) es el conjunto formado por todas las tuplas de R más todas las tuplas de S. Este operador sólo se puede aplicar a relaciones del mismo grado y con los mismos atributos.</li>
+<li><strong>Diferencia</strong> . La diferencia de de dos relaciones R y S (R – S) es el conjunto formado por todas las tuplas de R que no están en S. Este operador sólo se puede aplicar a relaciones del mismo grado y con los mismos atributos.</li>
+<li><strong>Producto cartesiano</strong> . El producto cartesiano de dos relaciones R y S, de grados _m_ y _n_ respectivamente, se denota R x S y es el conjunto formado por todas las posibles tuplas de <em>m + n</em> elementos en las que los _m_ primeros elementos son de R y los _n_ restantes pertenecen a S.</li>
+<li><strong>Proyección</strong> . Si x es un subconjunto de atributos de la relación R, entonces la proyección πx(R) es la relación formada por las columnas de R correspondientes a los atributos x.</li>
+<li><strong>Selección</strong> . Si F es una fórmula compuesta por operadores lógicos, aritméticos y de comparación y sus operandos son los valores de los atributos de una relación R, entonces la selección σF(R) es el conjunto de tuplas de la relación R que hacen verdadera la condición establecida por la fórmula F.</li>
+</ul>
+<p>A partir de estos cinco operadores básicos, es posible definir otros derivados tales como la intersección, el cociente y la unión natural.</p>
+<p><strong>Aspectos semáticos</strong></p>
+<p>Los aspectos semánticos son todos aquellos aspectos del universo del discurso que no pueden modelarse mediante la definición de relaciones, sino que necesitan de un nivel superior de descripción.</p>
+<p>Este nivel superior de descripción del modelo se traduce, en la práctica, en el establecimiento de restricciones adicionales a las propias del modelo relacional que ya se han mencionado (tuplas no repetidas, orden de las columnas constante, etc.) y que tienen como fin mantener la integridad y validez de los datos almacenados así como aumentar el grado de información que el esquema lógico de datos proporciona.</p>
+<p>A continuación describiremos las dos principales restricciones que se manejan en el modelo relacional:</p>
+<ul>
+<li><strong>Restricciones de usuario</strong> . Son restricciones a los valores del dominio de los atributos. La capacidad de definir estas restricciones de usuario, así como su potencia y los elementos sobre los que se pueden aplicar (dominios, atributos, tuplas, tablas, etc.) dependen del gestor de BD.</li>
+<li><strong>Integridad referencial</strong> . Otro aspecto que se puede incluir en el modelo relacional es la denominada integridad referencial, que se ocupa del mantenimiento de referencias entre las propias relaciones o tablas.</li>
+</ul>
+<p>Formalmente, se define integridad referencial de la siguiente manera “Sean dos relaciones R1 (relación que referencia) y R2 (relación referenciada), no necesariamente distintas entre sí. Si ocurre que la relación R1 tiene un atributo o conjunto de atributos que es clave primaria de R2, entonces cualquier valor de dicho atributo o conjunto de atributos en R1 debe concordar con un valor de la clave primaria de R2 o bien ser nulo”.</p>
+<p>El mantenimiento de la integridad referencial supone la realización de alguna acción cuando se borra o modifica una tupla en la tabla referenciada R2. Esta acción debe ser alguna de las siguientes:</p>
+<ul>
+<li>Impedir la operación de borrado o modificación. Así se asegura que una vez establecida no se puede romper la relación entre dos tuplas de ambas tablas.</li>
+<li>Transmitir en cascada la modificación. O sea, borrar o modificar en consecuencia las tuplas que hacen referencia a la que se acaba de borrar o modificar.</li>
+<li>Poner a nulo. Esto quiere decir que se asigna el valor nulo al atributo que ejerce de clave referencial para mantener la integridad.</li>
+<li>Poner valor por omisión o lanar una procedimiento de usuario. En este caso cuando se altera el valor del atributo referenciado, se pone como valor de la clave referencial un valor por omisión o se ejecuta un procedimiento por el usuario que establezca algún valor que sirva para mantener la integridad referencial.</li>
+</ul>
+<h2 id="Lenguajes-de-interrogacion-de-Bases-de-Datos"><a href="#Lenguajes-de-interrogacion-de-Bases-de-Datos" class="headerlink" title="Lenguajes de interrogación de Bases de Datos"></a>Lenguajes de interrogación de Bases de Datos</h2><p>Un lenguaje de interrogación o consulta es un lenguaje en el que un usuario solicita información de la BD. Estos lenguajes suelen ser de un nivel superior que el de los lenguajes de programación habituales. Los lenguajes de consulta pueden clasificarse, tal como vimos al estudiar los LMD, en dos grupos:</p>
+<ul>
+<li><strong>Lenguajes procedurales o procedimentales</strong> : El usuario instruye al sistema para que lleve a cabo una serie de operaciones en la BD para calcular el resultado deseado.</li>
+<li><strong>Lenguajes no procedurales o no procedimentales</strong> : El usuario describe la información deseada sin dar un procedimiento concreto para obtener esa información.</li>
+</ul>
+<h3 id="El-algebra-relacional"><a href="#El-algebra-relacional" class="headerlink" title="El álgebra relacional"></a>El álgebra relacional</h3><p>El álgebra relacional forma la base del lenguaje de consulta SQL.</p>
+<p>El álgebra relacional es un lenguaje de consulta procedimental. Consta de un conjunto de operaciones que toman como entrada una o dos relaciones y producen como resultado una nueva relación.</p>
+<p>Las operaciones asociadas a este modelo de datos forman el álgebra relacional. Se puede demostrar matemáticamente que ésta álgebra es completa, o sea, que por medio de ella se puede realizar cualquier acceso a la BD.</p>
+<p>Las operaciones fundamentales del álgebra relacional son: <em>selección, proyección, unión, diferencia de conjuntos, producto cartesiano y renombramiento</em> . Además de estas operaciones fundamentales hay otras operaciones que se definen a partir de las fundamentales, tales como: <em>intersección de conjuntos, unión natural y asignación</em> .</p>
+<p><strong>Operaciones Fundamentales</strong></p>
+<p>Se dividen estas operaciones en dos tipos:</p>
+<ul>
+<li><strong>Unarias</strong> : Porque operan con una sola relación o tabla. Son: selección, proyección y renombramiento.</li>
+<li><strong>Binarias</strong> : Porque operan con dos relaciones. Son: unión, diferencia de conjuntos y producto cartesiano.</li>
+</ul>
+<p><strong>La operación selección</strong></p>
+<p>La operación selección selecciona tuplas que satisfacen un predicado dado. Se utiliza la letra griega sigma minúscula (σ) para denotar la selección. El predicado aparece como subíndice de σ. La relación de entrada es el argumento que aparece entre paréntesis a continuación de σ.</p>
+<p>Por lo tanto, la definición formal dice: Si P es un predicado compuesto por operadores lógicos, aritméticos y de comparación y sus operandos son los valores de los atributos de una relación R, entonces la selección σp(R) es el conjunto de tuplas de la relación R que hacen verdadera la condición establecida por el predicado P.</p>
+<p>En general, se permite las comparaciones que utilizan los signos: =, ≠, &lt;, ≤, &gt; o ≥, en el predicado de selección. Además se pueden combinar varios predicados en uno mayor utilizando las conectivas y(^) y o(v). El predicado de selección puede incluir comparación entre dos atributos.</p>
+<p>Ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_seleccion.png?w=825" alt=""></p>
+<p><strong>La operación proyección</strong></p>
+<p>La operación proyección es una operación unaria que dada una relación de entrada, devuelve todos los atributos de dicha relación que aparecen en los argumentos de dicha operación. Dado que las relaciones son conjuntos, se eliminan todas las filas duplicadas.</p>
+<p>La proyección se denota por la letra griega pi (π). Se crea una lista de atributos que se desea que aparezcan en el resultado, como subíndice de π. La relación de entrada es el argumento que aparece entre paréntesis a continuación de π.</p>
+<p>Por lo tanto, la definición formal dice: Si x es un subconjunto de atributos de la relación R, entonces la proyección πx(R) es la relación formada por las columnas de R correspondientes a los atributos x.</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_proyeccion.png?w=825" alt=""></p>
+<p><strong>Composición de operaciones relacionales</strong></p>
+<p>Es importante el hecho de que el resultado de una operación relacional sea también una relación.</p>
+<p>En general, dado que el resultado de una operación de álgebra relacional es del mismo tipo (relación) que los datos de entrada, las operaciones del álgebra relacional pueden componerse para formar una expresión del álgebra relacional. La composición de operaciones del álgebra relacional para formar expresiones del álgebra relacional es igual que la composición de operaciones aritméticas (como +, -, * y ÷) para formar expresiones aritméticas.</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operaciones_relacionales.png?w=825" alt=""></p>
+<p><strong>La operación unión</strong></p>
+<p>Se debe asegurar que las uniones se realicen entre relaciones compatibles, es decir, que deben cumplir las dos condiciones siguientes:</p>
+<ul>
+<li>Las dos relaciones deben ser de la misma <em>aridad</em> , es decir, deben tener el mismo número de atributos.</li>
+<li>Los dominios de los atributos, deben ser iguales.</li>
+</ul>
+<p>Por lo tanto, la definición formal dice: La unión de dos relaciones R y S (R U S) es el conjunto formado por todas las tupas de R más todas las tuplas de S. Este operador sólo se puede aplicar a relaciones del mismo grado y con los mismos atributos.</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_union.png?w=825" alt=""></p>
+<p><strong>La operación diferencia de conjuntos</strong></p>
+<p>La operación diferencia de conjuntos, denotada por -, permite buscar las tuplas que estén en una relación pero no en otra. La definición formal dice: La diferencia de dos relaciones R y S (R – S) es el conjunto formado por todas las tuplas de R que no están en S.</p>
+<p>Este operador, al igual que el operador unión, solo puede realizarse entre relaciones compatibles. Por lo tanto el operador diferencia sólo se puede aplicar a relaciones del mismo grado y con los mismos atributos.</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_diferencia.png?w=825" alt=""></p>
+<p><strong>La operación producto cartesiano</strong></p>
+<p>La operación producto cartesiano se denotada por un aspa (x), permite combinar información de cualesquiera dos relaciones. Hay que considerar dos posibles problemas:</p>
+<ul>
+<li>Si las dos relaciones de entrada tienen un atributo con el mismo nombre, se adjunta a dicho atributo el nombre de la relación, para así distinguir uno de otro.</li>
+<li>Si el nombre de las dos relaciones de entrada es el mismo (producto cartesiano de una relación consigo misma) o si se utiliza el resultado de una expresión del álgebra relacional en un producto cartesiano, se debe dar un nuevo nombre a una de las relaciones o a la expresión del álgebra relacional utilizando una operación de renombramiento que veremos en el apartado siguiente.</li>
+</ul>
+<p>La definición formal dice: El producto cartesiano de dos relaciones R y S, de grados _m_ y _n_ respectivamente, se denota R x S y es el conjunto formado por todas las posibles tuplas de <em>m + n</em> atributos en las que los _m_ primeros atributos son de R y los _n_ restantes pertenecen a S.</p>
+<p><strong>La operación renombramiento</strong></p>
+<p>A diferencia de las relaciones de BD, los resultados de las expresiones del álgebra relacional no tienen un nombre que se pueda utilizar para referirse a ellas. Resulta, por lo tanto, útil ponerles nombre. La operación renombramiento denotado por la letra griego rho (p), permite realizar esta tarea.</p>
+<p>La definición formal dice: Data una expresión E del álgebra relacional, la exprexión px(E), devuelve el resultado de la expresión E con nombre x.</p>
+<p>Las relaciones por sí mismas también se consideran expresiones triviales del álgebra relacional. Por lo tanto, también se puede aplicar la operación renombramiento a una relación dada, para obtener la misma relación con un nuevo nombre.</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_renombramiento1.png?w=825" alt=""></p>
+<p><strong>Otras operaciones derivadas</strong></p>
+<p>Las operaciones fundamentales del álgebra relacional son suficientes para expresar cualquier consulta del álgebra relacional. Sin embargo, si uno se limita únicamente a las operaciones fundamentales, algunas consultas habituales resultan ser algo más complejas de expresar. Por este motivo, se definen otras operaciones que no añaden potencia al álgebra, pero que simplifican las consultas habituales.</p>
+<p>A partir de las operaciones básicas, es posible definir otras operaciones derivadas tales como la intersección, la unión natural y la asignación.</p>
+<p><strong>La operación intersección de conjuntos</strong></p>
+<p>La operación intersección de conjuntos denotada por ∩, permite buscar las tuplas que estén al tiempo en las dos relaciones sobre las que actúa.</p>
+<p>Se observa que esta operación no es fundamental y no añade potencia al álgebra relacional, ya que puede ser expresada en función de la operación de conjuntos, de la manera siguiente: R ∩ S = R – (R – S).</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_interseccion.png?w=825" alt=""></p>
+<p><strong>La operación unión natural</strong></p>
+<p>Suele resultar deseable simplificar ciertas consultas que exigen producto cartesiano. Generalmente, las consultas que implican producto cartesiano incluyen un operador selección sobre el resultado del producto cartesiano.</p>
+<p>La unión natural es una operación binaria que permite combinar ciertas selecciones y un producto cartesiano en una sola operación. Se denota por el símbolo de la “reunión”. La operación unión natural forma un producto cartesiano de sus dos argumentos, realiza una selección forzando la igualdad de los atributos que aparecen en ambas relaciones y, finalmente elimina los atributos duplicados.</p>
+<p><strong>La operación asignación</strong></p>
+<p>En ocasiones resulta conveniente escribir una expresión de álgebra relacional por partes utilizando la asignación a una variable de relación temporal.</p>
+<p>La operación asignación, denotada por ←, actúa de manera parecida a la asignación de los lenguajes de programación.</p>
+<p>Con la operación asignación se puede escribir las consultas como programas secuenciales consistentes en una serie de asignaciones seguida de una expresión cuyo valor se muestra como resultado de la consulta.</p>
+<p>Por ejemplo: <img src="https://gsitic.files.wordpress.com/2018/01/operacion_asignacion.png?w=825" alt=""></p>
+<h3 id="El-calculo-relacional-de-tuplas"><a href="#El-calculo-relacional-de-tuplas" class="headerlink" title="El cálculo relacional de tuplas"></a>El cálculo relacional de tuplas</h3><p>Cuando escribimos una expresión de álgebra relacional proporcionamos una serie de procedimientos que generan la respuesta a la consulta. El cálculo relacional de tuplas, en cambio, es un lenguaje de consulta no procedimental. Describe la información deseada sin dar un procedimiento específico para obtenerla.</p>
+<p>Las consultas se expresan en el cálculo relacional de tuplas como: { _t_ | P( _t_ )}, es decir, son el conjunto de todas las tuplas tales que el predicado P es cierto para _t_ . Se utiliza la notación _t_ [A] para denotar el valor de la tupla _t_ en el atributo A y _t_ Є R para denotar que la tupla _t_ está en la relación R.</p>
+<p>Para poder hacer una definición formal del cálculo relacional de tuplas, debemos conocer los tres conceptos siguientes:</p>
+<ul>
+<li>Constructor “existe” de la lógica matemática. La notación ∃ _t_ Є R(Q( _t_ )) significa: existe una tupla _t_ en la relación R que el predicado Q( _t_ ) es verdadero.</li>
+<li>Implicación denotada por ⇒, es decir P implica Q, se escribe: P ⇒ Q</li>
+<li>Constructor “para todo” de la lógica matemática. La notación ∀ _t_ Є R(Q( _t_ )) significa: Q es verdadera para todas las tuplas _t_ de la relación R.</li>
+</ul>
+<p>Ahora podemos dar una definición formal del cálculo relacional de tuplas.</p>
+<p>Como ya hemos dicho, las expresiones del cálculo relacional de tupla son de la forma: { _t_ | P( _t_ )} donde P es un predicado o una fórmula. En una fórmula pueden aparecer varias variables tupla. Se dice que una variable tupla es una variable libre a menos que esté cuantificada mediante ∃ o ∀.</p>
+<p>Las fórmulas del cálculo relacional de tuplas se construyen con átomos. Los átomos tienen una de las formas siguientes:</p>
+<ul>
+<li>s Є R, donde s es una variable tupla y R es una relación.</li>
+<li>s[x] θ u[y], donde s y u son variables tuplas, x es un atributo en el que está definida s, y es un atributo que está definida en u y θ es un operador de comparación (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt;, =). Es necesario que los atributos x e y tengan dominios cuyos miembros puedan compararse mediante θ.</li>
+<li>s[x] θ c, donde s es una variable tupla, x es un atributo en el que está definida s, θ es un operador de comparación y c es una constante en el dominio de atributo x.</li>
+</ul>
+<p>Las fórmulas se construyen a partir de los átomos utilizando las reglas siguientes:</p>
+<ul>
+<li>Si P1 es una fórmula, también lo son ¬ P1 y (P1)</li>
+<li>Si P1 y P2 son fórmulas, también lo son P1 ∨ P2, P1 ∧ P2 y P1 ⇒ P2</li>
+<li>Si P1(s) es un fórmula que contiene una variable tupla libre s, y R es una relación: ∃ s Є R(P1(s)) y ∀ s Є R(P1(s)) también son fórmulas.</li>
+</ul>
+<h3 id="El-calculo-relacional-de-dominios"><a href="#El-calculo-relacional-de-dominios" class="headerlink" title="El cálculo relacional de dominios"></a>El cálculo relacional de dominios</h3><p>Hay una segunda forma de cálculo relacional denominada cálculo relacional de dominios. Esta forma utiliza variables de dominio que toman sus valores del dominio de un atributo, en vez de tomarlos de una tupla completa. El cálculo relacional de dominios, sin embargo, se halla estrechamente relacionado con el cálculo relacional de tuplas.</p>
+<p>Las expresiones de cálculo relacional de dominios son de la forma:</p>
+<p>{&lt;x1, x2, …, xn&gt; | P(x1, x2, …, xn)}, donde x1, x2, …, xn representan las variables de dominio, P representa una fórmula compuesta de átomos, como era el caso en el cálculo relacional de tuplas.</p>
+<p>Los átomos del cálculo relacional de dominios tienen una de las formas siguientes:</p>
+<ul>
+<li>&lt;x1, x2, …, xn&gt; Є R, donde R es una relación con _n_ atributos y x1, x2, …, xn son variables de dominio o constantes de dominio.</li>
+<li>x θ y, donde x e y son variables de dominio y θ es un operador de comparación (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt;, =). Se exige que los atributos x e y tengan dominios que puedan compararse mediante θ.</li>
+<li>x θ _c_ , donde x es una variable de dominio, θ es un operador de comparación y _c_ es una constante de dominio del atributo para el que x es una variable de dominio.</li>
+</ul>
+<p>Las fórmulas se construyen a partir de los átomos utilizando las reglas siguientes:</p>
+<ul>
+<li>Un átomo es una fórmula.</li>
+<li>Si P1 es una fórmula, también lo son ¬ P1 y (P1).</li>
+<li>Si P1 y P2 son fórmulas, también lo son P1 ∨ P2, P1 ∧ P2 y P1 ⇒ P2.</li>
+<li>Si P1(x) es una fórmula en x, donde x es una variable de dominio: ∃ x (P1(x)) y ∀ x (P1(x)) también son fórmulas.</li>
+</ul>
+<h2 id="El-lenguaje-SQL-Structured-Query-Language"><a href="#El-lenguaje-SQL-Structured-Query-Language" class="headerlink" title="El lenguaje SQL (Structured Query Language)"></a>El lenguaje SQL (Structured Query Language)</h2><p>Los lenguajes formales descritos en el epígrafe anterior proporcionan una notación concisa para la representación de las consultas. Sin embargo, los sistemas de BD comerciales necesitan un lenguaje de consulta cómodo para el usuario. SQL es una combinación de álgebra relacional y construcciones de cálculo relacional.</p>
+<p>Aunque el lenguaje SQL se considere un lenguaje de consultas, contiene muchas otras capacidades además de la consulta en BD. Incluye características para definir la estructura de los datos, para la modificación de los datos en la BD y para especificación de restricciones de integridad.</p>
+<p>El lenguaje SQL es un lenguaje de alto nivel para dialogar con los SGBD-R. Como todo lenguaje de un SGBD, está formado por tres componentes claramente diferenciados, según muestra la figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/sql.png?w=825" alt=""></p>
+<p>Destacamos algunas de las características principales del lenguaje SQL:</p>
+<ul>
+<li>Utilizado por todo tipo de usuarios:<ul>
+<li>Administradores de BDR.</li>
+<li>Programadores.</li>
+<li>Usuarios Finales.</li>
+</ul>
+</li>
+<li>Lenguaje no procedimental: Se especifica QUÉ se quiere obtener, sin decir CÓMO.</li>
+<li>Permite especificar cualquier consulta.</li>
+</ul>
+<h3 id="Lenguaje-de-Definicion-de-Datos-DDL"><a href="#Lenguaje-de-Definicion-de-Datos-DDL" class="headerlink" title="Lenguaje de Definición de Datos (DDL)"></a>Lenguaje de Definición de Datos (DDL)</h3><p><strong>Tipos básicos de datos</strong></p>
+<ul>
+<li>Datos Alfanuméricos o Cadenas de Caracteres:<ul>
+<li>CHAR(longitud), donde: longitud = número máximo de caracteres del campo</li>
+<li>VARCHAR(longitud)</li>
+</ul>
+</li>
+<li>Datos Numéricos:<ul>
+<li>SMALLINT, INTEGER</li>
+<li>DECIMAL ó DECIMAL(precisión, decimal), donde: precisión = número de dígitos del número y decimal = número de dígitos decimales del nº decimal</li>
+<li>REAL</li>
+<li>FLOAT</li>
+</ul>
+</li>
+<li>Datos tipo fecha y tiempo:<ul>
+<li>DATE: Se puede elegir entre varios formatos</li>
+<li>TIME: También tiene diferentes formatos</li>
+<li>TIMESTAMP: Su valor es: fecha + tiempo + nanosegundos</li>
+</ul>
+</li>
+</ul>
+<p><strong>Creación y borrado de bases de datos</strong></p>
+<ul>
+<li>Creación de una BD: CREATE DATABASE nombre_base_datos;</li>
+<li>Borrado de la BD: DROP DATABASE nombre_base_datos;</li>
+</ul>
+<p><strong>Creación, modificación y borrado de tablas</strong></p>
+<p><strong>Creación</strong></p>
+<p>CREATE TABLE nombre_tabla (<br>    &lt;definición_atributo_1&gt; [NOT NULL][CHECK Condicion],<br>    &lt;definición_atributo_2&gt; [NOT NULL][CHECK Condicion],<br>    ···················································<br>    &lt;definición_atributo_n&gt; [NOT NULL][CHECK Condicion],<br>    [PRIMARY KEY (ListadeAtributos)]<br>);</p>
+<p>Donde:</p>
+<ul>
+<li>definición_atributo = nombre_atributo tipo_dato (tamaño)</li>
+<li>NOT NULL: no se permiten valores nulos en la columna</li>
+<li>ListadeAtributos: uno o más atributos separados por comas</li>
+</ul>
+<p><strong>Modificación</strong></p>
+<ul>
+<li>Añadir un nuevo atributo:</li>
+</ul>
+<p>ALTER TABLE &lt;nombre_tabla&gt; ADD &lt;def_atributo&gt;|&lt;def_integridad&gt;;</p>
+<ul>
+<li>Modificar un atributo ya existente:</li>
+</ul>
+<p>ALTER TABLE &lt;nombre_tabla&gt; ALTER <atributo> TYPE &lt;nuevo_tipo&gt;;</atributo></p>
+<ul>
+<li>Borrar un atributo ya existente:</li>
+</ul>
+<p>ALTER TABLE &lt;nombre_tabla&gt; DROP <atributo>;</atributo></p>
+<p><strong>Eliminación</strong></p>
+<p>DROP TABLE &lt;nombre_tabla&gt;;</p>
+<p><strong>Definición de vistas</strong></p>
+<p>Una vista es una estructura tabular no física (tabla virtual), que permite consultar y/o modificar datos de la tabla real.</p>
+<p>Las principales características de las vistas son:</p>
+<ul>
+<li>Se utilizan como si fuesen tablas reales.</li>
+<li>No contienen datos propios.</li>
+<li>No tienen asociada estructura física.</li>
+</ul>
+<p>Las ventajas del uso de vistas son:</p>
+<ul>
+<li>Meno complejidad en consultas: Permiten obtener igual información de forma más simple.</li>
+<li>Aumento de confidencialidad: Permiten acceder sólo aciertos datos de las tablas reales.</li>
+</ul>
+<p>Las vistas se pueden crear y borrar con las siguientes sentencias:</p>
+<ul>
+<li>Creación de vistas:</li>
+</ul>
+<p>CREATE VIEW &lt;nombre_vista&gt; [&lt;lista_atributos&gt;)] AS (&lt;cláusula SELECT&gt;);</p>
+<p>Las filas de la vista serán aquellas que resulten de ejecutar la consulta cobre la que está definida.</p>
+<ul>
+<li>Eliminación de vistas:</li>
+</ul>
+<p>DROP VIEW &lt;nombre_vista&gt;;</p>
+<p><strong>Creación y borrado de índices</strong></p>
+<p>Es el sistema el encargado de utilizar los índices, para optimizar el acceso a los datos, el usuario sólo puede crear o eliminar índices, pero no indicar su utilización.</p>
+<ul>
+<li>Creación de índices:</li>
+</ul>
+<p>CREATE [UNIQUE] INDEX &lt;nombre_índice&gt; ON &lt;nombre_tabla&gt; (&lt;lista_atributos&gt;);</p>
+<ul>
+<li>Eliminación de índices:</li>
+</ul>
+<p>DROP INDEX &lt;nombre_índice&gt;;</p>
+<p><strong>Definición de claves referenciales</strong></p>
+<p>Justo debajo de PRIMARY KEY cuando estamos creando una tabla:</p>
+<p>[FOREIGN KEY (lista_de_columnas) REFERENCES nombre_de_tabla(lista_de_columnas)<br>ON UPDATE [NO ACTION | SET DEFAULT | SET NULL | CASCADE]<br>ON DELETE [NO ACTION | SET DEFAULT | SET NULL | CASCADE]</p>
+<h3 id="Lenguaje-de-Manipulacion-de-Datos-DML"><a href="#Lenguaje-de-Manipulacion-de-Datos-DML" class="headerlink" title="Lenguaje de Manipulación de Datos (DML)"></a>Lenguaje de Manipulación de Datos (DML)</h3><p><strong>Inserción, actualización y borrado de filas</strong></p>
+<p><strong>Inserción</strong></p>
+<ul>
+<li>Inserción de una fila:</li>
+</ul>
+<p>INSERT INTO &lt;nombre_tabla&gt; [(&lt;lista_atributos&gt;)] VALUES (<valor1>, …, <valorn>);</valorn></valor1></p>
+<ul>
+<li>Inserción de varias filas:</li>
+</ul>
+<p>INSERT INTO &lt;nombre_tabla&gt; [(&lt;lista_atributos&gt;)] (&lt;cláusula SELECT&gt;);</p>
+<p>La cláusula “SELECT” especifica una consulta cuyo resultado (filas) se insertará en la tabla especificada.</p>
+<p><strong>Modificación</strong></p>
+<p>UPDATE &lt;nombre_tabla&gt;<br>     SET &lt;atributo_1&gt; = &lt;valor_1&gt;,<br>     &lt;atributo_2&gt; = &lt;valor_2&gt;,<br>     …………<br>     &lt;atributo_n&gt; = &lt;valor_n&gt;<br>[WHERE &lt;condición&gt;];</p>
+<p>La modificación afectará a todas las filas que cumplan la condición, si se especifica ésta. Si no se especifica condición, la modificación afectará a todas las filas de la tabla.</p>
+<p><strong>Eliminación</strong></p>
+<p>DELETE<br>FROM &lt;nombre_tabla&gt;<br>[WHERE &lt;condición&gt;];</p>
+<p>No se pueden eliminar partes de una fila. Si no aparece la cláusula “WHERE” se eliminarán todas las filas de la tabla, no eliminándose la definición de ésta en el esquema.</p>
+<p><strong>Operaciones de consulta</strong></p>
+<ul>
+<li>Sintaxis de la sentencia:</li>
+</ul>
+<p>SELECT [DISTINCT] &lt;expresión&gt;<br>FROM &lt;lista_de_tablas&gt;<br>   [WHERE <condicion>]<br>[GROUP BY &lt;lista_de_atributos&gt;<br>   [HAVING &lt;condición_de_grupo&gt; ]<br>]<br>[ORDER BY &lt;lista_de_atributos&gt; [ASC/DESC]];</condicion></p>
+<ul>
+<li><ul>
+<li>SELECT: especifica la información que se desea obtener.</li>
+<li>DISTINCT: elimina los valores repetidos.</li>
+<li>FROM: indica las tablas o vistas en las que se encuentran los atributos implicados en la consulta.</li>
+<li>WHERE: especifica la condición de búsqueda.</li>
+<li>GROUP BY: permite agrupar el resultado.</li>
+<li>HAVING: especifica una condición de grupo.</li>
+<li>ORDER BY: permite ordenar el resultado.</li>
+</ul>
+</li>
+<li>Operadores: Los operadores que se pueden utilizar para expresar condiciones de fila (cláusula WHERE) o de grupo (cláusula HAVING) son:<ul>
+<li>De comparación: &lt;, &lt;=, &gt;, &gt;=, &lt;&gt;, =</li>
+<li>Lógicos: AND, OR, NOT</li>
+<li>BETWEEN … AND …: establece una comparación dentro de un intervalo cerrado. También se puede utilizar NOT BETWEEN.</li>
+<li>LIKE: establece una comparación entre cadenas de caracteres, también se puede utilizar NOT LIKE, emplea los siguientes comodines:<ul>
+<li>%: sustituye a una cadena de caracteres cualquiera.</li>
+<li>_: sustituye a un único carácter cualquiera.</li>
+</ul>
+</li>
+<li>IN: comprueba la pertenencia de un valor a un conjunto dado.</li>
+<li>IS NULL: comprueba si un valor determinado es nulo (NULL). También se puede utilizar IS NOT NULL.</li>
+<li>Cuantificadores: ANY (alguno), ALL (todos).</li>
+<li>Existencial: EXISTS, indica la existencia o no de un conjunto. También se puede utilizar NOT EXISTS.</li>
+</ul>
+</li>
+<li>Reglas de Evaluación de Operadores: El Orden de Evaluación es el siguiente:<ul>
+<li>Operadores de Relación: BETWEEN, IN, LIKE, IS, NULL y después NOT, AND, OR.</li>
+<li>Se pueden utilizar paréntesis para establecer el orden de evaluación deseado por el usuario.</li>
+</ul>
+</li>
+<li>Consultas con UNION, DIFERENCIA e INTERSECCIÓN:<ul>
+<li>Unión de conjuntos: operador UNION.</li>
+<li>Diferencia de conjuntos: operador MINUS.</li>
+<li>Intersección de conjuntos: operador INTERSECT.</li>
+</ul>
+</li>
+<li>Expresiones en la cláusula SELECT: No sólo se pueden seleccionar atributos, sino expresiones en las que aparezcan atributos y/o constantes y operadores aritméticos.</li>
+<li>Funciones agregadas: Devuelven un valor único, numérico. No se pueden combinar, con columnas que devuelvan más de un valor, a menos que la consulta contenga una cláusula GROUP BY.<ul>
+<li>COUNT (*): contador de tuplas (totalizador)</li>
+<li>COUNT (DISTINCT Atributo): contador de tuplas (parcial), no tiene en cuenta valores nulos ni duplicados.</li>
+<li>AVG(Atributo): media aritmética de un atributo numérico.</li>
+<li>SUM(Atributo): suma de atributos o expresiones numéricas.</li>
+<li>MAX(Atributo): valor máximo de un atributo o expresión numérica.</li>
+<li>MIN(Atributo): valor mínimo de un atributo o expresión numérica.</li>
+</ul>
+</li>
+<li>Cláusula GROUP BY: GROUP BY &lt;lista_de_atributos&gt;<ul>
+<li>Agrupa el resultado, devolviendo una única fila por grupo.</li>
+<li>El agrupamiento no se realiza ordenado.</li>
+<li>Los atributos que aparezcan en GROUP BY, deben aparecer en la cláusula SELECT.</li>
+</ul>
+</li>
+<li>Cláusula HAVING: HAVING &lt;condición_de_grupo&gt;<ul>
+<li>Siempre va acompañada de la cláusula GROUP BY.</li>
+<li>Especifica una condición de grupo.</li>
+</ul>
+</li>
+<li>Cláusula ORDER BY: ORDER BY &lt;lista_de_atributos&gt; [ASC | DESC]<ul>
+<li>El resultado de la consulta se ordena en base a los atributos que se indiquen en la lista.</li>
+<li>Los atributos de ordenación deben aparecer en SELECT.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Lenguaje-de-Control-de-Datos-DCL"><a href="#Lenguaje-de-Control-de-Datos-DCL" class="headerlink" title="Lenguaje de Control de Datos (DCL)"></a>Lenguaje de Control de Datos (DCL)</h3><p>Este lenguaje se preocupa principalmente del control de acceso a los datos (seguridad) y del control de la integridad de los datos.</p>
+<p><strong>Control de acceso a los datos</strong></p>
+<ul>
+<li>Niveles de acceso soportados por los SGBDR: Se establecen privilegios de acceso por los niveles siguientes:<ul>
+<li>Base de Datos</li>
+<li>Tabla</li>
+<li>Atributo</li>
+<li>Tupla</li>
+</ul>
+</li>
+<li><p>Concesión de Privilegios: Permite dar a los usuarios el acceso completo o restringido a la BD:</p>
+<p> GRANT &lt;privilegio_de_acceso&gt;<br> [ON &lt;lista_de_objetos&gt;]<br> TO &lt;lista_de_usuarios&gt;<br> [WITH GRANT OPTION]</p>
+</li>
+<li><ul>
+<li>&lt;privilegio_de_acceso&gt;: CONNECT, RESOURCE, DBA, ALL PRIVILEGES, SELECT, UPDATE, INSERT, DELETE</li>
+<li>WITH GRANT OPTION concede permiso para que el usuario a su vez, conceda esos permisos a otros usuarios.</li>
+</ul>
+</li>
+<li>Nivel de Base de Datos: El SGBDR chequea los privilegios del usuario al iniciar la sesión. Los posibles privilegios o permisos son:<ul>
+<li>CONNECT: Conectarse a la BDR.</li>
+<li>RESOURCE: Crear objetos.</li>
+<li>DBA: Ejecución de comandos restrictivos. Acceso a cualquier objeto. Privilegio RESOURCE implícito.</li>
+</ul>
+</li>
+<li>Nivel de Tabla: Las tablas son propiedad del usuario que las creó. Los posibles privilegios o permisos son:<ul>
+<li>DELETE: Autoriza el borrado de tuplas.</li>
+<li>INSERT: Autoriza la inserción de nuevas tuplas.</li>
+<li>SELECT: Permite la realización de consultas.</li>
+<li>UPDATE: Permite la actualización de tuplas.</li>
+<li>ALL PRIVILEGES: Concede todos los privilegios.</li>
+</ul>
+</li>
+<li>Niveles Atributo y Tupla: Se implantan a través de la definición de vistas.<ul>
+<li>Nivel de Atributo: Se crea una vista sin condiciones. Se establecen los permisos sobre la vista.</li>
+<li>Nivel de Tupla. Se crea una vista con sólo las tuplas permitidas. Se establecen los permisos sobre la vista.</li>
+</ul>
+</li>
+<li><p>Revocación de privilegios: Se utiliza para anular privilegios ya concedidos a los usuarios:</p>
+<p>   REVOKE &lt;privilegio_de_acceso&gt;<br>   [ON &lt;lista_de_objetos&gt;]<br>   TO &lt;lista_de_usuarios&gt;;</p>
+</li>
+</ul>
+<p><strong>Control de integridad</strong></p>
+<p>Este control está asociado al concepto de Transacción. Existen dos sentencias principales:</p>
+<ul>
+<li>COMMIT: Los cambios que se puedan estar realizando sobre la BD se hacen fijos únicamente al completar la transacción (COMMIT automático) o al hacer un COMMIT explícito.</li>
+<li>ROLLBACK: Elimina todos los cambios que se hayan podido producir en la BD desde la ejecución de la última instrucción COMMIT. Si se produce un error de programa o un fallo hardware el sistema realiza un ROLLBACK automáticamente.</li>
+</ul>
+<h2 id="Estandares-de-conectividad-ODBC-y-JDBC"><a href="#Estandares-de-conectividad-ODBC-y-JDBC" class="headerlink" title="Estándares de conectividad: ODBC y JDBC"></a>Estándares de conectividad: ODBC y JDBC</h2><p>Los programas de aplicación son programas que se usan para interaccionar con la BD. Como ya se comentó, estos programas se escriben usualmente en un lenguaje anfitrión, tal como Cobol, C, C++, Java, etc.</p>
+<p>Para acceder a la BDR, las instrucciones del LMD del SQL necesitan ser ejecutadas desde el lenguaje anfitrión. Hay dos manera de hacerlo:</p>
+<ul>
+<li>SQL incorporado: Extendiendo la sintaxis del lenguaje anfitrión para incorporar las llamadas del LMD dentro del programa del lenguaje anfitrión. Usualmente, un carácter especial o una sentencia concreta precede a las llamadas del LMD y un precompilador LMD, convierte las instrucciones LMD en llamadas normales a procedimientos del lenguaje anfitrión.</li>
+<li>SQL dinámico: Proporcionando una interfaz de programas de aplicación, API (Application Program Interface), que se deben usar para enviar tanto instrucciones LMD, como LDD, a la BD, y recuperar los resultados. Existen dos estándares:<ul>
+<li>El estándar de conectividad abierta de BD (ODBC, Open Data Base Connectivity) definido por Microsoft para el uso con el lenguaje C, usado comúnmente.</li>
+<li>El estándar de conectividad de Java con BD (JDBC, Java Data Base Connectivity) que proporciona las características correspondientes para el lenguaje Java.</li>
+</ul>
+</li>
+</ul>
+<p>En el resto del apartado, vamos a examinar las dos normas de conexión de BD, ODBC y JDBC, utilizando el lenguaje SQL.</p>
+<p>Para comprender estas normas es necesario comprender el concepto de sesión SQL. El usuario o aplicación se conecta a un servidor de BD SQL, estableciendo una sesión. Así todas las actividades del usuario o aplicación están en el contexto de una sesión SQL. Además de las órdenes normales de SQL (LMD y LDD), una sesión también puede contener órdenes para comprometer el trabajo realizado hasta ese momento en la sesión (COMMIT) o para echarlo atrás (ROLLBACK).</p>
+<p>Las normas ODBC y JDBC, se desarrollaron para hacer de interfaz entre clientes y servidores. Cualquier cliente que utilice interfaces ODBC o JDBC puede conectarse a cualquier servidor de BD que proporcione esta interfaz.</p>
+<h3 id="ODBC"><a href="#ODBC" class="headerlink" title="ODBC"></a>ODBC</h3><p>¿Qué es ODBC?</p>
+<ul>
+<li>ODBC son las siglas Open Database Connectivity.</li>
+<li>Es un interface estándar de programas de aplicación (API) para acceso a BD.</li>
+<li>Impulsado por SQL Access Group, principalmente por Microsoft, desde 1992.</li>
+<li>Usando sentencias ODBC en un programa, se puede acceder a las tablas de diferentes BD, tales como: Access, dBase, DB2, etc.</li>
+<li>Permite a los programas utilizar sentencias SQL que acceden a las BD, sin tener que conocer los interfaces propietarios de dichas BD.</li>
+<li>ODBC maneja la sentencia SQL requerida y la convierte en una petición a la BD.</li>
+<li>No soporta el COMMIT en dos fases, para coordinar el acceso simultáneo a varias BD.</li>
+</ul>
+<p>ODBC presenta una arquitectura de cuatro niveles:</p>
+<ul>
+<li>La aplicación propiamente dicha.</li>
+<li>ODBC driver manager: Módulo separado por cada BD a la que se quiere acceder. A este módulo es al que se conecta dinámicamente la aplicación.</li>
+<li>Driver DBMS/OS/Network: es un controlador que hace transparente el gestor de BD, el SO y los protocolos de red.</li>
+<li>El propio servidor de datos o fuente de datos.</li>
+</ul>
+<p>Esta arquitectura, es la que muestra la figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/odbc.png?w=825" alt=""></p>
+<p>Las aplicaciones como las interfaces gráficas de usuario, los paquetes estadísticos y las hojas de cálculo pueden usar la misma API ODBC, para conectarse a cualquier servidor de BD compatible con ODBC.</p>
+<p>Cada sistema de BD que sea compatible con ODBC proporciona una biblioteca que se debe enlazar con el programa cliente. Cuando este programa cliente realiza una llamada a la API ODBC, el código de la biblioteca se comunica con el servidor de BD para realizar la acción solicitada y obtener los resultados.</p>
+<p>ODBC se base en las normas SQL de interface de nivel de llamada, CLI (Call-Level Interface) desarrolladas por el consorcio industrial X/Open y el grupo SQL Access, pero tienen varias extensiones. La API ODBC define una CLI, una definición de sintaxis SQL y reglas sobre las secuencias admisibles de llamadas CLI. La norma también define los niveles de conformidad para CLI y la sintaxis SQL:</p>
+<ul>
+<li>El nivel central de la CLI tiene comandos para conectarse con BD, para preparar y ejecutar sentencias SQL, para devolver resultados o valores de estado y para administrar transacciones.</li>
+<li>El nivel uno, siguiente nivel de conformidad, exige el soporte de la recuperación de información de los catálogos de los SGBD, como la información sobre las relaciones existentes y los tipos de sus atributos, y otras características que superan la CLI del nivel central.</li>
+<li>El nivel dos exige más características, como la capacidad de enviar y recuperar arrays de valores de parámetros y de recuperar información de catálogo más detallada.</li>
+</ul>
+<h3 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h3><p>¿Qué es JDBC?</p>
+<ul>
+<li>JDBC son las siglas de Java Database Connectivity.</li>
+<li>Es un Java API, para conectar programas escritos en Java a datos almacenados en SGBDR.</li>
+<li>Consiste en un conjunto de clases e interfaces escritos en el lenguaje de programación Java.</li>
+<li>Suministra un API estándar para los programadores, haciendo posible desarrollar aplicaciones con acceso a BD usando “puro” Java API.</li>
+<li>Este estándar es definido por Sun Microsystems, y permitiendo a los diversos suministradores de BD, implementar y extender dicho estándar con su propios JDBC drivers.</li>
+<li>JDBC establece una conexión con la BD, envía sentencias SQL y procesa los resultados.</li>
+<li>Con un pequeño programa “puente” se puede utilizar el interface JDBC, para acceder a las BD a través de ODBC.</li>
+</ul>
+<p>Pasos que hay que realizar en un programa Java utilizando el API JDBC:</p>
+<ul>
+<li>Importación de paquetes: Estos paquetes contienen el propio JDBC y los drivers para una determinada BD.</li>
+<li>Registrar los drivers de JDBC: <em>DriveManager.registerDriver(new oracle.jdbc.driver.OracleDriver());</em> En este caso se registra un driver para acceder a Oracle.</li>
+<li>Abrir una conexión a la BD: <em>Connection conn = DriverManager.getConnection(“jdbc:oracle:thin:@aardvark:1256:teach”, user, password);</em> Se indica el tipo de driver, nombre de host, puerto, nombre de la BD, usuario y password, es decir, todo lo necesario para localizar la BD y poder acceder a ella.</li>
+<li>Crear un objeto de tipo Statement: <em>PreparedStatement pstmt = conn.prepareStatement(x);</em> En este caso x es la sentencia SQL que se quiere ejecutar.</li>
+<li>Procesar el Result Set que nos ha devuelto la BD.</li>
+<li>Cerrar los objetos creados: Result Set y Statement.</li>
+<li>Cerrar la conexión.</li>
+</ul>
+<p>En la figura siguiente, se muestra las cuatro arquitecturas JDBC que existen actualmente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/jdbc.png?w=825" alt=""></p>
+<p>Se reflejan los cuatro tipos de driver con los que puede trabajar JDBC. Son:</p>
+<ul>
+<li>Driver tipo 1: JDBC/ODBC bridge. Acceso a BD a través del API ODBC.</li>
+<li>Driver tipo 2: JDBC Driver (DBMS específico). Acceso directo a una BD concreta.</li>
+<li>Driver tipo 3: JDBC/native bridge. Acceso a BD a través de un driver Java nativo, que está arrancando en la parte del Servidor.</li>
+<li>Driver tipo 4: JDBC middleware. Acceso directo a varias BD. Soporte de COMMIT en dos fases para coordinar las actualizaciones en las diversas BD.</li>
+</ul>
+<h2 id="ESQUEMA-–-RESUMEN"><a href="#ESQUEMA-–-RESUMEN" class="headerlink" title="ESQUEMA – RESUMEN"></a>ESQUEMA – RESUMEN</h2><p>El modelo relacional constituye la segunda generación de los sistemas de BD.</p>
+<p>En 1970 E.F. Codd, basándose en el álgebra y la teoría de conjuntos, propone un nuevo modelo de datos llamado modelo relacional. Sugiere que todos los datos de la BD se podrían representar como una estructura tabular (tablas con columnas y filas, que denominó relaciones) y que esas relaciones se podrían acceder con un lenguaje no procedimental (declarativo). En este tipo de lenguajes, en lugar de escribir algoritmos para acceder a los datos, sólo se necesita un predicado que identifica los registros o combinación de registros deseados. Es más, este nuevo modelo integraba los lenguajes de definición, navegación y manipulación en un solo lenguaje unificado.</p>
+<p>El modelo de datos relacional ha proporcionado beneficios inesperados además del aumento de productividad y facilidad de uso. Es muy adecuado para el enfoque cliente/servidor, el procesamiento paralelo y las interfaces gráficas de usuario.</p>
+<p>El sistema de gestión de BD (SGBD) es una colección de numerosas rutinas de software interrelacionadas, cada una de las cuales es responsable de una tarea específica. El objetivo primordial de un SGBD es proporcionar un entorno conveniente y eficiente para extraer, almacenar y manipular información de la BD.</p>
+<p>El SGBD gestiona centralizadamente todas las peticiones de acceso a la BD, por lo que este paquete funciona como interfaz entre los usuarios y la BD. Además, el SGBD gestiona la estructura física de los datos y su almacenamiento.</p>
+<p>Una de las características más importantes de los SGBD es la independencia entre programas y datos. Para asegurar esta independencia es necesario separar la representación física y lógica de los datos, distinción que fue reconocida oficialmente en 1978, cuando el comité ANSI/X3/SPARC propuso una arquitectura de 3 niveles:</p>
+<ul>
+<li>Nivel interno: Es la representación del nivel más bajo de abstracción, en éste se describe en detalle la estructura física de la BD: dispositivos de almacenamiento físico, estrategias de acceso, índices, etc.</li>
+<li>Nivel conceptual: El siguiente nivel de abstracción describe que datos son almacenados realmente en la BD y las relaciones que existen entre los mismos, esto es, describe la BD completa en términos de su estructura de diseño.</li>
+<li>Nivel externo: Nivel más alto de abstracción, es lo que el usuario final puede visualizar del sistema terminado, describe sólo una parte de la BD al usuario acreditado para verla.</li>
+</ul>
+<p>Los SGBD deben ofrecer lenguajes e interfaces apropiadas para cada tipo de usuario: administradores de la BD, diseñadores, programadores de aplicaciones y usuarios finales. Estos lenguajes son básicamente tres:</p>
+<ul>
+<li>El lenguaje de definición de datos (DDL) define y mantiene la estructura de la BD, es decir, creación, borrado y mantenimiento de BD, tablas, columnas, índices, claves, etc.</li>
+<li>El lenguaje de consulta y manipulación de datos (DML) sirve para obtener, insertar, eliminar y modificar los datos de la BD.</li>
+<li>El lenguaje de Control de Datos (DCL) sirve para trabajar en un entorno multiusuario, donde es importante la protección y la seguridad de los datos y la compartición de datos entre usuarios.</li>
+</ul>
+<p>Los principales módulos del SGBD son:</p>
+<ul>
+<li>El compilador del DDL (Data Definition Language)</li>
+<li>El precompilador del DML (Data Manipulation Language)</li>
+<li>El compilador del DML (Data Manipulation Language)</li>
+<li>El procesador de consultas</li>
+<li>El gestor de BD</li>
+</ul>
+<p>El modelo de datos relacional fue presentado por Codd en 1970, se basa en la representación del universo del discurso mediante el álgebra relacional.</p>
+<p>La estructura básica del modelo relacional es la tabla, que representa una relación, y en la cual se distinguen los siguientes elementos: Relación, Atributos, Dominio, Tuplas, Cardinalidad de la relación y Grado de la relación.</p>
+<p>Los operadores asociados al modelo de datos relacional forman el álgebra relacional. Se puede demostrar matemáticamente que ésta álgebra es completa, o sea, que por medio de ella se puede realizar cualquier acceso a la BD. Los operandos con los que trabaja el álgebra son relaciones del modelo relacional y los operadores básicos son: Unión, Diferencia, Producto cartesiano, Proyección y Selección.</p>
+<p>En el nivel superior de la descripción del modelo se establecen restricciones adicionales a las propias del modelo relacional que tienen como fin mantener la integridad y validez de los datos almacenados así como aumentar el grado de información que el esquema lógico de datos proporciona. Estas restricciones son dos: Restricciones de Usuario y de Integridad referencial.</p>
+<p>Ahora vamos a estudiar los lenguajes formales de consulta de lenguajes “puros”. Los tres que se estudian no son cómodos de usar, pero a cambio sirven como base formal para lenguajes de consulta que sí resultan cómodos.</p>
+<p>El álgebra relacional es un lenguaje de consulta procedimental. Consta de un conjunto de operaciones que toman como entrada una o dos relaciones y producen como resultado una nueva relación.</p>
+<p>Operaciones fundamentales del álgebra relacional:</p>
+<ul>
+<li>Unarias: Porque operan con una sola relación de la tabla. Son:<ul>
+<li>Selección: Si P es un predicado compuesto por operadores lógicos, aritméticos y de comparación y sus operandos son los valores de los atributos de una relación R, entonces la selección σP(R) es el conjunto de tuplas de la relación R que hacen verdadera la condición establecida por el predicado P.</li>
+<li>Proyección: Si x es un subconjunto de atributos de la relación R, entonces la proyección πx(R) es la relación formada por las columnas de R correspondientes a los atributos x.</li>
+<li>Renombramiento: Dada una expresión E del álgebra relacional, la expresión ρx(E), devuelve el resultado de la expresión E con nombre x.</li>
+</ul>
+</li>
+<li>Binarias: Porque operan con dos relaciones. Son:<ul>
+<li>Unión: La unión de dos relaciones R y S (R U S) es el conjunto formado por todas las tuplas de R más todas las tuplas de S. Este operador sólo se puede aplicar a relaciones del mismo grado y con los mismos atributos.</li>
+<li>Diferencia de conjuntos: La diferencia de dos relaciones R y S (R – S) es el conjunto formado por todas las tuplas de R que no están en S.</li>
+<li>Poroducto cartesiano: La definición formal dice: El producto cartesiano de dos operaciones R y S, de grados _m_ y _n_ respectivamente, se denota R x S y es el conjunto formado por todas las posibles tuplas de <em>m + n</em> atributos en las que los _m_ primeros atributos son de R y los _n_ restantes pertenecen a S.</li>
+</ul>
+</li>
+</ul>
+<p>Otras operaciones derivadas de las fundamentales:</p>
+<ul>
+<li>La operación intersección de conjuntos denotada por ∩, permite buscar las tuplas que estén al tiempo en las dos relaciones sobre las que actúa.</li>
+<li>La operación unión natural forma un producto cartesiano de sus dos argumentos, realiza una selección forzando la igualdad de los atributos que aparecen en ambas relaciones y, finalmente elimina los atributos duplicados.</li>
+<li>La operación asignación, denotada por ←, actúa de manera parecida a la asignación de los lenguajes de programación.</li>
+</ul>
+<p>Las consultas se expresan en el cálculo relaciona de tuplas como: { _t_ │ P( _t_ )}, es decir, son el conjunto de todas las tuplas tales que el predicado P es cierto para _t_ . Se utilizar la notación _t_ [A] para denotar el valor de la tupla _t_ en el atributo A y _t_ Є R para denotar que la tupla _t_ está en la relación R.</p>
+<p>Hay una segunda forma de cálculo relacional denominada cálculo relacional de dominios. Esta forma utiliza variables de dominio que toman sus valores del dominio de un atributo, en vez de tomarlos de una tupla completa. El cálculo relacional de dominios, sin embargo, se halla estrechamente relacionado con el cálculo relacional de tuplas.</p>
+<p>El lenguaje SQL es un lenguaje de alto nivel para dialogar con los SGBD-R. Como todo lenguaje de un SGBD, está formado por tres componentes claramente diferenciados:</p>
+<ul>
+<li>Lenguaje de definición de datos: CREATE, ALTER y DROP.</li>
+<li>Lenguaje de manipulación de datos: INSERT, UPDATE, DELETE y SELECT.</li>
+<li>Lenguaje de control de datos: GRANT, REVOKE, COMMIT y ROLLBACK.</li>
+</ul>
+<p>Existen dos estándares de conectividad para SQL:</p>
+<ul>
+<li>El estándar de conectividad abierta de BD (ODBC, Open Data Base Connectivity) definido por Microsoft para el uso con cualquier lenguaje de programación.</li>
+<li>El estándar de conectividad de Java con BD (JDBC, Java Data Base Connectivity) que proporciona las características correspondientes para el lenguaje Java.</li>
+</ul>
+<p>¿Qué es ODBC?</p>
+<ul>
+<li>ODBC son las siglas de Open Database Connectivity.</li>
+<li>Es un interface estándar de programas de aplicación (API) para acceso a BD.</li>
+<li>Impulsado por SQL Access Group, principalmente por Microsoft, desde 1992.</li>
+<li>Usando sentencias ODBC en un programa, se puede acceder a las tablas de diferentes BD, tales como: Access, dBase, DB2, etc.</li>
+<li>Permite a los programas utilizar sentencias SQL que acceden a las BD, sin tener que conocer los interfaces propietarios de dichas BD.</li>
+<li>ODBC maneja la sentencia SQL requerida y la convierte en una petición a la BD.</li>
+<li>No soporta COMMIT en dos fases, para coordinar el acceso simultáneo a varias BD.</li>
+</ul>
+<p>¿Qué es JDBC?</p>
+<ul>
+<li>JDBC son las siglas de Java Database Connectivity.</li>
+<li>Es un Java API, para conectar programas escritos en Java a datos almacenados en SGBDR.</li>
+<li>Consiste en un conjunto de clases e interfaces escritos en el lenguaje de programación Java.</li>
+<li>Suministra un API estándar para los programadores, haciendo posible desarrollar aplicaciones con acceso a BD usando un “puro” Java API.</li>
+<li>Este estándar es definido por Sun Microsystems, y permitiendo a los diversos suministradores de BD, implementar y extender dicho estándar con sus propios JDBC drivers.</li>
+<li>JDBC establece una conexión con la BD, envía las sentencias SQL y procesa los resultados.</li>
+<li>Con un pequeño programa “puente” se puede utilizar el interface JDBC, para acceder a las BD a través de ODBC.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/356384003/TICB1-SGBD-relacionales" rel="external nofollow noopener noreferrer" target="_blank">Sribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t05/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T05
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B4/b4-t11/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B4-T11</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T09 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T09">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Lenguajes de marca o etiqueta. Características y funcionalidades. SGML, HTML, XML y sus derivaciones. Lenguajes de script.Lenguajes de Marca o EtiquetaLa idea de separar en un documento el contenido d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T09">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t09/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Lenguajes de marca o etiqueta. Características y funcionalidades. SGML, HTML, XML y sus derivaciones. Lenguajes de script.Lenguajes de Marca o EtiquetaLa idea de separar en un documento el contenido d">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/sgml1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/sgml2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/sgml3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/sgml4.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/sgml5.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/html1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/caracter.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:28:48.279Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T09">
+<meta name="twitter:description" content="Lenguajes de marca o etiqueta. Características y funcionalidades. SGML, HTML, XML y sus derivaciones. Lenguajes de script.Lenguajes de Marca o EtiquetaLa idea de separar en un documento el contenido d">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/sgml1.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file active"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t09" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t09/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t09.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t09.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t09.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T09
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Lenguajes-de-marca-o-etiqueta-Caracteristicas-y-funcionalidades-SGML-HTML-XML-y-sus-derivaciones-Lenguajes-de-script"><a href="#Lenguajes-de-marca-o-etiqueta-Caracteristicas-y-funcionalidades-SGML-HTML-XML-y-sus-derivaciones-Lenguajes-de-script" class="headerlink" title="Lenguajes de marca o etiqueta. Características y funcionalidades. SGML, HTML, XML y sus derivaciones. Lenguajes de script."></a>Lenguajes de marca o etiqueta. Características y funcionalidades. SGML, HTML, XML y sus derivaciones. Lenguajes de script.</h1><h2 id="Lenguajes-de-Marca-o-Etiqueta"><a href="#Lenguajes-de-Marca-o-Etiqueta" class="headerlink" title="Lenguajes de Marca o Etiqueta"></a>Lenguajes de Marca o Etiqueta</h2><p>La idea de separar en un documento el contenido del formato apareció por primera vez en los años 60. Empieza a utilizarse el concepto de “marca” o “etiqueta” como texto que se añade a los datos y que proporciona información sobre ellos. Un lenguaje de marca seria un modo formalizado de proporcionar estas marcas.</p>
+<p>La definición de un lenguaje de marca debe proporcionar:</p>
+<ul>
+<li>Qué marcas están permitidas.</li>
+<li>Qué marcas son obligatorias.</li>
+<li>Como se distinguen las marcas del texto.</li>
+<li>El significado de cada marca.</li>
+</ul>
+<p>El primer modo de utilización de marcas que se exploró fueron las marcas procedurales. Se preocupaban sobre todo de la presentación y del formato del texto. Con las marcas procedurales se instruye al agente en qué hacer con el texto y especifica como procesarlo. Entre los lenguajes de marca procedurales se encuentran RTF y PostScript.</p>
+<p>A finales de los años 60 la GCA, Graphic Communication Association, crea un comité de estudio que llega a la conclusión de que las marcas deberían ser más descriptivas que procedurales y deberían tener en cuenta la estructura del documento. Las marcas descriptivas, también llamadas generalizadas, además de identificar la estructura del documento se centran en qué es el texto y no especifican los procedimientos que hay que aplicarle.</p>
+<p>A finales de los 60 IBM retoma los trabajos de la GCA y crea un lenguaje de marca al que llamaron GML (Generalized Markup Language, que además coincide con las iniciales de sus creadores Goldfarb, Mosher y Lorie). GML estaba basado en las ideas de codificación genérica, pero en vez de tener un simple esquema de etiquetas, introduce el concepto de tipo de documento formalmente definido con una estructura explícita de elementos anidados.</p>
+<p>A finales de los 70 ANSI crea un comité para elaborar una norma basada en el lenguaje GML. El primer borrador aparece en 1980. En 1984 ISO se une al grupo de trabajo de ANSI y en1986 SGML (Standard Generalized Markup Language) se convierte en estándar internacional (ISO 8879/1986). “SGML es el estándar internacional para la definición de métodos de representación de textos en forma electrónica, independientes del dispositivo e independientes del sistema”.</p>
+<p>SGML, más que un lenguaje, es un metalenguaje para la definición y la estandarización de la estructura de los documentos. Define una gramática con la que se pueden crear otros lenguajes de marca. Los lenguajes de marca específicos escritos de acuerdo con los requerimientos de SGML se llaman aplicaciones SGML.</p>
+<p>Uno de esos lenguajes derivados de SGML es HTML, Hypertext Markup Language. En 1989, Tim Berners-Lee creó una propuesta de un sistema de documentos hipertexto para ser usado en la comunidad del CERN (Conseil Européen pour la Recherche Nucléaire). Este sistema al que denominó posteriormente “The World Wide Web” perfilaba los componentes básicos necesarios que definen la WWW hoy:</p>
+<ul>
+<li>Ser independiente del sistema.</li>
+<li>Ser capaz de utilizar muchos de los recursos de información existentes y permitir añadir de una manera sencilla nueva información.</li>
+<li>Contar con un mecanismo de transporte de los documentos entre diferentes redes (HTTP).</li>
+<li>Contar con un esquema de identificación para el direccionamiento de documentos de hipertexto tanto local como remoto.</li>
+</ul>
+<p>Berners-Lee definió y desarrolló el lenguaje HTML, usando SGML, durante el desarrollo del primer navegador Web. En 1991 puso el código y las especificaciones del sistema, incluyendo HTML, en Internet. Rápidamente empezó a haber navegadores para una amplia variedad de plataformas y según crecía el número de implementaciones, así crecía la variedad de las mismas. El HTML especificado inicialmente (versión 1) se desarrolló más allá de su forma inicial sin que se hubiera creado todavía un estándar real.</p>
+<p>HTML 2.0 se convirtió en 1995 en el estándar oficial del lenguaje y fue considerado, en general, una decepción. En aquel año ya estaba en el mercado la versión 2.0 de Navigator, el navegador de Netscape, con implementaciones de marcos y referencias multimedia, muy por encima de las restricciones que imponía el estándar. La especificación estándar de HTML llegó a ser la versión 4.</p>
+<p>Sin embargo pronto se puso de manifiesto, sobre todo después de la guerra de etiquetas entre Microsoft y Netscape y con la llegada de las nuevas aplicaciones Web, que eran necesarios medios más flexibles y mejores que los proporcionados por HTML para describir los datos.</p>
+<p>En 1996, el W3C, patrocinó un grupo de expertos en SGML para definir un lenguaje de marca con la potencia de SGML y la simplicidad de HTML. Se eliminaron las partes más crípticas de SGML y lo considerado no esencial. El resultado fue la especificación de XML. XML es un subconjunto de SGML y al igual que él, más que un lenguaje de marca es un metalenguaje, es un instrumento para crear otros lenguajes de marca.</p>
+<h2 id="Caracteristicas-y-Funcionalidades"><a href="#Caracteristicas-y-Funcionalidades" class="headerlink" title="Características y Funcionalidades"></a>Características y Funcionalidades</h2><p>Podemos considerar dos grupos en los lenguajes de marca: los procedurales y los descriptivos o generalizados.</p>
+<p>Los lenguajes de marca procedurales se caracterizan por:</p>
+<ul>
+<li>Contener instrucciones claras para el programa visualizador o impresor sobre la forma en que se debe mostrar el contenido del documento, con un determinado estilo y formato.</li>
+<li>Dependencia de las instrucciones de formateado del medio de presentación, de forma que el documento final, el formado por el contenido original más las marcas, no es portable a otros medios.</li>
+</ul>
+<p>Por otra parte, los lenguajes de marca generalizados se caracterizan por:</p>
+<ul>
+<li>Marcar las estructuras del texto: las marcas se dirigen más a describir el contenido del documento, su estructura lógica, que a expresar instrucciones detalladas de formateado.</li>
+<li>Separar la estructura del documento de su aspecto.</li>
+<li>Ser independientes del software que procesa el documento.</li>
+<li>Facilitar el procesamiento automático de la extracción de la información contenida en los documentos.</li>
+<li>Facilitar la generación de visualizaciones y presentaciones del documento: permiten la presentación de diferentes vistas del documento dependiendo del dispositivo de visualización y de las preferencias del usuario.</li>
+<li>Utilizar hojas de estilo: la especificación de cómo presentar las estructuras lógicas, aunque a veces es implícita, generalmente es explícita mediante hojas de estilo del documento.</li>
+<li>Tener soporte para lenguajes de script: permiten el uso de lenguajes de script para añadir funcionalidades no proporcionadas por el lenguaje, generalmente comportamiento interactivo y dinámico.</li>
+<li>Proporcionar medios para determinar si un documento es válido o no, es decir si se ajusta a las reglas gramaticales del lenguaje.</li>
+</ul>
+<p>En cuanto a las funcionalidades de los lenguajes de marca generalizados se pueden citar:</p>
+<ul>
+<li>Permiten la publicación de documentos electrónicos en Web.</li>
+<li>Enlace de información a través de enlaces hipertexto, permiten recuperar la información on-line.</li>
+<li>Inclusión de otras aplicaciones, como hojas de cálculo, música, … etc en un documento.</li>
+<li>Diseño de formularios para transacciones electrónicas con otros servicios remotos.</li>
+</ul>
+<h2 id="SGML"><a href="#SGML" class="headerlink" title="SGML"></a>SGML</h2><p>Dos principios significativos que caracterizan a SGML son:</p>
+<ul>
+<li>Independencia de la representación de la información respecto de los programas y sistemas que la crean y procesan. De aquí su énfasis en las marcas generalizadas o descriptivas, y no procedurales. Con la utilización de marcas descriptivas el mismo documento se puede procesar por software diferente, aplicando diferentes instrucciones de procesamiento a cada una de las partes del documento o el mismo procesamiento a diferentes partes.</li>
+<li>Cubrir la necesidad de tener más de una representación para la misma información: una representación abstracta o lógica de la información y una representación de almacenamiento.</li>
+</ul>
+<p>SGML proporciona una herramienta conceptual para el modelado de información estructurada, el documento, y una notación para la representación de estos documentos. Los documentos se representan por medio de tres constructores básicos:</p>
+<ul>
+<li>Los <strong>elementos</strong> : son bloques estructurales, vistos desde un punto de vista lógico o abstracto, que forman parte del documento (por ejemplo cabeceras, párrafos, tablas, enlaces de hipertexto) y contienen datos, otros elementos subordinados o ambas cosas al mismo tiempo.</li>
+<li>Los <strong>atributos</strong> : son propiedades asociadas con un tipo de elemento dado cuyo valor describe a un elemento de ese tipo pero que no forman parte de su contenido (por ejemplo la longitud de una tabla).</li>
+<li>Las <strong>entidades</strong> : son unidades de almacenamiento virtual que contienen una parte del documento o varias partes o el documento completo. SGML define una entidad como una cadena de caracteres que puede ser referenciada como una unidad.</li>
+</ul>
+<p>Para obtener la representación abstracta de la información SGML permite definir la estructura de un documento basándose en la relación lógica entre sus partes. Para marcar esta estructura del documento, en vez de considerar un simple esquema de marcas, introduce los conceptos de tipo de documento y definición de tipo de documento (DTD). Lo mismo que cualquier otra clase de objeto procesada por un ordenador, SGML considera que los documentos tienen tipos. El tipo de documento se define formalmente por su estructura lógica, por las partes que lo constituyen. Una definición de tipo de documento es una especificación formal de la estructura de elementos anidados que componen un documento SGML.</p>
+<p>La distinción entre la representación lógica y la representación de almacenamiento de la información es inherente al procesamiento de la información (si un documento se representa mediante un único volumen o como varios más pequeños es independiente de su representación lógica; y por otra parte hay propiedades del documento, como su localización, que no se ven afectadas por un cambio en su estructura lógica).</p>
+<p>El proporcionar una representación de almacenamiento de la información entra en conflicto con la independencia respecto al sistema. Para resolver este conflicto SGML proporciona la estructura de entidades del documento como un sistema de almacenamiento virtual que interpone entre la estructura de elementos y el sistema real de almacenamiento (el sistema de ficheros, la BD o cualquiera que sea el sistema real).</p>
+<p>Como todo lenguaje SGML tiene una sintaxis. El estándar impone unas reglas formales para distinguir las marcas del contenido del documento, y para el uso y colocación de las marcas. Estas reglas constituyen la sintaxis de SGML. Pero el estándar no impone nombres particulares para los elementos del documento, sólo el concepto de elemento (en realidad se le denomina tipo de elemento), ni impone ninguna estructura particular, sólo una definición formal de la estructura cualquiera que sea ésta.</p>
+<h3 id="Tipos-de-sintaxis-de-SGML-Sintaxis-concreta-de-referencia"><a href="#Tipos-de-sintaxis-de-SGML-Sintaxis-concreta-de-referencia" class="headerlink" title="Tipos de sintaxis de SGML. Sintaxis concreta de referencia."></a>Tipos de sintaxis de SGML. Sintaxis concreta de referencia.</h3><p>En SGML se han definido dos tipos de sintaxis:</p>
+<ul>
+<li>Una <strong>sintaxis abstracta</strong> , que en términos de conceptos abstractos, tales como los roles de los delimitadores y de los conjuntos de caracteres, define como se deben construir las marcas SGML.</li>
+<li>Una <strong>sintaxis concreta</strong> , que define como se han codificado estos conceptos abstractos en una clase específica de documentos SGML.</li>
+</ul>
+<p>Dentro del estándar ISO de SGML se ha establecido formalmente una sintaxis concreta particular, las sintaxis concreta de referencia.</p>
+<p>La definición formal es la siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/sgml1.png?w=825" alt=""></p>
+<p>Contiene 8 subcláusulas que definen:</p>
+<ul>
+<li>Los números decimales de los códigos que se van a ignorar porque son caracteres de control (SUNCHAR).</li>
+<li>El conjunto de caracteres de la sintaxis, que consiste en la declaración del conjunto base de caracteres (BASESET), seguido de cómo se van a usar estos caracteres para definir la sintaxis correcta (DECSET). El conjunto base de caracteres es el definido en ISO 646 y el DECSET muestra que los 128 caracteres, empezando en la posición 0 de la lista, deberían asociarse a posiciones idénticas en la sintaxis concreta de referencia.</li>
+<li>Los códigos que representan caracteres de función requeridos por la sintaxis (FUNCTION). Se definen 4 códigos: el fin e inicio de registro, el espacio y el tabulador horizontal.</li>
+<li>Las reglas que se van a aplicar cuando se definen nombres de elementos, atributos o entidades (NAMING). La sintaxis concreta de referencia sólo permite utilizar los caracteres az, A-Z, 0-9, . (punto) y – (guión) para los nombres y tienen que comenzar con un carácter alfabético.Por defecto SGML suponer que los nombres empiezan con un carácter alfabético, seguido de caracteres alfanuméricos. Las en entradas en LCNMSTR y UCNMSTR permiten indicar qué otros caracteres se van a permitir como carácter inicial de los nombres y las entradas en LCNMCHAR y UCNMCHAR qué caracteres no alfanuméricos se pueden utilizar después del carácter inicial. Las entradas en NAMECASE indican que se permite la sustitución de caracteres en minúsculas por caracteres en mayúsculas en los nombres de elementos y marcas relacionadas, pero no en los nombres de entidad, es decir, los nombres de entidad son sensibles al uso de mayúsculas y minúsculas.</li>
+<li>Los delimitadores de marcas que se van a usar en el documento (DELIM), en este caso, al igual que en las dos subcláusulas siguientes, son los que proporciona SGML por defecto. Algunos de los delimitadores de marca generales proporcionados por defecto se muestran en la tabla siguiente.</li>
+<li>Las palabras reservadas utilizadas en las declaraciones de marcas (NAMES).</li>
+<li>El “conjunto cantidad” (quantity set) requerido por el documento (QUANTITY).</li>
+</ul>
+<p>Delimitadores de la sintaxis concreta de referencia:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/sgml2.png?w=825" alt=""></p>
+<h3 id="Estructura-de-elementos"><a href="#Estructura-de-elementos" class="headerlink" title="Estructura de elementos"></a>Estructura de elementos</h3><p><strong>Marcado genérico. El rol de la DTD.</strong></p>
+<p>El principio de marcado genérico o lógico consiste en marcar la estructura de un documento y comprende dos fases:</p>
+<ul>
+<li>La definición del conjunto de marcas que identifican todos los elementos de un documento, junto con la definición del conjunto de reglas que expresan las relaciones entre los elementos y su estructura (esto es el rol de la DTD).</li>
+<li>La introducción de las etiquetas en el contenido del documento de acuerdo a las reglas establecidas en la DTD.</li>
+</ul>
+<p>Varias instancias de documento pueden pertenecer a la misma clase de documento, es decir, tener la misma estructura lógica. Para describir la estructura formal de todas las instancias de documento de una determinada clase se construye la Definición de Tipo de Documento o DTD para esa determinada clase.</p>
+<p>SGML crea los mecanismos necesarios para describir la estructura de una clase de documentos usando unas declaraciones formales de marcas. Las declaraciones de marcas establecen las marcas que se pueden usar en el documento para delimitar de manera clara y sin ambigüedades su estructura.</p>
+<p>Las declaraciones SGML tienen en general la forma siguiente:</p>
+<p>&lt;!Palabra_clave Param Param_asociados&gt;</p>
+<p>“&lt;!” es el delimitador de apertura de la declaración de marca y “&gt;” es el delimitador de cierre.</p>
+<p>Un caso especial son las declaraciones de comentarios que son declaraciones que sólo contienen comentarios:</p>
+<!-- Texto del comentario -->
+<p>Los dos guiones (–) que son los delimitadores de comentario deben ir inmediatamente después del delimitador de apertura de la declaración de marca e inmediatamente antes del delimitador de cierre, sin espacios en blanco entre ellos.</p>
+<p>Palabra_clave puede ser:</p>
+<ul>
+<li>DOCTYPE: mediante esta declaración se define el tipo de documento, que asigna el nombre en Param al conjunto de declaraciones. Este conjunto de declaraciones puede venir justo aquí a continuación encerrado entre [], o estar en otro fichero, que se identifica en Param_asociados, o en una combinación de ambos lugares. Este conjunto de declaraciones engloba a la DTD y puede incluir cualquier otra declaración de marcas que sea necesaria.</li>
+<li>ELEMENT: para declarar un tipo de elemento en la estructura lógica del documento.</li>
+<li>ATTLIST: para asociar un tipo de elemento con un conjunto de características. Estas características se pueden aplicar a una instancia específica de ese tipo de elemento.</li>
+<li>ENTITY: entre otras cosas permite declarar una cadena corta de texto que signifique otra cadena más larga, para sustituir la primera cadena por la segunda cada vez que sea referenciada en una instancia de documento.</li>
+<li>NOTATION: se utiliza para especificar cualquier técnica especial que se necesite cuando se procesa un documento que contiene datos no SGML como por ejemplo un fichero de gráficos.</li>
+<li>SHORTREF: da nombre a un conjunto de asociaciones entre cadenas cortas de caracteres y marcas.</li>
+<li>USEMAP: para activar el conjunto de SHORTREF nombrado en Param con los elementos nombrados en Param_asociados.</li>
+</ul>
+<p>Una DTD se expresa en el metalenguaje definido por el estándar SGML y en ella se define la estructura del documento en términos de los elementos que puede contener y el orden en el que estos elementos se pueden presentar. La DTD asigna un nombre a cada uno de esos elementos estructurales, el identificador genérico, por medio del cual se puede reconocer el rol del elemento. Cuando estos identificadores genéricos se colocan entre los delimitadores de marcas forman las etiquetas utilizadas para identificar el inicio y el final de cada elemento.</p>
+<p>Una vez definida la DTD se puede marcar la instancia de documento siguiendo las reglas definidas. Se podría marcar un documento sin una DTD formal, simplemente sería necesario un conjunto de etiquetas, pero no se puede comprobar la validez de un documento sin una DTD.</p>
+<p>Para poder validar un documento es necesario algún modo de asegurar que se ha marcado sin errores y que la estructura es coherente. Para poder cumplir estos objetivos, en la DTD a parte de dar el nombre de los elementos que se pueden utilizar, sus posibles atributos y valores por defecto para estos atributos, se define también el contenido de cada elemento, el orden en que deben ocurrir estos elementos y cuantas ocurrencias pueden tener, el nombre de las referencias de entidad que se pueden utilizar y si se pueden omitir las etiquetas de inicio o final.</p>
+<p>Los documentos SGML se pueden validar utilizando un software especial de análisis denominado parser SGML. Un parser SGML realiza tres tareas:</p>
+<ul>
+<li>Valida la estructura y la validez sintáctica de la propia DTD antes de analizar la instancia del documento para garantizar que no hay ambigüedades en la DTD.</li>
+<li>Analiza la estructura del documento.</li>
+<li>Comprueba si hay errores de marcado en el documento. Un documento sin errores se dice que ha sido validado.</li>
+</ul>
+<p><strong>Elementos. Declaración de tipos de elementos.</strong></p>
+<p>El rol de un elemento SGML depende del contexto en el que se encuentre. Tenemos dos roles principales:</p>
+<ul>
+<li>Elemento documento base. Es el primer elemento especificado en cualquier documento SGML. Este elemento debe ser formalmente declarado mediante una entrada de declaración de tipo de elemento que tenga el mismo nombre que el de la declaración de tipo de documento.</li>
+<li>Elementos anidados. Se pueden anidar otros elementos entre las dos etiquetas que identifican los límites del elemento documento base. El nivel de anidamientos que se pueden tener depende de la sintaxis concreta que se esté siguiendo. En la sintaxis concreta de referencia se pueden usar hasta 24 niveles de anidamiento.</li>
+</ul>
+<p>Una declaración de tipo de elemento tiene la forma:</p>
+<p>&lt;!ELEMENT nombre_elem n m modelo&gt;</p>
+<p>donde:</p>
+<ul>
+<li>nombre_elem: es el nombre del tipo de elemento (su identificador genérico) que lo identifica de manera única.</li>
+<li>n m: son los modificadores de minimización. Son reglas para incluir u omitir las etiquetas de inicio y fin respectivamente. Un – (guión) indica que la etiqueta (de inicio o fin) es obligatoria y una o (mayúscula o minúscula) que es opcional.</li>
+<li>modelo: es bien una declaración formal del tipo de datos que puede contener el elemento, bien un modelo de contenido, que muestra que subelementos pueden o deben formar parte del tipo de elemento que se está declarando.</li>
+</ul>
+<p>Cuando varios tipos de elementos comparten el mismo contenido y modificadores de minimización se puede sustituir el nombre del tipo de elemento por un grupo de nombres que es un conjunto de nombre de tipo de elemento conectados, generalmente por conectores OR, y encerrados entre paréntesis:</p>
+<p>&lt;!ELEMENT (nombre_elem1 | … | nombre_elemN) n m modelo&gt;</p>
+<p>Cuando un elemento puede contener subelementos se debe definir el modelo de contenido como un grupo de modelo. Los grupos de modelo son uno o más nombres de tipos de elementos unidos mediante conectores de ordenación y encerrados entre paréntesis.</p>
+<p>Los conectores de ordenación se utilizan para especificar un orden en un grupo y son:</p>
+<ul>
+<li>, (coma) conector de secuencia: especifica una secuencia estricta.</li>
+<li>&amp; conector AND: se permite cualquier orden.</li>
+<li>| conector OR: puede aparecer uno y sólo uno (o exclusivo).</li>
+</ul>
+<p>Los grupos de modelo utilizan además indicadores de ocurrencia. Los indicadores de ocurrencia modifican a un grupo o a un elemento individual y son:</p>
+<ul>
+<li>?: opcional, 0 ó 1.</li>
+<li>+: requerido y puede repetirse, 1 ó más.</li>
+<li>*: opcional y puede repetirse, 0 ó más.</li>
+</ul>
+<p>La ausencia de uno de estos indicadores implica que el elemento, o grupo de elementos, tiene que ocurrir una vez y sólo una.</p>
+<p>Los indicadores de ocurrencia tienen una precedencia mayor que los conectores de ordenación.</p>
+<p>Para indicar en los modelos de grupo un punto en el cual el elemento puede contener texto se utiliza el indicador de nombre reservado, #, seguido de PCDATA (parsed character data). #PCDATA indica que en ese lugar del modelo el elemento contiene texto que ha sido comprobado por el parser SGML para asegurar que se han identificado todas las marcas y las referencias de entidad.</p>
+<p>Cuando un elemento no tiene subelementos, su contenido se puede declarar como uno de los siguientes tipos de contenidos declarados:</p>
+<ul>
+<li>RCDATA (replaceable character data): puede contener texto, referencias de carácter (una referencia que es reemplazada por un único carácter) o referencias de entidad que se resuelven en caracteres válidos SGML.</li>
+<li>CDATA (character data): contiene sólo caracteres válidos SGML.</li>
+<li>EMPTY: no tiene contenido.</li>
+</ul>
+<p>Para los elementos con contenido declarado, la palabra clave sustituye al grupo de modelo, incluyendo los paréntesis.</p>
+<p>Los grupos de modelo se pueden calificar añadiendo listas de excepciones. Hay dos tipos de excepciones:</p>
+<ul>
+<li>Excepciones de exclusión: identifican elementos que no se pueden utilizar mientras el elemento actual esté sin cerrar.</li>
+<li>Excepciones de inclusión: definen elementos que se pueden incluir en cualquier punto en el grupo de modelo.</li>
+</ul>
+<p><strong>Atributos. Declaración de listas de definición de atributos.</strong></p>
+<p>Un atributo es un parámetro nominado que se utiliza para calificar un elemento. Se introduce en la etiqueta de inicio del elemento.</p>
+<p>Hay dos partes en la especificación de un atributo, su nombre y su valor, que se unen mediante un indicador de valor (=):</p>
+<p>&lt;nom_elemen nom_atrib=”valor_atrib”&gt;</p>
+<p>Los atributos se declaran en declaraciones de listas de definición de atributos. Su formato es:</p>
+<p>&lt;!ATTLIST elem_asoc definicion_atrb1<br>                    ……………<br>                    definicion_atrbN&gt;</p>
+<p>donde elem_asoc es el elemento al que se asocia la lista de atributos y cada definicion_atrib es la definición de un atributo.</p>
+<p>Cada definición de atributo consiste en un nombre de atributo, un valor declarado y un valor por defecto, separados entre ellos por carácter separador.</p>
+<p>Una valor declarado puede ser un nombre reservado que identifica el tipo de valores que se pueden introducir o una lista de valores de atributo encerrada entre paréntesis.</p>
+<p>Los nombres reservados que se pueden utilizar para los tipos de valores son:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/sgml3.png?w=825" alt=""></p>
+<p>Un valor por defecto es o bien un valor específico o uno de los nombres reservados siguientes:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/sgml4.png?w=825" alt=""></p>
+<h3 id="Estructura-de-Entidades"><a href="#Estructura-de-Entidades" class="headerlink" title="Estructura de Entidades"></a>Estructura de Entidades</h3><p>La estructura de entidades es un modelo virtual de almacenamiento que permite dividir un documento arbitrariamente para facilitar su gestión. Es virtual porque no hay relación uno a uno entre las entidades y los objetos reales de almacenamiento.</p>
+<p>La estructura de entidades es independiente de la estructura de elementos.</p>
+<p><strong>Entidades. Tipos de entidades.</strong></p>
+<p>SGML define una entidad como una cadena de caracteres que puede ser referenciada como una unidad.</p>
+<p>Un documento SGML completo es una entidad llamada entidad documento SGML y que pueden contener referencias a otras entidades.</p>
+<p>Cada entidad embebida en una entidad de documento SGML tiene dos componentes: una declaración de entidad y una o más referencias de entidad. La declaración de entidad define el nombre y el contenido de la entidad. Las referencias de entidad identifican los puntos en los que el contenido se va a introducir en el documento.</p>
+<p>Hay dos tipos principales de entidades:</p>
+<ul>
+<li>Entidades generales: contienen datos que van a formar parte de un documento. Se pueden referenciar en la instancia de documento o en el texto de sustitución de las declaraciones de otras entidades generales.</li>
+<li>Entidades de parámetro: contienen caracteres que se necesitan como parte de alguna declaración SGML. Se pueden referenciar sólo en las declaraciones de marcas.</li>
+</ul>
+<p>Ambas categorías se pueden subdividir en:</p>
+<ul>
+<li>Entidades externas: el texto de sustitución está definido por referencia a un identificador SYSTEM (datos que especifican el identificador del fichero, su localización y cualquier otra información que permitan localizar la entidad) o PUBLIC (un literal que identifica texto público, es decir, que es conocido más allá del contexto de un único documento o de un entorno de un sistema), es decir, el texto está almacenado en un fichero separado.</li>
+<li>Entidades internas: el texto de sustitución está definido dentro del prólogo.</li>
+</ul>
+<p>En la sintaxis concreta de referencia las referencias de entidad general tienen la forma &amp;nombre_entidad; o simplemente &amp;nombre_entidad si va seguida de un espacio en blanco de un código de final de registro; y las referencias de entidad de parámetro %nombre_entidad; o %nombre_entidad.</p>
+<p><strong>Entidad documento SGML</strong></p>
+<p>Una entidad documento SGML tiene tres secciones:</p>
+<ul>
+<li>Una <strong>declaración SGML</strong> (opcional). Es la parte de un documento SGML donde se define el esquema de codificación utilizado en su preparación. En la declaración se especifica, entre otras cosas, el conjunto de caracteres que se está utilizando y los caracteres usados para delimitar las marcas. Para los documentos que se transmiten sin la declaración SGML, llamados documentos básicos SGML, se asume que la declaración es la proporcionada por el estándar ISO de SGML para un documento básico típico.</li>
+<li>Un <strong>prólogo de documento</strong> . Contiene la definición de las estructuras del documento (la DTD) y otra información relacionada. La indicación de qué DTD se está usando en el documento se hace por medio de una declaración de tipo de documento (declaración DOCTYPE).</li>
+<li>Una <strong>instancia de documento</strong> . Es el contenido, más las marcas, del documento.</li>
+</ul>
+<p>Un ejemplo muy simple de documento SGML es el siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/sgml5.png?w=825" alt=""></p>
+<p><strong>Declaración de entidades</strong></p>
+<p>Las declaraciones de entidades generales tienen la forma:</p>
+<p>&lt;!ENTITY nombre_entidad texto_de_sustitución&gt;</p>
+<p>El texto de sustitución puede tener códigos de marcas, referencias a otras entidades, referencias de carácter, etc. que se interpretan cuando se añade el texto de sustitución al documento.</p>
+<p>Hay variaciones de esta declaración básica, entre ellas las que permiten especificar:</p>
+<ul>
+<li>Entidades que contienen sólo datos de carácter que no deberían incluirse en un análisis de marcado. Esto se hace incluyendo la palabra clave CDATA entre el nombre de la entidad y su texto de sustitución. Esto significa que los caracteres dentro de la cadena de sustitución que posiblemente podrían ser interpretados como marcas serán ignorados.</li>
+<li>Entidades que contienen texto de sustitución específico del sistema. Para ello se incluye la palabra clave SDATA entre el nombre de la entidad y su texto de sustitución.</li>
+<li>Una entidad por defecto cuyo texto se usará cuando se referencia a una entidad cuyo nombre no se reconoce como una de las entidades declaradas. Esto se hace sustituyendo en la declaración nombre_entidad por la palabra reservada #DEFAULT.</li>
+</ul>
+<p>Las declaraciones de entidades de parámetro tienen la forma:</p>
+<p>&lt;!ENTITY % nombre_entidad texto_de_sustitución”&gt;</p>
+<p>Generalmente el texto de sustitución está formado por una serie de nombres de tipos de elemento separados por conectores de ordenación.</p>
+<p>Las entidades de parámetro tienen que declararse antes de que sean referenciadas.</p>
+<h3 id="DSSSL"><a href="#DSSSL" class="headerlink" title="DSSSL"></a>DSSSL</h3><p>DSSSL (Document Style Semantics and Specification Language) definido en el estándar ISO/IEC 10179:1996 proporciona un mecanismo de propósito general para transformar documentos y para asociar instrucciones de formateado a documentos codificados utilizando SGML, tanto on-line como off-line.</p>
+<p>DSSSL tiene dos componentes principales:</p>
+<ul>
+<li>Un lenguaje de transformación. Se utiliza para especificar transformaciones estructurales sobre ficheros fuente SGML, por ejemplo, como se fusionan dos o más documentos, como se generan índices o tablas de contenido, etc.</li>
+<li>Un lenguaje de estilo. Se utiliza para especificar el formato de una manera independiente de la plataforma. Para hacer posible una implementación limitada del lenguaje de estilo, dentro de él se creó CQL (Core Query Language) y CEL (Core Expression Language), que no contienen ciertas características del lenguaje de estilo designadas como opcionales.</li>
+</ul>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>Como ya se ha comentado HTML es una aplicación de SGML que ha sido establecio como estándar internacional (ISO/EIC 15445:2000). HTML se utiliza para la publicación de documentos en Web y para definir la estructura de los elementos y los enlaces entre ellos.</p>
+<p>Entre las características y reglas básicas de HTML están:</p>
+<ul>
+<li>Los documentos tienen una estructura bien definida.</li>
+<li>Los documentos se estructuran utilizando elementos.</li>
+<li>La mayoría de los elementos son pares de etiquetas: una etiqueta de inicio y una de cierre. Algunos elementos tienen etiquetas de cierre opcionales y otros tienen una única etiqueta de apertura.</li>
+<li>Las etiquetas tienen la forma &lt;nom_elem&gt; o &lt;nom_elem&gt;&lt;/nom_elem&gt;</li>
+<li>Las etiquetas deben estar anidadas, no cruzadas.</li>
+<li>Los elementos pueden tener atributos: &lt;nom_elem nom_atributo=”valor”&gt;. El valor del atributo debería ir entre comillas.</li>
+<li>Los nombres de elementos no son sensibles al uso de mayúsculas o minúsculas pero sí podría serlo el valor de los atributos.</li>
+<li>Los navegadores ignoran los elementos o atributos desconocidos.</li>
+<li>Los navegadores colapsan los espacios en blanco a un único espacio, esto incluye a los tabuladores, saltos de línea y retorno de carro.</li>
+</ul>
+<h3 id="Estructura-de-un-documento-HTML"><a href="#Estructura-de-un-documento-HTML" class="headerlink" title="Estructura de un documento HTML"></a>Estructura de un documento HTML</h3><p>De la DTD de cualquier versión de HTML se puede derivar una plantilla básica para un documento HTML:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/html1.png?w=825" alt=""></p>
+<p>La primera línea, la declaración DOCTYPE, muestra la DTD que se sigue en el documento. Dentro de la etiqueta <html> se incluyen las dos secciones principales que tiene un documento HTML: la cabecera y el cuerpo. La cabecera contiene el título y otra información complementaria sobre el documento. En el cuerpo es donde va el contenido del documento con las marcas asociadas a su estructura y quizá presentación.</html></p>
+<p>Todo documento debe contener una etiquete de inicio de documento al principio, <html> y una etiqueta de fin de documento, </html> al final del documento. Contiene un único elemento HEAD y un único elemento BODY.</p>
+<p>Las etiquetas <head><meta name="generator" content="Hexo 3.8.0"> y </head> marcan el inicio y el final de la cabecera.</p>
+<p>Las etiquetas <body> y </body> marcan el inicio y fin del cuerpo. El elemento body delimita el contenido del documento y sus atributos se utilizan para efectuar cambios que afecten al documento entero como por ejemplo establecer imágenes o colores de fondo.</p>
+<p>En el body están incluidos los elementos de bloque estructurado como encabezamientos, párrafos, listas y tablas. Además contiene también elementos de nivel de texto. Sin embargo, aunque la definición de la presentación física de esa estructura lógica debería estar definida en otro sitio (en hojas de estilo por ejemplo), HTML no es un lenguaje de marcado lógico puro y tiene etiquetas físicas que se pueden utilizar para formatear y dar un aspecto determinado al contenido del documento.</p>
+<h3 id="Elementos-de-la-cabecera-del-documento"><a href="#Elementos-de-la-cabecera-del-documento" class="headerlink" title="Elementos de la cabecera del documento"></a>Elementos de la cabecera del documento</h3><p>Según la especificación estricta, los elementos que pueden aparecer en la cabecera son: <strong>base, link, meta, script, style y title</strong> .</p>
+<p>El elemento <strong>title</strong> da un título al documento. Cuando se visualiza el documento en un navegador el título aparece en la barra del mismo. Su sintaxis es: <title>titulo_documento</title>.</p>
+<p>Todo documento debe tener <strong>exactamente un elemento tiltle</strong> en la cabecera. El título puede contener texto plano y referencias de carácter. No se permite ninguna otra marca.</p>
+<p>El elemento <strong>style</strong> embebe una hoja de estilo en el documento y la cabecera puede contener cualquier número de ellos. Tiene un <strong>atributo obligatorio, type,</strong> más otros opcionales. El atributo TYPE especifica el tipo de contenido del lenguaje de estilo. Por ejemplo, para CSS (Canscading Style Sheets) el valor del atributo debería ser “text/css”.</p>
+<p>Las reglas de estilo se especifican entre la etiqueta de inicio <style> y la etiqueta de fin </style> como se fuera una declaración de comentario:</p>
+<style type="tipo\_contenido">
+<!--
+     REGLAS DE ESTILO
+-->
+</style>
+
+<p>El elemento <strong>script</strong> incluye un script de cliente en el documento. La cabecera puede contener cualquier número de elementos script (se permiten también en el body).</p>
+<p>Tiene un atributo obligatorio, <strong>type</strong> , para especificar el tipo de contenido del lenguaje de script, por ejemplo “text/javascript”. Este atributo ha sustituido al atributo <strong>language</strong> en versiones anteriores, que se mantiene en esta versión como “desaprobado” (deprecated), donde se especifica el nombre del lenguaje.</p>
+<p>Un script embebido se da como el contenido del elemento script y debe ir como si fuera una declaración de comentario:</p>
+<p>Mediante el atributo opcional <strong>src</strong> se permite especificar la localización de un script externo, ya sea local o remoto. En este caso si hubiera un script embebido se ignora.</p>
+<p>El elemento <strong>meta</strong> especifica pares nombre-valor para proporcionar metainformación sobre el documento, <strong>link</strong> especifica una relación entre el documento actual y otros recursos y <strong>base</strong> proporciona una dirección base para interpretar URLs relativas.</p>
+<h3 id="Marcas-Basicas"><a href="#Marcas-Basicas" class="headerlink" title="Marcas Básicas"></a>Marcas Básicas</h3><p>Antes de comenzar a examinar las principales marcas decir que en HTML 4 se han añadido tres conjuntos de atributos a prácticamente todos los elementos.</p>
+<p>Un primer conjunto de cuatro atributos, que se usan sobre todo en las hojas de estilo y lenguajes de script:</p>
+<ul>
+<li><strong>id</strong> : asigna un nombre único en el documento al elemento.</li>
+<li><strong>class</strong> : indica la clase o clases a las que pertenece el elemento (usado en hojas de estilo).</li>
+<li><strong>style</strong> : añade información de hoja de estilo directamente en la etiqueta.</li>
+<li><strong>title</strong> : se utiliza para dar un texto de aviso sobre un elemento o su contenido.</li>
+</ul>
+<p>Se ha añadido también un conjunto de atributos manejadores de eventos para poder añadir código de scripts que se definen en múltiples elementos. Los manejadores de eventos son: <strong>onclick, ondblclick, onkeydown, onkeypress, onkeyup, onmousedown, onmousemove, onmouseup, onmouseover y onmouseout</strong> .</p>
+<p>El último grupo está relacionado con los distintos idiomas. Los dos atributos que contempla son <strong>dir</strong> , que permite indicar la dirección del texto como ltr (de izquierda a derecha) o rtl (de derecha a izquierda); y <strong>lang</strong> que permite indicar el idioma utilizado.</p>
+<p><strong>Elementos de nivel de bloque</strong></p>
+<p><strong>Párrafos y saltos de línea</strong></p>
+<p>El elemento <strong><p></p></strong> indica un párrafo. Generalmente el navegador incluye una línea antes y después del párrafo. Como los encabezamientos, tiene un atributo <strong>align</strong> para indicar el alineamiento.</p>
+<p>La etiqueta <strong><br></strong> inserta un salto de línea en el documento. <br> es un elemento vacío así que no tiene etiqueta de cierre.</p>
+<p><strong>Divisiones y texto preformateado</strong></p>
+<p>La etiqueta <strong><div></div></strong> se utiliza para estructurar un documento en secciones o divisiones. Tiene el atributo align que puede valer right, left o centre para alinear el texto a la derecha a la izquierda o centrado. Existe una etiqueta que es un alias para el elemento div alineado en el centro: <strong><centre></centre></strong> .</p>
+<p>La etiqueta <strong><pre></pre></strong> se utiliza para indicar texto preformateado. El texto entre las etiquetas de inicio y fin de pre conservan todos los espacios en blanco, tabuladores y saltos de línea.</p>
+<p><strong>Listas</strong></p>
+<p>HTML tiene <strong>tres tipos de listas</strong> :</p>
+<ul>
+<li><strong>Ordenadas</strong> : se marcan con <strong><ol></ol></strong> y generalmente se presentan como un esquema numerado.</li>
+<li><strong>No ordenadas</strong> : se marcan con <strong><ul></ul></strong> . Los navegadores generalmente añaden algún símbolo a cada ítem (un círculo o un cuadrado) y añaden una sangría.</li>
+<li><strong>De definición</strong> : se marcan con <strong><dl></dl></strong> . Las listas de definición son listas de pares término-definición, es decir, un glosario.</li>
+</ul>
+<p>Las listas ordenadas y no ordenadas se pueden anidar y los elementos en la lista se definen utilizando la etiqueta <strong><li></li></strong> . En las listas de definición cada término se marca con <strong><dt></dt></strong> y cada definición con <strong><dd></dd></strong> . No se requiere etiqueta de cierre para estos elementos.</p>
+<p>Las listas ordenadas tienen tres atributos:</p>
+<ul>
+<li><strong>compact</strong> : sugiere al navegador que intente compactar la lista.</li>
+<li><strong>type</strong> : establece el esquema de numeración para la lista. Toma los valores “a” para letras minúsculas, “A” para mayúsculas, “i” para números romanos en minúsculas, “I” para números romanos en mayúsculas y “1” para números (es el valor por defecto).</li>
+<li><strong>start</strong> : indica el valor para comenzar la numeración de la lista. Este valor es numérico incluso aunque se hubiera indicado en type un numeral.</li>
+</ul>
+<p><strong>Tablas</strong></p>
+<p>Una tabla se marca con el par de etiquetas <strong><table></table></strong> . Una tabla está compuesta de filas y las filas de celdas. Cada fila se marca con <strong><tr></tr></strong> . Las celdas pueden ser de datos, <strong><td></td></strong> , o cabeceras, <strong><th></th></strong> . El número de filas de la tabla lo determina el número de elementos tr que contenga y el número de columnas el máximo entre los números de celdas de cada fila.</p>
+<p>Por medio de los atributos <strong>colspan</strong> y <strong>rowspan</strong> de los elementos de la tabla se pueden indicar celdas que se expandan al número de columnas o filas indicado.</p>
+<p>Se puede especificar la anchura de la tabla mediante el atributo <strong>width</strong> de table y el grosor del borde con <strong>border</strong> . Los atributos <strong>cellpadding</strong> y <strong>cellspacing</strong> controlan el espacio entre celdas y el espacio entre el borde de la celda y su contenido respectivamente.</p>
+<p><strong>Elementos de nivel de texto</strong></p>
+<p>Los elementos de nivel de texto pueden ser físicos y lógicos. Los físicos especifican como debería presentarse el texto, los lógicos se centran en lo qué es el texto y no en su aspecto.</p>
+<p>Elementos físicos típicos son: <strong><b></b></strong> para negrita; <strong><i></i></strong> para itálica, <strong><sub></sub></strong> para subíndice.</p>
+<p>Elementos lógicos son: <strong><cite></cite></strong> para citas (se suele mostrar en itálica&gt;; <strong><em></em></strong> para énfasis (también se muestra en itálica); <strong><strong></strong></strong> para mayor énfasis (se suele mostrar en negrita).</p>
+<p><strong>Otros elementos y entidades</strong></p>
+<p><strong>Encabezados</strong></p>
+<p>Los elementos de encabezamiento se utilizan para crear cabeceras en el contenido del documento. Hay seis niveles desde <strong><h1></h1></strong> a <strong><h6></h6></strong> . Su principal atributo es <strong>align</strong> que permite indicar los valores left (por defecto), right, center o justify para alinear el texto a la izquierda, a la derecha, centrado o justificado respectivamente.</p>
+<p><strong>Imágenes</strong></p>
+<p>Para insertar una imagen se utiliza la etiqueta <strong><img></strong> con el URL de la imagen en el atributo <strong>src</strong> . Mediante el atributo <strong>alt</strong> se puede especificar un texto alternativo que se muestra mientras se está cargando la imagen o si esta no puede cargarse. Con los atributos <strong>height</strong> y <strong>width</strong> se dan la altura y la anchura a la imagen; y con <strong>hspace</strong> y <strong>vspace</strong> se especifica un espacio horizontal a la derecha y a la izquierda de la imagen, y un espacio vertical encima y debajo de la imagen. También se puede especificar como se alineará el texto alrededor de la imagen. Para esto se utiliza el atributo <strong>align</strong> con posibles valores top, middle, bottom, left y rigth.</p>
+<p><strong>Entidades de carácter</strong></p>
+<p>Para poner caracteres especiales en el texto (letras acentuadas, espacios en blanco que no se colapsen, etc) se utilizan las entidades de carácter. Se referencian mediante <strong>&codigo;</strong> donde código es un valor numérico o una palabra que indican el carácter real que se quiere poner en el contenido. En la siguiente tabla se dan algunas de estas entidades:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/caracter.png?w=825" alt=""></p>
+<h3 id="Formularios"><a href="#Formularios" class="headerlink" title="Formularios"></a>Formularios</h3><p>Los formularios en HTML están contenidos en un elemento <strong>form</strong> . Un formulario está compuesto de campos y de las marcas necesarias para estructurarlo y controlar su presentación. Cada uno de los campos se identifica de manera única dentro del formulario por el valor en el atributo name o id.</p>
+<p>Dentro de la etiqueta <strong><form></form></strong> se deben identificar dos cosas: la dirección del programa que lo va a manejar, por medio del atributo <strong>action</strong> , y el método que se va a utilizar para pasar los datos a ese programa, mediante el atributo <strong>method</strong> . En action generalmente se especifica la URL del programa. El valor de method puede ser GET o POST (métodos de HTTP).</p>
+<p>Los principales campos del formulario incluyen: campos de texto, campos de password, campos de texto multilínea, radio buttons, check box, menús desplagables y botones.</p>
+<p>Los campos de texto se especifican por medio de una etiqueta <strong><input></strong> (el elemento input no tiene etiqueta de cierre) y el atributo <strong>type</strong> igual a “text”. El tamaño del campo y el número máximo de caracteres que puede contener establecen con los atributos <strong>size</strong> y <strong>maxlength</strong> respectivamente. Además se puede establecer un valor por defecto para el campo con el atributo <strong>value</strong> . Si el atributo type se pone como “password” tenemos un campo de password en los que no se tiene eco de los caracteres tecleados.</p>
+<p>Los campos de texto multilínea se definen con el elemento <strong>textarea</strong> . El número de líneas lo determina el valor del atributo <strong>rows</strong> y el número de caracteres por línea el atributo <strong>cols</strong> . El texto por defecto es el contenido del elemento, es decir, el texto que va entre la etiqueta de apertura <textarea> y de cierre </textarea>, que debe ser texto sin incluir ninguna marca HTML. En este texto sí se conservan todos los espacios en blanco, saltos de línea y otros caracteres de control.</p>
+<p>Para crear un menú desplegable, que permitan seleccionar una opción entre varias posibles, se utiliza la etiqueta <strong><select></select></strong> . Las opciones se indican con elementos <strong>option</strong> dentro del elemento select. El valor enviado cuando se envía el formulario es el valor entre las etiquetas de inicio y fin de option, pero si se incluye el atributo <strong>value</strong> , su valor será el que se transmita. El número de opciones mostradas se establece con el atributo <strong>size</strong> de select que por defecto vale 1. Incluyendo el atributo <strong>multiple</strong> en select convertimos al menú en una lista en la que se puede elegir más de una opción.</p>
+<p>La etiqueta input también se utiliza para crear check-boxex y radio buttons, estableciendo el valor del atributo type a checkbox o radio. En elcaso de los radio buttons, todos los que se quiera que estén dentro del mismo grupo, es decir, que cuando se seleccione uno del grupo se elimine la selección anterior dentro del grupo, deben tener el mismo valor en el atributo name.</p>
+<p>Los botones se definen con el elemento input y type=”button”. No tienen ninguna acción predefinida. Para definir una acción se utilizan los atributos manejadores de evento mencionados con anterioridad y los lenguajes de script. Por ejemplo:</p>
+<input type="button" value="Pincha" onclick="alert('Mensaje');">
+
+<p>Dentro de un campo del formulario también es posible indicar el nombre de un fichero que se quiere cargar en el servidor. Para ello se utiliza el elemento input con type=”file”. Esto crea un campo de texto donde introducir el nombre del fichero y un botón a la derecha del campo generalmente etiquetado como examinar (o browse) que al pulsarlo permite examinar el sistema de archivos local para encontrar el fichero que se quiere enviar al servidor.</p>
+<p>Una vez que se ha rellenado el formulario necesitamos un medio para decir al navegador que lo envíe, este medio se proporciona de nuevo con el elemento input. Estableciendo type a submit, se crea un botón que al ser pinchado hace que el navegador envíe los datos a la dirección especificada en action. En el atributo value se establece el texto que va a aparecer en el botón y además se envía al servidor. Si el valor de type es reset se crea también un botón pero su función es limpiar el formulario y establecer los valores por defecto que se hayan podido especificar.</p>
+<h3 id="Direccionamiento-y-enlaces"><a href="#Direccionamiento-y-enlaces" class="headerlink" title="Direccionamiento y enlaces"></a>Direccionamiento y enlaces</h3><p>En HTML la forma de definir hiperenlaces es mediante la etiqueta <strong><a></a></strong> (en hipertexto los extremos de los enlaces generalmente se les denomina anclas – anchors) que tiene un atributo <strong>href</strong> para indicar la dirección del recurso que se quiere enlazar. El contenido entre las etiquetas de inicio y fin del elemento es el hiperenlace que se activa al pinchar en él. El contenido puede ser texto o una imagen.</p>
+<p>Un posible destino del hiperenlace es una localización dentro del propio documento. Se necesita alguna forma de poder marcar esa localizavión para luego referenciarla en href. También se usa la etiqueta <a> para definir estas localizaciones mediante un uso especial de la misma denominado establecimiento de identificador de fragmento o simplemente marcador.</a></p>
+<p>Para establecer un marcador se coloca una etiqueta <a> en la localización y va a ser el valor del atributo name el que determine el nombre simbólico para poder referenciarla. La forma de referenciar esta localización es mediante el valor “#marcador” en el href. Por ejemplo:</a></p>
+<p><a name="inicio"></a> Esto es el inicio</p><br>…..<br><p><a name="fin" href="#inicio">Ir a inicio</a></p>
+
+<h2 id="XML-y-sus-extensiones"><a href="#XML-y-sus-extensiones" class="headerlink" title="XML y sus extensiones"></a>XML y sus extensiones</h2><p>Como ya se ha comentado, XML (Extensible Markup Language) es una recomendación del W3C desde 1998, creada como subconjunto de SGML que aprovecha su potencia y flexibilidad eliminando parte de su complejidad. Como metalenguaje se puede utilizar para la definición de otros lenguajes de marcas. Por ejemplo se ha escrito HTML basándose en XML, dando lugar a la especificación XHTML. Otros lenguajes derivados de XML son WML (Wireless Markup Languages), SOAP (Simple Object Access Protocol) o MathML (Mathematical Markup Language).</p>
+<p>Los objetivos del diseño de XML, citados en la especificación, eran:</p>
+<ul>
+<li>Ser directamente utilizable en Internet.</li>
+<li>Soportar una amplia variedad de aplicaciones.</li>
+<li>Compatibilidad con SGML.</li>
+<li>Facilidad de creación de programas que procesen documentos XML.</li>
+<li>Mantener el número de características opcionales al mínimo, idealmente ninguna.</li>
+<li>Los documentos deberían ser legibles por humanos y razonablemente claros.</li>
+<li>El diseño debería ser preparado rápidamente.</li>
+<li>Diseño formal y conciso.</li>
+<li>Facilidad de creación de documentos XML.</li>
+<li>Importancia mínima de la concisión y refinamiento de las marcas.</li>
+</ul>
+<p>Cada subconjunto de SGML, XML no contempla ciertas características de SGML. Podemos citar entre las diferencias:</p>
+<ul>
+<li>Respecto a la sintaxis, en XML:<ul>
+<li>Los nombres pueden utilizar caracteres Unicode y no se restringen a ASCII.</li>
+<li>Se permiten _ y : en los nombres.</li>
+<li>Los nombres son sensitivos al uso de mayúsculas y minúsculas.</li>
+<li>El delimitador de cierra de las instrucciones de procesamiento es ?&gt;.</li>
+<li>No se permiten marcas de inicio sin cerrar.</li>
+</ul>
+</li>
+<li>Respecto a la declaración de elementos, atributos y entidades impone ciertas restricciones no presentes en SGML, como son:<ul>
+<li>Las referencias de entidad y de carácter deben terminar en ;.</li>
+<li>No se permiten referencias a entidades externas de datos en el contenido.</li>
+<li>En las declaraciones de elementos no se permiten grupos de nombres, ni contenido declarado como CDATA o RDATA, si se pueden utilizar exclusiones o inclusiones. Además no se puede utilizar un grupo de nombres como tipo de elemento y en los modelos de contenido no pueden utilizar el conector AND.</li>
+<li>En las declaraciones de listas de definición de atributos no se permiten atributos CURRENT, no se puede utilizar un nombre de grupo como elemento asociado y los valores especificados por defecto deben ser literales.</li>
+</ul>
+</li>
+</ul>
+<p>Hoy en día XML ha alcanzado un alto grado de utilización por los beneficios que ofrece, entre ellos:</p>
+<ul>
+<li>Simplicidad: la información codificada en XML el legible visualmente y puede ser procesada sin dificultad por los ordenadores. XML es fácil de entender, implementar y usar.</li>
+<li>Aceptabilidad de uso para transferencia de datos: XML no es un lenguaje de programación, es un forma estándar de poner la información en un formato que pueda ser procesado e intercambiado por diversos dispositivos de hardware, SO, aplicaciones de software y la Web.</li>
+<li>Uniformidad y conformidad: cuando se quiere integrar dos aplicaciones, la organización y los expertos técnicos deben decidir si se integran los sistemas o se modifica la arquitectura de las aplicaciones. Si los datos de ambas aplicaciones están de acuerdo en el formato y se pueden transformar fácilmente de uno a otro, los costes de desarrollo se pueden reducir. Si este formato común se puede basar en un estándar ampliamente aceptado entonces las interfaces entre aplicaciones se hacen menos costosas.</li>
+<li>Separación de los datos de su visualización: sin las separación de datos la reutilización de los mismos en múltiples intefaces de usuario sería difícil.</li>
+<li>Extensibilidad: como se deduce de su nombre, XML fue diseñado desde el principio para permitir extensiones.</li>
+</ul>
+<p>Podemos considerar dos ámbitos fundamentales de aplicación de XML:</p>
+<ul>
+<li>Compartir información: el problema principal a la hora de compartir información entre dos organizaciones cualesquiera es la interfaz entre ellas. Los beneficios de tener un formato común para compartir información entre dos organizaciones cualesquiera son obvios. Sobre XML se han construido tecnologías y estándares. Consorcios y organizaciones empresariales han desarrollado formatos y estandarizaciones XML. En diciembre de 2000 la UN/CEFACT y OASIS se unieron para iniciar un proyecto para estandarizar especificaciones XML para negocios. La iniciativa, llamada XML para negocio electrónico (Electronic Business XML, ebXML) desarrolló un marco técnico que permite utilizar XML para todo el intercambio de datos de negocio electrónico.</li>
+<li>Almacenamiento, transmisión e interpretación de los datos: si el almacenamiento de la información se puede adaptar a varios medios, éste se dirigirá al medio que tiene menor coste. XML está basado en texto, que obviamente es admitido por todos los medios de almacenamiento, y su coste de almacenamiento es barato comparado con los necesarios para el almacenamiento de los gráficos. Al igual que el coste de almacenamiento de estos objetos basados en texto es barato, también lo es su transmisión. Además como es comúnmente aceptado, al adherirse a estándares internacionales, puede ser fácilmente interpretado.</li>
+</ul>
+<p>La recomendación XML viene acompañada de otras especificaciones como son XLS, para la creación de hojas de estilo, XLink y XPointer para la creación de enlaces con otros recursos.</p>
+<h3 id="Documentos-XML"><a href="#Documentos-XML" class="headerlink" title="Documentos XML"></a>Documentos XML</h3><p><strong>Documentos válidos y documentos bien formados</strong></p>
+<p>XML distingue entre documentos bien formados y válidos.</p>
+<p>Un documento es un documento XML bien formado si:</p>
+<ul>
+<li>Contiene uno o más elementos.</li>
+<li>Tiene exactamente un elemento raíz (o elemento documento) caracterizado por que ninguna de sus partes aparece en el contenido de ningún otro elemento, es decir, debe contener un par único de etiquetas de apertura y de cierre que contengan al documento completo.</li>
+<li>Para el resto de elementos si su etiqueta de inicio están en el contenido de otro elemento su etiqueta de cierre debe estar en el contenido del mismo, o lo que es lo mismo, los elementos deben estar anidados apropiadamente sin permitir cruces entre estos anidamientos.</li>
+<li>Obedece todas las restricciones de forma (web-formedness constraints) dadas en la especificación XML.</li>
+<li>El contenido de todas las entidades analizables (parsed entities) está bien formado.</li>
+</ul>
+<p>Una entidad analizable es aquella cuyo contenido se considera parte integrante del documento. Una entidad no analizable es un recurso cuyo contenido puede o no se texto, y si es texto puede ser otro que no sea XML.</p>
+<p>Algunas de las restricciones son las siguientes:</p>
+<ul>
+<li>Todos los elementos, menos los vacíos, deben llevar etiquetas de apertura y cierre.</li>
+<li>Los elementos vacíos, sin contenido, se marcarán con la etiqueta &lt;elem_sin_cont/&gt;</li>
+<li>Los valores de atributos van siempre entre comillas simples (‘) o dobles (“)</li>
+<li>Los nombres son sensibles al uso de mayúsculas y minúsculas. Deben comenzar por una letra, _ o :.</li>
+</ul>
+<p>Según se define en la especificación, un documento es documento XML válido si:</p>
+<ul>
+<li>Tiene asociada una declaración de tipo de documento.</li>
+<li>Cumple todas las restricciones expresada en la declaración de tipo de documento.</li>
+</ul>
+<p>Para comprobar la validez de los documentos, o si están bien formados, se utilizan los procesadores XML, que son módulos de software que leen el documento XML y proporcionan acceso a su contenido y estructura a la aplicación XML para la que el procesador está haciendo el análisis.</p>
+<p>En la especificación se distingue entre procesadores con validación y sin validación. Ambos deben informar de las violaciones a las restricciones de la especificación en la entidad documento y en cualquier otra entidad analizable que puedan leer. Los procesadores con validación deben además informar de las violaciones a las restricciones expresadas en las declaraciones de la DTD y a las restricciones de validación dadas en la especificación.</p>
+<p><strong>Componentes de un documento XML</strong></p>
+<p>Un documento XML consta de un prólogo que contiene toda la información relevante del documento que no sean marcas ni contenido, y el cuerpo del documento que contiene al menos el elemento raíz.</p>
+<p>El prólogo contiene:</p>
+<ul>
+<li>Una declaración XML. Es la sentencia que declara al documento como un documento XML.</li>
+<li>Una declaración de tipo de documento. Enlaza el documento con su DTD o el DTD puede estar incluido en la propia declaración o ambas cosas al mismo tiempo.</li>
+<li>Uno o más comentarios e instrucciones de procesamiento.</li>
+</ul>
+<p>Según la especificación el prólogo debe ir antes del primer elemento del documento pero puede estar vacío, es decir, todas las componentes nombradas anteriormente son opcionales, no son necesarias para tener un documento XML bien formado.</p>
+<p>La <strong>declaración de documento</strong> es una instrucción de procesamiento (las instrucciones de procesamiento permiten incluir en un documento instrucciones para aplicaciones propietarias; sus delimitadores de inicio y fin de etiqueta son &lt;? y ?&gt; respectivamente, tiene la forma:</p>
+<p>&lt;?xml version=”version_xml” encoding=”tipo_codificacion” standalone=”XX” ?&gt;</p>
+<p>Donde:</p>
+<ul>
+<li>version: describe la versión de XML que se está usando. Puede ser “1.0” o “1.1”.</li>
+<li>encoding (opcional): permite especificar la codificación de caracteres que se está usando. Por ejemplo UTF-8.</li>
+<li>standalone (opcional): le dice al procesador XML si el documento puede ser leído como un documento único o si es necesario buscar fuera del documento por otras reglas. Puede valer NO o YES.</li>
+</ul>
+<p>La <strong>declaración tipo de documento</strong> contiene un nombre que debe coincidir con el nombre del elemento raíz. Opcionalmente contiene una DTD interna, referencia a una DTD externa o ambas cosas al mismo tiempo:</p>
+<p>&lt;!DOCTYPE elemen_raiz declaracion_externa [dtd_interna]&gt;</p>
+<p>Las DTD externas pueden ser públicas o privadas. Las públicas se identifican por la palabra clave PUBLIC y tienen la forma siguiente:</p>
+<p>&lt;!DOCTYPE elemen_raiz PUBLIC “nombre_DTD” “localización_DTD”&gt;</p>
+<p>Las privadas se identifican por la palabra clave SYSTEM y tienen la forma:</p>
+<p>&lt;!DOCTYPE elemen_raiz SYSTEM “localización_DTD”&gt;</p>
+<h3 id="Espacios-de-nombres-en-XML"><a href="#Espacios-de-nombres-en-XML" class="headerlink" title="Espacios de nombres en XML"></a>Espacios de nombres en XML</h3><p>Nos podemos encontrar aplicaciones XML en las que un documento contiene elementos y atributos definidos en varios lenguajes. En varios contextos, sobre todo en la Web debido a su naturaleza distribuida, esto podría presentar un problema de colisión y reconocimiento de marcas para el software que los procesa. Se requieren entonces mecanismos que permitan tener con nombres universales cuyo alcance se extienda más allá de los documentos que los contienen. En XML este mecanismo son los espacios de nombres (XML namespaces).</p>
+<p>Un espacio de nombres XML es un conjunto de nombres referenciados por una referencia URI, que se usan en XML como nombres de elementos y atributos.</p>
+<p>Los nombres de elementos y atributos pueden aparecer entonces como nombres cualificados que consisten en un prefijo y una parte local separadas por : (dos puntos). El prefijo, que tiene una correspondencia con la referencia URI, selecciona un espacio de nombres.</p>
+<p>Un espacio de nombres se declara como un atributo. El valor del atributo, una referencia URI, es el nombre del espacio de nombres. El nombre del atributo debe comenzar por el prefijo xmlns: o xmlns. En este último caso el nombre del espacio de nombres es el del espacio de nombres por defecto que exista en el contexto del elemento donde se está incluyendo la declaración. Si el prefijo es xmlns: el nombre puede ser cualquier nombre válido XML.</p>
+<p>Un ejemplo de declaración que asocia el prefijo edi a <a href="http://ecomerce.org.schema" rel="external nofollow noopener noreferrer" target="_blank">http://ecomerce.org.schema</a> es:</p>
+<p>&lt;nom_elem xmlns:edit=’<a href="http://ecomerce.org.schema&#39;&gt;" rel="external nofollow noopener noreferrer" target="_blank">http://ecomerce.org.schema&#39;&gt;</a><br>……….<br>&lt;/nom_elem&gt;</p>
+<h3 id="XSL"><a href="#XSL" class="headerlink" title="XSL"></a>XSL</h3><p>Básicamente XSL es un lenguaje para la expresión de hojas de estilo. Una hoja de estilo XSL es un fichero que describe como mostrar un documento XML de un tipo dado. Se basa en especificaciones anteriores como DSSSL y CSS, aunque es más sofisticado.</p>
+<p>XSL Contiene tres especificaciones:</p>
+<ul>
+<li>XSLT, XSL Transformation, un lenguaje de transformación de documentos XML. Su intención inicial era permitir operaciones de estilo más complejas que las contempladas inicialmente tales como la generación de tablas de contenido o índices, pero ahora se utiliza como un lenguaje de procesamiento de XML de propósito general. Las hojas de estilo XSLT se utilizan por ejemplo para la generación de páginas (X)HTML a partir de datos XML.</li>
+<li>XSL-FO, XSL Formating Objects, un vocabulario para la especificación de formateado.</li>
+<li>XPath, XML Path Language, un lenguaje utilizado por XSLT para referenciar o acceder a partes de un documento XML. También se usa en la recomendación de XLing, XML Linking Language.</li>
+</ul>
+<p>XSL especifica como dar estilo a un documento XML utilizando XSLT para describir como el documento se transforma en otro documento XML que utiliza el vocabulario de formateado.</p>
+<p><strong>XSLT</strong></p>
+<p>Cada documento bien formado XML se puede considerar un árbol cuyos nodos son los elementos y su contenido. Para los propósitos de XSL también deben considerarse nodos los atributos, las estructuras de procesamiento y los comentarios. Básicamente un procesador XML/XSLT toma como fuente un documento XML y construye un árbol denominado árbol fuente y construye otro árbol, el árbol resultado, a partir del árbol fuente. En este proceso puede reordenar nodos, duplicarlos y añadir nuevos objetos de elementos o texto. Los nodos del árbol resultado son objetos de flujo a los que se les ha aplicado estilo. Después se interpreta el árbol resultado para obtener los resultados formateados para su presentación.</p>
+<p>Una transformación expresada en XSLT describe las reglas para transformar un árbol fuente en uno resultado y se la llama hoja de estilo pues cuando XSLT realiza una transformación al vocabulario de formateado de XSL (XSL-FO), la transformación funciona como una hoja de estilo.</p>
+<p>Una hoja de estilo contiene un conjunto de <strong>reglas de plantilla</strong> , que dan las reglas para la transformación. Una regla de plantilla tiene dos partes; un patrón, que se compara con los nodos del árbol fuente y una plantilla de la que se crea un ejemplar para que forme parte del árbol resultado.</p>
+<p>Los patrones son expresiones XSL, que utilizan la sintaxis de XPath, cuya evaluación va a dar un conjunto de condiciones. Los nodos que cumplen las condiciones son los que se eligen del árbol de entrada.</p>
+<p>Las plantillas pueden contener elementos que especifican un literal para incluirlo en el árbol resultado o elementos XSLT que son instrucciones que crearán un fragmento del árbol. Cuando se crea un ejemplar de una plantilla cada instrucción es ejecutada y reemplazada por el fragmento de árbol resultado que crea. Hay elementos que seleccionan y procesan los elementos del árbol fuente que son descendientes del elemento actual (<a href="xsl:apply-templates/" rel="external nofollow noopener noreferrer" target="_blank">xsl:apply-templates/</a>). La construcción del árbol resultado comienza encontrando la regla de plantilla para el nodo raíz y creando una instancia de su plantilla.</p>
+<p>Un ejemplo de regla de plantilla es el siguiente:</p>
+<p>&lt;xsl:template match=”/“&gt;<br>     <pre><a href="xsl:apply-templates/" rel="external nofollow noopener noreferrer" target="_blank">xsl:apply-templates/</a></pre><br>&lt;/xsl:template&gt;</p>
+<p>El valor de match es el patrón de la regla de pantilla (/ se corresponde con el nodo raíz) y lo que va entre la apertura y cierre de template es la plantilla.</p>
+<p>Una hoja de estilo se representa en un documento XML por un elemento stylesheet que contienen a los elementos template que especifican las reglas de plantilla, además de otros elementos.</p>
+<p>El elemento stylesheet debe tener un atributo versión y puede tener como atributos prefijos de extensiones de elementos, como por ejemplo los del espacio de nombres.</p>
+<p>Por ejemplo:</p>
+<p>&lt;xsl:stylesheet version=”1.0” xmlns:xls=<a href="http://www.w3.org/1999/XLS/Transform&gt;" rel="external nofollow noopener noreferrer" target="_blank">http://www.w3.org/1999/XLS/Transform&gt;</a><br>………<br>&lt;/xsl:stylesheet&gt;</p>
+<p>Algunos de los elementos XSLT son:</p>
+<ul>
+<li><a href="xsl:apply-templates" rel="external nofollow noopener noreferrer" target="_blank">xsl:apply-templates</a>: mediante esta instrucción se le dice al procesador que compare cada elemento hijo del nodo actual con el patrón de las reglas de plantilla en la hoja de estilo y si encuentra uno que se ajuste cree un ejemplar de la plantilla de la regla. Puede llevar un atributo <strong>select</strong> para seleccionar por medio de una expresión los nodos que se van a procesar.</li>
+<li><a href="xsl:value-of" rel="external nofollow noopener noreferrer" target="_blank">xsl:value-of</a>: tiene un atributo select donde se incluye una expresión. La instrucción crea un nodo de texto en el árbol resultado con la cadena de texto que se obtiene al evaluar la expresión de select y convertir el objeto resultante a una cadena.</li>
+<li><a href="xsl:if" rel="external nofollow noopener noreferrer" target="_blank">xsl:if</a>: el contenido del elemento es una plantilla y tiene un atributo test con una expresión que se evalúa y se convierte el resultado a booleano. Si es cierto se crea una instancia de la plantilla en el contenido, en otro caso no se hace nada.</li>
+<li><a href="xsl:element" rel="external nofollow noopener noreferrer" target="_blank">xsl:element</a>: permite crear un elemento. Tiene un atributo nombre donde se especifica el nombre del elemento. El contenido es una plantilla para los atributos y los hijos del elemento creado.</li>
+</ul>
+<p><strong>XSL-FO</strong></p>
+<p>XSL-FO especifica un vocabulario para el formateado a través de los llamados objetos de formateado. Utiliza y extiende el conjunto de propiedades comunes de formateado desarrollado conjuntamente con el grupo de trabajo CSS&amp;FP (Cascading Style Sheet and Formating Property).</p>
+<p>Cuando un árbol de resultado utiliza este conjunto estandarizado de objetos de formateado, un procesador XSL procesa el resultado y obtiene la salida especificada.</p>
+<p>Algunos objetos de formateado comunes son:</p>
+<ul>
+<li>Page-sequence: una parte principal en la que el esquema de diseño (layout) de la página básica puede ser diferente del de otras páginas.</li>
+<li>Flow: una división en una secuencia de página como puede ser un capítulo o una sección.</li>
+<li>Block: como por ejemplo un título, un párrafo, etc.</li>
+<li>Inline: por ejemplo un cambio de fuente en un párrafo.</li>
+<li>Wrapper: un objeto intercambiable, puede utilizarse como block o como inline. Se utiliza sólo para manejar propiedades heredables de los objetos.</li>
+<li>Graphic: referencia un objeto gráfico externo.</li>
+<li>Table-FO: similares a los modelos de tablas HTML.</li>
+<li>List-FO: son listas de objetos. Por ejemplo list-item, list-block, list-item-body.</li>
+</ul>
+<p>Algunas propiedades básicas de formateado son:</p>
+<ul>
+<li>Propiedades relativas a márgenes y espaciado.</li>
+<li>Propiedades de fuentes.</li>
+<li>Sangría.</li>
+<li>Justificación.</li>
+</ul>
+<p><strong>XPath</strong></p>
+<p>El principal objetivo de XPath es el poder dirigirse a partes de un documento XML. Además también se ha diseñado para que pueda utilizarse para comprobar si un nodo se ajusta a un patrón.</p>
+<p>El constructor sintáctico básico de XPath es la expresión, que al evaluarse proporciona un objeto de uno de los siguientes tipos básicos:</p>
+<ul>
+<li>Un conjunto de nodos.</li>
+<li>Un valor booleano.</li>
+<li>Un número (de coma flotante).</li>
+<li>Una cadena.</li>
+</ul>
+<p>Una clase de expresión es un path de localización. El resultado de evaluar la expresión es un conjunto de nodos que contiene los nodos seleccionados por el path de localización.</p>
+<p>Hay dos tipos de paths de localización:</p>
+<ul>
+<li>Relativos: consisten en uno o más pasos de localización separados por /. Los pasos se componen de izquierda a derecha. Por ejemplo child::div/child::xxx selecciona el elemento hijo xxx del elemento hijo div del nodo de contexto.</li>
+<li>Absolutos: consisten en una / seguida, opcionalmente, de un path relativo.</li>
+</ul>
+<p>Algunos ejemplos de paths de localización son los siguientes:</p>
+<ul>
+<li>/: selecciona el documento raíz.</li>
+<li>/descendat::xxx: selecciona todos los elementos xxx en el mismo documento que el nodo de contexto.</li>
+<li>child::xxx[position()=1]: selecciona el primer hijo xxx del nodo de contexto.</li>
+<li>child::*: selecciona todos los hijos del nodo de contexto.</li>
+</ul>
+<p><strong>XLink y XPointer</strong></p>
+<p>XLink, XML Link Language, permite insertar elementos en un documento XML que crean y describen enlaces entre recursos. Su uso más común es para la creación de hiperenlaces. XPointer especifica un modo fácil de entender y conveniente para la localización de documentos XML.</p>
+<p>XLink proporciona funcionalidades de enlace avanzadas como:</p>
+<ul>
+<li>Enlaces multidireccionales, se dirigen a varios recursos.</li>
+<li>Asociar metadatos con los enlaces.</li>
+<li>Expresar enlaces que residen en una localización separada de los recursos enlazados.</li>
+</ul>
+<p>Los enlaces se implementan por medio de atributos y no por elementos.</p>
+<p>XPointer proporciona mejores especificaciones de localización:</p>
+<ul>
+<li>Enlaces que apuntan a un punto específico dentro de un documento, incluso aunque no exista un ID justo en ese punto.</li>
+<li>Granularidad fina que permite apuntar a elementos, cadenas de texto.</li>
+<li>Sintaxis clara para tratar las localizaciones y las relaciones en jerarquías, de forma que es legible por las personas.</li>
+</ul>
+<h2 id="Lenguajes-de-Script"><a href="#Lenguajes-de-Script" class="headerlink" title="Lenguajes de Script"></a>Lenguajes de Script</h2><p>Aunque muchos lenguajes son calificados como lenguajes de script, no hay un consenso sobre el significado exacto del término ni ha sido formalmente definido. Se llaman lenguajes de script a lenguajes como awk, sh de UNIX, Javascript, VBScript, Perl, …</p>
+<p>Los lenguajes de script se diseñaron para realizar tareas diferentes de las que realizan otros tipos de lenguajes de programación, como C o C++, y esto lleva a diferencias fundamentales entre los dos tipos de lenguajes.</p>
+<p>Los lenguajes de programación tradicionales se diseñaron para construir estructuras de datos y algoritmos empezando desde el principio, desde elementos de computación como las palabras de memoria. Para manejar esta complejidad suelen ser fuertemente tipados.</p>
+<p>Frente a esto, los lenguajes de script <strong>se diseñaron para unir componentes</strong> . Asumen la existencia de un conjunto de potentes componentes y se centran generalmente en poner juntas estas componentes. Además suelen ser <strong>débilmente tipados,</strong> el tipo se determina en tiempo de ejecución, para simplificar la conexión entre componentes.</p>
+<p>Otra diferencia entre los dos grupos de lenguajes, los de script frente a los que no reciben esta denominación, es que los lenguajes de script son generalmente <strong>interpretados</strong> en vez de compilados. Los lenguajes interpretados eliminan los tiempos de compilación durante el desarrollo y hacen a las aplicaciones más flexibles al permitir que se genere código fácilmente en tiempo de ejecución.</p>
+<p>Estas características producen, generalmente, código que es menos eficiente. Sin embargo, el rendimiento no suele ser un aspecto fundamental en un lenguaje de script. Los lenguajes de script se dirigen fundamentalmente a áreas donde la flexibilidad y un desarrollo rápido son mucho más importantes que el puro rendimiento. Las aplicaciones en lenguajes de script suelen ser más pequeñas que las aplicaciones en otros lenguajes de programación y el rendimiento de una aplicación de scripts está dominado por el rendimiento de sus componentes, que generalmente están implementadas en algún otro tipo de lenguaje de programación.</p>
+<p>Los dos grupos de lenguajes son complementarios, y las principales plataformas de computación han proporcionado tanto lenguajes de programación como de scripts desde los años 60. Mientras que los lenguajes de programación que podríamos denominar de sistemas o tradicionales son buenos para producir implementaciones eficientes de funcionalidades críticas con respecto al tiempo, los lenguajes de script son buenos para poner juntas componentes de distinta funcionalidad.</p>
+<p>Sin embargo la existencia de máquinas cada vez más rápidas, la existencia de mejores lenguajes de scripts, la importancia creciente de las interfaces gráficas de usuario y de las arquitecturas de componentes, y sobre todo el crecimiento de Internet, han incrementado enormemente la aplicabilidad de los lenguajes de script.</p>
+<p>Podemos citar entre las características típicas de los lenguajes de script, aunque no siempre las tienen todas:</p>
+<ul>
+<li>Interpretados.</li>
+<li>Débilmente tipados.</li>
+<li>Asignación dinámica de memoria con liberación automática de la misma.</li>
+<li>Potentes capacidades para la manipulación de cadenas (expresiones regulares).</li>
+<li>Procedurales y con extensiones de orientación a objetos.</li>
+<li>No es necesario que el usuario del lenguaje defina clases o métodos.</li>
+<li>Utilizan un método de invocación de métodos muy simple, no es necesario especificar los paths de los objetos para acceder a los métodos.</li>
+</ul>
+<p>Entre los lenguajes de script más comunes podemos citar Javascript, Perl, VBScript, …</p>
+<h3 id="Aplicacion-de-los-lenguajes-de-script-a-internet"><a href="#Aplicacion-de-los-lenguajes-de-script-a-internet" class="headerlink" title="Aplicación de los lenguajes de script a internet"></a>Aplicación de los lenguajes de script a internet</h3><p>Los lenguajes de script se han utilizado en Internet para un aspecto fundamental, añadir interactividad y dinamismo a las páginas web.</p>
+<p>El método más antiguo para añadir esta interactividad es mediante programas que utilizan la interfaz CGI (Common Gateway Interface). CGI es un protocolo estándar que especifica como pasar información desde una página web, a través de un servidor web, a un programa y devolver información desde el programa a la página en el formato apropiado. Los lenguajes de script, sobre todo Perl, son los más comúnmente utilizados para escribir estos programas CGI.</p>
+<p>Pero CGI presenta ciertos problemas de ineficiencia. Por un lado los programas CGI se ejecutan fuera del servidor web y además están diseñados para manejar sólo una petición y terminar su ejecución después que han devuelto sus resultados al servidor.</p>
+<p>Hoy en día se utiliza sistemas que toman la forma de componentes que se apoyan en APIs específicas del servidor para interactuar directamente con el proceso del servidor. Conectándose como un subproceso al servidor Web se evita mucha de la sobrecarga de los programas CGI convencionales.</p>
+<p>La generación de contenido dinámico del lado del servidor requiere que el servidor procese las peticiones en tiempo de ejecución para dar una respuesta apropiada a la petición, así que se necesitan instrucciones para ejecutar este procesamiento y por tanto alguna forma de programarlas.</p>
+<p>Otra forma de añadir interactividad y dinamismo es mediante scripts del lado del cliente, fundamentalmente usando Javascript. El código de script se introduce directamente o se referencia en el documento HTML y se ejecuta cuando se carga la página o como respuesta a otro tipo de eventos.</p>
+<p>Un ejemplo de uso de scripts en Web es la validación de formularios (uno de los motivos originales para el desarrollo de Javascript). La validación de formularios es el proceso de comprobar la validez de los datos introducidos por el usuario antes de enviarlos al servidor.</p>
+<p>Con la aparición de la generación 4.x de los navegadores se introdujo el concepto DHTML, HTML dinámico, que describe la capacidad de manipular dinámicamente los elementos de una página a través de la interacción:</p>
+<ul>
+<li>HTML: la versión 4 introdujo dos cosas importantes, CSS y DOM.</li>
+<li>CSS: con CSS se tiene un modelo de estilo y layout para documentos HTML.</li>
+<li>DOM (Document Object Model): proporciona un modelo del contenido para documentos HTML.</li>
+<li>Javascript (y VBScript): permite codificar scripts que controlen los elementos HTML.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357348970/TICB1-Lenguajes-de-Marca" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B3/b3-t04/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B3-T04
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t13/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T13</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

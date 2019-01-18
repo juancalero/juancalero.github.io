@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T02 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T02">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Conceptos de sistemas operativos: Características, evolución y tendencias. Estructuras, componentes y funciones. Sistemas operativos multiprocesador.Conceptos de Sistemas OperativosIntroducciónUn Sist">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T02">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t02/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Conceptos de sistemas operativos: Características, evolución y tendencias. Estructuras, componentes y funciones. Sistemas operativos multiprocesador.Conceptos de Sistemas OperativosIntroducciónUn Sist">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/evolucionso.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/arquitectura_memorias.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/capas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/gestion_memoria.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/asignacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/asignacion2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/asignacion_contigua.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/asignacion_dispersa.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/swapping.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/memvirtual.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/reemplazo.png?w=455&h=344">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/estados_procesos1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/cambio_contexto.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/planificadores.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/fcfs1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/sjf.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/srtf.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/por_prioridades.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/roundrobin.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/multilevel-feddback.png?w=361&h=228">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/semaforo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/semaforos1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/es.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2017/12/softes.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:28:00.735Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T02">
+<meta name="twitter:description" content="Conceptos de sistemas operativos: Características, evolución y tendencias. Estructuras, componentes y funciones. Sistemas operativos multiprocesador.Conceptos de Sistemas OperativosIntroducciónUn Sist">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2017/12/evolucionso.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file active"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t02" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t02/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t02.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t02.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t02.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T02
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Conceptos-de-sistemas-operativos-Caracteristicas-evolucion-y-tendencias-Estructuras-componentes-y-funciones-Sistemas-operativos-multiprocesador"><a href="#Conceptos-de-sistemas-operativos-Caracteristicas-evolucion-y-tendencias-Estructuras-componentes-y-funciones-Sistemas-operativos-multiprocesador" class="headerlink" title="Conceptos de sistemas operativos: Características, evolución y tendencias. Estructuras, componentes y funciones. Sistemas operativos multiprocesador."></a>Conceptos de sistemas operativos: Características, evolución y tendencias. Estructuras, componentes y funciones. Sistemas operativos multiprocesador.</h1><h2 id="Conceptos-de-Sistemas-Operativos"><a href="#Conceptos-de-Sistemas-Operativos" class="headerlink" title="Conceptos de Sistemas Operativos"></a>Conceptos de Sistemas Operativos</h2><h3 id="Introduccion"><a href="#Introduccion" class="headerlink" title="Introducción"></a>Introducción</h3><p>Un Sistema Operativo es un programa que administra el hardware de una computadora. También proporciona las bases para los programas de aplicación, y actúa como intermediario entre el usuario y el hardware. Estas tareas pueden ser llevadas a cabo de varias formas, lo que permite que algunos Sistemas Operativos se diseñen para ser prácticos, otros eficientes y otros para ser ambas cosas.</p>
+<h3 id="¿Que-hace-un-Sistema-Operativo"><a href="#¿Que-hace-un-Sistema-Operativo" class="headerlink" title="¿Qué hace un Sistema Operativo?"></a>¿Qué hace un Sistema Operativo?</h3><p>Un sistema informático puede dividirse en cuatro componentes: el hardware, el Sistema Operativo, los programas de aplicación y los usuario. El Sistema Operativo controla y coordina el uso del hardware entre los diversos programas de aplicación por parte de los distintos usuarios.</p>
+<p>También podemos ver un sistema informático como hardware, software y datos. El Sistema Operativo proporciona los medios para hacer un uso adecuado de estos recursos durante el funcionamiento del sistema informático.</p>
+<h3 id="Definicion-Sistema-Operativo"><a href="#Definicion-Sistema-Operativo" class="headerlink" title="Definición Sistema Operativo"></a>Definición Sistema Operativo</h3><p>Un Sistema Operativo es un programa, o conjunto de programas eficiente y productivo en el uso de un computador (hardware), permitiendo la ejecución de aplicaciones de usuario. Es el intermediario entre las aplicaciones de usuario y el hardware.</p>
+<p>Metas:</p>
+<ul>
+<li>Brindar un ambiente de realización y ejecución de aplicaciones.</li>
+<li>Proveer un entorno sin interferencias a cada usuario (interferencia: lo que un usuario modifica en su entorno, no interfiera ni modifique lo de otro usuario).</li>
+<li>Administrar de forma equitativa los recursos (hardware y software).</li>
+<li>Hacerlo de la forma más amigable e intuitiva posible.</li>
+</ul>
+<p>Todas las aplicaciones de usuario requieren un conjunto común de operaciones que son incorporadas al Sistema Operativo.</p>
+<p>Tareas principales:</p>
+<ul>
+<li>Implementar diferentes entornos para diferentes usos (interfaz gráfica, shells, tipo web, etc).</li>
+<li>Proveer una o más interfaces con el usuario.</li>
+<li>Proveer a las aplicaciones un conjunto de servicios (a través de los “system services”).</li>
+<li>Eficiencia y equidad en la administración de recursos.</li>
+</ul>
+<p>Se puede decir que el Sistema Operativo es un:</p>
+<ul>
+<li>Administrador de recursos. Sus tareas consisten en administrar los recursos disponibles y decidir como asignar estos recursos según los pedidos y asignaciones que tenga.</li>
+<li>Programa de control. Controla la ejecución de los programas para la prevención de errores y mal uso del sistema.</li>
+</ul>
+<p>Frecuentemente la porción residente del propio Sistema Operativo se denomina <em>núcleo del sistema (Kernel)</em> .</p>
+<h2 id="Evolucion-de-los-Sistemas-Operativos"><a href="#Evolucion-de-los-Sistemas-Operativos" class="headerlink" title="Evolución de los Sistemas Operativos"></a>Evolución de los Sistemas Operativos</h2><p>La informática tal y como se le conoce hoy día, surgió a raíz de la II Guerra Mundial, en la década de los 40. En esos años no existía siquiera el concepto de “Sistema Operativo” y los programadores interactuaban directamente con el hardware de las computadoras trabajando en lenguaje máquina (es decir, en binario, programando únicamente 0s y 1s).</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/evolucionso.png?w=825" alt=""></p>
+<h4 id="Sistemas-Batch-o-por-Lotes-Anos-70-y-comienzo-de-los-80"><a href="#Sistemas-Batch-o-por-Lotes-Anos-70-y-comienzo-de-los-80" class="headerlink" title="Sistemas Batch o por Lotes (Años 70 y comienzo de los 80)"></a>Sistemas Batch o por Lotes (Años 70 y comienzo de los 80)</h4><p>En las primeras épocas los sistemas eran grandes y costosos. Constaban de una entrada de trabajos y una salida impresa, por lo cual la interacción con el usuario era prácticamente nula. Las principales características eran que el sistema soportaba un único trabajo a la vez, y que las tareas relacionadas se agrupaban en conjuntos o lotes, para su procesamiento más eficiente.</p>
+<p>A comienzo de los 80, utilizando las técnicas de Spooling (proceso mediante el cual la computadora introduce trabajos en un buffer, de manera que un dispositivo pueda acceder a ellos cuando esté listo) y multiprogramación (ejecución de múltiples tareas compartiendo recursos) se pudo comenzar a desarrollar técnicas de planificación de despacho.</p>
+<p>Esta técnica consistía en seleccionar un lote de trabajos que estaban en memoria secundaria para cargarlos en memoria principal. Luego, el SO seleccionaba uno de ellos para ejecutar, y si este debía esperar por alguna tarea (por ejemplo ejecución de E/S) el sistema elegía otro del lote para utilizar el procesador. Esto incrementó el uso del procesador.</p>
+<h4 id="Sistemas-de-Tiempo-Compartido-Finales-de-los-80"><a href="#Sistemas-de-Tiempo-Compartido-Finales-de-los-80" class="headerlink" title="Sistemas de Tiempo Compartido (Finales de los 80)"></a>Sistemas de Tiempo Compartido (Finales de los 80)</h4><p>Estos sistemas eran multiusuarios. Ejecutaban programas de forma concurrente con una elevada tasa de procesos, de forma tal que permitía a los usuarios interactuar directamente con el sistema como si fuera un único usuario.</p>
+<p>La necesidad de acceder y actualizar datos de forma concurrente, creó la necesidad de evolucionar el sistema de archivos a uno multiusuario, incorporando técnicas de protección de accesos.</p>
+<h4 id="Sistemas-de-Computadores-Personales-Anos-80"><a href="#Sistemas-de-Computadores-Personales-Anos-80" class="headerlink" title="Sistemas de Computadores Personales (Años 80)"></a>Sistemas de Computadores Personales (Años 80)</h4><p>Con costos de hardware decrecientes, fue posible el diseño y uso de computadores personales. Los Sistemas fueron diseñados en base a que serían utilizados por un único usuario, y todo el énfasis en el desarrollo estuvo en mejorar la interacción con el usuario. Se desarrolló la interfaz de ventanas que conocemos hoy.</p>
+<h4 id="Sistemas-Paralelos-Comienzo-de-los-90"><a href="#Sistemas-Paralelos-Comienzo-de-los-90" class="headerlink" title="Sistemas Paralelos (Comienzo de los 90)"></a>Sistemas Paralelos (Comienzo de los 90)</h4><p>Son sistemas donde se dispone de más de un procesador, permitiendo ejecución simultánea y sincronizada de procesos. Se clasifican en:</p>
+<ul>
+<li>Altamente integrados: “tightly coupled”. Son sistemas en donde los canales de interconexión son de alta velocidad (bus común o memoria compartida).</li>
+<li>Poco integrados: “closely coupled”. Son sistemas en donde los canales de interconexión son de baja velocidad (sistemas en red).</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/arquitectura_memorias.png?w=825" alt=""></p>
+<p>Veamos ahora otra clasificación de los Sistemas Paralelos:</p>
+<ul>
+<li><strong>Asimétricos</strong> : se designa una CPU (master) para ejecutar el código del núcleo, para no lidiar con la concurrencia, los demás (slaves) ejecutarán lo que éste les designe.</li>
+<li><strong>Simétricos</strong> : todos los procesadores son considerados iguales, el código del núcleo se dispone en memoria común y es ejecutado por cualquier procesador.</li>
+</ul>
+<p>Y otra clasificación más:</p>
+<ul>
+<li><strong>UMA (Uniform Memory Access)</strong> : cada CPU accede a cualquier lugar de la memoria en el mismo tiempo.</li>
+<li><strong>NUMA (Non-Uniform Memory Access)</strong> : las CPU tienen áreas de memoria a las que acceden más rápido que el resto.</li>
+</ul>
+<p>Veamos ahora una clasificación de Arquitecturas (Taxonomía de Flynn):</p>
+<ul>
+<li><strong>SISD (Single Instruction, Single Data)</strong> : Arquitectura secuencial, no hay paralelismo, son arquitecturas monoprocesadores.</li>
+<li><strong>SIMD (Single Instruction, Multiple Data)</strong> : Son sistemas que ejecutan la misma instrucción sobre un conjunto de datos (Arquitectura Vectorial).</li>
+<li><strong>MISD (Multiple Instruction, Single Data)</strong> : Paralelismo redundante.</li>
+<li><strong>MIMD (Multiple Instruction, Multiple Data)</strong> : Varios procesadores autónomos que ejecutan en forma simultanea varias instrucciones sobre datos diferentes<ul>
+<li><strong>memoria compartida</strong> : escalan poco, acceso a memoria es cuello de botella</li>
+<li><strong>memoria distribuida</strong> : escalan a miles de procesadores, conectados en una red de alta velocidad.</li>
+</ul>
+</li>
+</ul>
+<p>Como ejemplo de sistemas computacionales que utilizan sistemas paralelos tenemos los clusters. Estos son sistemas en la cual participan varias computadoras. Los clusters brindan alta disponibilidad (mantiene una serie de servicios, a pesar de posibles fallos), alto rendimiento (en cuanto a capacidad de cálculo) y balance de carga (técnica usada para compartir el trabajo a realizar entre varios procesos, ordenadores, etc)</p>
+<p>Se clasifican en:</p>
+<ul>
+<li>Simétricos: todos los nodos ejecutan tareas y asumen las de otros ante fallos.</li>
+<li>Asimétricos: nodos primarios ejecutan tareas y nodos secundarios esperan fallos.</li>
+</ul>
+<h4 id="Sistemas-de-Tiempo-Real"><a href="#Sistemas-de-Tiempo-Real" class="headerlink" title="Sistemas de Tiempo Real"></a>Sistemas de Tiempo Real</h4><p>Son sistemas en los cuales todo resultado debe producirse en un cierto tiempo. De lo contrario se considera que el sistema ha fallado.</p>
+<h2 id="Estructura-de-los-Sistemas-Operativos"><a href="#Estructura-de-los-Sistemas-Operativos" class="headerlink" title="Estructura de los Sistemas Operativos"></a>Estructura de los Sistemas Operativos</h2><h3 id="Componentes-de-un-Sistema-Operativo"><a href="#Componentes-de-un-Sistema-Operativo" class="headerlink" title="Componentes de un Sistema Operativo"></a>Componentes de un Sistema Operativo</h3><ul>
+<li>Gestión de procesos</li>
+<li>Gestión de memoria</li>
+<li>Gestión de Entrada/Salida</li>
+<li>Administración de Almacenamiento Secundario</li>
+<li>Gestión de Archivos</li>
+<li>Sistema de Protección</li>
+</ul>
+<p><strong>Gestión de Procesos</strong></p>
+<p>Un proceso es un programa en memoria + CPU + acceso a dispositivos + otros recursos. Un proceso necesita de ciertos recursos (CPU, memoria, archivos, dispositivos E/S, etc) para realizar su tarea.</p>
+<p>Podemos ver entonces que un proceso es una entidad activa, mientras que un programa es una entidad pasiva.</p>
+<p>Sabiendo entonces qué es un proceso, podemos decir entonces que el sistema operativo es el encargado de su administración. Es el encargado de proveer servicios para que cada proceso pueda realizar su tarea. Entre los servicios se encuentran:</p>
+<ul>
+<li>Crear y destruir procesos</li>
+<li>Suspender y reanudar procesos</li>
+<li>Proveer mecanismos para la sincronización y comunicación entre procesos</li>
+<li>Proveer mecanismos para prevenir dead-locks o lograr salir de ellos</li>
+</ul>
+<p><strong>Gestión de Memoria</strong></p>
+<p>La memoria es un área de almacenamiento común a los procesadores y dispositivos, donde se almacenan programas, datos, etc. El sistema deberá administrar el lugar libre y ocupado, y será el encargado de las siguientes tareas:</p>
+<ul>
+<li>Mantener qué partes de la memoria están siendo usadas, y por quién.</li>
+<li>Decidir qué procesos serán cargados a memoria cuando exista espacio de memoria disponible, pero no suficiente para todos los procesos que deseamos.</li>
+<li>Asignar y quitar espacio de memoria según sea necesario.</li>
+</ul>
+<p><strong>Gestión de Entrada/Salida</strong></p>
+<p>El sistema operativo deberá ocultar las características específicas de cada dispositivo y ofrecer servicios comunes a todos. Estos servicios serán, entre otros:</p>
+<ul>
+<li>Montaje y desmontaje de dispositivos</li>
+<li>Una interfaz entre el cliente y el sistema operativo para los device drivers</li>
+<li>Técnicas de caché, buffering y spooling</li>
+<li>Device drivers específicos</li>
+</ul>
+<p><strong>Administración de Almacenamiento Secundario</strong></p>
+<p>Dado que la memoria RAM es volátil y pequeña para todos los datos y programas que se precisan guardar, se utilizan discos para guardar la mayoría de la información. El sistema operativo será el responsable de:</p>
+<ul>
+<li>Administrar el espacio libre</li>
+<li>Asignar la información a un determinado lugar</li>
+<li>Algoritmos de planificación de disco (estos algoritmos deciden quien utiliza un determinado recurso del disco cuando hay competencia por él)</li>
+</ul>
+<p><strong>Gestión de Archivos</strong></p>
+<p>Proporciona una vista uniforme de todas las formas de almacenamiento, implementando el concepto de archivo como una colección de bytes. El Sistema Operativo deberá proveer métodos para:</p>
+<ul>
+<li>Abrir, cerrar y crear archivos</li>
+<li>Leer y escribir archivos</li>
+<li>Organización de directorios</li>
+</ul>
+<p><strong>Sistema de Protección</strong></p>
+<p>Por Protección nos referimos a los mecanismos por los que se controla el acceso de los procesos a los recursos.</p>
+<p>En un sistema multiusuario donde se ejecutan procesos de forma concurrente se deben tomar medidas que garanticen la ausencia de interferencia entre ellos. Estas medidas deben incorporar la posibilidad de definir reglas de acceso, entre otras cosas.</p>
+<h3 id="Servicios-del-Sistema-Operativo"><a href="#Servicios-del-Sistema-Operativo" class="headerlink" title="Servicios del Sistema Operativo"></a>Servicios del Sistema Operativo</h3><p>El sistema brindará un entorno de ejecución de programas donde se dispondrá de un conjunto de servicios. Los servicios principales serán:</p>
+<ul>
+<li><strong>Ejecución de programas</strong> : el SO deberá ser capaz de cargar un programa a memoria y ejecutarlo. El programa deberá poder finalizar, de forma normal o anormal.</li>
+<li><strong>Operaciones de E/S</strong> : el SO deberá proveer un mecanismo de acceso ya que por eficiencia y protección los usuarios no accederán directamente al dispositivo.</li>
+<li><strong>Manipulación del Sistema de Archivos</strong> : se deberá tener acceso al sistema de archivos y poder, como mínimo, leer, escribir, borrar y crear.</li>
+<li><strong>Comunicación entre procesos</strong> : los procesos deberán poder comunicarse, ya sea que estén en el mismo computador o en diferentes.</li>
+<li><strong>Manipulación de errores</strong> : el sistema deberá tomar decisiones adecuadas ante eventuales errores que ocurran, como fallo de un dispositivo de memoria, fallo en un programa, etc.</li>
+</ul>
+<h3 id="Estructura-del-Sistema"><a href="#Estructura-del-Sistema" class="headerlink" title="Estructura del Sistema"></a>Estructura del Sistema</h3><p>La estructura interna de los sistemas operativos pueden ser muy diferentes, ya que se debe tener en cuenta las metas de los usuarios (fácil, uso, confiable, rápido, etc) y las del sistema (fácil de diseñar, implementar y mantener, eficiente, etc).</p>
+<p>Veremos 3 posibles diseños del sistema: sistema monolítico, sistema en capas, sistema con micronúcleo.</p>
+<p><strong>Sistema Monolítico</strong></p>
+<p>Estos sistemas no tienen una estructura definida, sino que son escritos como una colección de procedimientos donde cualquier procedimiento puede invocar a otro.</p>
+<p>Ejemplo de estos sistemas pueden ser MS-DOS. Es importante tener en cuenta que ningún sistema es puramente de un tipo.</p>
+<p><strong>Sistema en Capas o Niveles</strong></p>
+<p>El diseño se organiza en una jerarquía de capas, donde los servicios que brinda una capa son consumidos solamente por la capa superior. La capa 0 es del Hardware y la N es la de los procesos de Usuario.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/capas.png?w=825" alt=""></p>
+<p>Estos sistemas tienen como ventaja que son modulares y la verificación se puede hacer a cada capa por separado (son más mantenibles). Sin embargo el diseño es muy costoso y es menos eficiente que el sistema monolítico ya que pierde tiempo pasando por cada capa.</p>
+<p><strong>Sistema con micronúcleo (microkernels)</strong></p>
+<p>La idea consiste en tener un núcleo que brinde los servicios mínimos de manejo de procesos, memoria y que provea la comunicación entre procesos. Todos los restantes servicios se construyen como procesos separados del micronúcleo, que ejecutan en modo usuario.</p>
+<p>Estos sistemas tienen como ventaja un diseño simple y funcional, que aumenta la portabilidad y la escalabilidad. Para agregar un nuevo servicio no es necesario modificar el núcleo, y es más seguro ya que los servicios corren en modo usuario.</p>
+<p><strong>Cliente/Servidor</strong></p>
+<p>Los procesos se diferencian en servidores, que proporcionan ciertos servicios y clientes que disponen de esos servicios.</p>
+<p><strong>Máquinas Virtuales</strong></p>
+<p>Se ejecuta un monitor de máquinas virtuales que proporciona copias virtuales del hardware al resto de procesos. En cada una de las máquinas se ejecuta un SO.</p>
+<p><strong>Exokernels</strong></p>
+<p>Un programa se ejecuta en modo kernel, asignando los recursos a las máquinas virtuales.</p>
+<p><strong>Híbrido</strong></p>
+<p>Implica que el núcleo en cuestión usa conceptos de arquitectura o mecanismos tanto del diseño monolítico como del micronúcleo.</p>
+<h3 id="Tipos-de-Sistemas-Operativos"><a href="#Tipos-de-Sistemas-Operativos" class="headerlink" title="Tipos de Sistemas Operativos"></a>Tipos de Sistemas Operativos</h3><p>Se pueden clasificar los SO en función de:</p>
+<ul>
+<li><strong>Nº de usuarios</strong><ul>
+<li><strong>Monousuario</strong> : solo 1 usuario puede usar los recursos del sistema simultáneamente.</li>
+<li><strong>Multiusuario</strong> : varios usuarios pueden usar los recursos del sistema simultáneamente. Por tanto, aunque haya más de un usuario dado de alta en el sistema, si no pueden trabajar de forma simultánea, el SO no es multiusuario.</li>
+</ul>
+</li>
+<li><strong>Nº de procesos o tareas</strong><ul>
+<li><strong>Monotarea</strong> : solo puede ejecutar 1 tarea a la vez.</li>
+<li><strong>Multitarea o multiprogramación</strong> : puede ejecutar varios programas a la vez.</li>
+</ul>
+</li>
+<li><strong>Nº de procesadores</strong><ul>
+<li><strong>Monoproceso / monoprocesador</strong> : el SO es capaz de gestionar solo 1 procesador, de manera que si tuviese más sería inútil. En estos SO los procesos irán alternando su ocupación en la CPU.</li>
+<li><strong>Multiproceso / multiprocesador</strong> : el SO es capaz de gestionar varios procesadores, de modo que puede usarlos simultáneamente para distribuir su carga de trabajo. Estos sistemas trabajan de dos formas:<ul>
+<li><strong>Asimétrica</strong> : el SO reparte las tareas, que está realizando, entre los procesadores. Determinados procesos los ejecutará siempre un procesador, y el otro procesador sólo se utilizará para realizar procesos de usuario. En este caso, es posible que un procesador esté siempre trabajando y el otro, en ocasiones, sin actividad.</li>
+<li><strong>Simétrica</strong> : los procesos son enviados indistintamente a cualquiera de los procesadores disponibles.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Tiempo de respuesta</strong> (tiempo que tarda el usuario en obtener los resultados después de iniciar la ejecución de un programa):<ul>
+<li><strong>Procesamiento por lotes</strong> : el tiempo de respuesta no es importante y suele ser alto. Los procesos se ejecutan secuencialmente unos tras otro. No existe interacción con el usuario. Ejemplo: copias de seguridad.</li>
+<li><strong>Tiempo compartido</strong> : el procesador divide su tiempo entre todos los procesos (usando algoritmos de planificación como Round Robin). Ejemplo: sistemas multiusuarios interactivos (los usuarios interactúan con el sistema).</li>
+<li><strong>Tiempo real</strong> : en estos SO, los procesos requieren un tiempo de respuesta muy bajo o inmediato. Ejemplos donde esto es especialmente importante: sistema donde el tiempo de respuesta es crucial como sistemas médicos de monitorización de pacientes, sistemas bancarios, tráfico aéreo…</li>
+</ul>
+</li>
+</ul>
+<h2 id="Administracion-de-Memoria"><a href="#Administracion-de-Memoria" class="headerlink" title="Administración de Memoria"></a>Administración de Memoria</h2><h3 id="Memoria-Principal"><a href="#Memoria-Principal" class="headerlink" title="Memoria Principal"></a>Memoria Principal</h3><p><strong>Introducción</strong></p>
+<p>En sistemas multiprogramados, para sacarle jugo a la multiprogramación, se necesita tener varios procesos cargados en memoria a la vez.</p>
+<p>Recordemos, que con respecto a la administración de memoria, el SO es responsable de:</p>
+<ul>
+<li>Mantener qué partes de la memoria están en uso y por quién.</li>
+<li>Decidir qué procesos cargar cuando haya memoria libre.</li>
+<li>Asignar y quitar espacio de memoria según sea necesario.</li>
+</ul>
+<p><strong>Preparación de un programa para ejecutar</strong></p>
+<p>Los programas son normalmente escritos en lenguajes de alto nivel, y deben pasar por distintas etapas antes de ser ejecutados:</p>
+<ul>
+<li>Compilación (compile): traducción de código fuente a código objeto.</li>
+<li>Ensamblaje (linker): ensamblar varios códigos objeto en un archivo ejecutable. Surge ante la necesidad de modularizar los programas y reutilizar código.</li>
+<li>Carga (load): asigna el archivo ejecutable a la memoria principal del sistema (crea en memoria el espacio necesario para diferentes áreas y las carga con la información).</li>
+</ul>
+<p>El tamaño de un proceso en memoria principal está limitado por la cantidad de memoria física que exista. Para aprovechar mejor la memoria, se puede utilizar la carga dinámica, la cual no cargará en memoria principal una rutina hasta que ésta no sea invocada.</p>
+<p>La gran ventaja es que las rutinas que no son utilizadas, no son cargadas a memoria física, y por lo tanto no consumen este recurso.</p>
+<p><strong>Direcciones Relativas y Absolutas</strong></p>
+<p>La mayoría de los SO permiten que un proceso de usuario resida en cualquier parte de la memoria principal. Es así que, aunque el espacio de direcciones comience en el 0000, la primera dirección de usuario no tiene porqué ser 0000. Esta posibilidad afecta a las direcciones que el programa de usuario puede utilizar. En cada una de las etapas que hemos visto para poder ejecutar un programa, las direcciones pueden representarse de diferentes formas.</p>
+<p>Las direcciones de un programa fuente son normalmente simbólicas. Al compilar, el compilador se encarga de reasignar estas direcciones simbólicas a direcciones relativas. El cargador, se encargará, a su vez, de reasignar direcciones relativas a direcciones absolutas.</p>
+<p><strong>Asociación de direcciones (address binding)</strong></p>
+<p>¿En qué momento el SO reasigna las instrucciones y los datos a direcciones de memoria?:</p>
+<ul>
+<li>Tiempo de Compilación: Si sabemos en el momento de la compilación donde va a residir el proceso en memoria, podemos generar código absoluto (con direcciones absolutas). Ahora, si en algún momento deseamos cambiar su ubicación, deberemos recompilar el código.</li>
+<li>Tiempo de Carga: El compilador deberá generar código reubicable (con direcciones relativas), y en este caso se retarda la reasignación a direcciones absolutas hasta el momento de la carga. Si en algún momento deseamos cambiar su ubicación, deberemos solamente volver a cargarlo.</li>
+<li>Tiempo de Ejecución: Si el proceso puede variar su ubicación en memoria durante su ejecución, entonces es necesario retardar su asignación a direcciones absolutas hasta el momento de ejecución. Para que este esquema pueda funcionar, se requiere soporte de hardware.</li>
+</ul>
+<p><strong>Espacios de direcciones lógico y físico</strong></p>
+<p>Una dirección generada por la CPU se denomina normalmente dirección lógica, mientras que una dirección vista por la unidad de memoria se denomina dirección física.</p>
+<p>Los métodos de reasignación en tiempo de compilación y de carga generan direcciones físicas y lógicas idénticas; no es el caso para el tiempo de ejecución. En este caso decimos que la dirección lógica es una dirección virtual.</p>
+<p>Al conjunto de todas las direcciones lógicas de un programa se le denomina espacio de direcciones lógicas; mientras que al conjunto de todas las direcciones físicas de un programa se le denomina espacio de direcciones físicas.</p>
+<p>La correspondencia entre direcciones virtuales y físicas en tiempo de ejecución es establecida por un dispositivo de hardware que se denomina Unidad de Gestión de Memoria (MMU = Memory Management Unit).</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/gestion_memoria.png?w=825" alt=""></p>
+<p><strong>Estrategia de asignación o reubicación</strong></p>
+<p>¿Cómo elige el SO en que porción de memoria colocaremos un proceso? Existen varias estrategias:</p>
+<ul>
+<li>First fit: Asigna el primer “agujero”de memoria libre que satisface la necesidad.</li>
+<li>Best fit: Asigna el mejor “agujero” de memoria libre que exista en la memoria principal.</li>
+<li>Worst fit: Asigna en el “agujero” más grande que exista en la memoria principal.</li>
+</ul>
+<p>Estudios de simulación han mostrado que <em>first-fit</em> y <em>best-fit</em> lograron mejores rendimientos en tiempo de asignación y utilización de la memoria que la estrategia <em>worst-fit</em> .</p>
+<p>Veamos un ejemplo:</p>
+<p>Si quisiéramos asignar a memoria un proceso de 212 kb, y tenemos los siguientes espacios libres (espacios en blanco):</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/asignacion.png?w=825" alt=""></p>
+<p>Veamos en qué hueco asigna al proceso cada estrategia:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/asignacion2.png?w=825" alt=""></p>
+<p><strong>Problema de asignación de memoria</strong></p>
+<p>La memoria física puede ser asignada a los diversos procesos en ejecución siguiendo diversas técnicas:</p>
+<ul>
+<li>Asignación contigua</li>
+<li><p>Asignación dispersa</p>
+</li>
+<li><p><strong>Asignación contigua</strong></p>
+</li>
+</ul>
+<p>El espacio de direcciones lógicas de un proceso se mapea sobre una única zona de la memoria física: las direcciones de memoria son contiguas.</p>
+<p>Métodos:</p>
+<ul>
+<li>Particiones fijas</li>
+<li>Particiones variables</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/asignacion_contigua.png?w=825" alt=""></p>
+<ul>
+<li><strong>Asignación dispersa</strong></li>
+</ul>
+<p>La memoria lógica se divide en fragmentos (páginas o segmentos), que se mapean sobre zonas no contiguas de la memoria física.</p>
+<p>Técnicas de asignación dispersa:</p>
+<ul>
+<li>Paginación</li>
+<li>Paginación multinivel</li>
+<li>Segmentación</li>
+<li>Segmentación paginada</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/asignacion_dispersa.png?w=825" alt=""></p>
+<p>Para implementar estas técnicas se necesita el apoyo de la MMU.</p>
+<p><strong>Fragmentación</strong></p>
+<p>Existen dos tipos de fragmentación:</p>
+<ul>
+<li>Fragmentación Interna: Es la pérdida de espacio en disco debido al hecho de que el tamaño de un determinado archivo sea inferior al tamaño del clúster, ya que teóricamente el archivo estaría obligado a ser referenciado como un clúster completo.</li>
+<li>Fragmentación Externa: Se da cuando existe suficiente memoria libre en el sistema para satisfacer un requerimiento de memoria, pero no es posible asignarlo debido a que no es un espacio contiguo.</li>
+</ul>
+<p>Dicho lo anterior, vemos que las estrategias presentadas en el ejemplo anterior muestran problemas de fragmentación externa, ya que en la memoria van quedando una gran cantidad de espacios pequeños que no son asignados.</p>
+<p><strong>Intercambio (Swapping)</strong></p>
+<p>Como ya vimos, un proceso debe estar en memoria principal para ser ejecutado. Sin embargo, los procesos pueden ser intercambiados temporalmente, sacándolos de memoria y almacenándolos en el disco, y volviéndolos a llevar a memoria para continuar su ejecución.</p>
+<p>Al mecanismo de llevar un proceso desde memoria principal a disco se le denomina s <em>wap-out.</em> Al inverso se le denomina <em>swap-in</em> . El mayor tiempo consumido en el <em>swaping</em> es el tiempo de transferencia.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/swapping.png?w=825" alt=""></p>
+<h3 id="Memoria-Virtual"><a href="#Memoria-Virtual" class="headerlink" title="Memoria Virtual"></a>Memoria Virtual</h3><p><strong>Introducción</strong></p>
+<p>La memoria virtual permite ejecutar procesos que requieren más memoria que la disponible en el sistema, manteniendo en memoria principal solo aquella memoria que el proceso esté utilizando y el resto en el disco. De esta forma el usuario ya no debe preocuparse por las limitaciones de memoria física.</p>
+<p>Cada proceso tiene su propio espacio de direccionamiento virtual (o lógico) y la MMU es la encargada de mapear las direcciones virtuales (o lógicas) a físicas.</p>
+<p><strong>Implementación</strong></p>
+<p>La implementación de memoria virtual es realizada a través de la técnica de paginación bajo demanda. En la paginación bajo demanda los procesos residen en un dispositivo de disco y son puestos en memoria principal cuando es necesario cargarlos para ejecutar. La carga del proceso en memoria no es total, sino que implementa un cargador “perezoso” (lazy swapper), que cargará las páginas según se vayan necesitando.</p>
+<p>Utilizar un esquema de este tipo requiere el conocimiento de las páginas que están activas en memoria. Para ello se utiliza el valid-invalid bit, que consiste en agregar a la tabla de páginas un nuevo campo (bit de validez), que indique para cada entrada, si la página se encuentra o no en memoria. Al inicio, la tabla de páginas indicará que ninguna página está en memoria (todos los bits de validez se encontrarán en <strong>i</strong> (invalid)).</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/memvirtual.png?w=825" alt=""></p>
+<p>En este ejemplo tenemos que el proceso tiene para usar 8 páginas, de las cuales solo usa 6, y de las cuales solo 3 están en memoria principal (A, C, F). Todas las páginas estarán el el disco (incluidas aquellas que también están en memoria principal).</p>
+<p><strong>Fallo de página</strong></p>
+<p>La memoria cargada en memoria principal se le denomina memoria residente. El acceso a memoria residente por parte de un proceso es tomado como un acceso normal, pero el acceso a memoria no residente genera un fallo de página.</p>
+<p>El fallo de página genera un trap a nivel del SO, que activa una rutina de atención que carga la página en memoria principal.</p>
+<p><strong>Acceso a Memoria</strong></p>
+<p>El acceso a memoria genera la siguiente secuencia de pasos:</p>
+<ul>
+<li>Verificar que el proceso referencia una página correcta dentro de su espacio virtual, ya que no todas las direcciones dentro de su espacio son válidas. Por ejemplo, el acceso fuera de un array puede generar un acceso a una página virtual que no fue asignada al proceso. Si el proceso referencia a una página incorrecta, se genera un errar y el proceso termina.</li>
+<li>Si el acceso fue correcto, se busca en la tabla de páginas el frame correspondiente, verificando el bit de validez-invalidez.</li>
+<li>Si el bit es de validez se accede al frame correspondiente y se termina el acceso.</li>
+<li>Si no es válido se genera un trap de page fault, que involucra los siguientes pasos:<ol>
+<li>Se busca frame libre en memoria principal, si no hay se ejecuta el algoritmo de reemplazo.</li>
+<li>Se lee de disco la página a cargar, y se carga en el frame obtenido en el paso anterior.</li>
+<li>Se actualiza la tabla de páginas, indicando que la página está disponible en memoria principal.</li>
+<li>Se devuelve el control a la instrucción que fue interrumpida por el PF (page fault).</li>
+</ol>
+</li>
+</ul>
+<p>Si se aplica este método se tendrá un sistema puro de paginación bajo demanda. Tener en cuenta que para poder llevarlo a cabo se precisa una tabla de páginas y espacio swap de disco.</p>
+<p><strong>Algoritmos de reemplazo</strong></p>
+<p>La necesidad de traer a memoria principal una página en una memoria principal llena, genera la búsqueda de un frame a reemplazar, mediante un algoritmo de reemplazo. Un mal algoritmo de reemplazo puede generar un impacto significativo de degradación del sistema.</p>
+<p>Cuando se elige un frame a reemplazar, este será puesto en memoria swap, y ante un eventual uso futuro, volverá a memoria principal a través de un page fault.</p>
+<p>Los pasos a seguir cuando reemplazamos frames son los siguientes:</p>
+<ul>
+<li>Elegir el frame mediante algún algoritmo de reemplazo.</li>
+<li>Escribir el frame en memoria swap (swap out) y ajustar la tabla de páginas.</li>
+<li>Cargar la página en el frame correspondiente (swap in).</li>
+<li>Ajustar la tabla de página.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/reemplazo.png?w=455&amp;h=344" alt=""></p>
+<p>Veamos ahora algunos algoritmos:</p>
+<ul>
+<li><strong><em>FIFO (First in First out)</em></strong></li>
+</ul>
+<p>El algoritmo reemplaza la página que lleva más tiempo en memoria principal. Es un algoritmo fácil de implementar ya que requiere únicamente de una estructura tipo cola, pero reemplaza las páginas sin tener en cuenta las referencias que tuvo.</p>
+<ul>
+<li><strong><em>Segunda Oportunidad</em></strong></li>
+</ul>
+<p>Este algoritmo intenta disminuir la cantidad de fallos de páginas del algoritmo FIFO, teniendo en cuenta las referencias a las páginas.</p>
+<p>El algoritmo será igual al anterior, salvo que cada página tendrá un bit que indicará si fue o no referenciada luego de ser cargada a memoria. Al momento del reemplazo, se verifica el bit de referencia; si está encendido, a la página se le da una segunda oportunidad y es puesta al final de la cola. Luego se continúa con la siguiente página que está al principio de la cola. Si el bit está apagado, esta página será seleccionada para ser reemplazada.</p>
+<p>Es un tanto ineficiente, pero disminuye la cantidad de fallos de páginas.</p>
+<ul>
+<li><strong><em>Óptimo</em></strong></li>
+</ul>
+<p>En este algoritmo se reemplaza la página que no va a ser usada por el mayor periodo de tiempo. Es imposible de implementar porque requiere conocer a qué páginas accederá el proceso.</p>
+<ul>
+<li><strong><em>LRU (Least Recently Used – Recientemente Menos Usada)</em></strong></li>
+</ul>
+<p>Este algoritmo asocia a cada página el tiempo en que fue referenciada. La página elegida por el algoritmo de reemplazo será la que fue accedida hace más tiempo. Este algoritmo es el que más se aproxima al óptimo y es bastante utilizado por los SO.</p>
+<ul>
+<li><em><strong>NRU (No Recientemente Usada)</strong></em></li>
+</ul>
+<p>En este algoritmo a las páginas se les asigna un bit de referencia y otro de modificación. El bit de referencia se enciende cada vez que se lee o escribe la página, mientras que el de modificación solo se enciende cada vez que se escribe. Cada cierto tiempo el bit de referencia es apagado.</p>
+<p>Al ocurrir un fallo de página, los frames son divididos en 4 clases. Se reemplazará un frame al azar de la clase más baja que no esté vacía:</p>
+<ul>
+<li>Clase 0: No referenciada, no modificada</li>
+<li>Clase 1: No referenciada, modificada</li>
+<li>Clase 2: Referenciada, no modificada</li>
+<li>Clase 3: Referenciada, modificada</li>
+</ul>
+<p>Al ejecutar el algoritmo de reemplazo, existen dos opciones de páginas a reemplazar:</p>
+<ul>
+<li>Reemplazo global: Un proceso puede reemplazar un frame utilizado por otro. Aunque los PF de un proceso afectan a otros, es el método más usado.</li>
+<li>Reemplazo local: Un proceso reemplaza únicamente los frames que tiene asignado, es por eso que la cantidad de frames de un proceso no varía. La desventaja es que hay marcos que se pueden desperdiciar.</li>
+</ul>
+<p><strong>Asignación de frames a procesos e hiperpaginación</strong></p>
+<p>Si el SO no implementa una estrategia de asignación de memoria, un proceso que requiera mucha memoria puede hacer colapsar el sistema.</p>
+<p>Una forma de asignar frames a procesos podría ser dividir la cantidad de frames del sistema en partes iguales para cada proceso. Este método puede ser ineficiente ya que no todos los procesos consumen la misma cantidad de memoria.</p>
+<p>Si un proceso utiliza en forma activa una cantidad mayor de frames de los asignados por el sistema, tendrá un algo porcentaje de fallos de página, dando lugar a que el proceso esté continuamente realizando PF, pasando más tiempo paginando que ejecutando, lo que se conoce como <strong>hiperpaginación</strong> . Se degrada significativamente el rendimiento del sistema.</p>
+<h2 id="Procesos"><a href="#Procesos" class="headerlink" title="Procesos"></a>Procesos</h2><p><strong>Definición de proceso</strong></p>
+<p>Un proceso es un programa en ejecución que necesita estar cargado en memoria y disponer de recursos (CPU, memoria, archivos, dispositivos de E/S) para cumplir su objetivo. Se trata de una entidad activa. Mientras que los programas son un conjunto de archivos que están almacenados en algún dispositivo de almacenamiento (disco duro, pendrive …) y cuyo código fuente está escrito en algún lenguaje de programación. Cuando este conjunto de archivos se ejecutan, entonces pasa a ser un proceso.</p>
+<p><strong>Procesos en memoria</strong></p>
+<p>Un proceso en memoria se constituye de varias secciones:</p>
+<ul>
+<li><strong>Código (text)</strong> : instrucciones del proceso.</li>
+<li><strong>Datos (data)</strong> : variables globales del proceso.</li>
+<li><strong>Memoria dinámica (Heap)</strong> : Memoria dinámica que genera el proceso.</li>
+<li><strong>Pila (Stack)</strong> : utilizado para preservar el estado en la invocación anidada de procedimientos y funciones.</li>
+</ul>
+<p><strong>Estados de los procesos</strong></p>
+<p>El estado de un proceso se define por su actividad actual, cambiando a medida que se ejecuta. La ejecución de un proceso alterna una serie de ráfagas de CPU y E/S.</p>
+<p>Los estados de un proceso son:</p>
+<ul>
+<li><strong>Nuevo</strong> : Cuando el proceso es creado.</li>
+<li><strong>En Ejecución</strong> : El proceso tiene asignado un procesador y está ejecutando sus instrucciones.</li>
+<li><strong>Bloqueado</strong> : El proceso está esperando por un evento (que se complete un pedido de E/S o una señal).</li>
+<li><strong>Preparado</strong> : El proceso está listo para ejecutar, solo necesita del recurso procesador.</li>
+<li><strong>Terminado</strong> : El proceso finalizó su ejecución.</li>
+</ul>
+<p><strong>Transiciones entre los estados</strong></p>
+<p>Veamos ahora como los procesos pueden cambiar de estados a partir de determinados hechos. A continuación se muestra el diagrama de estados y transiciones de los procesos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/estados_procesos1.png?w=825" alt=""></p>
+<ul>
+<li><strong>Nuevo -&gt; Preparado</strong> : el SO está preparado para admitir un proceso más.</li>
+<li><strong>Preparado -&gt; Ejecución</strong> : el planificador escoge un proceso para la ejecución.</li>
+<li><strong>Ejecución -&gt; Preparado</strong> : el proceso en ejecución es interrumpido y expulsado del procesador porque ya ha consumido su tiempo asignado o porque otro proceso de mayor prioridad está esperando.</li>
+<li><strong>Ejecución -&gt; Bloqueado</strong> : el proceso abandona voluntariamente la CPU y espera a un evento externo.</li>
+<li><strong>Bloqueado -&gt; Preparado</strong> : finaliza el evento que estaba esperando el proceso y pasa al estado preparado.</li>
+<li><strong>Ejecución -&gt; Terminado</strong> : el proceso termina su ejecución (terminación normal).</li>
+<li><strong>Preparado/Bloqueado -&gt; Terminado</strong> : el proceso es eliminado (terminación anormal).</li>
+</ul>
+<p><strong>Listas y colas de procesos</strong></p>
+<p>Los procesos, según su estado, deberán esperar por determinados eventos, como ya vimos. Puede suceder, que más de un proceso esté esperando por el mismo evento, es por eso que se deben organizar en diferentes colas o listas.</p>
+<ul>
+<li><strong>Lista de procesos del sistema (job queue)</strong> : Esta será una lista especial, porque los procesos que están en ella no esperan por nada en particular, sino que es la lista de todos los procesos del sistema. Al crearse un nuevo proceso se agrega el PCB a esta lista. Cuando el proceso termina su ejecución es borrado.</li>
+<li><strong>Cola de procesos listos (ready queue)</strong> : Esta cola se compondrá de los procesos que estén en estado listo. La estructura de esta cola dependerá de la estrategia de planificación utilizada.</li>
+<li><strong>Cola de espera de dispositivos (device queue)</strong> : Los procesos que esperan por un dispositivo de E/S particular son agrupados en una lista específica al dispositivo. Cada dispositivo de E/S tendrá su cola de espera, por lo que existirán varias device queue.</li>
+</ul>
+<p><strong>Bloque de Control de Proceso (PCB)</strong></p>
+<p>Cuando un proceso se ejecuta, el SO le asigna un espacio de direcciones de memoria (que contiene las instrucciones, los datos y la pila que es una estructura para almacenar y recuperar datos del proceso) y lo añade a la tabla de procesos.</p>
+<p>El SO guarda en la tabla de procesos por cada proceso una estructura de datos llamada Bloque de Control de Proceso (PCB) que almacena la siguiente información:</p>
+<ul>
+<li><strong>Identificación</strong> de proceso: del proceso en sí (PID), del proceso padre (PPID) y de usuario.</li>
+<li><strong>Información de estado</strong> del proceso: preparado, en ejecución, bloqueado, ….</li>
+<li><strong>Prioridad</strong> del proceso.</li>
+<li><strong>Dirección de memoria</strong> donde se ha cargado el proceso</li>
+<li><strong>Otros</strong> : recursos utilizados, valores de los registros del procesador, propietarios, permisos.</li>
+</ul>
+<p><strong>Cambio de contexto (context switch)</strong></p>
+<p>Para dar sensación de ejecución simultánea o multiprogramación, el tipo de CPU debe repartirse entre los procesos. Esto implica <strong>cambios de contexto</strong> que consisten en quitarle la CPU al proceso “en ejecución” y asignársela a otro estado “preparado”. Esta operación la realiza un componente del SO llamado <strong>dispatcher</strong> o <strong>planificador a corto</strong> <strong>plazo</strong> y en ella se guarda el contexto del proceso en ejecución en su PCB y se restaura el contexto del nuevo proceso a ejecutar mediante su PCB.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/cambio_contexto.png?w=825" alt=""></p>
+<p>Los cambios de contexto pueden suponer una sobrecarga si se utilizan con mucha frecuencia. En general, suelen producirse cuando un proceso finaliza, es expulsado o se suspende.</p>
+<p><strong>Comunicación entre procesos</strong></p>
+<p>Procesos que se ejecutan concurrentemente pueden ser procesos independientes o cooperativos. Un proceso es cooperativo si puede afectar o verse afectado por los restantes procesos que se ejecuten en el sistema, y es independiente si no.</p>
+<p>Evidentemente, cualquier proceso que comparta datos con otro será cooperativo. Veamos algunas razones por las cuales es bueno tener un entorno que permita la cooperación de procesos:</p>
+<ul>
+<li>Compartir información. Dado que varios usuarios pueden estar interesados en la misma información, se debe proveer un acceso concurrente a ella.</li>
+<li>Acelerar cálculos. Si deseamos que una determinada operación se ejecute rápidamente, debemos dividirla en subtareas ejecutándose cada una de ellas en paralelo. Esto se consigue solo si hay múltiples CPU o varios canales de E/S.</li>
+</ul>
+<p>El mecanismo que provee esto es IPC (InterProcess Comunication), que permite intercambiar datos e información.</p>
+<h2 id="Hilos-Thread"><a href="#Hilos-Thread" class="headerlink" title="Hilos (Thread)"></a>Hilos (Thread)</h2><p>La mayoría de los SO proporcionan caracteríscas que permiten que un proceso tenga múltiples hilos de control.</p>
+<p><strong>¿Qué es un hilo?</strong></p>
+<p>Un hilo es una unidad básica de utilización de CPU, la cual contiene un id de hilo, su propio program counter, un conjunto de registros y una pila; se representa a nivel del SO con una estructura llamada TCB (Thread Control Block)</p>
+<p>Los hilos comparten con otros hilos que pertenecen al mismo proceso la sección de código, la sección de datos, entre otras cosas. Si un proceso tiene múltiples hilos, puede realizar más de una tarea a la vez (esto es real cuando se posee más de una CPU).</p>
+<p><strong>Ventajas de usar hilos</strong></p>
+<ul>
+<li><strong>Respuesta</strong> : el tiempo de respuesta mejora, ya que el programa puede continuar ejecutándose, aunque parte de él esté bloqueado.</li>
+<li><strong>Compartir recursos</strong> : los hilos comparten la memoria y los recursos del proceso al que pertenecen, por lo que se puede tener varios hilos de ejecución dentro del mismo espacio de direcciones.</li>
+<li><strong>Economía</strong> : es más fácil la creación, cambio de contexto y gestión de hilos que de procesos.</li>
+<li><strong>Utilización múltiples CPUs</strong> : permite qué hilos de un mismo proceso ejecuten en diferentes CPUs a la vez. En un proceso mono-hilo, un proceso ejecuta en una única CPU, independientemente de cuantas tenga disponibles.</li>
+</ul>
+<p><strong>Hilos a nivel de usuario y de kernel</strong></p>
+<ul>
+<li><strong>Hilos a nivel de usuario</strong> : son implementados en alguna librería. Estos hilos se gestionan sin soporte del SO, el cual solo reconoce un hilo de ejecución.</li>
+<li><strong>Hilos a nivel de kernel</strong> : el SO es quien crea, planifica y gestiona los hilos. Se reconocen tantos hilos como se hayan creado.</li>
+</ul>
+<p>Los hilos a nivel de usuario tienen como beneficio que su cambio de contexto es más sencillo que el cambio de contexto entre hilos de kernel. Además, se pueden implementar aún si el SO no utiliza hilos a nivel de kernel. Otro de los beneficios consiste en poder planificar diferente a la estrategia del SO.</p>
+<p>Los hilos a nivel de kernel tienen como gran beneficio poder aprovechar mejor las arquitecturas multiprocesadores, y que proporcionan un mejor tiempo de respuesta, ya que si un hilo se bloquea, los otros puedes seguir ejecutándose.</p>
+<h2 id="Planificacion"><a href="#Planificacion" class="headerlink" title="Planificación"></a>Planificación</h2><p>La planificación es la base para lograr la multiprogramación.</p>
+<p>En un sistema multiprogramado, generalmente en un determinado instante existirán varios procesos que requieren el procesador a la vez, el componente del SO que realiza la operación de elegir el proceso a utilizar es el planificador.</p>
+<p><strong>Principales planificadores de CPU</strong></p>
+<ul>
+<li><strong>Planificador a largo plazo</strong> :<ul>
+<li>Selecciona procesos de la cola de esperando ejecución y los carga a memoria</li>
+<li>Controla el grado de multiprogramación. Es importante que elija un conjunto equilibrado de procesos.</li>
+<li>Se ejecuta con poca frecuencia.</li>
+</ul>
+</li>
+<li><strong>Planificador a corto plazo</strong> :<ul>
+<li>Selecciona entre los procesos preparados en memoria y les asigna la CPU.</li>
+<li>Se ejecuta con mucha frecuencia.</li>
+</ul>
+</li>
+<li><strong>Planificador a medio plazo</strong> :<ul>
+<li>Decide qué proceso pasa de la memoria principal a la secundaria (memoria virtual) o viceversa.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/planificadores.png?w=825" alt=""></p>
+<p>El SO enlaza losPCB’s de los procesos que están en el mismo estado a las diversas colas que puedan existir.</p>
+<p><strong>Esquemas de planificación</strong></p>
+<p>Se invoca al planificador cuando:</p>
+<ol>
+<li>Cuando un proceso cambia de ejecutando a bloqueado.</li>
+<li>Cuando un proceso finaliza.</li>
+<li>Cuando un proceso cambia de ejecutando a listo.</li>
+<li>Cuando un proceso cambia de bloqueado a listo.</li>
+<li>Cuando se crea un nuevo proceso.</li>
+</ol>
+<p>Cuando ocurren los dos primeros casos, el planificador es invocado debido a que el proceso en ejecución libera el procesador.</p>
+<p>Los últimos tres casos se dan solamente cuando el planificador es expropiativo, ya que puede quitar el procesador a un proceso que estaba ejecutando para dárselo a otro.</p>
+<p><strong>Planificación no apropiativa y apropiativa</strong></p>
+<ul>
+<li>Planificación no apropiativa (non-preemptive):<ul>
+<li>Algoritmos no expulsivos.</li>
+<li>Los procesos se ejecutan hasta que terminan o se bloquean.</li>
+<li>Sencillo de implementar.</li>
+<li>Rendimiento negativo en general.</li>
+</ul>
+</li>
+<li>Planificación aproviativa (preemptive):<ul>
+<li>Algoritmos expulsivos.</li>
+<li>Los procesos puedes ser expulsados de la CPU.</li>
+<li>Mayor coste de implementación. Necesitan soporte hardware adicional (relojes).</li>
+<li>Mejora el servicio y evita monopolización de la CPU.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Medidas para poder evaluar los algoritmos de planificación</strong></p>
+<ul>
+<li><strong>Utilización de CPU</strong> : es el porcentaje de uso útil que tiene un procesador.</li>
+<li><strong>Rendimiento (Throughput)</strong> : número de procesos terminados por unidad de tiempo.</li>
+<li><strong>Tiempo de retorno</strong> : tiempo desde que un proceso se carga hasta que finaliza su ejecución.</li>
+<li><strong>Tiempo de espera</strong> : es la suma de los tiempos que un proceso estuvo en la cola de procesos listos.</li>
+<li><strong>Tiempo de respuesta</strong> : tiempo desde la carga hasta que el proceso da su primera respuesta.</li>
+</ul>
+<p><strong>Algoritmos de planificación</strong></p>
+<ul>
+<li><strong>FCFS (First Come First Served)</strong></li>
+</ul>
+<p>La CPU es asignada a los procesos en el mismo orden que lo solicitan. Es un algoritmo no expulsivo.</p>
+<ul>
+<li>Ventajas<ul>
+<li>Sencillo de implementar (cola FIFO).</li>
+</ul>
+</li>
+<li>Inconvenientes<ul>
+<li>Mal tiempo de espera</li>
+<li>Efecto convoy (procesos con largar ráfagas de CPU retrasan a procesos con ráfagas cortas).</li>
+<li>No válido para procesos interactivos.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/fcfs1.png?w=825" alt=""></p>
+<ul>
+<li><strong>SJF (Shortest Job First)</strong></li>
+</ul>
+<p>Primero el que menos tiempo total de CPU requiere.</p>
+<p>Se escoge el proceso de la cola de preparados con una próxima racha de CPU más corta y se ejecuta hasta que se termine o se suspenda. Si hay varios procesos con rachas de CPU iguales, se puede aplicar FIFO. Algoritmo no expulsivo.</p>
+<ul>
+<li>Ventajas<ul>
+<li>Optimiza el tiempo de espera</li>
+<li>Favorece los procesos orientados a E/S</li>
+</ul>
+</li>
+<li>Desventajas<ul>
+<li>Es costoso averiguar cuándo dura la siguiente racha de CPU</li>
+<li>Inanición de los procesos con rachas de CPU largas</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/sjf.png?w=825" alt=""></p>
+<ul>
+<li><strong>SRTF (Shortest Remaining Time First)</strong></li>
+</ul>
+<p>Primero al que menos tiempo de CPU le queda para acabar.</p>
+<p>Versión apropiativa de SJF (como el SJF, solo que puede echar a los procesos)</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/srtf.png?w=825" alt=""></p>
+<ul>
+<li><strong>Planificación por prioridades</strong></li>
+</ul>
+<p>Primero el que tiene más prioridad.</p>
+<p>Cada proceso tiene asignada una prioridad. El planificador selecciona el proceso con prioridad más alta (a igual prioridad se selecciona con FCFS).</p>
+<p>Las prioridades pueden ser dinámicas (cambian con el tiempo) o estáticas (se mantienen).</p>
+<ul>
+<li>Inconvenientes<ul>
+<li>Riesgo de inanición de procesos con prioridad baja. Una solución sería aumentar la prioridad con el incremento del tiempo de espera.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/por_prioridades.png?w=825" alt=""></p>
+<ul>
+<li><strong>Planificación Circular (Round Robin)</strong></li>
+</ul>
+<p>Todos el mismo tiempo por turnos.</p>
+<p>A cada proceso se le asigna una cantidad de tiempo de CPU llamada “quantum”. Si el proceso tiene un intervalo de CPU mayor que el quantum es expulsado de la CPU.</p>
+<p>La cola de preparados se gestiona con una política FIFO.</p>
+<p>Si el valor del quantum es grande el algoritmo degenera en FCFS. Si es pequeño se generará sobrecarga debido a cambios de contexto.</p>
+<p>Es Equitativo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/roundrobin.png?w=825" alt=""></p>
+<ul>
+<li><strong>Multilevel Queue</strong></li>
+</ul>
+<p>Este algoritmo propone dividir la lista de procesos listos en varias colas, una para cada tipo de proceso. Cabe destacar que los procesos no podrán cambiar de cola, que cada cola tendrá su propio algoritmo de planificación, y que existirá un algoritmo de planificación entre colas.</p>
+<ul>
+<li><strong>Multilevel Feedback Queue</strong></li>
+</ul>
+<p>Este algoritmo se diferencia con el anterior en que los procesos si pueden cambiar de nivel, dependiendo del uso del CPU que tengan. La cola de más alta prioridad corresponderá a los I/O bound, la más baja a los CPU-bound.</p>
+<p>Un algoritmo así se define por:</p>
+<ul>
+<li>Cantidad de colas</li>
+<li>Algoritmo de cada cola</li>
+<li>Criterio para subir de nivel un proceso</li>
+<li>Criterio para bajar de nivel un proceso</li>
+<li>Criterio para asignar un proceso nuevo a una de las colas</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/multilevel-feddback.png?w=361&amp;h=228" alt=""></p>
+<ul>
+<li><strong>Sistemas Multiprocesador</strong></li>
+</ul>
+<p>En un sistema simétrico, cualquier procesador ejecuta procesos de usuario. Se puede asignar una cola de listos a cada CPU, lo cual es conveniente para el uso de la caché. Pueden haber desbalances de trabajo entre procesadores, por lo cual se pueden migrar procesos de cola para balancear la carga nuevamente.</p>
+<h2 id="Programacion-Concurrente"><a href="#Programacion-Concurrente" class="headerlink" title="Programación Concurrente"></a>Programación Concurrente</h2><p><strong>¿Qué es la programación concurrente?</strong></p>
+<p>Se conoce por programación concurrente a la rama de la informática que trata de las técnicas de programación que se usan para expresar el paralelismo entre tareas y para resolver los problemas de comunicación y sincronización entre procesos.</p>
+<p>El principal problema de la programación concurrente corresponde a no saber en qué orden se ejecutan los programas (en especial los programas que se comunican). Se debe tener especial cuidado en que este orden no afecte el resultado de los programas.</p>
+<p><strong>Sección crítica y exclusión mutua</strong></p>
+<p>El método más sencillo de comunicación entre procesos de un programa concurrente es el uso común de unas variables de datos. Esta forma tan sencilla de comunicación puede llevar, no obstante, a errores en el programa ya que el acceso concurrente puede hacer que la acción de un proceso interfiera en las acciones de otro de una forma no adecuada.</p>
+<p>Para evitar este tipo de errores se pueden identificar aquellas regiones de los procesos que acceden a variables compartidas y dotarlas de la posibilidad de ejecución como si fueran una única instrucción.</p>
+<p>Se denomina <strong>Sección Crítica</strong> a aquellas partes de los procesos concurrentes que no pueden ejecutarse de forma concurrente o, también, que desde otro proceso se ven como si fueran una única instrucción. Esto quiere decir que si un proceso entra a ejecutar una sección crítica en la que se accede a unas variables compartidas, entonces otro proceso no puede entrar a ejecutar una región crítica en la que acceda a variables compartidas con el anterior.</p>
+<p>Las secciones críticas se pueden <strong>excluir mutuamente</strong> . Para conseguir dicha exclusión se deben implementar protocolos software que impidan el acceso a una sección crítica mientras está siendo utilizada por un proceso.</p>
+<p><strong>Semáforos</strong></p>
+<p>Dijkstra dio en 1968 una solución al problema de la exclusión mutua con la introducción del concepto de semáforo binario. Esta técnica permite resolver la mayoría de los problemas de sincronización entre procesos y forma parte del diseño de muchos SO.</p>
+<p>Un semáforo binario es un indicador (S) de condición que registra si un recurso está disponible o no. Un semáforo binario solo puede tomar dos valores: 0 y 1. Si, para un semáforo binario S=1 entonces el recurso está disponible y la tarea lo puede utilizar; si S=0 el recurso no está disponible y el proceso debe esperar.</p>
+<p>Los semáforos se implementan con una cola de tareas a la cual se añaden los procesos que están en espera del recurso.</p>
+<p>Un semáforo binario se puede definir como un tipo de datos especial que sólo puede tomar los valores 0 y 1, con una cola de tareas asociada y con sólo tres operaciones para actuar sobre él:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/semaforo.png?w=825" alt=""></p>
+<ol>
+<li>La operación <strong>INIT</strong> se debe sellar a cabo antes de que comience la ejecución concurrente de los procesos ya que su función exclusiva es dar una valor inicial al semáforo.</li>
+<li>Un proceso que corre la operación <strong>P</strong> y encuentra el semáforo a 1, lo pone a 0 y prosigue su ejecución. Si el semáforo está a 0 el proceso queda en estado de <em>bloqueado</em> hasta que el semáforo se libera.</li>
+<li>Cuando se ejecuta la operación <strong>V</strong> puede haber varios procesos en la lista o cola. El proceso que la dejará para pasar al estado listo dependerá del esquema de gestión de la Cola. Si no hay ningún proceso en espera el semáforo se deja libre para el primero que lo requiera.</li>
+</ol>
+<p>El semáforo binario resulta adecuado cuando hay que proteger un recurso que pueden compartir varios procesos, pero cuando lo que hay que proteger es un conjunto de recursos similares, se puede usar una versión más general de semáforo que lleve la cuenta del número de recursos disponibles. En este caso el semáforo se inicializa con el número total de recursos disponibles (N) y las operaciones P y V se diseñan de modo que se impida el acceso al recurso protegido por el semáforo cuando el valor de éste es meno o igual que cero. Cada vez que se solicita y obtiene un recurso, el semáforo se decrementa y se incrementa cuando uno de ellos se libera.</p>
+<p>Las operaciones que tenemos son las mismas, con algunas diferencias en su semántica:</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/semaforos1.png?w=825" alt=""></p>
+<p><strong>Semáforos: mutua exclusión</strong></p>
+<p>La exclusión mutua se realiza fácilmente utilizando semáforos. La operación P se usará como procedimiento de bloqueo antes de acceder a una sección crítica y la operación V como procedimiento de desbloqueo. Se utilizarán tantos semáforos como clases de secciones críticas se establezcan.</p>
+<h2 id="Gestion-de-Entrada-Salida"><a href="#Gestion-de-Entrada-Salida" class="headerlink" title="Gestión de Entrada/Salida"></a>Gestión de Entrada/Salida</h2><p>La <strong>gestión de entrada/salida</strong> es una de las funciones más importantes del SO, ya que el SO debe ser capaz de manejar los diferentes periféricos existentes.</p>
+<p>Para ello <strong>debe</strong> :</p>
+<ul>
+<li>Enviar órdenes a los dispositivos de E/S</li>
+<li>Determinar el dispositivo que necesita la atención del procesador</li>
+<li>Detectar las interrupciones</li>
+<li>Controlar los errores</li>
+<li>Proporcionar una interfaz entre los dispositivos y el resto del sistema. Esta interfaz debe ser:<ul>
+<li>Sencilla y fácil de usar</li>
+<li>Debe ser la misma para todos los dispositivos</li>
+</ul>
+</li>
+</ul>
+<p>El SO tiene varias maneras de llevar a cabo la E/S:</p>
+<ul>
+<li><strong>E/S programada</strong> : el procesador ejecuta un programa que controla las operaciones de E/S. El problema es que el procesador se tiene que quedar esperando (parado) a recibir respuesta.</li>
+<li><strong>E/S controlada por interrupciones</strong> : los dispositivos envían una señal de interrupción para llamar la atención del sistema.</li>
+<li><strong>E/S mediante el uso de DMA (acceso directo a memoria)</strong> : un chip se encarga de la transferencia y accede a la memoria para leer o escribir datos que recibe y envía el dispositivo sin pasar por el procesador.</li>
+</ul>
+<p>Actualmente los discos duros, unidades de CD, DVD, Blueray, admiten DMA y la tienen activada por defecto.</p>
+<p>Dado que la velocidad del procesador es muy superior a la de los dispositivos de E/S, se utilizan <strong>técnicas de almacenamiento intermedio</strong> para mejorar el rendimiento del sistema:</p>
+<ul>
+<li><strong>Caching</strong> : consiste en almacenar una caché temporal, de rápido acceso, los datos que se usan con más frecuencia.</li>
+<li><strong>Buffering</strong> : consiste en utilizar un área de memoria como buffer, simulando un dispositivo o un periférico lógico, que hará de dispositivo intermedio entre el periférico real y el procesador. El buffer es independiente del dispositivo de entrada y/o salida, por lo que permite que el procesador comience a trabajar leyendo o almacenando en el buffer mientras la información del periférico se va almacenando o extrayendo del buffer. Esto evita que un periférico lento afecte al rendimiento del equipo informático.</li>
+<li><strong>Spooling</strong> : técnica en la cual la computadora introduce trabajos en un buffer (un área especial en memoria o en un disco), de manera que un dispositivo pueda acceder a ellos cuando esté listo. El spooling es útil en caso de dispositivos que acceden a los datos a distintas velocidades. El buffer proporciona un lugar de espera donde los datos pueden estar hasta que el dispositivo (generalmente más lento) los procesa. Esto permite que la CPU pueda trabajar en otras tareas mientras que espera que el dispositivo más lento acabe de procesar el trabajo.</li>
+</ul>
+<p>La aplicación más común del spooling es la impresión. En este caso, los documentos son cargados en un área de un disco, y la impresora los saca de éste a su propia velocidad. El usuario puede entonces realizar otras operaciones en el ordenador mientras la impresión tiene lugar en segundo plano. El spooling permite también que los usuarios coloquen varios trabajos de impresión en una cola de una vez, en lugar de esperar a que cada uno acabe para enviar el siguiente.</p>
+<p><strong>Unidad de Entrada/Salida</strong></p>
+<p>La Unidad de Entrada/Salida (chipset) permite la comunicación de la CPU y la Memoria Principal con el exterior: impresoras, monitor, teclado, etc.</p>
+<p>Para que se pueda llevar a cabo el intercambio de información se deben realizar las siguientes tareas:</p>
+<ul>
+<li><strong>Direccionamiento</strong> : selección del dispositivo de E/S implicado en una transferencia determinada.</li>
+<li><strong>Sincronización</strong> de CPU y periféricos: es necesario coordinar la actividad de la CPU con los periféricos, ya que sus velocidades de trabajo son distintas.</li>
+<li><strong>Transferencia</strong> de datos desde o hacia el dispositivo seleccionado.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/es.png?w=825" alt=""></p>
+<p><strong>Software de Entrada/Salida</strong></p>
+<p>El software de E/S se organiza en niveles. Los del nivel inferior ocultan las particularidades del hardware a los del nivel superior que presentan una interfaz simple y uniforme al usuario.</p>
+<p><img src="https://gsitic.files.wordpress.com/2017/12/softes.png?w=825" alt=""></p>
+<p><strong>Hardware de Entrada/Salida</strong></p>
+<p>En general, las unidades de E/S constan de:</p>
+<ul>
+<li>Un componente electrónico denominado controladora</li>
+<li><p>Un componente mecánico, que es el dispositivo mismo</p>
+</li>
+<li><p><strong>Controladoras</strong></p>
+</li>
+</ul>
+<p>Las principales funciones de las controladoras son:</p>
+<ul>
+<li>Comunicación en el periférico, intercambio de órdenes, información del estado.</li>
+<li>Detección de errores.</li>
+<li>Comunicación con el procesador, descodificadores de órdenes, datos, información de estado, reconocimiento de dirección.</li>
+</ul>
+<p>Al código específico que el SO utiliza para programar una controladora se le conoce como manejador o driver de la controladora. De este modo, para llevar a cabo las tareas de E/S, el SO, usando el driver, se comunica con la controladora a través de una serie de registros específicos que cada controladora tiene. Cuando la orden ha sido cumplida, la controladora produce una interrupción con el fin de permitir que la CPU atienda al SO para comprobar los resultados de la operación de E/S. Para dicha comprobación se utilizan los valores de los registros de la controladora que informan sobre el estado final.</p>
+<ul>
+<li><strong>Dispositivos de E/S</strong></li>
+</ul>
+<p>Los periféricos se pueden clasificar en función de si gestionan la información por bloques o caracteres.</p>
+<h2 id="Gestion-de-Ficheros"><a href="#Gestion-de-Ficheros" class="headerlink" title="Gestión de Ficheros"></a>Gestión de Ficheros</h2><p><strong>Introducción</strong></p>
+<ul>
+<li>Fichero o archivo: Conjunto de información de un determinado tipo que está almacenada en un dispositivo de almacenamiento. Ejemplo: documento de texto, sonido, imagen, …</li>
+<li>Carpeta o directorio: Tipo especial de fichero que se utiliza para organizar ficheros (u otras carpetas).</li>
+<li>Sistema de ficheros: Parte del SO que permite “administrar” la información almacenada de los dispositivos de E/S en forma de ficheros.<ul>
+<li>Objetivos:<ul>
+<li>Crear, modificar o borrar ficheros (o carpetas)</li>
+<li>Controlar el acceso a los ficheros (mediante permisos)</li>
+<li>Permitir intercambio de datos entre ficheros</li>
+<li>Permitir realizar copias de seguridad de los ficheros</li>
+<li>Permitir el acceso a los ficheros mediante nombres simbólicos</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Ficheros</strong></p>
+<p><strong>-&gt; Nombre y extensión de los ficheros</strong></p>
+<p>Los archivos generalmente se componen de:</p>
+<ul>
+<li>Nombre: La mayoría de SO permiten usar nombres de hasta 255 caracteres y algunos SO, como Linux, distinguen entre mayúsculas y minúsculas.</li>
+<li>Extensión: Sirve para saber el programa que permite ejecutar o abrir un fichero. Algunos SO como Linux no necesitan el uso de extensiones.</li>
+</ul>
+<p><strong>-&gt; Tipos de ficheros:</strong></p>
+<ul>
+<li>Ficheros normales o regulares: Aquellos ficheros que contienen datos (información).</li>
+<li>Directorios: Fichero que se utiliza para organizar los ficheros (u otras carpetas).</li>
+<li>Ficheros especiales de dispositivos: representan a dispositivos de E/S.</li>
+</ul>
+<p><strong>-&gt; Información que contiene un fichero:</strong></p>
+<ul>
+<li>Nombre</li>
+<li>Tamaño</li>
+<li>Fechas: de creación, modificación, …</li>
+<li>Propietario</li>
+<li>Permisos (lectura, escritura, ejecución, …)</li>
+<li>Ubicación</li>
+<li>Enlaces: puntos desde los que se puede acceder al fichero</li>
+</ul>
+<p><strong>-&gt; Operaciones que se puedes hacer sobre un fichero:</strong></p>
+<ul>
+<li>Crear</li>
+<li>Abrir</li>
+<li>Escribir</li>
+<li>Cerrar</li>
+<li>Borrar</li>
+</ul>
+<p><strong>Directorios</strong></p>
+<p>-&gt; Operaciones que se pueden hacer sobre un directorio:</p>
+<ul>
+<li>Crear</li>
+<li>Entrar</li>
+<li>Salir</li>
+<li>Leer su contenido</li>
+<li>Añadir o Eliminar en él archivos o directorios</li>
+<li>Borrar</li>
+</ul>
+<p>La mayoría de los SO tienen un sistema de archivos de estructura jerárquica, en el que los directorios parten de uno llamado directorio raíz, y del que cuelgan todos los demás en forma de árbol, de ahí que se utilicen términos como árbol de subdirectorios.</p>
+<p><strong>-&gt; Directorios especiales:</strong></p>
+<ul>
+<li>Existen dos tipos:<ul>
+<li><strong>.</strong> directorio actual</li>
+<li><strong>..</strong> directorio padre</li>
+</ul>
+</li>
+</ul>
+<p><strong>-&gt; Rutas:</strong></p>
+<p>Concatenación de directorios y subdirectorios para llamar a un archivo en una estructura de directorios.</p>
+<ul>
+<li>Tipos:<ul>
+<li>Absolutas: se llama al archivo desde el directorio raíz hasta el archivo. Ejemplo: c:\web\imagenes\logo.gif</li>
+<li>Relativas: se llama al archivo desde el directorio actual en el que estemos. Ejemplo: si estamos en la carpeta “web” la ruta hasta llegar al archivo “logo.gif” sería: imagenes\logo.gif</li>
+</ul>
+</li>
+</ul>
+<p><strong>Métodos de asignación</strong></p>
+<p>Métodos para asignar espacio a cada fichero dentro del disco.</p>
+<ul>
+<li>Asignación contigua: los bloques de un fichero se encuentran de forma contigua en el disco.</li>
+<li>Asignación enlazada: en cada bloque está parte de los datos del fichero y una pequeña parte para indicar el siguiente bloque que contiene los datos del fichero.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://www.fing.edu.uy/" rel="external nofollow noopener noreferrer" target="_blank">Facultad de ingeniería. Universidad de la República. Uruguay.</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Desfragmentaci%C3%B3n" rel="external nofollow noopener noreferrer" target="_blank">Wikipedia</a></li>
+<li><a href="http://iesperenxisa.edu.gva.es/wordpress/" rel="external nofollow noopener noreferrer" target="_blank">IES Serra Perenxisa</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B4/b4-t18/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B4-T18
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t05/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T05</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

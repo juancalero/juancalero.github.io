@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B3-T04 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B3-T04">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Estrategias de determinación de requerimientos: Entrevistas, Derivación de sistemas existentes, Análisis y Prototipos. La especificación de requisitos software.Introducción a la Ingeniería de Requerim">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-T04">
+<meta property="og:url" content="http://localhost:4000/wiki/B3/b3-t04/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Estrategias de determinación de requerimientos: Entrevistas, Derivación de sistemas existentes, Análisis y Prototipos. La especificación de requisitos software.Introducción a la Ingeniería de Requerim">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/informe_chaos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/requisitos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/requerimientos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/tareas_recomendadas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/drs.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/portada.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/lista_cambios.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/matriz_rastreabilidad.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/caso_de_uso.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/casos_de_uso_1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/casos_de_uso_2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/prototipo_evolutivo.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:12:53.677Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-T04">
+<meta name="twitter:description" content="Estrategias de determinación de requerimientos: Entrevistas, Derivación de sistemas existentes, Análisis y Prototipos. La especificación de requisitos software.Introducción a la Ingeniería de Requerim">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/informe_chaos.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file active"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B3/b3-t04" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B3/">B3</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B3/b3-t04/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B3/b3-t04.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B3/b3-t04.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B3/b3-t04.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B3-T04
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Estrategias-de-determinacion-de-requerimientos-Entrevistas-Derivacion-de-sistemas-existentes-Analisis-y-Prototipos-La-especificacion-de-requisitos-software"><a href="#Estrategias-de-determinacion-de-requerimientos-Entrevistas-Derivacion-de-sistemas-existentes-Analisis-y-Prototipos-La-especificacion-de-requisitos-software" class="headerlink" title="Estrategias de determinación de requerimientos: Entrevistas, Derivación de sistemas existentes, Análisis y Prototipos. La especificación de requisitos software."></a>Estrategias de determinación de requerimientos: Entrevistas, Derivación de sistemas existentes, Análisis y Prototipos. La especificación de requisitos software.</h1><h2 id="Introduccion-a-la-Ingenieria-de-Requerimientos"><a href="#Introduccion-a-la-Ingenieria-de-Requerimientos" class="headerlink" title="Introducción a la Ingeniería de Requerimientos"></a>Introducción a la Ingeniería de Requerimientos</h2><p>En la actualidad, son muchos los procesos de desarrollo de software que existen. Con el paso de los años, la Ingeniería del Software ha introducido y popularizado una serie de estándares para medir y certificar la calidad, tanto del sistema a desarrollar, como del proceso de desarrollo en sí. Se han publicado muchos libros y artículos relacionados con este tema, con el modelado de procesos del negocio y la reingeniería. Un número creciente de herramientas automatizadas han surgido para ayudar a definir y aplicar un proceso de desarrollo de software efectivo.</p>
+<p>Hoy en día la economía global depende más de sistemas automatizados que en épocas pasadas. Esto ha llevado a los equipos de desarrollo a enfrentarse con una nueva década de procesos y estándares de calidad.</p>
+<p>Sin embargo, ¿cómo explicamos la alta incidencia de fallos en los proyectos de software? ¿Por qué existen tantos proyectos de software víctimas de retrasos, presupuestos mal dimensionados y con problemas de calidad? ¿Cómo podemos tener una producción o una economía de calidad, cuando nuestras actividades diarias dependen de la calidad de un sistema que no la tiene?</p>
+<p>Tal vez suene ilógico pero, a pesar de los avances que ha dado la tecnología, aún existen procesos de producción informales, parciales y en algunos casos no confiables.</p>
+<p>La Ingeniería de Requerimientos cumple un papel primordial en el proceso de producción de software, ya que enfoca un área fundamental: la definición de lo que se desea producir. Su principal tarea consiste en la generación de especificaciones correctas que describan con claridad, sin ambigüedades, en forma consistente y compacta, el comportamiento del sistema. De esta manera, se pretende minimizar los problemas relacionados al desarrollo de sistemas.</p>
+<p>Existe una gran cantidad de proyectos de software que no llegan a cumplir sus objetivos. En nuestro país somos partícipes de este problema a diario, en donde se ha vuelto común la compra de sistemas extranjeros, para luego “personalizarlos” supuestamente a la medida de las empresas.</p>
+<p>Tal “personalización” termina retrasando (la mayoría de las veces) el proyecto en meses, o incluso en años. La problemática del año 2000 trajo como consecuencia una serie de cambios apresurados en los sistemas existentes, cambios que no fueron bien planificados.</p>
+<p>El reemplazo de plataformas y tecnologías obsoletas, la compra de sistemas completamente nuevos, las modificaciones de todos o de casi todos los programas que forman un sistema, entre otras razones, llevan a desarrollar proyectos en calendarios sumamente ajustados y en algunos casos irreales. Esto ocasiona que se omitan muchos pasos importantes en el ciclo de vida de desarrollo, entre estos, la definición de los requerimientos.</p>
+<p>En 1995 se realizó un estudio (informe CHAOS) sobre el resultado general de los proyectos de software. El estudio fue demoledor y esto a pesar de las herramientas existentes para el desarrollo de software (ver figura).</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/informe_chaos.png?w=825" alt=""></p>
+<h2 id="La-Ingenieria-de-Requerimientos"><a href="#La-Ingenieria-de-Requerimientos" class="headerlink" title="La Ingeniería de Requerimientos"></a>La Ingeniería de Requerimientos</h2><h3 id="¿Que-son-Requerimientos"><a href="#¿Que-son-Requerimientos" class="headerlink" title="¿Qué son Requerimientos?"></a>¿Qué son Requerimientos?</h3><p>Normalmente, un concepto de la Ingeniería de Software tiene diferentes significados. De las muchas definiciones que existen para requerimiento, a continuación se presenta la definición que aparece en el glosario de la IEEE:</p>
+<ol>
+<li>Una condición o necesidad de un usuario para resolver un problema o alcanzar un objetivo.</li>
+<li>Una condición o capacidad que debe estar presente en un sistema o componentes de sistema para satisfacer un contrato, estándar, especificación u otro documento formal.</li>
+<li>Una representación documentada de una condición o capacidad como en 1 o 2.</li>
+</ol>
+<p>Los requerimientos pueden dividirse en requerimientos funcionales y requerimientos no funcionales:</p>
+<ul>
+<li>Los requerimientos funcionales definen las funciones que el sistema será capaz de realizar. Describen las transformaciones que el sistema realiza sobre las entradas para producir salidas.</li>
+<li>Los requerimientos no funcionales tienen que ver con características que de una u otra forma puedan limitar el sistema, como por ejemplo, el rendimiento (en tiempo y espacio), interfaces de usuario, fiabilidad (robustez del sistema, disponibilidad de equipo), mantenimiento, seguridad, portabilidad, estándares, etc.</li>
+</ul>
+<h3 id="Caracteristicas-de-los-Requerimientos"><a href="#Caracteristicas-de-los-Requerimientos" class="headerlink" title="Características de los Requerimientos"></a>Características de los Requerimientos</h3><p>Las características de un requerimiento son sus propiedades principales. Un conjunto de requerimientos en estado de madurez deben presentar una serie de características tanto individualmente como en grupo. A continuación se presentan las más importantes:</p>
+<ul>
+<li><strong>Necesario</strong> : Un requerimiento es necesario si su omisión provoca una deficiencia en el sistema a construir, y además su capacidad, características físicas o factor de calidad no pueden ser reemplazados por otras capacidades del producto o del proceso.</li>
+<li><strong>Conciso</strong> : Un requerimiento es conciso si es fácil de leer y entender. Su redacción debe ser simple y clara para aquellos que vayan a consultarlo en un futuro.</li>
+<li><strong>Completo</strong> : Un requerimiento está completo si no necesita ampliar detalles en su redacción, es decir, si se proporciona la información suficiente para su comprensión.</li>
+<li><strong>Consistente</strong> : Un requerimiento es consistente si no es contradictorio con otro requerimiento.</li>
+<li><strong>No ambiguo</strong> : Un requerimiento no es ambiguo cuando tiene una sola interpretación. El lenguaje usado en su definición, no debe causar confusiones al lector.</li>
+<li><strong>Verificable</strong> : Un requerimiento es verificable cuando puede ser cuantificado de manera que permita hacer uso de los siguientes métodos de verificación: inspección, análisis, demostración o pruebas.</li>
+</ul>
+<h3 id="Dificultades-para-definir-los-Requerimientos"><a href="#Dificultades-para-definir-los-Requerimientos" class="headerlink" title="Dificultades para definir los Requerimientos"></a>Dificultades para definir los Requerimientos</h3><ul>
+<li>Los requerimientos no son obvios y vienen de muchas fuentes.</li>
+<li>Son difíciles de expresar en palabras (el lenguaje es ambiguo).</li>
+<li>Existen muchos tipos de requerimientos y diferentes niveles de detalle.</li>
+<li>La cantidad de requerimientos en un proyecto puede ser difícil de manejar.</li>
+<li>Nunca son iguales. Algunos son más difíciles, más arriesgados, más importantes o más estables que otros.</li>
+<li>Los requerimientos están relacionados unos con otros, y a su vez se relacionan con otras partes del proceso.</li>
+<li>Cada requerimiento tiene propiedades únicas y abarcan áreas funcionales específicas.</li>
+<li>Un requerimiento puede cambiar a lo largo del ciclo de desarrollo.</li>
+<li>Son difíciles de cuantificar, ya que cada conjunto de requerimientos es particular para cada proyecto.</li>
+</ul>
+<h3 id="Definiciones-par-la-Ingenieria-de-Requerimientos"><a href="#Definiciones-par-la-Ingenieria-de-Requerimientos" class="headerlink" title="Definiciones par la Ingeniería de Requerimientos"></a>Definiciones par la Ingeniería de Requerimientos</h3><ul>
+<li><em>Ingeniería de Requerimientos vs Administración de Requerimientos</em> : El proceso de recopilar, analizar y verificar las necesidades del cliente para un sistema es llamado Ingeniería de Requerimientos (IR). La meta de la IR es entregar una especificación de requerimientos de software correcta y completa. Los requerimientos son solicitudes que hace el usuario hacia el equipo de trabajo para la realización de alguna tarea. Los requerimientos que son aceptados, son definidos entre el cliente, los usuarios y el equipo de desarrollo, para identificar claramente los límites del sistema. Los requerimientos de los usuarios que han sido definidos, serán administrados para atenderlos y darles un adecuado seguimiento. La administración de requerimientos permite adicionalmente tener un control económico de los mismos.<ul>
+<li>La determinación tiene que ver con: Alcance, requerimientos funcionales, requerimientos no funcionales, complejidad.</li>
+<li>La administración tiene que ver con: Actividades a realizar, responsables, productos a entregar, costo, tiempos.</li>
+</ul>
+</li>
+<li>Ingeniería de Requerimientos es la disciplina para desarrollar una especificación completa, consistente y no ambigua, la cual servirá como base para acuerdos comunes entre todas las partes involucradas y en dónde se describen las funciones que realizará el sistema.</li>
+<li>Ingeniería de Requerimientos es el proceso por el cual se transforman los requerimientos declarados por los clientes, ya sean hablados o escritos, a especificaciones precisas, no ambigua, consistentes y completas del comportamiento del sistema, incluyendo funciones, interfaces, rendimiento y limitaciones.</li>
+<li>Es el proceso mediante el cual se intercambian diferentes puntos de vista para recopilar y modelar lo que el sistema va a realizar. Este proceso utiliza una combinación de métodos, herramientas y actores, cuyo producto es un modelo del cual se genera un documento de requerimientos.</li>
+<li>Ingeniería de Requerimientos es un enfoque sistémico para recolectar, organizar y documentar los requerimientos del sistema. Es también el proceso que establece y mantiene acuerdos sobre los cambios de requerimientos, entre los clientes y el equipo del proyecto.</li>
+<li>Una posible visión de la ingeniería de requerimientos es considerarla como un proceso de construcción de una especificación de requerimientos en el que se avanza desde especificaciones iniciales, que no poseen las propiedades idóneas, hasta especificaciones finales completas, formales y acordadas entre todos los participantes.</li>
+</ul>
+<p>Tres enfoques (dimensiones) desde los que se debe abordar la IR para lograr las especificaciones finales de los requerimientos de un sistema (ver figura):</p>
+<ul>
+<li>Por un lado están los factores psicológicos y congnitivos que afectan al grado de conocimiento sobre el sistema que se desea desarrollar, es decir, llegar a conocer la totalidad de los requerimientos que debe satisfacer el sistema. Habitualmente, este enfoque se cubre con actividades encaminadas a la adquisición de los requerimientos (elicitación).</li>
+<li>Por otro lado, está el grado de formalismo de la representación del conocimiento sobre dichos requerimientos, teniendo en cuenta que un mayor grado de formalismo no implica necesariamente un mayor conocimiento. El formalismo se logra en las actividades encaminadas al análisis de requerimientos.</li>
+<li>Por último, están los aspectos sociales, ya que al ser un proceso en el que participan personas con diferentes puntos de vista, es necesario llegar a un punto de acuerdo, normalmente mediante algún tipo de negociación. Las actividades de validación permiten a la IR resolver los posibles conflictos.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/requisitos.png?w=825" alt=""></p>
+<h3 id="Importancia-de-la-Ingenieria-de-Requerimientos"><a href="#Importancia-de-la-Ingenieria-de-Requerimientos" class="headerlink" title="Importancia de la Ingeniería de Requerimientos"></a>Importancia de la Ingeniería de Requerimientos</h3><p>Los principales beneficios que se obtienen de la Ingeniería de Requerimientos son:</p>
+<ul>
+<li>Permite gestionar las necesidades del proyecto en forma estructurada: Cada actividad de la IR consiste de una serie de pasos organizados y bien definidos.</li>
+<li>Mejora la capacidad de predecir cronogramas de proyectos, así como sus resultados: La IR proporciona un punto de partida para controles subsecuentes y actividades de mantenimiento, tales como estimación de costos, tiempo y recursos necesarios.</li>
+<li>Disminuye los costos y retrasos del proyecto: Muchos estudios han demostrado que reparar errores por un mal desarrollo no descubierto a tiempo, es sumamente caro, especialmente aquellas decisiones tomadas durante la IR.</li>
+<li>Mejora la calidad del software: La calidad en el software tiene que ver con cumplir un conjunto de requerimientos (funcionalidad, facilidad de uso, confiabilidad, desempeño, etc.).</li>
+<li>Mejora la comunicación entre equipos: La especificación de requerimientos representa una forma de consenso entre clientes y desarrolladores. Si este consenso no ocurre, el proyecto no será exitoso.</li>
+<li>Evita rechazos de usuarios finales: La ingeniería de requerimientos obliga al cliente a considerar sus requerimientos cuidadosamente y revisarlos dentro del marco del problema, por lo que se le involucra durante todo el desarrollo del proyecto.</li>
+</ul>
+<h3 id="Personal-Involucrado"><a href="#Personal-Involucrado" class="headerlink" title="Personal Involucrado"></a>Personal Involucrado</h3><p>Realmente, son muchas las personas involucradas en el desarrollo de los requerimientos de un sistema. Es importante saber que cada una de esas personas tienen diversos intereses y juegan roles específicos dentro de la planificación del proyecto. El conocimiento de cada papel desempeñado asegura que se involucren a las personas correctas en las diferentes fases del ciclo de vida, y en las diferentes actividades de la IR.</p>
+<p>No conocer estos intereses puede ocasionar una comunicación poco efectiva entre clientes y desarrolladores, que a la vez traería impactos negativos tanto en tiempo como en presupuesto. Los roles más importantes pueden clasificarse como sigue:</p>
+<ul>
+<li><em>Usuarios finales</em> : Son las personas que usarán el sistema desarrollado. Ellos están relacionados con la usabilidad, la disponibilidad y la fiabilidad del sistema. Están familiarizados con los procesos específicos que debe realizar el software, dentro de los parámetros de su ambiente laboral. Serán quienes utilicen las interfaces y los manuales de usuario.</li>
+<li><em>Usuarios líderes</em> : Son los individuos que comprenden el ambiente del sistema o el dominio del problema en donde será empleado el software desarrollado. Ellos proporcionan al equipo técnico los detalles y requerimientos de las interfaces del sistema.</li>
+<li><em>Personal de mantenimiento</em> : Para proyectos que requieran un mantenimiento eventual, estas personas son las responsables de la administración de cambios, de la implementación y resolución de anomalías. Su trabajo consiste en revisar y mejorar los procesos del producto ya finalizado.</li>
+<li><em>Analistas y programadores</em> : Son los responsables del desarrollo del producto en sí. Ellos interactúan directamente con el cliente.</li>
+<li><em>Personal de pruebas</em> : Se encargan de elaborar y ejecutar el plan de pruebas para asegurar que las condiciones presentadas por el sistema son las adecuadas. Son quienes van a validar si los requerimientos satisfacen las necesidades del cliente.</li>
+</ul>
+<p>Otras personas que pueden estar involucradas, dependiendo de la magnitud del proyecto, pueden ser: administradores de proyecto, documentadores, diseñadores de BD, entre otros.</p>
+<h3 id="Las-Dimensiones-de-los-Requerimientos"><a href="#Las-Dimensiones-de-los-Requerimientos" class="headerlink" title="Las Dimensiones de los Requerimientos"></a>Las Dimensiones de los Requerimientos</h3><p>Los calificativos que se aplican al término requerimiento muestran distintos ortogonales que a menudo son considerados aisladamente. Aquí se ven agrupados en tres dimensiones (ver figura).</p>
+<ul>
+<li><strong>Ámbito</strong> : Esta dimensión indica en qué ámbito se debe entender el requerimiento. En general, un ámbito de sistema indica que el requerimiento debe cumplirse a nivel de sistema, entendiendo por sistema un conjunto de hardware y software.</li>
+<li><strong>Característica que define</strong> : Esta dimensión clasifica los requerimientos en función de la naturaleza de la característica del sistema que se especifica. En [Pohl 1997] aparece una completa clasificación denominada RSM (Requirements Specification Model, Modelo de Especificación de Requerimientos), cuyas principales clases son: requerimientos funcionales, requerimientos de datos y requerimientos no funcionales. Es conveniente separar de los requerimientos funcionales a los requerimientos de datos o de almacenamiento de información, que establecen qué información debe almacenar el sistema por ser relevante para las necesidades y objetivos de clientes y usuarios.</li>
+<li><strong>Audiencia</strong> : Esta dimensión indica la audiencia a la que está dirigido el requisito, es decir, las personas que deben ser capaces de entenderlo. En general, se pueden distinguir dos tipos de audiencia:<ul>
+<li>Los clientes y usuarios, que no tienen porqué tener formación en ingeniería del software (especificación de requerimientos mediante lenguaje natural).</li>
+<li>Los desarrolladores de software (especificación de requerimientos utilizando técnicas estructuradas, orientadas a objetos o formales).</li>
+</ul>
+</li>
+</ul>
+<p>En la literatura se suele referir a los requerimientos orientados a clientes y usuarios como requerimientos-C, requisito de usuario o requisito de cliente; y, a los requerimientos orientados al desarrollador como requerimientos-D o requerimientos software.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/requerimientos.png?w=825" alt=""></p>
+<h3 id="Puntos-a-considerar-durante-la-Ingenieria-de-Requerimientos"><a href="#Puntos-a-considerar-durante-la-Ingenieria-de-Requerimientos" class="headerlink" title="Puntos a considerar durante la Ingeniería de Requerimientos"></a>Puntos a considerar durante la Ingeniería de Requerimientos</h3><ul>
+<li>Objetivos del negocio y ambiente de trabajo: Aunque los objetivos del negocio están definidos frecuentemente en términos generales, son usados para descomponer el trabajo en tareas específicas. En ciertas situaciones la IR se enfoca en la descripción de las tareas y en el análisis de sistemas similares. Esta información proporciona la base para especificar el sistema que será construido, aunque frecuentemente se añadan al sistema tareas que no encajan con el ambiente de trabajo planificado. El nuevo sistema cambiará el ambiente de trabajo, sin embargo, es muy difícil anticipar los efectos actuales sobre la organización. Los cambios no ocurren solamente cuando un nuevo software es implementado y puesto en producción, también ocurren cuando cambia el ambiente que lo rodea (nuevas soluciones a problemas, nuevo equipo para instalar, etc.). La necesidad de cambio es sustentada por el enorme costo de mantenimiento, aunque existen diversas razones que dificultan el mantenimiento del software, la falta de atención a la IR es la principal.</li>
+<li>Frecuentemente la especificación inicial es también la especificación final, lo que obstaculiza la comunicación y el proceso de aprendizaje de las personas involucradas. Ésta es una de las razones por las cuales existen sistemas inadecuados.</li>
+<li>Punto de vista de los clientes. Muchos sistemas tienen diferentes tipos de clientes. Cada grupo de clientes tiene necesidades diferentes y, diferentes requerimientos tienen diferentes grados de importancia para ellos. Por otro lado, pocas veces tenemos que los clientes son los usuarios, trayendo como consecuencia que los clientes soliciten procesos que causan conflictos con los solicitados por el usuario. Diferentes puntos de vistas también pueden tener consecuencias negativas, tales como datos redundantes, inconsistentes y ambiguos.</li>
+<li>El tamaño y complejidad de los requerimientos ocasiona desentendimiento, dificultad para enfocarse en un solo aspecto a la vez y dificultad para visualizar relaciones existentes entre requerimientos.</li>
+<li>Barreras de comunicación: La ingeniería de requerimientos depende de una intensa comunicación entre clientes y analistas de requerimientos. Sin embargo, existen problemas que no pueden ser resueltos mediante la comunicación. Para remediar esto, se deben abordar nuevas técnicas operacionales que ayuden a superar estas barreras y así ganar experiencia dentro del marco del sistema propuesto.</li>
+<li>Evolución e integración del sistema: Pocos sistemas son construidos desde cero. En la práctica, los proyectos se derivan de sistemas ya existentes. Por lo tanto, los analistas de requerimientos deben comprender esos sistemas, que por lo general son una integración de componentes de varios proveedores. Para encontrar una solución a problemas de este tipo, es muy importante hacer planeamientos entre los requerimientos y la fase de diseño. Esto minimizará la cantidad de fallos directos en el código.</li>
+<li>Documentación de requerimientos: Los documentos de ingeniería de requerimientos son largos. La mayoría están compuestos de cientos o miles de páginas, donde cada página contiene muchos detalles que pueden tener efectos profundos en el resto del sistema. Normalmente, las personas se encuentran con dificultades para comprender documentos de este tamaño, sobre todo si lo leen cuidadosamente. Es casi imposible leer un documento de especificación de gran tamaño, pues difícilmente una persona puede memorizar los detalles del documento. Esto causa problemas y errores que no son detectados hasta después de haberse construido el sistema.</li>
+</ul>
+<h2 id="Metodologia-de-la-Ingenieria-de-Requerimientos"><a href="#Metodologia-de-la-Ingenieria-de-Requerimientos" class="headerlink" title="Metodología de la Ingeniería de Requerimientos"></a>Metodología de la Ingeniería de Requerimientos</h2><h3 id="Objetivo-de-la-Metodologia"><a href="#Objetivo-de-la-Metodologia" class="headerlink" title="Objetivo de la Metodología"></a>Objetivo de la Metodología</h3><p>El objetivo de esta metodología es la definición de las tareas a realizar, los productos a obtener y las técnicas a emplear durante la actividad de elicitación de requerimientos de la fase de ingeniería de requerimientos del desarrollo de software.</p>
+<p>En esta metodología se distinguen dos tipos de productos: los productos entregables y los productos no entregables o internos. Los productos entregables son aquellos que se entregan oficialmente al cliente como parte del desarrollo en fechas previamente acordadas, mientras que los no entregables son productos internos al desarrollo que no se entregan al cliente.</p>
+<p>El único producto entregable definido en esta metodología es el Documento de Requerimientos del Sistema (DRS). La estructura de este documento es la siguiente: tareas recomendadas, productos entregables (en este caso el DRS), y por último, se describen algunas de las técnicas recomendadas para obtener productos. También se incluye como apéndice un ejemplo de aplicación de esta metodología.</p>
+<h3 id="Tareas-Recomendadas"><a href="#Tareas-Recomendadas" class="headerlink" title="Tareas Recomendadas"></a>Tareas Recomendadas</h3><p>Las tareas recomendadas para obtener los productos descritos en esta metodología son las siguientes:</p>
+<ul>
+<li><strong>Tarea 1</strong> : Obtener información sobre el dominio del problema y el sistema actual.</li>
+<li><strong>Tarea 2</strong> : Preparar y realizar las reuniones de elicitación/negociación.</li>
+<li><strong>Tarea 3</strong> : Identificar/revisar los objetivos del sistema.</li>
+<li><strong>Tarea 4</strong> : Identificar/revisar los requerimientos de almacenamiento de información.</li>
+<li><strong>Tarea 5</strong> : Identificar/revisar los requerimientos funcionales.</li>
+<li><strong>Tarea 6</strong> : Identificar/revisar los requerimientos no funcionales.</li>
+<li><strong>Tarea 7</strong> : Priorizar objetivos y requerimientos.</li>
+</ul>
+<p>El orden recomendado de realización para estas tareas e: 1 … 7, aunque las tareas 4, 5 y 6 pueden realizarse simultáneamente o en cualquier orden que se considere oportuno (ver figura). La tarea 1 es opcional y depende del conocimiento previo que tenga el equipo de desarrollo sobre el dominio del problema y el sistema actual.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/tareas_recomendadas.png?w=825" alt=""></p>
+<h3 id="Tarea-1-Obtener-informacion-sobre-el-dominio-del-problema-y-el-sistema-actual"><a href="#Tarea-1-Obtener-informacion-sobre-el-dominio-del-problema-y-el-sistema-actual" class="headerlink" title="Tarea 1: Obtener información sobre el dominio del problema y el sistema actual"></a>Tarea 1: Obtener información sobre el dominio del problema y el sistema actual</h3><p><strong>Objetivos</strong></p>
+<ul>
+<li>Conocer el dominio del problema.</li>
+<li>Conocer la situación actual.</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Antes de mantener las reuniones con los clientes y usuarios e identificar los requerimientos es fundamental conocer el dominio del problema y los contexto organizacional y operacional, es decir, la situación actual.</p>
+<p>Enfrentarse a un desarrollo sin conocer las características principales ni el vocabulario propio de su dominio suele provocar que el producto final no sea el esperado por clientes ni usuarios.</p>
+<p>Por otro lado, mantener reuniones con clientes y usuarios sin conocer las características de su actividad hará que probablemente no se entiendan sus necesidades, y que su confianza inicial hacia el desarrollo se vea deteriorada enormemente.</p>
+<p>Esta tarea es opcional, ya que puede que no sea necesario realizarla si el equipo de desarrollo tiene experiencia en el dominio del problema y el sistema actual es conocido.</p>
+<p><strong>Productos internos</strong></p>
+<ul>
+<li>Información recopilada: libros, artículos, folletos comerciales, desarrollos previos sobre el mismo dominio, etc.</li>
+<li>Modelos del sistema actual.</li>
+</ul>
+<p><strong>Productos entregables</strong></p>
+<ul>
+<li>Introducción, participantes en el proyecto (principalmente clientes y desarrolladores), y descripción del sistema actual como parte del DRS.</li>
+</ul>
+<p><strong>Técnicas recomendadas</strong></p>
+<p>Obtener información de fuentes externas al negocio del cliente: folletos, informes sobre el sector, publicaciones, consultas con expertos, etc.</p>
+<ul>
+<li>En el caso de que se trate de un dominio muy específico puede ser necesario recurrir a fuentes internas al propio negocio del cliente, en cuyo caso pueden utilizarse las técnicas auxiliares de elicitación de requerimientos como el estudio de documentación, observación in situ, cuestionarios, inmersión o apredizaje, etc.</li>
+<li>Modelado del sistema actual.</li>
+</ul>
+<h3 id="Tarea-2-Preparar-y-realizar-las-sesiones-de-elicitacion-negociacion"><a href="#Tarea-2-Preparar-y-realizar-las-sesiones-de-elicitacion-negociacion" class="headerlink" title="Tarea 2: Preparar y realizar las sesiones de elicitación/negociación"></a>Tarea 2: Preparar y realizar las sesiones de elicitación/negociación</h3><p><strong>Objetivos</strong></p>
+<ul>
+<li>Identificar a los usuarios participantes.</li>
+<li>Conocer las necesidades de clientes y usuarios.</li>
+<li>Resolver posibles conflictos.</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Teniendo en cuenta la información recopilada en la tarea anterior, en esta tarea se deben preparar y realizar las reuniones con los clientes y usuarios participantes con objeto de obtener sus necesidades y resolver posibles conflictos que se hayan detectado en iteraciones previas al proceso.</p>
+<p>Esta tarea es especialmente crítica y ha de realizarse con especial cuidado, ya que generalmente el equipo de desarrollo no conoce los detalles específicos de la organización para la que se va a desarrollar el sistema y, por otra parte, los clientes y posibles usuarios no saben qué necesita saber el equipo de desarrollo para llevar a cabo su labor.</p>
+<p><strong>Productos internos</strong></p>
+<ul>
+<li>Notas tomadas durante las reuniones, transcripciones o actas de reuniones, formularios, grabaciones en cinta o vídeo de las reuniones o cualquier otra documentación que se considere oportuna.</li>
+</ul>
+<p><strong>Productos entregables</strong></p>
+<ul>
+<li>Participantes en el proyecto, en concreto los usuarios participantes, como parte del DRS.</li>
+<li>Objetivos, requerimientos o conflictos, que se hayan identificado claramente durante las sesiones de elicitación, como parte del DRS.</li>
+</ul>
+<p><strong>Técnicas recomendadas</strong></p>
+<ul>
+<li>Técnicas de elicitación de requerimientos.</li>
+<li>Técnicas de negociación como WinWin.</li>
+</ul>
+<h3 id="Tarea-3-Identificar-revisar-los-objetivos-del-sistema"><a href="#Tarea-3-Identificar-revisar-los-objetivos-del-sistema" class="headerlink" title="Tarea 3: Identificar/revisar los objetivos del sistema"></a>Tarea 3: Identificar/revisar los objetivos del sistema</h3><p><strong>Objetivos</strong></p>
+<ul>
+<li>Identificar los objetivos que se esperan alcanzar mediante el sistema software a desarrollar.</li>
+<li>Revisar, en el caso de que haya conflictos, los objetivos previamente identificados.</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>A partir de la información obtenida en la tarea anterior, en esta tarea se deben identificar qué objetivos se esperan alcanzar una vez que el sistema software a desarrollar se encuentre en explotación o revisarlos en función de los conflictos identificados. Puede que los objetivos hayan sido proporcionados antes de comenzar el desarrollo.</p>
+<p><strong>Productos internos</strong></p>
+<ul>
+<li>No hay productos internos en esta tarea.</li>
+</ul>
+<p><strong>Productos entregables</strong></p>
+<ul>
+<li>Objetivos del sistema como parte del DRS.</li>
+</ul>
+<p><strong>Técnicas recomendadas</strong></p>
+<ul>
+<li>Análisis de factores críticos de éxito o alguna técnica similar de identificación de objetivos.</li>
+<li>Especificación de los objetivos del sistema.</li>
+</ul>
+<h3 id="Tarea-4-Identificar-revisar-los-requerimientos-de-almacenamiento-de-informacion"><a href="#Tarea-4-Identificar-revisar-los-requerimientos-de-almacenamiento-de-informacion" class="headerlink" title="Tarea 4: Identificar/revisar los requerimientos de almacenamiento de información"></a>Tarea 4: Identificar/revisar los requerimientos de almacenamiento de información</h3><p><strong>Objetivos</strong></p>
+<ul>
+<li>Identificar los requerimientos de almacenamiento de información que deberá cumplir el sistema software a desarrollar.</li>
+<li>Revisar, en el caso de que haya conflictos, los requerimientos de almacenamiento de información previamente identificados.</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>A partir de la información obtenida en las tareas 1 y 2, y teniendo en cuenta los objetivos identificados en la tarea 3 y el resto de los requerimientos, en esta tarea se debe identificar (o revisar si existen conflictos) qué información relevante para el cliente deberá gestionar y almacenar el sistema software a desarrollar.</p>
+<p>Inicialmente se partirán de conceptos generales para posteriormente ir detallándolos hasta obtener todos los datos relevantes.</p>
+<p><strong>Productos internos</strong></p>
+<ul>
+<li>No hay productos internos en esta tarea.</li>
+</ul>
+<p><strong>Productos entregables</strong></p>
+<ul>
+<li>Requerimientos de almacenamiento de información como parte del DRS.</li>
+</ul>
+<p><strong>Técnicas recomendadas</strong></p>
+<ul>
+<li>Definición de requerimientos de almacenamiento de información</li>
+</ul>
+<h3 id="Tarea-5-Identificar-revisar-los-requerimientos-funcionales"><a href="#Tarea-5-Identificar-revisar-los-requerimientos-funcionales" class="headerlink" title="Tarea 5: Identificar/revisar los requerimientos funcionales"></a>Tarea 5: Identificar/revisar los requerimientos funcionales</h3><p><strong>Objetivos</strong></p>
+<ul>
+<li>Identificar los actores del sistema de software a desarrollar.</li>
+<li>Identificar los requerimientos funcionales (casos de uso) que deberá cumplir el sistema software a desarrollar.</li>
+<li>Revisar, en el caso de que haya conflictos, los requerimientos funcionales previamente identificados.</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>A partir de la información obtenida en las tareas 1 y 2, y teniendo en cuenta los objetivos identificados en la tarea 3 y el resto de los requerimientos, en esta tarea se debe identificar (o revisar si existen conflictos) qué debe hacer el sistema a desarrollar con la información identificada en la tarea anterior.</p>
+<p>Inicialmente se identificarán los actores que interactuarán con el sistema, es decir aquellas personas u otros sistema que serán los orígenes o destinos de la información que consumirá o producirá el sistema a desarrollar y que forman su entorno.</p>
+<p>A continuación se identificarán los casos de uso asociados a los actores, los pasos de cada caso de uso, y posteriormente se detallarán los casos de uso con las posibles excepciones hasta definir todas las situaciones posibles.</p>
+<p><strong>Productos internos</strong></p>
+<ul>
+<li>No hay productos internos en esta tarea.</li>
+</ul>
+<p><strong>Productos entregables</strong></p>
+<ul>
+<li>Requerimientos funcionales como parte del DRS.</li>
+</ul>
+<p><strong>Técnicas recomendadas</strong></p>
+<ul>
+<li>Casos de uso.</li>
+<li>Definición de actores.</li>
+<li>Definición de los requerimientos funcionales.</li>
+</ul>
+<h3 id="Tarea-6-Identificar-revisar-los-requerimientos-no-funcionales"><a href="#Tarea-6-Identificar-revisar-los-requerimientos-no-funcionales" class="headerlink" title="Tarea 6: Identificar/revisar los requerimientos no funcionales"></a>Tarea 6: Identificar/revisar los requerimientos no funcionales</h3><p><strong>Objetivos</strong></p>
+<ul>
+<li>Identificar los requerimientos no funcionales del sistema software a desarrollar.</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>A partir de la información obtenida en las tareas 1 y 2, y teniendo en cuenta los objetivos identificados en la tarea 3 y el resto de los requerimientos, en esta tarea se deben identificar (o revisar si existen conflictos), los requerimientos no funcionales, normalmente de carácter técnico o legal.</p>
+<p>Algunos tipos de requerimientos que se suelen incluir en esta sección son los siguientes:</p>
+<ul>
+<li><strong>Requerimientos de comunicaciones del sistema</strong> : Son requerimientos de carácter técnico relativos a las comunicaciones que deberá soportar el sistema software a desarrollar. Por ejemplo: el sistema deberá utilizar el protocolo TCP/IP para las comunicaciones con otros sistemas.</li>
+<li><strong>Requerimientos de interfaz de usuario</strong> : Este tipo de requerimientos especifica las características que deberá tener el sistema en su comunicación con el usuario. Por ejemplo: la interfaz de usuario del sistema deberá ser consistente con los estándares definidos en IBM’s Common User Access. Se debe ser cuidadoso con este tipo de requerimientos, ya que, en esta fase de desarrollo todavía no se conocen bien las dificultades que pueden sufrir ala hora de diseñar e implementar las interfaces, por esto no es conveniente entrar en detalles demasiado específicos.</li>
+<li><strong>Requerimientos de fiabilidad</strong> : Los requerimientos de fiabilidad deben establecer los factores que se requieren para la fiabilidad del software en tiempo de explotación. La fiabilidad mide la probabilidad del sistema de producir una respuesta satisfactoria a las demandas del usuario. Por ejemplo: la tasa de fallos del sistema no podrá ser superior a 2 fallos por semana.</li>
+<li><strong>Requerimientos de entorno de desarrollo</strong> : Este tipo de requerimientos especifican si el sistema debe desarrollarse con un producto específico. Por ejemplo: el sistema deberá desarrollarse con Oracle 7 como servidor y clientes Visual Basic 4.</li>
+<li><strong>Requerimientos de portabilidad</strong> : Los requerimientos de portabilidad definen qué características deberá tener el software para que sea fácil utilizarlo en otra máquina o bajo otro sistema operativo. Por ejemplo: el sistema deberá funcionar en los sistemas operativos Windows 95, Windows 98 y Windows NT 4.0, siendo además posible el acceso al sistema a través de Internet usando cualquier navegador compatible con HTML 4.0.</li>
+</ul>
+<p><strong>Productos internos</strong></p>
+<ul>
+<li>No hay productos internos en esta tarea.</li>
+</ul>
+<p><strong>Productos entregables</strong></p>
+<ul>
+<li>Requerimientos no funcionales del sistema como parte del DRS.</li>
+</ul>
+<p><strong>Técnicas recomendadas</strong></p>
+<ul>
+<li>Definición de requerimientos no funcionales</li>
+</ul>
+<h3 id="Productos-Entregables"><a href="#Productos-Entregables" class="headerlink" title="Productos Entregables"></a>Productos Entregables</h3><p>El único producto entregable que se contempla en esta metodología es el Documento de Requerimientos del Sistema (DRS).</p>
+<p><strong>Documento de Requerimientos del Sistema</strong></p>
+<p>La estructura del DRS puede verse en la siguiente figura. En las siguientes secciones se describe con detalle cada sección del DRS.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/drs.png?w=825" alt=""></p>
+<p><strong>Portada</strong></p>
+<p>La portada del DRS debe tener el formato que puede verse en la siguiente figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/portada.png?w=825" alt=""></p>
+<p>Los elementos que deben aparecer son los siguientes:</p>
+<ul>
+<li><strong>Nombre del proyecto</strong> : el nombre del proyecto al que pertenece el DRS.</li>
+<li><strong>Versión</strong> : la versión del DRS que se entrega al cliente. La versión se compone de dos números X e Y. El primero indica la versión, y se debe incrementar cada vez que se hace una nueva entrega formal al cliente. Cuando se incremente el primer número, el segundo debe volver a comenzar en cero. El segundo número indica cambios dentro de la misma versión aún no entregada,y se debe incrementar cada vez que se publica una versión con cambios respecto a la última que se publicó y que no se vaya a entregar formalmente todavía. Este tipo de versiones pueden ser internas al equipo de desarrollo o ser entregadas al cliente a título orientativo.</li>
+<li><strong>Fecha</strong> : fecha de la publicación de la versión.</li>
+<li><strong>Equipo de desarrollo</strong> : nombre de la empresa o equipo de desarrollo.</li>
+<li><strong>Cliente</strong> : nombre del cliente, normalmente otra empresa.</li>
+</ul>
+<p><strong>Lista de cambios</strong></p>
+<p>El documento debe incluir una lista de cambios en la que se especifiquen, para cada versión del documento, los cambios producidos en el mismo con un formato similar al que puede verse en la siguiente figura. Para cada cambio realizado se debe incluir el número de orden, la fecha, una descripción y los autores.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/lista_cambios.png?w=825" alt=""></p>
+<p><strong>Índice</strong></p>
+<p>El índice del DRS debe indicar la página en la que se comienza cada sección, subsección o apartado del documento. En la medida de los posible, se sangrarán las entradas del índice para ayudar a comprender la estructura del documento.</p>
+<p><strong>Listas de figuras y tablas</strong></p>
+<p>El DRS deberá incluir listas de las figuras y tablas que aparezcan en el mismo. Dichas listas serán dos índices que indicarán el número, la descripción y la página en que aparece cada figura o tabla del DRS.</p>
+<p><strong>Introducción</strong></p>
+<p>Esta sección debe contener una descripción breve de las principales características del sistema software que se va a desarrollar, la situación actual que genera la necesidad del nuevo desarrollo, la problemática que se acomete, y cualquier otra consideración que sitúe al posible lector en el contexto oportuno para comprender el resto del documento.</p>
+<p><strong>Participantes en el proyecto</strong></p>
+<p>Esta sección debe contener una lista con todos los participantes en el proyecto, tanto desarrolladores como clientes y usuarios. Para cada participante se deberá indicar su nombre, el papel que desempeña en el proyecto, la organización a la que pertenece y cualquier otra información adicional que se considere oportuna.</p>
+<p><strong>Descripción del sistema actual</strong></p>
+<p>Esta sección debe contener una descripción del sistema actual en el caso de que se haya acometido su estudio. Para describir el sistema actual puede utilizarse cualquier técnica que se considere oportuno.</p>
+<p><strong>Objetivos del sistema</strong></p>
+<p>Esta sección debe contener una lista con los objetivos que se esperan alcanzar cuando el sistema software a desarrollar esté en explotación.</p>
+<p><strong>Catálogo de requerimientos del sistema</strong></p>
+<p>Esta sección se divide en subsecciones en las que se describen los requerimientos del sistema.</p>
+<p>Cada uno de los grandes grupos de requerimientos (de almacenamiento de información, funcionales y no funcionales) podrá dividirse para ayudar a la legibilidad del documento, por ejemplo dividiendo cada subsección en requerimientos asociados a un determinado objetivo, requerimientos con características comunes, etc.</p>
+<p><strong>Requerimientos de almacenamiento de información</strong></p>
+<p>Esta subsección debe contener la lista de requerimientos de almacenamiento de información que se hayan identificado.</p>
+<p><strong>Requerimientos funcionales</strong></p>
+<p>Esta subsección debe contener la lista de requerimientos funcionales que se hayan identificado, dividiéndose en los siguientes apartados que se describen a continuación:</p>
+<ul>
+<li><strong>Diagrama de casos de uso</strong> : Este apartado debe contener los diagramas de casos de uso del sistema que se hayan realizado.</li>
+<li><strong>Definición de los actores</strong> : Este apartado debe contener una lista con los actores que se hayan identificado.</li>
+<li><strong>Casos de uso del sistema</strong> : Este apartado debe contener los casos de uso que se hayan identificado.</li>
+</ul>
+<p><strong>Requerimientos no funcionales</strong></p>
+<p>Esta subsección debe contener la lista de los requerimientos no funcionales del sistema que se hayan identificado.</p>
+<p><strong>Matriz de rastreabilidad objetivos/requerimientos</strong></p>
+<p>Esta sección debe contener una matriz objetivo-requisito, de forma que para cada objetivo se pueda conocer con qué requerimientos está asociado. El formato de la matriz de rastreabilidad puede verse en la siguiente figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/matriz_rastreabilidad.png?w=825" alt=""></p>
+<p><strong>Conflictos pendientes de resolución</strong></p>
+<p>Esta sección, que se incluirá en el caso de que no se opte por registrar los conflictos en un documento aparte, deberá contener los conflictos identificados durante el proceso y que aún están pendientes de resolución.</p>
+<p><strong>Glosario de términos</strong></p>
+<p>Esta sección, que se incluirá si se considera oportuno, deberá contener una lista ordenada alfabéticamente de los términos específicos del dominio del problema, acrónimos y abreviaturas que aparezcan en el documento y que se considere que su significado deba ser aclarado. Cada término deberá acompañarse de su significado.</p>
+<p><strong>Apéndices</strong></p>
+<p>Los apéndices se usarán para proporcionar información adicional a la documentación obligatoria del documento. Sólo deben aparecer si se consideran oportunos y se identificarán con letras ordenadas alfabéticamente: A, B, C, etc.</p>
+<h3 id="Tecnicas"><a href="#Tecnicas" class="headerlink" title="Técnicas"></a>Técnicas</h3><p>A continuación, se describen algunas de las técnicas que se proponen en esta metodología para obtener los productos de las tareas que se han descrito. Las técnicas más habituales en la elicitación de requerimientos son las entrevistas, el Joint Application Development (JAD) o Desarrollo Conjunto de Aplicaciones, el brainstorming o tormenta de ideas y la utilización de escenarios, más conocidos como casos de uso.</p>
+<p>Estas técnicas, que se describen en los siguientes apartados, se suelen completar con otras técnicas complementarias como la observación in situ, el estudio de documentación, los cuestionarios, la inmersión en el negocio del cliente o haciendo que los ingenieros de requerimientos sean aprendices del cliente.</p>
+<p><strong>Entrevistas</strong></p>
+<p>Las entrevistas son la técnica de elicitación más utilizada, y de hecho son practicamente inevitables en cualquier desarrollo ya que son una de las formas de comunicación más naturales entre personas. En las entrevistas se pueden identificar tres fases: preparación, realización y análisis.</p>
+<ul>
+<li><strong>Preparación de entrevistas</strong> : Las entrevistas no deben improvisarse, por lo que conviene realizar las siguientes tareas previas:<ul>
+<li><strong>Estudiar el dominio del problema</strong> : Conocer las categorías y conceptos de la comunidad de clientes y usuarios es fundamental para poder entender las necesidades de dicha comunidad y su forma de expresarlas, y para generar en los clientes y usuarios la confianza de que el ingeniero de requerimientos entiende sus problemas. Para conocer el dominio del problema se puede recurrir a técnicas de estudio de documentación, a bibliografía sobre el tema, documentación de proyectos similares realizados anteriormente, la inmersión dentro de la organización para la que se va a desarrollar o a periodos de aprendizaje por parte de los ingenieros de requerimientos.</li>
+<li><strong>Seleccionar a las personas a las que se va a entrevistar</strong> : Se debe minimizar el número de entrevistas a realizar, por lo que es fundamental seleccionar a las personas a entrevistar. Normalmente se comienza por los directivos (que pueden ofrecer una visión global), y se continúa con los futuros usuarios (que pueden aportar información más detallada) y con el personal técnico (que aporta detalles sobre el entorno operacional de la organización). Conviene también estudiar el perfil de los entrevistados, buscando puntos en común con el entrevistador que ayuden a romper el hielo.</li>
+<li><strong>Determinar el objetivo y contenido de las entrevistas</strong> : Para minimizar el tiempo de la entrevista es fundamental fijar el objetivo que se pretende alcanzar y determinar previamente su contenido. Previamente a su realización, se pueden enviar cuestionarios (que los futuros entrevistados deben rellenar y devolver) y un pequeño documento de introducción al proyecto de desarrollo (de forma que el entrevistado conozca los temas que se van a tratar, y el entrevistador recoja información para preparar la entrevista). Es importante que los cuestionarios, si se usan, se preparen cuidadosamente teniendo en cuenta quién los va a responder y no incluir conceptos que se asuman conocidos cuando puedan no serlo.</li>
+<li><strong>Planificar las entrevistas</strong> : La fecha, hora, lugar y duración de la entrevista deben fijarse teniendo en cuenta siempre la agenda del entrevistado. En general, se deben buscar sitios agradables donde no se produzcan interrupciones y que resulten naturales a los entrevistados.</li>
+</ul>
+</li>
+<li><strong>Realización de entrevistas</strong> : Dentro de la realización de las entrevistas se distinguen tres etapas:<ul>
+<li><strong>Apertura</strong> : El entrevistador debe presentarse e informar al entrevistado sobre la razón de la entrevista, qué se espera conseguir, cómo se utilizará la información, la mecánica de las preguntas, etc. Si se va a utilizar algún tipo de notación gráfica o matemática que el entrevistado no conozca debe explicarse antes de utilizarse. Es fundamental causar buena impresión en los primeros minutos.</li>
+<li><strong>Desarrollo</strong> : La entrevista en sí no debería durar más de dos horas, distribuyendo el tiempo en un 20% para el entrevistador y un 80% para el entrevistado. Se deben evitar los monólogos y mantener el control por parte del entrevistador, contemplando la posibilidad de que una tercera persona tome notas durante la entrevista o grabar la entrevista en cinta de vídeo o audio, siempre que el entrevistado esté de acuerdo. Durante esta fase se pueden emplear distintas técnicas:<ul>
+<li><strong>Preguntas abiertas</strong> : También denominadas de libre contexto, estas preguntas no pueden responderse con un “sí” o un “no”, permiten una mayor comunicación y evitan la sensación de interrogatorio. Por ejemplo, “¿Qué se hace para registrar un pedido?”, “Dígame qué se debe hacer cuando un cliente pide una factura” o “¿Cómo se rellena un albarán?”. Estas preguntas se suelen utilizar al comienzo de la entrevista, pasando posteriormente a preguntas más concretas. En general, se debe evitar la tendencia de anticipar una respuesta a las preguntas que se formulan.</li>
+<li><strong>Utilizar palabras apropiadas</strong> : Se deben evitar tecnicismos que no conozca el entrevistado y palabras o frases que puedan perturbar emocionalmente la comunicación.</li>
+<li><strong>Mostrar interés en todo momento</strong> : Es fundamental cuidar la comunicación no verbal durante la entrevista: tono de voz, movimiento, expresión facial, etc. Por ejemplo, para animar a alguien a hablar puede asentirse con la cabeza, decir “ya entiendo”, “sí”, repetir algunas respuestas dadas, hacer pausas, poner una postura de atención, etc. Debe evitarse bostezar, reclinarse en el sillón, mirar hacia otro lado, etc.</li>
+</ul>
+</li>
+<li><strong>Terminación</strong> : Al terminar la entrevista se debe recapitular para confirmar que no ha habido confusiones en la información recogida, agradecer al entrevistado su colaboración y citarle para una nueva entrevista si fuera necesario, dejando siempre abierta la posibilidad de volver a contactar para aclarar dudas que surjan al estudiar la información o al contrastarla con otros entrevistados.</li>
+</ul>
+</li>
+<li><strong>Análisis de las entrevistas</strong> : Una vez realizada la entrevista es necesario leer las notas tomadas, pasarlas a limpio, reorganizar la información, contrastarla con otras entrevistas o fuentes de información, etc. Una vez elaborada la información, se puede enviar al entrevistado para confirma los contenidos. También es importante evaluar la propia entrevista para determinar los aspectos mejorables.</li>
+</ul>
+<p><strong>Joint Application Development (JAD)</strong></p>
+<p>La técnica denominada JAD (Joint Application Development, Desarrollo Conjunto de Aplicaciones), desarrollada por IBM en 1977, es una alternativa a las entrevistas individuales que se desarrolla a lo largo de un conjunto de reuniones en grupo durante un periodo de 2 a 4 días. En estas reuniones se ayuda a los clientes y usuarios a formular problemas y explorar posibles soluciones, involucrándolos y haciéndolos sentirse partícipes del desarrollo.</p>
+<p>Esta técnica se basa en cuatro principios: dinámica de grupo, el uso de ayudas visuales para mejorar la comunicación (diagramas, transparencias, multimedia, herramientas CASE, etc.), mantener un proceso organizado y racional y una filosofía de documentación WYSIWYG (What You See Is What You Get, lo que se ve es lo que se obtiene), por la que durante las reuniones se trabaja directamente sobre los documentos a generar.</p>
+<p>El JAD tienen dos grandes pasos, el JAD/Plan (cuyo objetivo es elicitar y especificar requerimientos) y el JAD/Design (en el que se aborda el diseño del software). En este documento sólo se verá con detalle el primero de ellos. Debido a las necesidades de organización que requiere y a que no suele adaptarse bien a los horarios de trabajo de los clientes y usuarios, esta técnica no suele emplearse con frecuencia, aunque cuando se aplica suele tener buenos resultados, especialmente para elicitar requerimientos en el campo de los sistemas de información.</p>
+<p>En comparación con las entrevistas individuales, presenta las siguientes ventajas:</p>
+<ul>
+<li>Ahorra tiempo al evitar que las opiniones de los clientes se contrasten por separado.</li>
+<li>Todo el grupo, incluyendo los clientes y los futuros usuarios, revisa la documentación generada, no sólo los ingenieros de requerimientos.</li>
+<li>Implica más a los clientes y usuarios en el desarrollo.</li>
+</ul>
+<p>El JAD queda definida a través de los siguientes elementos:</p>
+<ul>
+<li><strong>Participantes del JAD</strong> : Se pueden distinguir seis clases de participantes o roles en el JAD:<ul>
+<li><strong>Jefe del JAD</strong> : Es el responsable de todo el proceso y asume el control durante las reuniones. Debe tener dotes de comunicación y liderazgo. Algunas habilidades importantes que debe tener son: entender y promover la dinámica de grupo, iniciar y centrar discusiones, reconocer cuándo la reunión se está desviando del tema y reconducirla, manejar las distintas personalidades y formas de ser de los participantes, evitar que decaiga la reunión aunque sea larga y difícil, etc.</li>
+<li><strong>Analista</strong> : Es el responsable de la producción de los documentos que se deben generar durante las sesiones JAD. Debe tener la habilidad de organizar bien las ideas y expresarlas claramente por escrito. En el caso de que se utilicen herramientas software durante las sesiones, debe ser capaz de manejarlas eficientemente.</li>
+<li><strong>Patrocinador ejecutivo</strong> : Es el que tiene la decisión final de que se lleve a cabo el desarrollo. Debe proporcionar a los demás participantes información sobre la necesidad del nuevo sistema y los beneficios que se espera obtener de él.</li>
+<li><strong>Representantes de los usuarios</strong> : Durante el JAD/Plan suelen ser directivos con una visión global del sistema. Durante el JAD/Design suelen incorporarse futuros usuarios finales.</li>
+<li><strong>Representantes de sistemas de información</strong> : Son personas expertas en sistemas de información que deben ayudar a los usuarios a comprender qué es o no factible con la tecnología actual y el esfuerzo que implica.</li>
+<li><strong>Especialistas</strong> : Son personas que pueden proporcionar información detallada sobre aspectos muy concretos, tanto desde el punto de vista de los usuarios porque conocen muy bien el funcionamiento de una parte de la organización, como desde el punto de vista de los desarrolladores porque conocen perfectamente ciertos aspectos técnicos de la instalación hardware de la organización.</li>
+</ul>
+</li>
+<li><strong>Fases del JAD</strong> : Dentro de la técnica del JAD se distinguen tres fases:<ul>
+<li><strong>Adaptación</strong> : Es responsabilidad del jefe del JAD, ayudado por uno o dos analistas, adaptar la técnica del JAD para cada proyecto. La adaptación debe comenzar por definir el proyecto a alto nivel, para lo cual pueden ser necesarias entrevistas previas con algunos clientes y usuarios. También suele ser necesario recabar información sobre la organización para familiarizarse con el dominio del problema, por ejemplo utilizando técnicas complementarias como el estudio de documentación o la observación in situ. Una vez obtenida una primera idea de los objetivos del proyecto, es necesario seleccionar a los participantes,citarles para las reuniones y proporcionarles una lista con los temas que se van a tratar en las reuniones para que las puedan preparar. El jefe del JAD debe decidir la duración y el número de sesiones a celebrar, definir el formato de la documentación sobre la que se trabajará y preparar transparencias introductorias y todo el material audiovisual que considere oportuno.</li>
+<li><strong>Celebración de las sesiones JAD</strong> : Durante las sesiones, los participantes exponen sus ideas y se discuten, analizan y refinan hasta alcanzar un acuerdo. Los pasos que se recomienda seguir para este proceso son los siguientes:<ul>
+<li><strong>Presentación</strong> : Se presenta y se da la bienvenida a todos los participantes por parte del patrocinador ejecutivo y del jefe del JAD. El patrocinador ejecutivo expone brevemente las necesidades que han llevado al desarrollo y los beneficios que se esperan obtener. El jefe del JAD explica la mecánica de las sesiones y la planificación prevista.</li>
+<li><strong>Definir objetivos y requerimientos</strong> : El jefe del JAD promueve la discusión para elicitar los objetivos o requerimientos de alto nivel mediante preguntas como: “¿Por qué se construye el sistema?”, “¿Qué beneficios se esperan del nuevo sistema?”, “¿Cómo puede beneficiar a la organización en el futuro?”, “¿Qué restricciones de recursos disponibles, normas o leyes afectan al proyecto?”, “¿Es importante la seguridad de los datos?”. A medida que se van elicitando requerimientos, el analista los escribe en transparencias o en algún otro medio que permita que permanezcan visibles durante la discusión.</li>
+<li><strong>Delimitar el ámbito del sistema</strong> : Una vez obtenido un número importante de requerimientos, es necesario organizarlos y llegar a un acuerdo sobre el ámbito del nuevo sistema. En el caso de los sistemas de información, es útil identificar a los usuarios potenciales (actores) y determinar qué tareas les ayudará a realizar (casos de uso).</li>
+<li><strong>Documentar temas abiertos</strong> : Aquellas cuestiones que hayan surgido durante la sesión que no se han podido resolver, deben documentarse para las siguientes sesiones y ser asignadas a una persona responsable de su solución para una fecha determinada.</li>
+<li><strong>Concluir la sesión</strong> : El jefe del JAD concluye la sesión revisando con los demás participantes la información elicitada y las decisiones tomadas. Se da la oportunidad a todos los participantes de expresar cualquier consideración adicional, fomentando por parte del jefe del JAD el sentimiento de propiedad y compromiso de todos los participantes sobre los requerimientos elicitados.</li>
+</ul>
+</li>
+<li><strong>Conclusión</strong> : Una vez terminadas las sesiones es necesario transformar las transparencias, notas y demás documentación generada en documentos formales. Se distinguen tres pasos:<ul>
+<li><strong>Completar la documentación</strong> : Los analistas recopilan la documentación generada durante las sesiones en documentos conformes a las normas o estándares vigentes en la organización para la que se desarrolla el proyecto.</li>
+<li><strong>Revisar la documentación</strong> : La documentación generada se envía a todos los participantes para que la comenten. Si los comentarios son lo suficientemente importantes, se convoca otra reunión para discutirlos.</li>
+<li><strong>Validar la documentación</strong> : Una vez revisados todos los comentarios, el jefe del JAD envía el documento al patrocinador ejecutivo para su aprobación. Una vez aprobado el documento se envían copias definitivas a cada uno de los participantes.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Brainstorming</strong></p>
+<p>El brainstorming o tormenta de ideas es una técnica de reuniones en grupo cuyo objetivo es la generación de ideas en un ambiente libre de críticas o juicios. Las sesiones de brainstorming suelen estar formadas por un número de cuatro a diez participantes, uno de los cuales es el jefe de sesión, encargado más de comenzar la sesión que de controlarla. Como técnica de elicitación de requerimientos, el brainstorming puede ayudar a generar una gran variedad de vistas del problema, y a formularlo de diferentes formas, sobre todo al comienzo del proceso de elicitación cuando los requerimientos son todavía muy difusos.</p>
+<p>Frente al JAD, el brainstorming tiene la ventaja de que es muy fácil de aprender y requiere poca organización, de hecho, hay propuestas de realización de brainstorming por vídeoconferencia a través de internet. Por otro lado, al ser un proceso poco estructurado, puede no producir resultados con la misma calidad o nivel de detalle que otras técnicas.</p>
+<p>El brainstorming se puede describir a través de los siguientes elementos:</p>
+<ul>
+<li><strong>Fases del brainstorming</strong> : En elbrainstorming se distinguen las siguientes fases:<ul>
+<li><strong>Preparación</strong> : La preparación para una sesión de brainstorming requiere que se seleccione a los participantes y al jefe de la sesión, citarlos y preparar la sala donde se llevará a cabo la sesión. Los participantes en una sesión de brainstorming para elicitación de requerimientos son normalmente clientes, usuarios, ingenieros de requerimientos, desarrolladores y, si es necesario, algún experto en temas relevantes para el proyecto.</li>
+<li><strong>Generación</strong> : El jefe abre la sesión exponiendo un enunciado general del problema a tratar, que hace de semilla para que se vayan generando ideas. Los participantes aportan libremente nuevas ideas sobre el problema semilla, bien por un orden establecido por el jefe de la sesión, bien aleatoriamente. El jefe es siempre el responsable de dar la palabra a un participante. Este proceso continúa hasta que el jefe decide parar, bien porque no se están generando suficientes ideas, en cuyo caso la reunión se pospone, bien porque el número de ideas sea suficiente para pasar a la siguiente fase. Durante esta fase se deben observar las siguientes reglas:<ul>
+<li>Se prohíbe la crítica de ideas, de forma que los participantes se sientan libres de formular cualquier idea.</li>
+<li>Se fomentan las ideas más avanzadas, que aunque no sean factibles, estimulan a los demás participantes a explorar nuevas soluciones más creativas.</li>
+<li>Se debe generar un gran número de ideas, ya que cuantas más ideas se presenten más probable será que se generen mejores ideas.</li>
+<li>Se debe alentar a los participantes a combinar o completar las ideas de otros participantes. Para ello, es necesario, al igual que en la técnica del JAD, que todas las ideas generadas estén visibles para todos los participante en todo momento. Una posibilidad es utilizar como semilla objetivos del sistema e ir identificando requerimientos.</li>
+</ul>
+</li>
+<li><strong>Consolidación</strong> : En esta fase se deben organizar y evaluar las ideas generadas durante la fase anterior. Se suelen seguir tres pasos:<ul>
+<li><strong>Revisar ideas</strong> : Se revisan las ideas generadas para clarificarlas. Es habitual identificar ideas similares, en cuyo caso se unifican en un solo enunciado.</li>
+<li><strong>Descartar ideas</strong> : Aquellas ideas que los participantes consideren excesivamente avanzadas se descartan.</li>
+<li><strong>Priorizar ideas</strong> : Se priorizan las ideas restantes, identificando las absolutamente esenciales, las que estarían bien pero que no son esenciales, y las que podrían ser apropiadas para una próxima versión del sistema a desarrollar.</li>
+</ul>
+</li>
+<li><strong>Documentación</strong> : Después de la sesión, el jefe produce la documentación oportuna conteniendo las ideas priorizadas y comentarios generados durante la consolidación.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Casos de uso</strong></p>
+<p>Los casos de uso son una técnica para la especificación de requerimientos funcionales propuesta inicialmente en Jacobson y que actualmente forma parte de UML.</p>
+<p>Un caso de uso es la descripción de una secuencia de interacciones entre el sistema y uno o más actores en la que se considera al sistema como una caja negra y en la que los actores obtienen resultados observables en la siguiente figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/caso_de_uso.png?w=825" alt=""></p>
+<p>Los actores son personas u otros sistemas que interactúan con el sistema cuyos requerimientos se están describiendo.</p>
+<p>Los casos de uso presentan ciertas ventajas sobre la descripción meramente textual de los requerimientos funcionales, ya que facilitan la elicitación de requerimientos y son fácilmente comprensibles por los clientes y usuarios. Además, pueden servir de base a las pruebas del sistema y a la documentación para los usuarios.</p>
+<p>A pesar de ser una técnica ampliamente aceptada, existen múltiples propuestas para su utilización concreta. En esta metodología se propone la utilización de los casos de uso como técnica tanto de elicitación como de especificación de los requerimientos funcionales del sistema.</p>
+<p><strong>Diagramas de casos de uso</strong></p>
+<p>Los casos de uso tienen una representación gráfica en los denominados diagramas de casos de uso. En estos diagramas, los actores se representan en forma de pequeños monigotes, y los casos de uso se representan por elipses contenidos dentro de un rectángulo que representa al sistema. La participación de los actores en los casos de uso se indica por una flecha entre el actor y el caso de uso que apunta en la dirección en la que fluye la información. Un ejemplo de este tipo de diagramas se vio en la imagen anterior.</p>
+<p>Los diagramas de casos de uso sirven para proporcionar una visión global del conjunto de casos de uso de un sistema así como de los actores y los casos de uso en los que éstos intervienen. Las interacciones concretas entre los actores y el sistema no se muestran en este tipo de diagramas.</p>
+<p><strong>Relaciones entre casos de uso</strong></p>
+<p>A veces conviene establecer relaciones entre distintos casos de uso para simplificar su descripción. Las dos relaciones posibles y su semántica, cuya representación gráfica puede verse en el siguiente ejemplo son las siguientes:</p>
+<ul>
+<li><strong>includes</strong> : Se dice que un caso de uso A incluye el caso de uso B, cuando B es una parte del caso de uso A, es decir, la secuencia de interacciones de B forma parte de la secuencia de interacciones de A. El caso de uso B se realiza siempre dentro del caso de uso A. Además, siempre que ocurre A ocurre también B, por lo que se dice que B es un caso de uso abstracto. Un caso de uso es abstracto si no puede ser realizado por sí mismo, por lo que sólo tiene significado cuando se utiliza para describir alguna funcionalidad que es común a otros casos de uso. Por otra parte, un caso de uso será concreto si puede ser iniciado por un actor y realizado por sí mismo. Se suele utilizar esta relación cuando se detectan subsecuencias de interacciones comunes a varios casos de uso. Dichas subsecuencias comunes se extren como “factor común” de los casos de uso que las contienen. Posteriormente son incluido por los casos de uso de los que se han “extraído”. De esta forma se evita repetir las mismas subsecuencias de interacciones una y otra vez en varios casos de uso.</li>
+<li><strong>extends</strong> : Un caso de uso A extiende a otro caso de uso B cuando A es una subsecuencia de interacciones de B, que ocurre en una determinada circunstancia. En cierta forma, A completa la funcionalidad de B. El caso de uso A puede realizarse o no cuando se realiza el caso de uso B, según las circunstancias. Por otro lado, el caso de uso A puede ser un caso de uso abstracto o concreto, en cuyo caso puede ocurrir sin necesidad de que ocurra el caso de uso B.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/casos_de_uso_1.png?w=825" alt=""></p>
+<p><strong>Organización de casos de uso</strong></p>
+<p>En la mayoría de sistemas, el número de casos de uso es lo suficientemente elevado como para que sea oportuno organizarlos de alguna forma en lugar de tener una lista plana por la que no es fácil navegar. Una posible forma de organizar los casos de uso es recurrir a los paquetes. De esta forma, los casos de uso pueden organizarse en niveles, facilitando así su comprensión.</p>
+<p>Cada paquete contiene a otros paquetes o a varios casos de uso.</p>
+<p>En el caso de que los casos de uso se agrupen por criterios funcionales, los paquetes que los agrupan pueden estereotiparse como subsistemas, tal como puede verse en la siguiente figura:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/casos_de_uso_2.png?w=825" alt=""></p>
+<h2 id="Prototipado"><a href="#Prototipado" class="headerlink" title="Prototipado"></a>Prototipado</h2><p>Los prototipos permiten al desarrollador crear un modelo del software que debe ser construido.</p>
+<p>Un prototipo es la primera versión de un nuevo tipo de producto, en el que se han incorporado sólo algunas características del sistema final, o no se han realizado completamente.</p>
+<p>Es un modelo o maqueta del sistema que se construye para comprender mejor el problema y sus posibles soluciones. Esto permite:</p>
+<ul>
+<li>Evaluar mejor los requerimientos.</li>
+<li>Probar opciones de diseño.</li>
+</ul>
+<p>El uso principal es la ayuda a los clientes y los desarrolladores para entender los requerimientos del sistema. El prototipo puede ser usado para entrenamiento antes de que el sistema final sea entregado. El prototipo también puede ser utilizado para pruebas.</p>
+<p>Las características de los prototipos son:</p>
+<ul>
+<li>Funcionalidad limitada.</li>
+<li>Poca fiabilidad.</li>
+<li>Características de operación pobres.</li>
+</ul>
+<p>Hay que tener en cuenta que el prototipo representa aproximadamente un 10% del presupuesto del proyecto, y normalmente supone pocos días de desarrollo.</p>
+<p>Al igual que todos los enfoques orientados al proceso de desarrollo del software, el prototipado comienza con la captura de requerimientos. Desarrolladores y clientes se reúnen y definen los objetivos globales del software, identifican todos los requerimientos que son conocidos, y señalan áreas en las que será necesaria la profundización en las definiciones. Después de esto, tiene lugar un “diseño rápido”. El diseño rápido se centra en una representación de aquellos aspectos del software que serán visibles al usuario (por ejemplo, entradas y formatos de las salidas). El diseño rápido lleva a la construcción de un prototipo. El prototipo es evaluado por el cliente y el usuario, y utilizado para refinar los requerimiento del software a ser desarrollado. Un proceso de iteración tiene lugar a medida que el prototipo es perfeccionado para satisfacer las necesidades del cliente y permitir al mismo tiempo una mejor comprensión del problema por parte del desarrollador.</p>
+<p>Existen principalmente dos tipos de prototipos:</p>
+<ul>
+<li><strong>Prototipo rápido (concept prototype)</strong> : El prototipado rápido es un mecanismo para lograr la validación inicial. Se utiliza para validar requerimientos en una etapa previa al diseño específico. En este sentido, el prototipo puede ser visto como una aceptación tácita de que los requerimientos no son totalmente conocidos o entendidos antes del diseño y la implementación. El prototipo rápido puede ser usado como un medio para explorar nuevos requerimientos y así ayudar a controlar su constante evolución.</li>
+<li><strong>Prototipo evolutivo</strong> : Desde una perspectiva diferente, todo el ciclo de vida de un producto puede ser visto como una serie incremental de detallados prototipos acumulativos. Tradicionalmente, el ciclo de vida está dividido en dos fases distintas: desarrollo y mantenimiento. La experiencia ha demostrado que esta distinción es arbitraria y va en contra de la realidad, ya que, la mayor parte del costo del software ocurre después de que el producto se ha entregado. El desarrollo evolutivo del ciclo de vida del software considera a la primera entrega como un prototipo inicial en uso. Modificaciones y mejoras subsecuentes resultan en nuevas entregas de prototipos más maduros. Este proceso continúa hasta que se haya desarrollado el producto final (véase la figura). La adopción de esta óptica elimina la distinción arbitraria entre desarrollo y mantenimiento, resultando en un importante cambio de mentalidad que afecta las estrategias para la estimación de costos, enfoques de desarrollo y adquisición de productos.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/prototipo_evolutivo.png?w=825" alt=""></p>
+<h3 id="Herramientas-para-el-prototipado"><a href="#Herramientas-para-el-prototipado" class="headerlink" title="Herramientas para el prototipado"></a>Herramientas para el prototipado</h3><ul>
+<li>Lenguajes dinámicos de alto nivel. Los más usados son:<ul>
+<li>Smalltalk (basado en objetos, sistemas interactivos)</li>
+<li>Java (basado en objetos, sistemas interactivos)</li>
+<li>Prolog (lógico, procesamiento simbólico)</li>
+<li>LISP (basado en listas, procesamiento simbólico)</li>
+</ul>
+</li>
+<li>Lenguajes de cuarta generación (4GLs) (programación de BBDD):<ul>
+<li>La mayoría de aplicaciones de gestión son interactivas e implican la manipulación de una BD y la producción de salidas que involucran organizar y dar formato a esos datos.</li>
+<li>Lenguaje de programación de BBDD (y su entorno de desarrollo), que contiene conocimiento de la BD y operaciones para manipulación de la misma.</li>
+<li>Lenguaje no procedimental.</li>
+<li>Reducen claramente los costos del desarrollo.</li>
+<li>Muy usados en prototipado evolutivo.</li>
+<li>Muchos 4GLs permiten el desarrollo de interfaces de BBDD basadas en navegadores web.</li>
+<li>General SQL o código en lenguaje “de bajo nivel” como COBOL.</li>
+<li>Menos eficientes que los lenguajes de programación convencionales. Por ejemplo, un programa en 4GL reescrito en C++ tiene un 50% menos de requerimientos de memoria y es 10 veces más rápido.</li>
+<li>Reducen claramente los costos del desarrollo, aunque no sucede lo mismo con el mantenimiento de los mismos, ya que:<ul>
+<li>Son programas no estructurados difíciles de mantener.</li>
+<li>No están estandarizados ni son uniformes, y por tanto, los usuarios pueden tener que reescribir totalmente los programas debido a que el lenguaje ha quedado obsoleto.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Ensamblaje de componentes y aplicaciones.</li>
+</ul>
+<p>El desarrollo de prototipos con reutilización comprende dos niveles:</p>
+<ul>
+<li>El nivel de aplicación, en el que una aplicación completa se integra con el prototipo. Por ejemplo: si el prototipo requiere procesamiento de textos, se puede integrar un sistema estándar de procesamiento de textos (MS Office).</li>
+<li>El nivel de componente, en el que los componentes se integran en un marco de trabajo estándar.</li>
+</ul>
+<p>Dentro del nivel de componentes se usan diversos tipos de lenguajes de programación, cada uno de ellos adecuado para tareas diversas:</p>
+<ul>
+<li>Visual Basic, TCL/TK, Python, Perl, …<ul>
+<li>Lenguajes de alto nivel sin tipos, con facilidades gráficas.</li>
+<li>Desarrollo rápido de aplicaciones pequeñas y relativamente sencillas, construidas por una persona o conjunto de personas.</li>
+<li>No existe una arquitectura explícita del sistema.</li>
+</ul>
+</li>
+<li>CORBA, DCOM, JavaBeans.<ul>
+<li>Junto con un marco arquitectónico, es más apropiado para sistemas grandes.</li>
+<li>Programación distribuida.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/245032580/TICB2-Estrategias-Determinacion-Requerimientos" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Alfredo Márquez)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t10/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T10
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t09/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T09</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T13 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T13">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Seguridad física y lógica de un sistema de información. Herramientas en ciberseguridad. Gestión de incidentes. Informática forense.Seguridad Lógica de un Sistema de InformaciónIntroducción. Concepto d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T13">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t13/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Seguridad física y lógica de un sistema de información. Herramientas en ciberseguridad. Gestión de incidentes. Informática forense.Seguridad Lógica de un Sistema de InformaciónIntroducción. Concepto d">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/ataque_activo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/virus_exevir.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/virus_sector_arranque.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/virus_macros.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/evaluacion_riesgo1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/evaluacion_riesgo2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/modelo_antivirus.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T08:00:18.129Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T13">
+<meta name="twitter:description" content="Seguridad física y lógica de un sistema de información. Herramientas en ciberseguridad. Gestión de incidentes. Informática forense.Seguridad Lógica de un Sistema de InformaciónIntroducción. Concepto d">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/ataque_activo.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file active"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t13" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t13/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t13.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t13.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t13.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T13
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Seguridad-fisica-y-logica-de-un-sistema-de-informacion-Herramientas-en-ciberseguridad-Gestion-de-incidentes-Informatica-forense"><a href="#Seguridad-fisica-y-logica-de-un-sistema-de-informacion-Herramientas-en-ciberseguridad-Gestion-de-incidentes-Informatica-forense" class="headerlink" title="Seguridad física y lógica de un sistema de información. Herramientas en ciberseguridad. Gestión de incidentes. Informática forense."></a>Seguridad física y lógica de un sistema de información. Herramientas en ciberseguridad. Gestión de incidentes. Informática forense.</h1><h2 id="Seguridad-Logica-de-un-Sistema-de-Informacion"><a href="#Seguridad-Logica-de-un-Sistema-de-Informacion" class="headerlink" title="Seguridad Lógica de un Sistema de Información"></a>Seguridad Lógica de un Sistema de Información</h2><h3 id="Introduccion-Concepto-de-Seguridad-Informatica"><a href="#Introduccion-Concepto-de-Seguridad-Informatica" class="headerlink" title="Introducción. Concepto de Seguridad Informática"></a>Introducción. Concepto de Seguridad Informática</h3><p>Podemos entender como seguridad una característica de cualquier sistema (informático o no) que nos indica que ese sistema está libre de todo peligro, daño o riesgo, y que es, en cierta manera, infalible. Como esta característica, particularizando para el caso de SO o redes de ordenadores, es muy difícil de conseguir (según la mayoría de expertos, imposible), se suaviza la definición de seguridad y se pasa a hablar de fiabilidad (probabilidad de que un sistema se comporte tal y como se espera de él) más que de seguridad.</p>
+<p>Se entiende que mantener un sistema seguro (o fiable) consiste básicamente en garantizar tres aspectos:</p>
+<ul>
+<li><strong>Confidencialidad o Privacidad</strong> . Es la necesidad de que la información sólo sea conocida por personas autorizadas no convirtiendo esa información en disponible para otras entidades. En casos de falta de confidencialidad, la información puede provocar daños a sus dueños o volverse obsoleta.</li>
+<li><strong>Integridad</strong> . Es la característica que hace que el contenido de la información permanezca inalterado a menos que sea modificado por personal autorizado, y esta modificación sea registrada para posteriores controles o auditorias.</li>
+<li><strong>Disponibilidad u Operatividad</strong> . Es la capacidad de que la información esté siempre disponible para ser procesada por personal autorizado. Esto requiere que dicha información se mantenga correctamente almacenada con el hardware y el software funcionando perfectamente y que se respeten los formatos para su recuperación en forma satisfactoria.</li>
+</ul>
+<p>Generalmente tienen que existir los tres aspectos descritos para que haya seguridad.</p>
+<p>Los tres elementos principales a proteger en cualquier sistema informático son el software, el hardware y los datos. Habitualmente los datos son el principal elemento, ya que es el más amenazado y el más difícil de recuperar.Así, por ejemplo en una máquina Unix tenemos un hardware ubicado en un lugar de acceso físico restringido, o al menos controlado, en caso de pérdida de una aplicación ( o un programa de sistema, o el propio núcleo de Unix) este software se puede restaurar sin problemas desde su medio original (por ejemplo, el CD-ROM con el SO que se utilizó para su instalación). Sin embargo, en caso de pérdida de una BD o de un proyecto de un usuario, no tenemos un medio ‘original’ desde el que restaurar: hemos de pasar obligatoriamente por un sistema de copias de seguridad, y a menos que la política de copias sea muy estricta, es difícil devolver los datos al estado en que se encontraban antes de la pérdida.</p>
+<p>Se deben conocer las amenazas a que los datos están sometidos y las vulnerabilidades de los sistemas en los que residen, así como los principales tipos de ataques para crear una buena política de seguridad que los proteja.</p>
+<h3 id="Seguridad-Fisica-y-Seguridad-Logica"><a href="#Seguridad-Fisica-y-Seguridad-Logica" class="headerlink" title="Seguridad Física y Seguridad Lógica"></a>Seguridad Física y Seguridad Lógica</h3><p>El estudio de la seguridad puede estudiarse dependiendo de las fuentes de las amenazas a los sistemas, lo que da lugar a hablar de seguridad física y seguridad lógica.</p>
+<p>La seguridad física trata de la protección de los sistemas ante amenazas físicas. Consiste en la aplicación de barreras físicas y procedimientos de control, como medidas de prevención y contramedidas, ante amenazas a los recursos e informaciones confidenciales. Desastres naturales, sabotajes internos o externos, etc, forman parte de este tipo de seguridad.</p>
+<p>La seguridad lógica protege la información dentro de su propio medio mediante el uso de herramientas de seguridad. Se puede definir como conjunto de operaciones y técnicas orientadas a la protección de la información contra la destrucción, la modificación, la divulgación indebida o el retraso en su gestación.</p>
+<p>El activo más importante de una organización es la información por lo que es necesario técnicas que vayan más allá de la seguridad física para proteger dicha información. Estas técnicas las brinda la seguridad lógica.</p>
+<h3 id="Seguridad-Logica"><a href="#Seguridad-Logica" class="headerlink" title="Seguridad Lógica"></a>Seguridad Lógica</h3><p>La Seguridad Lógica consiste en la “ <em>aplicación de barreras y procedimientos que resguarden el acceso a los datos y sólo permitan acceder a ellos a las personas autorizadas para hacerlo</em> “.</p>
+<p>Los objetivos que se plantean serán:</p>
+<ol>
+<li>Restringir el acceso a los programas y archivos.</li>
+<li>Asegurar que los operadores puedan trabajar sin una supervisión minuciosa y no puedan modificar los programas ni los archivos que no les correspondan.</li>
+<li>Asegurar que se estén utilizando los datos, archivos y programas correctos por el procedimiento correcto.</li>
+<li>Que la información transmitida sea recibida por el destinatario al que ha sido enviada y no a otro.</li>
+<li>Que la información recibida sea la misma que ha sido transmitida.</li>
+<li>Que existan sistemas alternativos secundarios de transmisión entre diferentes puntos.</li>
+<li>Que se disponga de pasos alternativos de emergencia para la transmisión de información</li>
+</ol>
+<p>La seguridad lógica está estandarizada de acuerdo a unos niveles de seguridad. El estándar más utilizado internacionalmente es el TCSEC (Trusted Computer System Evaluation) Orange Book desarrollado en 1982 de acuerdo a las normas de seguridad de ordenadores del Departamento de Defensa de la Estados Unidos. Los niveles describen diferentes tipos de seguridad del SO y se enumeran desde el mínimo grado de seguridad al máximo. Estos niveles han sido la base de desarrollo de estándares europeos (ITSEC/ITSEM, Information Technology Security Evaluation Criteria / Methodology) y luego internacionales (ISO/IEC). Cada nivel requiere todos los niveles definidos anteriormente: así el subnivel B2 abarca los subniveles B1, C2, C1 y D.</p>
+<p><strong>Nivel D</strong></p>
+<p>Reservado para sistemas que no cumplen con ninguna especificación de seguridad. Sin sistemas fiables, no hay protección para el hardware, el SO es inestable y no hay autenticación con respecto a usuarios y sus derechos de acceso a la información. Un SO en este niveles por ejemplo MS-DOS.</p>
+<p><strong>Nivel C1: Protección Discrecional</strong></p>
+<p>El acceso a distinta información se realiza mediante identificación de usuarios. Cada usuario maneja su información privada y distingue entre usuarios y el administrador del sistema, quien tiene control total de acceso.</p>
+<p>Muchas de las tareas cotidianas de la administración sólo pueden ser realizadas por este “super usuario” quien tiene gran responsabilidad en la seguridad. Con la actual descentralización de los sistemas, no es raro que en una organización encontremos dos o tres personas cumpliendo este papel.</p>
+<p>Los requerimientos mínimos que debe cumplir la clase C1 son:</p>
+<ul>
+<li>Acceso de control discrecional: distinción entre usuario y recursos. Se podrán definir grupos de usuarios y grupos de objetos sobre los cuales podrán actuar usuarios o grupos de ellos.</li>
+<li>Identificación y Autenticación: un usuario debe identificarse antes de comenzar a ejecutar acciones sobre el sistema. El dato de un usuario no podrá ser accedido por un usuario sin autorización o identificación.</li>
+</ul>
+<p><strong>Nivel C2: Protección de Acceso controlado</strong></p>
+<p>Cuenta con características adicionales al C1 que crean un ambiente de acceso controlado. Se debe llevar una auditoria de accesos e intentos fallidos de acceso a objetos. Tiene la capacidad de restringir aún más el que los usuarios ejecuten ciertos comandos o tengan accesos a ciertos archivos, permite o deniega datos a usuarios concretos en base no sólo a los permisos sino también a los niveles de autorización.</p>
+<p>Requiere que se audite el sistema. Esta auditoria es utilizada para llevar registros de todas las acciones relacionadas con la seguridad, como las actividades efectuadas por el administrador y sus usuarios. La auditoria requiere de autenticación adicional para estar seguro de que la persona que ejecuta el comando es quien dice ser. Su mayor desventaja reside en los recursos adicionales requeridos.</p>
+<p>Los usuarios de un sistema C2 tienen la autorización para realizar algunas tareas de administración del sistema sin necesidad de ser administradores. Permite llevar mejor cuenta de las tareas relacionadas con la administración del sistema, ya que es cada usuario quién ejecuta y no el administrador.</p>
+<p><strong>Nivel B1: Seguridad Etiquetada</strong></p>
+<p>A cada objeto del sistema (usuario, dato, etc) se le asigna una etiqueta con nivel de seguridad jerárquico (alto secreto, secreto, reservado, etc) y con unas categorías (contabilidad, nóminas, ventas, etc). Cada usuario que accede a un objeto debe poseer un permiso expreso para hacerlo y viceversa. Es decir que cada usuario tiene sus objetos asociados. También se establecen controles para limitar la propagación de derecho de accesos a los distintos objetos.</p>
+<p><strong>Nivel B2: Protección Estructurada</strong></p>
+<p>Requiere que se etiquete cada objeto de nivel superior por ser padre de un objeto inferior. La protección estructurada es la primera que empieza a referirse al problema de un objeto a un nivel más elevado de seguridad y comunicación con otro objeto a un nivel inferior. Así un disco duro será etiquetado por almacenar archivos que son accedidos por distintos usuarios. El sistema es capaz de alertar a los usuarios si sus condiciones de accesibilidad y seguridad son modificadas; y el administrador es el encargado de fijar los canales de almacenamiento y ancho de banda a utilizar por los demás usuarios.</p>
+<p><strong>Nivel B3: Dominios de Seguridad</strong></p>
+<p>Refuerza a los dominios con las instalación de hardware: por ejemplo, el hardware de administración de memoria se usa para proteger el dominio de seguridad de acceso no autorizado a la modificación de objetos de diferentes dominios de seguridad. Existe un monitor de referencia que recibe las peticiones de acceso de cada usuario y las permite o las deniega según las políticas de acceso que se hayan definido.</p>
+<p>Todas las estructuras de seguridad deben ser lo suficientemente pequeñas como para permitir análisis y comprobaciones ante posibles violaciones. Este nivel requiere que el terminal del usuario se conecte al sistema por medio de una conexión segura. Cada usuario tiene asignado los lugares y objetos a los que puede acceder.</p>
+<p><strong>Nivel A: Protección Verificada</strong></p>
+<p>Es el nivel más elevado, incluye un proceso de diseño, control y verificación, mediante métodos formales (matemáticos) para asegurar todos los procesos que realiza un usuario sobre el sistema.</p>
+<p>Para llegar a este nivel todos los componentes de niveles inferiores deben incluirse. El diseño requiere ser verificado de forma matemática y se deben realizar análisis de canales encubiertos y de distribución fiable. El software y el hardware son protegidos para evitar infiltraciones ante traslados o movimientos de equipamiento.</p>
+<h2 id="Amenazas-Riesgos-Vulnerabilidades-y-Ataques"><a href="#Amenazas-Riesgos-Vulnerabilidades-y-Ataques" class="headerlink" title="Amenazas, Riesgos, Vulnerabilidades y Ataques"></a>Amenazas, Riesgos, Vulnerabilidades y Ataques</h2><h3 id="Amenaza"><a href="#Amenaza" class="headerlink" title="Amenaza"></a>Amenaza</h3><p>Bajo la etiqueta de ‘amenazas lógicas’ encontramos todo tipo de programas que de una forma u otra pueden dañar a nuestro sistema, creados de forma intencionada (software malicioso, también conocido como malware) o simplemente un error (bugs o agujeros). Esto es, una amenaza es la posibilidad de la ocurrencia de algún evento que afecte el buen funcionamiento de un sistema, es decir, cualquier elemento que comprometa el sistema.</p>
+<p>Las amenazas pueden ser analizadas en tres momentos: antes del ataque, durante y después del mismo, por lo que son necesarios mecanismos que garanticen la seguridad para cada momento. Estos son:</p>
+<ul>
+<li>La prevención (antes): mecanismos que aumentan la seguridad (fiabilidad) de un sistema durante su funcionamiento normal. Por ejemplo, el cifrado de información.</li>
+<li>La detección (durante): mecanismos orientados a revelar violaciones a la seguridad. Generalmente son programas de auditoria.</li>
+<li>La recuperación (después): mecanismos que se aplican cuando la violación del sistema ya se ha detectado, para retornar éste a su funcionamiento normal. Por ejemplo, recuperación desde las copias de seguridad realizadas previamente.</li>
+</ul>
+<p>La identificación de las amenazas requiere conocer los tipos de ataques, el tipo de acceso, método de trabajo y los objetivos del atacante.</p>
+<h3 id="Riesgo"><a href="#Riesgo" class="headerlink" title="Riesgo"></a>Riesgo</h3><p>Proximidad o posibilidad de daño sobre un bien.</p>
+<p>Ya se trate de actos naturales, errores u omisiones humanas y actos intencionados, cada riesgo debería ser considerado de las siguientes maneras:</p>
+<ul>
+<li>Minimizando la posibilidad de que ocurra.</li>
+<li>Reduciendo al mínimo el perjuicio producido si no ha podido evitarse que ocurriera.</li>
+<li>Diseñando métodos para la más rápida recuperación de los daños experimentados.</li>
+<li>Corrigiendo las medidas de seguridad en función de la experiencia recogida.</li>
+</ul>
+<h3 id="Vulnerabilidad"><a href="#Vulnerabilidad" class="headerlink" title="Vulnerabilidad"></a>Vulnerabilidad</h3><p>Característica del sistema o del medio ambiente que facilita que la amenaza tenga lugar. Son las debilidades del sistema que pueden ser empleadas por la amenaza para comprometerlo.</p>
+<h3 id="Ataque"><a href="#Ataque" class="headerlink" title="Ataque"></a>Ataque</h3><p>Evento, exitoso o no, que atenta contra el buen funcionamiento de un sistema, sea intencionado o accidental.</p>
+<p>Las consecuencias de los ataques se podrían clasificar en:</p>
+<ul>
+<li>Corrupción de Datos: la información que no contenía defectos pasa a tenerlos.</li>
+<li>Denegación de Servicio: servicios que deberían estar disponibles no lo están.</li>
+<li>Filtrado: los datos llegan a destinos a los que no deberían llegar.</li>
+</ul>
+<p>Los ataques de una forma general se clasifican en:</p>
+<p>Ataques Pasivos</p>
+<p>El atacante no altera la comunicación sino que únicamente la escucha o monitoriza para obtener información que está siendo transmitida. Sus objetivos son la interceptación de datos y el análisis de tráfico. Se suelen emplear para:</p>
+<ul>
+<li>Obtención del origen y destinatario de la comunicación, a través de la lectura de las cabeceras de los paquetes monitorizados.</li>
+<li>Control del volumen de tráfico intercambiando entre las entidades monitorizadas, obteniendo así información acerca de actividad o inactividad inusuales.</li>
+<li>Control de las horas habituales de intercambio de datos entre las entidades de la comunicación, para extraer información acerca de los periodos de actividad.</li>
+</ul>
+<p>El cifrado de información, por ejemplo, puede evitar el éxito, si bien no el ataque.</p>
+<p>Ataques Activos</p>
+<p>Estos ataques implican algún tipo de modificación del flujo de datos transmitidos o la creación de un falso flujo de datos. Generalmente son realizados por hackers, piratas informáticos o intrusos remunerados y se los pueden subdividir en varias categorías:</p>
+<ul>
+<li><strong>Interrupción</strong> : Un ataque se clasifica como interrupción si hace que un objeto del sistema se pierda, quede inutilizable o no disponible.</li>
+<li><strong>Interceptación</strong> : Se tratará de una interceptación si un elemento no autorizado consigue un acceso a un determinado objeto del sistema.</li>
+<li><strong>Modificación</strong> : Si además de conseguir el acceso consigue modificar el objeto.</li>
+<li><strong>Fabricación</strong> : Se dice que un ataque es una fabricación si se trata de una modificación destinada a conseguir un objeto similar al atacado de forma que sea difícil distinguir entre el objeto original y el ‘fabricado’.</li>
+<li><strong>Destrucción</strong> : Algunos autores consideran un caso especial de la modificación la destrucción, entendiéndola como una modificación que inutiliza al objeto afectado.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/ataque_activo.png?w=825" alt=""></p>
+<h3 id="Tipos-de-Ataques"><a href="#Tipos-de-Ataques" class="headerlink" title="Tipos de Ataques"></a>Tipos de Ataques</h3><p><strong>Ingeniería Social</strong></p>
+<p>Es la manipulación de las personas para convencerlas de que ejecuten acciones o actos que normalmente no realizan para que revele todo lo necesario para superar las barreras de seguridad. Esta técnica es una de las más usadas y efectivas a la hora de averiguar nombres de usuarios y passwords.</p>
+<p>Para evitar situaciones de Ingeniería Social es conveniente tener en cuenta estas recomendaciones:</p>
+<ul>
+<li>Tener servicio técnico propio o de confianza.</li>
+<li>Instruir a los usuarios para que no respondan ninguna pregunta sobre cualquier característica del sistema y deriven la inquietud a los responsables que tenga la competencia para dar esa información.</li>
+<li>Asegurarse que las personas que llaman por teléfono son quien dicen ser.</li>
+</ul>
+<p><strong>Ingeniería Social Inversa</strong></p>
+<p>En este caso el intruso da a conocer de alguna manera que es capaz de brindar ayuda a los usuarios y estos llaman ante algún imprevisto. El intruso aprovechará la oportunidad para pedir información necesaria para solucionar el problema consiguiendo información útil.</p>
+<p><strong>Trashing</strong></p>
+<p>Generalmente un usuario anota su login y password en un papelito y luego, cuando lo recuerda, lo arroja a la basura. Este procedimiento por más inocente que parezca esel que puede aprovechar un atacante para hacerse de una llave para entrar en el sistema. El Trashing puede ser físico (como el caso descrito) o lógico, como analizar buffers de impresora y memoria, bloques de discos, etc.</p>
+<p><strong>Ataques de Monitorización</strong></p>
+<p>Este tipo de ataque se realiza para observar a la víctima y su sistema, con el objetivo de obtener información y establecer sus vulnerabilidades y posibles formas de acceso futuro.</p>
+<ul>
+<li><strong>Shoulder Surfing</strong> : Consiste en espiar físicamente a los usuarios para obtener su login y password correspondiente.</li>
+<li><strong>Decoy</strong> : Son programas diseñados con la misma interfaz que el original. En ellos se imita la solicitud de login y el usuario desprevenido lo hace. Luego el programa guardará esa información y dejará paso a las actividades normales del sistema. La información recopilada será utilizada por el atacante para futuras “visitas”.</li>
+</ul>
+<p>Una técnica semejante es aquella, que mediante un programa se guardan todas las teclas presionadas durante una sesión.</p>
+<ul>
+<li><strong>Scanning</strong> : La idea es recorrer (escanear) tantos puertos de escucha como sea posible, y guardar información de aquellos que sean receptivos o de utilidad para cada necesidad en particular. Muchas utilidades de auditoria también se basan en este paradigma.</li>
+</ul>
+<p>Hay varios tipos de scanning entre los que destaca <strong>TCP Connect Scanning</strong> que es la forma básica de escaneo de puertos TCP. Si el puerto está escuchando devolverá una respuesta de éxito; cualquier otro caso significará que el puerto no está abierto o que no se puede establecer conexión con él. Su ventaja es que es rápido y no necesita privilegios especiales. Su desventaja es que es fácilmente detectable por el administrador del sistema.</p>
+<ul>
+<li><strong>Eavestropping-Packet Sniffing</strong> : Es la interceptación del tráfico de red.</li>
+</ul>
+<p>Esto se realiza con Packet Sniffers, son programas que controlan los paquetes que circulan por una red. Los sniffers pueden ser colocados tanto en estaciones de trabajo conectadas a la red como a un equipo Router o un Gateway de Internet y esto puede ser realizado por un usuario con legítimo acceso o por un intruso que ha ingresado por otras vías.</p>
+<p>Cada máquina conectada a la red (mediante una placa con una dirección única) verifica la dirección destino de los paquetes TCP. Si estas direcciones son iguales asume que el paquete enviado es para ella, caso contrario libera el paquete para que otras placas lo analicen. Un sniffer consiste en colocar a la placa de red en un modo llamado promiscuo, el cual desactiva el filtro de verificación de direcciones y por tanto todos los paquetes enviados a la red llegan a esta placa. Actualmente existen sniffers para capturar cualquier tipo de información específica. Por ejemplo, passwords de un recurso compartido o de acceso a una cuenta, que generalmente viajan sin encriptar.</p>
+<p>También son útiles para capturar números de tarjetas de crédito y direcciones de correo electrónico entrantes y salientes.</p>
+<ul>
+<li><strong>Snooping-Downloading</strong> : Además de interceptar el tráfico de red, el atacante ingresa a los documentos, mensajes de correo electrónico y otra información guardada realizando una copia de sus documentos (downloading) a su propio ordenador para luego hacer un análisis exhaustivo de la misma.</li>
+</ul>
+<p><strong>Ataques de Autenticación</strong></p>
+<p>Este tipo de ataque tiene como objetivo engañar al sistema de la víctima para entrar en este. Generalmente se realiza tomando las sesiones ya establecidas por la víctima u obteniendo su nombre de usuario y password.</p>
+<ul>
+<li><strong>Spoofing-Looping</strong> : Spoofing puede traducirse como “hacerse pasar por otro”. Una forma común de Spoofing es conseguir el nombre y password para una vez ingresado al sistema, tomar acciones en nombre de él.</li>
+</ul>
+<p>El intruso usualmente utiliza un sistema para obtener información e ingresar en otro y luego utiliza este para entrar en otro y así sucesivamente. Este proceso llamado Looping, tiene la finalidad de ocultar la identificación y ubicación del atacante.</p>
+<ul>
+<li><strong>IP Spoofing</strong> : El atacante genera paquetes de Internet con una dirección de red falsa en el origen, pero que es aceptada por el destinatario del paquete. Su utilización más común es enviar los paquetes con la dirección de un tercero de forma que la víctima “ve” un ataque proveniente de esa tercera red y no la dirección real del intruso.</li>
+<li><strong>DNS Spoofing</strong> : Se manipulan paquetes UDP pudiéndose comprometer el servidor de nombres del Dominio (Domain Name Server DNS).</li>
+<li><strong>Web Spoofing</strong> : El atacante crea un sitio web completo (falso) similar al que la víctima desea entrar. Los accesos a este sitio están dirigidos por el atacante permitiéndole controlar todas las acciones de la víctima, desde sus datos hasta las passwords, número de tarjetas de crédito, etc.</li>
+</ul>
+<p>El atacante también es libre de modificar cualquier dato que se esté transmitiendo entre el servidor original y la víctima o viceversa.</p>
+<ul>
+<li><strong>IP Splicing-Hijacking</strong> : Se produce cuando un atacante consigue interceptar una sesión ya establecida. El atacante espera a que la víctima se identifique ante el sistema y tras ello le suplanta.</li>
+</ul>
+<p>Para entender el procedimiento supongamos la siguiente situación:</p>
+<p>IP Cliente:  IP 195.1.1.1<br>IP Servidor: IP 195.1.1.2<br>IP Atacante: IP 195.1.1.3</p>
+<p>El cliente establece una conexión con su servidor enviando un paquete que contendrá la dirección origen, destino, número de secuencia y un número de autenticación utilizado por el servidor para reconocer el paquete siguiente en la secuencia. Supongamos que este paquete contiene:</p>
+<p>IP Origen:  195.1.1.1 Puerto 1025<br>IP Destino: 195.1.1.2 Puerto 23<br>SEQ=3DF45ADA<br>ACK=F454FDF5<br>Datos: Solicitud</p>
+<p>El servidor luego de recibir el primer paquete contesta al cliente con paquete Echo (recibido).</p>
+<p>IP Origen:  195.1.1.2 Puerto 1025<br>IP Destino: 195.1.1.1 Puerto 23<br>SEQ=F454FDF5 (ACK enviado por el cliente)<br>ACK=3DF454E4<br>Datos: Recepción OK (Echo)</p>
+<p>El cliente envía un paquete ACK al servidor, sin datos, en donde le comunica lo “perfecto de la comunicación.</p>
+<p>IP Origen:  195.1.1.1 Puerto 1025<br>IP Destino: 195.1.1.2 Puerto 23<br>SEQ=3DF454E4 (ACK enviado por el servidor)<br>ACK=F454FDFF<br>Datos: Confirmación de Recepción (ACK)</p>
+<p>El atacante que ha visto, mediante un Sniffer, los paquetes que circularon por la red calcula el número de secuencia siguiente: el actual + tamaño del campo de datos. Para calcular el tamaño de este campo:</p>
+<p>1º paquete ACK Cliente=F454FDF5<br>2º paquete ACK Cliente=F454FDFF<br>Tamaño del campo de datos = F454FDFF - F454FD5 = 0A</p>
+<p>Hecho esto el atacante envía un paquete con el siguiente aspecto:</p>
+<p>IP Origen:  195.1.1.1 (IP del Cliente por el atacante)<br>IP Destino: 195.1.1.2 (IP del servidor)<br>SEQ=3DF454E4 (Último ACK enviado por el cliente)<br>ACK=F454FE09 (F454FDFF + 0A)</p>
+<p>El servidor al recibir estos datos no detectará el cambio de origen ya que los campos que ha recibido como secuencia y ACK son los que esperaba recibir. El cliente, a su vez, quedará esperando datos como si su conexión estuviera establecida pero sin enviar datos y el atacante podrá seguir enviando datos mediante el procedimiento descrito.</p>
+<ul>
+<li><strong>Utilización de puertas traseras (Backdoors)</strong> : Las puertas traseras son trozos de código en un programa que permiten saltarse los métodos usuales de autenticación para realizar ciertas tareas. Habitualmente son insertados por los programadores del sistema para agilizar la tarea de probar el código durante la fase de desarrollo. Esta situación se convierte en una falla de seguridad si se mantiene, involuntaria o intencionalmente, una vez terminado el producto ya que cualquiera que conozca el agujero o lo encuentre en su código podrá saltarse los mecanismos de control normales.</li>
+<li><strong>Utilización de Exploits</strong> : Es frecuente entrar en un sistema explotando agujeros en los algoritmos de encriptación usados, en la administración de claves por parte de la empresa o encontrando un error en los programas utilizados.</li>
+</ul>
+<p>Los programas para explotar estos “agujeros” reciben el nombre de Exploits y lo que hacen es aprovechar la debilidad, fallo o error hallado en el sistema (hardware o software) para entrar al mismo. Nuevos agujeros se publican cada día por lo que mantenerse informado de los mismos y de las herramientas para combatirlos es de vital importancia.</p>
+<ul>
+<li><strong>Obtención de Passwords</strong> : Este método comprende la obtención por “Fuerza Bruta” de aquellas claves que permiten entrar en los sistemas, aplicaciones, cuentas, etc, atacados.</li>
+</ul>
+<p>Muchas passwords de acceso son obtenidas fácilmente porque involucran el nombre u otro dato familiar del usuario, y además, nunca (o rara vez) se cambia. En este caso el ataque se simplifica e involucra algún tiempo de prueba y error. Otras veces se realizan ataques sistemáticos con la ayuda de programas especiales y diccionarios que prueban millones de posibles claves hasta encontrar la password correcta.</p>
+<p>El programa encargado encripta cada una de ellas, mediante el algoritmo utilizado por el sistema atacado y compara la palabra encriptada contra el archivo de passwords del sistema atacado, previamente obtenido. Si coinciden se ha encontrado la clave de acceso.</p>
+<p><strong>Denegación de servicio (DoS – Denial of Service)</strong></p>
+<p>Los protocolos existentes actualmente fueron diseñados para ser empleados en una comunidad abierta y con una relación de confianza mutua. La realidad indica que es más fácil desorganizar el funcionamiento de un sistema que acceder al mismo; así los ataques de negación de servicio tienen como objetivo saturar los recursos de las víctimas de forma que se inhabiliten los servicios brindados por la misma.</p>
+<p>Algunas razones por las que son útiles para un atacante son:</p>
+<ul>
+<li>Se ha instalado un troyano y se necesita que la víctima reinicie la máquina para que surta efecto.</li>
+<li>Se necesita cubrir inmediatamente sus acciones o un uso abusivo de CPU.</li>
+<li>El intruso cree que actúa bien al dejar fuera de servicio algún sitio web que le disgusta.</li>
+<li>El administrador de sistema quiere comprobar que sus instalaciones no son vulnerables a estos ataques.</li>
+<li>El administrador del sistema tiene un proceso que no puede “matar” en su servidor y debido a este no puede acceder al sistema. Para ello, lanza contra sí mismo un ataque DoS deteniendo los servicios.</li>
+</ul>
+<p>Entre los distintos tipos de DoS tenemos:</p>
+<ul>
+<li><strong>Jamming o Flooding</strong> : Este tipo de ataques desactivan o saturan los recursos del sistema. Por ejemplo, se puede consumir toda la memoria o espacio disponible en disco, así como enviar tanto tráfico a la red que nadie puede utilizarla.</li>
+</ul>
+<p>El atacante satura el sistema con mensajes que requieren establecer conexión. Sin embargo, en vez de proveer la dirección IP del emisor, el mensaje contiene falsas direcciones IP usando “Spoofing” y “Looping”. El sistema responde al mensaje pero al no recibir respuesta acumula buffers con información de las conexiones abiertas, no dejando lugar a las conexiones legítimas.</p>
+<ul>
+<li><strong>Connection Flood</strong> : La mayoría de las empresas que brindan servicios de Internet tienen un límite máximo en el número de conexiones simultáneas. Una vez que se alcanza este límite, no se admitirán conexiones nuevas. Así,por ejemplo, un servidor Web puede tener, capacidad para atender a mil usuarios simultáneos. Si un atacante establece mil conexiones y no realiza ninguna petición sobre ellas, monopolizará la capacidad del servidor. Las conexiones van caducando por inactividad poco a poco, pero el atacante sólo necesita intentar nuevas conexiones para mantener fuera de servicio al servidor.</li>
+<li><strong>Net Flood</strong> : El atacante envía tantos paquetes de solicitud de conexión que las conexiones auténticas no pueden competir. En casos así el primer paso a realizar es ponerse en contacto con el Proveedor del servicio para que intente determinar la fuente del ataque, y como medida provisional, filtre el ataque en su extremo de la línea. El siguiente paso consiste en localizar las fuentes del ataque e informar a sus administradores, ya que seguramente se estarán usando sus recursos sin su conocimiento y consentimiento.</li>
+<li><strong>Land Attack</strong> : Este ataque se basa en un error de la pila TCP/IP de las plataformas Windows. Consiste en mandar a algún puerto abierto de un servidor un paquete con la dirección y puerto origen igual que la dirección y puerto destino. El resultado es que después de cierta cantidad de mensajes enviados-recibidos la máquina termina colgándose.</li>
+<li><strong>OOB (Out Of Band), Supernuke o winnuke</strong> : Es un ataque característico en los equipos Windows que hace que los equipos que escuchan por el puerto NETBios sobre TCP/UDP 137 a 139 queden fuera de servicio o disminuyan su rendimiento al enviarle paquetes UDP manipulados. Generalmente se envían fragmentos de paquetes OOB que la máquina víctima detecta como inválidos pasando a un estado inestable. OOB es el término normal pero realmente consiste en configurar el bit Urgente (URG) en los indicadores del encabezamiento TCP.</li>
+<li><strong>E-Mail Bombing – Spamming</strong> : Consiste en enviar muchas veces un mensaje idéntico a una misma dirección saturando así el buzón de correo del destinatario.</li>
+</ul>
+<p>El spamming, en cambio, se refiere a enviar un e-mail a miles de usuarios, hayan estos solicitados el mensaje o no. Es muy utilizado por las empresas para hacer publicidad de sus productos.</p>
+<p><strong>Ataques de Modificación-Daño</strong></p>
+<ul>
+<li><strong>Tampering o Data Diddling</strong> : Se refiere a la modificación desautorizada de los datos o el software instalado en el sistema víctima incluyendo borrado de archivos. Son particularmente serios cuando el que lo realiza ha obtenido derechos de administrador, con la capacidad de ejecutar cualquier comando. Ejemplos típicos: empleados bancarios (o externos) que crean falsas cuentas para derivar fondos de otras, estudiantes que modifican calificaciones de exámenes, et.</li>
+</ul>
+<p>Múltiples sitios web han sido víctimas del cambio en sus páginas por imágenes o manifiestos. Otras veces se reemplazan versiones de software por otros con el mismo nombre pero que incorporan código malicioso (virus, troyanos, etc). La utilización de virus y troyanos está dentro de esta categoría y se le dedicará un apartado especial.</p>
+<ul>
+<li><strong>Borrado de Huellas</strong> : El borrado de huellas es una de las tareas más importantes que debe realizar el intruso después de ingresar en un sistema, ya que si se detecta su ingreso, el administrador buscará como conseguir “tapar el hueco” de seguridad evitando ataques futuros o incluso rastrear al atacante.</li>
+</ul>
+<p>Las huellas son todas las operaciones que realizó el intruso en el sistema y, por lo general, son almacenadas en Logs (archivos que guardan la información de lo que se realiza en el sistema) por el SO.</p>
+<p>Los archivos de Logs son una de las principales herramientas con las que cuenta un administrador para conocer los detalles de las tareas realizadas en el sistema y para la detección de intrusos.</p>
+<ul>
+<li><strong>Ataque mediante ActiveX</strong> : ActiveX es una de las tecnologías de Microsoft que permite reutilizar código, descargar código totalmente funcional de un sitio remoto, etc. ActiveX soluciona los problemas de seguridad mediante certificados y firmas digitales. Una Autoridad Certificadora (AC) expende un certificado que acompaña a los controles activos y a una firma digital del programador. Cuando un usuario descarga una página con un control, se le preguntará si confía en la AC que expedió el certificado y en el control ActiveX. Si el usuario acepta el control, éste puede pasar a ejecutarse sin ningún tipo de restricciones salvo las propias que tenga el usuario en el SO por lo que la seguridad del sistema se deja en manos del usuario, característica que es utilizada para realizar ataques.</li>
+<li><strong>Vulnerabilidad en los Navegadores</strong> : Un fallo común ha sido el denominado “Buffer Overflow” que consisten en explotar una debilidad relacionada con los buffers que la aplicación usa para almacenar las entradas de usuario. Por ejemplo, cuando el usuario escribe una dirección en formato URL ésta se guarda en un buffer para luego procesarla. Si no se realizan las oportunas operaciones de comprobación, un usuario podría manipular estas direcciones.</li>
+</ul>
+<p><strong>Errores de Diseño, Implementación y de Operación</strong></p>
+<p>Muchos sistemas están expuestos a “agujeros” de seguridad que son explotados para acceder a archivos, obtener privilegios o realizar sabotaje. Estas vulnerabilidades ocurren por varias razones y miles de “puertas invisibles” son descubiertas cada día en SO, aplicaciones de software, protocolos de red, exploradores de internet, correo electrónico y toda clase de servicios informáticos disponibles.</p>
+<p>Los SO abiertos como Unix o Linux tienen agujeros más conocidos y controlados que aquellos que son cerrados, por ejemplo Windows. La importancia y ventaja del código abierto radica en miles de usuarios que analizan dicho código y buscan posibles errores y ayudan a obtener soluciones de forma inmediata.</p>
+<p><strong>Virus Informáticos</strong></p>
+<p>Un virus informático es un pequeño programa invisible para el usuario de funcionamiento específico y subrepticio cuyo código incluye información suficiente y necesaria para que utilizando los mecanismos de ejecución que le ofrecen otros programas puedan reproducirse formando réplicas de sí mismos susceptibles de mutar, resultando de dicho proceso la modificación, alteración y/o destrucción de los programas, información y/o hardware afectado. Un virus informático es un ataque de tipo “Tampering” que puede ser ingresado al sistema por un dispositivo externo o a través de la red (emails u otros protocolos) sin intervención directa del atacante.</p>
+<p>Existen distintos tipos de virus, como aquellos que infectan archivos ejecutables, los sectores de arranque y la tabla de partición de los discos, etc. Los que causan mayores problemas suelen ser las macros y virus scripts que están ocultos en simples documentos, plantillas de cálculo, correo electrónico y aplicaciones que utiliza cualquier usuario de PC. La difusión se potencia con la posibilidad de su transmisión de un continente a otro a través de cualquier red o Internet y además son multiplataformas.</p>
+<p>Las técnicas de propagación más comunes son:</p>
+<ul>
+<li>Disquetes y otros medios: A la posibilidad de que un disquete contenga un archivo infectado se une el peligro de que integre un virus de sector de arranque (Boot). En este segundo caso, y si el usuario lo deja en la disquetera infectará el ordenador al encenderlo ya que el sistema arrancará desde el disquete.</li>
+<li>Correo electrónico: el usuario no necesita hacer nada para recibir mensajes que en muchos casos ni siquiera ha solicitado y que pueden llegar de cualquier lugar del mundo. Los mensajes de correo electrónico pueden incluir archivos, documentos o cualquier objeto Active-X-java infectado que al ejecutarse contagian la computadora del usuario. En las últimas generaciones de virus se envían emails sin mensajes pero con archivos adjuntos que al abrirlos proceden a su ejecución y posterior infección ya que se envían automáticamente a los contactos de la libreta de direcciones del sistema infectado.</li>
+<li>IRC o chat: Las aplicaciones de mensajería instantánea proporcionan un medio de comunicación anónimo, rápido, eficiente, cómodo y barato. Sin embargo, son peligrosas ya que los entornos chat ofrecen generalmente facilidades para transmisión de archivos con un gran riesgo en un entorno de red.</li>
+<li>Páginas web y transferencias vía FTP: los archivos que se descargan desde Internet pueden estar infectados y pueden provocar acciones dañinas en el sistema en el que se ejecutan.</li>
+<li>Grupos de noticias: Sus mensajes e información pueden estar infectados y por lo tanto contagiar al equipo del usuario que participe en ellos.</li>
+</ul>
+<p>Los tipo se virus más habituales son:</p>
+<ul>
+<li><strong>Archivos Ejecutables (Virus ExeVir)</strong> : El virus se adosa a un archivo ejecutable y desvía el flujo de ejecución a su código, para luego retornar al huésped y ejecutar acciones esperadas por el usuario. Al realizarse esta acción el usuario no se percata de lo sucedido. Una vez que el virus es ejecutado se aloja en memoria y puede infectar otros archivos ejecutables que sen abiertos en esa máquina.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/virus_exevir.png?w=825" alt=""></p>
+<ul>
+<li><strong>Virus en el Sector de Arranque (Virus Anterior a la Carga del SO)</strong> : En los primeros 512 bytes de un disquete formateado están las rutinas necesarias para la carga y reconocimiento de dicho disquete. Entre ellas se encuentra la función invocada si no se encuentra el SO.</li>
+</ul>
+<p>Se guarda la zona de arranque original en otro sector del disco. Luego el virus carga la antigua zona de arranque. Al arrancar el disquete ejecuta el virus (que obligatoriamente debe tener 512 bytes o menos) quedando residente en memoria, luego ejecuta la zona de arranque original, salvada anteriormente.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/virus_sector_arranque.png?w=825" alt=""></p>
+<ul>
+<li><strong>Virus Residente</strong> : El objetivo de residir en memoria es controlar los accesos a disco realizados por el usuario y el SO. Cada vez que se produce un acceso, el virus verifica si el disco o archivo objeto al que se accede está infectado y si no lo está procede a almacenar su propio código en el mismo. Este código se almacenará en un archivo, tabla de partición o en el sector de arranque dependiendo del tipo de virus de que se trate.</li>
+<li><strong>Virus de Macros</strong> : Estos virus infectan archivos de información generados por aplicaciones de oficina que cuentan con lenguajes de programación de macros. Su funcionamiento consiste en que si una aplicación abre un archivo infectado, la aplicación (o parte de ella) se infecta y cada vez que se genera un nuevo archivo o se modifique uno existente contendrá el virus de macros.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/virus_macros.png?w=825" alt=""></p>
+<ul>
+<li><strong>Virus de Mail</strong> : Su modo de actuar se basa en la confianza excesiva por parte del usuario, a este le lleva vía mail un mensaje con un archivo comprimido, el usuario lo descomprime y al terminar esta acción, el contenido del archivo se ejecuta y comienza el daño. Este tipo de virus tomó relevancia con la explosión masiva de Internet y virus tipo Melissa y I Love You. Generalmente estos virus se auto-envían a algunas de las direcciones de la libreta.</li>
+<li><strong>Hoax, los Virus Fantasmas</strong> : No es un virus realmente. El auge del correo electrónico generó la posibilidad de transmitir mensajes de alerta de seguridad. Así comenzaron a circular mensajes de distinta índole de casos inexistentes. Los objetivos de estas alertas pueden causar alarma, pérdida de tiempo, robo de direcciones de correo y saturación de los servidores.</li>
+<li><strong>Gusanos</strong> : Un gusano es un programa capaz de ejecutarse y propagarse por sí mismo a través de redes, en ocasiones portando virus o aprovechando errores de los sistemas a los que se conecta para dañarlos. Al ser difíciles de programar, su número no es muy elevado, pero el daño que pueden causar es muy grande.</li>
+</ul>
+<p>Hemos de pensar que un gusano puede automatizar y ejecutar en unos segundos todos los pasos que seguiría un atacante humano para acceder a nuestro sistema, mientras que una persona, por muchos conocimientos y medios que posea, tardaría como mínimo horas en controlar nuestra red completa (un tiempo más que razonable para detectarlo), un gusano puede hacer eso mismo en pocos minutos: de ahí su enorme peligro y sus devastadores efectos.</p>
+<ul>
+<li><strong>Caballos de Troya</strong> : Es un programa que aparentemente realiza una función útil a la vez que una operación que el usuario desconoce y que generalmente beneficia al autor del troyano o daña el sistema huésped.</li>
+</ul>
+<p>Ejemplos conocidos son el Back Oriffice y el Net Bus que son utilizados como poderosas armas para tomar el control del ordenador infectado. Estos programas pueden ser utilizados para la administración total del sistema atacado por parte de un tercero, con los mismos permisos y restricciones que el usuario de la misma.</p>
+<p><strong>Modelo de Virus Informático</strong></p>
+<p>Un virus está compuesto por su propio entorno dentro del que pueden distinguirse tres módulos principales:</p>
+<ul>
+<li><strong>Módulo de Reproducción</strong> encargado de manejar las rutinas de parasitación de entidades ejecutables con el fin de que el virus pueda ejecutarse subrepticiamente.</li>
+<li><strong>Módulo de Ataque</strong> que maneja las rutinas de daño adicional al virus y se activan cuando el sistema cumple cierta condición (por ejemplo una fecha).</li>
+<li><strong>Módulo de Defensa</strong> con la misión de proteger al virus para evitar su detección o eliminación.</li>
+</ul>
+<h2 id="Medidas-de-Proteccion-y-Aseguramiento"><a href="#Medidas-de-Proteccion-y-Aseguramiento" class="headerlink" title="Medidas de Protección y Aseguramiento"></a>Medidas de Protección y Aseguramiento</h2><p>Hoy es imposible hablar de un sistema cien por cien seguro porque el coste de la seguridad total es muy alto. Sin embargo, sí se pueden aplicar una serie de medidas de protección para controlar todo un conjunto de vulnerabilidades aunque no se logre la seguridad total. En este sentido las Políticas de Seguridad Informática (PSI) surgen como una herramienta de organización para concienciar a los miembros de una organización sobre la importancia y sensibilidad de la información y servicios críticos.</p>
+<p>Entre las medidas de protección más comunes tenemos las que se exponen a continuación.</p>
+<h3 id="Controles-de-acceso"><a href="#Controles-de-acceso" class="headerlink" title="Controles de acceso"></a>Controles de acceso</h3><p>Estos controles pueden implementarse en el SO, sobre los sistemas de aplicación, en BD, en un paquete específico de seguridad o en cualquier otro sistema que se utilice.</p>
+<p>Constituyen una importante ayuda para proteger al SO de la red, al sistema de aplicación y demás software de la utilización o modificación no autorizadas para mantener la integridad de la información y para resguardar la información confidencial del acceso no autorizado.</p>
+<p>Asimismo es conveniente tener en cuenta otras consideraciones referidas a la seguridad lógica como por ejemplo las relacionadas al procedimiento que se lleva a cabo para determinar si corresponde un permiso de acceso (solicitado por un usuario) a un determinado recurso. Al respecto el NIST (National Institute for Standards and Technology) ha resumido los siguientes estándares de seguridad que se refieren a los requisitos mínimos de seguridad en cualquier sistema:</p>
+<p><strong>Identificación y Autenticación</strong></p>
+<p>Se denomina identificación el momento en que el usuario se da a conocer en el sistema mientras que autenticación es la verificación que realiza el sistema sobre esta identificación.</p>
+<p>Existen cuatro tipos de técnicas que permiten realizar la autenticación de la identidad del usuario, que pueden llevarse a cabo individual o combinadamente:</p>
+<ol>
+<li>Algo que solamente el individuo conoce: una clave secreta o password, clave criptológica o un número de identificación personal (PIN).</li>
+<li>Algo que la persona posee: por ejemplo una tarjeta magnética.</li>
+<li>Algo que el individuo es y que lo identifica unívocamente: las huellas digitales o la voz.</li>
+<li>Algo que el individuo es capaz de hacer: por ejemplo los patrones de escritura.</li>
+</ol>
+<p>En los dos primeros casos es frecuente que las claves se olviden o que las tarjetas o dispositivos se pierdan mientras que por otro lado los controles de autenticación biométricos serían más apropiados y fáciles de administrar resultado ser también los más costosos por lo dificultoso de su implementación eficiente.</p>
+<p>Desde el punto de vista de la eficiencia es conveniente que los usuarios sean identificados y autenticados solamente una vez, pudiendo acceder a partir de allí a todas las aplicaciones y datos a los que su perfil les permita tanto en sistema locales como en sistemas a los que debe acceder en forma remota.</p>
+<p>Esto se denomina “single log-in” o sincronización de passwords.</p>
+<p>Una de las posibles técnicas para implementar esta única identificación de usuarios sería la utilización de un servidor de autenticaciones sobre el cual los usuarios se identifican y que se encarga luego de autenticar al usuario sobre los restantes equipos a los que éste pueda acceder. Este servidor de autenticaciones no debe ser necesariamente un equipo independiente y puede tener sus funciones distribuidas tanto geográfica como lógicamente, de acuerdo con los requerimientos de carga de tareas.</p>
+<p>La seguridad informática se basa en gran medida en la efectiva administración de los permisos de acceso a los recursos informáticos, basados en la identificación, autenticación y autorización de accesos. Esta administración abarca:</p>
+<ul>
+<li>Proceso de solicitud, establecimiento, manejo y seguimiento y cierre de las cuentas de usuarios. Es preciso considerar que la solicitud de habilitación de un permiso de acceso para un usuario determinado, debe provenir de su superior y de acuerdo con sus requerimientos específicos de acceso debe crearse el perfil en el sistema de seguridad, en el SO o en la aplicación según corresponda.</li>
+<li>Además, la identificación de usuarios debe definirse según una norma homogénea para toda la organización.</li>
+<li>Revisiones periódicas sobre la administración de las cuentas y los permisos de acceso establecidos. Las mismas deben encararse desde el punto de vista del SO, y aplicación por aplicación, pudiendo ser llevadas a cabo por personal de auditoria o por la gerencia propietaria del sistema; siempre sobre la base de que cada usuario disponga del mínimo permiso que requiera de acuerdo con sus funciones.</li>
+<li>Las revisiones deben orientarse a verificar la adecuación de los permisos de acceso de cada individuo de acuerdo con sus necesidades operativas, la actividad de las cuentas de usuarios o la autorización de cada habilitación de acceso.</li>
+<li>Detección de actividades no autorizadas. Además de realizar auditorias o efectuar el seguimiento de los registros de transacciones (pistas) hay otras medidas que ayudan a detectar actividades no autorizadas. Algunas se basan en evitar la dependencia de personas determinadas, estableciendo la obligatoriedad de tomar vacaciones o efectuar rotaciones periódicas a las funciones asignadas a cada una de ellas.</li>
+<li>Nuevas consideraciones sobre cambios en la asignación de funciones del empleado. Para implantar la rotación de funciones o en caso de reasignar funciones por ausencias temporales de algunos empleados, es necesario considerar la importancia de mantener actualizados los permisos de acceso.</li>
+<li>Procedimientos en caso de desvinculaciones de personal con la organización, amistosas o no.</li>
+</ul>
+<p>Para evitar estas situaciones es recomendable anular los permisos de acceso a las personas que se desvincularán de la organización lo antes posible. En caso de despido, el permiso de acceso debería anularse previamente a la notificación de la persona sobre la situación.</p>
+<p><strong>Roles</strong></p>
+<p>El acceso a la información también puede controlarse a través de la función o rol del usuario que requiere dicho acceso. Algunos ejemplos de roles son: programador, jefe de proyecto, gerente, administrador de sistema, etc. En este caso los derechos de acceso se pueden agrupar de acuerdo con el rol.</p>
+<p><strong>Limitaciones a los servicios</strong></p>
+<p>Estos controles se refieren a las restricciones que dependen de parámetros propios de la utilización de la aplicación o preestablecidos por el administrador del sistema. Un ejemplo podría ser que en la organización se disponga de licencias para la utilización simultánea de un determinado producto de software para cinco personas en donde exista un control a nivel de sistema que no permita la utilización del producto a un sexto usuario.</p>
+<p><strong>Modalidad de Acceso</strong></p>
+<p>Se refiere al modo de acceso que se permite al usuario sobre los recursos y a la información. Puede ser:</p>
+<ul>
+<li>Lectura: el usuario puede únicamente leer o visualizar la información pero no puede alterarla. La información puede ser copiada o impresa.</li>
+<li>Escritura: se permite agregar datos, modificar o borrar información.</li>
+<li>Ejecución: este acceso otorga al usuario el privilegio de ejecutar programas.</li>
+<li>Borrado: permite al usuario eliminar recursos del sistema.</li>
+<li>Todas las anteriores.</li>
+</ul>
+<p><strong>Ubicación y Horario</strong></p>
+<p>El acceso a determinados recursos del sistema puede estar basado en la ubicación física o lógica de los datos o personas. En cuanto a horarios, este tipo de controles permite limitar el acceso de los usuarios a determinadas horas del día o días de la semana. Así se mantiene un control más restringido de los usuarios y zonas de ingreso.</p>
+<p><strong>Control de Acceso Interno</strong></p>
+<p><strong>Palabras claves (passwords)</strong></p>
+<p>Generalmente se utilizan para realizar la autenticación del usuario y sirven para proteger los datos y aplicaciones. Los controles independientes a través de la utilización de palabras claves resulta de muy bajo costo. Sin embargo, cuando el usuario se ve en la necesidad de utilizar varias palabras clave para acceder a diversos sistemas encuentra dificultoso recordarlas y probablemente las escriba o elija palabras fácilmente deducibles con lo que se ve disminuida de esta técnica.</p>
+<p>Sincronización de passwords: consiste en permitir que un usuario acceda con la misma password a diferentes sistemas interrelacionados y su actualización automática en todos ellos en caso de ser modificada.</p>
+<p>Caducidad y control: este mecanismo controla cuando pueden y deben cambiar sus passwords los usuarios. Se define el periodo mínimo que debe pasar para que los usuarios puedan cambiar sus passwords y un periodo máximo que puede transcurrir para que estas caduquen.</p>
+<p><strong>Encriptación</strong></p>
+<p>La información encriptada solamente puede ser desencriptada por quienes posean la clave apropiada.</p>
+<p><strong>Listas de control de accesos</strong></p>
+<p>Se refiere a un registro donde se encuentran los nombres de los usuarios que obtuvieron el permiso de acceso a un determinado recurso del sistema así como la modalidad de acceso permitido. Este tipo de listas varían considerablemente en su capacidad y flexibilidad.</p>
+<p><strong>Límites sobre la interfaz de usuario</strong></p>
+<p>Estos límites generalmente utilizados en conjunto con las listas de control de acceso restringen a los usuarios a realizar funciones específicas. Básicamente pueden ser de 3 tipos: menús, vistas sobre la BD y límites físicos sobre la interfaz de usuario. Por ejemplo, los cajeros automáticos donde el usuario sólo puede ejecutar ciertas funciones presionando teclas específicas.</p>
+<p><strong>Etiqueta de seguridad</strong></p>
+<p>Consiste en designaciones otorgadas a los recursos (por ejemplo, un archivo) que pueden utilizarse para varios propósitos como control de accesos, especificación de medidas de protección, etc. Estas etiquetas no son modificables.</p>
+<p><strong>Control de Acceso Externo</strong></p>
+<p><strong>Dispositivos de control de puertos</strong></p>
+<p>Estos dispositivos autorizan el acceso a un puerto determinado y pueden estar físicamente separados o incluidos en otro dispositivo de comunicaciones, como por ejemplo un módem.</p>
+<p><strong>Firewalls o puertas de seguridad</strong></p>
+<p>Permiten bloquear o filtrar el acceso entre dos redes, usualmente una privada y otra externa (por ejemplo Internet). Los firewalls permiten que los usuarios internos se conecten a la red exterior al tiempo que previenen la intromisión de atacantes o virus a los sistemas de la organización.</p>
+<p><strong>Acceso de personal contratado o consultores</strong></p>
+<p>Debido a que este tipo de personal en general presta servicios temporales, debe ponerse especial consideración en la política y administración de sus perfiles de acceso.</p>
+<p><strong>Accesos públicos</strong></p>
+<p>Para los sistemas de información consultados por el público en general, o los utilizados para distribuir o recibir información computerizada (mediante, por ejemplo, la distribución y recepción de formularios en soporte magnético o la consulta y recepción de información a través del correo electrónico) deben tenerse en cuenta medidas especiales de seguridad, ya que se incrementa el riesgo y se dificulta su administración.</p>
+<p>Debe considerarse para estos casos de sistemas públicos, que un ataque externo o interno puede acarrear un impacto negativo en la imagen de la organización.</p>
+<p><strong>Administración</strong></p>
+<p>Una vez establecidos los controles de acceso sobre los sistemas y la aplicación, es necesario realizar una eficiente administración de estas medidas de seguridad lógica, lo que involucra la implantación, seguimiento, pruebas y modificaciones sobre los accesos de los usuarios de los sistemas. La política de seguridad que se desarrolle respecto a la seguridad lógica debe guiar a las decisiones referidas a la determinación de los controles de accesos y especificando las consideraciones necesarias para el establecimiento de perfiles de usuarios.</p>
+<p>La definición de los permisos de acceso requiere determinar cual será el nivel de seguridad necesario sobre los datos, por lo que es imprescindible clasificar la información, determinando el riesgo que produciría una eventual exposición de la misma a usuarios no autorizados.</p>
+<p>Así los diversos niveles de la información requerirán diferentes medidas y niveles de seguridad.</p>
+<p>Para empezar la implantación, es conveniente comenzar definiendo las medidas de seguridad sobre la información más sensible o las aplicaciones más críticas y avanzar de acuerdo a un orden de prioridad descendente, establecido alrededor de las aplicaciones. Una vez clasificados los datos, deberán establecerse las medidas de seguridad para cada uno de los niveles.</p>
+<p>Un programa específico para la administración de los usuarios informáticos desarrollado sobre la base de las consideraciones expuestas, puede constituir un compromiso vacío, si no existe una conciencia de la seguridad en la organización por parte de todos los empleados. Esta conciencia de la seguridad puede alcanzarse mediante el ejemplo del personal directivo en el cumplimiento de las políticas y el establecimiento de compromisos firmados por el personal, donde se especifique la responsabilidad de cada uno.</p>
+<p>Pero además de este compromiso debe existir una concienciación por parte de la administración hacia el personal en donde se remarque la importancia de la información y las consecuencias de su pérdida o apropiación de la misma por agentes extraños a la organización.</p>
+<p><strong>Administración del personal y usuarios</strong></p>
+<p>Lleva generalmente cuatro pasos:</p>
+<ul>
+<li>Definición de puestos: debe contemplarse la máxima separación de funciones posibles y el otorgamiento del mínimo permiso de acceso requerido por cada puesto para la ejecución de las tareas asignadas.</li>
+<li>Determinación de la sensibilidad del puesto: es necesario determinar si la función requiere permisos rigurosos que le permitan alterar procesos, perpetrar fraudes o visualizar información confidencial.</li>
+<li>Elección de la persona para cada puesto: requiere considerar los requerimientos de experiencia y conocimientos técnicos necesarios para cada puesto. Asimismo,para los puestos definidos como críticos puede requerirse una verificación de antecedentes personales.</li>
+<li>Formación inicial y continua del empleado: cuando la persona seleccionada entra en la organización además de sus responsabilidades individuales para la ejecución de las tareas que se asignen, debe comunicársele las políticas de organizaciones haciendo hincapié en la política de seguridad. El individuo debe conocer las disposiciones de la organización, su responsabilidad en cuanto a la seguridad informática y lo que se espera de él.</li>
+</ul>
+<h3 id="Defensa-de-los-Ataques"><a href="#Defensa-de-los-Ataques" class="headerlink" title="Defensa de los Ataques"></a>Defensa de los Ataques</h3><p>La mayoría de los ataques mencionados se basan en fallo de diseño inherentes a Internet (o sus protocolos) y a los SO utilizados, por lo que no son “solucionables” en un plazo breve de tiempo.</p>
+<p>La solución inmediata en cada caso es mantenerse informado sobre todos los tipos de ataques existentes y las actualizaciones que permanentemente lanzan las empresas de software, principalmente en SO.</p>
+<p>Las siguientes medidas preventivas son:</p>
+<ol>
+<li>Mantener las máquinas actualizadas y seguras físicamente.</li>
+<li>Mantener personal especializado en cuestiones de seguridad.</li>
+<li>Aunque una máquina no contenga información valiosa hay que tener en cuenta que puede resulta útil para un atacante, a la hora de ser empleada en una denegación de servicio (DoS) coordinado o para ocultar su verdadera dirección.</li>
+<li>No permitir el tráfico “broadcast” desde fuera de nuestra red. De esta forma evitamos ser empleados como “multiplicadores”.</li>
+<li>Auditorias de seguridad y sistemas de detección.</li>
+<li>Mantenerse informado constantemente sobre cada una de las vulnerabilidades encontradas y parches instalados. Para esto es recomendable estar subscrito a listas que brinden este tipo de información.</li>
+<li>La información continua del usuario.</li>
+</ol>
+<h3 id="Politica-de-Seguridad-Informatica"><a href="#Politica-de-Seguridad-Informatica" class="headerlink" title="Política de Seguridad Informática"></a>Política de Seguridad Informática</h3><p>Se define (RFC 1244) como “una declaración de intenciones de alto nivel que cubre la seguridad de los sistemas informáticos y que proporciona las bases para definir y delimitar responsabilidades para las diversas actuaciones técnicas y organizativas que se requerirán”.</p>
+<p>La política se refleja en una serie de normas, reglamentos y protocolos a seguir donde se definen las medidas a tomar para proteger la seguridad del sistema. Deben tener las siguientes características:</p>
+<ul>
+<li>Cubrir todos los aspectos relacionados con la seguridad.</li>
+<li>Adecuarse a las necesidades y recursos.</li>
+<li>Definir estrategias y criterios generales y adoptar en distintas funciones y actividades las alternativas ante circunstancias que se puedan dar repetidas veces.</li>
+</ul>
+<h3 id="Evaluacion-de-Riesgos"><a href="#Evaluacion-de-Riesgos" class="headerlink" title="Evaluación de Riesgos"></a>Evaluación de Riesgos</h3><p>El análisis de riesgos supone, además de calcular la posibilidad de que ocurran cosas negativas, los siguientes puntos:</p>
+<ul>
+<li>Poder obtener una evaluación económica del impacto de estos sucesos.</li>
+<li>Tener en cuenta la probabilidad de que sucedan cada uno de los problemas posibles.</li>
+<li>Conocer qué se quiere proteger, dónde y cómo, asegurando que con los costes en que se incurre se obtengan beneficios efectivos. Para ello se deberá identificar los recursos (hardware, software, información, personal, accesorios, etc) con que se cuenta y las amenazas a las que se está expuesto.</li>
+</ul>
+<p>Los riesgos se suelen clasificar por su nivel de importancia y por la severidad de su pérdida:</p>
+<ol>
+<li>Estimación del riesgo de pérdida del recurso (Ri)</li>
+<li>Estimación de la importancia del recurso (Ii)</li>
+</ol>
+<p>Para la cuantificación del riesgo de perder un recurso, es posible asignar un valor numérico de 0 a 10 tanto a la importancia del recurso (10 es el recurso de mayor importancia) como al riesgo de perderlo (10 es el riesgo más alto). El riesgo del recurso será el producto de su importancia por el riesgo de perderlo:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/evaluacion_riesgo1.png?w=825" alt=""></p>
+<p>Luego, con la siguiente fórmula es posible calcular el riesgo general de los recursos de la red:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/evaluacion_riesgo2.png?w=825" alt=""></p>
+<p>Otros factores que debe considerar para el análisis de riesgo de un recurso de red son su disponibilidad, su integración y su carácter confidencial, los cuales se pueden incorporar a la fórmula para ser evaluados.</p>
+<h3 id="Identificacion-de-una-Amenaza"><a href="#Identificacion-de-una-Amenaza" class="headerlink" title="Identificación de una Amenaza"></a>Identificación de una Amenaza</h3><p>Una vez conocido los riesgos, los recursos que se deben proteger y como su daño o falta pueden influir en la organización es necesario identificar cada una de las amenazas y vulnerabilidades que pueden causar estas bajas en los recursos.</p>
+<p>Se suele dividir las amenazas existentes según su ámbito de actuación:</p>
+<ul>
+<li>Desastre del entorno (Seguridad física)</li>
+<li>Amenazas del sistema (Seguridad lógica)</li>
+<li>Amenazas en la red (Comunicaciones)</li>
+<li>Amenazas de personas</li>
+</ul>
+<h3 id="Estrategia-de-Seguridad"><a href="#Estrategia-de-Seguridad" class="headerlink" title="Estrategia de Seguridad"></a>Estrategia de Seguridad</h3><p>Para establecer una estrategia adecuada es conveniente pensar una política de protección en los distintos niveles que esta debe abarcar: Física, Lógica, Humana y la interacción que existe entre estos factores.</p>
+<p>En cada caso considerado, el plan de seguridad debe incluir tanto una estrategia Proactiva (proteger o proceder) o de previsión de ataques para minimizar los puntos vulnerables existentes en la directiva de seguridad y desarrollar planes de contingencias, como una estrategia Reactiva (perseguir y procesar) posterior al ataque que ayuda al personal de seguridad a evaluar el daño causado o a implantar un plan de contingencia adecuado.</p>
+<h3 id="Auditoria-y-Control"><a href="#Auditoria-y-Control" class="headerlink" title="Auditoria y Control"></a>Auditoria y Control</h3><p>Se estudiarán aparte en el último punto de este tema, dada su gran importancia.</p>
+<h3 id="Plan-de-Contingencia"><a href="#Plan-de-Contingencia" class="headerlink" title="Plan de Contingencia"></a>Plan de Contingencia</h3><p>Los planes de contingencia se elaboran como respuesta a la acción de los diferentes riesgos y tienen los siguientes objetivos fundamentales:</p>
+<ul>
+<li>Minimizar las interrupciones en la operación normal.</li>
+<li>Limitar la extensión de las interrupciones y de los daños que originen</li>
+<li>Posibilitar una vuelta al servicio rápida y sencilla</li>
+<li>Ofrecer al personal unas normas de actuación frente a emergencias</li>
+<li>Dotar de medios alternativos de proceso en caso de catástrofe</li>
+</ul>
+<p>Para garantizar la validez del Plan y que no quede obsoleto, debe ser revisado periódicamente. El Plan de Contingencia recoge los siguientes planes como respuesta a los problemas:</p>
+<ul>
+<li>Plan de Emergencia: normas de actuación durante o inmediatamente después de cada fallo o daño.</li>
+<li>Plan de Recuperación: normas para reiniciar todas las actividades del proceso en el Centro.</li>
+<li>Plan de Respaldo: especifica todos los elementos y procedimientos precisos para mantener la seguridad de la información, como configuración del equipo, comunicaciones, SO y opciones, etc.</li>
+</ul>
+<h3 id="Equipos-de-Respuesta-a-Incidencias"><a href="#Equipos-de-Respuesta-a-Incidencias" class="headerlink" title="Equipos de Respuesta a Incidencias"></a>Equipos de Respuesta a Incidencias</h3><p>Es aconsejable formar un equipo de respuestas a incidencias implicado en los trabajos del profesional de seguridad que incluye:</p>
+<ul>
+<li>Desarrollo de instrucciones para controlar incidencias.</li>
+<li>Creación del sector o determinación del responsable.</li>
+<li>Identificación de las herramientas de software para responder a incidentes y eventos.</li>
+<li>Investigación y desarrollo de otras herramientas de seguridad informática.</li>
+<li>Realización de actividades formativas y de motivación.</li>
+<li>Realización de investigaciones acerca de virus.</li>
+<li>Ejecución de estudios relativos a ataques al sistema.</li>
+</ul>
+<p>Estos trabajos proporcionarán los conocimientos que la organización puede utilizar y la información que hay que distribuir antes y durante los incidentes.</p>
+<p>Una vez que el Administrador de seguridad y el equipo de respuestas a incidentes han analizado la incidencia, el Administrador debe delegar la responsabilidad del control de incidentes en el equipo de respuesta que será el responsable de responder a incidentes como virus, gusanos o cualquier otro código dañino, engaños y ataques de personal interno.</p>
+<h3 id="Copias-de-Respaldo-Backups"><a href="#Copias-de-Respaldo-Backups" class="headerlink" title="Copias de Respaldo (Backups)"></a>Copias de Respaldo (Backups)</h3><p>El backup de archivos permite tener disponible e íntegra la información para cuando sucedan los accidentes. Sin un backup es imposible devolver la información al estado anterior al desastre. Es necesario realizar un análisis coste/beneficio para determinar qué información será almacenada, espacios de almacenamiento destinados a tal fin, la forma de realización, las estaciones de trabajo que cubrirá el backup, etc.</p>
+<p>Para una correcta realización y seguridad de backups se deberán tener en cuenta estos puntos:</p>
+<ul>
+<li>Se debe contar con un procedimiento de respaldo de los SO y de la información de usuario para poder reinstalar fácilmente en caso de sufrir un accidente.</li>
+<li>Se debe determinar el medio y las herramientas correctas para realizar las copias, basándose en análisis de espacios, tiempos de lectura/escritura, tipos de backup a realizar, etc.</li>
+<li>El almacenamiento de los backups debe realizarse en locales diferentes de donde reside la información primaria. De este modo se evita la pérdida si el desastre alcanza a todo el edificio o local.</li>
+<li>Se debe verificar, periódicamente la integridad de los respaldos que se están almacenando.</li>
+<li>Se debe contar con un procedimiento para garantizar la integridad física de los respaldos en previsión de robos o destrucción.</li>
+<li>Se debe contar con una política para garantizar la privacidad de la información que se respalda en medios de almacenamiento secundarios.</li>
+<li>Se debe contar con un procedimiento para borrar físicamente la información de los medios de almacenamiento antes de desecharlos.</li>
+</ul>
+<h3 id="Programas-Antivirus"><a href="#Programas-Antivirus" class="headerlink" title="Programas Antivirus"></a>Programas Antivirus</h3><p>Un antivirus es una gran BD con la huella digital de todos los virus conocidos para identificarlos y con las pautas que más contienen los virus. Los fabricantes de antivirus avanzan tecnológicamente en la misma medida que lo hacen los creadores de virus. Esto sirve para combatirlos aunque no par aprevenir la creación e infección de otros nuevos.</p>
+<p>Las funciones presentes en un antivirus son:</p>
+<ul>
+<li>Detección: Se debe poder afirmar la presencia y/o ejecución de un virus en un ordenador. Adicionalmente puede brindar módulos de identificación, erradicación del virus o eliminación de la entidad infectada.</li>
+<li>Identificación de un virus: Existes diversas técnicas para realizar esta acción:<ul>
+<li>Scanning: Técnica que consiste en revisar el código de los archivos (fundamentalmente ejecutables y documentos) en busca de pequeñas porciones de código que puedan pertenecer a un virus almacenados en una BD del antivirus. Su principal ventaja reside en la rápida y exacta que resulta la identificación del virus. Sus desventajas con que brinda una solución a posteriori y es necesario que el virus alcance un grado de dispersión considerable para que llegue a mano de los investigadores y estos lo incorporen a su BD lo que no es una solución definitiva.</li>
+<li>Heurística: Búsqueda de acciones potencialmente dañinas pertenecientes a un virus informático. No identifica con certeza al virus sino que rastrea rutinas de alteración de información y zonas generalmente no controlada por el usuario (Sector de arranque, FAT, etc). Su principal ventaja reside en que es capaz de detectar virus que no han sido agregados a las BD de los antivirus. Su desventaja radica en que puede sospechar de demasiadas cosas y el usuario debe ser medianamente capaz de identificar falsas alarmas.</li>
+</ul>
+</li>
+<li>Comprobadores de Integridad. Controlan la actividad del PC señalando si algún proceso intenta modificar sectores críticos de la misma. Su ventaja residen en la prevención aunque a veces pueden ser vulnerados por los virus y ser desactivados por ellos, haciendo que el usuario se crea protegido, no siendo así.</li>
+</ul>
+<p>Es importante diferenciar los términos “detectar”: determinación de la presencia de un virus e “identificar”: determinación de qué virus fue el detectado. Lo importante es la detección del virus y luego, si es posible su identificación y erradicación.</p>
+<p>MODELO DE UN ANTIVIRUS</p>
+<p>Un antivirus puede estar constituido por dos módulos principales y cada uno de ellos contener otros módulos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/modelo_antivirus.png?w=825" alt=""></p>
+<ul>
+<li><strong>Módulo de Control</strong> : Posee la técnica de verificación de Integridad que posibilita el registro de posibles cambios en las zonas y archivos considerados de riesgo.</li>
+<li><strong>Módulo de Respuesta</strong> : La función de “alarma” se encuentra en todos los antivirus y consiste en detener la ejecución de todos los programas e informar al usuario de la posible existencia de un virus. La mayoría ofrecen la posibilidad de su erradicación si la identificación ha sido positiva.</li>
+</ul>
+<h3 id="Herramientas-de-Seguridad"><a href="#Herramientas-de-Seguridad" class="headerlink" title="Herramientas de Seguridad"></a>Herramientas de Seguridad</h3><p>Cualquier herramienta de seguridad representa un arma de doble filo: de la misma forma que un administrador las utiliza para detectar y solucionar fallos en sus sistemas o en la subred completa, un potencial intruso las puede utilizar para detectar esos mismos fallos y aprovecharlos para atacar los equipos. Herramientas como NESSUS, SAINT o SATAN pasan de ser útiles a ser peligrosas cuando las utilizan crackers que buscan información sobre las vulnerabilidades de un equipo o de una red completa.</p>
+<p>La conveniencia de diseñar y distribuir libremente herramientas que puedan facilitar un ataque es un tema peliagudo; incluso expertos reconocidos como Alec Muffet (autor del adivinador de contraseñas Crack) han recibido enormes críticas por diseñar determinadas herramientas de seguridad para Unix. Tras numerosos debates sobre el tema, ha quedado claro que no se puede basar la seguridad de un sistema en el supuesto desconocimiento de sus problemas por parte de los atacantes: esta política, denominada “Security through obscurity”, se ha demostrado inservible en múltiples ocasiones. Si los administradores no utilizan herramientas de seguridad que muestren las debilidades de los sistemas (para corregirlas), un atacante no va a dudar en utilizar tales herramientas (para explotar las debilidades encontradas).</p>
+<h3 id="Sistemas-de-Proteccion-a-la-Integridad-y-Privacidad-de-la-Informacion"><a href="#Sistemas-de-Proteccion-a-la-Integridad-y-Privacidad-de-la-Informacion" class="headerlink" title="Sistemas de Protección a la Integridad y Privacidad de la Información"></a>Sistemas de Protección a la Integridad y Privacidad de la Información</h3><p>Herramientas que utilizan criptografía para asegurar que la información sólo sea visible para quien tiene autorización. Su aplicación se realiza principalmente en las comunicaciones entre dos entidades. Dentro de este tipo de herramientas se pueden citar Pretty Good Privacy (PGP), Secure Sockets Layer (SSL) y los Certificados Digitales. También protocolos como Message Digest (MD5) o Secure Hash Algorithm (SHA) tratan de asegurar que no ha habido alteraciones indeseadas en la información que se intenta proteger.</p>
+<h2 id="Auditoria-de-Seguridad-Logica"><a href="#Auditoria-de-Seguridad-Logica" class="headerlink" title="Auditoria de Seguridad Lógica"></a>Auditoria de Seguridad Lógica</h2><p>La auditoria consiste en contar con los mecanismos para determinar qué sucede en el sistema, qué hace cada uno y cuando lo hace. Mediante una auditoria de seguridad informática, se pueden identificar los puntos fuertes y débiles de una organización con respecto al manejo de la seguridad de su información y se pueden definir claramente los pasos a seguir para lograr un perfeccionamiento de la misma.</p>
+<p>Ventajas de una auditoria:</p>
+<ul>
+<li>Mejora sustancialmente la eficiencia en la seguridad de la información.</li>
+<li>Minimiza el riesgo de intrusión en sus sistemas, robos, uso indebido o alteración de información, abuso de privilegios o interrupción de los servicios ofrecidos.</li>
+<li>Elimina riesgos innecesarios.</li>
+<li>Posibilita la toma de decisiones sobre la seguridad de sus sistemas basándose en la información más completa.</li>
+<li>Posibilita la definición de responsabilidades bien diferenciadas.</li>
+<li>Brinda protección para toda la organización.</li>
+</ul>
+<p>Premisas fundamentales:</p>
+<ul>
+<li>El nivel de seguridad satisfactorio “ahora”, es mejor que un nivel de seguridad perfecto “a largo plazo”.</li>
+<li>Es imprescindible conocer los propios puntos débiles y evitar riesgos imposibles de cuantificar.</li>
+<li>Realizar y exigir auditorias periódicas mejoran la salud de los sistemas y previenen ataques e incidentes.</li>
+<li>En una organización la seguridad es tan fuerte como el punto más débil de la misma, por lo tanto, interesa concentrarse (en un principio al menos) en estos últimos.</li>
+<li>Un 75% de las agresiones intencionadas son internas a las organizaciones.</li>
+<li>Lo más productivo es concentrarse en amenazas factibles y conocidas.</li>
+</ul>
+<p>Las áreas principales a centrarse son las siguientes:</p>
+<ul>
+<li><strong>Política de seguridad</strong> : Se necesita una política que refleje las expectativas de la organización en materia de seguridad a fin de suministrar administración con dirección y soporte. La política también se puede utilizar como base para el estudio y evaluación en curso.</li>
+<li><strong>Organización de la seguridad</strong> : Sugiere diseñar una estructura de administración dentro de la organización que establezca la responsabilidad de los grupos en ciertas áreas de la seguridad y un proceso para el manejo de respuestas ante incidentes.</li>
+<li><strong>Control y clasificación de los recursos de información</strong> : Necesita un inventario de los recursos de información de la organización y con base en éste conocimiento, debe asegurar que se brinde un nivel adecuado de protección.</li>
+<li><strong>Seguridad del personal</strong> : Establece la necesidad de educar e informar a los empleados sobre lo que se espera de ellos en materia de seguridad y confidencialidad. También determina cómo incide el papel que desempeñan los empleados en materia de seguridad en el funcionamiento general de la compañía. Se debe implantar un plan para reportar los eventuales incidentes.</li>
+<li><strong>Seguridad física y ambiental</strong> : Responde a la necesidad de proteger las áreas, el equipo y los controles generales.</li>
+<li><strong>Manejo de las comunicaciones y las operaciones</strong> : Los objetivos de ésta sección son:<ul>
+<li>Asegurar el funcionamiento correcto y seguro de las instalaciones de proceso de datos.</li>
+<li>Minimizar el riesgo de falla de los sistemas.</li>
+<li>Proteger la integridad del software y la información.</li>
+<li>Conservar la integridad y disponibilidad del procesamiento y la comunicación de la información.</li>
+<li>Garantizar la protección de la información en las redes y de la infraestructura de soporte.</li>
+<li>Evitar daños a los recursos de información e interrupciones en las actividades de la compañía.</li>
+<li>Evitar la pérdida, modificación o uso indebido de la información que intercambian las organizaciones.</li>
+</ul>
+</li>
+<li><strong>Control de acceso</strong> : Establece la importancia de controlar el acceso a la red y los recursos de aplicación para proteger contra los abusos internos e intrusos externos.</li>
+<li><strong>Desarrollo y mantenimiento de los sistemas</strong> : Recuerda que en toda labor de tecnología de la información, se debe implantar y mantener la seguridad mediante controles de seguridad en todas las etapas del proceso.</li>
+<li><strong>Manejo de la continuidad de la empresa</strong> : Aconseja estar preparado para contrarrestar las interrupciones en las actividades de la empresa y para proteger los procesos importantes de la misma en caso de un fallo grave o un suceso fortuito.</li>
+</ul>
+<p>Una auditoria de seguridad lógica debe centrarse en los siguientes aspectos:</p>
+<ul>
+<li>Contraseñas de acceso.</li>
+<li>Control de errores.</li>
+<li>Garantías de una transmisión para que sólo sea recibida por el destinatario. Para esto, regularmente se cambia la ruta de acceso de la información a la red.</li>
+<li>Registros de las actividades de los usuarios en la red.</li>
+<li>Encriptación de la información pertinente.</li>
+<li>Si se evita la importación y exportación de datos.</li>
+<li>Que el sistema pida el nombre de usuario y la contraseña para cada sesión:<ul>
+<li>Que en cada sesión de usuario, se revise que no accede a ningún sistema sin autorización y que si un usuario introduce incorrectamente su clave un número establecido de veces, su cuenta queda deshabilitada.</li>
+<li>Si se obliga a los usuarios a cambiar su contraseña regularmente, y si las contraseñas son mostradas en pantalla cuando se introducen.</li>
+<li>Si por cada usuario, se da información sobre su última conexión a fin de evitar suplantaciones.</li>
+</ul>
+</li>
+<li>Si el software o hardware con acceso libre está inhabilitado.</li>
+<li>Generación de estadísticas de las tasas de errores y transmisión.</li>
+<li>Creación de protocolos con detección de errores.</li>
+<li>Mensajes lógicos de transmisión que han de llevar origen, fecha, hora y receptor.</li>
+<li>Software de comunicación, que ha de tener procedimientos correctivos y de control ante mensajes duplicados, fuera de orden, perdidos o retrasados.</li>
+<li>Datos importantes que sólo pueden ser impresos en una impresora especificada y ser vistos desde un terminal debidamente autorizado.</li>
+<li>Análisis del riesgo de aplicaciones en los procesos.</li>
+<li>Análisis de la conveniencia de cifrar los canales de transmisión entre diferentes organizaciones.</li>
+<li>Cifrados de los datos que viajan por internet.</li>
+<li>Si en la LAN hay equipos con módem entonces se debe revisar el control de seguridad asociado para impedir el acceso de equipos fuera de la red.</li>
+<li>Existencia de políticas que prohíben la instalación de programas o equipos personales en la red.</li>
+<li>Inhabilitación de los accesos a servidores remotos.</li>
+<li>Si la propia empresa genera ataques propios para probar la solidez de la red y encontrar posibles fallos en cada una de las siguientes facetas:<ul>
+<li>Servidores = Desde dentro del servidor y de la red interna.</li>
+<li>Servidores web.</li>
+<li>Intranet = Desde dentro.</li>
+<li>Firewall = Desde dentro.</li>
+<li>Accesos del exterior y/o Internet.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357351063/TICB3-Seguridad-Logica" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t09/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T09
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t05/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T05</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
