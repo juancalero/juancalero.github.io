@@ -2,303 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t16/</loc>
+    <loc>http://localhost:4000/tags/index.html</loc>
     
-    <lastmod>2019-01-18T09:56:42.205Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t19/</loc>
-    
-    <lastmod>2019-01-18T09:55:16.217Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t01/</loc>
-    
-    <lastmod>2019-01-18T09:54:46.975Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-index/</loc>
-    
-    <lastmod>2019-01-18T09:54:16.912Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t12/</loc>
-    
-    <lastmod>2019-01-18T09:36:24.804Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t09/</loc>
-    
-    <lastmod>2019-01-18T09:28:48.279Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t08/</loc>
-    
-    <lastmod>2019-01-18T09:28:44.287Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t07/</loc>
-    
-    <lastmod>2019-01-18T09:28:40.136Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t06/</loc>
-    
-    <lastmod>2019-01-18T09:28:37.191Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t05/</loc>
-    
-    <lastmod>2019-01-18T09:28:33.828Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t04/</loc>
-    
-    <lastmod>2019-01-18T09:28:29.279Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t03/</loc>
-    
-    <lastmod>2019-01-18T09:28:25.521Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t02/</loc>
-    
-    <lastmod>2019-01-18T09:28:00.735Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t19/</loc>
-    
-    <lastmod>2019-01-18T09:15:04.708Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t18/</loc>
-    
-    <lastmod>2019-01-18T09:14:54.955Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t13/</loc>
-    
-    <lastmod>2019-01-18T09:14:45.357Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t12/</loc>
-    
-    <lastmod>2019-01-18T09:14:38.596Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t11/</loc>
-    
-    <lastmod>2019-01-18T09:14:31.452Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t09/</loc>
-    
-    <lastmod>2019-01-18T09:14:24.068Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t04/</loc>
-    
-    <lastmod>2019-01-18T09:14:16.988Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-t03/</loc>
-    
-    <lastmod>2019-01-18T09:14:10.366Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t11/</loc>
-    
-    <lastmod>2019-01-18T09:13:43.956Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t09/</loc>
-    
-    <lastmod>2019-01-18T09:13:36.125Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t08/</loc>
-    
-    <lastmod>2019-01-18T09:13:28.006Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t07/</loc>
-    
-    <lastmod>2019-01-18T09:13:19.742Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t06/</loc>
-    
-    <lastmod>2019-01-18T09:13:11.740Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t05/</loc>
-    
-    <lastmod>2019-01-18T09:13:02.583Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t04/</loc>
-    
-    <lastmod>2019-01-18T09:12:53.677Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t03/</loc>
-    
-    <lastmod>2019-01-18T09:12:44.190Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t02/</loc>
-    
-    <lastmod>2019-01-18T09:12:36.078Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-t01/</loc>
-    
-    <lastmod>2019-01-18T09:11:47.846Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B3/b3-index/</loc>
-    
-    <lastmod>2019-01-18T08:46:30.943Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B4/b4-index/</loc>
-    
-    <lastmod>2019-01-18T08:34:56.301Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t15/</loc>
-    
-    <lastmod>2019-01-18T08:00:22.881Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t13/</loc>
-    
-    <lastmod>2019-01-18T08:00:18.129Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t11/</loc>
-    
-    <lastmod>2019-01-18T08:00:10.417Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B2/b2-t10/</loc>
-    
-    <lastmod>2019-01-18T08:00:04.578Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B1/b1-index/</loc>
-    
-    <lastmod>2019-01-17T10:12:00.386Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/B0/index/</loc>
-    
-    <lastmod>2019-01-17T10:10:54.927Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://localhost:4000/wiki/Web/index/</loc>
-    
-    <lastmod>2019-01-17T10:10:25.815Z</lastmod>
+    <lastmod>2019-01-18T10:45:16.907Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://localhost:4000/categories/index.html</loc>
     
-    <lastmod>2019-01-17T07:40:03.157Z</lastmod>
+    <lastmod>2019-01-18T10:45:16.904Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://localhost:4000/about/index.html</loc>
     
-    <lastmod>2019-01-17T07:40:03.146Z</lastmod>
+    <lastmod>2019-01-18T10:45:16.902Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://localhost:4000/tags/index.html</loc>
+    <loc>http://localhost:4000/wiki/Web/index/</loc>
     
-    <lastmod>2019-01-17T07:40:03.143Z</lastmod>
+    <lastmod>2019-01-18T10:45:16.900Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t19/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t18/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.895Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t13/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.893Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t12/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t11/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.888Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t09/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.885Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t04/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.883Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-t03/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.881Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B4/b4-index/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.879Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t19/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.876Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t11/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.874Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t09/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.871Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t08/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.869Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t07/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.867Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t06/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.864Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t05/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.617Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t04/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.614Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t03/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.612Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t02/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.609Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-t01/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.607Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B3/b3-index/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.605Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t16/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.603Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t15/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.601Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t13/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.599Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t12/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.597Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t11/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.595Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t10/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.593Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t09/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.590Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t08/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.588Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t07/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.586Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t06/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.585Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t05/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.579Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t04/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.577Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t03/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t02/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.573Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-t01/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.571Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B2/b2-index/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B1/b1-index/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:4000/wiki/B0/index/</loc>
+    
+    <lastmod>2019-01-18T10:45:16.564Z</lastmod>
     
   </url>
   
