@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B2-T11 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B2-T11">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Auditoría Informática: objetivos, alcance y metodología. Técnicas y herramientas. Normas y estándares. Auditoría del ENS y de protección de datos. Auditoría de seguridad física.Auditoria InformáticaLa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B2-T11">
+<meta property="og:url" content="http://localhost:4000/wiki/B2/b2-t11/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Auditoría Informática: objetivos, alcance y metodología. Técnicas y herramientas. Normas y estándares. Auditoría del ENS y de protección de datos. Auditoría de seguridad física.Auditoria InformáticaLa">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/diagrama_contenido_cobit.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/dominios_cobit.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/01/cubo_cobit.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T08:00:10.417Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B2-T11">
+<meta name="twitter:description" content="Auditoría Informática: objetivos, alcance y metodología. Técnicas y herramientas. Normas y estándares. Auditoría del ENS y de protección de datos. Auditoría de seguridad física.Auditoria InformáticaLa">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/01/diagrama_contenido_cobit.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file active"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B2/b2-t11" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B2/">B2</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B2/b2-t11/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B2/b2-t11.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B2/b2-t11.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B2/b2-t11.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B2-T11
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Auditoria-Informatica-objetivos-alcance-y-metodologia-Tecnicas-y-herramientas-Normas-y-estandares-Auditoria-del-ENS-y-de-proteccion-de-datos-Auditoria-de-seguridad-fisica"><a href="#Auditoria-Informatica-objetivos-alcance-y-metodologia-Tecnicas-y-herramientas-Normas-y-estandares-Auditoria-del-ENS-y-de-proteccion-de-datos-Auditoria-de-seguridad-fisica" class="headerlink" title="Auditoría Informática: objetivos, alcance y metodología. Técnicas y herramientas. Normas y estándares. Auditoría del ENS y de protección de datos. Auditoría de seguridad física."></a>Auditoría Informática: objetivos, alcance y metodología. Técnicas y herramientas. Normas y estándares. Auditoría del ENS y de protección de datos. Auditoría de seguridad física.</h1><h2 id="Auditoria-Informatica"><a href="#Auditoria-Informatica" class="headerlink" title="Auditoria Informática"></a>Auditoria Informática</h2><p>La auditoria informática es un proceso llevado a cabo por profesionales especialmente capacitados para el efecto, y que consiste en recoger, agrupar y evaluar evidencias para determinar si un sistema de información salvaguarda el activo empresarial, mantiene la integridad de los datos, lleva a cabo eficazmente los fines de la organización, utiliza eficientemente los recursos, y cumple con las leyes y regulaciones establecidas. Permiten detectar de forma sistemática el uso de los recursos y los flujos de información dentro de una organización y determinar qué información es crítica para el cumplimiento de su misión y objetivos, identificando necesidades, duplicidades, costes, valor y barreras, que obstaculizan flujos de información eficientes.</p>
+<p>La auditoria informática es el proceso de recoger, agrupar y evaluar evidencias para determinar si un sistema de información salvaguarda el activo empresarial, mantiene la integridad de los datos, lleva a cabo eficazmente los fines de la organización y utiliza eficientemente los recursos.</p>
+<p>Auditar consiste principalmente en estudiar los mecanismos de control que están implantados en una empresa u organización, determinando si los mismos son adecuados y cumplen unos determinados objetivos o estrategias, estableciendo los cambios que se deberían realizar para la consecución de los mismos. Los mecanismos de control pueden ser directivos, preventivos, de detección, correctivos o de recuperación ante una contingencia.</p>
+<p>Los objetivos de la auditoria Informática son:</p>
+<ul>
+<li>El control de la función informática.</li>
+<li>El análisis de la eficiencia de los Sistemas Informáticos.</li>
+<li>La verificación del cumplimiento de la Normativa en este ámbito.</li>
+<li>La revisión de la eficaz gestión de los recursos informáticos.</li>
+</ul>
+<p>La auditoria informática sirve para mejorar ciertas características en la empresa como:</p>
+<ul>
+<li>Desempeño</li>
+<li>Fiabilidad</li>
+<li>Eficacia</li>
+<li>Rentabilidad</li>
+<li>Seguridad</li>
+<li>Privacidad</li>
+</ul>
+<p>Generalmente se puede desarrollar en alguna o combinación de las siguientes áreas:</p>
+<ul>
+<li>Gobierno corporativo</li>
+<li>Administración del Ciclo de vida de los sistemas</li>
+<li>Servicio de Entrega y Soporte</li>
+<li>Protección y Seguridad</li>
+<li>Planes de continuidad y Recuperación de desastres</li>
+</ul>
+<p>La necesidad de contar con lineamientos y herramientas estándar para el ejercicio de la auditoria informática ha promovido la creación y desarrollo de mejores prácticas como <strong>COBIT</strong> , <strong>COSO</strong> e <strong>ITIL</strong> .</p>
+<p>Actualmente la certificación de ISACA para ser CISA <em>Certified Information Systems Auditor</em> es una de las más reconocidas y avaladas por los estándares internacionales ya que el proceso de selección consta de un examen inicial bastante extenso y la necesidad de mantenerse actualizado acumulando horas (puntos) para no perder la certificación.</p>
+<h3 id="Tipos-de-Auditoria-Informatica"><a href="#Tipos-de-Auditoria-Informatica" class="headerlink" title="Tipos de Auditoria Informática"></a>Tipos de Auditoria Informática</h3><p>Dentro de la auditoria informática destacan los siguientes tipos (entre otros):</p>
+<ul>
+<li><strong>Auditoria de la gestión</strong> : La contratación de bienes y servicios, documentación de los programas, etc.</li>
+<li><strong>Auditoria legal del Reglamento de Protección de Datos</strong> : Cumplimiento legal de las medidas de seguridad exigidas por el Reglamento de desarrollo de la Ley Orgánica de Protección de Datos.</li>
+<li><strong>Auditoria de los datos</strong> : Clasificación de los datos, estudio de las aplicaciones y análisis de los flujogramas.</li>
+<li><strong>Auditoria de las bases de datos</strong> : Controles de acceso, de actualización, de integridad y calidad de los datos.</li>
+<li><strong>Auditoria de la seguridad</strong> : Referidos a datos e información verificando disponibilidad, integridad, confidencialidad, autenticación y no repudio.</li>
+<li><strong>Auditoria de la seguridad física</strong> : Referido a la ubicación de la organización, evitando ubicaciones de riesgo, y en algunos casos no revelando la situación física de esta. También está referida a las protecciones externas (arcos de seguridad, CCTV, vigilantes, etc) y protecciones del entorno.</li>
+<li><strong>Auditoria de la seguridad lógica</strong> : Comprende los métodos de autenticación de los sistemas de información.</li>
+<li><strong>Auditoria de las comunicaciones</strong> : Se refiere a la auditoria de los procesos de autenticación en los sistemas de comunicación.</li>
+<li><strong>Auditoria de la seguridad en producción</strong> : Frente a errores, accidentes y fraudes.</li>
+</ul>
+<h3 id="Principales-pruebas-y-herramientas-para-efectuar-una-auditoria-informatica"><a href="#Principales-pruebas-y-herramientas-para-efectuar-una-auditoria-informatica" class="headerlink" title="Principales pruebas y herramientas para efectuar una auditoria informática"></a>Principales pruebas y herramientas para efectuar una auditoria informática</h3><p>En la realización de una auditoria informática el auditor puede realizar las siguientes pruebas:</p>
+<ul>
+<li><strong>Pruebas sustantivas</strong> : Verifican el grado de confiabilidad del SI del organismo. Se suelen obtener mediante observación, cálculos, muestreos, entrevistas, técnicas de examen analítico, revisiones y conciliaciones. Verifican asimismo la exactitud, integridad y validez de la información.</li>
+<li><strong>Pruebas de cumplimiento</strong> : Verifican el grado de cumplimiento de lo revelado mediante el análisis de la muestra. Proporciona evidencias de que los controles claves existen y que son aplicables efectiva y uniformemente.</li>
+</ul>
+<p>Las principales herramientas de las que dispone un auditor informáticos son:</p>
+<ul>
+<li><strong>Observación</strong></li>
+<li><strong>Realización de cuetionarios</strong></li>
+<li><strong>Entrevistas a auditados y no auditados</strong></li>
+<li><strong>Muestreo estadístico (Trazas y/o huellas)</strong></li>
+<li><strong>Flujogramas</strong></li>
+<li><strong>Listas de chequeo (checklist)</strong></li>
+<li><strong>Mapas conceptuales</strong></li>
+<li><strong>Inventario</strong></li>
+</ul>
+<h3 id="Fases-Auditoria-Informatica"><a href="#Fases-Auditoria-Informatica" class="headerlink" title="Fases Auditoria Informática"></a>Fases Auditoria Informática</h3><ul>
+<li>Fase I: Conocimientos del Sistema<ul>
+<li>Aspectos Legales y Políticas Internas</li>
+<li>Características del Sistema Operativo</li>
+<li>Características de la aplicación de computadora</li>
+</ul>
+</li>
+<li>Fase II: Análisis de transacciones y recursos<ul>
+<li>Definición de transacciones</li>
+<li>Análisis de las transacciones</li>
+<li>Análisis de los recursos</li>
+<li>Relación entre transacciones y recursos</li>
+</ul>
+</li>
+<li>Fase III: Análisis de riesgos y amenazas<ul>
+<li>Identificación de riesgos</li>
+<li>Identificación de amenazas</li>
+<li>Relación entre recursos/amenazas/riesgos</li>
+</ul>
+</li>
+<li>Fase IV: Análisis de controles<ul>
+<li>Codificación de controles</li>
+<li>Relación entre controles</li>
+<li>Análisis de cobertura de los controles requeridos</li>
+</ul>
+</li>
+<li>Fase V: Evaluación de controles<ul>
+<li>Objetivos de la evaluación</li>
+<li>Plan de pruebas de los controles</li>
+<li>Pruebas de controles</li>
+<li>Análisis de resultados de las pruebas</li>
+</ul>
+</li>
+<li>Fase VI: El informe de auditoria<ul>
+<li>Informe detallado de recomendaciones</li>
+<li>Evaluación de las respuestas</li>
+<li>Informe resumen para la alta gerencia</li>
+</ul>
+</li>
+<li>Fase VII: Seguimiento de las Recomendaciones<ul>
+<li>Informes de seguimiento</li>
+<li>Evaluación de los controles implantados</li>
+</ul>
+</li>
+</ul>
+<h2 id="Normas-tecnicas-y-procedimientos-de-auditoria-en-informatica"><a href="#Normas-tecnicas-y-procedimientos-de-auditoria-en-informatica" class="headerlink" title="Normas, técnicas y procedimientos de auditoria en informática"></a>Normas, técnicas y procedimientos de auditoria en informática</h2><p>El desarrollo de una auditoria se basa en la aplicación de normas, técnicas y procedimientos de auditoria.</p>
+<p>Es fundamental mencionar que para el auditor en informática conocer los productos de software que han sido creados para apoyar su función aparte de los componentes de la propia computadora resulta esencial, esto por razones económicas y para facilitar el manejo de la información.</p>
+<p>El auditor desempeña sus labores mediante la aplicación de una serie de conocimientos especializados que vienen a formar el cuerpo técnico de su actividad. El auditor adquiere responsabilidades, no solamente con la persona que directamente contratan sus servicios, sino con un número de personas desconocidas para él que van a utilizar el resultado de su trabajo como base para tomar decisiones.</p>
+<p>La auditoria no es una actividad meramente mecánica, que implique la aplicación de ciertos procedimientos cuyos resultados, una vez llevados a cabo son de carácter indudable. La auditoria requiere el ejercicio de un juicio profesional, sólido, maduro, para juzgar los procedimientos que deben seguirse y estimar los resultados obtenidos.</p>
+<h3 id="Normas"><a href="#Normas" class="headerlink" title="Normas"></a>Normas</h3><p>Las normas de auditoria son los requisitos mínimos de calidad relativos a la personalidad del auditor, al trabajo que desempeña y a la información que rinde como resultado de este trabajo.</p>
+<p>Las normas de auditoria se clasifican en:</p>
+<ul>
+<li><strong>Normas personales</strong> : son cualidades que el auditor debe tener para ejercer sin dolo una auditoria, basados en sus conocimientos profesionales así como en un entrenamiento técnico, que le permita ser imparcial a la hora de dar sus sugerencias.</li>
+<li><strong>Normas de ejecución del trabajo</strong> : son la planificación de los métodos y procedimientos, tanto como papeles de trabajo a aplicar dentro de la auditoria.</li>
+<li><strong>Normas de información</strong> : son el resultado que el auditor debe entregar a los interesados para que se den cuenta de su trabajo, también es conocido como informe o dictamen.</li>
+</ul>
+<h3 id="Tecnicas"><a href="#Tecnicas" class="headerlink" title="Técnicas"></a>Técnicas</h3><p>Se define a las técnicas de auditoria como “los métodos prácticos de investigación y prueba que utiliza el auditor para obtener la evidencia necesaria que fundamente sus opiniones y conclusiones, su empleo se basa en su criterio o juicio, según las circunstancias”.</p>
+<p>Al aplicar su conocimiento y experiencia el auditor, podrá conocer los datos de la empresa u organización a ser auditada, que pudieran necesitar una mayor atención.</p>
+<p>Las técnicas procedimientos están estrechamente relacionados, si las técnicas no son elegidas adecuadamente, la auditoria no alcanzará las normas aceptadas de ejecución, por lo cual las técnicas así como los procedimiento de auditoria tienen una gran importancia para el auditor.</p>
+<p>Según el IMCP en su libro <em>Normas y procedimientos de auditoria</em> las técnicas se clasifican generalmente con base en la acción que se va a efectuar, estas acciones pueden ser oculares, verbales, por escrito, por revisión del contenido de documentos y por examen físico.</p>
+<p>Siguiendo esta clasificación las técnicas de auditoria se agrupan específicamente de la siguiente manera:</p>
+<ul>
+<li>Estudio General</li>
+<li>Análisis</li>
+<li>Inspección</li>
+<li>Confirmación</li>
+<li>Investigación</li>
+<li>Declaración</li>
+<li>Certificación</li>
+<li>Observación</li>
+<li>Cálculo</li>
+</ul>
+<h3 id="Procedimientos"><a href="#Procedimientos" class="headerlink" title="Procedimientos"></a>Procedimientos</h3><p>Al conjunto de técnicas de investigación aplicables a un grupo de hechos o circunstancias que nos sirven para fundamentar la opinión del auditor dentro de una auditoria, se les dan el nombre de procedimientos de auditoria informática.</p>
+<p>La combinación de dos o más procedimientos, derivan en programas de auditoria, y al conjunto de programas de auditoria se le denomina plan de auditoria, el cual servirá al auditor para llevar una estrategia y organización de la propia auditoria.</p>
+<p>El auditor no puede obtener el conocimiento que necesita para sustentar su opinión en una sola prueba, es necesario examinar los hechos, mediante varias técnicas de aplicación simultánea.</p>
+<p>En General los procedimientos de auditoria permiten:</p>
+<ul>
+<li>Obtener conocimientos del control interno.</li>
+<li>Analizar las características del control interno.</li>
+<li>Verificar los resultados de control interno.</li>
+<li>Fundamentar conclusiones de la auditoria.</li>
+</ul>
+<p>Por esta razón el auditor deberá aplicar su experiencia y decidir cual técnica o procedimiento de auditoria serán los más indicados para obtener su opinión.</p>
+<p><strong>Análisis de datos</strong></p>
+<p>Dentro de este trabajo, desarrollaremos diversos tipos de técnicas y procedimientos de auditoria, de los cuales destacan el análisis de datos, ya que para las organizaciones el conjunto de datos o información son de tal importancia que es necesario verificarlos y comprobarlos, así también tiene la misma importancia para el auditor ya que debe de utilizar diversas técnicas para el análisis de los datos, los cuales se describen a continuación:</p>
+<ul>
+<li><strong>Comparación de programas</strong> : esta técnica se emplea para efectuar una comparación de código (fuente, objeto o comandos de proceso) entre la versión de un programa en ejecución y la versión de un programa piloto que ha sido modificado en forma indebida, para encontrar diferencias.</li>
+<li><strong>Mapeo y rastreo de programas</strong> : esta técnica emplea un software especializado que permite analizar los programas en ejecución, indicando el número de veces que cada línea de código es procesada y las de las variables de memoria que estuvieron presentes.</li>
+<li><strong>Análisis de código de programas</strong> : se emplea para analizar los programas de una aplicación. El análisis puede efectuarse en forma manual (en cuyo caso sólo se podría analizar el código ejecutable).</li>
+<li><strong>Datos de prueba</strong> : se emplea para verificar que los procedimientos de control incluidos en los programas de una aplicación funcionen correctamente. Los datos de prueba consisten en la preparación de una serie de transacciones que contienen tanto datos correctos como datos erróneos predeterminados.</li>
+<li><strong>Datos de prueba integrados</strong> : técnica muy similar a la anterior, con la diferencia de que en ésta se debe crear una entidad falsa dentro de los sistemas de información.</li>
+<li><strong>Análisis de bitácoras</strong> : existen varios tipos de bitácoras que pueden ser analizadas por el auditor, ya sea en forma manual o por medio de programas especializados, tales como bitácoras de fallas del equipo, bitácoras de accesos no autorizados, bitácoras de uso de recursos, bitácoras de procesos ejecutados.</li>
+<li><strong>Simulación paralela</strong> : técnica muy utilizada que consiste en desarrollar programas o módulos que simulen a los programas de un sistema en producción. El objetivo es procesar los dos programas o módulos de forma paralela e identificar diferencias entre los resultados de ambos.</li>
+</ul>
+<p><strong>Monitoreo</strong></p>
+<p>Dentro de las organizaciones todos los procesos necesitan ser evaluados a través del tiempo para verificar su calidad en cuanto a las necesidades de control, integridad y confidencialidad, este es precisamente el ámbito de esta técnica, a continuación se muestran los procesos de monitoreo:</p>
+<ul>
+<li>M1 Monitoreo del proceso.</li>
+<li>M2 Evaluar lo adecuado del control Interno.</li>
+<li>M3 Obtención de aseguramiento independiente.</li>
+<li>M4 Proveer auditoria independiente.</li>
+</ul>
+<p><strong>Análisis de bitácoras</strong></p>
+<p>Hoy en día los sistema de cómputo se encuentran expuestos a distintas amenazas, las vulnerabilidades de los sistemas aumentan, al mismo tiempo que se hacen más complejos, el número de ataques también aumenta, por lo anterior, las organizaciones deben reconocer la importancia y utilidad de la información contenida en las bitácoras de los sistemas de computo así como mostrar algunas herramientas que ayuden a automatizar el proceso de análisis de las mismas.</p>
+<p>El crecimiento de Internet enfatiza esta problemática, los sistemas de cómputo generan una gran cantidad de información, conocidas como bitácoras o archivos logs, que pueden ser de gran ayuda ante un incidente de seguridad, así como para el auditor.</p>
+<p>Una bitácora puede registrar mucha información acerca de eventos relacionados con el sistema que la genera, los cuales pueden ser:</p>
+<ul>
+<li>Fecha y hora</li>
+<li>Direcciones IP origen y destino</li>
+<li>Dirección IP que genera la bitácora</li>
+<li>Usuarios</li>
+<li>Errores</li>
+</ul>
+<p>La importancia de las bitácoras es la de recuperar información ante incidentes de seguridad, detección de comportamiento inusual, información para resolver problemas, evidencia legal, es de gran ayuda en las tareas de cómputo forense.</p>
+<p>Las Herramientas de análisis de bitácoras más conocidas son las siguientes:</p>
+<ul>
+<li>Para UNIX: Logcheck, Swatch</li>
+<li>Para Windows: LogAgent</li>
+</ul>
+<p>Las bitácoras contienen información crítica, es por ello que deben ser analizadas, ya que están teniendo mucha relevancia, como evidencia en aspectos legales.</p>
+<p>El uso de herramientas automatizadas es de mucha utilidad para el análisis de bitácoras, es importante registrar todas las bitácoras necesarias de todos los sistemas de cómputo para mantener un control de las mismas.</p>
+<p><strong>Técnicas de auditoria asistida por computadora</strong></p>
+<p>La utilización de equipos de computación en las organizaciones, ha tenido una repercusión importante en el trabajo del auditor, no sólo en lo que se refiere a los sistemas de información, sino también al uso de las computadoras en la auditoria.</p>
+<p>Al llevar a cabo auditorias donde existen sistemas computarizados, el auditor se enfrenta a muchos problemas de muy diversa condición, uno de ellos, es la revisión de los procedimientos administrativos de control interno establecidos en la empresa que es auditada.</p>
+<p>La utilización de paquetes de programas generalizados de auditoria ayuda en gran medida a la realización de pruebas de auditoria, a la elaboración de evidencias plasmadas en los papeles de trabajo.</p>
+<p>Según las técnicas de auditoria Asistidas por Computadora (CAAT) son la utilización de determinados paquetes de programas que actúan sobre los datos, llevando a cabo con más frecuencia los trabajos siguientes:</p>
+<ul>
+<li>Selección e impresión de muestras de auditorias sobre bases estadísticas o no estadísticas, a lo que agregamos, sobre la base de los conocimientos adquiridos por los auditores.</li>
+<li>Verificación matemática de sumas, multiplicaciones y otros cálculos en los archivos del sistema auditado.</li>
+<li>Realización de funciones de revisión analítica, al establecer comparaciones, calcular razones, identificar fluctuaciones y llevar a cabo cálculos de regresión múltiple.</li>
+<li>Manipulación de la información al calcular subtotales, sumar y clasificar la información, volver a ordenar en serie la información, etc.</li>
+<li>Examen de registros de acuerdo con los criterios especificados.</li>
+<li>Búsqueda de alguna información en particular, la cual cumpla ciertos criterios, que se encuentra dentro de las bases de datos del sistema que se audita.</li>
+</ul>
+<p><strong>Evaluación del control interno</strong></p>
+<p>En un ambiente de evolución permanente, determinado por las actuales tendencias mundiales, las cuales se centran en el plano económico soportadas por la evolución tecnológica, surge la necesidad de que la función de auditoria pretenda el mejoramiento de su gestión.</p>
+<p>La práctica de nuevas técnicas para evaluar el control interno a través de las cuales, la función de auditoria informática pretende mejorar la efectividad de su función y con ello ofrecer servicios más eficientes y con un valor agregado.</p>
+<p>La evolución de la teoría del control interno se definió en base a los principios de los controles como mecanismos o prácticas para prevenir, identificar actividades no autorizadas, más tarde se incluyó el concepto de lograr que las cosas se hagan; la corriente actual define al control como cualquier esfuerzo que se realice para aumentar las posibilidades de que se logren los objetivos de la organización.</p>
+<p>En este proceso evolutivo se considera actualmente, y en muchas organizaciones que el director de finanzas o al director de auditoria como los responsables principales del correcto diseño y adecuado funcionamiento de los controles internos.</p>
+<p><strong>Benchmarking</strong></p>
+<p>Las empresas u organizaciones deben buscar formas o fórmulas que las dirijan hacia una mayor calidad, para poder ser competitivos, una de estas herramientas o fórmulas es el Benchmarking.</p>
+<p>Benchmarking es el proceso continuo de medir productos, servicios y prácticas contra los competidores o aquellas compañías reconocidas como líderes en la industria.</p>
+<p>Esta definición presenta aspectos importantes tales como el concepto de continuidad, ya que benchmarking no sólo es un proceso que se hace una vez y se olvida, sino que es un proceso continuo y constante.</p>
+<p>Según la definición anterior podemos deducir que se puede aplicar benchmarking a todas las facetas de las organizaciones, y finalmente la definición implica que el benchmarking se debe dirigir hacia aquellas organizaciones y funciones de negocios dentro de las organizaciones que son reconocidas como las mejores.</p>
+<p>Otra definición puede ser: “benchmarking es un proceso sistemático y continuo para comparar nuestra propia eficiencia en términos de productividad, calidad y prácticas con aquellas compañías y organizaciones que representan la excelencia.</p>
+<p>Dentro del benchmarking existen los siguientes tipos:</p>
+<ul>
+<li>Benchmarking interno</li>
+<li>Benchmarking competitivo</li>
+<li>Benchmarking genérico</li>
+</ul>
+<h2 id="Auditoria-Informatica-como-objeto-de-estudio"><a href="#Auditoria-Informatica-como-objeto-de-estudio" class="headerlink" title="Auditoria Informática como objeto de estudio"></a>Auditoria Informática como objeto de estudio</h2><p>La auditoría en informática es la revisión y la evaluación de los controles, sistemas, procedimientos de informática; de los equipos de cómputo, su utilización, eficiencia y seguridad, de la organización que participan en el procesamiento de la información, a fin de que por medio del señalamiento de cursos alternativos se logre una utilización más eficiente y segura de la información que servirá para una adecuada toma de decisiones. Los factores que pueden influir en una organización a través del control y la auditoría en informática,son:</p>
+<ul>
+<li>Necesidad de controlar el uso evolucionado de las computadoras.</li>
+<li>Controlar el uso de la computadora, que cada día se vuelve más importante y costosa.</li>
+<li>Altos costos que producen los errores en una organización.</li>
+<li>Abuzo en las computadoras.</li>
+<li>Posibilidad de pérdida de capacidades de procesamiento de datos.</li>
+<li>Posibilidad de decisiones incorrectas.</li>
+<li>Valor del hardware, software y personal.</li>
+<li>Necesidad de mantener la privacidad individual.</li>
+<li>Posibilidad de pérdida de información o de mal uso de la misma.</li>
+<li>Necesidad de mantener la privacidad de la organización.</li>
+</ul>
+<p>La información es un factor importante y cada día cobra más valor para una empresa u organización para la continuidad de las operaciones, ya que la imagen de su ambiente depende de la situación actual, su desarrollo y competitividad dependen del ambiente pasado y futuro, ya que tomar una decisión incorrecta mediante datos erróneos proporcionados por los sistemas trae como consecuencia efectos significativos que afectan directamente a la organización.</p>
+<h3 id="Objetivo-fundamental-de-la-auditoria-Informatica"><a href="#Objetivo-fundamental-de-la-auditoria-Informatica" class="headerlink" title="Objetivo fundamental de la auditoria Informática"></a>Objetivo fundamental de la auditoria Informática</h3><p>La operatividad en una empresa es el punto más importante, es encargada de vigilar el funcionamiento de mínimos consistentes de la organización y las máquinas a nivel global como parcial. La auditoria se debe realizar en el momento en que la maquinaria informática está en funcionamiento, con el fin de identificar falencias que obstruyan la operatividad de las mismas, con el objeto de corregir o buscar alternativas de solución a tiempo, sin tener que parar el trabajo.</p>
+<p>La operatividad de los sistemas ha de constituir entonces la principal preocupación del auditor informático. Para conseguirla hay que acudir a la realización de Controles Técnicos Generales de Operatividad y Controles Técnicos Específicos de Operatividad, previos a cualquier actividad de aquel.</p>
+<p>Los Controles Técnicos Generales son importantes en las instalaciones de empresas grandes, ya que se realizan para verificar la compatibilidad de funcionamiento simultáneo del SO y el software de base con todos los subsistemas existentes, como también la compatibilidad del hardware y del software instalado. En una empresa existen diferentes entornos de trabajo que conlleva a la contratación de productos de software básico, así como software especial para algunos departamentos, con el riesgo de abonar más de una vez el mismo producto o desaprovechar el software instalado, así mismo puede existir software desarrollado por personal de sistemas de la misma empresa que hagan mal uso y que no se aprovechen todos los recursos de este, sobre todo cuando los diversos equipos están ubicados en Centros de Proceso de datos geográficamente alejados. Lo negativo de esta situación es que puede producir la inoperatividad del conjunto. Cada Centro de Proceso de Datos tal vez sea operativo trabajando independientemente, pero no será posible la interconexión e intercomunicación de todos los centros de proceso de datos si no existen productos comunes y compatibles.</p>
+<p>Los controles técnicos específicos, menos evidentes, son también necesarios para lograr la operatividad de los sistemas. Es decir por más pequeña que sea la aplicación que se deba ejecutar, esta debe funcionar al máximo, evitando así la inoperatividad, bien sea en hardware como en software.</p>
+<p>Una vez conseguida la operatividad de los sistemas, el segundo objetivo de la auditoria es la verificación de la observación de las normas teóricamente existentes en el departamento de informática y su coherencia con las del resto de la empresa. Para ello, habrán de revisarse sucesivamente y en este orden:</p>
+<ol>
+<li>Las normas generales de la instalación informática. Se realiza una revisión inicial sencilla, verificando la aplicación de las normas pero también registrando las áreas que no cumplan o que no las apliquen, sin olvidar que esta normativa no está en contradicción con alguna norma no informática de la empresa.</li>
+<li>Los procedimientos generales informáticos. Se verificará su existencia, al menos en los sectores más importantes. Por ejemplo, la recepción definitiva de las máquinas deberá estar firmada por la persona responsable de este cargo. Tampoco el alta de una nueva aplicación podría producirse si no existieran los Procedimientos de Backup y recuperación correspondientes.</li>
+<li>Los procedimientos específicos informáticos. Igualmente, se revisara su existencia en las áreas fundamentales. Así, explotación no debería explotar una aplicación sin haber exigido a desarrollo la pertinente documentación. Del mismo modo, deberá comprobarse que los procedimientos específicos no se opongan a los procedimientos generales. En todos los casos anteriores, a su vez, deberá verificarse que no existe contradicción alguna con la normativa y los procedimientos generales de la propia empresa, a los que la informática debe estar sometida.</li>
+</ol>
+<h3 id="Caracteristicas-de-la-auditoria-informatica"><a href="#Caracteristicas-de-la-auditoria-informatica" class="headerlink" title="Características de la auditoria informática"></a>Características de la auditoria informática</h3><p>La información de la empresa y para la empresa, siempre importante, se ha convertido en un activo real de la misma, como sus Stocks o materias primas si las hay. Por ende, han de realizarse inversiones informáticas, materia de la que se ocupa la auditoria de Inversión informática.</p>
+<p>Del mismo modo, los sistemas informáticos han de protegerse de modo global y particular: a ello se debe la existencia de la auditoria de seguridad informática en general, o a la auditoria de seguridad de alguna de sus áreas, como pudieran ser desarrollo o técnicas de sistemas.</p>
+<p>Cuando se producen cambios estructurales en la informática, se reorganiza de alguna forma su función: se está en el campo de la auditoria de organización informática.</p>
+<p>Estos tres tipos de auditorias engloban a las actividades auditoras que se realizan en una auditoria parcial. De otra manera: cuando se realiza una auditoria del área de desarrollo de proyectos de la informática de una empresa, es porque en ese desarrollo existen, además de ineficiencias, debilidades de organización, o de inversiones, o de seguridad, o alguna mezcla de ellas.</p>
+<p>Teniendo en cuenta lo anterior y partiendo de las diferentes actividades de sistemas que cada empresa tiene dentro de su organización dentro de las áreas generales, se establecen las siguientes divisiones de auditoria informática de Explotación, de sistemas, de comunicaciones y de desarrollo de proyectos. Estas son las áreas específicas de la auditoria informática más importantes. Cada área específica puede ser auditada desde los siguientes criterios generales, que pueden modificarse según sea el tipo de empresa a auditar:</p>
+<ul>
+<li>Desde su propio funcionamiento interno.</li>
+<li>Desde el apoyo que recibe de la dirección y, en sentido ascendente, del grado de cumplimiento de las directrices de ésta.</li>
+<li>Desde la perspectiva de los usuarios, destinatarios reales de la informática.</li>
+<li>Desde el punto de vista de la seguridad que ofrece la informática en general o la rama auditada.</li>
+</ul>
+<h3 id="Clasificacion-de-la-auditoria-informatica"><a href="#Clasificacion-de-la-auditoria-informatica" class="headerlink" title="Clasificación de la auditoria informática"></a>Clasificación de la auditoria informática</h3><p><strong>Auditoria informática de explotación</strong></p>
+<p>Explotación informática se encarga de obtener resultados informáticos, como son: listados impresos, ficheros soportados magnéticamente, órdenes automatizadas para lanzar o modificar procesos industriales, entre otras. Los datos es la materia prima que hay que transformar por medio del proceso informático (gobernado por programas), bajo el criterio de integridad y control de calidad y así lleguen finalmente al usuario. Para auditar explotación hay que auditar las sesiones que la componen y sus interrelaciones.</p>
+<p><strong>Auditoria informática de sistemas</strong></p>
+<p>Encargada de analizar todo lo concerniente a técnica de sistemas en todas sus facetas, teniendo como resultado en la actualidad que todo lo que forme el entorno general de sistemas, como son las comunicaciones, líneas y redes de las instalaciones informáticas, se auditen por separado. Dentro de la auditoria informática de sistemas se evalúa lo siguiente:</p>
+<ul>
+<li><em>Sistemas operativos</em> : debe verificarse en primer lugar que los sistemas estén actualizados con las últimas versiones del fabricante, indagando las causas de las omisiones si las hubiera. El análisis de las versiones de los SO permite descubrir las posibles incompatibilidades entre otros productos de software básico adquiridos por la instalación y determinadas versiones de aquellas.</li>
+<li><em>Software básico</em> : es fundamental para el auditor conocer los productos de software básico que han sido adquiridos aparte de la propia computadora. Esto, por razones económicas y por razones de comprobación de que la computadora podría funcionar sin el producto adquirido por el cliente. En cuanto al software desarrollado por el personal informático de la empresa, el auditor debe verificar que éste no agreda ni condiciona al Sistema. Igualmente, debe considerar el esfuerzo realizado en términos de costes, por si hubiera alternativas más económicas.</li>
+<li><em>Tunning</em> : es el conjunto de técnicas de observación y de medidas encaminadas a la evaluación del comportamiento de los Subsistemas y del sistema en su conjunto. Las acciones de tunning deben diferenciarse de los controles habituales que realiza el personal de técnica de sistemas. El tunning posee una naturaleza más revisora, estableciéndose previamente planes y programas de actuación según los síntomas observados.</li>
+<li><em>Optimización de los sistemas y subsistemas</em> : la técnica de sistemas debe realizar acciones permanentes de optimización como consecuencia de la realización de tunnings pre-programados o específicos. El auditor verificará que las acciones de optimización fueron efectivas y no comprometieron la operatividad de los sistemas ni el plan crítico de producción diaria de explotación.</li>
+<li><em>Administración de base de datos</em> : el diseño de las BD, sean relacionales o jerárquicas, se ha convertido en una actividad muy compleja y sofisticada, por lo general desarrollada en el ámbito de técnica de sistemas, y de acuerdo con las áreas de desarrollo y usuarios de la empresa. Al conocer el diseño y arquitectura de éstas por parte de Sistemas, se les encomienda también su administración. Al auditor de BD analizará los sistemas de salvaguarda existentes, revisará finalmente la integridad y consistencia de los datos, así como la ausencia de redundancias entre ellos.</li>
+<li><em>Investigación y desarrollo</em> : como empresas que utilizan y necesitan de informáticas desarrolladas, saben que sus propios efectivos están desarrollando aplicaciones y utilidades que, concebidas inicialmente para su uso interno, pueden ser susceptibles de adquisición por otras empresas, haciendo competencia las compañías del mismo campo. La auditoria informática deberá cuidar de que la actividad de investigación y desarrollo no interfiera ni dificulte las tareas fundamentales internas. La propia existencia de aplicativos para la obtención de estadísticas desarrollados por los técnicos de sistemas de la empresa auditada, y su calidad, proporcionan al auditor experto una visión bastante exacta de la eficiencia y estado de desarrollo de los sistemas.</li>
+</ul>
+<p><strong>Auditoria informática de comunicaciones y redes</strong></p>
+<p>Para el informático y para el auditor informático, el entramado que constituyen las redes nodales, líneas, concentradores, multiplexores, redes locales, etc. no son sino el soporte físico-lógico del tiempo real. El auditor tropieza con la dificultad técnica del entorno, pues ha de analizar situaciones y hechos alejados entre sí, y está condicionado a la participación del monopolio telefónico que presta el soporte. Como en otros casos, la auditoría de este sector requiere un equipo de especialistas, expertos simultáneamente en comunicaciones y en redes locales (no hay que olvidarse que en entornos geográficos reducidos, algunas empresas optan por el uso interno de redes locales, diseñadas y cableadas con recursos propios).</p>
+<p>El auditor de comunicaciones deberá inquirir sobre los índices de utilización de las líneas contratadas con información abundante sobre tiempos de desuso. Deberá proveerse de la topología de la red de comunicaciones, actualizada, ya que la desactualización de esta documentación significaría una grave debilidad. La inexistencia de datos sobre las líneas existen, cómo son y donde están instaladas, supondría que se bordea la inoperatividad informática. Sin embargo, las debilidades más frecuentes o importantes se encuentran en las disfunciones organizativas. La contratación e instalación de líneas va asociada a la instalación de los puestos de trabajo correspondientes (Pantallas, Servidores de redes locales, computadoras con tarjetas de comunicaciones, impresoras, etc). Todas estas actividades deben estar muy coordinadas y de ser posible, dependientes de una sola organización.</p>
+<p><strong>Auditoria informática de desarrollo de proyectos o aplicaciones</strong></p>
+<p>El desarrollo es una evolución del llamado análisis y programación de sistemas y aplicaciones, que a su vez, engloba muchas áreas que tiene la empresa. Una aplicación recorre las siguientes fases:</p>
+<ul>
+<li>Pre-requisitos del usuario (único o plural) y del entorno</li>
+<li>Análisis funcional</li>
+<li>Diseño</li>
+<li>Análisis orgánico (pre-programación y programación)</li>
+<li>Pruebas</li>
+<li>Entrega a explotación y alta para el proceso</li>
+</ul>
+<p>Estas fases deben estar sometidas a un exigente control interno, caso contrario, además del disparo de los costes, podrá producirse la insatisfacción del usuario. Finalmente, la auditoria deberá comprobar la seguridad de los programas en el sentido de garantizar que los ejecutados por la máquina sean exactamente los previstos y no otros.</p>
+<p><strong>Auditoria de la seguridad informática</strong></p>
+<p>La computadora es un instrumento que estructura gran cantidad de información, la cual puede ser confidencial para individuos, empresas o instituciones, y puede ser mal utilizada o divulgada a personas que hagan mal uso de esta. También pueden ocurrir robos, fraudes o sabotajes, virus, etc, que provoquen la destrucción total o parcial de la actividad computacional. Esta información puede ser de suma importancia, y el no tenerla en el momento preciso puede provocar retrasos sumamente costosos.</p>
+<p>Al auditar los sistemas se debe tener cuidado que no se tengan copias “piratas” o bien que, al conectarse en red con otras computadoras, no exista la posibilidad de transmisión del virus. El uso inadecuado de la computadora comienza desde la utilización de tiempo de máquina para usos ajenos de la organización, la copia de programas para fines de comercialización sin reportar los derechos de autor hasta el acceso por vía telefónica a BD a fin de modificar la información con propósitos fraudulentos. La seguridad en la informática abarca los conceptos de seguridad física y seguridad lógica.</p>
+<h3 id="Metodologia-de-auditoria-informatica"><a href="#Metodologia-de-auditoria-informatica" class="headerlink" title="Metodología de auditoria informática"></a>Metodología de auditoria informática</h3><p>Como auditor se debe recolectar toda la información general, que permita así mismo definir un juicio global objetivo siempre amparadas en pruebas o hechos demostrables. Dar como resultado un informe claro, conciso y a la vez preciso depende del análisis y experiencia del auditor, frente a diferentes entornos a evaluar, dependiendo de las debilidades y fortalezas encontradas en dicha empresa auditada. La recolección de información, el análisis, la aplicación de diferentes normas de acuerdo al tipo de auditoria, los hallazgos encontrados y pruebas que avalen estos resultados son indispensables en la realización de una auditoria. Para llegar al resultado hay que seguir una serie de pasos que permiten tener claridad y orden de la auditoria a aplicar.</p>
+<p>El método de trabajo del auditor pasa por las siguientes etapas:</p>
+<ol>
+<li>Alcance y objetivos de la auditoria informática.</li>
+<li>Estudio inicial del entorno auditable.</li>
+<li>Determinación de los recursos necesarios para realizar la auditoria.</li>
+<li>Elaboración del plan y de los programas de trabajo.</li>
+<li>Actividades propiamente dichas de la auditoria.</li>
+<li>Confección y redacción del informe final.</li>
+<li>Redacción de la carta de introducción o carta de presentación del informe final.</li>
+</ol>
+<p><strong>Alcance y objetivos de la auditoria informática</strong></p>
+<p>El alcance de la auditoria expresa los límites de la misma. Debe existir un acuerdo muy preciso entre auditores y clientes sobre las funciones, las materias y las organizaciones a auditar. A los efectos de acotar el trabajo, resulta muy beneficioso para ambas partes expresar las excepciones de alcance de la auditoria, es decir cuales materias, funciones u organizaciones no van a ser auditadas. Tanto los alcances como las excepciones deben figurar al comienzo del informe final.</p>
+<p><strong>Estudio inicial del entorno auditable</strong></p>
+<p>Esta etapa es una de las más importantes en el desarrollo de la auditoria, ya que el auditor debe conocer todos los procesos desarrollados, relacionado con el área tomada como caso de estudio. Para realizar dicho estudio ha de examinarse las funciones y actividades generales de la informática. Para su realización el auditor debe conocer lo siguiente:</p>
+<p>Organización: para el auditor, el conocimiento de quién ordena, quién diseña y quién ejecuta es fundamental. Para realizarlo el auditor deberá fijarse en:</p>
+<ul>
+<li><em>Organigrama</em> : el organigrama expresa la estructura oficial de la organización a auditar. Permite identificar las jerarquías, dependencias y direcciones entre las áreas existentes.<ul>
+<li>Departamentos: se entiende como departamento a los órganos que siguen inmediatamente a la Dirección. El equipo auditor describirá brevemente las funciones de cada uno de ellos.</li>
+<li>Relaciones Jerárquicas y funcionales entre órganos de la Organización: el auditor verificará si se cumplen las relaciones funcionales y jerárquicas previstas por el organigrama, o por el contrario detectará, por ejemplo, si algún empleado tiene dos jefes. Las de jerarquía implican la correspondiente subordinación. Las funcionales por el contrario, indican relaciones no estrictamente subordinables.</li>
+<li>Flujos de información: además de las corrientes verticales intra-departamentales, la estructura organizativa cualquiera que sea, produce corrientes de información horizontales y oblicuas extra-departamentales.</li>
+<li>Número de puestos de trabajo: el equipo auditor comprobará que los nombres de los puestos de trabajo de la organización corresponden a las funciones reales distintas.</li>
+<li>Número de personas por puesto de trabajo: es un parámetro que los auditores informáticos deben tener en cuenta ya que la inadecuación del personal determina que el número de personas que realizan las mismas funciones rara vez coincida con la estructura oficial de la organización.</li>
+</ul>
+</li>
+<li><em>Entorno operacional</em> : el auditor informático debe tener una referencia del entorno en el que va a desenvolverse y se obtiene determinando lo siguiente:<ul>
+<li>Situación geográfica de los sistemas: se determinará la ubicación geográfica de los distintos centros de proceso de datos en la empresa, continuando con la verificación de la existencia de responsables en cada uno de ellos, así como el uso de los mismos estándares de trabajo.</li>
+<li>Arquitectura y configuración de hardware y software: cuando existen varios equipos, es fundamental la configuración elegida para cada uno de ellos, ya que los mismos deben constituir un sistema compatible e intercomunicado. La configuración de los sistemas está muy ligada a las políticas de seguridad lógica de las compañías, para esto es importante que los auditores, en su estudio inicial, tengan en su poder la distribución e interconexión de los equipos.</li>
+<li>Inventario de hardware y software: el auditor recabará información escrita, en donde figuren todos los elementos físicos y lógicos de la instalación. En cuanto al hardware figurarán las CPU’s, unidades de control local y remotas, perfiéricos de todo tipo, etc. El inventario de software debe contener todos los productos lógicos del sistema, desde el software básico hasta los programas de utilidad adquiridos o desarrollados internamente. Suele ser habitual clasificarlos en facturables y no facturables.</li>
+<li>Comunicación y redes de comunicación: al realizar el estudio inicial los auditores dispondrán del número, situación y características principales de las líneas, así como de los accesos a la red pública de comunicaciones, igualmente, poseerán información de las redes locales de la Empresa y todo lo que tenga que ver con la red de comunicaciones.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Determinación de los recursos necesarios para realizar la auditoria</strong></p>
+<p>Mediante los resultados del estudio inicial realizado se procede a determinar los recursos humanos y materiales que han de emplearse en la auditoria.</p>
+<p><em>Recursos humanos</em> : la cantidad de recursos depende del volumen auditable. Las características y perfiles del personal seleccionado dependen de la materia auditable. Es igualmente señalable que la auditoria en general suele ser ejercida por profesionales universitarios y por otras personas de probada experiencia multidisciplinaria.</p>
+<p><em>Recursos materiales</em> : los recursos materiales del auditor son de dos tipos:</p>
+<ul>
+<li>Recursos software como son, cantidad y complejidad de BD y ficheros, que son programas propios de la auditoria, son muy potentes y flexibles.</li>
+<li>Recursos materiales hardware: los recursos hardware que el auditor necesita son proporcionados por el cliente. Los procesos de control deben efectuarse necesariamente en las computadoras del auditado. Por lo cual habrá de convenir, tiempo de máquina, espacio de disco, impresoras ocupadas, scanner, etc.</li>
+</ul>
+<p><strong>Elaboración del plan y de los programas de trabajo</strong></p>
+<p>Una vez asignados los recursos, el responsable de la auditoria y sus colaboradores establecen un plan de trabajo y así, se procede a la programación del mismo. El plan se elabora teniendo en cuenta, entre otros criterios, los siguientes:</p>
+<ul>
+<li>Si la revisión debe realizarse por áreas generales o áreas específicas.</li>
+<li>Si la auditoria es global, de toda la informática, o parcial. El volumen determina no solamente el número de auditores necesarios, sino las especialidades necesarias del personal.</li>
+<li>En el Plan no se consideran calendarios, porque se manejan recursos genéricos y no específicos.</li>
+<li>En el Plan se establecen los recursos y esfuerzos globales que van a ser necesarios.</li>
+<li>En el Plan se establecen las prioridades de materias auditables, de acuerdo siempre con las prioridades del cliente.</li>
+<li>El Plan establece disponibilidad futura de los recursos durante la revisión.</li>
+<li>El Plan estructura las tareas a realizar por cada integrante del grupo.</li>
+<li>En el Plan se expresan todas las ayudas que el auditor ha de recibir del auditado.</li>
+</ul>
+<p>Una vez elaborado el plan, se procede a la programación de actividades, esta ha de ser lo suficientemente flexible como para permitir modificaciones a lo largo del proyecto.</p>
+<p><strong>Actividades propiamente dichas de la auditoria informática</strong></p>
+<p>La auditoria informática general se realiza por áreas generales o por áreas específicas. Si se examina por grandes temas, resulta evidente la mayor calidad y el empleo de más tiempo total y mayores recursos. Cuando la auditoria se realiza por áreas específicas, se abarcan de una vez todas las peculiaridades que afectan a la misma, de forma que el resultado se obtiene más rápidamente y con menor calidad. Existen técnicas que hacen que el auditor las aplique de acuerdo a su juicio y al tipo de auditoria a ejecutar son:</p>
+<ul>
+<li><em>Técnicas de Trabajo</em> :<ul>
+<li>Análisis de la información obtenida del auditado.</li>
+<li>Análisis de la información propia.</li>
+<li>Cruzamiento de las informaciones anteriores.</li>
+<li>Entrevistas.</li>
+<li>Simulación.</li>
+<li>Muestreos.</li>
+<li>Inspección.</li>
+<li>Confirmación.</li>
+<li>Investigación.</li>
+<li>Certificación.</li>
+<li>Observación.</li>
+</ul>
+</li>
+<li><em>Herramientas</em> :<ul>
+<li>Cuestionario general inicial.</li>
+<li>Cuestionario Checklist.</li>
+<li>Estándares.</li>
+<li>Monitores.</li>
+<li>Simuladores (Generadores de datos).</li>
+<li>Paquetes de auditoria (Generadores de programas)</li>
+<li>Matrices de riesgo.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Confección y redacción del informe final</strong></p>
+<p>La función de la auditoria se materializa exclusivamente por escrito. Por lo tanto, la elaboración final es el exponente de su calidad. Resulta evidente la necesidad de redactar borradores e informes parciales previos al informe final, los que son elementos de contraste entre opinión entre auditor y auditado y que pueden descubrir fallos de apreciación en el auditor.</p>
+<p><strong>Redacción de la carta de introducción o carta de presentación del informe final</strong></p>
+<p>La carta de introducción tiene especial importancia porque en ella ha de resumirse la auditoria realizada. Se destina exclusivamente al responsable máximo de la empresa, o a la persona concreta que encargó o contrató la auditoria.</p>
+<p>Así como pueden existir tantas copias del informe final como solicite el cliente, la auditoria no hará copias de la citada carta de introducción. La carta de introducción poseerá los siguientes atributos:</p>
+<ul>
+<li>Tendrá como máximo 4 folios.</li>
+<li>Incluirá fecha, naturaleza, objetivos y alcance.</li>
+<li>Cuantificará la importancia de las áreas analizadas.</li>
+<li>Proporcionará una conclusión general, concretando las áreas de gran debilidad.</li>
+<li>Presentará las debilidades en orden de importancia y gravedad.</li>
+</ul>
+<p>En la carta de introducción no se escribirán nunca recomendaciones.</p>
+<p><em>Estructura del informe final</em> : el informe comienza con la fecha de comienzo de la auditoria y la fecha de redacción del mismo. Se incluyen los nombres del equipo auditor y los nombres de todas las personas entrevistadas, con indicación de la jefatura, responsabilidad y puesto de trabajo que ostente. Siguiendo los siguientes pasos:</p>
+<ul>
+<li>Definición de objetivos y alcance de la auditoria.</li>
+<li>Enumeración de temas considerados.</li>
+<li>Cuerpos expositivo.</li>
+</ul>
+<p>Para cada tema, se seguirá el siguiente orden:</p>
+<ol>
+<li>Situación actual. Cuando se trate de una revisión periódica, en la que se analiza no solamente una situación sino además su evolución en el tiempo, se expondrá la situación prevista y la situación real.</li>
+<li>Tendencias. Se tratarán de hallar parámetros que permitan establecer tendencias futuras.</li>
+<li>Puntos débiles y amenazas.</li>
+<li>Recomendaciones y planes de acción. Constituyen junto con la exposición de puntos débiles, el verdadero objetivo de la auditoria informática.</li>
+<li>Redacción posterior de la carta de introducción o presentación.</li>
+</ol>
+<p><em>Modelo conceptual de la exposición del informe final:</em></p>
+<ul>
+<li>El informe debe incluir solamente hechos importantes. La inclusión de hechos poco relevantes o accesorios desvía la atención del lector.</li>
+<li>El informe debe consolidar los hechos que se describen en el mismo.</li>
+<li>El término de “hechos consolidados” adquiere un especial significado de verificación objetiva y de estar documentalmente probados y soportados. La consolidación de los hechos debe satisfacer, al menos los siguientes criterios:</li>
+</ul>
+<ol>
+<li>El hecho debe poder ser sometido a cambios.</li>
+<li>Las ventajas del cambio deben superar los inconvenientes derivados de mantener la situación.</li>
+<li>No deben existir alternativas viables que superen al cambio propuesto.</li>
+<li>La recomendación del auditor sobre el hecho, debe mantener o mejorar las normas y estándares existentes en la instalación.</li>
+</ol>
+<p>La aparición de un hecho en un informe de auditoria implica necesariamente la existencia de una debilidad que ha de ser corregida.</p>
+<p><em>Flujo del hecho o debilidad:</em></p>
+<p>Hecho encontrado.</p>
+<ul>
+<li>A de ser relevante para el auditor y para el cliente.</li>
+<li>A de ser exacto, y además convincente.</li>
+<li>No deben existir hechos repetidos.</li>
+</ul>
+<p><em>Consecuencias del hecho</em> : las consecuencias deben redactarse de modo que sean directamente deducibles del hecho.</p>
+<p><em>Repercusión del hecho</em> : se redactará las influencias directas que el hecho pueda tener sobre otros aspectos informáticos u otros ámbitos de la empresa.</p>
+<p><em>Conclusión del hecho</em> : no deben redactarse conclusiones más que en los casos en que la exposición haya sido muy extensa o compleja.</p>
+<p><em>Recomendación del auditor informático</em></p>
+<ul>
+<li>Deberá entenderse por sí sola, por simple lectura.</li>
+<li>Deberá estar suficientemente soportada en el propio texto.</li>
+<li>Deberá ser concreta y exacta en el tiempo, para que pueda ser verificada su implementación.</li>
+<li>La recomendación se redactará de forma que vaya dirigida expresamente a la persona o personas que puedan implementarla.</li>
+</ul>
+<h3 id="Herramientas-y-tecnicas-para-la-auditoria-informatica"><a href="#Herramientas-y-tecnicas-para-la-auditoria-informatica" class="headerlink" title="Herramientas y técnicas para la auditoria informática"></a>Herramientas y técnicas para la auditoria informática</h3><p><strong>Cuestionarios</strong></p>
+<p>Las auditorias informáticas se materializan recabando información y documentación de todo tipo. Los informes finales de los auditores dependen de sus capacidades para analizar las situaciones de debilidad o fortaleza de los diferentes entornos. El trabajo de campo del auditor consiste en lograr toda la información necesaria para la emisión de un juicio global objetivo, siempre amparado en hechos demostrables, llamados también evidencias.</p>
+<p>Para esto, suele ser habitual comenzar solicitando la cumplimentación de cuestionarios pre-impresos que se envían a las personas concretas que el auditor cree adecuadas, sin que sea obligatorio que dichas personas sean las responsables oficiales de las diversas áreas a auditar. Estos cuestionarios no pueden ni deben ser repetidos para instalaciones distintas, sino diferentes y muy específicos para cada situación, y muy cuidados en su fondo y su forma.</p>
+<p>Sobre esta base, se estudia y analiza la documentación recibida, de modo que tal análisis determine a su vez la información que deberá elaborar el propio autor. El cruzamiento de ambos tipos de información es una de las bases fundamentales de la auditoria.</p>
+<p>Cabe aclarar, que esta primera fase puede omitirse cuando los auditores hayan adquirido por otros medios la información que aquellos pre-impresos hubiesen proporcionado.</p>
+<p><strong>Entrevistas</strong></p>
+<p>El auditor comienza a continuación las relaciones personales con el auditado. Lo hace de tres formas:</p>
+<ol>
+<li>Mediante la petición de documentación concreta sobre alguna materia de su responsabilidad.</li>
+<li>Mediante “entrevistas” en las que no se sigue un plan determinado ni un método estricto de sometimiento a un cuestionario.</li>
+<li>Por medio de entrevistas en las que el auditor sigue un método preestablecido de antemano y busca unas finalidades concretas.</li>
+</ol>
+<p>La entrevista es una de las actividades personales más importantes del auditor; en ellas, éste recoge más información, y mejor matizada, que la proporcionada por medios propios puramente técnicos o por las respuestas escritas a cuestionarios.</p>
+<p>Aparte de algunas cuestiones menos importantes, la entrevista entre auditor y auditado se basa fundamentalmente en el concepto de interrogatorio; es lo que hace un auditor, interroga y se interroga a sí mismo. El auditor informático experto entrevista al auditado siguiendo un cuidadoso sistema previamente establecido, consistente en que bajo la forma de una conversación correcta y lo menos tensa posible, el auditado conteste sencillamente y con pulcritud a una serie de preguntas variadas, también sencillas. Sin embargo, esta sencillez es solo aparente. Tras ella debe existir una preparación muy elaborada y sistematizada, y que es diferente para cada caso particular.</p>
+<p><strong>Checklist</strong></p>
+<p>El auditor profesional y experto es aquél que reelabora muchas veces sus cuestionarios en función de los escenarios auditados. Tiene claro lo que necesita saber, y por qué. Sus cuestionarios son vitales para el trabajo de análisis, cruzamiento y síntesis posterior, lo cual no quiere decir que haya que someter al auditado a unas preguntas estereotipadas que no conducen a nada. Muy por el contrario, el auditor conversará y hará preguntas “normales”, que en realidad servirán para la cumplimentación sistemática de sus cuestionarios, de sus checklists.</p>
+<p>Hay opiniones que descalifican el uso de las checklists, ya que consideran que leerle una pila de preguntas recitadas de memoria o leídas en voz alta descalifica al auditor informático. Pero esto no es usar checklists, es una evidente falta de profesionalismo. El profesionalismo pasa por un procesamiento interno de información a fin de obtener respuestas coherentes que permitan una correcta descripción de puntos débiles y fuertes. El profesionalismo pasa por poseer preguntas muy estudiadas que han de formularse flexiblemente.</p>
+<p>El conjunto de estas preguntas recibe el nombre de checklist. Salvo excepciones, las checklists deben ser contestadas oralmente, ya que superan en riqueza y generalización a cualquier otra forma.</p>
+<p>Según la claridad de las preguntas y el talante del auditor, el auditado responderá desde posiciones muy distintas y con disposición muy variable. El auditado, habitualmente informático de profesión, percibe con cierta facilidad el perfil técnico y los conocimientos del auditor, precisamente a través de las preguntas que éste le formula. Esta percepción configura el principio de autoridad y prestigio que el auditor debe poseer.</p>
+<p>Por ello, aun siendo importante tener elaboradas listas de preguntas muy sistematizadas, coherentes y clasificadas por materias, todavía lo es más el modo y el orden de su formulación. Las empresas externas de auditoria informática guardan sus checklists, pero de poco sirven si el auditor no las utiliza adecuada y oportunamente. No debe olvidarse que la función auditora se ejerce sobre bases de autoridad, prestigio y ética.</p>
+<p>El auditor deberá aplicar la checklist de modo que el auditado responda clara y concisamente. Se deberá interrumpir lo menos posible a éste, y solamente en los casos en que las respuestas se aparten sustancialmente de la pregunta. En algunas ocasiones, se hará necesario invitar a aquél a que exponga con mayor amplitud un tema concreto, y en cualquier caso, se deberá evitar absolutamente la presión sobre el mismo.</p>
+<p>Algunas de las preguntas de las checklists utilizadas para cada sector, deben ser repetidas. En efecto, bajo apariencia distinta, el auditor formulará preguntas equivalentes a las mismas o a distintas personas, en las mismas fechas, o en fechas diferentes. De este modo, se podrán descubrir con mayor facilidad los puntos contradictorios; el auditor deberá analizar los matices de las respuestas y reelaborar preguntas complementarias cuando hayan existido contradicciones, hasta conseguir la homogeneidad. El entrevistado no debe percibir un excesivo formalismo en las preguntas. El auditor, por su parte, tomará las notas imprescindibles en presencia del auditado, y nunca escribirá cruces ni marcará cuestionarios en su presencia.</p>
+<p>Los cuestionarios o checklists responden fundamentalmente a dos tipos de “filosofía” de calificación o evaluación:</p>
+<p><strong>Checklist de rango</strong></p>
+<p>Contiene preguntas que el auditor debe puntuar dentro de un rango preestablecido (por ejemplo, de 1 a 5, siendo 1 la respuesta más negativa y el 5 el valor más positivo). Ejemplo: Se supone que se está realizando una auditoria sobre la seguridad física de una instalación y, dentro de ella, se analiza el control de los accesos de personas y cosas al Centro de Cálculo. Podrían formularse las preguntas que figuran a continuación, en donde las respuestas tienen los siguientes significados:</p>
+<ol>
+<li>Muy deficiente.</li>
+<li>Deficiente.</li>
+<li>Mejorable.</li>
+<li>Aceptable.</li>
+<li>Correcto.</li>
+</ol>
+<p>Se figuran posibles respuestas de los auditados. Las preguntas deben sucederse sin que parezcan encorsetadas ni clasificadas previamente. Basta conque el auditor lleve un pequeño guión. La cumplimentación de la checklist no debe realizarse en presencia del auditado. Ejemplo:</p>
+<ul>
+<li>¿Existe personal específico de vigilancia externa al edificio?<ul>
+<li>Respuesta: No, solamente un guarda por la noche que atiende además otra instalación adyacente.</li>
+<li>Puntuación: 1</li>
+</ul>
+</li>
+<li>¿Para la vigilancia interna del edificio, ¿Hay al menos un vigilante por turno en los aledaños del centro de cálculo?<ul>
+<li>Respuesta: Si, pero sube a las otras 4 plantas cuando se le necesita.</li>
+<li>Puntuación: 2</li>
+</ul>
+</li>
+<li>¿Hay salida de emergencia además de la habilitada para la entrada y salida de máquinas?<ul>
+<li>Respuesta: Si, pero existen cajas apiladas en dicha puerta. Algunas veces la quitan.</li>
+<li>Puntuación: 3</li>
+</ul>
+</li>
+<li>El personal de comunicaciones, ¿Puede entrar directamente en la Sala de Computadoras?<ul>
+<li>Respuesta: No, solo tiene tarjeta el Jefe de Comunicaciones. No se la da a su gente más que por causa muy justificada, y avisando casi siempre al jefe de explotación.</li>
+<li>Puntuación: 4</li>
+</ul>
+</li>
+</ul>
+<p>El resultado sería el promedio de las puntuaciones: (1 + 2 + 3 + 4 ) / 4 = 2,25</p>
+<p><strong>Checklist binaria</strong></p>
+<p>Es la constituida por preguntas con respuesta única y excluyente: Si o No. Aritméticamente, equivalen a 1 (uno) o 0 (cero), respectivamente. Ejemplo: Se supone que se está realizando una revisión de los métodos de pruebas de programas en el ámbito de desarrollo de proyectos.</p>
+<ul>
+<li>¿Existe Normativa de que el usuario final compruebe los resultados finales de los programas?<ul>
+<li>Puntuación: 1</li>
+</ul>
+</li>
+<li>¿Conoce el personal de desarrollo la existencia de la anterior normativa?<ul>
+<li>Puntuación: 1</li>
+</ul>
+</li>
+<li>¿Se aplica dicha norma en todos los casos?<ul>
+<li>Puntuación: 0</li>
+</ul>
+</li>
+<li>¿Existe una norma por la cual las pruebas han de realizarse con juegos de ensayo o copias de BD reales?<ul>
+<li>Puntuación: 0</li>
+</ul>
+</li>
+</ul>
+<p>Obsérvese como en este caso están contestadas las siguientes preguntas:</p>
+<ul>
+<li>¿Se conoce la norma anterior?<ul>
+<li>Puntuación: 0</li>
+</ul>
+</li>
+<li>¿Se aplica en todos los casos?<ul>
+<li>Puntuación: 0</li>
+</ul>
+</li>
+</ul>
+<p>Las checklist de rango son adecuadas si el equipo auditor no es muy grande y mantiene criterios uniformes y equivalentes en las valoraciones. Permiten una mayor precisión en la evaluación que en la checklist binaria. Sin embargo, la bondad del método depende excesivamente de la formación y competencia del equipo auditor.</p>
+<p>Las checklists binarias siguen una elaboración inicial mucho más ardua y compleja. Deben ser de gran precisión, como corresponde a la suma precisión de la respuesta. Una vez construidas, tienen la ventaja de exigir menos uniformidad del equipo auditor y el inconveniente genérico del <si o="" no=""> frente a la mayor riqueza del intervalo.</si></p>
+<p>No existen checklists estándar para todas y cada una de las instalaciones informáticas a auditar. Cada una de ellas posee peculiaridades que hacen necesarios los retoques de adaptación correspondientes en las preguntas a realizar.</p>
+<p><strong>Trazas y/o huellas</strong></p>
+<p>Con frecuencia, el auditor informático debe verificar que los programas, tanto de los sistemas como de usuario, realizan exactamente las funciones previstas, y no otras. Para ello se apoya en productos Software muy potentes y modulares que, entre otras funciones, rastrean los caminos que siguen los datos a través del programa.</p>
+<p>Muy especialmente, estas “Trazas” se utilizan para comprobar la ejecución de las validaciones de datos previstas. Las mencionadas trazas no deben modificar en absoluto el sistema. Si la herramienta auditora produce incrementos apreciables de carga, se convendrá de antemano las fechas y horas más adecuadas para su empleo.</p>
+<p>Por lo que se refiere al análisis del sistema, los auditores informáticos emplean productos que comprueban los valores asignados por técnica de sistemas a cada uno de los parámetros variables de las Librerías más importantes del mismo. Estos parámetros variables deben estar dentro de un intervalo marcado por el fabricante. A modo de ejemplo, algunas instalaciones descompensan el número de iniciadores de trabajos de determinados entornos o toman criterios especialmente restrictivos o permisivos en la asignación de unidades de servicio para según cuales tipos carga. Estas actuaciones, en principio útiles, pueden resultar contraproducentes si se traspasan los límites.</p>
+<p><strong>Observación</strong></p>
+<p>La observación es una de las técnicas más utilizadas en la recolección de información para aplicación de una auditoria, ya que a través de diferentes técnicas y métodos de observación permite recolectar directamente la información necesaria sobre el comportamiento del sistema, del área de sistemas, de las funciones, actividades y operaciones del equipo procesador o de cualquier otro hecho, acción o fenómeno del ámbito de sistemas. Existen diferentes tipos de observación, entre las cuales están:</p>
+<ul>
+<li>Observación directa.</li>
+<li>Observación indirecta.</li>
+<li>Observación oculta.</li>
+<li>Observación participativa.</li>
+<li>Observación no participativa.</li>
+<li>Introspección.</li>
+<li>Estrospección.</li>
+<li>Observación histórica.</li>
+<li>Observación controlada.</li>
+<li>Observación natural.</li>
+</ul>
+<p><strong>Inventarios</strong></p>
+<p>Esta forma de recopilación de información consiste en hacer un recuento físico de lo que se está auditando, consiste propiamente en comparar las cantidades reales existentes con las que debería haber para comprobar que sean iguales o, en caso contrario, para resaltar las posibles diferencias e investigar sus causas.</p>
+<p>Los principales tipos de inventarios aplicables en el ambiente de sistemas computacionales, son:</p>
+<ul>
+<li>Inventario de software.</li>
+<li>Inventario de hardware.</li>
+<li>Inventario de documentos.<ul>
+<li>Inventario de documentos administrativos.<ul>
+<li>Manuales de la organización.</li>
+<li>Manuales de procedimientos administrativos.</li>
+<li>Manuales de perfil de puestos.</li>
+<li>Otros manuales administrativos.</li>
+</ul>
+</li>
+<li>Inventario de documentos técnicos para el sistema.<ul>
+<li>Manuales e instructivos técnico del hardware, periféricos y componentes del sistema.</li>
+<li>Manuales e instructivos de mantenimiento físico del sistema (hardware), entre otros.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Estandares-de-Auditoria"><a href="#Estandares-de-Auditoria" class="headerlink" title="Estándares de Auditoria"></a>Estándares de Auditoria</h3><p>Para la realización y ejecución de una auditoria se hace necesario aplicar normas o estándares bajo los cuales las empresas deben regirse, de allí la importancia de identificar los estándares internacionales que en este caso, son:</p>
+<p>Directrices gerenciales de COBIT, desarrollado por la Information Systems Audit and Control Association (ISACA) Asociación de auditoria y control de los sistemas de información: las directrices generenciales son un marco internacional de referencias que abordan las mejores prácticas de auditoria y control de sistemas de información. Permiten que la gerencia incluya, comprenda y administre los riesgos relacionados con la tecnología de información y establezca el enlace entre los procesos de administración, aspectos técnicos, la necesidad de controles y los riesgos asociados. Uno de los objetivos de ISACA es promover estándares aplicables internacionalmente para cumplir con su visión. La estructura para los estándares de auditoria de SI brinda múltiples niveles de asesoría, como:</p>
+<ul>
+<li>Los auditores de SI respecto al nivel mínimo de desempeño aceptable requerido para cumplir con las responsabilidades profesionales indicadas en el código de ética Profesional de ISACA.</li>
+<li>La dirección y otras partes interesadas en las expectativas de la profesión con respecto al trabajo de sus profesionales.</li>
+<li>Los poseedores de la designación de auditor certificado de sistemas de información (Certified Information Systems Auditor, CISA) respecto a los requisitos que deben cumplir. El incumplimiento de estos estándares puede resultar en una investigación de la conducta del poseedor del certificado CISA por parte de la junta de directores de ISACA o del comité apropiado de ISACA y, en última instancia, en sanciones disciplinarias, así:</li>
+</ul>
+<ol>
+<li>The Management of the Control of data Infromation Technology, desarrollado por el Instituto Canadiense de Contadores Certificados (CICA): Este modelo está basado en el concepto de roles y establece responsabilidades relacionadas con seguridad y los controles correspondientes. Dichos roles están clasificados con base en siete grupos: administración general, gerentes de sistemas, dueños, agentes, usuarios de sistemas de información, así como proveedores de servicios, desarrollo y operaciones de servicios y soporte de sistemas. Además, hace distinción entre los conceptos de autoridad, responsabilidad y responsabilidad respecto a control y riesgo previo al establecimiento del control, en términos de objetivos, estándares y técnicas mínimas a considerar.</li>
+<li>Administración de la inversión de tecnología de Inversión: un marco para la evaluación y mejora del proceso de madurez, desarrollado por la oficina de contabilidad general de los Estados Unidos (GAO): Este modelo identifica los procesos críticos, asegurando el éxito de las inversiones de tecnología de información y comunicación electrónicas. Además los organiza en cinco niveles de madurez, similar al modelo CMM.</li>
+<li>Estándares de administración de calidad y aseguramiento de calidad ISO 9000, desarrollados por la Organización Internacional de Estándares (ISO): La colección ISO 9000 es un conjunto de estándares y directrices que apoyan a las organizaciones a implementar sistemas de calidad efectivos, para el tipo de trabajo que ellos realizan.</li>
+<li>SysTrust – Principios y criterios de confiabilidad de sistemas, desarrollados por la Asociación de Contadores Públicos (AICPA) y el CICA: Este servicio pretende incrementar la confianza de la alta gerencia, clientes y socios, con respecto a la confiabilidad en los sistemas por una empresa o actividad en particular. Este modelo incluye elementos como: infraestructura, software de cualquier naturaleza, personal especializado y usuarios, procesos manuales y automatizados, y datos. El modelo persigue determinar si un sistema de información es confiable, (si un sistema funciona sin errores significativos, o fallas durante un periodo de tiempo determinado bajo un ambiente dado).</li>
+<li>Modelo de evolución de capacidades de software (CMM), desarrollado por el Instituto de Ingeniería de software (SEI): Este modelo hace posible evaluar las capacidades o habilidades para ejecutar, de una organización, con respecto al desarrollo y mantenimiento de sistemas de información. Consiste en 18 sectores clave, agrupados alrededor de cinco niveles de madurez. Se puede considerar que CMM es la base de los principios de evaluación recomendados por COBIT, así como para algunos de los procesos de administración de COBIT.</li>
+<li>Administración de sistemas de información: una herramienta de evaluación práctica, desarrollado por la directiva de recursos de tecnología de información (ITRB): Este es una herramienta de evaluación que permite a entidades gubernamentales, comprender la implementación estratégica de tecnología de información y comunicación electrónica que puede apoyar su misión e incrementar sus productos y servicios.</li>
+<li>Guía para el cuerpo de conocimientos de administración de proyectos, desarrollado por el comité de estándares del instituto de administración de proyectos: esta guía está enfocada en las mejores prácticas sobre administración de proyectos. Se refiere a aspectos sobre los diferentes elementos necesarios para una administración exitosa de proyectos de cualquier naturaleza. En forma precisa, este documento identifica y describe las prácticas generalmente aceptadas de administración de proyectos que pueden ser implementadas en las organizaciones.</li>
+<li>Ingeniería de seguridad de sistemas – Modelo de madurez de capacidades (SSE – CMM), desarrollado por la agencia de seguridad nacional (NSA) con el apoyo de la Universidad de Carnegie Mellon: Este modelo describe las características esenciales de una arquitectura de seguridad organizacional para tecnología de información y comunicación electrónica, de acuerdo con las prácticas generalmente aceptadas observadas en las organizaciones.</li>
+<li>Administración de seguridad de información: aprendiendo de organizaciones líderes, desarrollado por la oficina de contabilidad general de los Estados Unidos (GAO): este modelo considera ocho organizaciones privadas reconocidas como líderes respecto a seguridad en cómputo. Este trabajo hace posible la identificación de 16 prácticas necesarias para asegurar una adecuada administración de la seguridad de cómputo, las cuáles deben ser suficientes para incrementar significativamente el nivel de administración de seguridad en tecnología de información y comunicación electrónica.</li>
+</ol>
+<p><strong>El Modelo COBIT para auditoria y control de sistemas de información</strong></p>
+<p>La evaluación de los requerimientos del negocio, los recursos y procesos IT, son puntos bastante importantes para el buen funcionamiento de una compañía y para el aseguramiento de su supervivencia en el mercado. COBIT es precisamente un modelo para auditar la gestión y control de los sistemas de información y tecnología, orientado a todos los sectores de una organización, es decir, administradores IT, usuarios y por supuesto, los auditores involucrados en el proceso.</p>
+<p>Las siglas COBIT significan Objetivos de Control para Tecnología de Información (Control Objetives for Information Systems and related Tecnology). El modelo es el resultado de una investigación con expertos de varios países, desarrollado por ISACA (Information Systems Audit and Control Association).</p>
+<p>COBIT, lanzado en 1996, es una herramienta de gobierno de TI que ha cambiado la forma en que trabajan los profesionales de tecnología. Vinculando tecnología informática y prácticas de control, el modelo COBIT consolida y armoniza estándares de fuentes globales prominentes en un recurso crítico para la gerencia, los profesionales de control y los auditores.</p>
+<p>La estructura del modelo COBIT propone un marco de acción donde se evalúan los criterios de información, como por ejemplo la seguridad y calidad, se auditan los recursos que comprenden la tecnología de información, como por ejemplo el recurso humano, instalaciones, sistemas, entre otros, y finalmente se realiza una evaluación sobre los procesos involucrados en la organización.</p>
+<p>“La adecuada implementación de COBIT en una organización, provee una herramienta automatizada, para evaluar de manera ágil y consistente el cumplimiento de los objetivos de control y controles detallados, que aseguran que los procesos y recursos de información y tecnología contribuyen al logro de los objetivos del negocio en un mercado cada vez más exigente, complejo y diversificado. Cualquier tipo de empresa puede adoptar una metodología COBIT, como parte de un proceso de reingeniería en aras de reducir los índices de incertidumbre sobre vulnerabilidades y riesgos de los recursos IT y consecuentemente, sobre la posibilidad de evaluar el logro de los objetivos del negocio apalancado en procesos tecnológicos”, señaló un informe de ETEK.</p>
+<p>COBIT se aplica a los sistemas de información de toda la empresa, incluyendo los computadores personales y las redes. Está basado en la filosofía de que los recursos TI necesitan ser administrados por un conjunto de procesos naturalmente agrupados para proveer la información pertinente y confiable que requiere una organización para lograr sus objetivos.</p>
+<p><strong>Criterios de información de COBIT</strong></p>
+<p>Para satisfacer los objetivos del negocio, la información necesita adaptarse a ciertos criterios de control, los cuales son referidos en COBIT como requerimientos de información del negocio. Con base en los requerimientos más amplios de calidad, fiduciarios y de seguridad, se definieron los siguientes siente criterios de información:</p>
+<ul>
+<li><strong>La efectividad</strong> tienen que ver con que la información sea relevante y pertinente a los procesos del negocio, y se propone de una manera oportuna, correcta, consistente y utilizable.</li>
+<li><strong>La eficiencia</strong> consiste en que la información sea generada con el óptimo (más productivo y económico) uso de los recursos.</li>
+<li><strong>La confidencialidad</strong> se refiere a la protección de información sensitiva contra revelación no autorizada.</li>
+<li><strong>La integridad</strong> está relacionada con la precisión y completitud de la información, así como con su validez de acuerdo a los valores y expectativas del negocio.</li>
+<li><strong>La disponibilidad</strong> se refiere a que la información esté disponible cuando sea requerida por los procesos del negocio en cualquier momento. También concierne a la protección de los recursos y las capacidades necesarias asociadas.</li>
+<li><strong>El cumplimiento</strong> tienen que ver con acatar aquellas leyes, reglamentos y acuerdos contractuales a los cuales está sujeto el proceso de negocios, es decir, criterios de negocios impuestos externamente, así como políticas internas.</li>
+<li><strong>La confiabilidad</strong> se refiere a proporcionar la información apropiada para que la gerencia administre la entidad y ejerza sus responsabilidades fiduciarias y de gobierno.</li>
+</ul>
+<p>Los productos COBIT se han organizado en tres niveles, diseñados para dar soporte a lo siguiente:</p>
+<ul>
+<li>Administración y consejos ejecutivos.</li>
+<li>Administración del negocio y de TI.</li>
+<li>Profesionales en Gobierno, aseguramiento, control y seguridad.</li>
+</ul>
+<p>Figura de Diagrama de Contenido del COBIT:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/diagrama_contenido_cobit.png?w=825" alt=""></p>
+<p>El diagrama de contenido de COBIT mostrado presenta las audiencias principales, sus preguntas sobre gobierno TI y los productos que generalmente les aplican para proporcionar las respuestas. También hay productos derivados para propósitos específicos, para dominios tales como seguridad o empresas especificas.</p>
+<p>El conjunto de lineamientos y estándares internacionales conocidos como COBIT, define un marco de referencia que clasifica los procesos de las unidades de tecnología de información de las organizaciones en cuatro “dominios” principales, a saber:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/dominios_cobit.png?w=825" alt=""></p>
+<ul>
+<li><strong>Planear y organizar (PO)</strong> : Proporciona dirección para la entrega de soluciones (AI) y la entrega de servicios (DS).</li>
+<li><strong>Adquirir e implementar (AI)</strong> : Proporciona las soluciones y las pasa para convertirlas en servicios.</li>
+<li><strong>Entregar y dar soporte (DS)</strong> : Recibe las soluciones y las hace utilizables por los usuarios finales.</li>
+<li><strong>Monitorear y evaluar (ME)</strong> : Monitorear todos los procesos para asegurar que se sigue la dirección provista.</li>
+</ul>
+<p><strong>Planificación y organización PO</strong></p>
+<ul>
+<li>PO1 Definir un plan estratégico de TI</li>
+<li>PO2 Definir la arquitectura de la información</li>
+<li>PO3 Determinar la dirección tecnológica</li>
+<li>PO4 Definir los procesos, organización y relaciones de TI</li>
+<li>PO5 Administrar la inversión en TI</li>
+<li>PO6 Comunicar las aspiraciones y la dirección de la gerencia</li>
+<li>PO7 Administrar recursos humanos de TI</li>
+<li>PO8 Administrar la calidad</li>
+<li>PO9 Evaluar y administrar los riesgos de TI</li>
+<li>PO10 Administrar proyectos</li>
+</ul>
+<p><strong>Adquisición e implantación AI</strong></p>
+<ul>
+<li>AI1 Identificar soluciones automatizadas</li>
+<li>AI2 Adquirir y mantener software aplicativo</li>
+<li>AI3 Adquirir y mantener infraestructura tecnológica</li>
+<li>AI4 Facilitar la operación y el uso</li>
+<li>AI5 Adquirir recursos de TI</li>
+<li>AI6 Administrar cambios</li>
+<li>AI7 Instalar y acreditar soluciones y cambios</li>
+</ul>
+<p><strong>Soporte y Servicios DS</strong></p>
+<ul>
+<li>DS1 Definir y administrar los niveles de servicio</li>
+<li>DS2 Administrar los servicios de terceros</li>
+<li>DS3 Administrar el desempeño y la capacidad</li>
+<li>DS4 Garantizar la continuidad del servicio</li>
+<li>DS5 Garantizar la seguridad de los sistemas</li>
+<li>DS6 Identificar y asignar costos</li>
+<li>DS7 Educar y entrenar a los usuarios</li>
+<li>DS8 Administrar la mesa de servicio y los incidentes</li>
+<li>DS9 Administrar la configuración</li>
+<li>DS10 Administrar los problemas</li>
+<li>DS11 Administrar los datos</li>
+<li>DS12 Administrar el ambiente físico</li>
+<li>DS13 Administrar las operaciones</li>
+</ul>
+<p><strong>Monitoreo y evaluación ME</strong></p>
+<ul>
+<li>ME1 Monitorear y evaluar el desempeño de TI</li>
+<li>ME2 Monitorear y evaluar el control interno</li>
+<li>ME3 Garantizar el cumplimiento regulatorio</li>
+<li>ME4 Proporcionar gobierno de TI</li>
+</ul>
+<p>Estos dominios agrupan objetivos de control de alto nivel que cubren tanto los aspectos de información, como de la tecnología que la respalda. Estos dominios y objetivos de control facilitan que la generación y procesamiento de la información cumplan con las características de efectividad, eficiencia, confidencialidad, integridad, disponibilidad, cumplimiento y confiabilidad.</p>
+<p>El cubo de COBIT:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/01/cubo_cobit.png?w=825" alt=""></p>
+<p>Asimismo, se debe tomar encuenta los recursos que proporciona la tecnología de información, tales como: datos, aplicaciones, plataformas tecnológicas, instalaciones y recurso humano.</p>
+<p><strong>Dominios de COBIT</strong></p>
+<p>Entendiéndose como dominio, la agrupación natural de procesos, normalmente corresponden a un dominio o una responsabilidad organizacional, los procesos a su vez son conjuntos o series de actividades unidas con delimitación o cortes de control y las actividades son acciones requeridas para lograr un resultado medible.</p>
+<p>COBIT proporciona una lista completa de procesos que puede ser utilizada para verificar que se completan las actividades y responsabilidades; sin embargo, no es necesario que apliquen todas, y, aun más, se pueden combinar como se necesite por cada empresa.</p>
+<p><strong>Dominio: Planificación y organización (PO)</strong></p>
+<p>Este dominio cubre las estrategias y tácticas, y se refiere a la identificación de la forma en que la tecnología de información puede contribuir de la mejor manera al logro de los objetivos de negocio. Además, la consecución de la visión estratégica necesita ser planeada, comunicada y administrada desde diferentes perspectivas. Finalmente, deberán establecerse una organización y una infraestructura tecnológica apropiadas.</p>
+<p>Procesos:</p>
+<p><em>PO1 Definición de un plan estratégico</em></p>
+<p>Objetivo: Lograr un balance óptimo entre las oportunidades de tecnología de información y los requerimientos de TI de negocio, para asegurar sus logros futuros.</p>
+<p>Su realización se concreta a través de un proceso de planeación estratégica emprendido en intervalos regulares dando lugar a planes a largo plazo, los que deberán ser traducidos periódicamente en planes operacionales estableciendo metas claras y concretas a corto plazo, teniendo en cuenta:</p>
+<ul>
+<li>La definición de objetivos de negocio y necesidades de TI, la alta gerencia será la responsable de desarrollar e implementar planes a largo y corto plazo que satisfagan la misión y las metas generales de la organización.</li>
+<li>El inventario de soluciones tecnológicas e infraestructura actual, deberá evaluar los sistemas existentes en términos de: nivel de automatización de negocio, funcionalidad, estabilidad, complejidad, costo y fortalezas y debilidades, con el propósito de determinar el nivel de soporte que reciben los requerimientos del negocio de los sistemas existentes.</li>
+<li>Los cambios organizacionales, se deberá asegurar que se establezca un proceso para modificar oportunamente y con precisión el plan a largo plazo de tecnología de información con el fin de adaptar los cambios al plan a largo plazo de la organización y los cambios en las condiciones de la TI.</li>
+<li>Estudios de factibilidad oportunos, para que se puedan obtener resultados efectivos.</li>
+</ul>
+<p><em>PO2 Definición de la arquitectura de información</em></p>
+<p>Objetivo: satisfacer los requerimientos de negocio, organizando de la mejor manera posible los sistemas de información, a través de la creación y mantenimiento de un modelo de información de negocio, asegurándose que se definan los sistemas apropiados para optimizar la utilización de esta información, tomando en consideración:</p>
+<ul>
+<li>La documentación deberá conservar consistencia con las necesidades permitiendo a los responsables llevar a cabo sus tareas eficiente y oportunamente.</li>
+<li>El diccionario de datos, el cual incorpora las reglas de sintaxis de datos de la organización deberá ser continuamente actualizado.</li>
+<li>La propiedad de la información y la clasificación de severidad con el que se se establecerá un marco de referencia de clasificación general relativo a la ubicación de datos en clases de información.</li>
+</ul>
+<p><em>PO3 Determinación de la dirección tecnológica</em></p>
+<p>Objetivo: aprovechar al máximo la tecnología disponible o tecnología emergente, satisfaciendo los requerimientos de negocio, a través de la creación y mantenimiento de un plan de infraestructura tecnológica, tomando en consideración:</p>
+<ul>
+<li>La capacidad de adecuación y evolución de la infraestructura actual, que deberá concordar con los planes a largo y corto plazo de tecnología de información y debiendo abarcar aspectos tales como arquitectura de sistemas, dirección tecnológica y estrategias de migración.</li>
+<li>El monitoreo de desarrollos tecnológicos que serán tomados en consideración durante el desarrollo y mantenimiento del plan de infraestructura tecnológica.</li>
+<li>Las contingencias (por ejemplo, redundancia, resistencia, capacidad de adecuación y evolución de la infraestructura), con lo que se evaluará sistemáticamente el plan de infraestructura tecnológica.</li>
+<li>Planes de adquisición, los cuales deberán reflejar las necesidades identificadas en el plan de infraestructura tecnológica.</li>
+</ul>
+<p><em>PO4 Definición de la organización y de las relaciones de TI</em></p>
+<p>Objetivo: prestación de servicios de TI.</p>
+<p>Esto se realiza por medio de una organización conveniente en número y habilidades, con tareas y responsabilidades definidas y comunicadas, teniendo en cuenta:</p>
+<ul>
+<li>El comité de dirección el cual se encargará de vigilar la función de servicios de información y sus actividades.</li>
+<li>Propiedad, custodia, la gerencia deberá crear una estructura para designar formalmente a los propietarios y custodios de los datos. Sus funciones y responsabilidades deberán estar claramente definidas.</li>
+<li>Supervisión, para asegurar que las funciones y responsabilidades sean llevadas a cabo apropiadamente.</li>
+<li>Segregación de funciones, con la que se evitará la posibilidad de que un solo individuo resuelva un proceso crítico.</li>
+<li>Los roles y responsabilidades, la gerencia deberá asegurarse de que todo el personal deberá conocer y contar con la autoridad suficiente para llevar a cabo las funciones y responsabilidades que le hayan sido asignadas.</li>
+<li>La descripción de puestos, deberá delinear claramente tanto la responsabilidad como la autoridad, incluyendo las definiciones de las habilidades y la experiencia necesarias para el puesto, y ser adecuadas para su utilización en evaluaciones de desempeño.</li>
+<li>Los niveles de asignación de personal, deberán hacerse evaluaciones de requerimientos regularmente para asegurar una asignación de personal adecuada en el presente y en el futuro.</li>
+<li>El personal clave, la gerencia deberá definir e identificar al personal clave de tecnología de información.</li>
+</ul>
+<p><em>PO5 Manejo de la inversión</em></p>
+<p>Objetivo: tiene como finalidad la satisfacción de los requerimientos de negocio, asegurando el financiamiento y el control de desembolsos de recursos financieros. Su realización se concreta a través de presupuestos periódicos sobre inversiones y operaciones establecidas y aprobados por el negocio, teniendo en cuenta:</p>
+<ul>
+<li>Las alternativas de financiamiento, se deberán investigar diferentes alternativas de financiamiento.</li>
+<li>El control del gasto real, se deberá tomar como base el sistema de contabilidad de la organización, mismo que deberá registrar, procesar y reportar rutinariamente los costos asociados con las actividades de la función de servicios de información.</li>
+<li>La justificación de costos y beneficios, deberá establecerse un control gerencial que garantice que la prestación de servicios por parte de la función de servicios de información se justifique en cuanto a costos. Los beneficios derivados de las actividades de TI deberán ser analizados en forma similar.</li>
+</ul>
+<p><em>PO6 Comunicación de la dirección y aspiraciones de la gerencia</em></p>
+<p>Objetivo: Asegura el conocimiento y comprensión de los usuarios sobre las aspiraciones de alto nivel (gerencia), se concreta a través de políticas establecidas y transmitidas a la comunidad de usuarios, necesitándose para esto estándares para traducir las opciones estratégicas en regalas de usuario prácticas y utilizables. Toma en cuenta:</p>
+<ul>
+<li>Los código de ética/conducta, el cumplimiento de las reglas de ética, conducta, seguridad y estándares de control interno deberá ser establecido y promovido por la Alta Gerencia.</li>
+<li>Las directrices tecnológicas.</li>
+<li>El cumplimiento, la Gerencia deberá también asegurar y monitorear la duración de la implementación de sus políticas.</li>
+<li>El compromiso con calidad, la gerencia de la función de servicios de información deberá definir, documentar y mantener una filosofía de calidad, debiendo ser comprendidos, implementados y mantenidos por todos los niveles de la función de servicios de información.</li>
+<li>Las políticas de seguridad y control interno, la alta gerencia deberá asegurar que esta política de seguridad y de control interno especifique el propósito y los objetivos, la estructura gerencial, el alcance dentro de la organización, la definición y asignación de responsabilidades para su implementación a todos los niveles y la definición de multas y de acciones disciplinarias asociadas con la falta de cumplimiento de estas políticas.</li>
+</ul>
+<p><em>PO7 Administración de recursos humanos</em></p>
+<p>Objetivo: Maximizar las contribuciones del personal a los procesos de TI, satisfaciendo así los requerimientos de negocio, a través de técnicas sólidas para administración de personal, tomando en consideración:</p>
+<ul>
+<li>El reclutamiento y promoción, deberá tener como base criterios objetivos, considerando factores como la educación, la experiencia y la responsabilidad.</li>
+<li>Los requerimientos de calificaciones, el personal deberá estar calificado, tomando como base una educación, entrenamiento y o experiencia apropiados, según se requiera.</li>
+<li>La capacitación, los programas de educación y entrenamiento estarán dirigidos a incrementar los niveles de habilidad técnica y administrativa del personal.</li>
+<li>La evaluación objetiva y medible del desempeño, se deberá asegurar que dichas evaluaciones sean llevada a cabo regularmente según los estándares establecidos y las responsabilidades específicas del puesto. Los empleados deberán recibir asesoría sobre su desempeño o su conducta cuando esto sea apropiado.</li>
+</ul>
+<p><em>PO8 Asegurar el cumplimiento con los requerimientos externos</em></p>
+<p>Objetivo: Cumplir con obligaciones legales, regulatorias y contractuales.</p>
+<p>Para ello se realiza una identificación y análisis de los requerimientos externos en cuanto a su impacto en TI, llevando a cabo las medidas apropiadas para cumplir con ellos y se toma en consideración:</p>
+<ul>
+<li>Definición y mantenimiento de procedimientos para la revisión de requerimientos externos, para la coordinación de estas actividades y para el cumplimiento continuo de los mismos.</li>
+<li>Leyes, regulaciones y contratos.</li>
+<li>Revisiones regulares en cuanto a cambios.</li>
+<li>Búsqueda de asistencia legal y modificaciones.</li>
+<li>Seguridad y ergonomía con respecto al ambiente de trabajo de los usuarios y el personal de la función de servicios de información.</li>
+<li>Privacidad.</li>
+<li>Propiedad intelectual.</li>
+<li>Flujo de datos externos y criptografía.</li>
+</ul>
+<p><em>PO9 Evaluación de riesgos</em></p>
+<p>Objetivo: Asegurar el logro de los objetivos de TI y responder a las amenazas hacia la provisión de servicios de TI.</p>
+<p>Para ello se logra la participación de la propia organización en la identificación de riesgos de TI y en el análisis de impacto, tomando medidas económicas para mitigar los riesgos y se toma en consideración:</p>
+<ul>
+<li>Identificación, definición y actualización regular de los diferentes tipos de riesgos de TI (por ej: tecnológicos, de seguridad, etc.) de manera que se pueda determinar la manera en la que los riesgos deben ser manejados a un nivel aceptable.</li>
+<li>Definición de alcances, límites de los riesgos y la metodología para las evaluaciones de los riesgos.</li>
+<li>Actualización de evaluación de riesgos.</li>
+<li>Metodología de evaluación de riesgos.</li>
+<li>Medición de riesgos cualitativos y/o cuantitativos.</li>
+<li>Definición de un plan de acción contra los riesgos para asegurar que existan controles y medidas de seguridad económicas que mitiguen los riesgos en forma continua.</li>
+<li>Aceptación de riesgos dependiendo de la identificación y la medición del riesgo, de la política organizacional, de la incertidumbre incorporada al enfoque de evaluación de riesgos y de que tan económico resulte implementar protecciones y controles.</li>
+</ul>
+<p><em>PO10 Administración de proyectos</em></p>
+<p>Objetivo: Establecer prioridades y entregar servicios oportunamente y de acuerdo al presupuesto de inversión.</p>
+<p>Para ello se realiza una identificación y priorización de los proyectos en línea con el plan operacional por parte de la misma organización. Además, la organización deberá adoptar y aplicar sólidas técnicas de administración de proyectos para cada proyecto emprendido y se toma en consideración:</p>
+<ul>
+<li>Definición de un marco de referencia general para la administración de proyectos que defina el alcance y los límites del mismo, así como la metodología de administración de proyectos a ser adoptada y aplicada para cada proyecto emprendido. La metodología deberá cubrir, como mínimo, la asignación de responsabilidades, la determinación de tareas, la realización de presupuestos de tiempo y recursos, los avances, los puntos de revisión y las aprobaciones.</li>
+<li>El involucramiento de los usuarios en el desarrollo, implementación o modificación de los proyectos.</li>
+<li>Asignación de responsabilidades y autoridades a los miembros del personal asignados al proyecto.</li>
+<li>Aprobación de fases de proyecto por parte de los usuarios antes de pasar a la siguiente fase.</li>
+<li>Presupuestos de costos y horas hombre.</li>
+<li>Planes y metodologías de aseguramiento de calidad que sean revisados y acordados por las partes interesadas.</li>
+<li>Plan de administración de riesgos para eliminar o minimizar los riesgos.</li>
+<li>Planes de prueba, entrenamiento, revisión post-implementación.</li>
+</ul>
+<p><em>PO11 Administración de calidad</em></p>
+<p>Objetivo: satisfacer los requerimientos del cliente.</p>
+<p>Para ello se realiza una planeación, implementación y mantenimiento de estándares y sistemas de administración de calidad por parte de la organización y se toma en consideración:</p>
+<ul>
+<li>Definición y mantenimiento regular del plan de calidad, el cual deberá promover la filosofía de mejora continua y contestar a las preguntas básicas de qué, quién y cómo.</li>
+<li>Responsabilidades de aseguramiento de calidad que determine los tipos de actividades de aseguramiento de calidad tales como revisiones, auditorias, inspecciones, etc. que deben realizarse para alcanzar los objetivos del plan general de calidad.</li>
+<li>Metodologías del ciclo de vida de desarrollo de sistemas que rija el proceso de desarrollo, adquisión, implementación y mantenimiento de sistemas de información.</li>
+<li>Documentación de pruebas de sistemas y programas.</li>
+<li>Revisiones y reportes de aseguramiento de calidad.</li>
+</ul>
+<p><strong>Dominio: Adquisión e implementación (AI)</strong></p>
+<p>Para llevar a cabo la estrategia de TI, las soluciones de TI deben ser identificadas, desarrolladas o adquiridas, así como implementadas e integradas dentro del proceso del negocio. Además, este dominio cubre los cambios y el mantenimiento realizados a sistemas existentes.</p>
+<p>Procesos:</p>
+<p><em>AI1 Identificación de soluciones automatizadas</em></p>
+<p>Objetivo: Asegurar el mejor enfoque para cumplir con los requerimientos del usuario.</p>
+<p>Para ello se realiza un análisis claro de las oportunidades alternativas comparadas contra los requerimientos de los usuarios y toma en consideración:</p>
+<ul>
+<li>Definición de requerimientos de información para poder aprobar un proyecto de desarrollo.</li>
+<li>Estudios de factibilidad con la finalidad de satisfacer los requerimientos del negocio establecidos para el desarrollo de un proyecto.</li>
+<li>Arquitectura de información para tener en consideración el modelo de datos al definir soluciones y analizar la factibilidad de las mismas.</li>
+<li>Seguridad con relación de costo-beneficio favorable para controlar que los costos no excedan los beneficios.</li>
+<li>Pistas de auditoria para ello deben existir mecanismos adecuados. Dichos mecanismos deben proporcionar la capacidad de proteger datos sensitivos (ej. Identificación de usuarios contra divulgación o mal uso).</li>
+<li>Contratación de terceros con el objeto de adquirir productos con buena calidad y excelente estado.</li>
+<li>Aceptación de instalaciones y tecnología a través del contrato con el proveedor donde se acuerda un plan de aceptación para las instalaciones y tecnología especifica a ser proporcionada.</li>
+</ul>
+<p><em>AI2 Adquisición y mantenimiento del software aplicativo</em></p>
+<p>Objetivo: Proporcionar funciones automatizadas que soporten efectivamente al negocio.</p>
+<p>Para ello se definen declaraciones específicas sobre requerimientos funcionales y operacionales y una implementación estructurada con entregables claros y se toma en consideración:</p>
+<ul>
+<li>Requerimientos de usuarios, para realizar un correcto análisis y obtener un software claro y fácil de usar.</li>
+<li>Requerimientos de archivo, entrada, proceso y salida.</li>
+<li>Interface usuario-máquina asegurando que el software sea fácil de utilizar y que sea capaz de auto documentarse.</li>
+<li>Personalización de paquetes.</li>
+<li>Realizar pruebas funcionales (unitarias, de aplicación, de integración y de carga y estrés), de acuerdo con el plan de prueba del proyecto y con los estándares establecidos antes de ser aprobado por los usuarios.</li>
+<li>Controles de aplicación y requerimientos funcionales.</li>
+<li>Documentación (materiales de consulta y soporte para usuarios) con el objeto de que los usuarios puedan aprender a utilizar el sistema o puedan sacarse todas aquellas inquietudes que se les puedan presentar.</li>
+</ul>
+<p><em>AI3 Adquisición y mantenimiento de la infraestructura tecnológica</em></p>
+<p>Objetivo: proporcionar las plataformas apropiadas para soportar aplicaciones de negocios.</p>
+<p>Para ello se realizará una evaluación del desempeño del hardware y software, la provisión de mantenimiento preventivo de hardware y la instalación, seguridad y control del software del sistema y toma en consideración:</p>
+<ul>
+<li>Evaluación de tecnología para identificar el impacto del nuevo hardware o software sobre el rendimiento del sistema general.</li>
+<li>Mantenimiento preventivo del hardware con el objeto de reducir la frecuencia y el impacto de fallas de rendimiento.</li>
+<li>Seguridad del software de sistema, instalación y mantenimiento para no arriesgar la seguridad de los datos y programas ya almacenados en el mismo.</li>
+</ul>
+<p><em>AI4 Desarrollo y mantenimiento de procedimientos</em></p>
+<p>Objetivo: Asegurar el uso apropiado de las aplicaciones y de las soluciones tecnológicas establecidas.</p>
+<p>Para ello se realiza un enfoque estructurado del desarrollo de manuales de procedimientos de operaciones para usuarios, requerimientos de servicio y material de entrenamiento y toma en consideración:</p>
+<ul>
+<li>Manuales de procedimientos de usuarios y controles, de manera que los mismos permanezcan en permanente actualización para el mejor desempeño y control de los usuarios.</li>
+<li>Manuales de operaciones y controles, de manera que estén en permanente actualización.</li>
+<li>Materiales de entrenamiento enfocados al suso del sistema en la práctica diaria.</li>
+</ul>
+<p><em>AI5 Instalación y aceptación de los sistemas</em></p>
+<p>Objetivo: Verificar y confirmar que la solución sea adecuada para el propósito deseado.</p>
+<p>Para ello se realiza una migración de instalación, conversión y plan de aceptaciones adecuadamente formalizadas y toma en consideración:</p>
+<ul>
+<li>Capacitación del personal de acuerdo al plan de entrenamiento definido y los materiales relacionados.</li>
+<li>Conversión / carga de datos, de manera que los elementos necesarios del sistema anterior sean convertidos al sistema nuevo.</li>
+<li>Pruebas específicas (cambios, desempeño, aceptación final, operacional) con el objeto de obtener un producto satisfactorio.</li>
+<li>Acreditación de manera que la Gerencia de operaciones y usuaria acepten los resultados de las pruebas y el nivel de seguridad para los sistemas, junto con el riesgo residual existente.</li>
+<li>Revisiones post implementación con el objeto de reportar si el sistema proporcionó los beneficios esperados de la manera más económica.</li>
+</ul>
+<p><em>AI6 Administración de los cambios</em></p>
+<p>Objetivo: minimizar la probabilidad de interrupciones, alteraciones no autorizadas y errores.</p>
+<p>Esto se hace posible a través de un sistema de administración que permita el análisis, implementación y seguimiento de todos los cambios requeridos y llevados a cabo a la infraestructura de TI actual y toma en consideración:</p>
+<ul>
+<li>Identificación de cambios tanto internos como por parte de proveedores.</li>
+<li>Procedimientos de categorización, priorización y emergencia de solicitudes de cambios.</li>
+<li>Evaluación del impacto que provocaran los cambios.</li>
+<li>Autorización de cambios.</li>
+<li>Manejo deliberación de manera que la liberación de software esté regida por procedimientos formales asegurando aprobación, empaque, pruebas de regresión, entrega, etc.</li>
+<li>Distribución de software, estableciendo medidas de control especificas para asegurar la distribución de software correcto al lugar correcto, con integridad y de manera oportuna.</li>
+</ul>
+<p><strong>Dominio: Entregar y dar soporte (DS)</strong></p>
+<p>En este dominio se hace referencia a la entrega de los servicios requeridos, que abarca desde las operaciones tradicionales hasta el entrenamiento, pasando por seguridad y aspectos de continuidad. Con el fin de proveer servicios, deberán establecerse los procesos de soporte necesarios. Este dominio incluye el procesamiento de los datos por sistemas de aplicación, frecuentemente clasificados como controles de aplicación.</p>
+<p>Procesos:</p>
+<p><em>DS1 Definición de niveles de servicio</em></p>
+<p>Objetivo: Establecer una comprensión común del nivel de servicio requerido.</p>
+<p>Para ello se establecen convenios de niveles de servicio que formalicen los criterios de desempeño contra los cuales se medirá la cantidad y la calidad del servicio y se toma en consideración:</p>
+<ul>
+<li>Convenios formales que determinen la disponibilidad, confiabilidad, desempeño, capacidad de crecimiento, niveles de soporte proporcionados al usuario, plan de contingencia / recuperación, nivel mínimo aceptable de funcionalidad del sistema satisfactoriamente liberado, restricciones (límites en la cantidad de trabajo), cargos por servicio, instalaciones de impresión central (disponibilidad), distribución de impresión central y procedimiento de cambio.</li>
+<li>Definición de las responsabilidades de los usuarios y de la función de servicios de información.</li>
+<li>Procedimientos de desempeño que aseguren que la manera y las responsabilidades sobre las relaciones que rigen el desempeño entre todas las partes involucradas sean establecidas, coordinadas, mantenidas y comunicadas a todos los departamentos afectados.</li>
+<li>Definición de dependencias asignando un Gerente de nivel de Servicio que sea responsable de monitorear y reportar los alcances de los criterios de desempeño del servicio especificado y todos los problemas encontrados durante el procesamiento.</li>
+<li>Provisiones para elementos sujetos a cargos en los acuerdos de niveles de servicio para hacer posibles comparaciones y decisiones de niveles de servicios contra su costo.</li>
+<li>Garantías de integridad.</li>
+<li>Convenios de confidencialidad.</li>
+<li>Implementación de un programa de mejoramiento del servicio.</li>
+</ul>
+<p><em>DS2 Administración de servicios prestados por terceros</em></p>
+<p>Objetivo: Asegurar que las tareas y responsabilidades de las terceras partes estén claramente definidas, que cumplan y continúen satisfaciendo los requerimientos.</p>
+<p>Para ello se establecen medidas de control dirigidas a la revisión y monitoreo de contratos y procedimientos existentes, en cuanto a su efectividad y suficiencia, con respecto a las políticas de la organización y toma en consideración:</p>
+<ul>
+<li>Acuerdos de servicios con terceras partes a través de contratos entre la organización y el proveedor de las administración de instalaciones esté basado en niveles de procesamiento requeridos, seguridad, monitoreo y requerimientos de contingencia, así como en otras estipulaciones según sea apropiado.</li>
+<li>Acuerdos de confidencialidad. Además, se deberá calificar a los terceros y el contrato deberá definirse y acordarse para cada relación de servicio con un proveedor.</li>
+<li>Requerimientos legales regulatorios de manera de asegurar que estos concuerde con los acuerdos de seguridad identificados, declarados y acordados.</li>
+<li>Monitoreo de la entrega de servicio con el fin de asegurar el cumplimiento de los acuerdos del contrato.</li>
+</ul>
+<p><em>DS3 Administración de desempeño y capacidad</em></p>
+<p>Objetivo: Asegurar que la capacidad adecuada está disponible y que se esté haciendo el mejor uso de ella para alcanzar el desempeño deseado.</p>
+<p>Para ello se realizan controles de manejo de capacidad y desempeño que recopilen datos y reporten acerca del manejo de cargas de trabajo, tamaño de aplicaciones, manejo y demanda de recursos y toma en consideración:</p>
+<ul>
+<li>Requerimientos de disponibilidad y desempeño de los servicios de sistemas de información.</li>
+<li>Monitoreo y reporte de los recursos de tecnología de información.</li>
+<li>Utilizar herramientas de modelado apropiadas para producir un modelo del sistema actual para apoyar el pronóstico de los requerimientos de capacidad, confiabilidad de configuración, desempeño y disponibilidad.</li>
+<li>Administración de capacidad estableciendo un proceso de planeación para la revisión del desempeño y capacidad de hardware con el fin de asegurar que siempre exista una capacidad justificable económicamente para procesar cargas de trabajo con cantidad y calidad de desempeño.</li>
+<li>Prevenir que se pierda la disponibilidad de recursos mediante la implementación de mecanismos de tolerancia de fallas, de asignación de recursos y de prioridad de tareas.</li>
+</ul>
+<p><em>DS4 Asegurar el servicio continuo</em></p>
+<p>Objetivo: mantener el servicio disponible de acuerdo con los requerimientos y continuar su provisión en caso de interrupciones.</p>
+<p>Para ello se tiene un plan de continuidad probado y funcional, que esté alineado con el plan de continuidad del negocio y relacionado con los requerimientos de negocio y toma en consideración:</p>
+<ul>
+<li>Planificación de severidad.</li>
+<li>Plan documentado.</li>
+<li>Procedimientos alternativos.</li>
+<li>Respaldo y recuperación.</li>
+<li>Pruebas y entrenamiento sistemático y singulares.</li>
+</ul>
+<p><em>DS5 Garantizar la seguridad de sistemas</em></p>
+<p>Objetivo: salvaguardar la información contra uso no autorizados, divulgación, modificación, daño o pérdida.</p>
+<p>Para ello se realizan controles de acceso lógico que aseguren que el acceso a sistemas, datos y programas está restringido a usuarios autorizados y toma en consideración:</p>
+<ul>
+<li>Autorización, autenticación y el acceso lógico junto con el uso de los recursos de TI deberá restringirse a través de la instrumentación de mecanismos de autenticación de usuarios identificados y recursos asociados con las reglas de acceso.</li>
+<li>Perfiles e identificación de usuarios estableciendo procedimientos para asegurar acciones oportunas relacionadas con la requisición, establecimiento, emisión, suspensión y suspensión de cuentas de usuario.</li>
+<li>Administración de llaves criptográficas definiendo e implementando procedimientos y protocolos a ser utilizados en la generación, distribución, certificación, almacenamiento, entrada, utilización y archivo de llaves criptográficas con el fin de asegurar la protección de las mismas.</li>
+<li>Manejo,reporte y seguimiento de incidentes implementando capacidad para la atención de los mismos.</li>
+<li>Prevención y detección de virus tales como Caballos de Troya, estableciendo adecuadas medidas de control preventivas, detectivas y correctivas.</li>
+<li>Utilización de Firewalls si existe una conexión con Internet u otras redes públicas en la organización.</li>
+</ul>
+<p><em>DS6 Educación y entrenamiento de usuarios</em></p>
+<p>Objetivo: Asegurar que los usuarios estén haciendo un uso efectivo de la tecnología y estén conscientes de los riesgos y responsabilidades involucrados.</p>
+<p>Para ello se realiza un plan completo de entrenamiento y desarrollo y se toma en consideración:</p>
+<ul>
+<li>Currículo de entrenamiento estableciendo y manteniendo procedimientos para identificar y documentar las necesidades de entrenamiento de todo el personal que haga uso de los servicios de información.</li>
+<li>Campañas de concienciación, definiendo los grupos objetivos, identificar y asignar entrenadores y organizar oportunamente las sesiones de entrenamiento.</li>
+<li>Técnicas de concienciación proporcionando un programa de educación y entrenamiento que incluya conducta ética de la función de servicios de información.</li>
+</ul>
+<p><em>DS7 Identificación y asignación de costos</em></p>
+<p>Objetivo: asegurar un conocimiento concreto de los costos atribuibles a los servicios de TI.</p>
+<p>Para ello se realiza un sistema de contabilidad de costos que asegure que éstos sean registrados, calculados y asignados a los niveles de detalle requeridos y toma en consideración:</p>
+<ul>
+<li>Los elementos sujetos a cargos deben ser recursos identificables, medibles y predecibles para los usuarios.</li>
+<li>Procedimientos y políticas de cargo que fomenten el uso apropiado de los recursos de cómputo y aseguren el trato justo de los departamentos usuarios y sus necesidades.</li>
+<li>Tarifas definiendo e implementando procedimientos de costeo de prestar servicios, para ser analizados, monitoreados, evaluados asegurando al mismo tiempo la economía.</li>
+</ul>
+<p><em>DS8 Apoyo y asistencia a los clientes de TI</em></p>
+<p>Objetivo: asegurar que cualquier problema experimentado por los usuarios sea atendido apropiadamente.</p>
+<p>Para ello se realiza un buró de ayuda que proporcione soporte y asesoría de primera línea y toma en consideración:</p>
+<ul>
+<li>Consultas de usuarios y respuesta a problemas estableciendo un soporte de una función de buró de ayuda.</li>
+<li>Monitoreo de consultas y despacho estableciendo procedimientos que aseguren que las preguntas de los clientes que pueden ser resueltas sean reasignadas al nivel adecuado para atenderlas.</li>
+<li>Análisis y reporte de tendencias adecuado de las preguntas de los clientes y su solución, de los tiempos de respuesta y la identificación de tendencias.</li>
+</ul>
+<p><em>DS9 Administración de la configuración</em></p>
+<p>Objetivo: dar cuenta de todos los componentes de TI, prevenir alteraciones no autorizadas, verificar la existencia física y proporcionar una base para el sano manejo de cambios.</p>
+<p>Para ello se realizan controles que identifiquen y registren todos los activos de TI así como su localización física y un programa regular de verificación que confirme su existencia y toma en consideración:</p>
+<ul>
+<li>Registro de activos estableciendo procedimientos para asegurar que sean registrados únicamente elementos de configuración autorizados e identificables en el inventario, al momento de adquisición.</li>
+<li>Administración de cambios en la configuración asegurando que los registros de configuración reflejen el status real de todos los elementos de la configuración.</li>
+<li>Chequeo de software no autorizado revisando periódicamente las computadoras personales de la organización.</li>
+<li>Controles de almacenamiento de software definiendo un área de almacenamiento de archivos para todos los elementos de software válidos en las fases del ciclo de vida de desarrollo de sistemas.</li>
+</ul>
+<p><em>DS10 Administración de problemas</em></p>
+<p>Objetivo: Asegurar que los problemas e incidentes sean resueltos y que sus causas sean investigadas para prevenir que vuelvan a suceder.</p>
+<p>Para ello se necesita un sistema de manejo de problemas que registre y dé seguimiento a todos los incidentes, además de un conjunto de procedimientos de escalamiento de problemas para resolver de la manera más eficiente los problemas identificados. Este sistema de administración de problemas deberá también realizar un seguimiento de las causas a partir de un incidente dado.</p>
+<p><em>DS11 Administración de datos</em></p>
+<p>Objetivo: Asegurar que los datos permanezcan completos, precisos y válidos durante su entrada, actualización, salida y almacenamiento.</p>
+<p>Lo cual se logra a través de una combinación efectiva de controles generales y de aplicación sobre las operaciones de TI. Para tal fin, la gerencia deberá diseñar formatos de entrada de datos para los usuarios de manera que se minimicen los errores y las omisiones durante la creación de los datos.</p>
+<p>Este proceso deberá controlar los documentos fuentes (de donde se extraen los datos), de manera que estén completos, sean precisos y se registren apropiadamente. Se deberán crear también procedimientos que validen los datos de entrada y corrijan o detecten los datos erróneos, como así también procedimientos de validación para transacciones erróneas, de manera que éstas no sean procesadas. Cabe destacar la importancia de crear procedimientos para el almacenamiento, respaldo y recuperación de datos, teniendo un registro físico (discos, disquetes, CD y cintas magnéticas) de todas las transacciones y datos manejados por la organización, albergados tanto dentro como fuera de la empresa.</p>
+<p>La gerencia deberá asegurar también la integridad, autenticidad y confidencialidad de los datos almacenados, definiendo e implementando procedimientos para tal fin.</p>
+<p><em>DS12 Administración de las instalaciones</em></p>
+<p>Objetivo: proporcionar un ambiente físico conveniente que proteja al equipo y al personal de TI contra peligros naturales (fuego, polvo, calor excesivos) o fallas humanas lo cual se hace posible con la instalación de controles físicos y ambientales adecuados que sean revisados regularmente para su funcionamiento apropiado definiendo procedimientos que provean control de acceso del personal a las instalaciones y contemplen su seguridad física.</p>
+<p><em>DS13 Administración de la operación</em></p>
+<p>Objetivo: asegurar que las funciones importantes de soporte de TI estén siendo llevadas a cabo regularmente y de una manera ordenada.</p>
+<p>Esto se logra a través de una calendarización de actividades de soporte que sea registrada y completada en cuanto al logro de todas las actividades. Para ello, la gerencia deberá establecer y documentar procedimientos para las operaciones de tecnología de información (incluyendo operaciones de red), los cuales deberán ser revisados periódicamente para garantizar su eficiencia y cumplimiento.</p>
+<p><strong>Dominio: monitoreo y evaluación (ME)</strong></p>
+<p>Todos los procesos de una organización necesitan ser evaluados regularmente a través del tiempo para verificar su calidad y suficiencia en cuanto a los requerimientos de control, integridad y confidencialidad. Este es, precisamente, el ámbito de este dominio.</p>
+<p>Procesos:</p>
+<p><em>M1 Monitoreo del proceso</em></p>
+<p>Objetivo: Asegurar el logro de los objetivos establecidos para los procesos de TI. Lo cual se logra definiendo por parte de la gerencia reportes e indicadores de desempeño gerenciales y la implementación de sistemas de soporte así como la atención regular a los reportes emitidos.</p>
+<p>Para ello la gerencia podrá definir indicadores claves de desempeño y/o factores críticos de éxito y compararlos con los niveles objetivos propuestos para evaluar el desempeño de los procesos de la organización. La gerencia deberá también medir el grado de satisfacción de los clientes con respecto a los servicios de información proporcionados para identificar deficiencias en los niveles de servicio y establecer objetivos de mejoramiento, confeccionando informes que indiquen el avance de la organización hacia los objetivos propuestos.</p>
+<p><em>M2 Monitorear y evaluar el control interno</em></p>
+<p>Objetivo: Asegurar el logro de los objetivos de control interno establecidos para los procesos de TI.</p>
+<p>Para ello la gerencia es la encargada de monitorear la efectividad de los controles internos a través de actividades administrativas y de supervisión, comparaciones, reconciliaciones y otras acciones rutinarias, evaluar su efectividad y emitir reportes sobre ellos en forma regular. Estas actividades de monitoreo continuo por parte de la Gerencia deberán revisar la existencia de puntos vulnerables y problemas de seguridad.</p>
+<p><em>M3 Garantizar el cumplimiento con requerimientos</em></p>
+<p>Objetivo: Incrementar los niveles de confianza entre la organización, clientes y proveedores externos. Este proceso se lleva a cabo a intervalos regulares de tiempo.</p>
+<p>Para ello la gerencia deberá obtener una certificación o acreditación independientes de seguridad y control interno antes de implementar nuevos servicios de tecnología de información que resulten críticos, como así también para trabajar con nuevos proveedores de servicios de tecnología de información. Luego la gerencia deberá adoptar como trabajo rutinario tanto hacer evaluaciones periódicas sobre la efectividad de los servicios de tecnología de información y de los proveedores de estos servicios como así también asegurarse el cumplimiento de los compromisos contractuales de los servicios de tecnología de información y de los proveedores de estos servicios.</p>
+<p><em>M4 Proporcionar gobierno de TI</em></p>
+<p>Objetivo: Incrementar los niveles de confianza y beneficiarse de recomendaciones basadas en mejores prácticas de su implementación, lo que se logra con el uso de auditorias independientes desarrolladas a intervalos regulares de tiempo. Para ello la gerencia deberá establecer los estatutos para la función de auditoria, destacando en este documento la responsabilidad, autoridad y obligaciones de la auditoria. El auditor deberá ser independiente del auditado, esto significa que los auditores no deberán estar relacionados con la sección o departamento que esté siendo auditado y en lo posible deberá ser independiente de la propia empresa.</p>
+<p>Esta auditoria deberá respetar la ética y los estándares profesionales, seleccionando para ello auditores que sean técnicamente competentes, es decir que cuenten con habilidades y conocimientos que aseguren tareas efectivas y eficientes de auditoria.</p>
+<p>La función de auditoria deberá proporcionar un reporte que muestre los objetivos de la auditoria, período de cobertura, naturaleza y trabajo de auditoria realizado, así como también la organización, conclusión y recomendaciones relacionadas con el trabajo de auditoria llevado a cabo.</p>
+<p>Los 34 procesos propuestos se concretan en 32 objetivos de control detallados anteriormente.</p>
+<p>Un control se define como “las normas, estándares, procedimientos, usos y costumbres y las estructuras organizativas, diseñadas para proporcionar garantía razonable de que los objetivos empresariales se alcanzarán y que los eventos no deseados se preverán o se detectarán, y corregirán”.</p>
+<p>Un objetivo de control se define como “la declaración del resultado deseado o propuesto que se ha de alcanzar mediante la aplicación de procedimientos de control en cualquier actividad de TI”.</p>
+<p>En resumen, la estructura conceptual se puede enfocar desde tres puntos de vista:</p>
+<ul>
+<li>Los recursos de las TI.</li>
+<li>Los criterios empresariales que deben satisfacer la información.</li>
+<li>Los procesos de TI.</li>
+</ul>
+<p>Para cada uno de estos 34 procesos, tiene un enlace a las metas de negocio y TI que soporta. Información de cómo se pueden medir las metas, también se proporcionan cuáles son sus actividades clave y entregables principales, y quién es el responsable de ellas.</p>
+<h2 id="Glosario"><a href="#Glosario" class="headerlink" title="Glosario"></a>Glosario</h2><ul>
+<li><strong>Amenaza</strong> : Según [ISO/IEC 13335-1:2004], causa potencial de un incidente no deseado, el cual puede causar el daño a un sistema o la organización.</li>
+<li><strong>Análisis de riesgos</strong> : Según [ISO/IEC Guía 73:2002], uso sistemático de la información para identificar fuentes y estimar el riesgo.</li>
+<li><strong>Análisis de riesgos cualitativo</strong> : Análisis de riesgos en el que se usa una escala de puntuaciones para situar la gravedad del impacto.</li>
+<li><strong>Análisis de riesgos cuantitativo</strong> : Análisis de riesgos en función de las pérdidas financieras que causaría el impacto.</li>
+<li><strong>Auditoría</strong> : Proceso planificado y sistemático en el cual un auditor obtiene evidencias objetivas que le permitan emitir un juicio informado sobre el estado y efectividad del SGSI de una organización.</li>
+<li><strong>Auditor</strong> : Persona encargada de verificar, de manera independiente, la calidad e integridad del trabajo que se ha realizado en un área particular.</li>
+<li><strong>Autenticación</strong> : Proceso que tiene por objetivo asegurar la identificación de una persona o sistema.</li>
+<li><strong>Backup</strong> : Acción de copiar archivos o datos de forma que estén disponibles en caso de que un fallo produzca la pérdida de los originales. Esta sencilla acción evita numerosos, y a veces irremediables problemas si se realiza de forma habitual y periódica.</li>
+<li><strong>Centro de cómputo</strong> : Es un área de trabajo cuya función es la de concentrar, almacenar y procesar los datos y funciones operativas de una empresa de manera sistematizada.</li>
+<li><strong>Checklist</strong> : Lista de apoyo para el auditor con los puntos a auditar, que ayuda a mantener claros los objetivos de la auditoría, sirve de evidencia del plan de auditoría, asegura su continuidad y profundidad y reduce los prejuicios del auditor y su carga de trabajo. Este tipo de listas también se pueden utilizar durante la implantación del SGSI para facilitar su desarrollo.</li>
+<li><strong>Cliente</strong> : Cliente o ‘programa cliente’ es aquel programa que permite conectarse a un determinado sistema, servicio o red.</li>
+<li><strong>COBIT</strong> : (Control Objetives for Information and related Technology) Objetivos de Control para la información y tecnología relacionadas. Publicados y mantenidos por ISACA. Su misión es investigar, desarrollar, publicar y promover un conjunto de objetivos de control de tecnología de información, aceptados para ser empleados por gerentes de empresas y auditores.</li>
+<li><strong>Control</strong> : Las políticas, los procedimientos, las prácticas y las estructuras organizativas concebidas para mantener los riesgos de seguridad de la información por debajo del nivel de riesgo asumido.</li>
+<li><strong>Datos</strong> : Término general para la información procesada por un ordenador.</li>
+<li><strong>Desastre</strong> : Cualquier evento accidental, natural o malintencionado que interrumpe las operaciones o servicios habituales de una organización durante el tiempo suficiente como para verse la misma afectada de manera significativa.</li>
+<li><strong>Dominio</strong> : Agrupación de objetivos de control de etapas lógicas en el ciclo de vida de inversión de TI.</li>
+<li><strong>Evaluación de riesgos</strong> : Según [ISO/IEC Guía 73:2002]: proceso de comparar el riesgo estimado contra un criterio de riesgo dado con el objeto de determinar la importancia del riesgo.</li>
+<li><strong>Gestión de riesgos</strong> : Proceso de identificación, control y minimización o eliminación, a un coste aceptable, de los riesgos que afecten a la información de la organización. Incluye la valoración de riesgos y el tratamiento de riesgos. Según [ISO/IEC Guía 73:2002]: actividades coordinadas para dirigir y controlar una organización con respecto al riesgo.</li>
+<li><strong>Hardware</strong> : Conjunto de dispositivos de los que consiste un sistema. Comprende componentes tales como el teclado, el Mouse, las unidades de disco y el monitor.</li>
+<li><strong>Impacto</strong> : El coste para la empresa de un incidente de la escala que sea, que puede o no ser medido en términos estrictamente financieros ej,. pérdida de reputación, implicaciones legales, etc.</li>
+<li><strong>Información</strong> : En sentido general, es todo lo que reduce la incertidumbre y sirve para realizar acciones y tomar decisiones.</li>
+<li><strong>Integridad</strong> : Mantenimiento de la exactitud y completitud de la información y sus métodos de proceso. Según [ISO/IEC 13335-1:2004]: propiedad/característica de salvaguardar la exactitud y completitud de los activos.</li>
+<li><strong>Infraestructura</strong> : La tecnología, los recursos humanos y las instalaciones que permiten el procesamiento de las aplicaciones.</li>
+<li><strong>Internet</strong> : Interconexión de redes informáticas que permite a las computadoras conectadas comunicarse directamente.</li>
+<li><strong>Inventario de activos</strong> : Lista de todos aquellos recursos (físicos, de información, software, documentos, servicios, personas, reputación de la organización, etc.) dentro del alcance del SGSI, que tengan valor para la organización y necesiten por tanto ser protegidos de potenciales riesgos.</li>
+<li><strong>ISACA</strong> : (Information Systems Audit and Control Association) Asociación de Auditoría y Control de los Sistemas de Información. Publica COBIT y emite diversas acreditaciones en el ámbito de la seguridad de la información.</li>
+<li><strong>ISO</strong> : (International Organization form Standardization) Organización Internacional para la Normalización. Organización de carácter voluntario fundada en 1946 que es responsable de la creación de estándares internacionales en muchas áreas, incluyendo la informática y las comunicaciones.</li>
+<li><strong>Mantenimiento Correctivo</strong> : Medida de tipo reactivo orientada a eliminar la causa de una no-conformidad, con el fin de prevenir su repetición.</li>
+<li><strong>Mantenimiento Preventivo</strong> : Medida de tipo pro-activo orientada a prevenir potenciales no-conformidades.</li>
+<li><strong>Norma</strong> : Principio que se impone o se adopta para dirigir la conducta o la correcta realización de una acción o el correcto desarrollo de una actividad.</li>
+<li><strong>Objetivo</strong> : Declaración del resultado o fin que se desea lograr mediante la implementación de procedimientos de control en una actividad de TI determinada.</li>
+<li><strong>Organización</strong> : Conjunto de personas e instalaciones con una disposición de responsabilidades, autoridades y relaciones. Una organización puede ser pública o privada.</li>
+<li><strong>Políticas de seguridad</strong> : Según [ISO/IEC 27002:2005]: intención y dirección general expresada formalmente por la Dirección.</li>
+<li><strong>Procedimiento</strong> : Forma especificada para llevar a cabo una actividad o un proceso.</li>
+<li><strong>Proceso</strong> : Por lo general, un conjunto de procedimientos influenciados por las políticas y estándares de la organización, que toman las entradas provenientes de un número de fuentes, incluyendo otros procesos, manipula las entradas, y genera salidas, incluyendo a otros procesos, para los clientes de los procesos. Los procesos tienen razones claras de negocio para existir, propietarios responsables, rol claro y responsabilidades alrededor de la ejecución del proceso, así como los medios para medir el desempeño.</li>
+<li><strong>Red</strong> : Servicio de comunicación de datos entre ordenadores. Conocido también por su denominación inglesa: ‘network’. Se dice que una red está débilmente conectada cuando la red no mantiene conexiones permanentes entre los ordenadores que la forman. Esta estructura es propia de redes no profesionales con el fin de abaratar su mantenimiento.</li>
+<li><strong>Riesgo</strong> : Según [ISO Guía 73:2002]: combinación de la probabilidad de un evento y sus consecuencias.</li>
+<li><strong>Riesgo residual</strong> : Según [ISO/IEC Guía 73:2002] El riesgo que permanece tras el tratamiento del riesgo.</li>
+<li><strong>Seguridad de la información</strong> : Según [ISO/IEC 27002:2005]: Preservación de la confidencialidad, integridad y disponibilidad de la información; además, otras propiedades como autenticidad, responsabilidad, no repudio y fiabilidad pueden ser también consideradas.</li>
+<li><strong>Servidor</strong> : Ordenador que ejecuta uno o más programas simultáneamente con el fin de distribuir información a los ordenadores que se conecten con él para dicho fin. Vocablo más conocido bajo su denominación inglesa ‘server’.</li>
+<li><strong>Software</strong> : Componentes inmateriales del ordenador: programas, SO, etc.</li>
+<li><strong>TI</strong> : Tecnologías de Información.</li>
+<li><strong>Tratamiento de riesgos</strong> : Según [ISO/IEC Guía 73:2002]: Proceso de selección e implementación de medidas para modificar el riesgo.</li>
+<li><strong>Usuario</strong> : Una persona o una entidad externa o interna que recibe los servicios empresariales de TI.</li>
+<li><strong>Valoración de riesgos</strong> : Según [ISO/IEC Guía 73:2002]: Proceso completo de análisis y evaluación de riesgos.</li>
+<li><strong>Vulnerabilidad</strong> : Según [ISO/IEC 13335-1:2004]: debilidad de un activo o conjunto de activos que puede ser explotado por una amenaza.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/51725764/Auditoria-informatica" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Jecazagu)</a></li>
+<li><a href="http://biblioteca.udenar.edu.co:8085/atenea/biblioteca/85139.pdf" rel="external nofollow noopener noreferrer" target="_blank">Biblioteca udenar</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B3/b3-t08/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B3-T08
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B4/b4-t09/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B4-T09</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B4-T11 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B4-T11">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Planificación física de un centro de tratamiento de la información. Vulnerabilidades, riesgo y protección. Dimensionamiento de equipos. Factores a considerar. Virtualización de plataforma y de recurso">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-T11">
+<meta property="og:url" content="http://localhost:4000/wiki/B4/b4-t11/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Planificación física de un centro de tratamiento de la información. Vulnerabilidades, riesgo y protección. Dimensionamiento de equipos. Factores a considerar. Virtualización de plataforma y de recurso">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/rxixrhf.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/valoracion_areas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/estacion_servicio.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/etapas_metodo_mejora.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:14:31.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-T11">
+<meta name="twitter:description" content="Planificación física de un centro de tratamiento de la información. Vulnerabilidades, riesgo y protección. Dimensionamiento de equipos. Factores a considerar. Virtualización de plataforma y de recurso">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/02/rxixrhf.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file active"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B4/b4-t11" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B4/">B4</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B4/b4-t11/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B4/b4-t11.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B4/b4-t11.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B4/b4-t11.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B4-T11
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Planificacion-fisica-de-un-centro-de-tratamiento-de-la-informacion-Vulnerabilidades-riesgo-y-proteccion-Dimensionamiento-de-equipos-Factores-a-considerar-Virtualizacion-de-plataforma-y-de-recursos-Virtualizacion-de-puestos-de-trabajo"><a href="#Planificacion-fisica-de-un-centro-de-tratamiento-de-la-informacion-Vulnerabilidades-riesgo-y-proteccion-Dimensionamiento-de-equipos-Factores-a-considerar-Virtualizacion-de-plataforma-y-de-recursos-Virtualizacion-de-puestos-de-trabajo" class="headerlink" title="Planificación física de un centro de tratamiento de la información. Vulnerabilidades, riesgo y protección. Dimensionamiento de equipos. Factores a considerar. Virtualización de plataforma y de recursos. Virtualización de puestos de trabajo."></a>Planificación física de un centro de tratamiento de la información. Vulnerabilidades, riesgo y protección. Dimensionamiento de equipos. Factores a considerar. Virtualización de plataforma y de recursos. Virtualización de puestos de trabajo.</h1><h2 id="Vulnerabilidades-Riesgo-y-Proteccion"><a href="#Vulnerabilidades-Riesgo-y-Proteccion" class="headerlink" title="Vulnerabilidades, Riesgo y Protección"></a>Vulnerabilidades, Riesgo y Protección</h2><p>Los Centros de tratamiento de la información, más comúnmente conocidos como Centros de Proceso de Datos (CPD), son los recintos que albergan los equipamientos informáticos principales que dan soporte al conjunto de información de la organización. A grandes rasgos se puede considerar que los Centros de Proceso de Datos (CPD) son los depositarios, los “guardianes”, de la información utilizada por todas las áreas de la organización.</p>
+<p>Esta responsabilidad implica que la información confiada al CPD está convenientemente salvaguardada (funcionalidad y disponibilidad), que se procesa de acuerdo con las instrucciones (fiabilidad e integridad) y que se devuelve intacta a quien la solicite y esté autorizado a obtenerla (accesibilidad y confidencialidad).</p>
+<p>El objetivo de la seguridad es garantizar la continuidad de la explotación o, lo que es lo mismo, evitar los riesgos potenciales de ataque, robo o daño a los Sistemas de Información de la empresa, tanto accidentales como intencionados, que puedan ocasionar la interrupción total o parcial de las actividades de negocio o bien causar una pérdida a la organización que hubiera podido evitarse.</p>
+<p>Un aspecto importante a tener en cuenta es el factor coste-beneficio. Por ejemplo, la costosa instalación de sistemas de supresión de incendios puede ser fundamental para proteger un gran ordenador que procese datos corporativos críticos, pero puede no ser justificable para proteger un simple PC.</p>
+<p>Los riesgos potenciales a los que está sometido un sistema informático se pueden clasificar de acuerdo con su origen en accidentales e intencionados. Entre los primeros podemos destacar:</p>
+<ul>
+<li>Desastres naturales: vendavales, sismos, rayos, etc.</li>
+<li>Incendios.</li>
+<li>Inundaciones.</li>
+<li>Averías en los equipos.</li>
+<li>Averías en las instalaciones eléctricas o de suministro.</li>
+<li>Averías en la climatización.</li>
+<li>Perturbaciones electromagnéticas.</li>
+<li>Errores en la introducción, transmisión o utilización de los datos.</li>
+<li>Errores de explotación.</li>
+<li>Errores de diseño y desarrollo de las aplicaciones.</li>
+</ul>
+<p>Entre los intencionados:</p>
+<ul>
+<li>Fraudes.</li>
+<li>Robo de elementos del equipo.</li>
+<li>Robo de información.</li>
+<li>Modificación de los datos con la finalidad de causar perjuicio a la organización en beneficio propio.</li>
+<li>Sabotajes y atentados.</li>
+<li>Huelgas.</li>
+<li>Abandono de la empresa de personal estratégico.</li>
+<li>Difusión o salida controlada de información al exterior.</li>
+</ul>
+<p>Frente a estos riesgos podemos adoptar unas posturas determinadas:</p>
+<ul>
+<li>Aceptar el riesgo, confiando en su baja probabilidad de incidencia.</li>
+<li>Transferir el riesgo, contratando seguros, aunque ello no repone la información perdida ni compensa los posibles efectos adversos.</li>
+<li>Evitar el riesgo con la elaboración y puesta en marcha de un Plan de Seguridad Informática, cuyas medidas de carácter preventivo minimicen la probabilidad de ocurrencia de un siniestro.</li>
+</ul>
+<h3 id="Seguridad-Fisica-y-Logica-del-CPD"><a href="#Seguridad-Fisica-y-Logica-del-CPD" class="headerlink" title="Seguridad Física y Lógica del CPD"></a>Seguridad Física y Lógica del CPD</h3><p>La <strong>seguridad física</strong> consiste en el conjunto de mecanismos y normas encaminados a proteger las personas, instalaciones, equipos centrales y periféricos y los elementos de comunicaciones contra daños eventuales. Está relacionada con los controles que protegen de los desastres naturales como incendios, inundaciones o terremotos, de los intrusos o vándalos, de los peligros medioambientales y de los accidentes.</p>
+<p>Los controles de seguridad física regulan además de la sala donde se alberga el equipo del ordenador, la entrada de datos, el entorno (bibliotecas, registros cronológicos, medios magnéticos, áreas de almacenamiento de copias de seguridad y salas de instalaciones de servicios) y todos los detalles o requerimientos tanto arquitectónicos como de preinstalación y mantenimiento de todos los servicios e infraestructuras, incluso la previsión de disponer de una seguridad física integral del entorno.</p>
+<p>En el pasado, seguridad física significaba mantener un ordenador y su información alejados de cualquier daño físico, rodeando la instalación del ordenador con cierres de seguridad, vallas y guardias (se basaba casi exclusivamente en la seguridad perimetral).</p>
+<p>El concepto de seguridad física ha cambiado para acomodarse a las realidades del entorno de los ordenadores de hoy en día, un entorno que con frecuencia es la típica oficina repleta de PCs. Por ello se deben adaptar los conceptos de seguridad perimetral y de controles de acceso físico a la situación concreta de cada CPD.</p>
+<p>La <strong>seguridad lógica</strong> consiste en el conjunto de operaciones y técnicas orientadas a la protección de la información contra la destrucción, modificación indebida, divulgación no autorizada o retraso en su gestación. Se centra, sobre todo, en los controles de acceso a la información manteniendo una política de password, utilizando encriptación en el almacenamiento de la información y estableciendo unos niveles de acceso apropiados en las comunicaciones.</p>
+<p>La seguridad física y la lógica deben estar completamente coordinadas, ya que ambas están estrechamente relacionadas y comparten objetivos y presupuestos.</p>
+<h3 id="Analisis-de-riesgos-y-planes-de-contingencia"><a href="#Analisis-de-riesgos-y-planes-de-contingencia" class="headerlink" title="Análisis de riesgos y planes de contingencia"></a>Análisis de riesgos y planes de contingencia</h3><p>Debemos establecer un compromiso entre la necesaria operatividad del sistema frente a los diversos riesgos potenciales, los mecanismos y técnicas que permiten minimizar sus efectos y costes directos e indirectos del empleo de dichas técnicas.</p>
+<p>Se considera, pues, la seguridad informática como un problema de gestión, en el que se trata de alcanzar unos objetivos determinados mediante la asignación óptima de unos recursos (humanos, técnicos, tiempo, económicos). La seguridad debe ser, por tanto, cuidadosamente presupuestada y planificada determinándose el nivel aceptable de seguridad para la organización y los medios más idóneos para conseguirlo.</p>
+<p>Del estudio pormenorizado de los riesgos y de la criticidad se determina el nivel aceptable de seguridad y se eligen las medidas a adoptar. Estas medidas se traducen en la Seguridad Preventiva y el Plan de Contingencia.</p>
+<p><strong>Análisis de Riesgos</strong></p>
+<p>Deberemos determinar cuantitativa y cualitativamente los riesgos a que esté sometida la organización. Una vez tipificados procederemos a estimar la probabilidad de ocurrencia de cada uno. Esta probabilidad no depende tanto del riesgo en si como de las características concretas de cada CPD. Debido a la dificultad de determinar la probabilidad de ocurrencia de un riesgo se establece una escala con unos niveles subjetivos (evaluación de la ocurrencia de los riesgos):</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/rxixrhf.png?w=825" alt=""></p>
+<p>También se puede recurrir a las estadísticas propias de la instalación (caso de existir) o a las editadas por empresas de consultoría o seguros.</p>
+<p><strong>Análisis de criticidad</strong></p>
+<p>Se establece un listado priorizado de elementos críticos (aplicaciones, bases de datos, software de base, equipos centrales, periféricos, comunicaciones) según el impacto que su carencia o malfuncionamiento causaría en la operatividad del sistema.</p>
+<p>Para ello podemos utilizar una escala que marque el tiempo que se podría tolerar un fallo de funcionamiento de cada elemento: 24 horas, 2-3 días, 1 semana, 15 días, más de un mes. También podemos tener en cuenta la diferente criticidad según la época del año, del mes o de la semana.</p>
+<p><strong>Determinación del nivel aceptable de seguridad</strong></p>
+<p>Debemos encontrar un equilibrio entre los beneficios de las técnicas a emplear y su coste. Para cada riesgo deberemos cuantificar los daños que puede ocasionar y una estimación de los costes de dichos daños junto con los costes de implantación y mantenimiento de las técnicas apropiadas para evitarlo o reducir su impacto.</p>
+<p><strong>Elección de medidas a adoptar</strong></p>
+<p>Consiste en seleccionar las medidas de seguridad que permitan prevenir los daños en lo posible y corregirlos o minimizarlos una vez acaecidos, determinando los recursos necesarios para su implantación.</p>
+<p><strong>Plan de contingencia</strong></p>
+<p>Las medidas de corrección se plasman en un plan con unos objetivos concretos:</p>
+<ul>
+<li>Minimizar las interrupciones en la operación normal.</li>
+<li>Limitar la extensión de las interrupciones y de los daños.</li>
+<li>Posibilitar una vuelta rápida y sencilla al servicio.</li>
+<li>Ofrecer a los empleados unas normas de actuación frente a contingencias.</li>
+<li>Proveer los medios alternativos de proceso en caso de catástrofe.</li>
+</ul>
+<p>Para garantizar su validez y que no quede obsoleto con el tiempo, deberá estar en continua revisión. Además el personal debe estar entrenado mediante pruebas simuladas periódicas. En la elaboración del plan debe intervenir la dirección, los técnicos de explotación, los técnicos de desarrollo, el personal de mantenimiento, los usuarios y los proveedores.</p>
+<p>El plan debe recoger, en forma de planes unitarios, las respuestas a los diferentes problemas que puedan surgir, y se desglosa en:</p>
+<ul>
+<li><strong>Plan de Emergencia</strong> : Guía de actuación “paso a paso” en cada fallo o daño. Determina una serie de acciones inmediatas (parada de equipos, aviso de responsables, activar o desactivar alarmas, uso de extintores u otros elementos auxiliares, llamada a mantenimiento lanzar salvaguardas o listados, etc), una serie de acciones posteriores como salvamento, valoración de daños, elaboración de informes, relanzar procesos, relanzar el SO, recuperar copias de seguridad, saltar procesos, etc, así como una asignación de responsabilidades, tanto para las acciones inmediatas como para las posteriores. Para mayor eficacia se procederá en cadenas secuenciales de actuaciones y a introducir una duplicidad humana para asegurar su realización.</li>
+<li><strong>Plan de Recuperación</strong> : Desarrolla las normas de actuación para reiniciar todas las actividades normales de la organización, bien en el propio CPD, bien en otro centro de respaldo. Si se recupera en el propio centro, se deberán activar los equipos duplicados o auxiliares (si no es automático), se utilizarán los soportes de procesamiento alternativos, se iniciarán las actuaciones de mantenimiento o sustitución de equipos dañados y se utilizarán si es preciso las copias de seguridad. Si se utiliza un centro de respaldo, se deben definir los procedimientos y emplear según la causa que originó el problema, se debe realizar una política de traslados (y vuelta posterior al centro original), se debe recuperar el SO, el software de base y las aplicaciones), se deben relanzar las operaciones (recuperando desde la última salvaguarda en caso de necesidad) y se debe revisar la operación mediante la introducción de pruebas que aseguren el correcto funcionamiento.</li>
+<li><strong>Plan de Respaldo</strong> : Especifica todos los elementos y procedimientos necesarios para operar en el centro de respaldo (si existe) y mantener en el mismo información sobre la configuración del equipo y de las comunicaciones, del SO, software de base, de las aplicaciones, soporte humano y técnico, suministros de documentación y formularios, modo de regenerar el software para su operativa normal, reglas de explotación y operación, política de accesos y confidencialidad, identificación de usuarios, terminales, etc.</li>
+</ul>
+<h3 id="Medios-de-Deteccion-y-Proteccion"><a href="#Medios-de-Deteccion-y-Proteccion" class="headerlink" title="Medios de Detección y Protección"></a>Medios de Detección y Protección</h3><p>Las áreas controladas deben contar con medios de detección de situaciones anómalas, tales como:</p>
+<ul>
+<li>Puertas abiertas.</li>
+<li>Acceso de intrusos.</li>
+<li>Inundación, humos, control de temperatura, fuegos, etc.</li>
+</ul>
+<p>Su objetivo es permitir un conocimiento inmediato y preciso del hecho y su localización, por lo que su actuación debe ser absolutamente fiable dentro de unos parámetros previamente establecidos. Ello exige unas revisiones de funcionamiento y un riguroso mantenimiento preventivo cuya periodicidad dependerá del sistema de detección y del tipo de área controlada al que se aplique.</p>
+<p>La detección de un hecho anómalo requiere la información necesaria para una reacción proporcionada. Dependiendo de la información suministrada por el medio de detección y los parámetros previamente establecidos, antes de llegar a un estado de alarma se puede pasar por un estado de alerta.</p>
+<p>Así los medios de reacción se van organizando en previsión de su posible actuación. Todos los medios de detección deben integrarse en el Sistema de Gestión de la Seguridad para que los gestione y:</p>
+<ul>
+<li>Avise de la anomalía y su gravedad.</li>
+<li>Inicie acciones de corrección automáticas o proponga acciones manuales a realizar por el personal entrenado para ello.</li>
+<li>Controle las actuaciones (qué, quién, cómo, dónde y cuándo).</li>
+</ul>
+<p>Este sistema debe estar bajo vigilancia permanente y combinado con los servicios de mantenimiento, para los casos de mal funcionamiento de cualquier medido de detección. Hay que subrayar que los sistemas de detección deben funcionar incluso con el suministro eléctrico de emergencia.</p>
+<p>En caso de incendio, su extinción puede realizarse con medios manuales o automáticos. Los medios manuales se basan en extintores portátiles, mangueras, etc. Es importante resaltar que:</p>
+<ul>
+<li>Existen diferentes tipos de fuego (de sólidos, líquidos, gases eléctricos) y hay extintores apropiados para cada tipo.</li>
+<li>El elemento extintor localizado en un área debe ser el apropiado para el previsible tipo de incendio a declararse en ella. Cualquier medio de extinción puede ser excelente utilizado en un área o más dañino que el propio fuego, si es usado en otra.</li>
+<li>Nunca debe empelarse un medio de extinción manual basado en agua donde pueda haber fuego eléctrico por peligro de electrocución.</li>
+<li>No es aconsejable la intervención de personal no entrenado para ello.</li>
+<li>Siempre que se disponga de tiempo, hay que avisar a la brigada interior de incendios (si la hubiera) o al Servicio de Bomberos.</li>
+</ul>
+<p>Los medios automáticos se basan en la inundación del área mediante agua, CO² u otros agentes extintores. El más recomendable es el basado en agua, por su bajo coste y su nulo impacto en el entorno. Los sistemas automáticos basados en el agua deben tener un mecanismo de preacción que, en caso de llegar a un estado de alerta o alarma, sustituye el aire de la conducción por agua.</p>
+<p>La actuación de estos sistemas de extinción debe ser combinada con la previa desconexión del suministro de energía eléctrica del área afectada.</p>
+<p>Los medios basados en el gas halón (basado en clorofluorocarbonos: CFCs) aunque son efectivos, entrañan peligro para las personas y para el medio ambiente (capa de ozono, efecto invernadero), estando totalmente prohibido por una u otra causa en la mayoría de los países firmantes del Protocolo de Montreal (control de uso de los CFCs). Las áreas controladas deben contar con medios automáticos y manuales de extinción de incendios.</p>
+<h3 id="Seguridad-perimetral"><a href="#Seguridad-perimetral" class="headerlink" title="Seguridad perimetral"></a>Seguridad perimetral</h3><p>Se refiere a las medidas que podemos establecer para evitar un acceso indebido al conjunto del CPD. Han sido ya referenciadas en la seguridad física. El establecer un área segura es importante para el buen funcionamiento del centro, puesto que la información almacenada y los procedimientos que se realizan en el CPD son vitales para la organización.</p>
+<p>Por ello se deben adoptar todas las medidas cuyo coste esté justificado. Entre ellas:</p>
+<ul>
+<li>Servicio de seguridad: que no sólo controle los accesos al recinto, sino que también realice inspecciones periódicas de las dependencias, sobre todo de las que no tengan personal en cada momento. Su importancia se hace evidente en horas nocturnas o días festivos.</li>
+<li>Barreras, puertas de seguridad, ausencia de ventanas. Son medidas que tienden a dificultar el acceso de personal no autorizado.</li>
+<li>Video vigilancia y alarmas volumétricas: controladas por una centralita en la cabina de seguridad.</li>
+</ul>
+<h3 id="Control-de-Acceso-Fisico"><a href="#Control-de-Acceso-Fisico" class="headerlink" title="Control de Acceso Físico"></a>Control de Acceso Físico</h3><p>Se basan en medidas de identificación unívoca de las personas que acceden al CPD. El servicio de seguridad debe llevar un registro de las entradas y salidas al centro. Las visitas autorizadas deben llevar obligatoriamente una tarjeta identificativa o etiqueta en lugar visible que indique claramente que es una visita a las áreas a las que puede acceder y el tiempo de validez (suele ser diaria).</p>
+<p>El personal propio debe portar una tarjeta identificativa con fotografía. Se pueden utilizar colores para identificar las áreas a las que puede acceder.</p>
+<p>En centros de alta seguridad pueden requerirse medidas auxiliares de identificación:</p>
+<ul>
+<li>Huellas dactilares.</li>
+<li>Fondo de ojo (retina).</li>
+<li>Introducción de códigos de acceso para abrir las puertas.</li>
+</ul>
+<p><strong>Niveles de seguridad de acceso</strong></p>
+<p>Las instalaciones de la empresa deben clasificarse en varias áreas o zonas que, dependiendo de su utilización y los bienes contenidos, estarán sometidas a unos u otros controles de acceso. Las instalaciones pueden clasificarse de acuerdo con los criterios y denominaciones siguientes:</p>
+<ul>
+<li>Áreas Públicas: espacios en los que no hay ningún tipo de restricción de acceso a empleados o personas ajenas a la empresa.</li>
+<li>Áreas Privadas: espacios reservados habitualmente a los empleados y personas ajenas a la empresa con autorización por motivos de negocio. En ellos puede haber recursos informáticos con un valor bajo.</li>
+<li>Áreas de Acceso Limitado (AAL): espacios cuyo acceso está reservado a un grupo reducido de empleados y personas ajenas a la empresa autorizadas por un acuerdo escrito. Pueden concentrarse en ellos recursos informáticos que, en su conjunto, tiene un valor medio.</li>
+<li>Áreas de Acceso Restringido (AAR): espacios cuyo acceso está reservado a un grupo muy reducido de empleados y personas ajenas de la empresa autorizadas por un acuerdo escrito, que tengan necesidad de acceder por razones de negocio. En ellos se encuentran recursos informáticos que, en conjunto, tienen un alto valor o contienen activos de información críticos para las actividades del negocio.</li>
+</ul>
+<p>A las dos últimas se les denomina Áreas Controladas. Tienen que permanecer cerradas, incluso cuando estén atendidas, y sus accesos controlados. En las áreas controladas, todos los empleados y las personas ajenas a la empresa con autorización para acceder por razones de negocio tienen que llevar permanentemente y en lugar visible un identificador:</p>
+<ul>
+<li>Los empleados, al menos, con fotografía y nombre.</li>
+<li>Las restantes personas, al menos el nombre (legible) y distintivo de la función que cumplen (ej: visita, contratado, suministrador, etc).</li>
+<li>Los identificadores de los empleados con acceso a áreas controladas pueden tener la posibilidad de lectura por banda magnética o por cualquier otro medio, para facilitar el control de accesos y su registro.</li>
+<li>Todo identificador, especialmente los que permiten el acceso a áreas controladas, es personal y debe ser considerado como una contraseña de acceso físico y no compartirlo con nadie, para evitar verse envuelto en algún incidente de seguridad no deseado.</li>
+</ul>
+<p>En las áreas controladas tienen que estar prohibido comer, fumar, consumir bebidas alcohólicas y cualquier tipo de drogas. Las dos últimas están consideradas de alto riesgo potencial para la instalación, por lo que adicionalmente debe impedirse la entrada a cualquier área controlada a las personas de quién se sospeche el consumo.</p>
+<p>Los suministros informáticos que sean peligrosos o combustibles tienen que ser almacenados a una distancia prudencial y no trasladarlos al área donde se encuentran el resto de recursos informáticos hasta el momento de su utilización. De igual forma, hay que retirarlos de la zona inmediatamente después de finalizar su uso.</p>
+<p><strong>Control de Accesos</strong></p>
+<p>Los responsables de las áreas controladas deben mantener unos controles de acceso efectivos y proporcionales al valor de los activos a proteger para que puedan cumplir con unos requisitos de auditabilidad mínimos. Los objetivos son:</p>
+<ul>
+<li>Permitir el acceso únicamente a las personas autorizadas por el responsable del área.</li>
+<li>Registrar las entradas y/o salidas (quién, por dónde y cuándo).</li>
+</ul>
+<p>Para facilitar el control de los accesos a estas áreas, es recomendable la existencia de un único punto o puerta de acceso habitual para entrada y salida, sin perjuicio de que existan otras salidas para emergencias que se puedan abrir desde el interior mediante el empuje de una barra.</p>
+<p>Las entradas en las Áreas de Acceso Limitado (AAL) tiene que efectuarse desde un área interna, nunca desde un área pública. Cada área de acceso limitado debe tener identificado formalmente un responsable o propietario cuyas responsabilidades son:</p>
+<ul>
+<li>Aprobar y mantener actualizada la relación de personas con autorización de acceso permanente. Las personas que tengan su autorización cancelada, por petición de su dirección o por haber causado baja en la empresa, deben ser eliminadas de la relación de acceso en un tiempo razonable.</li>
+<li>Aprobar accesos temporales a estas áreas. En este caso la persona autorizada debe saber que la autorización es para una sola vez.</li>
+</ul>
+<p>Las Áreas de Acceso Restringido (AAR) no deben tener ventanas al exterior y la entrada en las mismas tiene que efectuarse desde un área interna o un Área de acceso limitado, nunca desde un Área pública. Tienen que tener barreras de aislamiento de suelo y techo, incluyendo el falso suelo y el falso techo, o bien detectores volumétricos de intrusos.</p>
+<p>Cada área de acceso restringido debe tener identificado formalmente un responsable o propietario cuyas responsabilidades son:</p>
+<ul>
+<li>Aprobar y mantener actualizada la relación de las personas con autorización de acceso permanente, generalmente, porque el trabajo a realizar requiere su presencia dentro del área. La lista de acceso debe ser actualizada siempre que haya cambios que así lo aconsejen y revisada formalmente, al menos, cada seis meses. Las personas que tengan su autorización cancelada por petición de su dirección o por haber causado baja en la empresa tienen que ser eliminados de la lista de acceso inmediatamente.</li>
+<li>Aprobar los accesos temporales a estas áreas, incluyendo los accesos del personal que, estando destinado en el área, accede fuera de su jornada laboral. En este caso, la persona autorizada debe saber que la autorización es para una sola vez. Las autorizaciones temporales deben contener:<ul>
+<li>Nombre de quien autoriza si no es el propietario.</li>
+<li>El nombre de la persona autorizada.</li>
+<li>Razón social (si corresponde) o motivo.</li>
+<li>Fecha y hora de acceso y firma.</li>
+<li>Fecha hora de salida y la firma.</li>
+</ul>
+</li>
+</ul>
+<p>Tienen que ser guardadas como documentos auditables, al menos un año. El propósito de este registro es tener un archivo histórico de accesos, a utilizar en caso de investigación de incidente de seguridad, pero en ningún caso debe ser una herramienta de control de los empleados. El propietario del área debe revisar, al menos mensualmente, que estos registros de acceso contienen la información descrita.</p>
+<p>Es preciso revisar y documentar que las salidas de emergencia tengan alarmas y sean audibles y/o visibles, en la propia sala y en el Centro de Control de Seguridad. Esta revisión debe realizarse al menos, anualmente e incluir la verificación de su correcto funcionamiento incluso con alumbrado de emergencia, si hay pérdida de suministro eléctrico. La documentación de revisiones de funcionamiento de alarmas se guarda como documento auditable.</p>
+<p><strong>Valoración de las áreas</strong></p>
+<p>Los requisitos de control de acceso físico deben basarse en el valor de los sistemas de información contenidos en cada área controlada y en la importancia de las actividades de negocio suministradas por ellos.</p>
+<p>El valor de un sistema de información puede obtenerse de acuerdo con los criterios siguientes:</p>
+<ul>
+<li>Alto valor: sistemas corporativos grandes y medios.</li>
+<li>Valor medio: pequeños sistemas corporativos y redes de área local (LAN).</li>
+<li>Bajo valor: pequeños sistemas (PC’s) y terminales.</li>
+</ul>
+<p>Para cada caso deben considerarse otros aspectos, como el coste y la necesidad de sustitución de los equipos acumulados en un área o el impacto que podría ocasionar a la empresa la carencia prolongada de una actividad y la no disponibilidad de la información que suministra. Sistemas esenciales son aquellos que contengan actividades críticas para el negocio de la empresa.</p>
+<p>La valoración final se realiza teniendo en cuenta todos los aspectos descritos para definir los requisitos de control de acceso y seleccionar el tipo de área controlada y deberían estar en consonancia con la tabla siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/valoracion_areas.png?w=825" alt=""></p>
+<p>Para determinar la correcta implantación y la efectividad del control de acceso físico, los propietarios de las áreas controladas deben mantener, al menos, la documentación siguiente:</p>
+<ul>
+<li>La identificación del área, el uso a que se destina, el nivel de información clasificada soportada, el valor de los equipos, la valoración del servicio y los requisitos de control requeridos.</li>
+<li>La forma de comunicar a los usuarios de los servicios localizados en el área el nivel de información clasificada soportada, las medidas de seguridad adoptadas y los requisitos para su cumplimiento.</li>
+</ul>
+<p>La valoración final, junto con los aspectos considerados, tiene que ser documentada y guardada por el responsable del área controlada como documentos auditables.</p>
+<h3 id="Control-de-Perifericos"><a href="#Control-de-Perifericos" class="headerlink" title="Control de Periféricos"></a>Control de Periféricos</h3><p><strong>Medios de Almacenamiento</strong></p>
+<p>No debemos olvidar que la información vital para la organización no sólo está en los discos magnéticos de los equipos, sino que también se puede encontrar en otros soportes como papel y dispositivos de almacenamiento como disquetes, cintas y otros soportes magneto-ópticos.</p>
+<p>Ello obliga a introducir sistemas de limitación de acceso a los mismos y sistemas de destrucción o borrado seguro tras su utilización. Como regla general deben almacenarse, mientras sean útiles, en armarios especiales o zonas restringidas.</p>
+<p>El custodio (“librarian”) es el responsable de almacenar y controlar los medios de almacenamiento desmontables. El custodio tienen que poder controlar todos los movimientos de los medios de almacenamiento desmontables, incluidos los traslados, a través de una aplicación o producto de uso exclusivo que le facilite la realización del inventario y la reconciliación.</p>
+<p>En los casos en que la empresa tenga más de un Centro de Proceso de Datos, tiene que haber un custodio por cada uno de los centros.</p>
+<p>En las LAN y sistemas distribuidos, la información suele ser creada, accedida y almacenada en los discos magnéticos no desmontables de estaciones de trabajo y servidores. Siempre que en este tipo de sistema exista información en medios de almacenamiento desmontables, tiene que ser nombrado un custodio por cada LAN o sistema.</p>
+<p>En algunas instalaciones, con gran movilidad de personal o temporalidad del mismo, se llega a bloquear o limitar el uso de las disqueteras de los equipos terminales (PC’s), de manera que se dificulte la copia masiva de datos sensibles. También se puede recurrir a la encriptación del almacenamiento para dificultar su acceso mediante herramientas de SO o externas a la aplicación.</p>
+<p>Todos los medios de almacenamiento bajo el control del custodio deben estar situados en una AAL (área de acceso limitado) o AAR (área de acceso restringido), dependiendo de la ubicación del sistema donde se procesen, y en una zona aislada cerrada a la que pueda acceder exclusivamente el custodio.</p>
+<p>Los medios de almacenamiento dedicados a salvaguardas, la recuperación del sistema y los servicios soportados, deben estar situados en otra zona aislada del centro. Lo mismo se aplicaría en el centro alternativo, si lo hubiera. Así si hubiera, por ejemplo, un incendio en el centro podríamos disponer de estos medios de almacenamiento y no se quemarían junto con nuestro CPD.</p>
+<p>Tiene que haber un control para evitar que los medios de almacenamiento desmontables sean montados o accedidos sin autorización.</p>
+<p>Los movimientos de medios de almacenamiento entre distintos centros, incluidos los dedicados a salvaguarda, tienen que ser registrados y guardados por el custodio de cada centro.</p>
+<p>Los medios de almacenamiento en tránsito tienen que ser protegidos contra su pérdida, deterioro o uso indebido, desde que el custodio del centro origen los ponen en manos del transportista hasta que son recibidos por el custodio del centro de destino.</p>
+<p>Durante el traslado, el soporte de almacenamiento y la información contenida deben asegurarse teniendo en cuenta:</p>
+<ul>
+<li>Protección física: para que no sean robados, sustituidos o dañados.</li>
+<li>Protección lógica: para que no sean leídos, copiados o modificados.</li>
+</ul>
+<p>Para salvaguardar la confidencialidad, integridad y disponibilidad de la información transportada, tienen que usarse medios de transporte fiables, propios o de empresas solventes responsables.</p>
+<p>Para la información sensible o con el más alto nivel de clasificación tienen que utilizarse contenedores cerrados y que sólo puedan ser abiertos por los custodios de los centros origen y destino. En casos excepcionales, habrá que fraccionar el envío en más de una entrega y realizarlo por rutas diferentes.</p>
+<p><strong>Inventario y Reconciliación</strong></p>
+<p>El custodio de medios de almacenamiento es responsable de:</p>
+<ul>
+<li>Implantar el procedimiento de control de inventario.</li>
+<li>Realizar, al menos anualmente, el inventario de medios de almacenamiento.</li>
+<li>Efectuar la correspondiente reconciliación, en caso de haber discrepancias.</li>
+</ul>
+<p>El proceso de inventario y reconciliación debe:</p>
+<ul>
+<li>Contemplar todos los medios de almacenamiento removibles incluidos los volúmenes manejados por robots y los que estén sin grabar.</li>
+<li>Ser realizado por personas, al menos una, directamente relacionadas con la responsabilidad de medios de almacenamiento y con la participación del custodio.</li>
+<li>Iniciarse partiendo de las cifras finales del anterior inventario y completarse incluyendo nuevos volúmenes y los recibidos de otros centros, eliminando los volúmenes retirados o destruidos y los enviados a otros centros y obteniendo la cifra final que será utilizada por el próximo inventario. Las discrepancias deben ser documentadas e iniciar el proceso de reconciliación.</li>
+<li>Incluir, en la documentación relativa al proceso, cualquier informe de discrepancias o incidentes. Esta documentación tiene que ser firmada por el custodio y por su línea de dirección o el propietario de la librería de medios de almacenamiento.</li>
+</ul>
+<p>La documentación de soporte de los últimos inventarios y reconciliaciones tiene que ser guardada como documentos auditables.</p>
+<p><strong>Impresoras y Listados</strong></p>
+<p>Según su ubicación, se consideran dos tipos de impresoras:</p>
+<ul>
+<li>Las locales del sistema, situadas en las áreas de acceso limitado/restringido.</li>
+<li>Las impresoras remotas que no están situadas en las áreas dedicadas a sistemas.</li>
+</ul>
+<p>Se deben aplicar los siguientes criterios:</p>
+<ul>
+<li>La responsabilidad de especificar las reglas de utilización de cada impresora y de cada sistema de almacenamiento magnético es del propietario o responsable del mismo.</li>
+<li>El control de las salidas impresas es responsabilidad del usuario final que las envía a las impresoras. El control de los soportes de almacenamiento es responsabilidad del que los genera y del que los utiliza.</li>
+<li>El propietario del sistema o servicio no es responsable de que el propietario o el usuario de las impresoras remotas cumplan con los procedimientos de seguridad descritos.</li>
+<li>Las salidas impresas de información clasificada tienen que ser protegidas contra accesos no autorizados.</li>
+</ul>
+<p>Las impresoras remotas situadas en áreas internas (no situadas en AAL o AAR) tiene que tener alguno de los controles siguientes:</p>
+<ul>
+<li>Tener designado un responsable de dirigir las salidas impresas al usuario final que las envió.</li>
+<li>Estar directamente atendida por el usuario final.</li>
+<li>Recoger los listados personalmente e inmediatamente después de terminar la impresión.</li>
+<li>Tener la posibilidad de borrado de listados pendientes de impresión.</li>
+</ul>
+<p>Las impresoras locales o remotas situadas en AAL o AAR no requieren ningún control adicional para imprimir información clasificada. No puede haber impresoras remotas situadas en áreas públicas.</p>
+<h3 id="Sistema-Integral-de-Gestion-de-la-Seguridad"><a href="#Sistema-Integral-de-Gestion-de-la-Seguridad" class="headerlink" title="Sistema Integral de Gestión de la Seguridad"></a>Sistema Integral de Gestión de la Seguridad</h3><p>Se contemplará y analizará la seguridad física independientemente de los sistemas de gestión y control implementados en el CPD.</p>
+<p>Se instalará un sistema informatizado para la gestión y el control integral de todas las alarmas procedentes del equipamiento informático, de las infraestructuras y de las instalaciones específicas de seguridad del CPD.</p>
+<p>Dicho sistema, recibirá las señales de alarma, dispondrá de la gestión de las mismas y de la posibilidad de realizar desde el mismo la modificación de ciertos parámetros u operaciones de parada, arranque o maniobra del equipamiento de las salas de informática o del recinto del CPD:</p>
+<ul>
+<li>Red de incendios (Sala del CPD, áreas de servicios y despachos, zonas del SAI y del grupo electrógeno).</li>
+<li>Alarmas en general.</li>
+<li>Arranque, paro o maniobra del entorno industrial del CPD.</li>
+<li>Control de accesos y movimientos.</li>
+<li>Control de ahorro de energía.</li>
+<li>Control en el bloque de multicasilleros de reparto.</li>
+<li>Control de la expedición de la producción.</li>
+<li>Control de los stocks de almacenes.</li>
+<li>Estado de las baterías de los SAIs y control de los grupos electrógenos.</li>
+<li>Control de climatización, sobrepresión y renovación ambiental.</li>
+<li>Rede de sondas ambientales en falso suelo, techo y sala de ordenador.</li>
+<li>Red de detección de humedad.</li>
+</ul>
+<h2 id="Instalaciones"><a href="#Instalaciones" class="headerlink" title="Instalaciones"></a>Instalaciones</h2><h3 id="Entorno"><a href="#Entorno" class="headerlink" title="Entorno"></a>Entorno</h3><p>Los edificios o instalaciones de los CPDs requieren unas características adicionales de protección física que deben ser consideradas antes de seleccionar su ubicación, teniendo en cuenta aspectos tales como la posibilidad de daños por fuego, inundación, explosión, disturbios civiles, cercanía de instalaciones peligrosas (depósitos de combustible, aeropuertos, acuartelamientos, etc) o cualquier otra forma de desastre natural o provocado.</p>
+<p>Se deberán analizar de forma integral las características dominantes de los distintos entornos, evaluando las ventajas y los riesgos potenciales que pudieran afectar al buen funcionamiento del CPD y planteando las respuestas adecuadas en relación con:</p>
+<p><strong>Entorno Natural</strong></p>
+<p>Tendremos en cuenta:</p>
+<ul>
+<li>Climatología: tormentas, precipitaciones de agua y nieve, temperaturas extremas, huracanes, ventisca y vientos dominantes.</li>
+<li>Geotecnia: mecánica de los suelos (corrimientos de tierra, hundimientos, estructura físico-química, humedad, existencia de minerales magnéticos, sismicidad, etc)</li>
+<li>Hidrología: proximidad de ríos, proximidad del mar, embalses cercanos y posibles avenidas, etc.</li>
+</ul>
+<p><strong>Entorno Artificial</strong></p>
+<p>Podemos considerar:</p>
+<ul>
+<li>Acceso a medios de emergencia: bomberos, policía, servicios sanitarios, etc.</li>
+<li>Centrales de gas o depósitos de gas, centrales nucleares.</li>
+<li>Redes de telecomunicaciones.</li>
+<li>Suministro eléctrico, redes de suministro accesibles.</li>
+<li>Plantas petroquímicas, fábricas de cemento, betunes, derivados del vidrio, etc.</li>
+<li>Conducciones o depósitos de líquidos (agua potable, aguas residuales, combustibles, etc).</li>
+<li>Contaminación atmosférica: polvo, vapores corrosivos o tóxicos, etc.</li>
+<li>Perturbaciones locales: ruidos, vibraciones, radiaciones parásitas (radares, balizas de navegación, emisoras de radio y televisión, torres de telecomunicaciones, líneas de alta tensión cercanas, grandes transformadores o motores, centrales eléctricas, repetidores, centrales nucleares, aeropuertos).</li>
+</ul>
+<p><strong>Entorno Urbanístico</strong></p>
+<p>Tenemos entre otras:</p>
+<ul>
+<li>Dotaciones urbanas: metro, autobuses, intercambiadores ferroviarios, autopistas, aeropuertos, puertos marítimos, hospitales, universidades, supermercados, etc.</li>
+<li>Zonas urbanas: parcelas abiertas, edificaciones colindantes, zonas de oficinas y negocios, parques empresariales, recintos feriales.</li>
+<li>Ambiente de trabajo y salud laboral (microclima de trabajo, contaminación ambiental, sobrecargas físicas y psíquicas influyentes, etc).</li>
+</ul>
+<p>Actualmente se ha acuñado el término “AMENITIES” para abarcar todos los servicios complementarios que no son estrictamente necesarios para el desempeño de la actividad de proceso de datos, pero que pueden ofrecerse en el conjunto de la oferta inmobiliaria sobre todo en los parques empresariales o zonas singulares.</p>
+<p>Entre ellos están:</p>
+<ul>
+<li>Áreas de descanso, ocio y servicios terciarios.</li>
+<li>Guardería.</li>
+<li>Aparcamiento.</li>
+<li>Clubes, gimnasios e instalaciones deportivas.</li>
+<li>Cajeros automáticos.</li>
+<li>Restaurantes y cafeterías.</li>
+<li>Hoteles.</li>
+<li>Centros comerciales.</li>
+</ul>
+<h3 id="Caracteristicas-de-Construccion"><a href="#Caracteristicas-de-Construccion" class="headerlink" title="Características de Construcción"></a>Características de Construcción</h3><p>Una vez seleccionada la ubicación física del edificio que albergará el CPD, habrá que analizar las características especificas de las instalaciones, haciendo hincapié en algunos aspectos:</p>
+<ul>
+<li>Deben estar diseñadas de forma que no se faciliten indicaciones de su propósito ni se pueda identificar la localización de los recursos informáticos.</li>
+<li>Incluir zonas destinadas a carga y descarga de suministros y su inspección de seguridad.</li>
+<li>Cumplir, en los elementos constructivos internos (puertas, paredes, suelos, etc), el máximo nivel de protección exigido por la Norma Básica de Edificación (NBE/CPI-91).</li>
+<li>Disponer de canalizaciones protegidas de cableado de comunicaciones y de electricidad, para evitar ataques (sabotajes, fuego, roedores, insectos), intercepción o perturbaciones por fuentes de emisión próximas (radio, electricidad magnetismo, calor).</li>
+</ul>
+<h3 id="Habitabilidad"><a href="#Habitabilidad" class="headerlink" title="Habitabilidad"></a>Habitabilidad</h3><p>La mayoría de construcciones de edificios públicos, de oficinas o de negocios no empezaron a cubrir las necesidades de preinstalaciones e instalaciones informáticas hasta bien entrados los años ochenta.</p>
+<p>Actualmente, el diseño arquitéctónico de un CPD debe estar lo más cercano posible a la arquitectura inteligente. Este hecho ha dado cabida a la domótica.</p>
+<p>La domótica comprende todos aquellos desarrollos tecnológicos enfocados al diseño de soluciones rentables que pueda tener el inmueble en el marco de la propia génesis del proyecto arquitectónico. Es la automatización del edificio más la disponibilidad de los recursos de las telecomunicaciones y la ofimática.</p>
+<p>Los requerimientos de habitabilidad tienen en cuenta la arquitectura informática del momento. Prevén no sólo el crecimiento del equipamiento informático, sino también el cambio total a otro entorno informático y mantienen rentable las infraestructuras y las dotaciones inteligentes o servicios avanzados del inmueble:</p>
+<ul>
+<li>Habitabilidad en horizontal, es el edificio informático óptimo, el de pocas plantas.</li>
+<li>Habitabilidad en torre, las torres pierden en diafanidad, dificultan la extensión horizontal de la sala de ordenadores y complican la evacuación de emergencia, etc. En las edificaciones informáticas se contemplarán y analizarán al menos los siguientes aspectos, aportando las soluciones más adecuadas:<ul>
+<li>Diseño y ergonomía del inmueble: tienen en cuenta las exigencias de explotación, producción y los requerimientos físicos de la arquitectura informática residente. Serán estas exigencias funcionales las que determinarán el diseño exterior e interior así como la estructura del edificio para las salas de informática.</li>
+<li>Flexibilidad: informa sobre la capacidad del edificio para satisfacer las necesidades futuras, entre las que destaca la posibilidad de modificar distribuciones tanto de la arquitectura informática residente o de nueva implantación como de sus preinstalaciones y las áreas del personal de producción o explotación.</li>
+<li>Integración de servicios: permite saber cuándo un edificio entra dentro del concepto de “arquitectura inteligente”, que al menos debe cumplir:<ul>
+<li>Automatización de la actividad de mantenimiento.</li>
+<li>Automatización de los servicios comunes del edificio.</li>
+<li>Mejora de la calidad de vida en el trabajo.</li>
+<li>Ofimática.</li>
+<li>Planificación del espacio.</li>
+<li>Telecomunicaciones.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Requerimientos-de-las-Edificaciones-e-Instalaciones"><a href="#Requerimientos-de-las-Edificaciones-e-Instalaciones" class="headerlink" title="Requerimientos de las Edificaciones e Instalaciones"></a>Requerimientos de las Edificaciones e Instalaciones</h3><p>Se aplicarán las normas generales de obligado cumplimiento:</p>
+<ul>
+<li>Norma Básica de la Edificación.</li>
+<li>Normas tecnológicas de la Edificación.</li>
+<li>Ordenanzas Municipales.</li>
+<li>Reglamentos electrotécnicos.</li>
+<li>Verificación de los Productos y Suministros Industriales en el marco de la construcción.</li>
+<li>Normas de Preinstalación de las Firmas Informáticas.</li>
+</ul>
+<p>Además de la aplicación de las normas generales, el estudio para la elección del edificio deberá comprender todo lo que compete a la arquitectura tradicional y muy especialmente a:</p>
+<ul>
+<li>La estructura y sobrecargas de uso.</li>
+<li>Las fachadas del inmueble.</li>
+<li>Accesos a los almacenes.</li>
+<li>Instalaciones para las salas de informática.</li>
+<li>Muelles de carga y descarga, elevadores, montacargas, etc.</li>
+<li>Acceso al edificio de mercancías pesadas (montacargas industrial).</li>
+<li>Acceso a la Sala de Informática (siempre puertas doble hoja).</li>
+<li>Existencias de salidas de Seguridad al CPD.</li>
+<li>Falso suelo y techo tecnológicos.</li>
+<li>Protección contra las infiltraciones de agua y humedad.</li>
+<li>Suministros de energía eléctrica y agua.</li>
+<li>Iluminación de día y de emergencia.</li>
+<li>Resistencia al Fuego en minutos de la estructura, forjados y muros de carga.</li>
+<li>Muros cortafuegos.</li>
+<li>Puertas contra incendios.</li>
+<li>Situación de las puertas de acceso y evacuación.</li>
+<li>Túneles de seguridad y escaleras de emergencia.</li>
+<li>Particiones interiores o mamparas dobles.</li>
+<li>Que no crucen las salas de informática conducciones de aguas tanto pluviales como de desagües excepto las propias de la climatización.</li>
+<li>Tratamientos referentes a resistencias eléctricas, acústicas y mecánicas.</li>
+<li>Protección contra la energía eléctrica de reacción: Toma de tierra del edificio, pararrayos.</li>
+</ul>
+<h3 id="Caracteristicas-de-las-Infraestructuras"><a href="#Caracteristicas-de-las-Infraestructuras" class="headerlink" title="Características de las Infraestructuras"></a>Características de las Infraestructuras</h3><p><strong>Instalaciones Eléctricas</strong></p>
+<p>Los cuadros de mandos se instalarán en lugares fácilmente accesibles, con espacio holgado (previendo las posibles ampliaciones), correcta y claramente etiquetados y por supuesto con el más estricto rigor en materia de calidad de aparatos y montaje (deberán cumplir con las normas habituales de protección y seccionamiento). Se evitarán las perturbaciones electromagnéticas, aislando adecuadamente aquellas máquinas generadoras de campos inductivos y armónicos.</p>
+<p>Se evitará la electricidad estática empleando los revestimientos más adecuados, instalando las tomas de tierra convenientes y manteniendo la humedad en el rango adecuado (al menos del 55%).</p>
+<p>Los recursos informáticos son sensibles a las variaciones de tensión y de frecuencia de la corriente eléctrica. Los requerimientos básicos para el suministro de energía eléctrica son dos: Calidad y Continuidad.</p>
+<p>Relacionado con la Calidad se puede destacar que:</p>
+<ul>
+<li>Las variaciones de frecuencia deben corregirse con equipos estabilizadores que la mantengan dentro de los rangos establecidos por los fabricantes de los recursos informáticos a alimentar, aunque algunos recursos informáticos de nueva tecnología los llevan incluidos.</li>
+<li>Las variaciones de tensión deben ser manejadas por un Sistema de Alimentación Ininterrumpida (SAI en inglés UPS), de modo que se puedan prevenir los efectos de posibles microcortes.</li>
+</ul>
+<p>En relación con la continuidad del suministro eléctrico debe tenerse en cuenta que las caidas de tensión pueden ser manejadas por un SAI (UPS), pero sólo por tiempo limitado, ya que el desgaste de sus acumuladores es muy rápido y su recarga muy lenta para utilizarlo en cortes sucesivos y nunca como única alternativa.</p>
+<p>Las soluciones habituales se basan en una de las siguientes o en la combinación de varias de ellas:</p>
+<ul>
+<li>Conexión conmutada a dos compañías suministradoras.</li>
+<li>Conexión conmutada a dos estaciones transformadoras de la misma compañía pero situadas en rutas de suministro diferentes.</li>
+<li>Capacidad de transformación de corriente asegurada mediante equipos redundantes.</li>
+<li>Equipos electrógenos de combustión.</li>
+</ul>
+<p>Siempre que el volumen de las instalaciones informáticas así lo aconseje, el suministro eléctrico y las tomas de tierra deben ser independientes de las generales del edificio y a suficiente distancia de ellas, correctamente aisladas y rigurosamente mantenidas.</p>
+<p><strong>Recinto de Protección Combinada</strong></p>
+<p>Son recintos de protección combinada aquellas compartimentaciones dentro de los CPD capaces de garantizar una custodia segura de los soportes magnéticos de respaldo ante los agentes más peligrosos que puedan atacarlos. Estarán dotados al menos con:</p>
+<ul>
+<li>Apantallamiento electromagnético y jaulas de Faraday.</li>
+<li>Protección contra reacciones químicas que produzcan HCL y gases de combustión corrosivos dentro de la cámara.</li>
+<li>Protección contra intrusión y el robo (puerta de seguridad).</li>
+<li>Protección contra el vandalismo y explosiones.</li>
+<li>Protección contra incendios y sus efectos derivados (humos y vapores).</li>
+<li>Protección contra las inundaciones interiores del CPD.</li>
+<li>Protección contra el impulso electromagnético nuclear (NEMP).</li>
+<li>Sellado de las instalaciones y de la cámara contra altas frecuencias e incendio.</li>
+</ul>
+<p><strong>Instalaciones de Agua</strong></p>
+<p>Se evitará, en lo posible, las canalizaciones de agua en la sala de ordenadores (sobre todo por falso techo, falso suelo o visibles). En todo caso se preverán los mecanismos de detección de fugas y la instalación de válvulas que puedan cerrar las conducciones afectadas. Los detectores de agua se basarán en sensores puntuales o de banda que cubran áreas completas.</p>
+<p>El cableado debe estar impermeabilizado cuando discurra por zonas con riesgo de humedad o inundación. Si no es posible separar los conductos de agua del resto de instalaciones, se preverá dotar al techo o solera del forjado, por donde discurran las tuberías, de la inclinación oportuna para evacuar el agua hacia los puntos de drenaje establecidos, evitando su acumulación.</p>
+<p>Si existen en el edificio o adosados a él depósitos de agua u otro tipo de líquido, se asegurará la estanqueidad de los mismos y se instalarán de forma que su rotura no afecte a los servicios esenciales ni por supuesto a las personas.</p>
+<p>En el caso de salas de informática situadas en sótanos se reforzará la estanqueidad de paredes, pisos, techos, puertas y ventanas. Se preverá la instalación de bombas automáticas para evacuar eventuales inundaciones, que deben alimentarse con un sistema eléctrico independiente del resto de la sala para permitir su funcionamiento independiente.</p>
+<p>Si las CPU precisan agua fría para la refrigeración, se preverá la red de tuberías con sus válvulas de corte y retención, sondas detectoras y sistema auxiliar de emergencia desde el contador del canal con filtrado del líquido.</p>
+<p><strong>Medidas de las Instalaciones contra Incendios</strong></p>
+<p>El fuego causa el mayor número de accidentes en los CPDs. Por ello es imprescindible controlar puntos zonales y además realizar un estudio en función de los agentes extintores (tener en cuenta la prohibición del uso del HALÖN, Protocolo de Montreal sobre CFCs).</p>
+<p>Se procederá a estudiar como medidas:</p>
+<ul>
+<li>El acceso de los bomberos a cualquier zona del edificio previendo las tomas de agua a presión convenientes.</li>
+<li>La resistencia al fuego de los materiales de construcción, carpintería, revestimiento, etc. Se evitarán aquellos materiales que generen productos tóxicos o gran cantidad de humo al ser sometidos al fuego (NBE-CPI-91). También hay que evitar que se acumulen listados de control y otros papeles en el CPD.</li>
+<li>El mecanismo más adecuado para cortar la alimentación eléctrica en caso de incendio.</li>
+<li>Los mecanismos idóneos para evitar que los conductores de refrigeración y ventilación actúen como chimeneas y contribuyan a propagar el incendio, parándose automáticamente el aire acondicionado en caso de incendio.</li>
+<li>La compartimentación del edificio, aislando aquellas zonas que contengan materiales fácilmente combustibles, que se limitarán al máximo.</li>
+<li>Tabicados de hormigón con mamparas y puertas ignífugas.</li>
+<li>La Instalación de puertas contra fuegos dotadas de los mecanismos que aseguren su cierre de forma automática.</li>
+<li>La prohibición de fumar, colocando carteles claramente visibles, en las zonas de mayor riesgo.</li>
+<li>El mobiliario, fabricado con materiales resistentes al fuego.</li>
+<li>Los contenedores de papel, materiales plásticos, etc, deberán tener una tapa metálica, que permanecerá cerrada de forma automática.</li>
+<li>La construcción de recintos de protección combinada o la disposición de armarios ignífugos.</li>
+<li>La instalación de un sistema de alarmas cruzadas y centralizadas en el Sistema Integral de Gestión de la Seguridad, para la detección o extinción de incendios en el CPD.</li>
+</ul>
+<p>La mayoría de los armarios que se utilizan en las salas de informática no son ignífugos sino refractarios o simples cajas fuertes. No corresponden al grado de vulnerabilidad exigido en la CEE.</p>
+<p><strong>Acondicionamiento de Aire</strong></p>
+<p>Con la evolución tecnológica ya existen en el mercado recursos informáticos que reducen (prácticamente eliminan) los tradicionales requerimientos de aire acondicionado. Sin embargo, debido al parque existente en España y a su antigüedad media, se deben tener en cuenta las siguientes consideraciones:</p>
+<ul>
+<li>Para mantener el ambiente con la temperatura y la humedad adecuadas, especialmente los de las grandes instalaciones, hay que disipar el calor que generan a través del aire acondicionado.</li>
+<li>La suficiente potencia y redundancia de estos equipos permitirá que trabajen desahogadamente y que las operaciones de mantenimiento sean sencillas y frecuentes.</li>
+<li>Un elemento fundamental del sistema acondicionador de aire es el mecanismo de corte automático tras producirse una detección de incendio.</li>
+</ul>
+<h3 id="Planes-de-Emergencia-en-Instalaciones-y-Evacuacion"><a href="#Planes-de-Emergencia-en-Instalaciones-y-Evacuacion" class="headerlink" title="Planes de Emergencia en Instalaciones y Evacuación"></a>Planes de Emergencia en Instalaciones y Evacuación</h3><p>Tiene que haber implantado, de acuerdo con las leyes y reglamentos en vigor (especialmente con la norma NBE/CPI-91), un Plan de Emergencia y Evacuación de las instalaciones de la empresa. Este plan sólo afecta a la protección de las personas que trabajan o se hallan circunstancialmente en las instalaciones de la empresa y por tanto también afecta al CPD.</p>
+<p>No tiene relación directa con el plan de seguridad del CPD o de emergencia, aunque deben estar completamente coordinados.</p>
+<p>Los objetivos de este Plan deben ser:</p>
+<ul>
+<li>Conocer los edificios y sus instalaciones, las áreas de posibles riesgos y los medios de protección disponibles.</li>
+<li>Evitar, o al menos minimizar, las causas de las emergencias.</li>
+<li>Garantizar la fiabilidad de los medios de protección.</li>
+<li>Informar de las medidas de protección a todos los ocupantes de las instalaciones.</li>
+<li>Disponer de personal organizado y adiestrado para las situaciones de emergencia.</li>
+<li>Hacer cumplir la vigente normativa de seguridad.</li>
+<li>Preparar la posible intervención de recursos externos (Policía, Bomberos, Ambulancias, etc).</li>
+</ul>
+<p>El plan de evacuación debe ser estudiado y comprobado. Se colocarán señalizaciones hacia las salidas de emergencia en todas las salas y pasillos de forma que sean fácilmente visibles desde cualquier ubicación y situación (elementos luminosos con baterías propias, elementos fosforescentes).</p>
+<p>Se instalarán alarmas acústicas y luminosas para alertar de las emergencias. Se realizarán periódicamente simulaciones de evacuación.</p>
+<h2 id="Dimensionamiento-de-Equipos"><a href="#Dimensionamiento-de-Equipos" class="headerlink" title="Dimensionamiento de Equipos"></a>Dimensionamiento de Equipos</h2><h3 id="Evaluacion-del-Rendimiento-de-un-Sistema-Informatico"><a href="#Evaluacion-del-Rendimiento-de-un-Sistema-Informatico" class="headerlink" title="Evaluación del Rendimiento de un Sistema Informático"></a>Evaluación del Rendimiento de un Sistema Informático</h3><p>Se define evaluación del rendimiento de un sistema informático como la medida de cómo un software determinado está utilizando el hardware con una determinada carga del sistema. Por ejemplo, para un computador se entiende por carga del sistema a una determinada combinación de programas.</p>
+<p>La mayor dificultad que tiene la evaluación de las prestaciones de un sistema informático se atribuye al hecho de que la carga real de un sistema informático cambia continuamente, lo que impide poder repetir la medida a no ser que se trabaje en un entorno controlado de carga. Todas las actividades que forman parte del estudio del comportamiento de un sistema se denominan actividades de evaluación de sus prestaciones.</p>
+<p>La necesidad de evaluar las prestaciones de un sistema informático ha surgido como una consecuencia natural del aumento de la potencia y de la complejidad de los sistemas. Esta evaluación no es una tarea sencilla, ya que ha de tener en cuenta muchos y variados aspectos del hardware, del software y de las aplicaciones que se han de llevar a cabo en el sistema informático.</p>
+<p>La evaluación de un sistema informático sirve para:</p>
+<ul>
+<li>Comprobar que el funcionamiento del sistema es el correcto.</li>
+<li>Detectar y eliminar los denominados “cuellos de botella”.</li>
+<li>Influir en las decisiones de diseño, implantación, compra y modificación de los sistemas informáticos, es decir, en todas las etapas de su ciclo de vida.</li>
+<li>Comparar un cierto número de diseños alternativos del sistema (diseñador de sistemas).</li>
+<li>Analizar el sistema más adecuado para ejecutar un determinado número de aplicaciones (administrador de sistemas).</li>
+<li>Planificar la capacidad, es decir, predecir el comportamiento del sistema con nuevas cargas.</li>
+</ul>
+<p>Por lo tanto, es necesario evaluar un sistema informático cuando se quiere:</p>
+<ul>
+<li>Diseñar una máquina.</li>
+<li>Diseñar un sistema informático.</li>
+<li>Seleccionar y configurar un sistema informático.</li>
+<li>Planificar la capacidad de un sistema informático.</li>
+<li>Sintonizar o ajustar un sistema informático.</li>
+<li>Caracterizar y predecir la carga.</li>
+</ul>
+<p>El comportamiento de un sistema es muy dependiente de la carga aplicada al mismo. Debido al crecimiento vegetativo de la carga de un sistema informático se produce una disminución de las prestaciones del mismo.</p>
+<p>Para evitar esta disminución es necesario ajustar o cambiar algunos de los parámetros del SO. En ciertos casos, si el sistema no se puede cambiar, hay que intentar mejorar el comportamiento mediante la modificación de la carga (programas).7</p>
+<h3 id="Sistemas-de-Referencia"><a href="#Sistemas-de-Referencia" class="headerlink" title="Sistemas de Referencia"></a>Sistemas de Referencia</h3><p>Se distinguen tres tipos de sistemas de referencia o tipos de funcionamiento de un sistema informático a la hora del estudio de las prestaciones y su evaluación:</p>
+<ul>
+<li><em>Sistema por lotes (batch)</em> : Básicamente consiste en que el computador ejecuta una serie de programas que previamente el responsable del sistema deja almacenados en memoria. Es dicha persona quién decide los trabajos que deben estar en ejecución en cada instante. Por lo tanto, la planificación interna del SO está ayudada por la externa humana. Estos trabajos realizan ciclos de uso de la CPU y de los discos de forma continua hasta que finalizan. Algunos índices de las prestaciones de estos sistemas son los siguientes:<ul>
+<li><em>Tiempo de respuesta (Turnaround time)</em> , es el tiempo que transcurre desde que se lanza la ejecución de un trabajo hasta que se termina.</li>
+<li><em>Diseño y evaluación</em> de configuraciones.</li>
+<li><em>Productividad</em> medida en trabajos por unidad de tiempo.</li>
+</ul>
+</li>
+<li><em>Sistema transaccional</em> : es aquél en que un conjunto de terminales remotos conectados al sistema interaccionan con un conjunto de programas. Cada interacción constituye una <em>transacción</em> . Ejemplos: el sistema informático de un banco o el de reserva de billetes o el que recibe medidas de un satélite. La planificación interna del SO debe gestionar las peticiones recibidas sin intervención humana. Un entorno de este tipo queda definido por el flujo de transacciones que le llega, siendo su índice de prestaciones característico el <em>tiempo de respuesta tr = tra + ten + tr</em> , donde:<ul>
+<li><em>tra</em> es el <em>tiempo de reacción</em> , que se define como el tiempo que transcurre desde que la transacción llega al sistema hasta que comienza la ejecución.</li>
+<li><em>ten</em> es el <em>tiempo de ejecución</em> , que se define como el tiempo que transcurre desde que el sistema comienza la ejecución de la transacción hasta que termina.</li>
+<li><em>tro</em> es el <em>tiempo de retorno</em> , que se define como el tiempo que transcurre desde que finaliza la ejecución hasta que, eventualmente, se completa la respuesta hacia el usuario.</li>
+</ul>
+</li>
+<li><em>Sistema interactivo</em> o <em>por demanda</em> : Un <em>sistema interactivo</em> es aquél en que los usuarios acceden a él desde terminales remotos teniendo acceso a la totalidad del SO. En estos sistemas, un usuario da una orden al terminal que pasa a procesarse por el conjunto CPU+discos y, transcurrido un cierto tiempo, produce una respuesta en el terminal. En estos sistemas no existe planificación humana que ayude a la planificación del SO. Además, queda definido por los siguientes índices:<ul>
+<li><em>Número de usuarios</em> que tiene conectados.</li>
+<li><em>Tiempo de reflexión</em> de los usuarios, que es el tiempo que transcurre desde que el usuario recibe la respuesta y envía otra nueva orden.</li>
+</ul>
+</li>
+</ul>
+<p>Los índices de prestaciones característicos son: el <em>tiempo de respuesta</em> y la <em>productividad</em> , medida esta última en peticiones por unidad de tiempo.</p>
+<h3 id="Tecnicas-de-Evaluacion-de-un-Sistema-Informatico"><a href="#Tecnicas-de-Evaluacion-de-un-Sistema-Informatico" class="headerlink" title="Técnicas de Evaluación de un Sistema Informático"></a>Técnicas de Evaluación de un Sistema Informático</h3><p>Se denominan té <em>cnicas de evaluación</em> a los métodos y herramientas que permiten obtener los índices de prestaciones de un sistema que está ejecutando una carga dada con unos valores determinados de parámetros del sistema. Se distinguen tres tipos de técnicas:</p>
+<ul>
+<li><em>Monitorización</em> . Los monitores son unas herramientas de medición que permiten seguir el comportamiento de los principales elementos de un sistema informático, cuando éste se haya sometido a una carga de trabajo determinada. Estas herramientas hacen un seguimiento de lo que sucede en el sistema, que es lo que se denomina <em>monitorización</em> .</li>
+<li><em>Modelado</em> . Es la herramienta que hay que utilizar cuando se trata de evaluar el comportamiento de un sistema en el que hay algún elemento que no está instalado. El modelado se puede realizar de dos formas:<ul>
+<li><em>Métodos analíticos</em> que proporcionan las teorías de colas. Se basan en la resolución de las ecuaciones matemáticas que representan el equilibrio existente en los eventos que se producen el sistema, mediante algoritmos aproximados. Su principal inconveniente es la limitación para tratar determinadas estructuras de colas que existen en los sistemas informáticos.</li>
+<li><em>Simulación</em> . Consiste en la construcción de un programa que reproduce el comportamiento temporal del sistema, basándose en sus estados y sus transiciones. Los resultados se obtienen por extracción de estadísticas del comportamiento simulado del sistema. Requieren de más tiempo de cálculo y esfuerzo de puesta a punto que los métodos analíticos. La principal dificultad del modelado reside en la obtención de datos lo suficientemente precisos para ejecutar el modelo y obtener resultados con un grado de aproximación adecuado.</li>
+</ul>
+</li>
+<li><em>Benchmarking</em> . Se trata de un método bastante frecuente de comparar sistemas informáticos frente a la carga característica de una instalación concreta. La comparación se realiza básicamente a partir del tiempo de ejecución. Las principales dificultades que plantea este método están relacionadas con la utilización de una carga que sea lo suficientemente reducida para ser manejable y lo suficientemente extensa para ser representativa.</li>
+</ul>
+<p><strong>Monitores</strong></p>
+<p>Un <em>monitor</em> es una herramienta utilizada para observar la actividad de un sistema informático mientras es utilizado por los usuarios y para cuantificar los resultados de dicha observación.</p>
+<p>En general, los monitores observan el comportamiento del sistema, recogen datos estadísticos de la ejecución de los programas, analizan los datos recogidos y presentan los resultados.</p>
+<p>Se define <em>monitorización</em> como el seguimiento de la actividad realizada por un sistema informático. Se ha de tener en cuenta que en informática, puesto que no es posible repetir las mismas condiciones de carga en los mismos instantes, el resultado de una medición será distinto unas veces de otras, es decir, no se da la repetibilidad de la medida. La información aportada por el monitor puede ser útil para:</p>
+<ul>
+<li>El usuario y el administrador, ya que les permite conocer toda una serie de características del sistema (capacidad, posibilidad de ampliación, planificación, etc.)</li>
+<li>El propio sistema, para la realización de la adaptación dinámica de la carga.</li>
+</ul>
+<p>La calidad de un monitor viene determinada por las siguientes características:</p>
+<ul>
+<li><em>Sobrecarga</em> o <em>interferencia</em> . La energía del sistema consumida por el instrumento de medida debe ser tan poca como sea posible, de forma que la perturbación introducida por el instrumento no altere los resultados de la observación. Los monitores hardware presentan este peligro en sus puntos de conexión y para evitarlo utilizan sondas electrónicas de muy alta impedancia. Por otro lado, los monitores software aumentan la carga del sistema y alteran por consiguiente su comportamiento, por lo que se debe tratar de minimizar al máximo este efecto.</li>
+<li><em>Precisión</em> . Es el error que puede afectar al valor de los datos recogidos. Estos errores son debidos a diferentes causas: la interferencia del propio monitor, una incorrecta instalación o utilización, el número de dígitos para representar la medición, etc.</li>
+<li><em>Resolución</em> . Es la capacidad de la herramienta de separar dos acontecimientos consecutivos en el tiempo. También se define como la máxima frecuencia a la que se pueden detectar y registrar correctamente los datos.</li>
+<li><em>Ámbito</em> o <em>dominio de medida</em> . Hace referencia al tipo de acontecimientos que puede detectar, es decir, a las características que puede observar y medir.</li>
+<li><em>Anchura de entrada</em> . Es el número máximo de bits que el monitor puede extraer en paralelo y procesar cuando se produce un acontecimiento.</li>
+<li><em>Capacidad de reducción de datos</em> . Es la capacidad que puede tener el monitor de analizar, procesar y empaquetar datos durante la monitorización para un mejor tratamiento y compresión de los mismos y para reducir el espacio necesario para almacenar los resultados.</li>
+<li><em>Compatibilidad</em> . El hardware y el software de monitorización debe ser fácilmente adaptable a cualquier entorno y requerimiento de la aplicación.</li>
+<li><em>Coste</em> (adquisición, instalación, mantenimiento, formación y operación).</li>
+<li><em>Facilidad de instalación y de utilización</em> .</li>
+</ul>
+<p>Los monitores se pueden clasificar atendiendo a tres aspectos:</p>
+<ul>
+<li>Forma de implantación.</li>
+<li>Mecanismo de activación.</li>
+<li>Forma de mostrar los resultados.</li>
+</ul>
+<p>Según su implantación se clasifican en:</p>
+<ul>
+<li><em>Monitores software</em> : Son programas o ampliaciones del SO que acceden al estado del sistema, informando al usuario sobre dicho estado. Son los más adecuados para monitorizar los SO, las redes y las BD, así como las aplicaciones que las utilizan. Cada activación del monitor implica la ejecución de varias instrucciones por parte de la CPU del sistema que está analizando, lo que puede provocar una gran sobrecarga en el sistema si la causa de la activación se produce con gran frecuencia.</li>
+<li><em>Monitores hardware</em> : Son dispositivos para medir las prestaciones de sistemas informáticos y se conectan al hardware del sistema que se va a monitorizar por medio de sondas electrónicas, que son elementos capaces de detectar eventos de tipo eléctrico. Un monitor hardware podrá reconocer todos aquellos acontecimientos que se reflejen en puntos fijos del sistema. Su principal característica es que son externos al sistema que van a medir, lo que implica:<ul>
+<li>No utilizan recursos del sistema que van a monitorizar.</li>
+<li>No producen interferencias con éste.</li>
+<li>Son muy rápidos.</li>
+<li>Sus principales desventajas son:<ul>
+<li>Son más difíciles de instalar.</li>
+<li>Existen magnitudes a las que no se puede acceder.</li>
+<li>Requieren para su operación y análisis de resultados de personal especializado.</li>
+<li>Pueden interactuar a nivel eléctrico con el sistema que se va a monitorizar, provocando perturbaciones que resulten en un funcionamiento anómalo del sistema monitorizado.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Monitores híbridos</em> : Son una combinación de las dos técnicas anteriores, intentando combinar las ventajas de una y otra.</li>
+</ul>
+<p>Según su mecanismo de activación se clasifican en:</p>
+<ul>
+<li><em>Monitores de eventos</em> o <em>acontecimientos</em> . Son aquellos que se activan por la aparición de ciertos eventos. Si el evento se da con frecuencia, la sobrecarga que se produce es elevada.</li>
+<li><em>Monitores de muestreo</em> . Son aquellos que se activan a intervalos de tiempo fijos o aleatorios mediante interrupciones de reloj. La frecuencia de muestreo viene determinada por la frecuencia del estado que se desea analizar y por la resolución que se desee conseguir.</li>
+</ul>
+<p>Según su forma de mostrar los resultados se clasifican en:</p>
+<ul>
+<li><em>Monitores de tiempo real</em> , que constan de un módulo analizador que procesa los datos a medida que los recibe.</li>
+<li><em>Monitores batch</em> , que primero recogen la totalidad de la información para posteriormente analizarla.</li>
+</ul>
+<p><strong>Técnicas Analíticas: Teoría de Colas</strong></p>
+<p>La teoría de <em>colas</em> permite determinar el tiempo que un trabajo pasa esperando en las distintas colas de un sistema. Una red de colas es un conjunto de estaciones de servicio y de clientes. Las estaciones de servicio representan los recursos del sistemas y los clientes usualmente representan a los usuarios.</p>
+<p>Una <em>estación de servicio</em> consta de un servidor más una cola de espera asociada. Se establece por tanto la siguiente relación entre los modelos y los sistemas reales:</p>
+<p>Servidor (modelo) &lt;=&gt; Recurso del sistema (hardware)<br>Cola (modelo) &lt;=&gt; Cola (software) asociada al recurso</p>
+<p>Se denomina <em>resolución</em> o <em>evaluación analítica</em> a la obtención de los índices de prestaciones del sistema a partir de un modelo de colas. Básicamente, consisten en la resolución de un conjunto de ecuaciones que se deducen a partir del modelo y de sus parámetros.</p>
+<p>El objetivo del es llegar a establecer relaciones entre las variables que caracterizan la carga y las que miden el comportamiento. El término operacional implica que el sistema es directamente medible. Por tanto, una suposición o hipótesis operacional será aquella que puede ser comprobada o verificada mediante la medida.</p>
+<p>Esquema de una estación de servicio:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/estacion_servicio.png?w=825" alt=""></p>
+<p>Una petición tendrá que esperar en la cola hasta que el servidor quede libre. Una vez que un cliente recibe el servicio abandona la estación. El conjunto (Estación de servicio + clientes) constituye la versión más simple de un modelo de red de colas. Básicamente este modelo tendrá dos parámetros:</p>
+<ul>
+<li>La intensidad de carga o tasa de llegada de los clientes, que se mide en peticiones/segundo.</li>
+<li>La demanda de servicio, que es el tiempo medio de servicio de un cliente y se mide en segundos.</li>
+</ul>
+<p>Los clientes en una estación de cola compiten por el servidor. Por ello, el tiempo de residencia estará compuesto por un posible tiempo de espera y un tiempo de servicio.</p>
+<p>Las variables operacionales básicas son las que se pueden medir directamente sobre el sistema durante un intervalo de observación finito:</p>
+<ul>
+<li>T (seg), intervalo de observación o de medida del sistema.</li>
+<li>A (peticiones o clientes), número de peticiones llegadas o clientes durante el intervalo T.</li>
+<li>C (peticiones o clientes), número de peticiones completadas o servidas durante el intervalo T.</li>
+<li>B (seg), tiempo durante el cual el recurso observado (la estación de servicio) ha estado ocupado.</li>
+</ul>
+<p><strong>Benchmarks</strong></p>
+<p>En general, se puede decir que los benchmarks son programas utilizados para medir el rendimiento de un sistema informático o de alguna de sus partes. La finalidad de sus estudios puede ser muy variada: comparación de sistemas, su sintonización, la planificación de su capacidad, la comparación de compiladores en la generación de código eficiente, el diseño de sistemas o procesadores, etc.</p>
+<p>Como programa benchmark se puede usar prácticamente cualquier programa ejecutable, escrito en cualquier lenguaje de programación, incluso en lenguaje máquina. se denomina benchmarking al proceso de comparar dos o más sistemas mediante la obtención de medidas. Para conseguir un buen paquete de programas benchmark se deben seguir una serie de pasos, siendo los principales:</p>
+<ul>
+<li>Determinar los objetivos de utilización de benchmark.</li>
+<li>Escoger los mejores programas de benchmark según los objetivos determinados en el paso anterior. Por ejemplo, si se desea estudiar el rendimiento de E/S de un sistema, se elegirán programas con un consumo importante de E/S y no programas con consumo intensivo de CPU.</li>
+<li>Se deben comprobar los aspectos del sistema bajo estudio que influyen en el rendimiento, como pueden ser el SO, los compiladores y su nivel de optimización, el uso de memorias caché, etc. Además se debe comprobar que los programas, versiones y datos usados como benchmark sean los mismos en todas las pruebas.</li>
+<li>Finalmente, obtenidos los resultados y entendiendo perfectamente qué hace cada programa benchmark, se debe intentar estudiar la causa de las diferencias obtenidas en los distintos sistemas evaludados.</li>
+</ul>
+<p>La palabra <em>benchmark</em> se puede definir de dos formas:</p>
+<ul>
+<li>Definición 1: Los benchmarks son una forma de evaluar las prestaciones de un sistema informático, bien en su conjunto o de alguna de sus partes. Además, si el benchmark está estandarizado, se puede utilizar para comparar diferentes sistemas.</li>
+<li>Definición 2: Los benchmarks se pueden definir como conjuntos de programas completos escritos en lenguaje de alto nivel y que se consideran representativos de la carga real.</li>
+</ul>
+<p>Una vez dadas las diferentes definiciones de benchmark, conviene conocer las principales aplicaciones de este tipo de programas:</p>
+<ul>
+<li>En la <em>comparación del rendimiento de diferentes sistemas informáticos</em> con vistas a la adquisición de equipos. Se debe remarcar que estas comparaciones serán tanto más importantes cuanto mayores y más complejos sean el sistema y las aplicaciones que debe soportar. De esta forma será más importante en máquinas de tipo UNIX (multitarea y multiusuario) trabajando sobre arquitecturas diversas que en máquinas MSDOS (monopuesto y monotarea) trabajando sobre la base de una misma familia de chips. Con vistas a la consecución de este objetivo, interesa que los benchmarks estén formados por programas extraídos de la carga real, programas estándar o una mezcla de ambos y servirán para comparar el rendimiento de sistemas informáticos.</li>
+<li>En la <em>sintonización de sistemas</em> , es decir, cuando se quiere mejorar el rendimiento de un sistema informático que ya está en funcionamiento. En este sentido, interesa que los benchmark permitan detectar qué partes del sistema deben mejorarse o, una vez introducidas las modificaciones, comprobar que efectivamente se ha aumentado el rendimiento del sistema. Suelen ser programas extraídos de la carga real.</li>
+<li>En la <em>planificación de la capacidad</em> de un sistema informático, es decir, conocer la capacidad que le queda disponible en previsión de posibles ampliaciones. Interesa que los benchmarks usados lleven el rendimiento del sistema hasta el límite, para así poder prever las carencias que presentará el sistema en el futuro. Para este fin, se utilizan programas artificiales que disponen de parámetros regulables que permiten modificar la cantidad de consumo de recursos en el sistema.</li>
+<li>En la <em>comparación de compiladores</em> desde el punto de vista de la generación de código. Los programas elegidos para la comparación de compiladores pueden ser estándar o extraídos de la carga real. Además conviene indicar sobre qué arquitectura y SO se realizan las pruebas.</li>
+<li>En el <em>diseño de sistemas informáticos o de procesadores</em> . En este caso, se parte de un sistema general inicial y, mediante simulaciones, tomando como entrada los benchmarks elegidos, se obtiene unos resultados a partir de los cuales se intentará ir mejorando paulatinamente el diseño del sistema. En el diseño se debe tener en cuenta el tipo de compilador que se emplea, ya que deben ser tan independientes como sea posible de la arquitectura. También se pueden estudiar las interrelaciones existentes entre las distintas arquitecturas, sus implantaciones, los lenguajes de programación y los algoritmos que ejecutan.</li>
+</ul>
+<h3 id="Cuellos-de-Botella"><a href="#Cuellos-de-Botella" class="headerlink" title="Cuellos de Botella"></a>Cuellos de Botella</h3><p>Un <em>cuello de botella</em> es una limitación de las prestaciones del sistema provocada por diversas causas: un componente hardware, un componente software o la organización del sistema. Un cuello de botella produce una ralentización considerable del tráfico de los procesos en un área del sistema. Así, cuando la demanda de servicio de un determinado componente excede en frecuencia e intensidad a la capacidad de servicio de ese componente, se dan las condiciones para la aparición de un cuello de botella.</p>
+<p>El término cuello de botella sólo es apropiado cuando el problema en las prestaciones puede ser atribuido a uno o dos recursos del sistema, ya que en un sistema donde todos o casi todos los componentes están sobrecargados no se pueden encontrar cuellos de botella concretos y se habla de un sistema <em>sobrecargado</em> o <em>saturado</em> .</p>
+<p>En ocasiones, la eliminación de un cuello de botella hace que aparezca otro distinto, diciendo en ese caso que un cuello de botella esconde otro. Se deben eliminar todos los cuellos de botella hasta conseguir que el sistema se encuentre <em>equilibrado</em> ( <em>balanced</em> ).</p>
+<p>Por otra parte, los cuellos de botella no están directamente ligados a una configuración dada sino que son función, en gran medida, de la carga. Además como la carga en los sistemas suele variar con el tiempo, pueden aparecer <em>cuellos de botella temporales</em> , que son aquellos que aparecen por un espacio de medida relativamente corto respecto a la sesión de medida. Por ello para su detección se suele utilizar un método de interpretación de las medidas en tiempo real (on line).</p>
+<p>Existen diversas aproximaciones para la detección de los cuellos de botella. Conceptualmente todas ellas son bastante similares, aunque están basada en técnicas diferentes (simulación, modelos analíticos, medidas sobre el sistema, …). El método más común es el basado en la interpretación a posteriori ( <em>off-line</em> ) de las medidas realizadas sobre el sistema. El procedimiento que sigue cualquiera de estos métodos es el siguiente:</p>
+<ul>
+<li>Debido a síntomas de ineficiencia o algunos de los estudios de evaluación que se realizan al sistema se sospecha de la existencia de un cuello de botella. Se debe formular una hipótesis acerca de la localización y causa de dicho cuello de botella.</li>
+<li>Se procede a la validación de la hipótesis acerca de la causa del cuello de botella. Para ello se recurre a los datos medidos sobre el sistema o, si éstos son insuficientes, a la recogida de más datos y a su análisis.</li>
+<li>Una vez confirmada la hipótesis se plantea el problema de eliminar el cuello de botella o de reducir sus efectos al menos. Para ello hay que determinar el método más eficaz. En general se pueden distinguir dos tipos de modificaciones del sistema para la eliminación de cuellos de botella:<ul>
+<li><em>Terapias de reposición (upgradding)</em> , hacen referencia a modificaciones del hardware como añadir, reemplazar o incluso eliminar uno o más componentes hardware.</li>
+<li><em>Terapias de sintonización (tunning)</em> , se trata de modificaciones que no alteran la configuración pero de alguna manera tienen efecto sobre la organización del sistema como por ejemplo, cambiar ficheros de un disco a otro, cambiar un disco de canal, etc. Este tipo de terapias son, en general, más económicas y menos radicales que las terapias de reposición.</li>
+</ul>
+</li>
+<li>Se procede a la <em>modificación del sistema</em> de acuerdo con el método seleccionado.</li>
+</ul>
+<h3 id="Sintonizacion"><a href="#Sintonizacion" class="headerlink" title="Sintonización"></a>Sintonización</h3><p>Para mejorar las prestaciones y la eficiencia de un sistema informático es necesario realizar un estudio de evaluación de las prestaciones de dicho sistema. Las operaciones que hay que llevar a cabo en un método de mejora de prestaciones se pueden agrupar en las siguientes fases:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/etapas_metodo_mejora.png?w=825" alt=""></p>
+<p>La definición de los objetivos del estudio es una fase fundamental, ya que en función de los mismos se determinará el método que se utilizará para analizar las prestaciones del sistema, la cantidad de recursos que es preciso emplear y la forma de justificar la inversión necesaria.</p>
+<p>Inicialmente los objetivos deben ser modestos y estar basados en el análisis de los datos proporcionados por las rutinas de contabilidad, que proporcionan los datos de partida del estudio y pueden revelar la existencia de problemas no detectados.</p>
+<p>Estos problemas se pueden agrupar en las siguientes clases:</p>
+<ul>
+<li>Análisis de los dispositivos de hardware.</li>
+<li>Eficiencia de los programas.</li>
+<li>Problemas de la carga.</li>
+<li>Localización de los cuellos de botella.</li>
+</ul>
+<p>Cada una de estas clases o áreas de estudio requerirá unas herramientas y unas técnicas especificas. Por otra parte, también es conveniente fijar el ámbito de estudio, es decir, si se va a tratar un problema concreto o un problema global.</p>
+<p>Ejemplos de objetivos de estudio a <em>nivel global del sistema</em> son:</p>
+<ul>
+<li>Verificar la posibilidad de evitar, o de al menos, posponer por algún tiempo, la adquisición de nuevo hardware (memoria, periféricos, CPU, …).</li>
+<li>Reducir el overhead del sistema y en general todas las actividades que no sean productivas.</li>
+<li>Reducir la carga actual.</li>
+</ul>
+<p>La consecución del segundo y tercer objetivo aumentará la capacidad residual del sistema y resultará de interés si lo que se pretende es encontrar espacio para nuevas aplicaciones sin tener que expandir la configuración del sistema.</p>
+<p>Por otro lado, el primero y especialmente el segundo de los objetivos suelen requerir la localización de posibles cuellos de botella del sistema.</p>
+<p>Ejemplos de objetivos específicos son:</p>
+<ul>
+<li>Reducir el tiempo medio de respuesta en un porcentaje dado.</li>
+<li>Determinar si la tasa de paginación es tan elevada que pueda ser necesario algún tipo de intervención (ej: la ampliación de la memoria principal).</li>
+<li>Determinar la mejor distribución de los archivos en los discos conectados a los diversos canales.</li>
+<li>Determinar la relación existente entre las utilizaciones de memoria y de CPU y el número de usuarios conectados.</li>
+<li>Equilibrar y optimizar la actividad de los canales.</li>
+</ul>
+<p>En ocasiones para lograr un determinado objetivo es necesario analizar y resolver previamente otros problemas.</p>
+<h2 id="Factores-a-considerar"><a href="#Factores-a-considerar" class="headerlink" title="Factores a considerar"></a>Factores a considerar</h2><p>Para evaluar el comportamiento de un sistema es necesario disponer de una serie de medidas cuantitativas o parámetros que:</p>
+<ul>
+<li>Caracterizan el comportamiento tanto del hardware como del software del computador.</li>
+<li>Hacen referencia a cómo el usuario (visión externa) y el responsable del sistema (visión interna) ven su comportamiento.</li>
+</ul>
+<p>Estas magnitudes o parámetros están relacionadas con tres tipos de medidas correspondientes a:</p>
+<ul>
+<li>Consumo de tiempos.</li>
+<li>Utilización de recursos o dispositivos.</li>
+<li>Trabajo realizado por el sistema o componentes del mismo.</li>
+</ul>
+<h3 id="Variables-externas-o-perceptibles-por-el-usuario"><a href="#Variables-externas-o-perceptibles-por-el-usuario" class="headerlink" title="Variables externas o perceptibles por el usuario"></a>Variables externas o perceptibles por el usuario</h3><ul>
+<li><em>Productividad (Throughput)</em> , es la cantidad de trabajo útil ejecutado por unidad de tiempo (u.t.) en un entorno de carga determinado. Normalmente se mide en (trabajos/hora) o en (transacciones/segundo).</li>
+<li><em>Capacidad</em> , es la máxima cantidad de trabajo útil que se puede realizar por u.t. en un entorno de carga determinado.</li>
+<li><em>Tiempo de respuesta</em> , es el tiempo transcurrido entre la entrega de un trabajo o una transacción al sistema y la recepción del resultado o la respuesta.</li>
+</ul>
+<h3 id="Variables-Internas-o-del-Sistema"><a href="#Variables-Internas-o-del-Sistema" class="headerlink" title="Variables Internas o del Sistema"></a>Variables Internas o del Sistema</h3><ul>
+<li><em>Factor de utilización de un componente</em> , es el porcentaje de tiempo durante el cual un componente del sistema informático (CPU, dispositivo de E/S, canal, etc.) ha sido realmente usado.</li>
+<li><em>Solapamiento de componentes</em> , es el porcentaje de tiempo durante el cual dos o más componentes del sistema han sido utilizados simultáneamente.</li>
+<li><em>Overhead</em> , es el porcentaje de tiempo que los distintos dispositivos del sistema (CPU, disco, memoria, etc) han sido utilizados en tareas del sistema no directamente imputables a ninguno de los trabajos en curso.</li>
+<li><em>Factor de carga de multiprogramación</em> , es la relación entre el tiempo de respuesta de un trabajo en un determinado entorno de multiprogramación y su tiempo de respuesta en monoprogramación.</li>
+<li><em>Factor de ganancia o multiprogramación</em> , es la relación entre el tiempo total necesario para ejecutar un conjunto de programas secuencialmente en monoprogramación y en multiprogramación.</li>
+<li><em>Frecuencia de fallo de página</em> , es el número de fallos de página que se producen por unidad de tiempo en un sistema de memoria virtual paginada.</li>
+<li><em>Frecuencia de swapping</em> , es el número de programas expulsados de memoria por unidad de tiempo a causa de falta de espacio o con el fin de permitir su reorganización para recuperar espacio en ella o para disminuir la paginación.</li>
+</ul>
+<h3 id="Otras-Magnitudes-Relativas-al-comportamiento"><a href="#Otras-Magnitudes-Relativas-al-comportamiento" class="headerlink" title="Otras Magnitudes Relativas al comportamiento"></a>Otras Magnitudes Relativas al comportamiento</h3><ul>
+<li><em>Fiabilidad</em> , es una función del tiempo definida como la probabilidad que el sistema trabaje correctamente a lo largo de un intervalo de tiempo dado. Se mide por la probabilidad de fallos por unidad de tiempo o por el tiempo medio entre fallos.</li>
+<li><em>Disponibilidad</em> , es una función del tiempo definida como la probabilidad de que el sistema esté trabajando correctamente y por lo tanto se encuentre disponible para realizar sus funciones en el instante considerado _t_ .</li>
+<li><em>Seguridad</em> , es la probabilidad que el sistema esté realizando correctamente sus funciones o parado de forma tal que no perturbe el funcionamiento de otros sistemas ni comprometa la seguridad de las personas relacionadas con él.</li>
+<li><em>Rendimiento</em> , es una función del tiempo definida como la probabilidad que las prestaciones del sistema estén por encima de un cierto nivel en un instante determinado.</li>
+<li><em>Mantenibilidad</em> , es la probabilidad que un sistema averiado pueda ser reparado y devuelto al estado operacional dentro de un periodo de tiempo determinado.</li>
+</ul>
+<h3 id="Magnitudes-que-caracterizan-la-carga"><a href="#Magnitudes-que-caracterizan-la-carga" class="headerlink" title="Magnitudes que caracterizan la carga"></a>Magnitudes que caracterizan la carga</h3><p>Se denomina <em>carga de prueba</em> la carga usada en el estudio de las prestaciones de un sistema informático. Se distinguen dos tipos de carga:</p>
+<ul>
+<li><em>Carga real</em> , se observa en un sistema durante su funcionamiento normal. Su principal inconveniente es que no permite repeticiones para eliminar los errores de medición, por lo que es difícilmente utilizable como carga de prueba.</li>
+<li><em>Carga sintética</em> , está constituida por un conjunto de programas extraídos o no de la carga real del sistema informático que la reproduce de forma compacta. Puede utilizarse repetidamente y puede modificarse sin afectar a la operatividad del sistema. En muchos sistemas la evaluación se suele realizar en un sistema distinto pero equivalente al real, es decir, creándose dos sistemas paralelos.</li>
+</ul>
+<h3 id="Magnitudes-que-caracterizan-cada-componente-de-la-carga"><a href="#Magnitudes-que-caracterizan-cada-componente-de-la-carga" class="headerlink" title="Magnitudes que caracterizan cada componente de la carga"></a>Magnitudes que caracterizan cada componente de la carga</h3><ul>
+<li><em>Tiempo de CPU de trabajo</em> , es el tiempo total de CPU necesario para ejecutar un trabajo (programa, transacción, etc) en un sistema determinado. Es una función directa del número de instrucciones que se ejecutan para realizar ese trabajo, del volumen de datos procesados y de la velocidad del procesador.</li>
+<li><em>Número de operaciones de E/S por trabajo</em> , es el número total de operaciones de E/S que requiere la ejecución de un trabajo.</li>
+<li>Caracte <em>rísticas de las operaciones de E/S por trabajo</em> , hacen referencia al soporte (cinta, disco, etc) y, en el caso de discos, a la posición que ocupa el archivo sobre el que se efectúan.</li>
+<li><em>Prioridad</em> , es la que el usuario asigna a cada uno de los trabajos que procesa el sistema.</li>
+<li><em>Memoria</em> , es la que requiere ocupar, para su ejecución, un trabajo determinado. Puede ser constante o variable.</li>
+<li><em>Localidad de las referencias</em> , es el tiempo en que todas las referencias hechas por un trabajo permanecen dentro de una página (segmento) o conjunto de páginas (segmentos).</li>
+</ul>
+<h3 id="Magnitudes-que-caracterizan-el-conjunto-de-carga"><a href="#Magnitudes-que-caracterizan-el-conjunto-de-carga" class="headerlink" title="Magnitudes que caracterizan el conjunto de carga"></a>Magnitudes que caracterizan el conjunto de carga</h3><ul>
+<li><em>Tiempo entre llegadas</em> , es el tiempo entre dos requerimientos sucesivos para un servicio (ejecución de un trabajo o transacción) del sistema.</li>
+<li><em>Frecuencia de llegada</em> , es el número medio de llegadas de nuevas peticiones de ejecución que se producen por unidad de tiempo. Es la inversa del tiempo entre llegadas.</li>
+<li><em>Distribución de trabajos</em> , define la proporción existente entre las ejecuciones de los distintos trabajos que constituyen la carga.</li>
+</ul>
+<h3 id="Magnitudes-que-caracterizan-las-cargas-convencionales"><a href="#Magnitudes-que-caracterizan-las-cargas-convencionales" class="headerlink" title="Magnitudes que caracterizan las cargas convencionales"></a>Magnitudes que caracterizan las cargas convencionales</h3><ul>
+<li><em>Tiempo de reflexión del usuario</em> , es el tiempo que el usuario de un terminal de un sistema interactivo necesita para generar una nueva petición al sistema (tiempo de leer la respuesta previa, de pensar en la nueva acción que se vaya a formar y de teclearla.</li>
+<li><em>Número de usuarios simultáneos</em> , es el número de usuarios interactivos que trabajan simultáneamente sobre el sistema en un instante dado.</li>
+<li><em>Intensidad del usuario</em> , es la relación entre el tiempo de respuesta de una petición y el tiempo de reflexión del usuario.</li>
+</ul>
+<h3 id="Magnitudes-para-controlar-el-comportamiento"><a href="#Magnitudes-para-controlar-el-comportamiento" class="headerlink" title="Magnitudes para controlar el comportamiento"></a>Magnitudes para controlar el comportamiento</h3><p>Algunas de las modificaciones que se pueden introducir en un sistema para mejorar su comportamiento son:</p>
+<ul>
+<li>Ajuste de los parámetros del SO.<ul>
+<li><em>Tamaño del quantum</em> , es la cantidad de tiempo de uso ininterrumpido de la CPU que un sistema de tiempo compartido asigna a los diferentes trabajos. Si el guantum es demasiado grande se favorece a los trabajos con mucho uso de la CPU, mientras que si es demasiado pequeño se puede introducir un overhead importante debido a los continuos cambios de contexto de un programa a otro cada vez que se agota el quantum.</li>
+<li><em>Prioridad interna</em> , es el nivel inicial de prioridad interna que recibe un programa en función de la prioridad externa asignada.</li>
+<li><em>Factor de multiprogramación</em> , es el número máximo de trabajos que están simultáneamente en memoria principal y, por lo tanto, que tienen opción a utilizar la CPU y los demás recursos activos del sistema. Cuanto mayor sea este valor tanto mejor será el aprovechamiento de todos los recursos del sistema, aunque también aumentará el overhead.</li>
+<li><em>Tamaño de la partición de memoria</em> , es la cantidad fija de memoria principal asignada a una cola de trabajos.</li>
+<li><em>Máxima frecuencia de fallo de página</em> , es el valor de la frecuencia de fallo de página por encima del cual se produce un excesivo overhead. A partir de este valor de frecuencia se efectúa la suspensión o swapping de alguno de los trabajos en curso.</li>
+<li>Número máximo de usuarios simultáneos.</li>
+</ul>
+</li>
+<li><em>Modificación de las políticas de gestión del SO</em> , como por ejemplo cambiar las prioridades de los diferentes tipos de tareas.</li>
+<li><em>Equilibrado de la distribución de cargas</em> , se pretenden utilizar de la forma más uniforme posible todos los dispositivos del sistema informático. Cuando el uso de los mismos está desequilibrado se deben disponer los cambios necesarios para lograr el equilibrio deseado. Este tipo de corrección acostumbra, en muchos casos, a proporcionar mejoras espectaculares en el comportamiento del sistema.</li>
+<li><em>Sustitución o ampliación de los componentes del sistema</em> , cuando los métodos anteriores no funcionan se debe modificar la configuración del sistema, bien sea sustituyendo determinados elementos por otros de mayor capacidad o rapidez, o bien sea por aumento del número de dispositivos que constituyen la configuración del sistema. Es importante darse cuenta de que la ampliación de la configuración debe hacerse de tal forma que se despeje el posible cuello de botella que se pueda haber detectado, ya que de lo contrario el comportamiento conjunto del sistema ampliado no variará de forma significativa.</li>
+<li><em>Modificación de los programas</em> , de tal forma que su ejecución promedio requiera de menos recursos. Esto se puede conseguir bien mediante recodificación de los caminos del programa recorridos con mayor asiduidad, o bien por un montaje que agrupe en la misma página o segmento aquellos módulos del programa que deben coexistir en memoria para la ejecución del programa, etc. Hay que destacar que este método provoca la modificación de la carga del sistema y normalmente se considera la carga como un dato del problema que no se puede modificar.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357351154/TICB3-Planificacion-Fisica-CPD" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t06/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T06
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B4/b4-t19/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B4-T19</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

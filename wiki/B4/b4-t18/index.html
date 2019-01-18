@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B4-T18 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B4-T18">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Redes inalámbricas. Protocolos. Características funcionales y técnicas. Sistemas de expansión del espectro. Sistemas de acceso. Modos de operación. Seguridad. Normativa reguladora.IntroducciónEstos úl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-T18">
+<meta property="og:url" content="http://localhost:4000/wiki/B4/b4-t18/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Redes inalámbricas. Protocolos. Características funcionales y técnicas. Sistemas de expansión del espectro. Sistemas de acceso. Modos de operación. Seguridad. Normativa reguladora.IntroducciónEstos úl">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/diferencias_ieee.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/redes_inalambricas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/diferencias-wifi-bluetooth.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/03/vpn.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:14:54.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-T18">
+<meta name="twitter:description" content="Redes inalámbricas. Protocolos. Características funcionales y técnicas. Sistemas de expansión del espectro. Sistemas de acceso. Modos de operación. Seguridad. Normativa reguladora.IntroducciónEstos úl">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/03/diferencias_ieee.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file active"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B4/b4-t18" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B4/">B4</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B4/b4-t18/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B4/b4-t18.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B4/b4-t18.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B4/b4-t18.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B4-T18
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Redes-inalambricas-Protocolos-Caracteristicas-funcionales-y-tecnicas-Sistemas-de-expansion-del-espectro-Sistemas-de-acceso-Modos-de-operacion-Seguridad-Normativa-reguladora"><a href="#Redes-inalambricas-Protocolos-Caracteristicas-funcionales-y-tecnicas-Sistemas-de-expansion-del-espectro-Sistemas-de-acceso-Modos-de-operacion-Seguridad-Normativa-reguladora" class="headerlink" title="Redes inalámbricas. Protocolos. Características funcionales y técnicas. Sistemas de expansión del espectro. Sistemas de acceso. Modos de operación. Seguridad. Normativa reguladora."></a>Redes inalámbricas. Protocolos. Características funcionales y técnicas. Sistemas de expansión del espectro. Sistemas de acceso. Modos de operación. Seguridad. Normativa reguladora.</h1><h2 id="Introduccion"><a href="#Introduccion" class="headerlink" title="Introducción"></a>Introducción</h2><p>Estos últimos años la comunicación inalámbrica ha evolucionado notablemente, el uso de teléfonos móviles ya es masivo y a éstos cada vez se la han ido agregando nuevas funcionalidades, sin embargo esto es sólo el inicio de la comunicación inalámbrica, ya que éstas continúan apostando por convertir al aire en el mejor medio de transporte de datos.</p>
+<p>La apuesta anterior se basa en las tecnologías de comunicación inalámbrica WI-FI y Bluetooth, las cuales han permitido que muchas personas utilicen tiempo que antes era de ocio pudiendo contar con Internet en situaciones tan comunes como la espera en el aeropuerto, el tiempo de viaje, entre otras ventajas.</p>
+<p>Estas tecnologías aparentemente pueden parecer similares, sin embargo hay grandes diferencias entre ellas, lo que hace que sean complementarias.</p>
+<p>Las Redes inalámbricas facilitan la operación en lugares donde la computadora no puede permanecer en un solo lugar, como en almacenes o en oficinas que se encuentren en varios pisos. Pero la realidad es que esta tecnología está todavía en pañales y se deben resolver varios obstáculos técnicos y de regulación antes de que las redes inalámbricas sean utilizadas de una manera general en los sistemas de cómputo de la actualidad.</p>
+<p>Hasta ahora solo se ha percibido los aspectos positivos de estas tecnologías, sin embargo no hay que olvidar los aspectos más débiles de ésta. El mayor problema al que se enfrenta hoy este tipo de comunicación es la seguridad, y aunque se ha trabajado en este aspecto aún falta para que sea tanto o más confiable que el cable. Otro aspecto que no hay que dejar de lado es el coste que significa contar con éstas. Con respecto a estos problemas, es de esperar que en unos años más se llegue a una solución para así confirmar que el aire es el mejor medio de transportes de datos.</p>
+<p>No se espera que las redes inalámbricas lleguen a reemplazar a las redes cableadas. Estas ofrecen velocidades de transmisión mayores que las logradas con la tecnología inalámbrica. Sin embargo se pueden mezclar las redes cableadas y las inalámbricas, y de esta manera generar una “Red Híbrida” y poder resolver los últimos metros hacia la estación. Se puede considerar que el sistema cableado sea la parte principal y la inalámbrica le proporcione movilidad adicional al equipo, pudiendo el operador desplazarse con facilidad dentro de un almacén o una oficina.</p>
+<p>La disponibilidad de conexiones inalámbricas y redes LAN inalámbricas puede ampliar la libertad de los usuarios de la red a la hora de resolver varios problemas asociados a las redes con cableado fijo y, en algunos casos, incluso reducir los gastos de implementación de las redes. Sin embargo, a pesar de esta libertad, las redes LAN inalámbricas traen consigo un nuevo conjunto de desafíos.</p>
+<p>El amplio interés del sector para que exista interoperabilidad y compatibilidad entre los SO ha permitido resolver algunas de las cuestiones relacionadas con la implementación de las redes LAN inalámbricas. Con todo, las redes LAN inalámbricas exponen nuevos retos en lo que respecta a la seguridad, la movilidad y la configuración.</p>
+<h2 id="Redes-Inalambricas"><a href="#Redes-Inalambricas" class="headerlink" title="Redes Inalámbricas"></a>Redes Inalámbricas</h2><h3 id="Situacion-Actual"><a href="#Situacion-Actual" class="headerlink" title="Situación Actual"></a>Situación Actual</h3><p>En los últimos años el crecimiento en la demanda de soluciones inalámbricas para la empresa, y últimamente también para el hogar, ha crecido de una manera espectacular. Las distintas tecnologías inalámbricas permiten dar una cobertura casi en cualquier rincón del planeta. Cientos de millones de personas en todo el mundo se comunican e intercambian información todos los días usando una u otra tecnología inalámbrica, permitiendo el envío de datos y con una movilidad sin precedentes.</p>
+<p>Las tecnologías más usadas y conocidas hoy día son las de los teléfonos móviles, sistemas de navegación, “buscas”, servicios de mensajes, y un largo etcétera. Pero el gran exponente hoy de la revolución digital y de como los bits forman parte de nuestro día a día, proviene del intercambio de datos digitales. Estos datos no sólo se quedan limitados al ámbito de las computadoras, sino también en una gran cantidad de aplicaciones, pasando desde los grandes sistemas de tratamiento de datos empresariales y científicos hasta las más pequeñas utilidades personales destinadas a mejorar nuestro día a día.</p>
+<p>Ya no estamos atados a redes cableadas sino que podemos acceder y compartir datos llevándoles con nosotros, dondequiera que vayamos.</p>
+<p>Desde el principio de los años 70 hemos tenido una red, la red Ethernet, que ha supuesto una estandarización a la hora de transmitir datos, con un gran éxito en todo el mundo. Aunque no es el único, si es el que más ha influenciado el uso habitual de las redes de área local (LAN). Nos hemos acostumbrado a tener redes de computadores de bajo coste, altas velocidades y una relativamente fácil instalación, más que aptas para la mayoría de las aplicaciones. Pero el hecho de tener una infraestructura nos limita a ésas líneas preinstaladas, y los costes ante fallos, mantenimiento y reestructuración se disparan. La flexibilidad es muy baja e incluso no resulta factible la instalación de estas líneas en algunos edificios, antiguos de valor histórico o peligrosos con asbestos u otros materiales. Todo esto puede ser solucionado con las nuevas tecnologías inalámbricas, puesto que ya no es necesaria la instalación de cables.</p>
+<p>Las redes de área local inalámbricas utilizan el aire como medio de transporte, y su característica principal es complementar, y en algunos casos, reemplazar las redes de área local alámbricas, generalmente basadas en los estándares Ethernet.</p>
+<p>Pero no todo lo que reluce es oro. Las WLANs tienen sus propios problemas, característicos del medio de transmisión, que dificultan en gran medida la transmisión de datos.</p>
+<p>Se trata de un medio de transmisión difícil. Al tratarse de bandas libres no tienen la protección de una banda con licencia donde se sabe de antemano que es la única o una de las pocas tecnologías transmisoras en ese medio, teniendo así cierta seguridad. Pero no, las frecuencias empleadas para la transmisión son las ISM, bandas de propósito general que ahora se usan para WLANs.</p>
+<p>Estas bandas son las de 900MHz, 2.4Ghz y 5 Ghz. En WLANs se usan las dos últimas, siendo la banda de 2.4Ghz la más utilizada y por tanto el medio más contaminado. Por otra parte la banda de 5Ghz se usa en tecnologías más recientes, como puede ser el IEEE802.11a o el Hyperlan/2, pero tiene otros problemas, las licencias.</p>
+<p>En éstos medios, la calidad no se puede asegurar, con dispositivos móviles la cobertura no siempre está asegurada, se tiene una alta tasa de errores de bit, el problema de los nodos ocultos/expuestos, etc, por lo que la calidad no se puede asegurar ni en tiempo ni en espacio.</p>
+<h3 id="¿Como-Trabajan-las-WLAN"><a href="#¿Como-Trabajan-las-WLAN" class="headerlink" title="¿Cómo Trabajan las WLAN?"></a>¿Cómo Trabajan las WLAN?</h3><p>Se utilizan ondas de radio o infrarrojos para llevar la información de un punto a otro sin necesidad de un medio físico. Las ondas de radio son normalmente referidas como portadoras de radio ya que éstas únicamente realizan la función de llevar la energía a un receptor remoto. Los datos a transmitir se superponen a la portadora de radio y de este modo pueden ser extraídos exactamente en el receptor final. Esto es llamado modulación de la portadora por la información que está siendo transmitida.</p>
+<p>De este modo la señal ocupa más ancho de banda que una sola frecuencia. Varias portadoras pueden existir en igual tiempo y espacio sin interferir entre ellas, sin las ondas son transmitidas a distintas frecuencias de radio. Para extraer los datos el receptor se sitúa en una determinada frecuencia ignorando el resto.</p>
+<p>En una configuración de LAN sin cable los puntos de acceso (transceiver) conectan la red cableada de un lugar fijo mediante cableado normalizado. El punto de acceso recibe la información, la almacena y transmite entre la WLAN y la LAN cableada. Un único punto de acceso puede soporta un pequeño grupo de usuarios y puede funcionar en un rango de al menos treinta metros y hasta varios cientos.</p>
+<p>El punto de acceso (o la antena conectada al punto de acceso) es normalmente colocado en alto pero podría colocarse en cualquier lugar en que se obtenga la cobertura de radio deseada. El usuario final accede a la red WLAN a través de adaptadores. Estos proporcionan una interfaz entre el SO de red del cliente (NOS: Network Operating System) y las ondas, vía una antena.</p>
+<p>La naturaleza de la conexión sin cable es transparente al sistema del cliente.</p>
+<h3 id="Configuraciones-de-las-WLAN"><a href="#Configuraciones-de-las-WLAN" class="headerlink" title="Configuraciones de las WLAN"></a>Configuraciones de las WLAN</h3><p>Básicamente, las WLAN están compuestas por dos elementos:</p>
+<ul>
+<li>Punto de acceso (Access Point – AP por sus siglas en inglés): este elemento es la estación base que generalmente tiene conectividad con el mundo alámbrico (red Ethernet, por ejemplo). El AP crea un torno a sí un área de cobertura donde los usuarios o dispositivos clientes se pueden conectar. El AP cuenta con una o dos antenas y con una o varias puertas Ethernet.</li>
+<li>Dispositivos clientes: estos elementos son PCs, PDAs u otros que cuentan con tarjeta de red inalámbrica. Estas tarjetas existen en diferentes tipos tales como: PCCard, PCI, Compact Flash, etc.</li>
+</ul>
+<p>Las redes pueden ser simples o complejas. La más básica se da entre dos ordenadores equipados con tarjetas adaptadoras para WLAN, de modo que pueden poner en funcionamiento una red independiente siempre que estén dentro del área que cubre cada uno. Esto es llamado red de igual a igual (peer to peer).</p>
+<p>Cada cliente tendría únicamente acceso a los recursos de otro cliente pero no a un servidor central. Este tipo de redes no requiere administración o preconfiguración.</p>
+<p>Uno de los últimos componentes a considerar en el equipo de una WLAN es la antena direccional. Por ejemplo: se quiere una LAN sin cable a otro edificio a 1Km de distancia. Una solución puede ser instalar una antena en cada edificio con línea de visión directa. La antena del primer edificio está conectada a la red cableada mediante un punto de acceso. Igualmente en el segundo edificio se conecta un punto de acceso, lo cuál permite una conexión sin cable en esta aplicación.</p>
+<h2 id="Estandarizacion-y-Compatibilidad"><a href="#Estandarizacion-y-Compatibilidad" class="headerlink" title="Estandarización y Compatibilidad"></a>Estandarización y Compatibilidad</h2><p>Hoy en día existen varias tecnologías y estándares para las comunicaciones de redes de área local inalámbricas. Estos estándares, definen una red formada por un medio compartido y transmisión encriptada de la información.</p>
+<p>IEEE 802.11 es un estándar para redes inalámbricas definido por la organización Institute of Electrical and Electronics Engineers (IEEE), instituto de investigación y desarrollo, de gran reconocimiento y prestigio, cuyos miembros pertenecen a decenas de países entre profesores y profesionales de las nuevas tecnologías.</p>
+<p>El estándar IEEE 802.11 es un estándar en continua evolución, debido a que existen cantidad de grupos de investigación, trabajando en paralelo para mejorar el estándar, a partir de las especificaciones originales.</p>
+<ul>
+<li><strong>802.11b</strong> : Este estándar especifica transmisiones en la banda de frecuencias de los 2.4GHz, con velocidades de hasta 11 Mbps. Es sin lugar a dudas la tecnología más popular y la más económica.</li>
+<li><strong>802.11a</strong> : Este estándar, posterior al 802.11b, especifica transmisiones en la banda de los 5GHz (una banda menos ruidosa que la de los 2.4GHz) y con una velocidad de hasta 54 Mbps. Posee una menor cobertura que 802.11b.</li>
+<li><strong>802.11g</strong> : Especifica transmisiones de hasta 54 Mbps en la banda de los 2.4GHz y asegura compatibilidad con dispositivos 802.11b.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/diferencias_ieee.png?w=825" alt=""></p>
+<p>La alianza WI-FI (Wireless Fidelity) es una organización sin fines de lucro formada en 1999 para certificar la interoperabilidad de los productos 802.11 y para promocionarlos con un estándar global de WLAN en todos los segmentos.</p>
+<p>Se trata de una especificación en continua evolución con posibilidad de adaptarse a nuevos requerimientos y demandas de usuario en un futuro.</p>
+<h2 id="IEEE-802-11-Tecnologia"><a href="#IEEE-802-11-Tecnologia" class="headerlink" title="IEEE 802.11. Tecnología"></a>IEEE 802.11. Tecnología</h2><p>El estándar permite el uso de varios medios y técnicas para establecer conexiones. El estándar original permite usar infrarrojos y espectro expandido, tanto en salto en frecuencias como secuencia directa, con la ventaja de usar una capa de acceso al medio (MAC) común. Ello da mucha flexibilidad a los desarrolladores e investigadores, que pueden olvidarse de ciertos aspectos ya que no existe dependencia directa entre ellos.</p>
+<p>Los estándares de IEEE 802.11 son de libre distribución y cualquier persona puede ir a la página Web del IEEE y descargarlos. Estos estándares sólo definen especificaciones para las capas físicas y de acceso al medio y para nada tratan modos o tecnologías a usar para la implementación final.</p>
+<p>Esto debe permitir y facilitar la interoperabilidad entre fabricantes de dispositivos IEEE 802.11 y para asegurarse de ello se ha creado una alianza denominada WECA para crear y definir procedimientos para conseguir certificados de interoperabilidad y de cumplir las especificaciones, todo dentro de un estándar llamado WiFi (Wireless Fidelity). El nombre además es un indicativo del enfoque doméstico y muy enfilado hacia el usuario final.</p>
+<p>El bloque constructivo básico de una red inalámbrica 802.11 es el denominado <strong>conjunto de servicio básico</strong> (BSS, Basic Service Set), que es un área geográfica en la que las estaciones inalámbricas se pueden comunicar. El tipo más sencillo de BSS consiste en dos o más equipos que han entrado dentro de las áreas de transmisión respectivas. Este proceso por el que los dispositivos entran en un BSS se denomina <strong>asociación</strong> .</p>
+<h3 id="Capa-Fisica-PHY"><a href="#Capa-Fisica-PHY" class="headerlink" title="Capa Física (PHY)"></a>Capa Física (PHY)</h3><p>La capa física en cualquier red define la modulación y características de señalización para la transmisión de datos en ese medio. Para poder transmitir para redes inalámbricas en bandas sin licencia se necesitan usar técnicas de espectro expandido, definidas en los requerimientos de casi todos los países.</p>
+<p>En el estándar IEEE 802.11 se definen tres medios de nivel físico. Uno usa señales de infrarrojos y los otros dos utilizan señales de radio frecuencia (RF).</p>
+<p>Los medios de RF 802.11 funcionan en la banda de 2.4Ghz, con un ancho de banda de 83Mhz entre 2.400 y 2.483GHz.</p>
+<p>Las definiciones para la transmisión por radiofrecuencia en los estándares son espectro expandido por salto en frecuencias (FHSS) y espectro expandido por secuencia directa (DSSS). Ambos están definidos para trabajar en la banda de 2.4Ghz, y DSSS además tienen una variante en la banda de los 5Ghz, que consigue mayores velocidades de transmisión.</p>
+<p><strong>Infrarrojos</strong></p>
+<p>Las comunicaciones por infrarrojos utilizan frecuencias entre 850 y 950 nanometros, justo por debajo del espectro de la luz visible. La implementación IEEE 802.11 de infrarrojos, a diferencia de la mayoría de los medios infrarrojos, no requiere comunicación de visión directa, puede funcionar mediante señales reflejadas.</p>
+<p>Sin embargo, debido a su limitado alcance comparado con los medios de RF y a que sólo puede funcionar adecuadamente en un ambiente interior cuando las superficies proporcionan una buena reflexión de las señales, es raro que se implemente en las redes inalámbricas. Además impone más restricciones en la ubicación física del dispositivo inalámbrico que FHSS o DSSS.</p>
+<p><strong>FHSS</strong></p>
+<p>Salto de frecuencias se refiere a un sistema que periódicamente cambia las frecuencias en las que transmite. Se utiliza la banda entera lo que contribuye a aumentar la seguridad frente a escuchas a la vez que ayuda a suprimir el ruido o las interferencias.</p>
+<p>FHSS tiene 22 patrones de saltos predefinidos usando 79 canales de 1Mhz a un mínimo de 2.5 saltos por segundo, y para resolver los problemas de sincronización, para que tanto transmisor como receptor salten a la vez, se definen paquetes de sincronización.</p>
+<p>La velocidad de los cambios de frecuencia es independiente de la velocidad de bit de la transmisión de datos. Si la velocidad del salto de frecuencia es menor que la velocidad de bit de la señal, la tecnología se denomina <strong>sistema de salto lento</strong> , y si es mayor se denomina <strong>sistema de salto rápido</strong> .</p>
+<p>Para la modulación FHSS usa FSK gaussiano de 2 ó 4 niveles. Las velocidades típicas conseguidas son de 1 y 2 Mbps para FHSS.</p>
+<p><strong>DSSS</strong></p>
+<p>El sistema de radio usando DSSS trabaja en un canal fijo y preconfigurado, lo que le permite obtener mayores tasas de transferencia, pero con la desventaja de ser más sensible a interferencia y a señales procedentes de otros dispositivos usando la misma frecuencia. Es posible tener tres puntos de acceso con tres canales diferentes, sin solapar en un mismo emplazamiento, si tener en cuenta ningún tipo de planificación. Aunque para más de tres puntos de acceso sí es necesaria cierta planificación, para poder mantener las velocidades, puesto que el solape de celdas y frecuencias tendrá un deterioro sobre el rendimiento.</p>
+<p>Las modulaciones usadas para DSSS son BPSK y DQPSK para el estándar original. Para 11b, que permite conseguir 11Mbps, se utiliza CCK.</p>
+<p>Además se ha definido una variante de IEEE 802.11, incorporada recientemente a la especificación que permite conseguir 54 Mbps en la banda de 5Ghz, con un ancho de banda de hasta 300MHz y usando una modulación OFDM.</p>
+<p><strong>Tramas de la Capa Física</strong></p>
+<p>En lugar de tener un esquema de señalización relativamente simple como en Ethernet y Token Ring que utilizan Manchester y Manchester diferencial respectivamente, los medios que funcionan en 802.11 tienen su propio formato de tramas, que encapsulan las tramas generadas en el nivel de enlace de datos.</p>
+<p>La trama de FHSS contiene los siguientes campos:</p>
+<ul>
+<li>Preámbulo (10 bytes): contiene 80 bits de 1 y 0 alternos utilizados por el receptor para detectar la señal y sincronizar los tiempos.</li>
+<li>Delimitador de comienzo de trama (SFD) (2 bytes): indica el comienzo de la trama.</li>
+<li>Longitud (12 bits): indica el tamaño del campo de datos.</li>
+<li>Señalización (4 bits): contiene un bit para indicar si se está utilizando la velocidad de 1 o 2 Mbps. Los otros 3 bits se reservan para uso futuro. Sólo el campo de datos se puede transmitir a 2 Mbps.</li>
+<li>CRC (2 bytes): contiene un valor de comprobación de redundancia cíclica.</li>
+<li>Datos (de 0 a 4.095 bytes): contiene la trama del nivel de enlace de datos que se transmite.</li>
+</ul>
+<p>La trama DSSS contiene los siguientes campos:</p>
+<ul>
+<li>Preámbulo (16 bytes): contiene 128 bits que el sistema receptor utiliza para ajustarse a la señal entrante.</li>
+<li>Delimitador de comienzo de trama (SFD) (2 bytes): indica el comienzo de la trama.</li>
+<li>Señal (1 byte): especifica la velocidad de transmisión.</li>
+<li>Servicio (1 byte): contiene el valor hexadecimal 00 que indica que el sistema cumple con el estándar 802.11.</li>
+<li>Longitud (2 bytes): indica el tamaño del campo de datos.</li>
+<li>CRC (2 bytes): contiene un valor de comprobación de redundancia cíclica.</li>
+<li>Datos (variable): contiene la trama del nivel de enlace de datos que se transmite.</li>
+</ul>
+<p>La trama de infrarrojos contiene los siguientes campos:</p>
+<ul>
+<li>Sincronización (SYNC) (entre 57 y 73 ranuras): utilizadas por el sistema receptor para sincronizar el tiempo y opcionalmente para estimar la relación señal/ruido.</li>
+<li>Delimitador de comienzo de trama (SFD) (2 ranuras): indica el comienzo de la trama.</li>
+<li>Velocidad de datos (3 ranuras): especifica la velocidad de transmisión.</li>
+<li>Ajuste del nivel de DC (CDLA) (32 ranuras): utilizado por el receptor para estabilizar el nivel DC después de transmitir los campos precedentes.</li>
+<li>Longitud (12 bits): indica el tamaño del campo de datos.</li>
+<li>CRC (2 bytes): contiene un valor de comprobación de redundancia cíclica.</li>
+<li>Datos (de 0 a 2.500 bytes): contiene la trama del nivel de enlace de datos que se transmite <strong>.</strong></li>
+</ul>
+<h3 id="La-Capa-de-Acceso-al-Medio-MAC"><a href="#La-Capa-de-Acceso-al-Medio-MAC" class="headerlink" title="La Capa de Acceso al Medio (MAC)"></a>La Capa de Acceso al Medio (MAC)</h3><p>La especificación de la capa MAC del IEEE 80.11 tiene muchas similitudes con el estándar de Ethernet cableado (IEEE 802.3). El protocolo del 802.11 es un esquema de protocolo conocido como detección de portadora, acceso múltiple, evitando colisiones (CSMA/CA). Este protocolo evita las colisiones, en vez de detectarlas como el algoritmo 802.3. Es extremadamente difícil detectar colisiones en una red de transmisión de radiofrecuencias y de ahí de que se trate de evitar las colisiones.</p>
+<p>La capa MAC opera junto con la capa física muestreando la energía del medio transmisor de datos. El protocolo CSMA/CA permite opciones para que se pueda minimizar las colisiones usando tramas de transmisión RTS/CTS (Request-to-send/Clear-to-send), datos y reconocimientos de una manera secuencial. En estas tramas se suelen incorporar datos de duración de los envíos con el objetivo de asegurar que esos envíos no van a ser interrumpidos: los demás nodos saben que deben estar callados durante ese intervalo de tiempo. Todo ello además se asegura y confirma con tramas de reconocimiento (ACK).</p>
+<p>Pero un problema común a cualquier WLAN es el problema de los nodos ocultos. Esto puede llegar a reducir las prestaciones en un 40% en una WLAN con alta carga. Ocurre cuando un nodo no puede escuchar transmisiones de un nodo y trata de transmitir a un nodo que si puede escucharlas, allí se puede generar muchas colisiones. Algunas mejoras se han incorporado para evitar el problema con el uso de RTS/CTS de una manera inteligente.</p>
+<p>Además se utiliza tiempos entre tramas para evitar colisiones, ello a parte de evitar colisiones, permite además cierto uso de clases de calidad o por lo menos de preferencia de un tráfico sobre otro, utilizando funciones de coordinación puntual y permitir el acceso al medio de tráfico prioritario antes que a los demás.</p>
+<p><strong>Tramas del Nivel MAC</strong></p>
+<p>El estándar 802.11 define tres tipos básicos de tramas en este nivel:</p>
+<ul>
+<li>Tramas de datos: se usan para transmitir datos de los niveles superiores entre estaciones.</li>
+<li>Tramas de administración: se usan para el intercambio de información para realizar funciones de red como la autenticación y la asociación.</li>
+<li>Tramas de control: se usan para regular el acceso al medio y para reconocimiento de las tramas de datos transmitidas.</li>
+</ul>
+<p>Una trama MAC genérica contiene los siguientes campos:</p>
+<ul>
+<li>Control de la trama (2 bytes): contiene 11 subcampos que habilitan las distintas funciones del protocolo:<ul>
+<li>Versión de protocolo (2 bits): especifica la versión del estándar que se está utilizando.</li>
+<li>Tipo (2 bits): indica si la trama es de administración (00), control (01) o datos (00).</li>
+<li>Subtipo (4 bits): identifica la función específica de la trama.</li>
+<li>A DS (1 bit): si vale 1 indica que la trama se transmite al sistema de distribución a través de un punto de acceso.</li>
+<li>De DS (1 bit): si vale 1 indica que la trama se ha recibido de un sistema de distribución.</li>
+<li>Más fragmentos (1 bit): si vale 1 indica que el paquete contiene un fragmento de una trama y que hay más fragmentos para su transmisión.</li>
+<li>Reintento (1 bit): un valor de 1 indica que la trama se está retransmitiendo debido a una falta de recepción de un reconocimiento.</li>
+<li>Administración de energía (1 bit): si vale 0 indica que la estación está funcionando en modo activo; si vale 1 en modo ahorro de energía.</li>
+<li>Más datos (1 bit): si vale 1 indica que el AP tiene más paquetes almacenados para la estación y en espera de transmisión.</li>
+<li>WEP (1 bit): si vale 1 indica que el cuerpo de la trama se ha cifrado utilizando WEP.</li>
+<li>Orden (1 bit): si vale 1 indica que la trama de datos se está transmitiendo utilizando la clase de servicio estrictamente ordenado.</li>
+</ul>
+</li>
+<li>Duración/AID (2 bytes): en las tramas de control de sondeo de energía contiene la identidad de asociación (AID) de la estación transmisora. En el resto de tramas contiene el tiempo (en microsegundos) necesarios para transmitir una trama más el intervalo entre tramas.</li>
+<li>Dirección 1 (6 bytes): contiene una dirección que identifica al receptor de la trama, utilizando uno de los 5 tipos de direcciones definidas en la capa MAC 802.11, dependiendo de los valores de los subcampos A DS y De DS.</li>
+<li>Dirección 2 (6 bytes): contiene una dirección utilizando uno de los 5 tipos de direcciones utilizadas en el subnivel MAC, dependiendo de los valores de los subcampos A DS y De DS.</li>
+<li>Dirección 3 (6 bytes): contiene una dirección utilizando uno de los 5 tipos de direcciones utilizadas en el subnivel MAC, dependiendo de los valores de los subcampos A DS y De DS.</li>
+<li>Control de secuencia (2 bytes): contiene dos subcampos:<ul>
+<li>Número de fragmento (4 bits): contiene un valor que identifica un fragmento particular en una secuencia.</li>
+<li>Número de secuencia (12 bits): contiene un valor que identifica los fragmentos de la secuencia que componen el conjunto de datos.</li>
+</ul>
+</li>
+<li>Dirección 4 (6 bytes): contiene una dirección utilizando uno de los 5 tipos de direcciones utilizadas en el subnivel MAC, dependiendo de los valores de los subcampos A DS y De DS.</li>
+<li>Cuerpo de la trama (0 a 2.312 bytes): contiene la información que se está transmitiendo a la estación receptora.</li>
+<li>Secuencia de verificación de trama (4 bytes): contiene un valor CRC.</li>
+</ul>
+<p>Los cinto tipos de dirección del subnivel MAC son:</p>
+<ul>
+<li>Dirección origen (SA): una dirección MAC individual que identifica al sistema que generó la información que va en el cuerpo de la trama.</li>
+<li>Dirección destino (DA): una dirección MAC individual o de grupo que identifica al receptor final de una unidad de datos de servicio.</li>
+<li>Dirección del emisor (TA): una dirección MAC individual que identifica al sistema que transmitió la información que va en el cuerpo de la trama en el medio inalámbrico actual (un AP).</li>
+<li>Dirección del receptor (RA): una dirección MAC individual o de grupo que identifica al receptor inmediato de la información en el cuerpo de la trama en el medio inalámbrico actual (un AP).</li>
+<li>ID del conjunto de servicio básico (BSSID): en una red ad hoc el BDDID es un valor generado aleatoriamente durante la creación del BSS; en una red con infraestructura es la dirección MAC de la estación que funciona como AP del BSS.</li>
+</ul>
+<h2 id="Tipos-de-Redes-Inalambricas"><a href="#Tipos-de-Redes-Inalambricas" class="headerlink" title="Tipos de Redes Inalámbricas"></a>Tipos de Redes Inalámbricas</h2><h3 id="Bluetooth"><a href="#Bluetooth" class="headerlink" title="Bluetooth"></a>Bluetooth</h3><p>Es una tecnología inalámbrica de corto alcance diseñada para reemplazar los cables entre dispositivos. Se ha convertido en la solución inalámbrica ideal para conectar teléfonos móviles con portátiles para su conexión a Internet, o para que otros organizadores de mano, como PDAs puedan conectarse al PC para coordinar sus contactos, e incluso para poder imprimir desde un ordenador de forma inalámbrica.</p>
+<p>Las características intrínsecas de las tecnologías con bluetooth permiten establecer conexiones seguras, con capacidad de encriptación del canal, autenticación de la red y otros parámetros de seguridad como la localización y dispositivo del usuario.</p>
+<p><strong>Historia de Bluetooth</strong></p>
+<p>La historia de Bluetooth comienza en el año 1994, cuando la compañía Ericsson comenzó un estudio para investigar si era factible o no una comunicación vía radio, que fuera barata y que no consumiera tanto, con la única finalidad de conectar celulares y así eliminar cables.Fue así como se conoció un enlace de radio de poco alcance, el que podía ser usado en distintos equipos celulares, e incluso en otro tipo de dispositivos, ya que el chip utilizado era de bajo coste. Este enlace se llamó MC link. En 1997, Ericsson despertó la curiosidad y el interés en otras empresas fabricantes de celulares y equipos portátiles, y fue así que llegado el año de 1998 se creó un grupo llamado SIG, formado por cinco compañías: Ericsson, Nokia, IBM, Toshiba e Intel. De esta forma, el grupo estaba compuesto de dos líderes en telefonía celular, dos en la fabricación de computadores y uno en la fabricación de chips. Así, se podía crear una tecnología que fuese compatible con los distintos equipos fabricados por esas empresas.</p>
+<p>Comenzado el trabajo, se pensó primero en utilizarlo con productos que usaran los ejecutivos que viajan frecuentemente, y entre los primeros dispositivos en que se podría ocupar dicha tecnología debían estar los celulares, notebooks o computadores portátiles, PDAs y auriculares.</p>
+<p>Teniendo esto como base, se definieron como objetivos del sistema:</p>
+<ul>
+<li>Operación en todo el mundo.</li>
+<li>Poco consumo de energía por parte del emisor de radio (porque los equipos móviles utilizan baterías).</li>
+<li>Poder transmitir voz y datos.</li>
+<li>La banda de frecuencia debería ser libre.</li>
+</ul>
+<p>Este último escollo se saltó utilizando la banda ISM, una banda médico-científica internacional, de 2,54Ghz, que varía en rangos de 2400MHz y 2500MHz y quee sutilizada en todo el mundo.</p>
+<p>En el mercado existen varias versiones de Bluetooth. Las primeras son BT 1.0 y BT 1.1. La diferencia entre ambas radica en que en la primera sólo se puede conectar un dispositivo con otro al mismo tiempo, mientras que en la segunda se puede conectar un dispositivo con siete simultáneamente, claro que todos deben ser compatibles entre sí. Se puede tener todos los dispositivos que se quiera conectados a través de esta vía, pero sólo se puede establecer comunicación con siete de ellos.</p>
+<p>Además de estas dos, también existen la BT 1.2 y la BT 2.0, las que han sido desarrolladas por ingenieros de Ericsson Technology Licensing y estudiadas por el SIG. La diferencia principal entre ambas es que la BT 1.2 es para media velocidad, con una velocidad de transferencia de 2 o 3 Mbits por segundo, mientras que la BT 2.0 es para alta velocidad, con una velocidad de transferencia de 4, 8 o 12 Mbits por segundo.</p>
+<p><strong>¿Cómo Funciona Bluetooth?</strong></p>
+<p>La frecuencia de radio en la que trabaja está en el rango de 2.4 y 2.48 Ghz, con amplio espectro y saltos de frecuencia, con posibilidad de transmitir en full duplex con un máximo de 1600 saltos/seg. Los saltos de frecuencia se realizan entre un total de 79 frecuencias con intervalos de 1Mhz, lo cual permite brindar seguridad y robustez. La frecuencia en la cual trabaja le permite atravesar paredes y maletines, por lo cual es ideal tanto para el trabajo móvil, como en oficinas.</p>
+<p>La potencia de salida para transmitir a una distancia máxima de 10m es de 0dBM (1 mW), mientras que la versión de largo alcance, hasta 100m, transmite entre -30 y 20dBM (100 mW).</p>
+<p>Para lograr alcanzar el objetivo de bajo consumo y bajo coste, se ideó una solución en un sólo chip utilizando circuitos CMOS. De esta manera, se logró crear una solución de 9x9mm y que consume aproximadamente 97% menos energía que un teléfono móvil común.</p>
+<p>Cada uno de los cuatro canales de voz en la especificación Bluetooth puede soportar una tasa de transferencia de 64 Kb/s en cada sentido, la cual es suficientemente adecuada para la transmisión de voz. Un canal de datos asíncrono puede transmitir 721 Kb/s en una dirección y 56 Kb/s en la dirección opuesta, sin embargo, para una conexión asíncrona es posible soportar 432,6 Kb/s en ambas direcciones si el enlace es simétrico.</p>
+<p>Para relacionarse e intercambiar información los dispositivos Bluetooth ofrecen distintos servicios, llamados técnicamente Perfiles, entre estos perfiles se encuentran el Acceso a Redes Locales (LAN), Acceso Telefónico, Fax, Transferencia de Archivos, Sincronización, Intercomunicador o Telefonía inalámbrica, entre otros. De esta manera cuando dos dispositivos se comunican por primera vez intercambian esta información para conocer sus posibilidades de intercomunicación.</p>
+<p>Las compañías más destacadas en el desarrollo de esta tecnología Bluetooth han sido Ericsson y Nokia. La primera versión del estándar Bluetooth se lanzó en mayo de 1998. Esta tecnología inalámbrica tiene una velocidad de transferencia de datos de 1Mbps y cuenta con un alcance máximo de 100 metros. Sin embargo, lo más utilizado son los 10 metros, ya que el consumo eléctrico aumenta rápidamente con una mayor potencia de recepción o transmisión.</p>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Menor Radiación. El SIG de Bluetooth recomienda potencias bajas para sus dispositivos móviles, esto es 1 a 10mW, limitando los 100mW para los puntos de acceso, lo cual puede ser comparado con 100mW que utilizan las tarjetas WiFi o los 125 mW de los teléfonos móviles digitales o los 600 mW de los teléfonos móviles analógicos.</li>
+<li>Bajo Consumo Energético. Bluetooth ha sido concebida como una tecnología de bajo consumo, lo cual permite ser utilizada en equipos móviles como Palms e iPAQ. Junto con sus bajos niveles de consumo se incorpora un administrador de energía el cual disminuye la potencia de transmisión si el dispositivo está cerca del punto de acceso o si está en modo de espera.</li>
+<li>Alta Movilidad. Producto del bajo consumo energético y el concepto de latencia incorporado por la especificación Bluetooth constituye la mejor alternativa al otorgar la mayor autonomía a los distintos dispositivos que lo utilizan, constituyendo la mejor opción frente a otras tecnologías inalámbricas.</li>
+</ul>
+<h3 id="WI-FI"><a href="#WI-FI" class="headerlink" title="WI-FI"></a>WI-FI</h3><p>Las redes de área local inalámbricas pueden operar en tres modalidades:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/redes_inalambricas.png?w=825" alt=""></p>
+<ul>
+<li><strong>Ad-Hoc</strong> : En esta modalidad, no existen puntos de acceso, por lo que los dispositivos clientes se comunican entre ellos directamente, y por lo tanto, no existe conectividad con el mundo alámbrico.</li>
+<li><strong>Infraestructura</strong> : En este modo de operación, el más común en el ambiente corporativo, uno o varios APs generan una red inalámbrica que permite que los dispositivos clientes tengan acceso a los recursos de la empres.</li>
+<li><strong>Bridge</strong> : Esta es una aplicación especial que consiste en utilizar dos APs para implementar un enlace inalámbrico entre dos sitios o redes. Generalmente, se utilizan APs que operan en la interperie con antenas especiales para grandes distancias.</li>
+</ul>
+<p><strong>¿Cómo Funciona?</strong></p>
+<p>Se llega a las dependencias del cliente con un acceso banda ancha, ADSL, donde se instala un gateway WI-FI (inalámbrico con norma 802.11b.</p>
+<p>Los computadores del cliente deben estar provistos con tarjetas de red inalámbricas para que puedan comunicarse con el gateway WIFI. Todos los equipos para comunicarse entre sí deben pasar por el Gateway. Este gateway posee puertas de conexión alámbricas (Ethernet tradicional RJ-45) y puertas virtuales inalámbricas.</p>
+<p>A las puertas alámbricas es posible conectar equipos que tengan puertas Ethernet. Mientras que a las puertas inalámbricas lo equipos a conectar deben poseer tarjetas WI-FI norma 802.11b o 802.11g.</p>
+<p><strong>Ventajas</strong></p>
+<ul>
+<li>Acceso a Internet Banda Ancha.</li>
+<li>Acceso simultáneo de varios computadores a Internet.</li>
+<li>Permite montar una RED LAN sin necesidad de cables, permitiendo llegar a zonas difíciles de cablear.</li>
+<li>Permite movilidad del usuario dentro del recinto con WI-FI.</li>
+<li>De rápido y fácil montaje.</li>
+</ul>
+<p><strong>Restricciones</strong></p>
+<ul>
+<li>Los computadores del cliente deben estar dentro de una misma dirección y casa o departamento.</li>
+<li>El cliente debe poseer tarjeta WI-FI instalada en cada uno de los computadores a conectar.</li>
+<li>La señal WI-FI NO atraviesa paredes de hormigón.</li>
+<li>El alcance máximo de la seña es aproximadamente de 50 mts en planta libre.</li>
+<li>Requiere que la señal tenga buena recepción entre gateway y PC de cliente.</li>
+</ul>
+<h3 id="Diferencias-entre-WI-FI-y-Bluetooth"><a href="#Diferencias-entre-WI-FI-y-Bluetooth" class="headerlink" title="Diferencias entre WI-FI y Bluetooth"></a>Diferencias entre WI-FI y Bluetooth</h3><p><img src="https://gsitic.files.wordpress.com/2018/03/diferencias-wifi-bluetooth.png?w=825" alt=""></p>
+<h2 id="Seguridad"><a href="#Seguridad" class="headerlink" title="Seguridad"></a>Seguridad</h2><p>Cuando un medio de red nuevo se introduce en un nuevo entorno siempre surgen nuevos retos. Esto es cierto también en el caso de las redes LAN inalámbricas. Algunos retos surgen de las diferencias entre las redes LAN con cable y las redes LAN inalámbricas. Por ejemplo, existe una medida de seguridad inherente en las redes con cable, ya que la red de cables contiene los datos. Las redes inalámbricas presentan nuevos desafíos, debido a que los datos viajan por el aire, por ondas de radio.</p>
+<p>Otros retos se deben a las posibilidades únicas de las redes inalámbricas. Con la libertad de movimiento que se obtiene al eliminar las ataduras (cables), los usuarios pueden desplazarse de sala en sala, de edificio en edificio, de ciudad en ciudad, etc, con las expectativas de una conectividad ininterrumpida en todo momento.</p>
+<p>Las redes siempre han tenido retos, pero éstos aumentan cuando se agrega complejidad, tal como sucede con las redes inalámbricas. Por ejemplo, a medida que la configuración de red continúa simplificándose, las redes inalámbricas incorporan características (en ocasiones para resolver otros retos) y métrica que se agrega a los parámetros de configuración.</p>
+<h3 id="Retos-de-Seguridad"><a href="#Retos-de-Seguridad" class="headerlink" title="Retos de Seguridad"></a>Retos de Seguridad</h3><p>Una red con cable está dotada de una seguridad inherente en cuanto a que un posible ladrón de datos debe obtener acceso a la red a través de una conexión por cable, lo que normalmente significa el acceso físico a la red de cables. Sobre este acceso físico se pueden superponer otros mecanismos de seguridad.</p>
+<p>Cuando la red ya no se sustenta con cables, la libertad que obtienen los usuarios también se hace extensiva al posible ladrón de datos. Ahora, la red puede estar disponible en vestíbulos, salas de espera inseguras, e incluso fuera del edificio. En un entorno doméstico, la red podría extenderse hasta los hogares vecinos si el dispositivo de red no adopta o no utiliza correctamente los mecanismos de seguridad.</p>
+<p>Desde sus comienzos, 802.11 ha proporcionado algunos mecanismos de seguridad básicos para impedir que esta libertad mejorada sea una posible amenaza. Por ejemplo, los puntos de acceso (o conjunto de puntos de acceso) 802.11 se pueden configurar con un identificador del conjunto de servicios (SSID). La tarjeta NIC también debe conocer este SSID para asociarlo al AP y así proceder a la transmisión y recepción de datos en la red. Esta seguridad, si se llegase a considerar como tal, es muy débil debido a estas razones:</p>
+<ul>
+<li>Todas las tarjetas NIC y todos los AP conocen perfectamente el SSID.</li>
+<li>El SSID se envía por ondas de manera transparente (incluso es señalizado por el AP).</li>
+<li>La tarjeta NIC o el controlador pueden controlar localmente si se permite la asociación en caso de que el SSID no se conozca.</li>
+<li>No se proporciona ningún tipo de cifrado a través de este esquema.</li>
+</ul>
+<p>Aunque este esquema puede plantear otros problemas, esto es suficiente para detener al intruso más despreocupado.</p>
+<p>Las especificaciones 802.11 proporcionan seguridad adicional mediante el algoritmo WEP (Wired Equivalent Privacy). WEP proporciona a 802.11 servicios de autenticación y cifrado. El algoritmo WEP define el uso de una clave secreta de 40 bits para la autenticación y el cifrado, y muchas implementaciones de IEEE 802.11 también permiten claves secretas de 104 bits. Este algoritmo proporciona la mayor parte de la protección contra la escucha y atributos de seguridad física que son comparables a una red con cable.</p>
+<p>Una limitación importante de este mecanismo de seguridad es que el estándar no define un protocolo de administración de claves para la distribución de las mismas. Esto supone que las claves secretas compartidas se entregan a la estación inalámbrica IEEE 802.11 a través de un canal seguro independiente del IEEE 802.11. El reto aumenta cuando están implicadas un gran número de estaciones, como es el caso de un campus corporativo.</p>
+<p>Para proporcionar un mecanismo mejor para el control de acceso y la seguridad, es necesario incluir un protocolo de administración de claves en la especificación. Para hacer frente a este problema se creó específicamente el estándar 802.1x.</p>
+<h3 id="Retos-para-los-Usuarios-Moviles"><a href="#Retos-para-los-Usuarios-Moviles" class="headerlink" title="Retos para los Usuarios Móviles"></a>Retos para los Usuarios Móviles</h3><p>Cuando un usuario o una estación se desplaza de un punto de acceso a oto punto de acceso, se debe mantener una asociación entre la tarjeta NIC y un punto de acceso para poder mantener la conectividad de la red. Esto puede plantear un problema especialmente complicado si la red es grande y el usuario debe cruzar límites de subredes o dominios de control administrativo.</p>
+<p>Si el usuario cruza un límite de subred, la dirección IP asignada originalmente a la estación puede dejar de ser adecuada para la nueva subred. Si la transición supone cruzar dominios administrativos, es posible que la estación ya no tenga permiso de acceso a la red en el nuevo dominio basándose en sus credenciales.</p>
+<p>Más allá del simple desplazamiento dentro de un campus corporativo, otros escenarios de usuarios móviles son muy reales. Los aeropuertos y restaurantes agregan conectividad inalámbrica con Internet y las redes inalámbricas se convierten en soluciones de red populares para el hogar.</p>
+<p>Ahora es más probable que el usuario pueda abandonar la oficina para reunirse con alguien de otra compañía que también disponga de una red inalámbrica compatible. De camino a esta reunión, el usuario necesita recuperar archivos desde la oficina principal y podrá encontrarse en una estación de tren, un restaurante o un aeropuerto con acceso inalámbrico. Para este usuario sería de mucha utilidad poder autenticarse y utilizar esta conexión para obtener acceso a la red de la empresa. Cuando el usuario llegue a su destino, puede que no tenga permiso de acceso a la red local de la empresa que va a visitar. Sin embargo, sería fortuito que el usuario pudiera obtener acceso a Internet en este entorno extraño. Entonces, dicho acceso podría utilizarse para crear una conexión de red privada virtual con la red de su empresa. Después, el usuario podría irse a casa y desear conectarse a la red doméstica para descargar o imprimir archivos para trabajar esa tarde. Ahora, el usuario se ha desplazado a una nueva red inalámbrica, que posiblemente incluso puede ser de la modalidad <em>ad hoc</em> .</p>
+<p>Para este ejemplo, la movilidad es una situación que debe pensarse muy detenidamente. La configuración puede ser un problema para el usuario móvil, ya que las distintas configuraciones de red pueden suponer un reto si la estación inalámbrica del usuario no tiene capacidad para configurarse automáticamente.</p>
+<h3 id="Retos-de-Configuracion"><a href="#Retos-de-Configuracion" class="headerlink" title="Retos de Configuración"></a>Retos de Configuración</h3><p>Ahora que tenemos una conexión de red inalámbrica y la complejidad ha aumentado, posiblemente hay muchas más configuraciones que realizar. Por ejemplo, podría ser necesario configurar el SSID de la red a la que se va a realizar la conexión. O bien, podría ser necesario configurar un conjunto de claves WEP de seguridad; posiblemente, varios conjuntos de claves si es necesario conectarse a varias redes. Podría ser necesario tener una configuración para el trabajo, donde la red funciona en modo de infraestructura, y otra configuración para el domicilio, donde funciona en modo <em>ad hoc</em> . Entonces, sería necesario elegir qué configuración se va a utilizar en función del lugar donde nos encontremos.</p>
+<h3 id="Mecanismos-de-Seguridad"><a href="#Mecanismos-de-Seguridad" class="headerlink" title="Mecanismos de Seguridad"></a>Mecanismos de Seguridad</h3><p><strong>Control de Acceso: Codificación y Autenticación</strong></p>
+<p>Por sí solo, el modo de modulación no garantiza una red local inalámbrica segura. Se necesitan varios requisitos para obtener una seguridad real:</p>
+<ul>
+<li>Asignación de clave SSID: Cada usuario (cliente o punto de acceso) de una red WLAN recibe su propia identificación SSID que ha sido asignada por el administrador de red al configurar la red inalámbrica.</li>
+<li>Direcciones MAC: El fabricante asigna una única dirección MAC global a cada adaptador de una red WLAN. La dirección se debería introducir en las listas de acceso para el punto de acceso. Todos los demás adaptadores de red se rechazan automáticamente.</li>
+<li>Autenticación: Cada estación debe probar que está autorizada para conectarse a la red WLAN correspondiente. Por este motivo, los productos para WLAN actuales utilizan el algoritmo WEP.</li>
+<li>Codificación WEP: El estándar 802.11 implementa WEP como su tecnología de codificación. La versión más segura a 128 bits se debería utilizar (como hace Intel) para disfrutar de una mayor seguridad.</li>
+<li>Utilice la tecnología de red privada virtual (VPN): Las redes privadas virtuales (VPN) llevan ya bastante tiempo operativas y están consideradas como muy seguras. Se obtendrá una red local inalámbrica segura si se sabe sacar provecho de esta tecnología para redes inalámbricas.</li>
+</ul>
+<p><img src="https://gsitic.files.wordpress.com/2018/03/vpn.png?w=825" alt=""></p>
+<p>Un escenario típico para muchos usuarios es una pequeña oficina (agencias, etc) que se reparte en varias habitaciones de una misma planta.</p>
+<p><strong>Cifrado WEP</strong></p>
+<p>Resulta evidente a todas luces que las comunicaciones inalámbricas ofrecen un punto de vulnerabilidad en la transmisión de datos, puesto que las emisiones difícilmente pueden acotarse a la zona de cobertura, sino que habitualmente suelen alcanzar puntos fuera del área de transmisión deseada. Para paliar que otros receptores ajenos a la red corporativa y a los intereses de la empresa puedan hacer un uso indebido de la información que viaje por el aire se ha adoptado un sofisticado mecanismo de control de acceso al medio (DSSS), lo cual evita en gran medida las escuchas indiscretas. No obstante, este sistema no es suficiente, por lo que opcionalmente se puede realizar un proceso de cifrado de los datos que se transmiten por la red inalámbrica.</p>
+<p>A la hora de proteger la información que viaja por el espacio mediante sistemas de cifrado se puede hacer uso de las técnicas WEP-40 y WEP-128. Estos dos sistemas son funciones opcionales de la especificación IEEE 802.11 que proporcionan una confidencialidad de datos equivalente a la de una LAN cableada sin cifrar. Es decir, el sistema WP hace que el enlace LAN inalámbrico en una red sea tan seguro como el enlace con cable.</p>
+<p>Como se especifica en el estándar, WEP (Wired Equivalent Privacy) utiliza el algoritmo RC4 con una clave de 40 bits para WEP-40 o una clave de 128 bits para WEP-128. Cuando la función WEP está activada, cada estación (cliente o punto de acceso) se le asigna una clave común. Esta clave desordena los datos y se mezcla entre la información antes de ser transmitida, de tal modo que si una estación recibe un paquete que no está mezclado con la clave correcta, la estación descartará el paquete.</p>
+<p>A la hora de la verdad, la instalación de esta función es opcional, aunque sumamente sencilla de poner en marcha. Simplemente habrá que seleccionar el tipo de encriptación WEP que se desea implementar, 40 o 128 bits, y a continuación elegir la clave que se utilizará. Obviamente, si la función WEP está activada en uno o más puntos de acceso, todos los dispositivos inalámbricos de la red deberán tener el mismo código WEP, que se establece fácilmente mediante las utilidades de software suministradas.</p>
+<p>No obstante, existe la posibilidad de establecer una comunicación con células combinadas. Una célula combinada es una red de radio en la que algunos dispositivos utilizan WEP y otros no. Esta opción es posible mediante la simple activación del parámetro “Allow Association To Mixed Cells”.</p>
+<p><strong>OSA (Open System Authentication)</strong></p>
+<p>Es otro mecanismo de autenticación definido por el estándar 802.11 para autentificar todas las peticiones que recibe. El principal problema que tiene es que no realiza ninguna comprobación de la estación cliente. Además las tramas de gestión son enviadas sin encriptar, aún activando WEP. Por lo tanto es un mecanismo poco fiable.</p>
+<p><strong>ACL (Access Control List)</strong></p>
+<p>Este mecanismo de seguridad es soportado por la mayoría de los productos comerciales. Utiliza, como mecanismo de autenticación, la dirección MAC de cada estación cliente, permitiendo el acceso a aquellas MAC que consten en la Lista de Control de Acceso.</p>
+<p><strong>CNAC (Closes Network Access Control)</strong></p>
+<p>Este mecanismo pretende controlar el acceso a la red inalámbrica y permitirlo solamente a aquellas estaciones cliente que conozcan el nombre de la red (SSID) actuando este como contraseña.</p>
+<p><strong>WPA</strong></p>
+<p>WPA (Wi-Fi Protected Access) es un nuevo protocolo para reemplazar al desacreditado WEP. Incrementa el nivel de protección de datos y el control de acceso para las WLAN existentes y las futuras.</p>
+<p>WPA está diseñado para correr en el hardware existente como una actualización de software. Se deriva de la próxima versión del estándar IEEE 892.11, el 802.11i, y desde luego será compatible con él.</p>
+<p>WPA utiliza el protocolo temporal de intercambio de claves, TKIP, una tecnología de cifrado por claves más segura que la RC4 de WEP. Además proporciona autenticación de usuario, que no estaba casi presente en WEP. Para fortalecer la autenticación de usuario WAP implementa los protocolos 802.1x y EAP (Extensible Authentication Protocol).</p>
+<p>En un entorno empresarial se utiliza un servidor central de autenticación, como por ejemplo RADIUS, para autenticar a cada usuario antes de que se una a la red y además se utiliza la “autenticación mutua”, de forma que el usuario no se una accidentalmente a una red maliciosa que pudiera robarle sus credenciales de red.</p>
+<p>En entornos domésticos o de pequeña oficina donde no hay servidores centrales de autenticación o EAP, WAP corre en un modo especial denominado PSK (Pre-Shared Key). En este modo el usuario introduce claves manualmente en los puntos de acceso o pasarelas domésticas inalámbricas y en cada PC que está en la red inalámbrica. Desde este punto WPA toma automáticamente el control: por un lado se permite que se unan a la red sólo dispositivos con la misma password y por otro lado arranca automáticamente el proceso de encriptación TKIP.</p>
+<h2 id="Beneficios"><a href="#Beneficios" class="headerlink" title="Beneficios"></a>Beneficios</h2><p>Entre los beneficios principales de las redes de área local inalámbricas se encuentran:</p>
+<ul>
+<li>Alternativa o extensión de una solución de cableado: Existen múltiples casos en que es más económico implementar una solución inalámbrica, en reemplazo a un cableado o como extensión de una red alámbrica: segmento residencial, edificios sin cableado estructurado, oficinas arrendadas, campamentos, plantas libres de gran tamaño, etc.</li>
+<li>Aumentar la productividad de los empleados: Una implementación de WLAN permite que los empleados puedan tener acceso a la información en cualquier lugar. Esto permite que su tiempo sea más eficiente, y cuenten en todo momento con la información necesaria para la toma efectiva de decisiones. En general, cuando se realiza un análisis de retorno de inversión de una solución de WLAN, este aumento de productividad, por sí solo, justifica la implementación de una WLAN.</li>
+<li>Reutilización de infraestructura: En algunas industrias es necesario reconfigurar la distribución física de una red de datos, o incluso, cambiar de lugar las instalaciones frecuentemente, en estos casos, las WLAN proveen una solución eficiente en coste que permiten la reutilización de la inversión.</li>
+<li>Información en tiempo real: Una solución de rede de área local inalámbrica permite utilizar dispositivos de captura de datos o computadores portátiles para ingresar información en tiempo real.</li>
+</ul>
+<h2 id="Glosario-de-Terminos"><a href="#Glosario-de-Terminos" class="headerlink" title="Glosario de Términos"></a>Glosario de Términos</h2><ul>
+<li><strong>Ad-Hoc</strong> : Es un sistema de red inalámbrica (802.11) que permite que los clientes que están situados en un rango determinado puedan conectarse entre ellos sin necesidad de la presencia de un Punto de Acceso. En este tipo de red, cualquier cliente puede hacer las veces de punto de acceso proporcionando a los demás acceso a Internet o cualquier otro servicio. También se le denomina Peer to Peer, o IBSS (referido al estándar 802.11). El otro sistema de red inalámbrica que emplea Puntos de Acceso se le denomina Infraestructura.</li>
+<li><strong>Bluetooth</strong> : Tecnología y protocolo de conexión entre dispositivos inalámbricos que integran un chip específico para comunicarse en la banda de frecuencias 2,402-2,480 GHz con un alcance máximo de 10 metros y tasas de transmisión de datos de hasta 721 Kbps (en la segunda generación de Bluetooth). Cada dispositivo posee una dirección única de 48 bits que lo identifica de manera inequívoca, siguiendo el estándar IEEE 802.</li>
+<li><strong>Bridge (Puente)</strong> : Dispositivo que pasa todos los mensajes de una red a otra sin distinguir a cual red pertenece el destino del mensaje.</li>
+<li><strong>Cobertura</strong> : Área geográfica próxima a un nodo o estación base que recibe suficiente señal para mantener una conexión. Depende de diversos factores como tipo de antena, ubicación, topografía del terreno, potencia de la señal, etc.</li>
+<li><strong>Enlace Punto a Punto</strong> : Enlace en el que las comunicaciones están dirigidas entre dos puntos de conexión concretos. En Redes Wireless suelen ser las conexiones que enlazan dos nodos para ampliar el alcance de la red, o para conectar dos redes remotas. Se suelen emplear antenas directivas de gran ganancia (dependiendo de la distancia que separe los nodos).</li>
+<li><strong>Hot Spot</strong> : Lugar donde existe un punto de acceso en una WLAN que ofrece servicio de banda ancha a usuarios móviles.</li>
+<li><strong>IEEE 802.x</strong> : Conjunto de especificaciones de las redes LAN dictadas por el IEEE (the Institute of Electrical and Electronic Engineers). Existe un comité 802.11 trabajando en una normativa para redes inalámbricas de 1 y 2 Mbps. La norma tendrá una única capa MAC para las siguientes tecnologías: Frequency Hopping Spread Spectrum (FHSS), Direct Sequence Spread Spectrum (DSSS) e infrarrojos.</li>
+<li><strong>Infraestructura de red</strong> : Red inalámbrica centrada en un punto de acceso. En este entorno los puntos de acceso no solo proporcionan comunicación con la red cableada sino que también median el tráfico de red en la vecindad inmediata.</li>
+<li><strong>PAN (Red de Área Personal)</strong> : Sistema de red conectado directamente a la piel. La transmisión de datos se realiza por contacto físico. También se le llama así a la red de área personal, un conjunto de dispositivos que normalmente son de uso personal, ej: micrófono, teclado, impresora conectados con un computador.</li>
+<li><strong>Punto de acceso</strong> : Dispositivo que permite comunicar a varios clientes wireless entre ellos e incluso con otras redes inalámbricas o de cable. Los puntos de acceso hacen las funciones de Bridges y algunos incluso de routers (encaminadores).</li>
+<li><strong>Router (Encaminador)</strong> : Dispositivo hardware (o software) para redes informáticas dotado de capacidad para conmutación y con la principal finalidad de proporcionar un encaminamiento de paquetes IP.</li>
+<li><strong>SSID</strong> : El primer paso para poder autenticar un cliente en una red wireless es el conocimiento del SSID (Servide Set IDentifier). Para obtener acceso al sistema es necesario conocer el SSID.</li>
+<li><strong>VPN (Red Privada Virtual)</strong> : Configuración lógica de una serie de componentes hardware, que permite la utilización de redes públicas para establecer canales de comunicaciones privados a los que sólo pueden acceder usuarios autorizados.</li>
+<li><strong>WPAN (Red Inalámbrica de Área Personal)</strong> : Redes locales-personales que utilizan tecnología Bluetooth.</li>
+<li><strong>WECA (Alianza para la Compatibilidad de Ethernet Inalámbrica)</strong> : Alianza de fabricantes formada para mantener la compatibilidad entre dispositivos wireless. La WECA creó el estándar de dispositivos inalámbricos Wi-Fi, que cumplen la norma IEEE 802.11b.</li>
+<li><strong>Wi-Fi (Wireless Fidelity)</strong> : Sinónimo del estándar IEEE 802.11b, protocolo de transmisión inalámbrica que logra alcanzar desde 2 Mbps hasta un máximo teórico de 11 Mbps. Este estándar fue creado por un grupo de fabricantes de dispositivos inalámbricos para mantener la compatibilidad entre sus productos. Permite crear redes de ordenadores sin que exista un cable de por medio, usando para ello ondas de radio.</li>
+<li><strong>Wireless (Inalámbrico)</strong> : Es un sistema de comunicación que utiliza ondas de radiofrecuencia, ultrasonido o rayos infrarrojos (IR) para intercambiar datos entre dispositivos. Cada vez se está popularizando más el uso de este sistema para transferencia de datos entre cámaras digitales, PDAs, calculadoras, etc. con el ordenador. En Internet, este término es utilizado para indicar que la transmisión de información se efectúa prescindiendo de cables. Es el caso de los celulares con sistema WAP, o las conexiones a Internet.</li>
+<li><strong>WLAN (Red de Área Local Inalámbrica)</strong> : Una WLAN es un tipo de red de área local (LAN) que utiliza ondas de radio de alta frecuencia en lugar de cable para comunicar y transmitir datos entre los clientes de red y los dispositivos. Es un sistema de comunicación de datos flexible implementado como una extensión, o como una alternativa para una LAN conectada. Al igual que una LAN, la red permite que los usuarios de esa ubicación compartan archivos, impresoras y otros servicios.La mayoría de las redes WLAN utilizan tecnología de espectro distribuido. Su ancho de banda es limitado (generalmente inferior a 11 Mbps) y los usuarios comparten el ancho de banda con otros dispositivos del espectro; no obstante, los usuarios pueden operar dispositivos de espectro distribuido sin autorización de la FCC (Comisión Federal de Comunicaciones).</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357351303/TICB4-Protocolos-802-11B" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B3/b3-t03/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B3-T03
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B2/b2-t02/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B2-T02</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

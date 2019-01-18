@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B4-T09 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B4-T09">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Administración de redes locales. Gestión de usuarios. Gestión de dispositivos. Monitorización y control de tráfico. Gestión SNMP. Gestión de incidencias.IntroducciónLos detalles de administración de u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B4-T09">
+<meta property="og:url" content="http://localhost:4000/wiki/B4/b4-t09/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Administración de redes locales. Gestión de usuarios. Gestión de dispositivos. Monitorización y control de tráfico. Gestión SNMP. Gestión de incidencias.IntroducciónLos detalles de administración de u">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/http.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/tcp-osi.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/rango_ip.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/estructura_dominios.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/dominios_genericos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/wins.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/active_directory.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/cuenta_usuario.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/comparticion_archivos_linux.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/striping_disk.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/raid0.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/raid1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/raid2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/raid3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/raid4.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/raid5.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/comandos_raid_linux.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/02/sistema_supervisic3b3n.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:14:24.068Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B4-T09">
+<meta name="twitter:description" content="Administración de redes locales. Gestión de usuarios. Gestión de dispositivos. Monitorización y control de tráfico. Gestión SNMP. Gestión de incidencias.IntroducciónLos detalles de administración de u">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/02/http.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file active"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B4/b4-t09" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B4/">B4</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B4/b4-t09/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B4/b4-t09.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B4/b4-t09.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B4/b4-t09.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B4-T09
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Administracion-de-redes-locales-Gestion-de-usuarios-Gestion-de-dispositivos-Monitorizacion-y-control-de-trafico-Gestion-SNMP-Gestion-de-incidencias"><a href="#Administracion-de-redes-locales-Gestion-de-usuarios-Gestion-de-dispositivos-Monitorizacion-y-control-de-trafico-Gestion-SNMP-Gestion-de-incidencias" class="headerlink" title="Administración de redes locales. Gestión de usuarios. Gestión de dispositivos. Monitorización y control de tráfico. Gestión SNMP. Gestión de incidencias."></a>Administración de redes locales. Gestión de usuarios. Gestión de dispositivos. Monitorización y control de tráfico. Gestión SNMP. Gestión de incidencias.</h1><h2 id="Introduccion"><a href="#Introduccion" class="headerlink" title="Introducción"></a>Introducción</h2><p>Los detalles de administración de una red dependen en gran medida del SO de red utilizado. Se ha optado por desarrollar la mayor parte de los apartados desde la perspectiva de dos SO: Windows 2000 y Red Hat Linux 6.0.</p>
+<p>La estructura general del presente tema será la siguiente. En primer lugar se realiza la introducción a las funciones del administrador de redes. A continuación se presentan algunos conceptos básicos de TCP/IP necesarios para comprender la mayoría de las herramientas de administración de red. En tercer lugar se presentan algunas de las facetas de administración de redes bajo el prisma de los dos SO elegidos. Por último se hace un breve repaso a las herramientas de monitorización de tráfico y supervisión de red.</p>
+<h2 id="Funciones-del-Administrador-de-la-Red"><a href="#Funciones-del-Administrador-de-la-Red" class="headerlink" title="Funciones del Administrador de la Red"></a>Funciones del Administrador de la Red</h2><p>Las funciones de un administrador de red son tan amplias y variadas como desconocidas en muchos ámbitos. Frente a la idea preconcebida y bastante generalizada de que un administrador es la persona encargada de dar de alta a los usuarios y administrar el acceso a los recursos más habituales como programas, archivos e impresoras, encontramos una realidad mucho más amplia.</p>
+<p>Para que una red funcione correctamente y esté preparada para crecer en un entorno de alta demanda de recursos es necesario realizar un importante trabajo que no siempre es conocido.</p>
+<p>Las funciones de un administrador de red pueden dividirse en varias categorías principales:</p>
+<ul>
+<li>Administración de usuarios.</li>
+<li>Mantenimiento del hardware y software.</li>
+<li>Configuración de nodos y recursos de red.</li>
+<li>Configuración de servicios y aplicaciones internet.</li>
+<li>Seguridad de red.</li>
+<li>Supervisión y optimización.</li>
+</ul>
+<h3 id="Administracion-de-usuarios"><a href="#Administracion-de-usuarios" class="headerlink" title="Administración de usuarios"></a>Administración de usuarios</h3><p>Desde el momento en que se crea una cuenta de usuario para su acceso a la red es necesario estar preparado para darle el soporte necesario con el fin de facilitarle el acceso a los recursos del sistema.</p>
+<p>Algunas de las tareas más comunes relacionadas con la gestión de usuarios son:</p>
+<ul>
+<li>Creación y borrado de cuentas de usuario.</li>
+<li>Creación de grupos.</li>
+<li>Formación de usuarios.</li>
+<li>Definición de políticas de uso.</li>
+<li>Configuración de sistema de ayuda para gestionar el soporte a los usuarios.</li>
+<li>Asignación de espacio de almacenamiento y ficheros en el sistema de archivos compartido.</li>
+<li>Creación de cuentas de correo electrónico.</li>
+</ul>
+<h3 id="Mantenimiento-del-hardware-y-software"><a href="#Mantenimiento-del-hardware-y-software" class="headerlink" title="Mantenimiento del hardware y software"></a>Mantenimiento del hardware y software</h3><p>Fundamentalmente este punto cubre la necesidad de establecer y mantener los recursos de infraestructura de la red. En este punto podemos destacar las siguientes tareas:</p>
+<ul>
+<li>Instalación y configuración del SO.</li>
+<li>Administración de discos y del sistema de archivos.</li>
+<li>Administración RAID.</li>
+<li>Instalación de controladores de dispositivos.</li>
+<li>Recuperación y diagnóstico de fallos del sistema.</li>
+<li>Adición y eliminación de hardware del sistema.</li>
+</ul>
+<h3 id="Configuracion-de-nodos-y-recursos-de-red"><a href="#Configuracion-de-nodos-y-recursos-de-red" class="headerlink" title="Configuración de nodos y recursos de red"></a>Configuración de nodos y recursos de red</h3><p>Para que la red funcione como un sistema coherente con entidad propia, y no como una serie de nodos aislados, es necesario llevar a cabo una serie de tareas:</p>
+<ul>
+<li>Instalación y configuración de tarjetas de red.</li>
+<li>Conexión de host a concentradores y conmutadores.</li>
+<li>Conexión de host a routers.</li>
+<li>Configuración de routers.</li>
+<li>Configuración de impresión en red y compartición de archivos.</li>
+<li>Administración de DNS.</li>
+<li>Integración de diferentes SO de red.</li>
+</ul>
+<h3 id="Configuracion-de-servicios-y-aplicaciones-internet"><a href="#Configuracion-de-servicios-y-aplicaciones-internet" class="headerlink" title="Configuración de servicios y aplicaciones internet"></a>Configuración de servicios y aplicaciones internet</h3><p>Actualmente son pocos las redes locales que pueden concebirse sin pensar en una interconexión con la red WAN más extendida: las red internet. Por ello, dentro de las funciones de un administrador de red debemos incluir:</p>
+<ul>
+<li>Configuración de servidores y clientes de correo electrónico.</li>
+<li>Instalación y configuración de servidores web.</li>
+<li>Instalación y configuración de servidores de aplicaciones.</li>
+<li>Instalación y configuración de servidores de BD.</li>
+</ul>
+<h3 id="Seguridad-de-red"><a href="#Seguridad-de-red" class="headerlink" title="Seguridad de red"></a>Seguridad de red</h3><p>El impresionante auge de Internet en los últimos años ha provocado un crecimiento exponencial de los usuarios de esta red. Este hecho proporciona una serie de ventajas derivadas de la diversidad de los servicios e información que podemos encontrar en Internet, pero también supone un gran potencial para el uso indebido y la actividad criminal. Por otra parte, es necesario contemplar también el aspecto de seguridad interna, dentro de la propia red local. Para ello, deben considerarse las siguientes actividades:</p>
+<ul>
+<li>Configuración de firewalls.</li>
+<li>Acceso remoto a la red.</li>
+<li>Creación de directivas de seguridad.</li>
+</ul>
+<h3 id="Supervision-y-Optimizacion"><a href="#Supervision-y-Optimizacion" class="headerlink" title="Supervisión y Optimización"></a>Supervisión y Optimización</h3><p>Es necesario controlar los problemas derivados de un malfuncionamiento de la red, de un mal uso de la misma o de debilidades en la estrategia de seguridad:</p>
+<ul>
+<li>Afinar el rendimiento de la red.</li>
+<li>Supervisión y registro.</li>
+<li>Gestión de cambios.</li>
+<li>Auditoria y pruebas.</li>
+</ul>
+<h2 id="Conceptos-basicos-de-TCP-IP-para-Administradores"><a href="#Conceptos-basicos-de-TCP-IP-para-Administradores" class="headerlink" title="Conceptos básicos de TCP/IP para Administradores"></a>Conceptos básicos de TCP/IP para Administradores</h2><h3 id="Redes-TCP-IP"><a href="#Redes-TCP-IP" class="headerlink" title="Redes TCP/IP"></a>Redes TCP/IP</h3><p>El propósito de TCP/IP es proporcionar a los equipos un método para transmitir datos entre sí. TCP/IP proporciona los medios para que las aplicaciones envíen datos entre redes y para que las redes entreguen esos datos a las aplicaciones de otros equipos o <em>host</em> .</p>
+<p>En TCP/IP normalmente a los <em>host</em> se les asignan nombres que corresponden a sus direcciones IP, para facilitar la tarea de identificación de las máquinas.</p>
+<p>La transmisión de datos en TCP/IP se realiza con paquetes de datos. Los paquetes son bloques diferenciados de datos que se transmiten de forma independiente de la red. Cada paquete contiene los datos que cada <em>host</em> desea compartir, así como la información necesaria para encaminar el paquete al destino correcto a través de la red.</p>
+<p>Cada protocolo agrega sus propios datos en el encabezado para establecer la información que le permita mantener una conversación lógica con el protocolo homónimo en el host con el que transfiere información.</p>
+<p>La siguiente figura muestra un ejemplo simplificado del intercambio de información que se produce entre una estación de trabajo y un <em>host</em> para intercambiar una página HTML a través del protocolo HTTP sobre TCP/IP:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/http.png?w=825" alt=""></p>
+<p>Como puede verse, el protocolo TCP proporciona a los dos nodos que se comunican los recursos necesarios para establecer sesiones de diálogo. Una vez establecida dicha sesión, se transfieren paquetes de datos con un protocolo http, situado en un nivel superior de la pila de protocolos.</p>
+<h3 id="TCP-IP-frente-al-Modelo-OSI"><a href="#TCP-IP-frente-al-Modelo-OSI" class="headerlink" title="TCP/IP frente al Modelo OSI"></a>TCP/IP frente al Modelo OSI</h3><p>TCP/IP es una familia de protocolos y aplicaciones que realizan funciones diferenciadas que se corresponden con capas específicas del modelo OSI (Open System Interconnection). En este punto es importante establecer un matiz importante: TCP/IP no es una familia de protocolos del modelo OSI.</p>
+<p>De hecho, el modelo OSI nació de la necesidad de establecer un estándar que garantizara la interconexión de sistemas y equipos de diferentes fabricantes, cuando el estándar de facto que se ha impuesto mayoritariamente en el mercado es TCP/IP. Sin embargo, si existe una clara similitud entre TCP/IP y OSI en cuanto a la separación de responsabilidades a través del establecimiento de capas de protocolos, tal como muestra la siguiente tabla:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/tcp-osi.png?w=825" alt=""></p>
+<p>IP es el protocolo de capa de red más utilizado en todo el mundo. La capa de red tiene dos misiones fundamentales:</p>
+<ul>
+<li>Proporcionar una dirección única a cada host de la red: los host de cada red concreta tienen direcciones que los identifican unívocamente como miembros de dicha red.</li>
+<li>Encaminar los paquetes a través de la red, seleccionando el camino más adecuado.</li>
+</ul>
+<p>TCP es un protocolo orientado a conexión de nivel de transporte que asigna a las aplicaciones y protocolos de nivel superior un número de puerto. Estos números se transmiten junto con los datos a través de la red y son utilizados por el receptor para determinar a qué proceso debe entregar los datos recibidos.</p>
+<p>TCP/IP no implementa estrictamente los niveles 5, 6 y 7 del modelo OSI como componentes independientes y diferenciados. Las aplicaciones que utilizan TCP/IP normalmente implementan alguno de estos niveles, o todos, dentro de la aplicación según sea necesario.</p>
+<h3 id="Direccionamiento-IP"><a href="#Direccionamiento-IP" class="headerlink" title="Direccionamiento IP"></a>Direccionamiento IP</h3><p>Cada dirección IP está formada por un conjunto de 32 bits, organizados en 4 grupos de 8 bits cada uno. A cada grupo se le denomina octeto y está separado de los demás por un punto. Normalmente las direcciones IP se escriben en formato decimal, y tienen el siguiente aspecto:</p>
+<p>192.168.15.1</p>
+<p>No obstante, en muchas ocasiones resulta útil representar las direcciones IP en formato binario, considerando los bits de <em>orden superior</em> los situados a la izquierda y los de <em>orden inferior</em> los situados a la derecha:</p>
+<p>11000000.10101000.00001111.00000001</p>
+<p>Cada dirección IP contiene una parte de host y una parte de red. El espacio de direcciones disponible se divide en redes de clase A, clase B y clase C. Cada red contiene diferentes cantidades de redes y host por clase. Esto se consigue reservando para cada clase un número de bits de orden superior diferente para la dirección de red, tal como muestra la siguiente tabla:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/rango_ip.png?w=825" alt=""></p>
+<p>Este esquema está pensado para asignar a las empresas y organizaciones direcciones IP de acuerdo con el número de host para los que necesitan una dirección. Las direcciones de clase A se asignan únicamente a grandes organizaciones y empresas, mientras que las de clase C se asignan a organizaciones y empresas pequeñas. Las redes 0 y 127 están reservadas para propósitos especiales.</p>
+<p>Es importante destacar la diferencia entre una dirección IP pública y una dirección IP privada. En el ámbito de la red internet, una IP pública es una dirección de red accesible y reconocible desde cualquier punto de la red. Los organismos encargados de asignar direcciones IP públicas lo hacen siguiente el criterio de clases expuesto en la tabla anterior según las necesidades de cada compañía.</p>
+<p>Una dirección IP privada es aquella que únicamente es visible desde un ámbito de red local, pero no desde el ámbito de internet. En este sentido, las compañías tienen total libertad para escoger direcciones IP de la clase que les resulte más conveniente, ya que no interfieren con el mundo exterior.</p>
+<h3 id="Segmentacion-de-Redes"><a href="#Segmentacion-de-Redes" class="headerlink" title="Segmentación de Redes"></a>Segmentación de Redes</h3><p>A menudo puede resultar conveniente subdividir una red local en varias subredes. Los motivos pueden ser diversos:</p>
+<ul>
+<li>Si el número de terminales y host es muy elevado.</li>
+<li>Para reducir el número de colisiones en la red.</li>
+<li>Para facilitar la administración.</li>
+<li>Permite crear dominios o subredes lógicas en las que un conjunto relativamente homogéneo de usuarios accede con frecuencia al mismo conjunto de recursos compartidos.</li>
+</ul>
+<p>Para subdividir el espacio de direcciones de una red IP, se ha provisto a la dirección IP de dos componentes: la dirección IP en sí misma, y la máscara de subred.</p>
+<p>Dirección IP: 192.168.15.1<br>Máscara de subred: 255.255.255.0</p>
+<p>La máscara de subred, en su representación binaria, está formada por una serie de bits a 1 en la parte de orden superior, y una serie de bits a 0 en la parte de orden inferior.</p>
+<p>Sin dividirla en subredes, una red de clase A tiene una máscara de subred de 8 bits (255.0.0.0); una rede de clase B tiene una máscara de 16 bits (255.255.0.0); y una de clase C tendrá una máscara de subred de 24 bits (255.255.255.0). Es decir, en cualquiera de los casos para una red sin subdivisiones la máscara de red está formada por el número de bits necesarios para determinar la clase de la red más el número de bits disponibles para identificar la red.</p>
+<p>Para subdividir una red se agregan bits a 1 por la derecha a la parte de red de la máscara de subred. Al hacerlo, es necesario tener en cuenta las siguientes consideraciones:</p>
+<ul>
+<li>La primera subred (todos los 0) de cualquier red está reservada.</li>
+<li>Las direcciones primera y última de los host de cualquier subred están reservadas como direcciones de difusión.</li>
+</ul>
+<p>En el siguiente ejemplo se muestra una red de clase C dividida en 8 subredes:</p>
+<p>Dirección IP: 192.168.1.1<br>Máscara de subred: 255.255.255.224</p>
+<p>Es decir, se han añadido 3 bits a la máscara de red. Esto también suele expresarse de la siguiente forma:</p>
+<p>192.168.1.1/27</p>
+<p>que indica que la máscara de red tiene en la parte de orden superior 27 bits a 1. El número de subredes en los que se divide la red se calcula como 2 elevado al número de bits añadidos. En este ejemplo, 8 subredes. A esta técnica para subdividir redes también se le conoce con el nombre de subnetting.</p>
+<h2 id="Sistema-DNS"><a href="#Sistema-DNS" class="headerlink" title="Sistema DNS"></a>Sistema DNS</h2><p>Cada host dentro de una red local está unívocamente identificado por una dirección IP. No obstante, resultaría bastante complicado memorizar las direcciones IP de todos los host. Por este motivo, se ha creado un sistema que establece una asociación entre la dirección IP y un nombre simbólico que resulta fácilmente memorizable. Además de esto, el establecimiento de mnemónicos para identificar las máquinas permite modificar fácilmente el direccionamiento de forma transparente al usuario: se modifica la dirección IP pero no se cambia el mnemónico.</p>
+<p>Inicialmente, todos los registros de nombres de host se administraban en un repositorio oficial gestionado por el NIC (Network Information Center). Cada sitio Internet tenía que actualizar su copia local de este repositorio cuando cambiaba. La dificultad de mantener este esquema trajo consigo la creación del servicio DNS (Domain Name Service).</p>
+<p>El servicio DNS utiliza una BD distribuida de los registros de nombres que se envía automáticamente a los host que lo necesitan. El DNS utiliza una jerarquía de nombres similar a la usada por los nombres de archivos de un sistema UNIX. Hay un dominio raíz en lo más alto de la jerarquía al que sirven un grupo de servidores de dominios denominados servidores raíz. La siguiente figura representa esta situación:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/estructura_dominios.png?w=825" alt=""></p>
+<p>Justo debajo del dominio raíz se encuentran los dominios de primer nivel, divididos en dos categorías: territoriales y genéricos. Cada país tiene asociado un dominio territorial representado por un código de dos letras (es, para España; uk, para Reino Unido; etc).</p>
+<p>Los dominios genéricos son administrados por una empresa llamada <strong>Internic</strong> . Para solicitar un dominio de segundo nivel es necesario solicitarlo a Internic y abonar una cuota anual. Por otra parte, los dominios territoriales son administrados por organismos nacionales.</p>
+<p>La siguiente tabla muestra una relación de dominios genéricos:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/dominios_genericos.png?w=825" alt=""></p>
+<p>Un servidor local de nombres DNS envía una consulta a un servidor raíz de nombres cuando un cliente envía una consulta de búsqueda directa solicitando una dirección IP desde un dominio para el que el servidor local de nombres DNS no tiene autoridad.</p>
+<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>Microsoft Windows utiliza DNS como método principal para la resolución de nombres, pero sigue siendo compatible con el servicio de nombres Internet de Windows (WINS, Windows Internet Naming Services). WINS es el método de resolución de nombres utilizado en Microsoft Windows NT versión 4.0 y anteriores. WINS también suele ser necesario por compatibilidad para resolución de nombres con máquinas Windows 95 y 98.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/wins.png?w=825" alt=""></p>
+<p>Es decir, en primer lugar el servidor que necesita obtener la IP busca en el fichero hosts la correspondencia; si no la encuentra busca a través del servicio DNS; como último recurso, busca en el servicio de WINS y si tampoco lo encuentra lanza un broadcast a la red.</p>
+<p>El servidio Servidor DNS de Windows proporciona la capacidad de utilizar nombres de dominios completo (FQDN, Fully Qualified Domain Names) jerárquicos en lugar de las convenciones de nomenclatura de NetBIOS que admite WINS. Los clientes utilizan el servicio Servidor DNS para la resolución de nombres y la ubicación de servicios, incluida la ubicación de controladores de dominio que proporcionan autenticación de usuarios.</p>
+<h3 id="Red-Hat-Linux"><a href="#Red-Hat-Linux" class="headerlink" title="Red Hat Linux"></a>Red Hat Linux</h3><p>El software DNS más utilizado para sistemas UNIX y LINUX es BIND (Berkeley Internet Net Daemon).</p>
+<p>Los servidores de nombres se pueden dividir en tres categorías dependiendo de cómo estén configurados:</p>
+<ul>
+<li>Maestro: servidor a partir del cual se derivan todos los datos relativos a un dominio. Los datos son suministrados directamente por el administrador.</li>
+<li>Esclavo: al igual que el maestro tiene toda la información sobre un dominio, pero los obtiene del servidor primario.</li>
+<li>De sólo caché: guarda en la caché los resultados de las consultas, siendo éste el único medio que tiene para obtener los datos.</li>
+</ul>
+<p>Todos los sistemas UNIX y LINUX tienen una biblioteca denominada <em>resolver</em> . Esta biblioteca está asociada a un archivo de configuración <em>/etc/resolv.conf</em> que permite especificar los servidores DNS a los que se va a consultar.</p>
+<p>Para instalar un servidor DNS en un sistema Red Hat se deben instalar los paquetes <em>bind</em> y <em>caching-nameserver</em> . La configuración de BIND normalmente se almacena en el archivo <em>/etc/named.conf</em> .</p>
+<p>En este archivo se especifican los siguientes parámetros:</p>
+<ul>
+<li>Opciones globales: nombre del directorio de trabajo del servidor; direcciones IP de servidores DNS alternativos a los que se pueden redirigir las peticiones; prevalencia de los servidores alternativos frente al propio host.</li>
+<li>Instrucciones de zona: las zonas BIND son de cuatro clases: maestras (primario), esclavas (secundario), reducidas y de ayuda (caché).</li>
+</ul>
+<p>Por otra parte, existen una serie de archivos denominados <em>archivos de zona</em> que almacenan la información de las BD de los dominios. Cada archivo de zona tiene una serie de registro de recursos (RR), compuesto por los siguientes campos:</p>
+<ul>
+<li>Nombre del host al que se hace referencia.</li>
+<li>TTL (Time to Live): tiempo, en segundos, que debe almacenarse la información del registro en una caché remota.</li>
+<li>Clase: IN, para Internet.</li>
+<li>Tipo de registro (NS, Name Server; A, address; PTR, pointer; etc).</li>
+<li>Datos relativos al registro.</li>
+</ul>
+<h2 id="Gestion-de-usuarios"><a href="#Gestion-de-usuarios" class="headerlink" title="Gestión de usuarios"></a>Gestión de usuarios</h2><p>La atención a los usuarios y el establecimiento de normas que regulen el uso de la red constituyen una de las razones de ser de los administradores de sistemas. Esta atención va mucho más allá del mero hecho de administrar las cuentas de acceso al sistema, o instalar un software en la estación de trabajo del usuario.</p>
+<p>Para que la interacción de los usuarios y los administradores de red sea óptima es necesario un apoyo por parte de la dirección de la compañía u organización en la aplicación de estas normas, de forma que quede claro cómo y cuando deben notificar los usuarios los problemas del sistema al administrador, cómo solicitar que los usuarios lleven a cabo parte del trabajo y cómo hacer un seguimiento de estos problemas y peticiones.</p>
+<p>Algunas de las normas a tener en cuenta son las siguientes:</p>
+<ul>
+<li>El usuario no es ignorante: simplemente carece del nivel de conocimientos técnicos sobre la red que tienen los administradores de sistemas.</li>
+<li>El usuario debe recibir el soporte que solicita, siempre que lo haga por las vías establecidas.</li>
+<li>Todos los usuarios deben ser tratados por el mismo patrón, sin favoritismos.</li>
+<li>Las normas deben ser debidamente documentadas y difundidas. Una buena posibilidad es crear documentos en formatos HTML y publicarlos en un servidor web al que tengan acceso todos los usuarios de la red.</li>
+<li>Es necesario revisar periódicamente las normas, para mejorarlas e incorporar nuevos aspectos.</li>
+<li>Las interrupciones de los usuarios deben ser canalizadas convenientemente. Probablemente la mejor opción es una situación de equilibrio entre una atención directa al usuario para incidencias sencillas y una gestión de avisos por correo electrónico para incidencias más complicadas.</li>
+<li>La formación a los usuarios es uno de los elementos clave para reducir las incidencias. Una forma sencilla de ofrecer la formación básica es elaborar una guía de orientación de sistemas que describa donde encontrar determinados elementos en la red, como solicitar nuevo software y cómo utilizar determinadas herramientas.</li>
+<li>Es recomendable la utilización de herramientas online para plantear soluciones y obtener respuestas. Estas herramientas se suelen conocer como <em>escritorios de ayuda</em> . Las características de un buen escritorio de ayuda son:<ul>
+<li>Deben ofrecer una interfaz simple a los usuarios.</li>
+<li>Deben ofrecer un mecanismo que informe a los usuarios sobre el estado de su petición.</li>
+<li>Deben permitir elaborar automáticamente estadísticas e informes de las incidencias recibidas.</li>
+<li>Debe tener un sistema para establecer prioridades.</li>
+</ul>
+</li>
+</ul>
+<p>Entre los escritorios de ayuda que podemos encontrar se pueden citar WREQ, herramienta de código abierta utilizada habitualmente en sistemas Linux. En sistemas con Windows pueden utilizarse las <em>directivas de grupo</em> ofrecidas por el sistema para reducir los costes de operación de la red. Una directiva de grupo permite establecer plantillas administrativas para configurar las aplicaciones, establecer la apariencia de los escritorios y el comportamiento de los servicios del sistema, manejar opciones para la configuración de los equipos locales y la red, administración central de instalación de software, etc.</p>
+<p>Una vez realizada esta introducción, vamos a ver en detalle el procedimiento para gestionar usuarios y sus privilegios de acceso a los recursos del sistema en los SO de red que estamos tratando.</p>
+<h3 id="Windows-1"><a href="#Windows-1" class="headerlink" title="Windows"></a>Windows</h3><p><strong>Introducción al Active Directory</strong></p>
+<p>La administración de usuarios, grupos y privilegios en Windows se realiza a través del <em>Active Directory</em> . Active Directory es el servicio de directorio de una red Windows. Un servicio de directorio es un servicio de red que almacena información sobre los recursos de la red, incluyendo su nombre, descripción, claves de búsqueda, etc.</p>
+<p>El Active Directory ofrece un medio para organizar y administrar de forma centralizada el acceso a los recursos de la red, haciendo transparente la topología de la red y sus protocolos. Un usuario puede tener acceso a cualquier recurso sin saber cómo está conectado físicamente.</p>
+<p>El Active Directory organiza la información que almacena en secciones que permiten el almacenamiento de una gran cantidad de objetos. Esta estructura proporciona un método para diseñar una jerarquía de directorios comprensible para los usuarios y los administradores. La siguiente figura muestra los componentes lógicos de la estructura del Active Directory:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/active_directory.png?w=825" alt=""></p>
+<ul>
+<li><strong>Dominios</strong> : conjunto de equipos definidos por el administrador que comparten una BD de directorio común. En una red Windows, el dominio sirve como límite de seguridad, de forma que el administrador de un dominio tienen los permisos necesarios para llevar a cabo la administración únicamente dentro de ese dominio. Una red de múltiples dominios es útil para organizaciones que utilizan un modelo administrativo descentralizado. Cada dominio es gestionado por un servidor denominado <em>controlador de dominio</em> . Los controladores de dominio mantienen la información completa del directorio asociado a su dominio.</li>
+<li><strong>Unidades organizativas (OU)</strong> : objeto contenedor que se utiliza para organizar objetos dentro de un dominio. Una unidad organizativa puede contener objetos como cuentas de usuarios, grupos, equipos, impresora, etc. Las unidades organizativas permiten delegar el control administrativo sobre los objetos que contienen, asignando a usuarios o grupos de usuarios permisos específicos. Las unidades organizativas suelen formar una estructura jerárquica que representa la propia estructura organizativa de la organización o un modelo administrativo de red.</li>
+<li><strong>Árboles</strong> : disposición jerárquica de dominios que comparten un espacio de nombres contiguo. Cuando se agrega un dominio a un árbol existente, el nombre del dominio secundario (el recién añadido) se combina con el nombre del dominio principal para formar su nombre DNS. Algunas de las razones para tener más de un dominio son:<ul>
+<li>Administración de red descentralizada.</li>
+<li>Mejor control para la duplicación de los directorios.</li>
+<li>Necesidad de gestionar una gran cantidad de objetos en la red.</li>
+<li>Nombres de dominio de Internet diferentes.</li>
+<li>Requisitos de contraseña diferentes entre organizaciones.</li>
+</ul>
+</li>
+<li><strong>Bosques</strong> : grupo de árboles que no comparten un espacio de nombres contiguo. Los árboles de un bosque comparten una configuración, un esquema y un catálogo global comunes.</li>
+</ul>
+<p>El procedimiento para crear la estructura del Active Directory es crear en primer lugar la estructura de dominios, para completar luego la estructura lógica de la red con una jerarquía de unidades organizativas que contengan usuarios, equipos y otros recursos. Por último, se controlará el acceso a los objetos del Active Directory mediante el establecimiento de permisos.</p>
+<p><strong>Cuentas de Usuario</strong></p>
+<p>Las cuentas de usuario se emplean para autenticar al usuario y para conceder permisos de acceso a los recursos de red. Una cuenta de usuario se crea dentro de una unidad organizativa, realizando las siguientes operaciones:</p>
+<ol>
+<li>En el menú <em>Herramientas Administrativas</em> , abrir <em>Usuarios y equipos de Active Directory</em> .</li>
+<li>Pulsar el botón derecho del ratón en la unidad organizativa deseada, seleccionar <em>Nuevo</em> y pulsar <em>Usuario</em> .</li>
+</ol>
+<p>Al hacerlo aparecerá el cuadro de diálogo de la siguiente figura (todo depende del sistema Windows utilizado):</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/cuenta_usuario.png?w=825" alt=""></p>
+<p><strong>Cuentas de Equipo</strong></p>
+<p>Las cuentas de equipo son similares a las cuentas de usuario en el sentido de que pueden utilizarse para autenticar y auditar el equipo, y para conceder permisos a los recursos de red. Los equipos cliente deben tener una cuenta de equipo válida para poder unirse al dominio.</p>
+<p>Para crear una cuenta de equipo se realizan las siguientes operaciones:</p>
+<ol>
+<li>En el menú <em>Herramientas Administrativas</em> , abrir <em>Usuarios y equipos de Active Directory</em> .</li>
+<li>Pulsar el botón derecho del ratón en la unidad organizativa deseada, seleccionar <em>Nuevo</em> y pulsar <em>Equipo</em> .</li>
+<li>Escribir un nombre de equipo que sea único dentro del bosque.</li>
+<li>Designar al usuario o grupo de usuarios con permisos para hacer que el equipo se una al dominio. Esto hará que durante el proceso de unión del equipo al dominio el sistema muestra un diálogo solicitando una cuenta válida para realizar la operación.</li>
+</ol>
+<p><strong>Grupos de Usuarios</strong></p>
+<p>Los grupos de usuarios son un mecanismo para simplificar la administración de permisos. Asignar una sola vez un permiso a un grupo de usuarios es más sencillo que hacerlo tantas veces como usuarios tenga el grupo de forma aislada. Existen dos tipos de grupos de Active Directory:</p>
+<ul>
+<li>Grupos de seguridad: se utilizan para conceder o denegar permisos.</li>
+<li>Grupos de distribución: se utilizan para enviar mensajes de correo electrónico. No pueden utilizarse con fines de seguridad.</li>
+</ul>
+<p>Los grupos de distribución y seguridad tienen además un atributo de ámbito, que determina quién puede ser miembro del grupo y dónde puede usar ese grupo en la red:</p>
+<ul>
+<li>Grupos locales de dominio: pueden contener usuarios, grupos globales y grupos universales pertenecientes a cualquier dominio del bosque, así como grupos locales del mismo dominio.</li>
+<li>Grupos globales: pueden contener cuentas de usuario y grupos globales del dominio en el que existe el grupo.</li>
+<li>Grupos universales: pueden contener cuentas de usuario, grupos globales y otros grupos universales de cualquier dominio de Windows en el bosque.</li>
+</ul>
+<p>Para crear un grupo se realizan las siguientes operaciones:</p>
+<ol>
+<li>En el menú <em>Herramientas Administrativas</em> , abrir <em>Usuarios y equipos de Active Directory</em> .</li>
+<li>Pulsar el botón derecho del ratón en la unidad organizativa deseada, seleccionar <em>Nuevo</em> y pulsar <em>Grupo</em> .</li>
+</ol>
+<p>Al hacerlo se obtiene un cuadro de diálogo desde el que se pueden establecer las opciones para el grupo creado y agregar miembros (otros grupos o cuentas de usuario).</p>
+<h3 id="Red-Hat-Linux-1"><a href="#Red-Hat-Linux-1" class="headerlink" title="Red Hat Linux"></a>Red Hat Linux</h3><p><strong>Consideraciones generales</strong></p>
+<p>En Linux los usuarios y grupos se utilizan para determinar el propietario y permisos de los archivos y dispositivos, y para establecer permisos de acceso a casi todas las funciones del sistema. El programa <em>Linuxconf</em> permite acceder a la información de usuarios y grupos.</p>
+<p>Para administrar convenientemente los permisos en Linux hay que evitar en la medida de los posible el uso de cuentas compartidas, por varios motivos:</p>
+<ul>
+<li>Es importante controlar las acciones de los usuarios para saber quiénes actúan correctamente y quiénes no lo hacen. El uso del mismo identificador de usuario por varias personas hace que esta tarea sea inviable. Asimismo, por motivos de seguridad resulta completamente desaconsejable que un grupo de usuarios comparta la misma contraseña para acceder al sistema.</li>
+<li>Si se utiliza un inicio de sesión compartido los archivos de configuración no pueden ser específicos para cada usuario. Por lo tanto, todos deberán utilizar la misma estructura de escritorio y los mismos alias de la <em>shell</em> . Esto significa que todos los cambios realizados pueden afectar al entorno de trabajo de los usuarios que comparten la cuenta, y que cualquiera de ellos puede leer un e-mail enviado a la cuenta compartida.</li>
+<li>Por último, como varias personas pueden acceder a un archivo al mismo tiempo, la última modificación sobrescribirá los cambios que puedan haber realizado otros usuarios.</li>
+</ul>
+<p>En vez de utilizar cuentas compartidas, resulta más recomendable utilizar grupos para proporcionar a los usuarios el acceso a las mismas partes del sistema de archivos manteniendo distintos identificadores de inicio de sesión, archivos de configuración y directorios principales.</p>
+<p><strong>Archivos del Sistema</strong></p>
+<p>Existen una serie de archivos importantes para configurar y modificar los usuarios y grupos del sistema, que se describen a continuación:</p>
+<ul>
+<li><em>/etc/passwd</em> : Contiene información sobre los identificadores de los usuarios, los directorios principales y los comandos que se ejecutan cuando se inicia una sesión.</li>
+<li><em>/etc/group</em> : Contiene la información sobre los grupos del sistema.</li>
+<li><em>/etc/shadow</em> : Archivo utilizado para ocultar las contraseñas del archivo <em>/etc/passwd</em> , cuya lectura es universal. Contiene la cadena de la contraseña codificada e información sobre el vencimiento de las cuentas.</li>
+<li><em>/etc/gshadow</em> : Realiza para los grupos la misma función que hace <em>/etc/shadow</em> para los usuarios. Contiene las contraseñas codificadas para los grupos e información de las cuentas.</li>
+<li><em>/etc/login.defs</em> : Contiene información predeterminada sobre la creación y mantenimiento de las cuentas.</li>
+<li><em>/etc/skel</em> : Contiene archivos de configuración predeterminados que se utilizan al crear cuentas nuevas. En este directorio se guardan los archivos de configuración de la shell, los archivos de configuración del administrador de ventanas o los archivos y directorio que un usuario deba tener en su directorio principal.</li>
+</ul>
+<p><strong>Configuración de Cuentas de Usuario</strong></p>
+<p>Para crear nuevos usuarios en Linux es posible seguir varios procedimientos. Se pueden modificar directamente los archivos de sistema expuestos en el punto anterior, pero esto supone una labor bastante tediosa. El comando <em>useradd</em> simplifica estas operaciones, permitiéndonos crear nuevos usuarios en una sola línea.</p>
+<p>Sin embargo, la forma más cómoda de hacerlo es utilizar una herramienta GUI como Linuxconf. Este programa puede ejecutarse en X-Windows o en línea de comandos.</p>
+<p><strong>Configuración de Grupos de Usuarios</strong></p>
+<p>Al igual que ocurre con las cuentas de usuario, en Linux existen diversas formas de configurar los grupos de usuarios. Esta tarea puede realizarse mediante comandos del sistema o utilizando una herramienta GUI como Linuxconf.</p>
+<p>A continuación se presentan algunos de los comandos y scripts de shell para gestión de grupos:</p>
+<ul>
+<li><em>groupadd</em> : añade un grupo al archivo <em>/etc/group</em></li>
+<li><em>groupdel</em> : elimina un grupo del archivo <em>/etc/group</em></li>
+<li><em>groupmod</em> : modifica las entradas en <em>/etc/group</em></li>
+<li><em>grpck</em> : realiza una comprobación de integridad del archivo <em>/etc/group</em></li>
+</ul>
+<p><strong>Gestión de privilegios</strong></p>
+<p>Existen varias alternativas para establecer los permisos de acceso de los usuarios a archivos y directorios. El comando <em>chown</em> permite otorgar a un usuario la propiedad de un archivo o directorio. No obstante, éste no es el mejor método si necesitamos que varios usuarios accedan a un archivo, ya que sólo puede existir un propietario en un momento dado.</p>
+<p>Otra opción mejor es utilizar el comando <em>chmod</em> para conceder al usuario los permisos necesarios. Si el usuario no es propietario del archivo, será necesario cambiar la configuración de permisos para ‘otros’, de forma que los cambios se apliquen a todos los usuarios que no sean propietarios del archivo.</p>
+<p>Por último, se puede conceder permisos a los usuarios utilizando la configuración del grupo propietario de un archivo y estableciendo los permisos para grupos. Manipulando los permisos de los grupos en un archivo o dispositivo es posible proporcionar o anular el acceso a ese archivo a nivel de grupo.</p>
+<p><strong>Otros comandos para configuración de Usuarios y Grupos</strong></p>
+<p>En este apartado se detallan otros comandos de <em>shell</em> útiles para la configuración de usuarios y grupos de usuarios:</p>
+<ul>
+<li><em>newusers</em> : añade usuarios nuevos al sistema en modo de procesamiento por lotes.</li>
+<li><em>chpasswd</em> : actualiza el archivo de contraseñas en modo <em>batch</em> . Lee parejas nombre_usuario-contraseña de la entrada estándar y actualiza la contraseña para el usuario dado.</li>
+<li><em>usermod</em> : permite modificar o desactivar cuentas de usuario. Afecta a los archivos <em>/etc/passwd</em> y <em>/etc/shadow</em> .</li>
+<li><em>userdel</em> : elimina una cuenta de usuario.</li>
+<li><em>newgrp</em> : permite cambiar temporalmente el grupo predeterminado a otro grupo del que sea miembro o del que conozca la contraseña.</li>
+<li><em>chage</em> : permite configurar el contenido de <em>/etc/shadow</em> .</li>
+<li><em>chgrp</em> : permite cambiar el grupo propietario de un archivo.</li>
+<li><em>chown</em> : permite cambiar el usuario propietario de un archivo.</li>
+<li><em>chsh</em> : cambia la <em>shell</em> de inicio de sesión.</li>
+<li><em>gpasswd</em> : permite a los administradores añadir y eliminar usuarios de los grupos y cambiar las contraseñas de los mismos.</li>
+<li><em>groups</em> : imprime los grupos de los cuales es miembro un usuario.</li>
+<li><em>passwd</em> : cambia las contraseñas.</li>
+<li>_su_ : permite a un usuario hacerse pasar temporalmente por otro.</li>
+</ul>
+<h2 id="Administracion-de-Recursos-de-Impresion-y-Archivos"><a href="#Administracion-de-Recursos-de-Impresion-y-Archivos" class="headerlink" title="Administración de Recursos de Impresión y Archivos"></a>Administración de Recursos de Impresión y Archivos</h2><h3 id="Windows-2"><a href="#Windows-2" class="headerlink" title="Windows"></a>Windows</h3><p><strong>Compartición de impresoras</strong></p>
+<p>Compartir una impresora de red en el entorno Windows es bastante sencillo. Desde el panel de control del equipo donde está instalada localmente la impresora, seleccionaremos <em>Impresoras y Faxes</em> . Esto nos mostrará una vista con todas las impresoras instaladas. Seleccionamos una de ellas y pulsamos con el botón derecho del ratón, seleccionando a continuación la opción <em>Compartir</em> . Después únicamente queda rellenar las opciones solicitadas por el cuadro de diálogo.</p>
+<p><strong>Compartición de Archivos</strong></p>
+<p>Administración de los recursos de archivos:</p>
+<ul>
+<li>Publicación de recursos de archivo en el Active Directory: permite a los usuarios encontrar los recursos fácilmente en la red.</li>
+<li>Sistema de archivos <em>Dfs (Distributed file system)</em> : permite la transparencia de las estructuras de red y el sistema de archivos de cara a los usuarios, posibilitando el acceso a los recursos de archivo de forma centralizada. Proporciona un árbol lógico único para los recursos del sistema de archivo que pueden estar en cualquier lugar de la red.</li>
+<li>Permisos especiales del sistema de archivos NTFS: Proporcionan un mayor grado de control a la hora de conceder acceso a los recursos. Por ejemplo, permite asignar a un usuario permiso para cambiar permisos de archivos o carpetas, o la posibilidad de tomar posesión de archivos o carpetas.</li>
+<li>Sistema de archivos de cifrado <em>(EFS, Encrypting File System)</em> : Proporciona la tecnología de cifrado de archivos para el almacenamiento de archivos NTFS en disco.</li>
+<li>Asignación de cuotas de disco en volúmenes NTFS: Permiten asignar espacio de disco a los usuarios en función de los archivos y carpetas que poseen. También se puede supervisar la cantidad de espacio de disco duro que los usuarios han utilizado.</li>
+</ul>
+<p>Para compartir recursos en una red es necesario compartir carpetas. Esta tarea se lleva a cabo de la siguiente forma:</p>
+<ol>
+<li>Abrir <em>Administración de equipos</em> desde el menú <em>Herramientas Administrativas</em> .</li>
+<li>En el árbol de la consola de <em>Administración de equipos</em> , seleccionar <em>Carpetas compartidas</em> bajo Herramientas del Sistema.</li>
+<li>Bajo <em>Carpetas compartidas</em> , seleccionar <em>Recursos compartidos</em> . Aparecerán en el panel de detalles todas las carpetas compartidas desde el equipo local.</li>
+<li>Pulsar el botón derecho del ratón en el panel de detalles y hacer clic en <em>Nuevo recurso compartido de archivo</em> .</li>
+<li>Seguir las instrucciones del <em>Asistente</em> para la creación de carpetas compartidas.</li>
+</ol>
+<p>Para publicar una carpeta en el Active Directory se procederá de la siguiente manera:</p>
+<ol>
+<li>Abrir <em>Usuarios y equipos de Active Directory</em> en el menú <em>Herramientas Administrativas</em> .</li>
+<li>En el árbol de la consola de <em>Usuarios y equipos de Active Directory</em> pulsar con el botón derecho del ratón en el dominio en el que se desee publicar la carpeta compartida y seleccionar <em>Nuevo / Carpeta compartida</em> .</li>
+<li>Escribir el nombre con el que se desea que aparezca la carpeta compartida en el Active Directory.</li>
+<li>Especificar la ruta de la carpeta compartida.</li>
+</ol>
+<h3 id="Red-Hat-Linux-2"><a href="#Red-Hat-Linux-2" class="headerlink" title="Red Hat Linux"></a>Red Hat Linux</h3><p><strong>Compartición de Impresoras</strong></p>
+<p>Red Hat Linux da soporte a las impresoras de red mediante el demonio <em>lpd,</em> o con el paquete LPRng. Para configurar una impresora en red se realiza la instalación de una impresora local y posteriormente se permite el acceso desde otras máquinas de la red.</p>
+<p>Para poder instalar una impresora local es necesario que ésta tenga un controlador para <em>GhostScript</em> . GhostScript es un paquete de software que implementa el lenguaje <em>PostScript</em> , y que incluye controladores para muchas impresoras conocidas.</p>
+<p>Linux almacena la configuración de las impresoras en el archivo <em>/etc/printcap</em> . Puede utilizarse la utilidad <em>PrintTool</em> como herramienta GUI para crear las entradas de este archivo.</p>
+<p>El acceso a otras máquinas a una impresora local a través de la red se realiza configurando entradas en el archivo <em>/etc/hosts.lpd</em> , en el que se especifican los nombres de las máquinas que pueden acceder al demonio de la impresora en línea en el <em>host</em> local.</p>
+<p>Por último, es necesario definir la impresora remota en las máquinas a las que se les ha dado acceso. Esto puede hacerse también mediante PrintTool, estableciendo de forma gráfica la entrada correspondiente para la impresora remota en el archivo printcap.</p>
+<p><strong>Compartición de Archivos</strong></p>
+<p>El método estándar para compartir archivos en Linus es <em>NFS (Network File Services)</em> . La exportación de sistemas de archivos se lleva a cabo mediante la configuración en el servidor NFS del fichero <em>/etc/exports</em> . Las entradas de este fichero definen qué clientes pueden acceder a los sistemas de archivo compartidos y con qué permisos.</p>
+<p>Existen numerosas opciones para controlar los permisos de acceso al sistema de archivos, que se muestran en la tabla siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/comparticion_archivos_linux.png?w=825" alt=""></p>
+<p>En el cliente se ejecutan una serie de operaciones para acceder a un sistema de archivos compartidos mediante NFS:</p>
+<ul>
+<li>Asegurarse de que se tiene acceso al recurso. Para ello se ejecutará en la máquina cliente el comando <em>showmount</em> , pasándole como parámetro el nombre del servidor NFS.</li>
+<li>Modificar el archivo <em>/etc/fstab</em> para incluir información sobre el sistema de archivos que se quiere montar.</li>
+<li>Crear los puntos de montaje adecuados, y montar el sistema de archivos. Esto se lleva a cabo utilizando el comando <em>mount</em> , que da instrucciones para montar todos los sistemas de archivos descritos en el archivo <em>/etc/fstab</em> .</li>
+</ul>
+<p>Existen otras alternativas además de NFS para compartir sistemas de archivos en Linux. Entre ellas se encuentran AFS, un sistema de archivos comercial, y Coda, un sistema de archivos gratuito con bastantes similitudes con AFS.</p>
+<h2 id="Administracion-de-Dispositivos-de-Almacenamiento"><a href="#Administracion-de-Dispositivos-de-Almacenamiento" class="headerlink" title="Administración de Dispositivos de Almacenamiento"></a>Administración de Dispositivos de Almacenamiento</h2><h3 id="Configuraciones-RAID"><a href="#Configuraciones-RAID" class="headerlink" title="Configuraciones RAID"></a>Configuraciones RAID</h3><p>La idea básica del RAID (Redundant Array of Independent Disk) es combinar varios discos relativamente poco costosos en un array de discos para obtener eficiencia, capacidad y fiabilidad que supere a la ofrecida por un disco de alta capacidad. El array de discos aparece en la máquina como un disco lógico simple.</p>
+<p>Existen dos conceptos básicos necesarios para comprender las distintas configuraciones RAID:</p>
+<ul>
+<li>Striping</li>
+<li>Mirroring (Espejo)</li>
+</ul>
+<p><strong>Striping</strong></p>
+<p>Constituye la tecnología fundamental del RAID. Es el método para combinar múltiples discos en una unidad de almacenamiento lógica simple. Esta técnica particiona el espacio de almacenamiento de cada disco en franjas o <em>stripes</em> , que pueden ser tan pequeñas como un sector (normalmente 512 bytes), o del orden de megabytes. Estas franjas se intercalan en una secuencia rotativa, de forma que el espacio combinado se compone de franjas alternativas de cada uno de los discos.</p>
+<p>La mayoría de los SO soporta actualmente operaciones concurrentes de E/S sobre múltiples discos. Sin embargo, para optimizar el rendimiento, la carga de E/S se debe balancear entre todos los discos de forma que cada disco se mantenga ocupado el máximo tiempo posible. En un sistema de discos múltiples sin striping, la carga de E/S nunca está perfectamente balanceada. Algunos discos contendrán ficheros de datos frecuentemente accedidos, y otros discos serán raramente accedidos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/striping_disk.png?w=825" alt=""></p>
+<p>Creando los discos del array con stripes lo suficientemente grandes para que un registro entre enteramente en un solo stripe, la mayoría de los registros se pueden distribuir entre todos los disco. Esto hace que los discos del array se mantengan ocupados en situaciones de fuerte carga. Con ello se consigue que los discos trabajen de forma concurrente en operaciones de E/S, maximizando así el número de operaciones simultáneas de E/S que se pueden llevar a cabo en el array.</p>
+<p><strong>Mirroring (Espejo)</strong></p>
+<p>La técnica de mirroring se basa en replicar en dos o más discos los datos para garantizar su disponibilidad. Todas las escrituras se deben ejecutar en todos los discos del array en espejo, de forma que mantengan idéntica información. No obstante, con ello también se multiplica la eficiencia en lectura mientras que la eficiencia en escritura permanece invariable respecto a un solo disco ya que se ejecuta en paralelo.</p>
+<p><strong>RAID 0</strong></p>
+<p>Está constituido por un grupo de discos a los que se le aplica la técnica de striping, sin paridad o información de redundancia. Los arrays RAID 0 ofrecen la mejor eficiencia en cuanto a espacio de almacenamiento y eficiencia de acceso. La desventaja que tienen es que si uno de los discos del array falla, falla el array completo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/raid0.png?w=825" alt=""></p>
+<p><strong>RAID 1</strong></p>
+<p>También se le conoce como configuración en espejo. Consiste en una serie de discos (normalmente dos) que almacenan información duplicada, pero que se muestra a la máquina como un disco simple. Aunque la técnica de striping no se usa en un par de discos en espejo, es posible utilizar esta técnica en arrays RAID 1 múltiples, creando un array simple y grande de parejas de discos en espejo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/raid1.png?w=825" alt=""></p>
+<p><strong>RAID 2</strong></p>
+<p>Estos arrays utilizan la técnica de striping en sectores de datos a lo largo de grupos de discos, dedicando algunos discos a almacenar información de redundancia. Puesto que todos los discos contienen actualmente información de redundancia en cada sector, RAID 2 no ofrece ventajas significativas respecto a otras configuraciones RAID.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/raid2.png?w=825" alt=""></p>
+<p><strong>RAID 3</strong></p>
+<p>Como en RAID 2, se utiliza la técnica de striping con los sectores de datos en grupos de discos, pero un disco del grupo se dedica a almacenar información de paridad. RAID 3 se apoya en la información de redundancia que tiene cada sector para la detección de errores. Cuando se produce el fallo de un disco, la recuperación de datos conlleva el cálculo XOR de la información almacenada en los discos restantes. Los registros de datos habitualmente se reparten entre todos los discos, lo que optimiza la velocidad de transferencia. Debido a que cada petición de E/S accede a cada disco en el array, RAID 3 sólo puede ejecutar una petición en cada momento. Por ello proporciona la mejor eficiencia para aplicaciones monousuario o monotarea con registros grandes. La configuración RAID 3 requiere discos y controladoras especiales y costosos para mantener los discos sincronizados de forma que se evite la degradación de eficiencia en el acceso a registros cortos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/raid3.png?w=825" alt=""></p>
+<p><strong>RAID 4</strong></p>
+<p>Esta configuración es idéntica a RAID 3 con la excepción de que se utilizan stripes de tamaño largo, de forma que los registros se pueden leer desde cualquier disco individual del array. Esto permite que las operaciones de lectura se puedan solapar. Sin embargo, puesto que todas las operaciones de escritura deben actualizar el disco de paridad, no se pueden solapar.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/raid4.png?w=825" alt=""></p>
+<p><strong>RAID 5</strong></p>
+<p>Esta configuración evita los cuellos de botella en escritura que provoca la utilización de un único disco para la paridad en RAID 4. En RAID 5 la información de paridad se distribuye entre todos los discos. Al no haber un disco de paridad dedicado, todos los discos contienen datos y las operaciones de lectura se pueden solapar sobre cualquier disco del array. Las operaciones de escritura accederán habitualmente a un disco de datos y a un disco de paridad. No obstante, ya que los diferentes registros almacenan su paridad en diferentes discos, las operaciones de escritura se pueden solapar con frecuencia.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/raid5.png?w=825" alt=""></p>
+<p><strong>Arrays de Doble Nivel</strong></p>
+<p>Además de los niveles RAID estándar, se pueden combinar varios arrays RAID en un grupo de arrays simple. Los arrays de doble nivel aportan un equilibrio entre la alta disponibilidad de datos de RAID 1 y RAID 5 y la mayor eficiencia de lectura de RAID 0. Estos arrays se conocen como RAID 0+1 o RAID 10, y RAID 0+5 o RAID 50.</p>
+<h3 id="Windows-3"><a href="#Windows-3" class="headerlink" title="Windows"></a>Windows</h3><p>Windows ofrece dos tipos de almacenamiento en disco: almacenamiento básico y almacenamiento dinámico:</p>
+<ul>
+<li>Almacenamiento básico: Contiene hasta cuatro particiones primarias o tres particiones primarias y una extendida. Este es el sistema de particiones ya utilizado en MS-DOS.</li>
+<li>Almacenamiento dinámico: Ofrece los siguientes tipos de volúmenes:<ul>
+<li>Volumen simple: contiene el espacio de un único disco.</li>
+<li>Volumen distribuido: contiene el espacio de dos o más discos (hasta 32). Es equivalente a una configuración RAID 0.</li>
+<li>Volúmenes con espejo: Son dos copias idénticas de un volumen simple, cada una de ellas en un disco duro independiente. Es equivalente a la configuración RAID 1.</li>
+<li>Volumen seccionado: combina en un único volumen áreas de espacio libre de 2 a 32 discos duros.</li>
+<li>Volúmenes RAID 5.</li>
+</ul>
+</li>
+</ul>
+<p>Windows permite realizar la administración de discos a través del <em>MMC (Microsoft Management Console)</em> . Con esta herramienta se puede administrar el espacio de almacenamiento, ver las propiedades del disco, ver las propiedades de particiones y volúmenes y actualizar la información de administración de discos.</p>
+<h3 id="Red-Hat-Linux-3"><a href="#Red-Hat-Linux-3" class="headerlink" title="Red Hat Linux"></a>Red Hat Linux</h3><p>El soporte para RAID en Red Hat Linux se suministra con el <em>Kernel</em> a través del controlador _md_ . Este controlador se implementa en dos modos:</p>
+<ul>
+<li>Modo lineal: permite la concatenación de múltiples dispositivos físicos en una única unidad lógica. Sin embargo, no ofrece mejoras en el rendimiento ya que no se accede a los discos en paralelo. La única función del modo lineal es ligar múltiples dispositivos físicos en un único dispositivo lógico, permitiendo sistemas de archivos más grandes.</li>
+<li>Soporte RAID: en este modo se soportan los niveles RAID 0, 1, 4 y 5. La versión 6.0 de Red Hat incluye la posibilidad de reconstrucción de los arrays dañados, la detección automática de RAID en tiempo de arranque y la posibilidad de añadir y extraer dispositivos físicos de un array en ejecución.</li>
+</ul>
+<p>Existen una serie de comandos para controlar las configuraciones RAID, que se muestran a continuación:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/comandos_raid_linux.png?w=825" alt=""></p>
+<p>La información sobre configuraciones RAID se almacena en el archivo <em>/etc/raidtab</em> . Cada entrada de este archivo contiene el nivel RAID, el número y nombres de las particiones que constituyen el array e información complementaria.</p>
+<h2 id="Monitorizacion-y-Control-de-Trafico"><a href="#Monitorizacion-y-Control-de-Trafico" class="headerlink" title="Monitorización y Control de Tráfico"></a>Monitorización y Control de Tráfico</h2><p>La supervisión de la red es una tarea esencial para los administradores de sistemas. Mediante esta actividad, se puede ver la actividad de la red, de manera que los problemas se pueden diagnosticar con rapidez y exactitud. También resulta muy útil para resolver huecos de seguridad y cuellos de botella en el tráfico de red.</p>
+<p>Normalmente la supervisión de red se basa en la captura y examen de paquetes de datos desde una tarjeta de red. Es decir, los paquetes de datos se inspeccionan antes de que se realice ningún tratamiento de los mismos en la máquina. Esto permite realizar numerosas actividades, como la detección de paquetes corruptos o el diagnóstico de problemas de mala configuración.</p>
+<p>Por otra parte, con la supervisión de red es posible examinar el tráfico entre los diferentes host de la red. Los cuellos de botella y los conflictos de direcciones IP son algunos de los problemas que se pueden resolver de esta forma.</p>
+<p>En cuanto a temas de seguridad, la supervisión de red permite la detección de contraseñas fáciles de adivinar, el uso ilegal de ancho de banda por parte de determinados usuarios o ataques de denegación de servicio.</p>
+<h3 id="Esquema-de-un-sistema-de-supervision"><a href="#Esquema-de-un-sistema-de-supervision" class="headerlink" title="Esquema de un sistema de supervisión"></a>Esquema de un sistema de supervisión</h3><p>La siguiente figura muestra el esquema de componentes de un sistema de supervisión de red:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/02/sistema_supervisic3b3n.png?w=825" alt=""></p>
+<ul>
+<li>Punto de acceso a la red: proporciona la conexión física entre el host supervisor y la red supervisada. La ubicación del punto de acceso de red depende mucho de la naturaleza conmutada o no conmutada de la red. En las redes no conmutadas los host comparten un único canal de comunicaciones, por lo que el ancho de banda es compartido entre todos ellos. En una red conmutada cada host tiene su propio canal de comunicación, disponiendo de todo el ancho de banda. También influye en la colocación del punto de acceso la forma en la que esté segmentada la red, siendo una tarea más sencilla en las redes de un solo segmento.</li>
+<li>Sistema de captura de paquetes: captura el tráfico en bruto procedente del punto de acceso a la red. La mayoría de los sistemas de supervisión de red utilizan un API para realizar el acceso a los paquetes capturados.</li>
+<li>Motor de análisis: efectúa la decodificación del protocolo de la red y, si es posible, la reconstrucción de la sesión de red. Además agrupa las estadísticas y examina las tendencias de tráfico. Suelen utilizar plantillas de protocolo para separar el encabezamiento de los paquetes de la carga útil de datos.</li>
+<li>Subsistema de registro: módulo utilizado por el motor de análisis para almacenar los datos conseguidos, incluyendo estadísticas, tendencias y paquetes capturados. El soporte de almacenamiento puede ser variado, desde ficheros de texto a BD.</li>
+<li>Interfaz de usuario: conjunto de vistas a través de las cuales el usuario puede visualizar de forma coherente la información capturada y analizada. El interfaz de usuario mostrará estadísticas de utilización, listados de host activos, estadísticas de protocolos, etc.</li>
+</ul>
+<p>Las características de un buen sistema de supervisión de red son las siguientes:</p>
+<ul>
+<li>Portabilidad del hardware del sistema de supervisión.</li>
+<li>Compatibilidad con una o más topologías de red.</li>
+<li>Capaz de supervisar a velocidades cercanas a las del cable.</li>
+<li>Capaz de almacenar grandes cantidades de datos y estadísticas.</li>
+<li>Decodificación del tráfico de red en múltiples niveles de la pila de protocolos.</li>
+</ul>
+<p>Existen básicamente dos tipos de sistema de supervisión de red que se estudiarán en los siguientes apartados: los rastreadores y los analizadores de tráfico.</p>
+<h3 id="Rastreadores"><a href="#Rastreadores" class="headerlink" title="Rastreadores"></a>Rastreadores</h3><p>Un rastreador o <em>sniffer</em> captura el contenido real de las sesiones de red y de la transmisión de datagramas. Permiten almacenar información de los protocolos y las actividades del nivel de aplicación. Esta faceta los hace enormemente potentes porque permite detectar problemas derivados de malas configuraciones de aplicaciones o de red, ataques de denegación de servicio, etc.</p>
+<p>El rastreador funciona capturando los datos de los paquetes de acuerdo a criterios de filtrado específico y extrayendo el contenido de carga útil de los paquetes recibidos. Los rastreadores avanzados dan soporte a una técnica denominada <em>reconstrucción de sesión de red</em> , que permite que las transmisiones de datos que emplean múltiples paquetes simultáneos sean reconstruidas como un único flujo de comunicaciones coherente.</p>
+<p>Dada su capacidad de analizar el tráfico a nivel de aplicación, los rastreadores son extremadamente útiles para proporcionar una visión profunda de la red, analizando el contenido de las sesiones de red en lugar de sólo la información de cabecera del protocolo.</p>
+<p>Algunos de los ataques de denegación de servicio más comunes que puede detectar un rastreador son:</p>
+<ul>
+<li>Avalanchas SYN: consiste en inundar un host de destino con peticiones de conexión TCP no válidas, de forma que la cola de conexiones del servidor atacado se colapse.</li>
+<li>Ping de la muerte: consiste en enviar un paquete fragmentado mayor de lo normal para provocar el desbordamiento del identificador de longitud de paquetes en su reconstrucción, de forma que acabe tomando un valor negativo. En las máquinas más vulnerables, esto suele provocar el desbordamiento de la pila.</li>
+<li>Smurf: consiste en el envío de una petición de ping ICMP a la dirección de difusión de una red. Cada host que reciba la petición generará una respuesta, pudiendo provocar una situación de sobrecarga.</li>
+</ul>
+<p>Los rastreadores también son útiles para detectar problemas habituales de la red, como los siguientes:</p>
+<ul>
+<li>Direcciones IP duplicadas: dos o más host comparten la misma dirección IP en la red.</li>
+<li>Errores ARP.</li>
+<li>Problemas de encaminamiento.</li>
+</ul>
+<h3 id="Analizadores-de-Trafico"><a href="#Analizadores-de-Trafico" class="headerlink" title="Analizadores de Tráfico"></a>Analizadores de Tráfico</h3><p>Los analizadores de tráfico son herramientas para el diagnóstico y solución de problemas, y para la mejora del rendimiento. Muestran exactamente lo que está sucediendo en una red de computadoras.</p>
+<p>Funciona capturando paquetes de datos que viajan por la red, decodificando el protocolo y elaborando estadísticas. Algunas de las utilidades que los analizadores de tráfico tienen son:</p>
+<ul>
+<li>Detección de cuellos de botella: un cuello de botella es un punto de la ruta entre dos host en el que el ancho de banda disponible es muy limitado. Esto puede repercutir en una degradación grave del rendimiento de la red. Los cuellos de botella pueden estar producidos por múltiples causas: errores de configuración, problemas hardware, servidores saturados…</li>
+<li>Análisis del tipo de tráfico: permiten catalogar el tráfico que circula por la red mediante el establecimiento de criterios de filtrado.</li>
+</ul>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografía"></a>Bibliografía</h2><ul>
+<li><a href="https://es.scribd.com/document/357351226/TICB4-Administracion-redes-locales-pdf" rel="external nofollow noopener noreferrer" target="_blank">Scribd (Ibiza Ales)</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t11/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T11
+                
+            </div>
+        </a>
+    
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

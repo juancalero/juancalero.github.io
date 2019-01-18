@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B3-T06 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B3-T06">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Modelización conceptual. El modelo Entidad/Relación extendido (E/R): elementos. Reglas de modelización. Validación y construcción de modelos de datos.Modelo Conceptual de DatosA la hora de determinar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-T06">
+<meta property="og:url" content="http://localhost:4000/wiki/B3/b3-t06/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Modelización conceptual. El modelo Entidad/Relación extendido (E/R): elementos. Reglas de modelización. Validación y construcción de modelos de datos.Modelo Conceptual de DatosA la hora de determinar">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/entidad.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/relacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/relacion1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/muchos_a_muchos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/relaciones_tres_o_mas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/relaciones_redundantes.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/relaciones_recursivas.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/atributo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/exclusividad.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/jerarquia.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/tipos_y_subtipos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/cardinalidad.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/dependencia_funcional.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/diagrama_1fn.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/diagrama_2fn.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/diagramas_3fn.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/tabla.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/relacion2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/diagrama_entidad_relacion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/notacion_matriz.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:13:11.740Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-T06">
+<meta name="twitter:description" content="Modelización conceptual. El modelo Entidad/Relación extendido (E/R): elementos. Reglas de modelización. Validación y construcción de modelos de datos.Modelo Conceptual de DatosA la hora de determinar">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/04/entidad.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file active"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B3/b3-t06" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B3/">B3</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B3/b3-t06/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B3/b3-t06.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B3/b3-t06.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B3/b3-t06.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B3-T06
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Modelizacion-conceptual-El-modelo-Entidad-Relacion-extendido-E-R-elementos-Reglas-de-modelizacion-Validacion-y-construccion-de-modelos-de-datos"><a href="#Modelizacion-conceptual-El-modelo-Entidad-Relacion-extendido-E-R-elementos-Reglas-de-modelizacion-Validacion-y-construccion-de-modelos-de-datos" class="headerlink" title="Modelización conceptual. El modelo Entidad/Relación extendido (E/R): elementos. Reglas de modelización. Validación y construcción de modelos de datos."></a>Modelización conceptual. El modelo Entidad/Relación extendido (E/R): elementos. Reglas de modelización. Validación y construcción de modelos de datos.</h1><h2 id="Modelo-Conceptual-de-Datos"><a href="#Modelo-Conceptual-de-Datos" class="headerlink" title="Modelo Conceptual de Datos"></a>Modelo Conceptual de Datos</h2><p>A la hora de determinar una BD debemos establecer un proceso partiendo del acotamiento de una parcela del mundo exterior (micromundo o universo del discurso), aquél que nos interesa representar en los datos. En este proceso se debe aprender, comprender y conceptualizar dicho mundo exterior transformándolo en un conjunto de ideas y definiciones que supongan una imagen fiel del comportamiento del mundo real. A esta imagen del mundo exterior la llamaremos <strong>Modelo Conceptual</strong> .</p>
+<p>Una vez definido el modelo conceptual, éste se ha de transformar en una descripción de datos, atributos y relaciones que denominaremos Esquema Conceptual de datos. Por último, este esquema conceptual habrá que traducirlo a estructuras almacenables en soportes físicos. Por tanto es necesario distinguir entre Bases de Datos, que será el banco, el almacén de los valores (ocurrencias) de los datos. Los modelos de Datos, que son las herramientas para diseñar los datos y sus relaciones de forma que puedan soportar los valores correspondientes. Y finalmente los Sistemas Gestores de Bases de Datos (SGBD), que serán los encargados de las acciones que llevemos a cabo con las bases de datos, permitiendo también cumplimentar a los usuarios, mostrándoles los datos de acuerdo a sus necesidades. Con todo ello, se puede definir un Modelo de Datos como: Un grupo de herramientas conceptuales para describir los datos, sus relaciones, su semántica y sus limitaciones; de tal forma, que facilita la interpretación de nuestro mundo real y su representación en forma de datos, en nuestro sistema informático.</p>
+<p>Definido el modelo de datos, pasamos a analizarlo. Para ello, partiremos de las propiedades que podemos diferenciar en dos tipos:</p>
+<ul>
+<li><strong>Estáticas</strong> : Son las propiedades invariantes en el tiempo. Quedan especificadas en el Modelo de Datos por ESTRUCTURAS. Esta se define mediante el ESQUEMA, con el lenguaje de definición de datos (DDL). El esquema, a su vez está constituido por Estructura y Restricciones. La Estructura queda definida por los Objetos del Modelo y las Restricciones inherentes, conformando un conjunto de reglas de definición de dichas Estructuras. Los objetos y Restricciones de la Estructura dependen de cada Modelo, pero en general son:<ul>
+<li>Entidades.</li>
+<li>Atributos.</li>
+<li>Dominio.</li>
+<li>Relaciones.</li>
+<li>Representación.</li>
+<li>Restricciones: Hay tres tipos de restricciones:<ul>
+<li><em>Restricciones inherentes</em> : vienen impuestas por la propia naturaleza del Modelo introduciendo rigideces en la modelización.</li>
+<li><em>Restricciones opcionales o de usuario</em> : restricciones propiamente dichas en el Esquema, son definidas por el usuario, pero el Modelo de Datos las reconoce y suministra herramientas para manejarlas.</li>
+<li><em>Restricciones libres de usuarios</em> : son responsabilidad del usuario y el Modelo de Datos ni las reconoce, ni las maneja.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Dinámicas</strong> : Son las propiedades que varían con el tiempo. En el modelo de datos son las OPERACIONES. Se define como un conjunto de Operaciones con el Lenguaje de Manipulación de Datos (DML). Las operaciones sobre un Modelo de Datos pueden ser de:<ul>
+<li>Selección. Localización de los datos deseados.</li>
+<li>Acción. Realización de una acción sobre los datos seleccionados. Dicha acción puede ser:<ul>
+<li>Recuperación (obtención de los datos seleccionados).</li>
+<li>Actualización, que a su vez pueden ser:<ul>
+<li>Modificación.</li>
+<li>Inserción.</li>
+<li>Borrado.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Generalmente, toda operación de Actualización va precedida de una Recuperación, aunque no necesariamente.</p>
+<h2 id="Modelo-Entidad-Relacion-Extendido"><a href="#Modelo-Entidad-Relacion-Extendido" class="headerlink" title="Modelo Entidad/Relación Extendido"></a>Modelo Entidad/Relación Extendido</h2><p>Se trata de una técnica cuyo objetivo es la representación y definición de todos los datos que se introducen, almacenan, transforman y producen dentro de un sistema de información, sin tener en cuenta las necesidades de la tecnología existente, ni otras restricciones.</p>
+<p>Dado que el modelo de datos es un medio para comunicar el significado de los datos, las relaciones entre ellos y las reglas de negocio de un sistema de información, una organización puede obtener numerosos beneficios de la aplicación de esta técnica, pues la definición de los datos y la manera en que éstos operan son compartidos por todos los usuarios.</p>
+<p>Las ventajas de realizar un modelo de datos son, entre otras:</p>
+<ul>
+<li>Comprensión de los datos de una organización y del funcionamiento de la organización.</li>
+<li>Obtención de estructuras de datos independientes del entorno físico.</li>
+<li>Control de los posibles errores desde el principio, o al menos, darse cuenta de las deficiencias lo antes posible.</li>
+<li>Mejora del mantenimiento.</li>
+</ul>
+<p>Aunque la estructura de datos puede ser cambiante y dinámica, normalmente es mucho más estable que la estructura de procesos. Como resultado, una estructura de datos estable e integrada proporciona datos consistentes que puedan ser fácilmente accesibles según las necesidades de los usuarios, de manera que, aunque se produzcan cambios organizativos, los datos permanecerán estables.</p>
+<p>Este diagrama se centra en los datos, independientemente del procesamiento que los transforma y sin entrar en consideraciones de eficiencia. Por ello, es independiente del entorno físico y debe ser una fiel representación del sistema de información objeto del estudio, proporcionando a los usuarios toda la información que necesiten y en la forma en que la necesiten.</p>
+<h3 id="Descripcion"><a href="#Descripcion" class="headerlink" title="Descripción"></a>Descripción</h3><p>El modelo entidad/relación extendido describe con un alto nivel de abstracción la distribución de datos almacenados en un sistema. Existen dos elementos principales: las entidades y las relaciones. Las extensiones al modelo básico añaden además los atributos de las entidades y la jerarquía entre éstas. Estas extensiones tienen como finalidad aportar al modelo una mayor capacidad expresiva.</p>
+<p>Los elementos fundamentales del modelo son los siguientes:</p>
+<p><strong>Entidad</strong></p>
+<p>Es aquel objeto, real o abstracto, acerca del cual se desea almacenar información en la base de datos. La estructura genérica de un conjunto de entidades con las mismas características se denomina tipo de entidad.</p>
+<p>Existen dos clases de entidades:</p>
+<ul>
+<li>Regulares: tienen existencia por sí mismas.</li>
+<li>Débiles: cuya existencia depende de otra entidad.</li>
+</ul>
+<p>Las entidades deben cumplir las siguientes tres reglas:</p>
+<ul>
+<li>Tienen que tener existencia propia.</li>
+<li>Cada ocurrencia de un tipo de entidad debe poder distinguirse de las demás.</li>
+<li>Todas las ocurrencias de un tipo de entidad deben tener los mismos atributos.</li>
+</ul>
+<p><strong>Relación</strong></p>
+<p>Es una asociación o correspondencia existente entre una o varias entidades. La relación puede ser regular, si asocia tipos de entidad regulares, o débil, si asocia un tipo de entidad débil con un tipo de entidad regular. Dentro de las relaciones débiles se distinguen la <strong>dependencia en existencia</strong> y la <strong>dependencia en identificación</strong> .</p>
+<p>Se dice que la dependencia es en existencia cuando las ocurrencias de un tipo de entidad débil no pueden existir sin la ocurrencia de la entidad regular de la que dependen. Se dice que la dependencia es en identificación cuando, además de lo anterior, las ocurrencias del tipo de entidad débil no se pueden identificar sólo mediante sus propios atributos, sino que se les tiene que añadir el identificador de la ocurrencia de la entidad regular de la cual dependen.</p>
+<p>Además, se dice que una relación es <strong>exclusiva</strong> cuando la existencia de una relación entre dos tipos de entidades implica la no existencia de las otras relaciones.</p>
+<p>Una relación se caracteriza por:</p>
+<ul>
+<li><strong>Nombre</strong> : que lo distingue unívocamente del resto de relaciones del modelo.</li>
+<li><strong>Tipo de correspondencia</strong> : es el número máximo de ocurrencias de cada tipo de entidad que pueden intervenir en una ocurrencia de la relación que se está tratando. Conceptualmente se pueden identificar tres clases de relaciones:<ul>
+<li><em>Relaciones 1:1</em> : Cada ocurrencia de una entidad se relaciona con una y sólo una ocurrencia de la otra entidad.</li>
+<li><em>Relaciones 1:N</em> : Cada ocurrencia de una entidad puede estar relacionada con cero, una o varias ocurrencias de la otra entidad.</li>
+<li><em>Relaciones M:N</em> : Cada ocurrencia de una entidad puede estar relacionada con cero, una o varias ocurrencias de la otra entidad y cada ocurrencia de la otra entidad puede corresponder a cero, una o varias ocurrencias de la primera.</li>
+</ul>
+</li>
+<li><strong>Cardinalidad</strong> : representa la participación en la relación de cada una de las entidades afectadas, es decir, el número máximo y mínimo de ocurrencias de un tipo de entidad que pueden estar interrelacionadas con una ocurrencia de otro tipo de entidad. La cardinalidad máxima coincide con el tipo de correspondencia.<br>Según la cardinalidad, una relación es obligatoria, cuando para toda ocurrencia de un tipo de entidad existe al menos una ocurrencia del tipo de entidad asociado, y es opcional cuando, para toda ocurrencia de un tipo de entidad, puede existir o no una o varias ocurrencias del tipo de entidad asociado.</li>
+</ul>
+<p><strong>Dominio</strong></p>
+<p>Es un conjunto nominado de valores homogéneos. El dominio tiene existencia propia con independencia de cualquier entidad, relación o atributo.</p>
+<p><strong>Atributo</strong></p>
+<p>Es una propiedad o característica de un tipo de entidad. Se trata de la unidad básica de información que sirve para identificar o describir la entidad. Un atributo se define sobre un dominio. Cada tipo de entidad ha de tener un conjunto mínimo de atributos que identifiquen unívocamente cada ocurrencia del tipo de entidad. Este atributo o atributos se denomina identificador principal. Se pueden definir restricciones sobre os atributos, según las cuales un atributo puede ser:</p>
+<ul>
+<li>Univaluado, atributo que sólo puede tomar el valor para todas y cada una de las ocurrencias del tipo de entidad al que pertenece.</li>
+<li>Obligatorio, atributo que tiene que tomar al menos un valor para todas y cada una de las ocurrencias del tipo de entidad al que pertenece.</li>
+</ul>
+<p>Además de estos elementos, existen extensiones del modelo entidad/relación que incorporan determinados conceptos o mecanismos de abstracción para facilitar la representación de ciertas estructuras del mundo real:</p>
+<ul>
+<li>La <strong>generalización</strong> , permite abstraer un tipo de entidad de nivel superior (supertipo) a partir de varios tipos de entidad (subtipos); en estos casos los atributos comunes y relaciones de los subtipos se asignan al supertipo. Se pueden generalizar por ejemplo los tipos <em>profesor</em> y <em>estudiante</em> obteniendo el <em>supertipo</em> persona.</li>
+<li>La <strong>especialización</strong> es la operación inversa a la generalización, en ella un supertipo se descompone en uno o varios subtipos, los cuales heredan todos los atributos y relaciones del supertipo, además de tener los suyos propios. Un ejemplo es el caso del tipo <em>empleado</em> , del que se pueden obtener los subtipos <em>secretaria</em> , <em>técnico</em> e <em>ingeniero</em> .</li>
+<li><strong>Categorías</strong> . Se denomina categoría al subtipo que aparece como resultado de la unión de varios tipos de entidad. En este caso, hay varios supertipos y un sólo subtipo. Si por ejemplo se tienen los tipos <em>persona</em> y <em>compañía</em> y es necesario establecer una relación con <em>vehículo</em> , se puede crear <em>propietario</em> como un subtipo unión de los dos primeros.</li>
+<li>La <strong>agregación</strong> , consiste en construir un nuevo tipo de entidad como composición de otros y su tipo de relación y así poder manejarlo en un nivel de abstracción mayor. Por ejemplo, se tienen los tipos de entidad <em>empresa</em> y <em>solicitante de empleo</em> relacionados mediante el tipo de relación <em>entrevista</em> ; pero es necesario que cada <em>entrevista</em> se corresponda con una determinada <em>oferta de empleo</em> . Como no se permite la relación entre tipos de relación, se puede crear un tipo de entidad compuesto por <em>empresa</em> , <em>entrevista</em> y <em>solicitante de empleo</em> y relacionarla con el tipo de entidad <em>oferta de empleo</em> . El proceso inverso se denomina desagregación.</li>
+<li>La <strong>asociación</strong> , consiste en relacionar dos tipos de entidades que normalmente son de dominios independientes, pero coyunturalmente se asocian.</li>
+</ul>
+<p>La existencia de supertipos y subtipos, en uno o varios niveles, da lugar a una <strong>jerarquía</strong> , que permitirá representar una restricción del mundo real.</p>
+<p>Una vez construido el modelo entidad/relación, hay que analizar si se presentan redundancias. Para poder asegurar su existencia se deben estudiar con mucho detenimiento las cardinalidades mínimas de las entidades, así como la semántica de las relaciones.</p>
+<p>Los atributos redundantes, los que se derivan de otros elementos mediante algún cálculo, deben ser eliminados del modelo entidad/relación o marcarse como redundantes.</p>
+<p>Igualmente, las relaciones redundantes deben eliminarse del modelo, comprobando que al eliminarlas sigue siendo posible el paso, tanto en un sentido como en el inverso, entre las dos entidades que unían.</p>
+<h3 id="Notacion"><a href="#Notacion" class="headerlink" title="Notación"></a>Notación</h3><p><strong>Entidad</strong></p>
+<p>La representación gráfica de un tipo de entidad regular es un rectángulo con el nombre del tipo de entidad. Un tipo de entidad débil se representa con dos rectángulos concéntricos con su nombre en el interior.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/entidad.png?w=825" alt=""></p>
+<p><strong>Relación</strong></p>
+<p>Se representa por un rombo unido a las entidades relacionadas por dos líneas retas a los lados. El tipo de correspondencia se representa gráficamente con una etiqueta <em>1:1</em> , <em>1:N</em> o <em>M:N</em> , cerca de alguno de los vértices del rombo, o bien situando cada número o letra cerca de la entidad correspondiente, para mayor claridad.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/relacion.png?w=825" alt=""></p>
+<p>La representación gráfica de las cardinalidades se realiza mediante una etiqueta del tipo <em>(0,1)</em> , ( <em>1,1)</em> , <em>(0,n)</em> o <em>(1,n)</em> , que se coloca en el extremo de la entidad que corresponda. Si se representan las cardinalidades, la representación del tipo de correspondencia es redundante.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/relacion1.png?w=825" alt=""></p>
+<p><em>Relaciones del tipo M:N (Muchos a Muchos):</em></p>
+<p>Si existe un concepto que puede sustituir la relación, tiene sentido como entidad y aporta una mejor comprensión al modelo (para usuarios y analistas) es conveniente deshacerlas mediante esta entidad y las relaciones uno a muchos adecuadas.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/muchos_a_muchos.png?w=825" alt=""></p>
+<p><em>Relaciones entre Tres o Más Entidades</em></p>
+<p>Las relaciones entre tres o más entidades se reclasificarán mediante una entidad relacionada con cada una de ellas, si existe un concepto que puede ser representado como una entidad, y aporta mayor comprensión al problema.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/relaciones_tres_o_mas.png?w=825" alt=""></p>
+<p><em>Relaciones potencialmente redundantes</em></p>
+<p>Pueden serlo o no, depende del significado de las relaciones y de las cardinalidades.</p>
+<p>Deben ser eliminadas.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/relaciones_redundantes.png?w=825" alt=""></p>
+<p><em>Relaciones Recursivas o Autorrelaciones</em></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/relaciones_recursivas.png?w=825" alt=""></p>
+<p><strong>Atributo</strong></p>
+<p>Un atributo se representa mediante una elipse, con su nombre dentro, conectada por una línea al tipo de entidad o relación.</p>
+<p>En lugar de una elipse puede utilizarse un círculo con el nombre dentro, o un círculo más pequeño con el nombre del atributo a un lado. También pueden representarse en una lista asociada a la entidad. El identificador aparece con el nombre marcada o subrayado, o bien con su círculo en negro.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/atributo.png?w=825" alt=""></p>
+<p><strong>Exclusividad</strong></p>
+<p>En la representación de las relaciones exclusivas se incluye un arco sobre las líneas que conectan el tipo de entidad a los dos o más tipos de relación.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/exclusividad.png?w=825" alt=""></p>
+<p><strong>Jerarquía (tipos y subtipos)</strong></p>
+<p>La representación de las jerarquías se realiza mediante un triángulo invertido, con la base paralela al rectángulo que representa el supertipo y conectando a éste y a los subtipos. Si la división en subtipos viene determinada en función de los valores de un atributo discriminante, éste se representará asociado al triángulo que representa la relación.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/jerarquia.png?w=825" alt=""></p>
+<p>En el triángulo se representará: con una letra <strong>d</strong> el hecho de que los subtipos sean disjuntos, con un círculo o una <strong>O</strong> si los subtipos pueden solaparse y con un <strong>U</strong> el caso de uniones por categorías. La presencia de una jerarquía total se representa con una doble línea entre el supertipo y el triángulo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/tipos_y_subtipos.png?w=825" alt=""></p>
+<p><strong>Ejemplo</strong></p>
+<p>Modelo entidad-relación extendido para un sistema de gestión de técnicos y su asignación a proyectos dentro de una empresa u organización.</p>
+<p>Como se aprecia en el diagrama, TÉCNICO es un subtipo de EMPLEADO, generado por especialización, pues era necesario para establecer la relación <em>Trabaja en</em> con PROYECTO, ya que no todos los empleados de la empresas, como los administrativos, son susceptibles de trabajar en un proyecto. La entidad TÉCNICO tendrá los atributos de EMPLEADO más el atributo <em>nivel</em> .</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo.png?w=825" alt=""></p>
+<p>Los tipos de correspondencia son <em>1:N</em> entre DEPARTAMENTO y EMPLEADO, pues un departamento tienen 1 o varios empleados. Entre TÉCNICO y PROYECTO es <em>M:N</em> , pues un técnico puede trabajar en 1 o varios proyectos, y en un proyecto trabajan 1 o varios técnicos.</p>
+<p>Por otro lado, se han incluido atributos que caracterizan la relación <em>Trabaja en</em> , como son <em>fecha de asignación</em> y <em>fecha de cese</em> , ya que un técnico no siempre estará trabajando en un proyecto, sino en determinado periodo. (Nota.- Esta notación es la más habitual, pero MÉTRICA Versión 3 no exige su utilización).</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/cardinalidad.png?w=825" alt=""></p>
+<h2 id="Normalizacion"><a href="#Normalizacion" class="headerlink" title="Normalización"></a>Normalización</h2><p>La teoría de la normalización tiene por objetivo la eliminación de dependencias entre atributos que originen anomalías en la actualización de los datos, y proporcionar una estructura más regular para la representación de las tablas, constituyendo el soporte para el diseño de bases de datos relacionales.</p>
+<p>Como resultado de la aplicación de esta técnica se obtiene un modelo lógico de datos normalizado.</p>
+<h3 id="Descripcion-1"><a href="#Descripcion-1" class="headerlink" title="Descripción"></a>Descripción</h3><p>La teoría de la normalización, como técnica formal para organizar los datos, ayuda a encontrar fallos y a corregirlos, evitando así introducir anomalías en las operaciones de manipulación de datos.</p>
+<p>Se dice que una relación está en una determinada forma normal si satisface un cierto conjunto de restricciones sobre los atributos. Cuanto más restricciones existan, menor será el número de relaciones que las satisfagan, así, por ejemplo, una relación en tercera forma normal estará también en segunda y en primera forma normal.</p>
+<p>Antes de definir las distintas formas normales se explican, muy brevemente, algunos conceptos necesarios para su comprensión.</p>
+<p><strong>Dependencia funcional</strong></p>
+<p>Un atributo _Y_ se dice que depende funcionalmente de otro _X_ si, y sólo si, a cada valor de _X_ le corresponde un único valor de _Y_ , lo que se expresa de la siguiente forma: <em>X → Y</em> (también se dice que _X_ determina o implica a _Y_ ).</p>
+<p>_X_ se denomina implicante o determinante e _Y_ es el implicado.</p>
+<p><strong>Dependencia funcional completa</strong></p>
+<p>Un atributo _Y_ tiene dependencia funcional completa respecto de otro _X_ , si depende funcionalmente de él en su totalidad, es decir, no depende de ninguno de los posibles atributos que formen parte de _X_ .</p>
+<p><strong>Dependencia transitiva</strong></p>
+<p>Un atributo depende transitivamente de otro si, y sólo si, depende de él a través de otro atributo. Así, _Z_ depende transitivamente de _X_ , si:</p>
+<p>X → Y<br>Y —/→ X<br>Y → Z</p>
+<p>Se dice que _X_ implica a _Z_ a través de _Y_ .</p>
+<p>Una vez definidas las anteriores dependencias, se pueden enunciar las siguientes formas normales:</p>
+<p><em>Primera Forma Normal (1FN)</em></p>
+<p>Una entidad está en 1FN si no tiene grupos repetitivos, es decir, un atributo sólo puede tomar un único valor de un dominio simple.</p>
+<p>Una vez identificados los atributos que no dependen funcionalmente de la clave principal, se formará con ellos una nueva entidad y se eliminarán de la antigua. La clave principal de la nueva entidad estará formada por la concatenación de uno o varios de sus atributos más la clave principal de la antigua entidad.</p>
+<p><em>Segunda Forma Normal (2FN)</em></p>
+<p>Una entidad está en 2FN si está en 1FN y todos los atributos que no forman parte de las claves candidatas (atributos no principales) tienen dependencia funcional completa respecto de éstas, es decir, no hay dependencias funcionales de atributos no principales respecto de una parte de las claves. Cada uno de los atributos de una entidad depende de toda la clave.</p>
+<p>Una vez identificados los atributos que no dependen funcionalmente de toda la clave, sino sólo de parte de la misma, se formará con ellos una nueva entidad y se eliminarán de la antigua. La clave principal de la nueva entidad estará formada por la parte de la antigua de la que dependen funcionalmente.</p>
+<p><em>Tercera Forma Normal (3FN)</em></p>
+<p>Una entidad está en 3FN si está en 2FN y todos sus atributos no principales dependen directamente de la clave primaria, es decir, no hay dependencias funcionales transitivas de atributos no principales respecto de las claves.</p>
+<p>Una vez identificados los atributos que dependen de otro atributo distinto de la clave, se formará con ellos una nueva entidad y se eliminarán de la antigua. La clave principal de la nueva entidad será el atributo del cual dependen. Este atributo en la entidad antigua, pasará a ser una clave ajena.</p>
+<h3 id="Notacion-1"><a href="#Notacion-1" class="headerlink" title="Notación"></a>Notación</h3><p>Una herramienta muy útil para visualizar las dependencias funcionales es el grafo o diagrama de dependencias funcionales, mediante el cual se representa un conjunto de atributos y las dependencias funcionales existentes entre ellos.</p>
+<p>En el grafo aparecen los nombre de los atributos unidos por flechas, las cuales indican las dependencias funcionales completas que existen entre ellos, partiendo del implicante hacia el implicado. Cuando el implicante de una dependencia no es un único atributo, es decir, se trata de un implicante compuesto, los atributos que lo componen se encierran en un recuadro y la flecha parte de éste, no de cada atributo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/dependencia_funcional.png?w=825" alt=""></p>
+<p>En la figura se presenta un ejemplo de cómo se visualizan las dependencias. Se puede observar que COD_LIBRO determina funcionalmente el TITULO del libro y la EDITORIAL, como indica la correspondiente flecha; de forma análoga, NUM_SOCIO determina NOMBRE, DOMICILIO y TEL. del socio (suponiendo que sólo se proporciona un teléfono); mientras que ambos atributos en conjunto COD_LIBRO y NUM_SOCIO (lo que se indica mediante el recuadro que los incluye) determinan FECHA_PRESTAMO y FECHA_DEV.</p>
+<h3 id="Ejemplo"><a href="#Ejemplo" class="headerlink" title="Ejemplo"></a>Ejemplo</h3><p>Sea una entidad TÉCNICOS de un grupo de empresas, con los siguientes atributos:</p>
+<ul>
+<li>cod_empresa</li>
+<li>cod_técnico</li>
+<li>nombre_técnico</li>
+<li>cod_categoría</li>
+<li>categoría</li>
+<li>nombre_empresa</li>
+<li>fecha_alta</li>
+<li>fecha_baja</li>
+<li>cod_conoc</li>
+<li>titulo_conoc</li>
+<li>área_conoc</li>
+<li>grado</li>
+<li>cod_proyecto</li>
+<li>nombre_proyecto</li>
+<li>f_inicio</li>
+<li>f_fin</li>
+<li>f_asignación</li>
+<li>f_cese</li>
+<li>cod_cliente</li>
+<li>nombre_cliente</li>
+</ul>
+<p>La entidad TÉCNICOS tiene la clave principal compuesta por _cod_empresa_ y _cod_técnico_ , ya que, al ser varias empresas, el código de técnico no será único, sino que puede coincidir con otros de otras empresas.</p>
+<p><em>Primera Forma Normal (1FN)</em></p>
+<p>Evidentemente no se cumple la primera forma normal, ya que un técnico tendrá más o de un conocimiento (lenguajes, sistemas, operativos, bases de datos, etc), es decir habrá varios valores de _cod_conoc_ , por lo que este atributo y los asociados a conocimientos no dependen funcionalmente de la clave principal.</p>
+<p>Los atributos _cod_conoc_ , _título_conoc_ , _área_conoc_ y <em>grado</em> identificados como no dependientes, formarán la nueva entidad CONOCIMIENTOS y desaparecerán de la entidad TÉCNICOS. La clave de la nueva entidad será _cod_conoc_ concatenada con _cod_empresa_ y _cod_técnico_ .</p>
+<p>Por otro lado, en este sistema un técnico puede trabajar en más de un proyecto a tiempo parcial, por lo que _cod_proyecto_ tampoco depende funcionalmente de la clave principal de TÉCNICOS.</p>
+<p>Se obtiene entonces la entidad PROYECTOS con los atributos de los proyectos, y su clave compuesta de _cod_proyecto_ concatenada con _cod_empresa_ y _cod_técnico_ de la antigua entidad.</p>
+<p>Esta situación se completará con dos tipos de relaciones: <em>Poseen</em> , cuyo tipo de correspondencia es <em>1:N</em> entre TÉCNICOS y CONOCIMIENTOS y <em>Están asignados</em> , también del tipo <em>M:N</em> entre TÉCNICOS y PROYECTOS, tal y como muestra el diagrama siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/diagrama_1fn.png?w=825" alt=""></p>
+<p>Como se aprecia en la figura, se ha trasladado el atributo <em>grado</em> de la entidad CONOCIMIENTOS a la relación <em>Poseen</em> , pues es un atributo que determina la relación entre las dos entidades. También han sido trasladado los atributos que caracterizan la relación <em>Están asignados</em> , como son _f_asignación_ y _f_cese_ , ya que un técnico no siempre estará trabajando en un proyecto, sino en determinado periodo.</p>
+<p><em>Segunda Forma Normal (2FN)</em></p>
+<p>En la entidad TÉCNICOS se observa que el atributo _nombre_empresa_ no tiene una dependencia funcional completa con la clave, sino que la tiene sólo de una parte de la misma: _cod_empresa_ .</p>
+<p>El atributo identificado formará parte de una nueva entidad, EMPRESAS, siendo eliminado de la antigua. La clave principal de la nueva entidad será _cod_empresa_ .</p>
+<p>Para representar la segunda forma normal en el modelo de datos, deberá añadirse un tipo de relación, <em>Se componen</em> , y el tipo de correspondencia <em>1:N</em> .</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/diagrama_2fn.png?w=825" alt=""></p>
+<p><em>Tercera Forma Normal (3FN)</em></p>
+<p>En la entidad TÉCNICOS de la figura se puede observar que para un _cod_técnico_ hay un único _cod_categoría_ , es decir, el segundo depende funcionalmente del primero; para un _cod_categoría_ hay una única <em>categoría</em> , es decir, que este atributo depende funcionalmente del _cod_categoría_ ; y por último, para un _cod_categoría_ hay varios valores de _cod_técnico_ . Así pues, la categoría depende transitivamente del _cod_técnico_ , por lo que la entidad TÉCNICOS no está en 3FN.</p>
+<p>Una vez identificado el atributo categoría que depende de otro atributo distinto de la clave, _cod_categoría_ , se formará con él una nueva entidad y se quitará de la antigua. La clave principal de la nueva entidad será el atributo del cual depende _cod_categoría_ y en la entidad antigua pasará a ser una clave ajena.</p>
+<p>Del mismo modo, puede observarse que la entidad PROYECTOS tampoco está en 3FN, pues el _nombre_cliente_ depende de _cod_cliente_ , que no forma parte de la clave de la entidad.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/diagramas_3fn.png?w=825" alt=""></p>
+<p>Así pues, aparecen dos entidades nuevas en el modelo: CATEGORÍAS y CLIENTES, y sus respectivas relaciones y tipos de correspondencias: <em>Están clasificados 1:N</em> y <em>Tiene contratados 1:N</em> .</p>
+<h2 id="Optimizacion"><a href="#Optimizacion" class="headerlink" title="Optimización"></a>Optimización</h2><p>El objetivo de esta técnica es reestructurar el modelo físico de datos con el fin de asegurar que satisface los requisitos de rendimiento establecidos y conseguir una adecuada eficiencia del sistema.</p>
+<h3 id="Descripcion-2"><a href="#Descripcion-2" class="headerlink" title="Descripción"></a>Descripción</h3><p>La optimización consiste en una desnormalización controlada del modelo físico de datos que se aplica para reducir o simplificar el número de accesos a la base de datos.</p>
+<p>Para ello, se seguirán alguna de las recomendaciones que a continuación se indican:</p>
+<ul>
+<li>Introducir elementos redundantes.</li>
+<li>Dividir entidades.</li>
+<li>Combinar entidades si los accesos son frecuentes dentro de la misma transacción.</li>
+<li>Redefinir o añadir relaciones entre entidades para hacer más directo el acceso entre entidades.</li>
+<li>Definir claves secundarias o índices para permitir caminos de acceso alternativos.</li>
+</ul>
+<p>Con el fin de analizar la conveniencia o no de la desnormalización, se han de considerar, entre otros, los siguientes aspectos:</p>
+<ul>
+<li>Los tiempos de respuesta requeridos.</li>
+<li>La tasa de actualizaciones respecto a la de recuperaciones.</li>
+<li>Las veces que se accede conjuntamente a los atributos.</li>
+<li>La longitud de los mismos.</li>
+<li>El tipo de aplicaciones (en línea / por lotes).</li>
+<li>La frecuencia y tipo de acceso.</li>
+<li>La prioridad de los accesos.</li>
+<li>El tamaño de las tablas.</li>
+<li>Los requisitos de seguridad: accesibilidad, confidencialidad, integridad y disponibilidad que se consideren relevantes.</li>
+</ul>
+<h2 id="Reglas-de-Obtencion-del-Modelo-Fisico-a-partir-del-Logico"><a href="#Reglas-de-Obtencion-del-Modelo-Fisico-a-partir-del-Logico" class="headerlink" title="Reglas de Obtención del Modelo Físico a partir del Lógico"></a>Reglas de Obtención del Modelo Físico a partir del Lógico</h2><p>El objetivo de esta técnica es obtener un modelo físico de datos a paritr del modelo lógico de datos normalizado. Para ello es necesario aplicar un conjunto de reglas que conserven la semántica del modelo lógico.</p>
+<h3 id="Descripcion-3"><a href="#Descripcion-3" class="headerlink" title="Descripción"></a>Descripción</h3><p>Cada uno de los elementos del modelo lógico se tiene que transformar en un elemento del modelo físico. En algunos casos la transformación es directa porque el concepto se soporta igual en ambos modelos, pero otras veces no existe esta correspondencia, por lo que es necesario buscar una transformación que conserve lo mejor posible la semántica, teniendo en cuenta los aspectos de eficiencia que sean necesarios en cada caso.</p>
+<p><strong>Transformación de entidades</strong></p>
+<p>Una entidad se transforma en una tabla.</p>
+<p><strong>Transformación de atributos de entidades</strong></p>
+<p>Cada atributo se transforma en una columna de la tabla en la que se transformó la entidad a la que pertenece. El identificador único se convierte en clave primaria.</p>
+<p>Si existen restricciones asociadas a los atributos, éstas pueden recogerse con algunas cláusulas del lenguaje lógico, que se convertirán en disparadores cuando éstos sean soportados por el sistema gestor de base de datos.</p>
+<p><strong>Transformación de relaciones</strong></p>
+<p>Según el tipo de correspondencia:</p>
+<ul>
+<li><strong>Relaciones 1:N</strong> : se propaga el identificador de la entidad de cardinalidad máxima _1_ a la que es _N_ , teniendo en cuenta que:<ul>
+<li>Si la relación es de asociación, la clave propagada es clave ajena en la tabla a la que se ha propagado.</li>
+<li>Si la relación es de dependencia, la clave primaria de la tabla correspondiente a la entidad débil está formada por la concatenación de los identificadores de ambas entidades.</li>
+</ul>
+</li>
+<li><strong>Relaciones 1:1</strong> : es un caso particular de las <em>1:N</em> y por tanto se propaga la clave en las dos direcciones. Se debe analizar la situación, intentando recoger la mayor semántica posible, y evitar valores nulos.</li>
+</ul>
+<p>Las relaciones de agregación se transforman del mismo modo que las <em>1:N</em> .</p>
+<p><strong>Transformación de relaciones exclusivas</strong></p>
+<p>Después de haber realizado la transformación según las relaciones <em>1:N</em> , se debe tener en cuenta que si los identificadores propagados se han convertido en claves ajenas de la tabla originada por la entidad común a las relaciones, hay que comprobar que una y sólo una de esas claves es nula en cada ocurrencia. En otro caso, estas comprobaciones se deben hacer en las tablas resultantes de transformar las relaciones.</p>
+<p><strong>Transformación de la jerarquía</strong></p>
+<p>Existen varias posibilidades que deben ser evaluadas por el diseñador a fin de elegir la que mejor se ajuste a los requisitos. Las opciones para tratar la transformación de la jerarquía son:</p>
+<ul>
+<li><strong>Opción a</strong> : Consiste en crear una tabla para el supertipo que tenga de clave primaria el identificador y una tabla para cada uno de los subtipos que tengan el identificador del supertipo como clave ajena.<br>Esta solución es apropiada cuando los subtipos tienen muchos atributos distintos y se quieren conservar los atributos comunes en una tabla. También se deben implantar las restricciones y aserciones adecuadas. Es la solución que mejor conserva la semántica.</li>
+<li><strong>Opción b</strong> : Se crea una tabla para cada subtipo, los atributos comunes aparecen en todos los subtipos y la clave primaria para cada tabla es el identificador del supertipo.<br>Esta opción mejora la eficiencia en los accesos a todos los atributos de un subtipo, sean los comunes al supertipo o los específicos.</li>
+<li><strong>Opción c</strong> : Agrupar en una tabla todos los atributos de la entidad supertipo y de los subtipos. La clave primaria de esta tabla es el identificador de la entidad. Se añade un atributo que indique a qué subtipo pertenece cada ocurrencia (el atributo discriminante de la jerarquía). Esta solución puede aplicarse cuando los subtipos se diferencien en pocos atributos y las relaciones entre los subtipos y otras entidades sean las mismas. Para el caso de que la jerarquía sea total, el atributo discriminante no podrá tomar valor nulo (ya que toda ocurrencia pertenece a alguna de las entidades subtipo).</li>
+</ul>
+<h3 id="Notacion-2"><a href="#Notacion-2" class="headerlink" title="Notación"></a>Notación</h3><p><strong>Tabla</strong></p>
+<p>La representación gráfica de una tabla es un rectángulo con una línea horizontal que lo divide en dos. La parte superior, de ancho menor, se etiqueta con el nombre de la tabla.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/tabla.png?w=825" alt=""></p>
+<p><strong>Relación</strong></p>
+<p>La relación entre tablas se representa gráficamente mediante una línea que las une. En ella pueden aparecer en sus extremos diversos símbolos para indicar la cardinalidad de la relación, como se muestra a continuación:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/relacion2.png?w=825" alt=""></p>
+<p><em>Ejemplo.</em></p>
+<p>Sea el diagrama entidad-relación del ejemplo realizado para la Normalización sobre conocimientos de técnicos informáticos y su asignación a proyectos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/diagrama_entidad_relacion.png?w=825" alt=""></p>
+<p>El modelo físico de la figura muestra que cada una de las entidades se ha convertido en una tabla, cuyo contenido coincide con los atributos de la entidad. Pero hay dos tablas más: POSEEN, que surge de la relación del mismo nombre y ASIGNACIONES, que se origina a partir de la relación <em>Están asignados</em> .</p>
+<p>La tabla POSEEN está formada por su atributo <em>grado</em> , más _cod_empresa_ , _cod_tecnico_ y _cod_conoc_ . La tabla ASIGNACIONES se forma con los atributos clave _cod_empres_ a, _cod_tecnico_ y _cod_proyecto_ y los propios _f_asignación_ y _f_cese_ .</p>
+<p>La relación entre EMPRESAS y TÉCNICOS era <em>1:N</em> , y la cardinalidad de la figura así lo muestra, pues la empresa siempre estará compuesta de uno o varios técnicos. Lo mismo sucede entre CLIENTES y PROYECTOS: un cliente siempre tendrá 1 o varios proyectos contratados.</p>
+<p>El caso de CATEGORÍAS y TÉCNICOS es <em>(0,n)</em> . Cada técnico es de una categoría y una categoría corresponde, por regla general, a varios técnicos, pero puede existir alguna en la que no encaje ningún técnico (contable, secretaria de dirección, etc.).</p>
+<p>La situación del subconjunto TÉCNICOS-POSEEN-CONOCIMIENTOS tienen algo más de complejidad. Un técnico posee normalmente varios conocimientos, pero debe poseer al menos uno para que tenga sentido su situación. La cardinalidad es pues <em>(1,n)</em> entre TÉCNICOS y POSEEN. En el otro lado, lo natural es que un conocimiento sea poseído por varios técnicos, sin embargo puede existir algún conocimiento que no sea poseído por ningún técnico, por lo que la cardinalidad es <em>(0,n)</em> y dibujada desde la tabla CONOCIMIENTOS a POSEEN.</p>
+<p>Por último, en el subconjunto TÉCNICOS-ASIGNACIONES-PROYECTOS, se dispone de: una cardinalidad <em>(0,n)</em> , pues a un proyecto estarán asignados uno o más técnicos, pero puede haber algún técnico que, en un momento dado, no esté asignado aún a ningún proyecto y una cardinalidad <em>(1,n)</em> , pues un proyecto siempre tendrá asignado al menos a un técnico, o varios.</p>
+<p>(Nota.- La notación utilizada para el ejemplo es la más habitual, pero MÉTRICA Versión 3 no exige su utilización).</p>
+<h2 id="Reglas-de-Transformacion"><a href="#Reglas-de-Transformacion" class="headerlink" title="Reglas de Transformación"></a>Reglas de Transformación</h2><p>El objetivo de esta técnica es obtener un modelo físico de datos a partir del modelo de clases. Para ello es necesario aplicar un conjunto de reglas de transformación que conserven la semántica del modelo de clases.</p>
+<h3 id="Descripcion-4"><a href="#Descripcion-4" class="headerlink" title="Descripción"></a>Descripción</h3><p>Cada uno de los elementos del modelo de clases se tiene que transformar en un elemento del modelo físico. En algunos casos la transformación es directa porque el concepto se soporta igual en ambos modelos, pero otras veces no existe esta correspondencia, por lo que es necesario buscar una transformación que conserve lo mejor posible la semántica, teniendo en cuenta los aspectos de eficiencia que sean necesarios en cada caso.</p>
+<p><strong>Transformación de clases</strong></p>
+<p>Una clase se transforma en una tabla. Lo habitual es que en los modelos con herencia pueden surgir excepciones cuando se apliquen las reglas de transformación propias de la herencia. Además, es posible que dos clases se transformen en una sola tabla cuando el comportamiento de una de ellas sea irrelevante en la base de datos.</p>
+<p><strong>Transformación de atributos de clases</strong></p>
+<p>Cada atributo se transforma en una columna de la tabla en la que se transformó la clase a la que pertenece. El identificador único se convierte en clave primaria. Además, se deben tener en cuenta las reglas de transformación que se aplican a la herencia de clases.</p>
+<p>Si existen restricciones asociadas a los atributos, éstas pueden recogerse con algunas cláusulas del lenguaje lógico, que se convertirán en disparadores cuando éstos sean soportados por el sistema gestor de base de datos.</p>
+<p><strong>Transformación de relaciones</strong></p>
+<p>Según el tipo de correspondencia:</p>
+<ul>
+<li><strong>Relaciones M:N</strong> : se transforman en una tabla, cuya clave primaria es la concatenación de los identificadores de las clases asociadas, siendo cada uno de ellos clave ajena de la propia tabla. Si la relación tienen atributos, éstos se transforman en columnas de la tabla.</li>
+<li><strong>Relaciones 1:N</strong> : existen varias posibilidades:<ul>
+<li>Propagar el identificador de la clase de cardinalidad máxima _1_ a la que es _N_ , teniendo en cuenta que:<ul>
+<li>Si la relación es de asociación, la clave propagada es clave ajena en la tabla a la que se ha propagado.</li>
+<li>Si la relación es de dependencia, la clave primaria de la tabla correspondiente a la clase débil está formada por la concatenación de los identificadores de ambas clases.</li>
+</ul>
+</li>
+<li>La relación se transforma en una tabla de clave primaria sólo el identificador de la clase de cardinalidad máxima _N_ si:<ul>
+<li>La relación tiene atributos propios y se desea que aparezcan como tales.</li>
+<li>Se piensa que en un futuro la relación puede convertirse en <em>M:N</em> .</li>
+<li>El número de ocurrencias relacionadas de la clase que propaga su clave es muy pequeño (y por tanto pueden existir muchos valores nulos).</li>
+</ul>
+</li>
+<li>Al igual que en el caso de relaciones <em>M:N</em> , las claves propagadas son claves ajenas de la nueva tabla creada.</li>
+</ul>
+</li>
+<li><strong>Relaciones 1:1</strong> : es un caso particular de las <em>1:N</em> y se puede tanto crear una tabla o propagar la clave, si bien, en este último caso, la clave se propaga en las dos direcciones. Para decidir qué solución adoptar, se debe analizar la situación, intentando recoger la mayor semántica posible, y evitar valores nulos.<br>Las relaciones de agregación se transforman del mismo modo que las <em>1:N</em> .</li>
+</ul>
+<p><strong>Transformación de relaciones exclusivas</strong></p>
+<p>Después de haber realizado la transformación según las relaciones <em>1:N</em> , se debe tener en cuenta que si se han propagado los atributos de las clases, convirtiéndose en claves ajenas de la tabla que provenía de la clase común a las relaciones, hay que comprobar que una y sólo una de esas claves es nula en cada ocurrencia. En caso de no propagarse las claves, estas comprobaciones se deben hacer en las tablas resultantes de transformar las relaciones.</p>
+<p><strong>Transformación de la herencia</strong></p>
+<p>Existen varias posibilidades que deben ser evaluadas por el diseñador a fin de elegir la que mejor se ajuste a los requisitos. Las opciones para tratar la transformación de la herencia son:</p>
+<ul>
+<li><strong>Opción a</strong> : Consiste en crear una tabla para la superclase que tenga de clave primaria el identificador y una tabla para cada una de las subclases que tengan el identificador de la superclase como clave ajena.<br>Esta solución es apropiada cuando las subclases tienen muchos atributos distintos, y se quieren conservar los atributos comunes en una tabla. También se deben implantar las restricciones y/o aserciones adecuadas. Es la solución que mejor conserva la semántica.</li>
+<li><strong>Opción b</strong> : Se crea una tabla para cada subclase, los atributos comunes aparecen en todas las subclases y la clave primaria para cada tabla es el identificador de la superclase.<br>Esta opción mejora la eficiencia en los accesos a todos los atributos de una subclase (los heredados y los específicos).</li>
+<li><strong>Opción c</strong> : Agrupar en una tabla todos los atributos de la clase y sus subclases. La clave primaria de esta tabla es el identificador de la clase. Se añade un atributo que indique a qué subclase pertenece cada ocurrencia (el atributo discriminante de la jerarquía).<br>Esta solución puede aplicarse cuando las subclases se diferencien en pocos atributos y las relaciones que asocian a las subclases con otras clases, sean las mismas. Para el caso de que la jerarquía sea total, el atributo discriminante no podrá tomar valor nulo (ya que toda ocurrencia pertenece a alguna subclase).</li>
+</ul>
+<h2 id="Tecnicas-Matriciales"><a href="#Tecnicas-Matriciales" class="headerlink" title="Técnicas Matriciales"></a>Técnicas Matriciales</h2><p>Las técnicas matriciales tienen como objetivo representar las relaciones existentes entre distintos tipos de entidades, objetos o cualquier otro elemento del sistema.</p>
+<p>Se utilizan, principalmente, para analizar la consistencia entre los modelos generados durante el desarrollo, comprobar la trazabilidad con los requisitos especificados por el usuario, etc.</p>
+<h3 id="Descripcion-5"><a href="#Descripcion-5" class="headerlink" title="Descripción"></a>Descripción</h3><p>Las técnicas matriciales son útiles para representar las relaciones entre elementos comunes de los distintos modelos, tales como entidades/procesos, procesos/diálogos, datos/localización geográfica, y asegurar que los modelos son coherentes entre sí.</p>
+<p>Las siguientes son algunas de las matrices empleadas en MÉTRICA Versión 3:</p>
+<ul>
+<li>Procesos/localización geográfica: permite representar la localización geográfica de los procesos de una organización.</li>
+<li>Almacenes de datos/entidades del modelo lógico de datos normalizado: establece las relaciones existentes entre los almacenes de datos y las entidades, y permite verificar que cada almacén de datos definido en el modelo de procesos se corresponde con una o varias entidades del modelo lógico de datos normalizado.</li>
+<li>Atributos de interfaz/atributos de entidades del modelo lógico de datos normalizado: permite verificar que los atributos que aparecen en cada diálogo de la interfaz de usuario forman parte del modelo lógico de datos normalizado.</li>
+<li>Entidades/procesos: permite representar el tratamiento lógico de los procesos sobre los datos del sistema y verificar que cada entidad del modelo lógico de datos normalizado es accedida por algún proceso primitivo representado en el DFD.</li>
+<li>Diálogos/procesos: permite representar los diálogos asociados a un proceso interactivo y verificar que cada proceso interactivo tiene asociado al menos un diálogo.</li>
+<li>Objetos Diagrama de interacción / clases, atributos al modelo de clases: permite verificar que cada mensaje entre objetos se corresponde con un método de una clase.</li>
+<li>Mensajes Diagrama de interacción / métodos, atributos del modelo de clases: permite verificar que una clase tiene capacidad para proporcionar los datos que se soliciten en los mensajes que recibe.</li>
+<li>Evento, acción, actividad de clases / métodos de clases: permite verificar que todo evento, actividad o acción de una clase se corresponde con un método de esa clase.</li>
+<li>Clases/elementos del modelo físico de datos: permite verificar que cada elemento del modelo físico de datos se corresponde con un elemento del modelo de clases.</li>
+<li>Dependencias entre subsistemas/subsistemas: permite representar para cada subsistema, los subsistemas que dependen de él.</li>
+<li>Esquemas físicos de datos / nodos: permite representar la localización física de los datos en los nodos de la arquitectura del sistema, así como verificar que cada esquema del modelo físico de datos está asociado con un nodo del particionamiento físico del sistema de información.</li>
+</ul>
+<h3 id="Notacion-3"><a href="#Notacion-3" class="headerlink" title="Notación"></a>Notación</h3><p>Dados dos tipos de elementos A y B, su representación será una matriz bidimensional NxM, siendo N el número de elementos de A, y M el número de elementos de B.</p>
+<p>En el cruce de una fila y una columna (C), se tendrá el modo en que se relacionan un elemento concreto de A y uno de B.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/notacion_matriz.png?w=825" alt=""></p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografia"></a>Bibliografia</h2><ul>
+<li><a href="https://eclap.jcyl.es/web/jcyl/ECLAP/es/Plantilla66y33/1259395037582/_/_/_" rel="external nofollow noopener noreferrer" target="_blank">Junta de Castilla y León (SOP_INF_T09_FINAL)</a></li>
+<li><a href="https://administracionelectronica.gob.es/pae_Home/pae_Documentacion/pae_Metodolog/pae_Metrica_v3.html#.WtYfDnpuZpg" rel="external nofollow noopener noreferrer" target="_blank">PAe</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t04/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T04
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t09/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T09</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>

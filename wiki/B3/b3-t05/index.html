@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <title>B3-T05 | Hexo</title>
+    
+    
+        <meta name="keywords" content="B3-T05">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Análisis estructurado. Diagramas de flujo de datos. Diagramas de estructura. Diccionario de datos. Flujogramas.Análisis EstructuradoConceptoCuando los analistas comienzan a trabajar sobre un proyecto">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B3-T05">
+<meta property="og:url" content="http://localhost:4000/wiki/B3/b3-t05/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Análisis estructurado. Diagramas de flujo de datos. Diagramas de estructura. Diccionario de datos. Flujogramas.Análisis EstructuradoConceptoCuando los analistas comienzan a trabajar sobre un proyecto">
+<meta property="og:locale" content="es">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/diagrama_contexto.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/entidad_externa.png?w=398&h=231">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/entidad_externa_repetida.png?w=419&h=231">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/proceso.png?w=409&h=242">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/proceso_ultimo.png?w=408&h=242">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/almacen_datos.png?w=400&h=91">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/almacen_datos_repetido.png?w=417&h=91">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/flujo_datos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/representacion_flujo_datos.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/proceso_control.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/flujo_control.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo1_diagrama_contexto.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/consistencia1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/consistencia2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/inconsistencia1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/inconsistencia2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo_diagrama_contexto.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd_2.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd_3.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd_4.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/estructura_secuencial.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/estructura_repetitiva.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/estructura_alternativa.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/estrategia_disec3b1o.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/analisis_transaccion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/modulo_1.png?w=413&h=295">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/modulo_2.png?w=404&h=295">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/conexion.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/parametros.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/almacen_datos1.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/dispositivo_fisico.png?w=825">
+<meta property="og:image" content="https://gsitic.files.wordpress.com/2018/04/ejemplo_diagrama_estructura.png?w=825">
+<meta property="og:updated_time" content="2019-01-18T09:13:02.583Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B3-T05">
+<meta name="twitter:description" content="Análisis estructurado. Diagramas de flujo de datos. Diagramas de estructura. Diccionario de datos. Flujogramas.Análisis EstructuradoConceptoCuando los analistas comienzan a trabajar sobre un proyecto">
+<meta name="twitter:image" content="https://gsitic.files.wordpress.com/2018/04/diagrama_contexto.png?w=825">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">home</a>
+                
+                    <a class="main-nav-link" href="/categories">categories</a>
+                
+                    <a class="main-nav-link" href="/about">about</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Entradas',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categorias',
+            TAGS: 'Etiquetas',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">home</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">categories</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">about</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>Categorias</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B0
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B0/index/">Temario</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B1
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B1/b1-index/">B1</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B2
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B2/b2-index/">B2</a></li>  <li class="file"><a href="/wiki/B2/b2-t01/">B2-T01</a></li>  <li class="file"><a href="/wiki/B2/b2-t07/">B2-T07</a></li>  <li class="file"><a href="/wiki/B2/b2-t12/">B2-T12</a></li>  <li class="file"><a href="/wiki/B2/b2-t08/">B2-T08</a></li>  <li class="file"><a href="/wiki/B2/b2-t03/">B2-T03</a></li>  <li class="file"><a href="/wiki/B2/b2-t04/">B2-T04</a></li>  <li class="file"><a href="/wiki/B2/b2-t15/">B2-T14</a></li>  <li class="file"><a href="/wiki/B2/b2-t02/">B2-T02</a></li>  <li class="file"><a href="/wiki/B2/b2-t10/">B2-T10</a></li>  <li class="file"><a href="/wiki/B2/b2-t09/">B2-T09</a></li>  <li class="file"><a href="/wiki/B2/b2-t13/">B2-T13</a></li>  <li class="file"><a href="/wiki/B2/b2-t05/">B2-T05</a></li>  <li class="file"><a href="/wiki/B2/b2-t06/">B2-T06</a></li>  <li class="file"><a href="/wiki/B2/b2-t16/">B2-T15</a></li>  <li class="file"><a href="/wiki/B2/b2-t11/">B2-T11</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            B3
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B3/b3-index/">B3</a></li>  <li class="file"><a href="/wiki/B3/b3-t06/">B3-T06</a></li>  <li class="file"><a href="/wiki/B3/b3-t09/">B3-T09</a></li>  <li class="file"><a href="/wiki/B3/b3-t02/">B3-T02</a></li>  <li class="file"><a href="/wiki/B3/b3-t01/">B3-T01</a></li>  <li class="file"><a href="/wiki/B3/b3-t11/">B3-T11</a></li>  <li class="file active"><a href="/wiki/B3/b3-t05/">B3-T05</a></li>  <li class="file"><a href="/wiki/B3/b3-t07/">B3-T07</a></li>  <li class="file"><a href="/wiki/B3/b3-t04/">B3-T04</a></li>  <li class="file"><a href="/wiki/B3/b3-t19/">B3-T19</a></li>  <li class="file"><a href="/wiki/B3/b3-t08/">B3-T08</a></li>  <li class="file"><a href="/wiki/B3/b3-t03/">B3-T03</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            B4
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/B4/b4-index/">B4</a></li>  <li class="file"><a href="/wiki/B4/b4-t04/">B4-T04</a></li>  <li class="file"><a href="/wiki/B4/b4-t03/">B4-T03</a></li>  <li class="file"><a href="/wiki/B4/b4-t09/">B4-T09</a></li>  <li class="file"><a href="/wiki/B4/b4-t18/">B4-T18</a></li>  <li class="file"><a href="/wiki/B4/b4-t12/">B4-T12</a></li>  <li class="file"><a href="/wiki/B4/b4-t11/">B4-T11</a></li>  <li class="file"><a href="/wiki/B4/b4-t19/">B4-T19</a></li>  <li class="file"><a href="/wiki/B4/b4-t13/">B4-T13</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            Web
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/Web/index/"></a></li>  </ul> 
+                    </li> 
+                     </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-B3/b3-t05" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/B3/">B3</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/B3/b3-t05/">
+            <time datetime="2019-01-16T15:11:23.000Z" itemprop="datePublished">2019-01-16</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <!--div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/raw/master/source/_posts/B3/b3-t05.md'> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/edit/master/source/_posts/B3/b3-t05.md'> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href='https://github.com/juancalero/juancalero.github.io/commits/master/source/_posts/B3/b3-t05.md'> History </a>
+                            </div-->
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            B3-T05
+        </h1>
+    
+
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <h1 id="Analisis-estructurado-Diagramas-de-flujo-de-datos-Diagramas-de-estructura-Diccionario-de-datos-Flujogramas"><a href="#Analisis-estructurado-Diagramas-de-flujo-de-datos-Diagramas-de-estructura-Diccionario-de-datos-Flujogramas" class="headerlink" title="Análisis estructurado. Diagramas de flujo de datos. Diagramas de estructura. Diccionario de datos. Flujogramas."></a>Análisis estructurado. Diagramas de flujo de datos. Diagramas de estructura. Diccionario de datos. Flujogramas.</h1><h2 id="Analisis-Estructurado"><a href="#Analisis-Estructurado" class="headerlink" title="Análisis Estructurado"></a>Análisis Estructurado</h2><h3 id="Concepto"><a href="#Concepto" class="headerlink" title="Concepto"></a>Concepto</h3><p>Cuando los analistas comienzan a trabajar sobre un proyecto de sistema de información, tienen que profundizar en un área de la Organización, de la cual tienen poco conocimiento. Del trabajo del analista se espera que se produzca una mejora en el sistema.</p>
+<p>Así que el analista debe ser capaz de:</p>
+<ul>
+<li>Aprender los detalles y procedimientos del sistema en uso.</li>
+<li>Prever necesidades futuras de la Organización en función del crecimiento, cambios futuros en el sector, introducción de nuevas tecnologías, etc.</li>
+<li>Documentar detalles del sistema actual para su comprensión y discusión por otros profesionales de la organización.</li>
+<li>Evaluar la efectividad y eficiencia del sistema actual y sus procedimientos.</li>
+<li>Recomendar modificaciones del sistema actual, o proponer un nuevo sistema completo, justificándolo en cada caso.</li>
+<li>Documentar las características del nuevo sistema con un nivel de detalle que permita comprender a otros sus componentes.</li>
+<li>Fomentar la participación de gerentes y empleados en todo el proceso.</li>
+</ul>
+<p>A todas estas tareas, se les une la de cumplir los plazos establecidos. De modo que una de las claves del éxito será la de estructurar el proceso para el desarrollo del nuevo sistema.</p>
+<h3 id="Analisis-Estructurado-¿Para-que"><a href="#Analisis-Estructurado-¿Para-que" class="headerlink" title="Análisis Estructurado ¿Para qué?"></a>Análisis Estructurado ¿Para qué?</h3><p>Por la propia naturaleza los sistemas de información, éstos no están bien estructurados, no siguen leyes como las ciencias, dependen de muchas circunstancias para su funcionamiento (personas, influencias políticas de la organización, restricciones, etc). El analista debe luchar contra estas circunstancias y determinar los requerimientos de los sistemas de información.</p>
+<p>Ante esta realidad, surgen preguntas como: ¿Deben dos analistas desarrollar una lista idéntica de requerimientos cuando estudian de forma independiente la misma situación? ¿Para una situación dada tenemos un único diseño correcto posible? La respuesta es que dos analistas que examinan de forma independiente una situación, sin herramientas y técnicas preestablecidas, recopilan información diferente que describa el sistema y por lo tanto en determinación de requerimientos diferentes.</p>
+<p>Esto obliga a normalizar, a estructurar el análisis de sistemas de información.</p>
+<p>Podemos definir análisis estructurado como:</p>
+<p><em>El método para el análisis de sistemas manuales o automatizados, que conduce al desarrollo de especificaciones para sistemas nuevos o para efectuar modificaciones a los ya existentes.</em></p>
+<p>El análisis estructurado permite al analista conocer un proceso (actividad) en una forma lógica y manejable al mismo tiempo que proporciona la base para asegurar que no se omite ningún detalle pertinente.</p>
+<p>Por otra parte una de las claves del éxito de un buen análisis será el que exista una buena comunicación entre usuarios y analistas, esto obliga a disponer de un lenguaje común, sencillo y fiable de modo que permita minimizar costes y errores, y maximizar calidad.</p>
+<h3 id="¿Que-debemos-estructurar"><a href="#¿Que-debemos-estructurar" class="headerlink" title="¿Qué debemos estructurar?"></a>¿Qué debemos estructurar?</h3><p>El objetivo que persigue el análisis estructurado es organizar las tareas asociadas con la determinación de requerimientos para obtener la comprensión completa y exacta para una situación dada. A partir de aquí se determinan los requerimientos que serán la base de un sistema nuevo o modificado.</p>
+<p>La palabra <em>estructura</em> significa:</p>
+<ol>
+<li>El método intenta estructurar el proceso de determinación de los requerimientos comenzando con la documentación del sistema existente.</li>
+<li>El proceso intenta incluir todos los detalles relevantes que describen al sistema en uso.</li>
+<li>Fácil verificar cuando se han omitido datos relevantes.</li>
+<li>La identificación de los requerimientos será similar entre varios analistas e incluirá las mejores soluciones y estrategias para las oportunidades de desarrollo de sistemas.</li>
+<li>Los documentos de trabajo generados para documentar los sistemas existentes y propuestos son dispositivos de comunicación eficientes.</li>
+</ol>
+<h3 id="Componentes-del-analisis-estructurado"><a href="#Componentes-del-analisis-estructurado" class="headerlink" title="Componentes del análisis estructurado"></a>Componentes del análisis estructurado</h3><p>El análisis estructurado hace uso de los siguientes componentes:</p>
+<ol>
+<li>Símbolos gráficos. Iconos y convenciones para identificar y describir los componentes de un sistema junto con las relaciones entre esos componentes.</li>
+<li>Diccionario de datos. Descripción de todos los datos utilizados en el sistema.</li>
+<li>Descripciones de procesos y procedimientos. Declaraciones formales que emplean técnicas y lenguajes que permiten a los analistas describir actividades importantes que forman parte del sistema.</li>
+<li>Reglas. Estándares para describir y documentar el sistema en forma correcta y completa.</li>
+</ol>
+<p>El método de análisis estructurado es sinónimo de análisis de flujo de datos que es una herramienta para documentar el sistema existente o actual y determinar los requerimientos de información de forma estructurada.</p>
+<h3 id="¿Que-es-analisis-de-flujo-de-datos"><a href="#¿Que-es-analisis-de-flujo-de-datos" class="headerlink" title="¿Qué es análisis de flujo de datos?"></a>¿Qué es análisis de flujo de datos?</h3><p>Los analistas desean conocer las respuestas a cuatros preguntas: ¿Qué procesos integran el sistema? ¿Qué datos emplea cada proceso? ¿Qué datos son almacenados? ¿Qué datos entran y salen del sistema?</p>
+<p>Como vemos el elemento fundamental en una Organización (sistema de información), van a ser los datos. Los datos son las guías de las actividades de la Organización, inician eventos, son procesados para dar información útil al personal, etc.</p>
+<p>Seguir el flujo de datos por todos los procesos de la organización, además de ser la finalidad del análisis de flujo de datos, proporciona a los analistas información de cómo se alcanzan los objetivos en la Organización.</p>
+<p>El análisis de flujo de datos estudia el empleo de los datos en cada actividad. Se basa en los diagramas de flujo de datos que muestra de forma gráfica la relación entre procesos y datos, y en los diccionarios de datos que describen de manera formal los datos del sistema y los sitios donde son utilizados.</p>
+<h3 id="La-estrategia-de-los-flujos-de-datos"><a href="#La-estrategia-de-los-flujos-de-datos" class="headerlink" title="La estrategia de los flujos de datos"></a>La estrategia de los flujos de datos</h3><p>El análisis puede pensarse de tal manera que se estudien actividades del sistema desde el punto de vista de los datos, donde se originan, cómo se utilizan o cambian, hacia dónde van. Los componentes de la estrategia de flujo de datos abarcan tanto la determinación de los requerimientos como el diseño de sistemas. Una notación bien establecida facilita la documentación del sistema actual y su análisis por todos los participantes en el proceso de determinación de requerimientos.</p>
+<h3 id="Herramientas-para-el-analisis-de-flujo-de-datos"><a href="#Herramientas-para-el-analisis-de-flujo-de-datos" class="headerlink" title="Herramientas para el análisis de flujo de datos"></a>Herramientas para el análisis de flujo de datos</h3><p>Las herramientas tienen el objetivo de ayudar a entender las características del sistema. Por lo tanto no deben de ser un fin, sino un medio para el estudio del sistema.</p>
+<p>Las herramientas utilizadas en el análisis de flujo de datos son:</p>
+<ol>
+<li><em>Diagrama de flujo de datos.</em><br>Una herramienta gráfica empleada para describir y analizar el movimiento de datos a través de un sistema, incluyendo procesos, almacenamiento de datos y retrasos del sistema. Los diagramas de flujo de datos es la herramienta más importante y la base sobre la cual se desarrollan otros componentes.<br>La transformación de datos de entrada en salida por medio de procesos puede describirse en forma lógica e independiente de los componentes físicos. Estos diagramas reciben el nombre de diagramas lógicos de flujo de datos, en contraste de los diagramas físicos del flujo de datos que muestran la implantación y movimiento real de datos entre personas, departamentos y estaciones de trabajo.</li>
+<li><em>Diccionario de datos.</em><br>El diccionario de datos contiene las características lógicas de los sitios donde se almacenan los datos del sistema, incluyendo nombre, descripción, alias, contenidos y organización, así como los procesos donde se emplea los datos y los sitios donde se necesita el acceso inmediato a la información. Servirán para identificar los requerimientos de las bases de datos durante el diseño del sistema.</li>
+<li><em>Diagrama entidad-relación.</em><br>Este diagrama es una descripción de la relación entre entidades (personas, lugares, eventos y objetos) de un sistema y el conjunto de información relacionado con la entidad. No considera el almacenamiento físico de datos.</li>
+<li><em>Gráfica de estructura</em> (Especificación de procesos).<br>Herramienta de diseño que muestra con símbolos la relación entre módulos de procesamiento y el software de la computadora. Incluye el análisis de las transformaciones entrada transformación salida y el análisis de transacciones.</li>
+</ol>
+<h3 id="Ventajas-del-analisis-de-flujo-de-datos"><a href="#Ventajas-del-analisis-de-flujo-de-datos" class="headerlink" title="Ventajas del análisis de flujo de datos"></a>Ventajas del análisis de flujo de datos</h3><p>Los analistas deben trabajar con los usuarios para hacerles comprender el funcionamiento del sistema actual y el sistema futuro, para ello se hace aconsejable utilizar un lenguaje común, sencillo y fiable, estas son las características de los diagramas de flujo de datos. Los usuarios pueden hacer sugerencias para modificar los diagramas con la finalidad de describir las actividades con mayor exactitud, y permitirá evitar los errores desde el inicio pudiendo prevenir una posible falla del sistema.</p>
+<h2 id="Diagrama-de-Flujo-de-Datos-DFD"><a href="#Diagrama-de-Flujo-de-Datos-DFD" class="headerlink" title="Diagrama de Flujo de Datos (DFD)"></a>Diagrama de Flujo de Datos (DFD)</h2><p>El objetivo del diagrama de flujo de datos es la obtención de un modelo lógico de procesos que represente el sistema, con independencia de las restricciones físicas del entorno. Así se facilita su comprensión por los usuarios y los miembros del equipo de desarrollo.</p>
+<p>El sistema se divide en distintos niveles de detalle, con el objetivo de:</p>
+<ul>
+<li>Simplificar la complejidad del sistema, representando los diferentes procesos de que consta.</li>
+<li>Facilitar el mantenimiento del sistema.</li>
+</ul>
+<h3 id="Descripcion"><a href="#Descripcion" class="headerlink" title="Descripción"></a>Descripción</h3><p>Un diagrama de flujo de datos es una técnica muy apropiada para reflejar de una forma clara y precisa los procesos que conforman el sistema de información. Permite representar gráficamente los límites del sistema y la lógica de los procesos, estableciendo qué funciones hay que desarrollar. Además, muestra el flujo o movimiento de los datos a través del sistema y sus transformaciones como resultado de la ejecución de los procesos.</p>
+<p>Esta técnica consiste en la descomposición sucesiva de los procesos, desde un nivel general, hasta llegar al nivel de detalle necesario para reflejar toda la semántica que debe soportar el sistema en estudio.</p>
+<p>El diagrama de flujo de datos se compone de los siguientes elementos:</p>
+<ul>
+<li><strong>Entidad externa</strong> : representa un ente ajeno al sistema que proporciona o recibe información del mismo. Puede hacer referencia a departamentos, personas, máquinas, recursos u otros sistemas. El estudio de las relaciones entre entidades externas no forma parte del modelo.<br>Puede aparecer varias veces en un mismo diagrama, así como en los distintos niveles del DFD para mejorar la claridad del diagrama.</li>
+<li><strong>Proceso</strong> : representa una funcionalidad que tiene que llevar a cabo el sistema para transformar o manipular datos. El proceso debe ser capaz de generar los flujos de datos de salida a partir de los de entrada, más una información constante o variable al proceso.<br>El proceso nunca es el origen ni el final de los datos, puede transformar un flujo de datos de entrada en varios de salida y siempre es necesario como intermediario entre una entidad externa y un almacén de datos.</li>
+<li><strong>Almacén de datos</strong> : representa la información en reposo utilizada por el sistema independientemente del sistema de gestión de datos (por ejemplo un fichero, base de datos, archivador, etc). Contiene la información necesaria para la ejecución del proceso.<br>El almacén no puede crear, transformar o destruir datos, no puede estar comunicado con otro almacén o entidad externa y aparecerá por primera vez en aquel nivel en que dos o más procesos accedan a él.</li>
+<li><strong>Flujo de datos</strong> : representa el movimiento de los datos, y establece la comunicación entre los procesos y los almacenes de datos o las entidades externas.<br>Un flujo de datos entre dos procesos sólo es posible cuando la información es síncrona, es decir, el proceso destino comienza cuando el proceso origen finaliza su función.<br>Los flujos de datos que comunican procesos con almacenes pueden ser de los siguientes tipos:<br>– <em>De consulta</em> : representan la utilización de los valores de uno o más campos de un almacén o la aprobación de que los valores de los campos seleccionados cumplen unos criterios determinados.<br>– <em>De actualización</em> : representan la alteración de los datos de un almacén como consecuencia de la creación de un nuevo elemento, por eliminación o modificación de otros ya existentes.<br>– <em>De diálogo</em> : es un flujo entre un proceso y un almacén que representa una consulta y una actualización.</li>
+</ul>
+<p>Existen sistemas que precisan de información orientada al control de datos y requieren flujos y procesos de control, así como los mecanismos que desencadenan su ejecución. Para que resulte adecuado el análisis de estos sistemas, se ha ampliado la notación de los diagramas de flujo de datos incorporando los siguientes elementos:</p>
+<ul>
+<li><strong>Proceso de control</strong> : representa procesos que coordinan y sincronizan las actividades de otros procesos del diagrama de flujo de datos.</li>
+<li><strong>Flujo de control</strong> : representa el flujo entre un proceso de control y otro proceso. El flujo de control que sale de un proceso de control activa al proceso que lo recibe y el que entre le informa de la situación de un proceso. A diferencia de los flujos tradicionales, que pueden considerarse como procesadores de datos porque reflejan el movimiento y transformación de los mismos, los flujos de control no representan datos con valores, sino que en cierto modo, se trata de eventos que activan los procesos (señales o interrupciones).</li>
+</ul>
+<p><strong>Descomposición o explosión por niveles</strong></p>
+<p>Los diagramas de flujo de datos han de representar el sistema de la forma más clara posible, por ello su construcción se basa en el principio de descomposición o explosión en distintos niveles de detalle.</p>
+<p>La descomposición por niveles se realiza de arriba abajo (top-down), es decir, se comienza en el nivel más general y se termina en el más detallado, pasando por los niveles intermedios necesarios. De este modo se dispondrá de un conjunto de particiones del sistema que facilitarán su estudio y desarrollo.</p>
+<p>La explosión de cada proceso de un DFD origina otro DFD y es necesario comprobar que se mantiene la consistencia de información entre ellos, es decir, que la información de entrada y de salida de un proceso cualquiera se corresponde con la información de entrada y de salida del diagrama de flujo de datos en el que se descompone.</p>
+<p>En cualquiera de las explosiones puede aparecer un proceso que no necesite descomposición. A éste se le denomina Proceso primitivo y sólo se detalla en él su entrada y su salida, además de una descripción de lo que realiza. En la construcción hay que evitar en lo posible la descomposición desigual, es decir, que un nivel contenga un proceso primitivo, y otro que necesite ser particionado en uno o varios niveles más.</p>
+<p>El modelo de procesos deberá contener:</p>
+<ul>
+<li>Un diagrama de contexto (Nivel 0).</li>
+<li>Un diagrama 0 (Nivel 1).</li>
+<li>Tantos diagramas 1, 2, 3, …, n como funciones haya en el diagrama 0 (Nivel 2).</li>
+<li>Tantos niveles intermedios como sea necesario.</li>
+<li>Varios DFD en el último nivel de detalle.</li>
+</ul>
+<p>El diagrama de contexto tiene como objetivo delimitar el ámbito del sistema con el mundo exterior definiendo sus interfaces. En este diagrama se representa un único proceso que corresponde al sistema en estudio, un conjunto de entidades externas que representan la procedencia y destino de la información y un conjunto de flujos de datos que representan los caminos por los que fluye dicha información.</p>
+<p>A continuación, este proceso se descompone en otro DFD, en el que se representan los procesos principales o subsistemas. Un subsistema es un conjunto de procesos cuyas funcionalidades tienen algo en común. Éstos deberán ser identificados en base a determinados criterios, como por ejemplo: funciones organizativas o administrativas propias del sistema, funciones homogéneas de los procesos, localización geográfica de los mismos, procesos que actualicen los mismos almacenes de datos, etc.</p>
+<p>Cada uno de los procesos principales se descompone a su vez en otros que representan funciones más simples y se sigue descomponiendo hasta que los procesos estén suficientemente detallados y tengan una funcionalidad concreta, es decir, sean procesos primitivos.</p>
+<p>Como resultado se obtiene un modelo de procesos del sistema de información que consta de un conjunto de diagramas de flujo de datos de diferentes niveles de abstracción, de modo que cada uno proporciona una visión más detallada de una parte definida en el nivel anterior.</p>
+<p>Además de los diagramas de flujo de datos, el modelo de procesos incluye la especificación de los flujos de datos, de los almacenes de datos y la especificación detallada de los procesos que no precisan descomposición, es decir los procesos de último nivel o primitivos. En la especificación de un proceso primitivo se debe describir, de una manera más o menos formal, cómo se obtienen los flujos de datos de salida a partir de los flujos de datos de entrada y características propias del proceso.</p>
+<p>Dependiendo del tipo de proceso se puede describir el procedimiento asociado utilizando un lenguaje estructurado o un pseudocódigo, apoyándose en tablas de decisión o árboles de decisión.</p>
+<p>A continuación se muestra un ejemplo gráfico que representa la descomposición jerárquica de los diagramas de flujo de datos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/diagrama_contexto.png?w=825" alt=""></p>
+<h3 id="Notacion"><a href="#Notacion" class="headerlink" title="Notación"></a>Notación</h3><p><strong>Entidad externa</strong></p>
+<p>Se representa mediante una elipse con un identificador y un nombre significativo en su interior.</p>
+<p>Si la entidad externa aparece varias veces en un mismo diagrama, se representa con una línea inclinada en el ángulo superior izquierdo.</p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/entidad_externa/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/entidad_externa.png?w=398&amp;h=231" alt=""></a> </p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/entidad_externa_repetida/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/entidad_externa_repetida.png?w=419&amp;h=231" alt=""></a> </p>
+<p><strong>Proceso</strong></p>
+<p>Se representa por un rectángulo subdividido en tres casillas donde se indica el nombre del proceso, un número identificativo y la localización.</p>
+<p>Si el proceso es de último nivel, se representa con un asterisco en el ángulo inferior derecho separado con una línea inclinada.</p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/proceso/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/proceso.png?w=409&amp;h=242" alt=""></a> </p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/proceso_ultimo/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/proceso_ultimo.png?w=408&amp;h=242" alt=""></a> </p>
+<p>El nombre del proceso debe ser lo más representativo posible. Normalmente estará constituido por un verbo más un sustantivo.</p>
+<p>El número identificativo se representa en la parte superior izquierda e indica el nivel del DFD en que se está. Hay que resaltar que el número no indica orden de ejecución alguno entre los procesos ya que en un DFD no se representa una secuencia en el tratamiento de los datos. El número que identifica el proceso es único en el sistema y debe seguir el siguiente estándar de notación:</p>
+<ul>
+<li>El proceso del diagrama de contexto se numera como cero.</li>
+<li>Los procesos del siguiente nivel se enumeran desde 1 y de forma creciente hasta completar el número de procesos del diagrama.</li>
+<li>En los niveles inferiores se forma con el número del proceso en el que está incluido seguido de un número que lo identifica en ese contexto.</li>
+</ul>
+<p>La localización expresa el nombre del proceso origen de la descomposición que se esté tratando.</p>
+<p><strong>Almacén de datos</strong></p>
+<p>Se representa por dos líneas paralelas cerradas en un extremo y una línea vertical que las une. En la parte derecha se indica el nombre del almacén de datos y en la parte izquierda el identificador de dicho almacén en el DFD.</p>
+<p>Si un almacén aparece repetido dentro de un DFD se puede representar con dos líneas verticales.</p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/almacen_datos-2/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/almacen_datos.png?w=400&amp;h=91" alt=""></a> </p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/almacen_datos_repetido/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/almacen_datos_repetido.png?w=417&amp;h=91" alt=""></a> </p>
+<p><strong>Flujo de datos</strong></p>
+<p>Se representa por una flecha que indica la dirección de los datos, y que se etiqueta con un nombre representativo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/flujo_datos.png?w=825" alt=""></p>
+<p>La representación de los flujos de datos entre procesos y almacenes es la siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/representacion_flujo_datos.png?w=825" alt=""></p>
+<p><strong>Proceso de control</strong></p>
+<p>Se representa por un rectángulo, con trazo discontinuo, subdividido en tres casillas donde se indica el nombre del proceso, un número identificativo y la localización.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/proceso_control.png?w=825" alt=""></p>
+<p><strong>Flujo de control</strong></p>
+<p>Se representa por una flecha con trazo discontinuo que indica la dirección de flujo y que se etiqueta con un nombre representativo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/flujo_control.png?w=825" alt=""></p>
+<p><strong>Ejemplo</strong></p>
+<p>La figura es un diagrama de flujos de un Sistema Gestor de Pedidos. En él están representados todos los elementos que pueden intervenir en un Diagrama de Flujo de Datos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd.png?w=825" alt=""></p>
+<h3 id="Consistencia-de-los-diagramas-de-flujo-de-datos"><a href="#Consistencia-de-los-diagramas-de-flujo-de-datos" class="headerlink" title="Consistencia de los diagramas de flujo de datos"></a>Consistencia de los diagramas de flujo de datos</h3><p>Una vez construidos los diagramas de flujo de datos que componen el modelo de procesos del sistema de información, es necesario comprobar y asegurar su validez. Para ello, se debe estudiar cada diagrama comprobando que es legible, de poca complejidad y si los nombres asignados a sus elementos ayudan a su comprensión sin ambigüedades.</p>
+<p>Además, los diagramas deben ser consistentes. En los diagramas hay que comprobar que en un DFD resultado de una explosión:</p>
+<ul>
+<li>No falten flujos de datos de entrada o salida que acompañaban al proceso del nivel superior.</li>
+<li>No aparezca algún flujo que no estuviese ya asociado al proceso de nivel superior.</li>
+<li>Todos los elementos del DFD resultante deben estar conectados directa o indirectamente con los flujos del proceso origen.</li>
+</ul>
+<p>A continuación se incluyen ejemplos de la consistencia o inconsistencia de los diagramas de flujo de datos.</p>
+<p>Sea el diagrama de contexto de la figura. Los flujos A, C y D, entran al sistema, y el flujo B sale de él.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo1_diagrama_contexto.png?w=825" alt=""></p>
+<p><strong>Ejemplo de consistencia de diagramas de flujo de datos</strong></p>
+<p>En la explosión del sistema en el diagrama de nivel 1, aparecen todos los flujos, y en su sentido correcto: A y C entran al subsistema o proceso 1, B sale del proceso 2, y D entra en el proceso 3. Se observa que el proceso 3, origina dos flujos de salida: E que va al proceso 1, y F al proceso 2.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/consistencia1.png?w=825" alt=""></p>
+<p>La descomposición del proceso 1, muestra los flujos A, C y E correctamente, como entradas a las funciones del diagrama.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/consistencia2.png?w=825" alt=""></p>
+<p>Los demás flujos están enlazados con los almacenes A1 y A2 del mismo modo que en el diagrama anterior.</p>
+<p><strong>Ejemplo de inconsistencia de diagramas de flujo de datos</strong></p>
+<p>Partiendo del mismo diagrama de contexto utilizado en el anterior ejemplo, los flujos A, C y D, que entran al sistema, y el flujo B, que sale de él, deben aparecer en la primera descomposición, el diagrama de nivel 1. En la figura se aprecia que falta el flujo D, y hay un flujo G que o bien falta en el nivel anterior, sobra en este.</p>
+<p>Por otro lado, en el proceso 3 no entra ningún flujo, no es posible por tanto que transforme datos saliendo los flujos E y F y además está desconectado del nivel anterior.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/inconsistencia1.png?w=825" alt=""></p>
+<p>En el siguiente paso, la inconsistencia más clara es la falta del flujo C, que entra al proceso 1, y sin embargo no aparece en su explosión.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/inconsistencia2.png?w=825" alt=""></p>
+<p>Además, hay otra inconsistencia respecto al almacén A1: en el diagrama del nivel anterior, el proceso 1 se conectaba con un flujo de entrada-salida a este almacén, cosa que no se refleja en el diagrama de este proceso, en el que sólo aparece uno de entrada.</p>
+<p><strong>Ejemplo de construcción</strong></p>
+<p>El caso en estudio es un modelo de procesos de un sistema de información de Conocimientos de técnicos. Según estos conocimientos, los técnicos podrán ser asignados a determinados proyectos de la organización.</p>
+<p>El sistema recogerá la información referente a los técnicos, procedente de la Dirección técnica de la organización y de los proyectos, procedente de cualquier sección o Unidad de Negocio en las que está dividida dicha organización.</p>
+<p>Las entidades externas son pues Dirección Técnica y Unidad de Negocio, que introducen los datos al sistema y hacen peticiones de consultas e informes sobre los técnicos y sus conocimientos. El diagrama de contexto será el siguiente:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo_diagrama_contexto.png?w=825" alt=""></p>
+<p>Los flujos de entrada son: Datos Técnicos, con datos de los técnicos introducidos por la Dirección Técnica, así como posibles peticiones de información sobre ellos; y Datos Unidad, que proviene de la Unidad de Negocio, conteniendo datos referentes a la unidad, de proyectos y clientes, así como posibles peticiones de consultas sobre los mismos.</p>
+<p>Los flujos de salida son: Información Técnicos, que contendrá datos de técnicos, de consulta o informes, para uso de la Dirección Técnica y Consultas Unidad, con datos requeridos por la Unidad de Negocio.</p>
+<p>El sistema de Conocimientos se descompone en el diagrama de nivel 1, conteniendo do subsistemas. El subsistema 1 recogerá las funciones a realizar con los datos de los técnicos de la organización (actualizaciones, consultas, informes, etc), por lo que se denomina Tratar Técnicos. El subsistema 2 contendrá las funciones asociadas al procesamiento de datos de proyectos, por lo que se le da el nombre Tratar Proyectos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd_2.png?w=825" alt=""></p>
+<p>En el diagrama se encuentran cuatro almacenes, tres de los cuales son accedidos por funciones de los dos subsistemas: A1 Conocimientos, A2 Proyectos y A3 Técnicos. El cuarto, A4 Clientes, sólo es accedido por el subsistema Tratar Proyectos.</p>
+<p>Los flujos sin nombre indican que hay entrada y/o salida de todos los datos del almacén. En este diagrama siguen apareciendo las entidades externas para la mayor comprensión del mismo.</p>
+<p>A partir de ahora, se centrará el ejemplo en la descomposición del subsistema 1 Tratar Técnicos, hasta llegar a su nivel más detallado.</p>
+<p>En el diagrama resultado de la explosión de Tratar Técnicos, se incluyen cuatro procesos o funciones para el tratamiento completo de éstos.</p>
+<p>El flujo de entrada Datos Técnicos se compone tanto de los datos profesionales de los técnicos, como de datos de peticiones de información sobre los mismos, por lo cual se ha dividido en dos: Datos Profesionales, que es entrada del proceso 1.1 Validad datos Técnicos y Peticiones Información Técnicos, que entra en la función 1.4 Informar.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd_3.png?w=825" alt=""></p>
+<p>Para la validación, el proceso 1.1 Validar Datos Técnicos obtiene información del almacén A3 Técnicos y genera una salida, el flujo Datos Técnicos Correctos, que lleva los datos válidos a la función 1.2 Actualizar Almacenes Técnicos. Esta función se encarga de actualizar los almacenes A3 Técnicos y A1 Conocimientos, pero también emite un flujo al proceso 1.3 Asignar a Proyectos. Éste se encarga de hacer asignaciones de técnicos en el almacén A2 Proyectos.</p>
+<p>La función 1.4 Informar, recibe las peticiones de información sobre técnicos, las procesa utilizando los almacenes necesarios y genera el flujo Información Técnicos que irá a la entidad Dirección Técnica, según muestran los primeros diagramas.</p>
+<p>Obsérvese que para mayor claridad no se ha incluido ya ninguna entidad externa, y además, se ha repetido el almacén A3 Técnicos, evitando que el cruce de flujos oscurezca la lectura del diagrama.</p>
+<p>En este momento, todos los procesos se consideran primitivos, excepto el proceso 1.4 Informar, del que se obtiene su descomposición. Sus funciones han de obtener Informes Técnicos y Consultas Técnicos, flujos que componen Información Técnicos que aparecía en el nivel anterior.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo_dfd_4.png?w=825" alt=""></p>
+<p>Por otro lado, también aparece dividido el flujo de entrada Peticiones Información Técnicos, diferenciando la entrada al proceso de consultas o al de emisión de informes.</p>
+<p>Por último, se puede apreciar que los almacenes son los mismos que se conectaban con el proceso en el nivel anterior y los flujos son de entrada a las funciones.</p>
+<p>(Nota.- Esta notación es la más habitual, pero MÉTRICA Versión 3 no exige su utilización).</p>
+<h2 id="Diagrama-de-Estructura"><a href="#Diagrama-de-Estructura" class="headerlink" title="Diagrama de Estructura"></a>Diagrama de Estructura</h2><p>El objetivo de este diagrama es representar la estructura modular del sistema o de un componente del mismo y definir los parámetros de entrada y salida de cada uno de los módulos.</p>
+<p>Para su realización se partirá del modelo de procesos obtenido como resultado de la aplicación de la técnica de diagrama de flujo de datos (DFD).</p>
+<h3 id="Descripcion-1"><a href="#Descripcion-1" class="headerlink" title="Descripción"></a>Descripción</h3><p>Un diagrama de estructura se representa en forma de árbol con los siguientes elementos:</p>
+<ul>
+<li><strong>Módulo</strong> : división del software clara y manejable con interfaces modulares perfectamente definidas. Un módulo puede representar un programa, subprograma o rutina dependiendo del lenguaje a utilizar. Admite parámetros de llamada y retorno. En el diseño de alto nivel hay que ver un módulo como una <em>caja negra</em> , donde se contemplan exclusivamente sus entradas y sus salidas y no los detalles de la lógica interna del módulo. Para que se reduzca la complejidad del cambio ante una determinada modificación, es necesario que los módulos cumplan las siguientes condiciones:<ul>
+<li>Que sean de pequeño tamaño.</li>
+<li>Que sean independientes entre sí.</li>
+<li>Que realicen una función clara y sencilla.</li>
+</ul>
+</li>
+<li><strong>Conexión</strong> : representa una llamada de un módulo a otro.</li>
+<li><strong>Parámetro</strong> : información que se intercambia entre los módulos. Pueden ser de dos tipos en función de la clase de información a procesar:<ul>
+<li><em>Control</em> : son valores de condición que afectan a la lógica de los módulos llamados. Sincronizan la operativa de los módulos.</li>
+<li><em>Datos</em> : información compartida entre módulos y que es procesada en los módulos llamados.</li>
+</ul>
+</li>
+</ul>
+<p>Otros componentes que se pueden representar en el diagrama de estructura son:</p>
+<ul>
+<li><strong>Módulo predefinido</strong> : es aquel módulo que está disponible en la biblioteca del sistema o de la propia aplicación, y por tanto no es necesario codificarlo.</li>
+<li><strong>Almacén de datos</strong> : es la representación física del lugar donde están almacenados los datos del sistema.</li>
+<li><strong>Dispositivo físico</strong> : es cualquier dispositivo por el cual se puede recibir o enviar información que necesite el sistema.</li>
+</ul>
+<p><strong>Estructuras del diagrama</strong></p>
+<p>Existen ciertas representaciones gráficas que permiten mostrar la secuencia de las llamadas entre módulos. Las posibles estructuras son:</p>
+<ul>
+<li><strong>Secuencial</strong> : un módulo llama a otros módulos una sola vez y, se ejecutan de izquierda a derecha y de arriba a abajo.<br><img src="https://gsitic.files.wordpress.com/2018/04/estructura_secuencial.png?w=825" alt=""></li>
+<li><strong>Repetitiva</strong> : cada uno de los módulos inferiores se ejecuta varias veces mientras se cumpla una condición.<br><img src="https://gsitic.files.wordpress.com/2018/04/estructura_repetitiva.png?w=825" alt=""></li>
+<li><strong>Alternativa</strong> : cuando el módulo superior, en función de una decisión, llama a un módulo u otro nivel de los de nivel inferior.<br><img src="https://gsitic.files.wordpress.com/2018/04/estructura_alternativa.png?w=825" alt=""></li>
+</ul>
+<p><strong>Principios del diseño estructurado</strong></p>
+<p>El diagrama de estructura se basa en tres principios fundamentales:</p>
+<ul>
+<li>La descomposición de los módulos, de manera que los módulos que realizan múltiples funciones se descompongan en otros que sólo realicen una. Los objetivos que se persiguen con la descomposición son:<ul>
+<li>Reducir el tamaño del módulo.</li>
+<li>Hacer el sistema más fácil de entender y modificar y por lo tanto facilitar el mantenimiento del mismo.</li>
+<li>Minimizar la duplicidad de código.</li>
+<li>Crear módulos útiles.</li>
+</ul>
+</li>
+<li>La jerarquía entre los módulos, de forma que los módulos de niveles superiores coordinen a los de niveles inferiores. Al dividir los módulos jerárquicamente, es posible controlar el número de módulos que interactúan con cualquiera de los otros.</li>
+<li>La independencia de los módulos, de manera que cada módulo se ve como una caja negra, y únicamente es importante su función y su apariencia externa, y no los detalles de su construcción.</li>
+</ul>
+<p><strong>Estrategias de diseño</strong></p>
+<p>Dependiendo de la estructura inicial del diagrama de flujo de datos sobre el que se va a realizar el diseño, existen dos estrategias para obtener el diagrama de estructura. El uso de una de las dos estrategias no implica que la otra no se utilice, eso dependerá de las características de los procesos representados en DFD. Estas estrategias son:</p>
+<ul>
+<li>Análisis de transformación.</li>
+<li>Análisis de transacción.</li>
+</ul>
+<p><em>Análisis de Transformación</em></p>
+<p>El análisis de transformación es un conjunto de pasos que permiten obtener, a partir de un DFD con características de transformación, la estructura del diseño de alto nivel del sistema. Un DFD con características de transformación es aquél en el que se pueden distinguir:</p>
+<ul>
+<li>Flujo de llegada o entrada.</li>
+<li>Flujo de transformación o centro de transformación que contiene los procesos esenciales del sistema y es independiente de las características particulares de la entrada y la salida.</li>
+<li>Flujo de salida.</li>
+</ul>
+<p>Los datos que necesita el sistema se recogen por los módulos que se encuentren en las ramas de la izquierda, de modo que los datos que se intercambian en esa rama serán ascendentes. En las ramas centrales habrá movimiento de información compartida, tanto ascendente como descendente. En las ramas de la derecha, la información será de salida y, por lo tanto, descendente.</p>
+<p>Los pasos a realizar en el análisis de transformación son:</p>
+<ol>
+<li>Identificar el centro de transformación. Para ello será necesario delimitar los flujos de llegada y salida de la parte del DFD que contiene las funciones esenciales del sistema.</li>
+<li>Realizar el “primer nivel de factorización” o descomposición del diagrama de estructura. Habrá que identificar tres módulos subordinados a un módulo de control del sistema:<ul>
+<li>Módulo controlador del proceso de información de entrada.</li>
+<li>Módulo controlador del centro de transformación.</li>
+<li>Módulo controlador del proceso de la información de salida.</li>
+</ul>
+</li>
+<li>Elaborar el “segundo nivel de factorización”. Se transforma cada proceso del DFD en un módulo del diagrama de estructura.</li>
+<li>Revisar la estructura del sistema utilizando medidas y guías de diseño.</li>
+</ol>
+<p>A continuación se muestra un gráfico explicativo de dicha estrategia de diseño:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/estrategia_disec3b1o.png?w=825" alt=""></p>
+<p><em>Análisis de Transacción</em></p>
+<p>El análisis de transacción se aplica cuando en un DFD existe un proceso que en función del flujo de llegada, determina la elección de uno o más flujos de información.</p>
+<p>Se denomina <em>centro de transacción</em> al proceso desde el que parten los posibles caminos de información. Los pasos a realizar en el análisis de transacción son:</p>
+<ol>
+<li>Identificar el centro de transacción. Se delimita la parte del DFD en la que a partir de un camino de llegada se establecen varios caminos de acción.</li>
+<li>Transformar el DFD en la estructura adecuada al proceso de transacciones. El flujo de transacciones se convierte en una estructura de programa con una bifurcación de entrada y una de salida.</li>
+<li>Factorizar la estructura de cada camino de acción. Cada camino se convierte en una estructura que se corresponde con las características específicas del flujo (de transacción o de transformación).</li>
+<li>Refinar la estructura del sistema utilizando medidas y guías de diseño.</li>
+</ol>
+<p>A continuación se muestra un gráfico explicativo de dicha estrategia de diseño:</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/analisis_transaccion.png?w=825" alt=""></p>
+<p><strong>Evaluación del diseño</strong></p>
+<p>Una vez que hayan sido elaborados los diagramas de estructura, habrá que evaluar el diseño estudiando distintos criterios y medidas. Se utilizan dos métricas que miden la calidad estructural de un diseño:</p>
+<ul>
+<li>Acoplamiento.</li>
+<li>Cohesión.</li>
+</ul>
+<p>El <strong><em>acoplamiento</em></strong> se puede definir como el grado de interdependencia existente entre los módulos, por tanto, depende del número de parámetros que se intercambian. El objetivo es que el acoplamiento sea el mínimo posible, es decir, conseguir que los módulos sean lo más independientes entre sí.</p>
+<p>Es deseable un bajo acoplamiento, debido a que cuantas menos conexiones existan entre dos módulos, menor será la posibilidad de que aparezcan efectos colaterales al modificar uno de ellos. Además, se mejora el mantenimiento, porque al cambiar un módulo por otro, hay menos riesgo de actualizar la lógica interna de los módulos asociados. Los diferentes grados de acoplamiento son:</p>
+<ul>
+<li><em>De datos</em> : los módulos se comunican mediante parámetros que constituyen elementos de datos simples.</li>
+<li><em>De marca</em> : es un caso particular del acoplamiento de datos, donde la comunicación entre módulos es a través de estructuras de datos.</li>
+<li><em>De control</em> : aparece cuando uno o varios de los parámetros de comunicación son de control, es decir variables que controlan las decisiones de los módulos subordinados o superiores.</li>
+<li><em>Externo</em> : los módulos están ligados a componentes externos (dispositivos E/S, protocolos de comunicaciones, etc).</li>
+<li><em>Común</em> : varios módulos hacen referencia a un área común de datos. Los módulos asociados al área común de datos pueden modificar los valores de los elementos de datos o estructuras de datos que se incluyen en dicha área.</li>
+<li><em>De contenido</em> : ocurre cuando un módulo cualquiera accede o hace uso de los datos de una parte de otro módulo.</li>
+</ul>
+<p>La <strong><em>cohesión</em></strong> es una medida de la relación funcional de los elementos de un módulo, es decir, la sentencia o grupo de sentencias que lo componen, las llamadas a otros módulos o las definiciones de los datos. Un módulo con alta cohesión realiza una tarea concreta y sencilla.</p>
+<p>El objetivo es intentar obtener módulos con una cohesión alta o media. Los distintos niveles de cohesión, de mayor a menor, son:</p>
+<ul>
+<li><em>Funcional</em> : todos los elementos que componen el módulo están relacionados en el desarrollo de una única función.</li>
+<li><em>Secuencial</em> : un módulo empaqueta en secuencia varios módulos con cohesión funcional.</li>
+<li><em>De comunicación</em> : todos los elementos de procesamiento utilizan los mismos datos de entrada y de salida.</li>
+<li><em>Procedimental</em> : todos los elementos de procesamiento de un módulo están relacionados y deben ejecutarse en un orden determinado. En este tipo existe paso de controles.</li>
+<li><em>Temporal</em> : un módulo contiene tareas relacionadas por el hecho de que todas deben realizarse en el mismo intervalo de tiempo.</li>
+<li><em>Lógica</em> : un módulo realiza tareas relacionadas de forma lógica (por ejemplo un módulo que produce todas las salidas independientemente del tipo).</li>
+<li><em>Casual</em> : un modulo realiza un conjunto de tareas que tienen poca o ninguna relación entre sí.</li>
+</ul>
+<p>Un buen diseño debe ir orientado a conseguir que los módulos realicen una función sencilla e independiente de las demás (máxima cohesión), y que la dependencia con otros módulos sea mínima (acoplamiento mínimo), lo cual facilita el mantenimiento del diseño.</p>
+<h3 id="Notacion-1"><a href="#Notacion-1" class="headerlink" title="Notación"></a>Notación</h3><p><strong>Módulo</strong></p>
+<p>Se representa mediante un rectángulo con su nombre en el interior.</p>
+<p>Un módulo predefinido se representa añadiendo dos líneas verticales y paralelas en el interior del rectángulo.</p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/modulo_1/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/modulo_1.png?w=413&amp;h=295" alt=""></a> </p>
+<p> <a href="https://gsitic.wordpress.com/2018/04/24/biii5-analisis-estructurado-diagramas-de-flujo-de-datos-diagramas-de-estructura-diccionario-de-datos-flujogramas/modulo_2/" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://gsitic.files.wordpress.com/2018/04/modulo_2.png?w=404&amp;h=295" alt=""></a> </p>
+<p><strong>Conexión</strong></p>
+<p>Se representa mediante una línea terminada en punta de flecha cuya dirección indica el módulo llamado. Para llamadas a módulos estáticos se utiliza trazo continuo y para llamadas a módulos dinámicos trazo discontinuo.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/conexion.png?w=825" alt=""></p>
+<p><strong>Parámetros</strong></p>
+<p>La representación varía según su tipo: control (flags) o datos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/parametros.png?w=825" alt=""></p>
+<p><strong>Almacén de datos</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/almacen_datos1.png?w=825" alt=""></p>
+<p><strong>Dispositivo físico</strong></p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/dispositivo_fisico.png?w=825" alt=""></p>
+<p>(Nota.- Esta notación es la más habitual, pero MÉTRICA Versión 3 no exige su utilización).</p>
+<p><strong>Ejemplo</strong></p>
+<p>En el siguiente ejemplo muestra un proceso de emisión de cheques para el pago de nóminas de los empleados de una empres. En él se diferencian los cálculos relativos a los trabajadores empleados por horas y los que poseen contrato. La lectura del fichero de empleados y la impresión de los cheques son módulos ya disponibles en las librerías del sistema, es decir, módulos predefinidos.</p>
+<p><img src="https://gsitic.files.wordpress.com/2018/04/ejemplo_diagrama_estructura.png?w=825" alt=""></p>
+<h2 id="Diccionario-de-Datos"><a href="#Diccionario-de-Datos" class="headerlink" title="Diccionario de Datos"></a>Diccionario de Datos</h2><h3 id="Documentacion-del-sistema"><a href="#Documentacion-del-sistema" class="headerlink" title="Documentación del sistema"></a>Documentación del sistema</h3><p>Hasta el momento hemos descrito las técnicas utilizadas en el desarrollo de sistemas, pero el desarrollo de modelos no queremos hacerlo sobre hojas sueltas, con el peligro de extraviarlas, y tener dificultad en mantenerlo. Por el contrario, necesitamos organizar el seguimiento de los modelos, principalmente por dos razones:</p>
+<ul>
+<li>Dar significado a los componentes del modelo, ayudando a gestionar la complejidad del sistema.</li>
+<li>Soportar el mantenimiento, ya que cualquier trabajo puede pasar de una persona a otra.</li>
+</ul>
+<p>A esta forma de seguimiento organizado del trabajo producido durante el análisis y diseño del sistema se llama documentación del sistema.</p>
+<p>La documentación del sistema es tanto una herramienta de comunicación, como de comunicación porque contiene un almacén de todo el trabajo hecho cada día y lo pone a disposición de todas las personas que trabajan en un proyecto grande. También es una herramienta de dirección, porque asegura una alta eficiencia, ya que todas las personas tienen acceso a lo último realizado. Dado que un proyecto se divide en fases, se establece la documentación que se debe aportar en cada fase, lo que ayuda a conocer la situación en cada momento del proyecto.</p>
+<p>Para que sea útil, la documentación debe ser estructural y fácil de usar. La documentación en un primer momento se divide en informes de proyecto y una descripción del sistema.</p>
+<p><strong>Informes del proyecto</strong></p>
+<p>Los informes del proyecto incluyen la información requerida por la dirección del proyecto. Los informes incluyen un resumen de la fase actual, unas recomendaciones para la siguiente fase y un plan con los recursos propuestos.</p>
+<p>La información específica de la fase depende de la fase del proyecto, por ejemplo el informe de viabilidad incluirá los costes esperados del proyecto, y una recomendación para seguir o abandonarlo.</p>
+<p><strong>Diccionario del sistema</strong></p>
+<p>El Diagrama de Flujo de Datos describe el sistema. El diagrama E/R, describe los datos del sistema. El componente descripción del proceso describe los procesos del DFD y el Diccionario de datos que describe los datos del sistema (flujos y almacenes de datos). Los usuarios del sistema y como lo utilizan se incluyen en la descripción del usuario.</p>
+<p><strong>Descripción de procesos</strong></p>
+<p>La descripción de procesos incluyen una entrada por cada proceso del diagrama de flujo de datos. Cada entrada del proceso incluye el número de DFD para él, junto con la descripción del proceso. Como ejemplo la descripción de un proceso de alto nivel, incluye el número y nombre del proceso, los nombres de los flujos de datos de entrada y salida y una descripción del proceso.</p>
+<p>Para la descripción de procesos en los niveles inferiores de DFD, se usará un método de descripción de procesos, no así en los DFD de alto nivel que basta una descripción narrativa del proceso.</p>
+<h3 id="Diccionario-de-Datos-1"><a href="#Diccionario-de-Datos-1" class="headerlink" title="Diccionario de Datos"></a>Diccionario de Datos</h3><p>El diccionario de datos es una lista organizada de todos los datos pertenecientes al sistema, con una serie de definiciones precisas y rigurosas para que tanto el analista como el usuario comprendan entradas, salidas, elementos de los almacenamientos y cálculos intermedios.</p>
+<p>En el diccionario de datos incluimos almacenes de datos, flujos de datos, estructuras de datos, elementos de datos y en algunos casos el modelo E/R.</p>
+<p>El diccionario de datos (DD) define los datos en cuanto que:</p>
+<ol>
+<li>Describe el <em>significado</em> de los flujos de datos y los almacenes que muestran los DFDs.</li>
+<li>Describe la <em>composición</em> de la estructura de datos que se mueven a lo largo de los flujos.</li>
+<li>Describe la composición de la estructura de datos en los almacenes.</li>
+<li>Describe los detalles de las relaciones entre almacenes que aparecen en un diagrama entidad/relación.</li>
+</ol>
+<p>Los analistas utilizan los diccionarios de datos por cuatro razones:</p>
+<ol>
+<li>Para manejar los detalles en sistemas grandes ya que es imposible de recordar todo lo referente a un sistema.</li>
+<li>Para comunicar un significado común para todos los elementos del sistema. Esto es muy importante cuando trabajan varios analistas y no pueden reunirse todos los días para comunicarse.</li>
+<li>Para documentar las características del sistema.</li>
+<li>Localizar errores en el sistema.</li>
+</ol>
+<p><strong>Contenido de un Diccionario de Datos</strong></p>
+<p>El DD contiene las siguientes:</p>
+<ol>
+<li>Definiciones lógicas de datos:<ul>
+<li>Elemento de Dato (Atributos de la Entidad).</li>
+<li>Estructura de Dato.</li>
+<li>Flujos de Datos.</li>
+<li>Almacenes de Datos.</li>
+</ul>
+</li>
+<li>Definiciones lógicas de procesos.</li>
+<li>Definición lógica de entidad externa.</li>
+</ol>
+<p>Los elementos de dato se agrupan para formar una estructura de dato.</p>
+<ol>
+<li><em>Elemento de dato</em> : Ninguna unidad más pequeña tiene significado para los analistas o usuarios. Son los bloques básicos para todos los demás datos del sistema, por sí solo no lleva ningún significado al usuario. Son los atributos de las entidades.<br>Por ejemplo: nº factura, fecha expedición, cantidad adeudada.</li>
+<li><em>Estructura de dato</em> : es un grupo de datos elementales que en conjunto describen un componente del sistema.<br>Por ejemplo: Factura.</li>
+</ol>
+<p>Los flujos de datos, almacenes de datos son estructuras de datos.</p>
+<p><strong>Notación del Diccionario de Datos</strong></p>
+<ol>
+<li><em>Notación del elemento dato</em> : Cada uno está identificado con un nombre, una descripción, un alias, una longitud, un intervalo de valores. Veamos las reglas a seguir para cada elemento.<ul>
+<li>Nombre de los datos: se deben asignar nombres que sean significativos, es decir, que tengan significado en el contexto del desarrollo del sistema.<br>Por ejemplo: Fecha-Factura. Un nombre no debe ser mayor de 30 caracteres y tampoco debe contener espacios en blanco.</li>
+<li>Descripción de los datos: indica de manera breve lo que éste representa en el sistema, y debe escribirse de forma comprensible para el lector y pensando que quien lo lea no sabe nada con respecto al sistema.</li>
+<li>Alias: es cuando el mismo dato recibe varios nombres, según quien haga uso del dato.<br>Ejemplo: factura puede tener como alias documento de pago o nota de pago etc.<br>No so alias los siguientes casos: factura autorizada, factura verificada.</li>
+<li>Longitud: indica la cantidad de espacio necesario para cada dato sin considerar la forma en que serán almacenados.</li>
+<li>Valores de los datos: si los valores de los datos están restringidos a un intervalo específico, debe reflejarse en la entrada del DD.<br>Por ejemplo: Talla unidad [centímetros], rango [1-200].</li>
+</ul>
+</li>
+<li><em>Descripción de las estructuras de datos</em> : Las estructuras de datos se construyen sobre cuatro relaciones de componentes (datos o estructuras) que son:<ul>
+<li>Relación secuencial: Define los componentes (datos o estructuras) que siempre se incluyen en una estructura de datos en particular, es decir, también se llama concatenación de dos o más datos.</li>
+<li>Relación de selección: Define alternativas para datos o estructuras incluidas en una estructura de datos.</li>
+<li>Relación de iteración: Define la repetición de un componente cero o más veces.</li>
+<li>Relación opcional: Es un caso especial de la iteración, es decir, una o ninguna relación.</li>
+</ul>
+</li>
+<li><em>Descripción de los flujos de datos</em> : Representamos los flujos de datos siempre y cuando el flujo no sea un único atributo. Está formado por una o más estructuras previamente definidas. Del flujo nos interesa el contenido, fuente, destino, volumen.<ul>
+<li>Nombre del flujo de datos: se deben asignar nombres que sean significativos, es decir, que tengan significado en el contexto del desarrollo del sistema.<br>Por ejemplo: factura.</li>
+<li>Fuente: indica cual es el proceso fuente de la información. Se indicará el número del proceso.</li>
+<li>Destino: indica cual es el proceso destino de la información. Se indicará el número del proceso.</li>
+<li>Definición: explica el contenido del flujo de datos.</li>
+<li>Contenido: describe cuales son las estructuras de datos incluidas.</li>
+</ul>
+</li>
+<li><em>Descripción de los almacenamientos de datos</em> : Representamos los almacenamientos de datos. Se documenta su contenido, flujos de entrada, flujos de salida.<ul>
+<li>Nombre de almacenamiento de datos: se asignan nombres que sean significativos, es decir, que tengan significado en el contexto del desarrollo del sistema.<br>Ejemplo: histórico facturas.</li>
+<li>Flujos de entrada: indica cuales son los flujos que alimentan el almacenamiento de datos.</li>
+<li>Flujos de salida: indica cuales son los flujos que extraen información del almacenamiento de datos.</li>
+<li>Definición: describe el contenido del almacenamiento de datos.</li>
+<li>Contenido: especifica el contenido del almacenamiento.</li>
+</ul>
+</li>
+<li><em>Descripción de los procesos</em> : Representamos los procesos del sistema. Se documenta su contenido, flujos de entrada, flujos de salida.<ul>
+<li>Nombre de proceso: se asignan nombres que sean significativos, es decir, que tengan significado en el contexto del desarrollo del sistema.<br>Por ejemplo: verificar_crédito.</li>
+<li>Entradas: indica cuales son los procesos, almacenamientos de datos que ejercen de fuente de datos.</li>
+<li>Flujos de salida: indica cuales son los procesos, almacenamientos de datos que ejercen de destino de datos.</li>
+<li>Definición: indica la misión del proceso.</li>
+<li>Descripción: describe el proceso. Para ello utilizaremos: Forma narrativa, árboles de decisión, tablas de decisión, lenguaje estructurado.</li>
+</ul>
+</li>
+<li><em>Descripción de las entidades externas</em> : Representamos las entidades externas del sistema. Se documenta a quien representa, flujos de datos relacionados, volumen, etc.<ul>
+<li>Nombre de entidad externa: se asignan nombres que sean significativos, que representen a la entidad.<br>Por ejemplo: clientes.</li>
+<li>Flujos de datos asociados: indica cuales son los flujos (entrada/salida) asociados.</li>
+<li>Definición: indica quienes son la entidad.</li>
+<li>Volumen: número de componentes de la entidad.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Sintaxis del Diccionario de Datos</strong></p>
+<p>Conocida la forma de describir los datos y estructuras de datos, explicados en el apartado anterior, a continuación se va a establecer una sintaxis estandarizada que nos permitirá expresar dichos significados:</p>
+<ul>
+<li><strong>\=</strong> está compuesto por</li>
+<li><strong>+</strong> y</li>
+<li><strong>()</strong> opcional, puede o no puede estar presente</li>
+<li><strong>[]</strong> selección entre varias alternativas</li>
+<li><strong>{}</strong> iteración, repetir los mismo varias veces</li>
+<li><strong>**</strong> comentario</li>
+<li><strong>@</strong> clave principal de un almacenamiento</li>
+<li><strong>|</strong> separador de alternativas en selección</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p><em>Datos elementales</em></p>
+<p>Son datos, que dentro del contexto del usuario, no tiene sentido descomponerlo. Es importante verificar: Valores permitidos y unidad de medida.</p>
+<p>peso_persona =* *<br>                * unidad: kilo ; rango: 1..150 *<br>sexo = * Masculino o Femenino *<br>       * valores: [ M | F ] *</p>
+<p><em>Datos opcionales</em></p>
+<p>Dirección_cliente = (dirección_entrega) + dirección_facturación)<br>Dirección_cliente = [ dirección_entrega | dirección_facturación |<br>                      dirección entrega + dirección_facturación ]<br>Dirección_cliente = dirección_entrega + (dirección_facturación)</p>
+<p><em>Iteración</em></p>
+<p>Repetición de uno o más datos elementales o grupo de datos. ‘Cero o más ocurrencias’.</p>
+<p>pedido = nombre_cliente + dirección_entrega + { producto }</p>
+<p><em>Selección</em></p>
+<p>‘Una y solo una de las alternativas’.</p>
+<p>sexo = [ Masculino | Femenino ]</p>
+<p><em>Dominio (No Yourdon)</em></p>
+<p>Consiste definir una única vez cada tipo de Dato Elemental y referenciarlo para cada representación del tipo.</p>
+<p>fecha = * *<br>          * unidad: días ; rango : 0..36500 *<br>fec_nacimiento = fecha<br>fec_factura = fecha</p>
+<p><em>Alias (Sinónimo)</em></p>
+<p>No se debe confundir con el dominio. Es un nombre alternativo para un dato elemental.</p>
+<p>fecha_contable = fecha<br>fecha_efectiva = * alias de: fecha_contable *<br>Nombre = Tratamiento + Nombre_pila + Primer_apellido + Segundo_apellido<br>Tratamiento = [ Sr. | Sra. | Srta. | D. | Dr. ]<br>Nombre_pila = {carácter}<br>Primer_apellido = {carácter}<br>Segundo_apellido = {carácter}<br>carácter = [ A-Z | a-z | - ]</p>
+<p><strong>Definición de un Diccionario de Datos</strong></p>
+<p><strong>Definición de datos secuenciales</strong></p>
+<p>Una definición se realiza mediante el símbolo = que significa <em>se define como</em> por lo tanto una expresión como A = B + C, se podría leer igual que de forma matemática, es decir, <em>A está compuesto de B y C</em> , pero para completarla se debería añadir: el significado de dicho dato en el contexto de la aplicación, el rango y tipo de valores que cada dato puede tomar.</p>
+<p>Por ejemplo: En un sistema informático de un hospital:</p>
+<p>Datos_del_Paciente = nombre_completo +<br>                     *nombre completo del paciente *<br>                     *tipo: array de caracteres*<br>                     dirección +<br>                     *dirección completa del paciente*<br>                     *tipo: array de caracteres*<br>                     peso +<br>                     *peso del paciente*<br>                     *unidad: kilogramos; rango: 1-200*<br>                     talla +<br>                     *talla del paciente*<br>                     *unidad: centímetros; rango: 20-250*<br>                     fecha_ingreso +<br>                     *fecha de entrada en el hospital *<br>                     *tipo: fecha*</p>
+<p><strong>Definición de datos opcionales</strong></p>
+<p>Es aquel dato que puede o no formar parte de la composición de un dato compuesto.</p>
+<p>Ejemplo: La dirección de un cliente puede ser:</p>
+<ul>
+<li>Única: tanto la dirección comercial como de administración están en el mismo lugar que producción o almacén.</li>
+<li>Dos direcciones: tiene el almacén y producción separado físicamente de la administración.</li>
+</ul>
+<p>Esta situación en un DD se trataría así:</p>
+<p>Cliente = nombre_completo + dni_cliente + dirección_comercial +<br>          (dirección_mercancías)</p>
+<p><strong>Definición de selección</strong></p>
+<p>Sólo una de entre varias posibilidades será posible. Esta se define mediante [].</p>
+<p>Ejemplo: Un cliente puede ser una empresa o un particular, por lo tanto los tipos de datos son distintos según sea uno u otro.</p>
+<p>cliente = [nombre_cliente | nombre_empresa] + [dni_cliente | cif_cliente] +<br>          dirección_comercial + (dirección_mercancías)</p>
+<p><strong>Definición de iteración</strong></p>
+<p>La iteración se expresa mediante {} y sirve para indicar la repetición de una cierta ocurrencia dentro de una definición.</p>
+<p>Ejemplo:</p>
+<p>Factura = fecha_factura + nombre_cliente + numero_factura +<br>          {linea_factura} + total_factura</p>
+<p>El dato línea_factura es un componente de la estructura de datos factura que puede tener una o varias ocurrencias, ya que una factura puede tener muchas líneas de facturación de artículos.</p>
+<p><strong>Alias (Sinónimos)</strong></p>
+<p>Son nombres que dentro del Sistema de información tienen el mismo significado, entonces lo que se hace es declarar los sinónimos por medio del símbolo =.</p>
+<p>Ejemplo:</p>
+<p>Acreedor = cliente<br>           ** definido ya anteriormente.</p>
+<p>Hemos visto el contenido del Diccionario de Datos, que deberá mostrarse al usuario siempre conjuntamente con las técnicas:</p>
+<ul>
+<li>Diagrama de Flujo de Datos (DFD).</li>
+<li>Modelo Entidad/Relación (DER).</li>
+<li>Especificación de Procesos (EP).</li>
+</ul>
+<p><strong>Implementación del Diccionario de Datos</strong></p>
+<p>Varias posibilidades para la implementación de los DD, cada una con sus características y ventajas.</p>
+<ul>
+<li>Repositorio de datos:<ul>
+<li>Herramientas automáticas integradas dentro de un entorno CASE.</li>
+<li>Dispone de más posibilidades de las vistas.</li>
+</ul>
+</li>
+<li>Diccionario de datos SGBD o SO modernos.<ul>
+<li>Dan soporte automático para definiciones de datos, validar su consistencia, producir algunos informes.</li>
+</ul>
+</li>
+<li>Procesador de textos convencional.</li>
+<li>Totalmente manual.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p><em>Dato Elemental</em></p>
+<p>Nombre     : Estado_Civil<br>Descripción: Código de una letra para indicar el estado civil de cada<br>             empleado.<br>Long y tipo: 1 carácter alfabético.<br>Sinónimos  : ESTADO (Personal)<br>             CIVIL (Nóminas)<br>Valores    : <strong>S</strong> Soltero    <strong>D</strong> Divorciado<br>             <strong>C</strong> Casado     <strong>S</strong> Separado<br>             <strong>V</strong> Viudo      <strong>O</strong> Otros</p>
+<p><em>Estructura de dato</em></p>
+<p>Nombre     : Empleado<br>Descripción: Datos necesarios de un empleado<br>Componentes: Nombre_empleado +<br>             Num_empleado +<br>             Datos_personales =<br>                                Fecha_nacimiento +<br>                                Estado_Civil +<br>                                Num_hijos [ 0 - ] +<br>                               (Num_tfno)<br>             Dirección =<br>                         Calle +<br>                         Número +<br>                         (Población) +<br>                         Codigo_Postal +<br>                         Provincia</p>
+<p><em>Flujo de datos</em></p>
+<p>Nombre           : Pago_aceptado<br>Ref              : 11.1 - 11.2<br>Fuente           : 11.1 Aceptar pago<br>Destino          : 11.2 Validar pago<br>Descripción      : Pago recibido y sellado pero no validado<br>Estruct. de datos: Cheque +<br>                   Recibo_Caja +<br>                   (Letra_Pago) +<br>                   Metodo_Pago<br>Volumen          : 5000 por día<br>Comentarios      : La letra de pago está omitida en el 10% de los casos</p>
+<p><em>Almacenamiento de datos</em></p>
+<p>Nombre          : Historia_Pedidos<br>Ref             : P4<br>Flujo de Entrada: 9 - D4   Pedido<br>Flujo de Salida : D4 - 10    Detalles pedido<br>                  D4 - 11    Detalle ventas<br>                  D4 - 9     Demanda anterior<br>Descripción     : Todos los pedidos aceptados en los últimos 6 meses<br>Contenido       : Pedido =<br>                           Id_pedido +<br>                           Detalle_cliente +<br>                           Detalle_libro</p>
+<p><strong>Descripción lógica de un proceso</strong></p>
+<p>Para el proceso V _erificar_Crédito_ la plantilla correspondiente sería la siguiente:</p>
+<p><em>Procesos</em></p>
+<p>Nombre     : Verificar_crédito<br>Ref        : 3<br>Definición : Decidir donde van los pedidos sin pago previo,<br>             o si debe pedirle el pago al cliente.<br>Entradas   : 1 - 3    Pedidos<br>             D3 - 3   Historia de pagos<br>Salidas    : 3 - C    Pedido de pago previo<br>             3 - D3   Nuevo balance de orden<br>             3 - 6    Pedidos con crédito ok<br>Descripción: Recuperar historia de pago.<br>             Si el cliente es nuevo, enviar pedido de pago previo.<br>             Si el cliente corriente (promedio de dos pedidos mensuales)<br>             , OK con el pedido, a menos que el balance esté vencido con<br>             más de dos meses. Para clientes anteriores (no corrientes)<br>             , OK, a menos que tengan cualquier balance vencido.</p>
+<p>Hemos visto que para describir la lógica de un proceso, utilizaremos varias alternativas como son: narrativa, árboles de decisión, tablas de decisión y lenguaje estructurado.</p>
+<p>Cuando utilizamos narrativa podemos encontrarnos con:</p>
+<ul>
+<li>frases oscuras (no solo, pero no obstante, sin embargo, …)</li>
+<li>rangos con huecos indefinidos (‘ hasta 20 unidades sin descuento, más de 20 unidades al 50%’).</li>
+<li>Frases con y/o (‘los clientes que nos compran más de 1 millón al año y tienen una buena historia de pago o que han tenido tratos con nosotros por más de 20 años deberán recibir trato preferencial’).</li>
+<li>Adjetivos indefinidos (‘buena historia de pagos’, ‘trato preferencial’).</li>
+</ul>
+<p>Estas razones obligan a pensar en otras alternativas:</p>
+<ul>
+<li><strong>Árbol de decisión</strong> : Pueden resultar una técnica no válida en situaciones complejas con gran número de condiciones e implicaciones ya que no asegura que se hayan considerados todas.<br>Se debe utilizar cuando el número de acciones sea pequeño y no sean posibles todas las combinaciones.</li>
+<li><p><strong>Tablas de decisión</strong> : Son más precisas dado que permiten reflejar todas la combinaciones posibles. Pero son más difíciles de entender para el usuario. Deben simplificarse una vez construidas y se convertirán en árboles de decisión.<br>Se debe utilizar siempre que se dude que el árbol muestra toda la lógica.</p>
+<p>* Primera orden &gt; 12 días ———- Hacer pedido<br>* Total ordenes &lt; menor que X<br>* Primera orden &lt;= 12 días ———- Esperar<br>* Total ordenes &lt; mayor o igual que X ———- Calcular<br>* Hacer pedido<br>* No descuento ———- Hacer pedido</p>
+</li>
+</ul>
+<p><strong>Descripción lógica de una entidad externa</strong></p>
+<p>Para la entidad <em>Proveedores</em> la plantilla correspondiente sería la siguiente:</p>
+<p><em>Entidad Externa</em></p>
+<p>Nombre         : Proveedores<br>Ref            : p<br>Definición     : Proveedores actuales de la empresa<br>Flujos de Datos: 7 - p     Pedidos<br>                 p - 3     Albarán<br>                 p - 11    Facturas<br>Volumen        : Actualmente 25. Se espera llegar a 40.</p>
+<h2 id="Bibliografia"><a href="#Bibliografia" class="headerlink" title="Bibliografia"></a>Bibliografia</h2><ul>
+<li><a href="ftp://dlsi.ua.es/people/jaime/apuntes/aesi_cap3.pdf" rel="external nofollow noopener noreferrer" target="_blank">dlsi (Jaime)</a></li>
+<li><a href="https://administracionelectronica.gob.es/pae_Home/pae_Documentacion/pae_Metodolog/pae_Metrica_v3.html#.Wtj023puZph" rel="external nofollow noopener noreferrer" target="_blank">PAe</a></li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/B2/b2-t02/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más nuevo</strong>
+            <div class="article-nav-title">
+                
+                    B2-T02
+                
+            </div>
+        </a>
+    
+    
+        <a href="/wiki/B3/b3-t07/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">B3-T07</div>
+        </a>
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            Juan Calero &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
